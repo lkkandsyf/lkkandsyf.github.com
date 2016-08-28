@@ -10,8 +10,8 @@ highlighter: pygments
 #
 title : Sky
 tagline: Site Tagline
-author : kangkangliang
-  name : kangkang
+author :
+  name : kangkangliang
   email : liangkangkang@yahoo.com
   github : lkkandsyf
   QQ : 942504876
