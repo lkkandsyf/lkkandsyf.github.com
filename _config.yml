@@ -8,13 +8,13 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Sky
+title : 既生而为人，就要承担，安然接受人生可能发生的一切
 tagline: Site Tagline
 author :
   name : kangkangliang
   email : liangkangkang@yahoo.com
   github : lkkandsyf
-  QQ : 942504876
+  twitter : liangkangkang
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
