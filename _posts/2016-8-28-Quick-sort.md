@@ -14,6 +14,6 @@ int main(int argc,char *argv[])
 {
 	int		array[10];
 }
-{% endhighlght %}
+{% endhighlight %}
 
 
