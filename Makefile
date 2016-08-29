@@ -1,4 +1,4 @@
 all:
 	jekyll build
-	echo "jekyll build success"
 
+#jekyll serve open local host
