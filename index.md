@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Hello World!
+title: Self understand!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-## this is liangkangkang
+## Hello,I'am liangkangkang
