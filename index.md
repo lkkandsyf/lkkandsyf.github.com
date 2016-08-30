@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Self understand!
+title: Self understanding
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-## Hello,I'am liangkangkang
+<center> Hello,I'am liangkangkang </center>
