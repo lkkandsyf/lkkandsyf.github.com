@@ -66,5 +66,4 @@ ListNode* ListReverse(list_node *head)
 	}
 	return head;
 }
-
 {% endhighlight %}
