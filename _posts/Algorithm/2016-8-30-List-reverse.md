@@ -7,7 +7,9 @@ tags : [list]
 {% include JB/setup %}
 
 ### List Reverse
-链表反转，这是一个很基础的题，对于操作指针来说，非常重要。
+
+    链表反转，这是一个很基础的题，对于操作指针来说，非常重要。
+
 方法：典型的头插法,这是带有头节点链表结构
 主要是对头插法的深入理解和灵活运用
 
@@ -15,14 +17,14 @@ tags : [list]
 /// head insert
 	head->next = NULL;
 	while(loop){
-		//	node  malloc mem
+		//node  malloc mem
 		node->val = key;
 		node->next = head->next
 		head->next = node;
 	}
 /// tail insert
 	while(loop){
-		//	node  malloc mem
+		//node  malloc mem
 		node->val = key;
 		head->next = node;
 		head = node;
