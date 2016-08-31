@@ -27,6 +27,7 @@ if [ $# -ge 1 ] && [ $1!="-h" ];then
 	blog_name=$time-$1.md
 	echo "blog_name:"
 	touch $blog_name
+	head -n  8 2016-3-30-template.md >> $blog_name
 	echo $blog_name
 	echo "blog_template create success,and start to write"
 else

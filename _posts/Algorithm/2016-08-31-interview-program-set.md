@@ -15,9 +15,11 @@ tags : [algorithm]
 ### Chars
 
 ### List
-	1.list reverse
-	2.two sorted list merge
-	3.reciprocal k node
+> [1.list reverse](http://lkkandsyf.github.com/_post/Algorithm/)
+
+> [2.two sorted list merge]()
+
+> [3.reciprocal k node]()
 
 ### Stack
 
