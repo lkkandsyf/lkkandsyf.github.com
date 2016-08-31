@@ -18,14 +18,14 @@ tags : [list]
 	head->next = NULL;
 	while(loop){
 		//node  malloc mem
-		node->val = key;
+		node->val = value;
 		node->next = head->next
 		head->next = node;
 	}
 /// tail insert
 	while(loop){
 		//node  malloc mem
-		node->val = key;
+		node->val = value;
 		head->next = node;
 		head = node;
 	}
@@ -35,7 +35,7 @@ tags : [list]
 
 {% highlight C linenos %}
 typedef struct _ListNode{
-	int		key;
+	int		value;
 	struct _ListNode *next;
 }ListNode;
 
