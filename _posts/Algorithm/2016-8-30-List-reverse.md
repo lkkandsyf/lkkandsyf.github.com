@@ -1,6 +1,6 @@
 ---
 layout: post
-category : algorithm
+category : interview
 tagline: "Supporting tagline"
 tags : [list]
 ---
