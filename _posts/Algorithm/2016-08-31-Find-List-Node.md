@@ -6,7 +6,6 @@ tags : [algorithm]
 ---
 {% include JB/setup %}
 
-
 # Overview
 
 这里收集了一些关于链表的一些操作，在面试过程，掌握这些基本知识，是每个程序员必备的.
