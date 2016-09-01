@@ -18,6 +18,8 @@ tags : [algorithm]
 
 > [链表是否存在环](#3)
 
+> [两个链表中的第一个公共节点](#4)
+
 <span id=1></span>
 ### 单链表中倒数第k个节点
 
@@ -185,3 +187,59 @@ ListNode* FindLoopPort(ListNode *head)
 {% endhighlight %}
 
 对于链表的操作，就是考察程序员对指针使用的熟练程序,还有树。。。
+
+
+## 两个链表中的第一个公共节点
+
+给定两个单链表，找出他们第一个公共节点。
+So1:暴力的方法，就是遍历第一个链表中的节点，同时也遍历第一个链表中的所有节点，如果一样，说明有节点
+重合，就找到了第一个公共节点，时间复杂度O(mn),m,n为两个链表的长度。
+So2:我们分析一下，如果有一个公共节点，那么之后，两个链表的所有节点，都是一样的，拓扑形状看起来像
+一个Y,不可能是X.首先遍历两个链表的长度，就能知道哪个链表长，以及长比短多几个节点，在第二次遍历的
+时候，在长的链表中先走若干步，接着再同时在两个链表中遍历，找到第一个相同的节点就是第一个公共节点。
+
+code:
+{% highlight C linenos %}
+// get list length
+unsigned int GetLengthList(ListNode *head)
+{
+	unsigned int len = 0;
+	ListNode *p = head->next;
+	while(p != NULL){
+		++len;
+		p = p->next;
+	}
+	return len;
+}
+ListNode *FindFirstCommonNode(ListNode *head1,ListNode* head2)
+{
+	unsigned int len1 = GetLengthList(head1);
+	unsigned int len2 = GetLengthList(head2);
+
+	int diff_len = len1 - len2;
+
+	ListNode* p_long = head1;
+	ListNode* p_short = head2;
+
+	if(len2 > len1){
+		diff_len = len2 - len1;
+		ListNode* p_long = head2;
+		ListNode* p_short = head1;
+	}
+
+	// 先在长的链表中走几步
+	for(int i = 0;i < diff_len;i++){
+		p_long = p_long->next;
+	}
+
+	// 当两个指针相遇，并且相等，就得到了第一个公共节点
+	while((p_long != NULL) &&
+		  (p_short != NULL)&&
+		  (p_long != p_short)){
+		p_long = p_long->next;
+		p_short = p_short->next;
+	}
+	return p_long;
+}
+{% endhighlight %}
+

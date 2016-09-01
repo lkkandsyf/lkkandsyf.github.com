@@ -2,7 +2,7 @@
 layout: post
 category : algorithm
 tagline: "Supporting tagline"
-tags : [algorithm]
+tags : [sort]
 ---
 {% include JB/setup %}
 
