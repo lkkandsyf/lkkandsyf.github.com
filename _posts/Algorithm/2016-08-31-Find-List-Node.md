@@ -12,16 +12,17 @@ tags : [algorithm]
 
 ## Problem
 
-> [单链表中倒数第k个节点](#1)
++ 1.单链表中倒数第k个节点
 
-> [单链表中中间节点](#2)
++ 2.单链表中中间节点
 
-> [链表是否存在环](#3)
++ 3.链表是否存在环
 
-> [两个链表中的第一个公共节点](#4)
++ 4.两个链表中的第一个公共节点
 
-<span id=1></span>
-### 单链表中倒数第k个节点
++ 5.删除链表中重复的节点
+
+### 1.单链表中倒数第k个节点
 
 在给定的链表中得到倒数第k个节点，特殊情况返回空.链表的尾节点是链表倒数第1个节点.
 
@@ -34,7 +35,7 @@ k = 2 output:
 output: 3 list node
 {% endhighlight %}
 
-### Solution
+#### Solution
 
 这里有几个特殊的情况需要考虑:
 > 1.指针为空,
@@ -84,8 +85,7 @@ ListNode* FindKthNodeTail(ListNode *head,unsigned int k)
 
 
 
-<span id=2></span>
-### 单链表中中间节点
+### 2.单链表中中间节点
 
 在给定的单链表中得到中间的节点，不考虑奇偶的问题,**如果只有一个或者两个节点，就返回第一个节点**
 
@@ -98,7 +98,7 @@ output:
 output: 3 list node
 {% endhighlight %}
 
-### Solution
+#### Solution
 
 这里需要两个指针，同时走，只是一个走的快，一个走的慢，例如:一个走1步，一个走两步，当快的指针到达尾部的时候，第一个指针指向的就是链表中的中间节点
 
@@ -121,15 +121,14 @@ ListNode* FindMidNode(ListNode *head)
 }
 {% endhighlight %}
 
-<span id=3></span>
-### 链表是否存在环
+### 3.链表是否存在环
 
 在给定的链表中是否有环的存在?
 <font color="red">扩展：</font>如果有环，请输出环的入口节点
 
 example:
 {% highlight C %}
-list:1->2->3->4-5
+list:1->2->3->4->5
            |    |
 	   8<-7<-6
 {% endhighlight %}
@@ -138,7 +137,7 @@ output:
 output: 3 list node
 {% endhighlight %}
 
-### Solution
+#### Solution
 
 So1:这里也使用两个指针，一个走的快，一个走的慢，当慢的指针与快的指针相遇了，说明链表中有环的存在。
 但是还要找到环的入口：这就要费一点脑子了，这两个指针相遇，一定在换上，这是一定的，但是不一定在环
@@ -189,7 +188,7 @@ ListNode* FindLoopPort(ListNode *head)
 对于链表的操作，就是考察程序员对指针使用的熟练程序,还有树。。。
 
 
-## 两个链表中的第一个公共节点
+### 4.两个链表中的第一个公共节点
 给定两个单链表，找出他们第一个公共节点。
 
 > So1:暴力的方法，就是遍历第一个链表中的节点，同时也遍历第一个链表中的所有节点，如果一样，说明有节点
@@ -244,3 +243,25 @@ ListNode *FindFirstCommonNode(ListNode *head1,ListNode* head2)
 }
 {% endhighlight %}
 
+
+### 5.删除链表中重复的节点
+
+problem:
+给定一个有序的链表中，编写一个程序来删除链表中重复的节点
+
+example:
+{% highlight C %}
+list:1->2->2->2->3->3->4->5->5->6->NULL
+{% endhighlight %}
+output:
+{% highlight C %}
+list:1->4->6->NULL
+{% endhighlight %}
+
+
+#### Solution
+
+S01:借助哈希表就可以了，前提是数据是可知的。构造一个哈希，先遍历一次，记住每次节点出现的次数，如果
+次数大于1，就删除节点,浪费了空间。
+
+S02:
