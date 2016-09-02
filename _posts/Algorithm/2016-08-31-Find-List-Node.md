@@ -22,6 +22,8 @@ tags : [algorithm]
 
 + 5.删除链表中重复的节点
 
++ 6.删除链表中的节点O(1)
+
 ### 1.单链表中倒数第k个节点
 
 在给定的链表中得到倒数第k个节点，特殊情况返回空.链表的尾节点是链表倒数第1个节点.
@@ -265,3 +267,40 @@ S01:借助哈希表就可以了，前提是数据是可知的。构造一个哈�
 次数大于1，就删除节点,浪费了空间。
 
 S02:
+
+
+
+### 6.删除链表中的节点O(1)
+
+给定的链表，在O(1)时间内删除节点
+So1:把要删除的节点的下一个节点的数据拷贝到要删除的节点，把下一个节点删除，就可以了。
+
+{% highlight C linenos %}
+void DeleteNode(ListNode **head,ListNode* p_delete)
+{
+	if(*head == NULL || p_delete == NULL)
+		return;
+	// 要删除的节点不是尾节点
+	if(p_delete->next != NULL){
+		ListNode *tmp = p_delete->next;
+		// copy delete node next node val
+		p_delete->val = tmp->next;
+		p_delete->next = tmp->next;
+		delete tmp;
+		tmp = NULL;
+	}else if(*head == p_delete){ // 如果链表只有一个节点
+		delete p_delete;
+		p_delete = NULL;
+		*head = NULL;
+	}else{ //链表有多个节点,删除尾节点
+		ListNode *p = *head->next
+		// 找到要删除的上一个节点
+			while(p->next != p_delete){
+				p = p->next;
+			}
+		p->next = NULL;
+		delete p_delete;
+		p_delete = NULL;
+	}
+}
+{% endhighlight %}

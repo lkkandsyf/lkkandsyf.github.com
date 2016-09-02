@@ -34,7 +34,7 @@ tagline: Supporting tagline
  + 熟悉[Git](https://git-scm.com/)版本控制工具。
  + 了解Linux下的TCP/IP网络编程。
  + 了解深度学习框架([Caffe](http://caffe.berkeleyvision.org/))。
- + 熟悉[MySQL](https://www.mysql.com/)数据库。
+ + 了解[MySQL](https://www.mysql.com/)数据库。
  + 使用Cscope+Vim阅读开源代码(C/C++)。
 
 ## 项目经验
@@ -42,11 +42,9 @@ tagline: Supporting tagline
 ---
 项目名称
 
-开始日期
+日期
 
-结束日期
-
-项目描述
+项目简介
 
 具体职责
 
@@ -59,11 +57,9 @@ tagline: Supporting tagline
 ---
 项目名称
 
-开始日期
+日期
 
-结束日期
-
-项目描述
+项目简介
 
 具体职责
 
@@ -76,11 +72,9 @@ tagline: Supporting tagline
 ---
 项目名称
 
-开始日期
+日期
 
-结束日期
-
-项目描述
+项目简介
 
 具体职责
 
