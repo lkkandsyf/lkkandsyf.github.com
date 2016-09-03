@@ -7,37 +7,28 @@ tags : [algorithm]
 {% include JB/setup %}
 
 # Overview
+{:.no_toc}
 
 这里收集了一些关于链表的一些操作，在面试过程，掌握这些基本知识，是每个程序员必备的.
 
-## Problem
-
-+ 1.单链表中倒数第k个节点
-
-+ 2.单链表中中间节点
-
-+ 3.链表是否存在环
-
-+ 4.两个链表中的第一个公共节点
-
-+ 5.删除链表中重复的节点
-
-+ 6.删除链表中的节点O(1)
+* dir
+{:toc}
 
 ### 1.单链表中倒数第k个节点
 
 在给定的链表中得到倒数第k个节点，特殊情况返回空.链表的尾节点是链表倒数第1个节点.
 
 example:
-{% highlight C %}
+```c
 list:1->2->3->4->NULL
-{% endhighlight %}
 k = 2 output:
-{% highlight C %}
+```
+```c
 output: 3 list node
-{% endhighlight %}
+```
 
 #### Solution
+{:.no_toc}
 
 这里有几个特殊的情况需要考虑:
 > 1.指针为空,
@@ -92,15 +83,16 @@ ListNode* FindKthNodeTail(ListNode *head,unsigned int k)
 在给定的单链表中得到中间的节点，不考虑奇偶的问题,**如果只有一个或者两个节点，就返回第一个节点**
 
 example:
-{% highlight C %}
+```c
 list:1->2->3->4-5>NULL
-{% endhighlight %}
+```
 output:
-{% highlight C %}
+```c
 output: 3 list node
-{% endhighlight %}
+```
 
 #### Solution
+{:.no_toc}
 
 这里需要两个指针，同时走，只是一个走的快，一个走的慢，例如:一个走1步，一个走两步，当快的指针到达尾部的时候，第一个指针指向的就是链表中的中间节点
 
@@ -129,17 +121,18 @@ ListNode* FindMidNode(ListNode *head)
 <font color="red">扩展：</font>如果有环，请输出环的入口节点
 
 example:
-{% highlight C %}
+```c
 list:1->2->3->4->5
            |    |
 	   8<-7<-6
-{% endhighlight %}
+```
 output:
-{% highlight C %}
+```c
 output: 3 list node
-{% endhighlight %}
+```
 
 #### Solution
+{:.no_toc}
 
 So1:这里也使用两个指针，一个走的快，一个走的慢，当慢的指针与快的指针相遇了，说明链表中有环的存在。
 但是还要找到环的入口：这就要费一点脑子了，这两个指针相遇，一定在换上，这是一定的，但是不一定在环
@@ -252,16 +245,17 @@ problem:
 给定一个有序的链表中，编写一个程序来删除链表中重复的节点
 
 example:
-{% highlight C %}
+```c
 list:1->2->2->2->3->3->4->5->5->6->NULL
-{% endhighlight %}
+```
 output:
-{% highlight C %}
+```c
 list:1->4->6->NULL
-{% endhighlight %}
+```
 
 
 #### Solution
+{:.no_toc}
 
 S01:借助哈希表就可以了，前提是数据是可知的。构造一个哈希，先遍历一次，记住每次节点出现的次数，如果
 次数大于1，就删除节点,浪费了空间。
@@ -303,4 +297,42 @@ void DeleteNode(ListNode **head,ListNode* p_delete)
 		p_delete = NULL;
 	}
 }
+{% endhighlight %}
+
+
+### 7.两个单链表删除存在的节点
+
+给定两个链表，把第二个链表中的元素，在第一个链表中存在，就删除，最后返回成功删除的节点个数
+
+example:
+```c
+list1:1->2->3->4->5->NULL
+list2:1->3->5->NULL
+```
+output:
+```c
+3
+list1:2->4->NULL
+```
+
+So1:主要考察如何删除链表的特殊情况
+
+{% highlight C linenos %}
+unsigned int DeleteListExistNode(ListNode *head1,ListHead *head2)
+{
+	// specific case
+	if(!head1)
+		return 0;
+	int len = 0;
+	ListNode *p = head1;
+	while(p != NULL){
+		++len;
+	}
+	if(!head2)
+		return len;
+
+	//two time travel list delete node
+
+}
+
 {% endhighlight %}
