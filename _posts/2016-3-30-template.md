@@ -56,6 +56,13 @@ void main(int argc,char *argv)
 }
 ```
 
+
+> ``` git push origin master```
+
+
+* void
+* main
+
 ## kangkangblog
   1.请注意，* dir这一行是必需的，它表示目录树列表，至于星号后面写什么请随意
   2.如果要把某标题从目录树中排除，则在该标题的下一行写上 {:.no_toc}
