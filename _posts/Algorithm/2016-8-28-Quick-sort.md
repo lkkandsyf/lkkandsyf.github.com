@@ -40,5 +40,3 @@ void QuickSort(vector<int>& v,int left,int right)
 }
 {% endhighlight %}
 
-{% include JB/liquid_raw %}
-
