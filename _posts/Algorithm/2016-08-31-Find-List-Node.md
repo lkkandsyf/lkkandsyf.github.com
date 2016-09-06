@@ -333,7 +333,6 @@ int  DeleteNode(List* head1,int value)
 	}
 	if(p->next == NULL)
 		return 0;
-	printf("free\n");
 	List *q = p->next;
 	p->next = q->next;
 	free(q);
