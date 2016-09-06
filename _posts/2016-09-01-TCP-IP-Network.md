@@ -6,13 +6,13 @@ tags : [tcp,ip]
 ---
 {% include JB/setup %}
 
+* dir
+{:toc}
 
 ## Overview
+{:.no_toc}
+对TCP/IP协议有一个简单的整理和认识。
 
- - 1.TCP/IP协议
- - 2.建立TCP连接
- - 3.终止TCP连接
- - 4.TCP/IP状态转换图
 
 ### 1.TCP/IP协议
 
@@ -79,3 +79,6 @@ TCP/IP连接过程中的的具体变化，以及各自的状态:
 
    A3:不一定，4次挥手关闭TCP连接是最安全的做法。但在有些时候，我们不喜欢TIME_WAIT状态（如当MSL数值设置过大导致服务器端有太多TIME_WAIT状态的TCP连接，减少这些条目数可以更快地关闭连接，为新连接释放更多资源），这时我们可以通过设置SOCKET变量的SO_LINGER标志来避免SOCKET在close()之后进入TIME_WAIT状态，这时将通过发送RST强制终止TCP连接（取代正常的TCP四次握手的终止方式）。但这并不是一个很好的主意，TIME_WAIT对于我们来说往往是有利的。
 
+### 5.TCP/IP 协议栈
+
+列出了OSI和TCP/IP

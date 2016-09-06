@@ -302,7 +302,7 @@ void DeleteNode(ListNode **head,ListNode* p_delete)
 
 ### 7.两个单链表删除存在的节点
 
-给定两个链表，把第二个链表中的元素，在第一个链表中存在，就删除，最后返回成功删除的节点个数
+给定两个链表，把第二个链表中的元素，在第一个链表中存在，就删除，最后返回成功删除的节点个数`保证链表的数据没有重复的`，这个可能简单一些。
 
 example:
 ```c
@@ -318,21 +318,48 @@ list1:2->4->NULL
 So1:主要考察如何删除链表的特殊情况
 
 {% highlight C linenos %}
-unsigned int DeleteListExistNode(ListNode *head1,ListHead *head2)
+
+int  DeleteNode(List* head1,int value)
+{
+	if(head1 == NULL)
+		return 0;
+	/// 带有头节点链表的删除
+	List *p = head1;
+	while(p->next != NULL){
+		if(p->next->val != value)
+			p = p->next;
+		else
+			break;
+	}
+	if(p->next == NULL)
+		return 0;
+	printf("free\n");
+	List *q = p->next;
+	p->next = q->next;
+	free(q);
+	return 1;
+}
+
+// head1:被删除节点链表 head2:存放删除节点的链表
+unsigned int DeleteTwoListExisSametNode(ListNode *head1,ListHead *head2)
 {
 	// specific case
-	if(!head1)
+	if(head1 == NULL || head2 == NULL)
 		return 0;
-	int len = 0;
-	ListNode *p = head1;
-	while(p != NULL){
-		++len;
+	int len1 = 0;
+	List *p = head1->next;
+	unsigned int count = 0;
+	List *q = head2->next;
+	while(q != NULL){
+		//	遍历删除节点，从头节点开始
+		if(DeleteNode(head1,q->val))
+			++count;
+		q = q->next;
+		// 如果删除链表中没有了节点，就退出
+		if(head1->next == NULL)
+			break;
 	}
-	if(!head2)
-		return len;
-
-	//two time travel list delete node
-
+	return count;
 }
 
 {% endhighlight %}
