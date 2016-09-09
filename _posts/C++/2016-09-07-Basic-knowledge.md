@@ -153,16 +153,16 @@ void *memset(void *s,int c,sizeof(s));
  + g.一个指向函数的指针，该函数有个整型参数并返回一个整型数
  + h.一个有10个指针的数组，该指针指向一个函数，该函数有一个整型参数并返回一个整型数。
 
-```C
+{% highlight C linenos %}
 /*
-a.	int		a;		an integer
-b.	int*	a;		a pointer to an integer
-c.	int**	a;		a pointer to a pointer to an integer
-d.	int		a[10];	an array of 10 integer
-e.	int*	a[10];	an array of 10 pointer to integer
-f.	int(*)	a[10]	a pointer to an array of 10 integer
-g.	int (*a)(int)	a pointer to function a that take an integer argument and returns an integer
-h.	int (*a(10)(int)an array of 10 pointer to functions that take an integer argument and return an integer
+a.int	a;	an integer
+b.int*	a;	a pointer to an integer
+c.int**	a;	a pointer to a pointer to an integer
+d.int	a[10];	an array of 10 integer
+e.int*	a[10];	an array of 10 pointer to integer
+f.int(*)	a[10];	a pointer to an array of 10 integer
+g.int (*a)(int);	a pointer to function a that take an integer argument and returns an integer
+h.int (*a(10)(int)an array of 10 pointer to functions that take an integer argument and return an integer
 
 int (*fun)(int *p);
 int (*fun)(int *p,int (*f)(int *));
@@ -173,8 +173,9 @@ fun是一个指向数组的指针，这个数组的元素是函数指针，这�
 int (*(fun)(int *p))[5];
 fun是一个函数指针，这类函数具有int*类型的形参，返回值是指向数组的指针，所指向的数组元素是具有5个int元素的数组。
 */
-```
-<font color="red">note:int (*(fun)(int *p))[5]; </font>
+{% endhighlight %}
+
+<font color="red">note:int (*(fun)(int *p))[5]; 这个不是很好理解</font>
 
 ## 指针常量和常量指针的区别
 
@@ -534,8 +535,70 @@ void *memcpy(void *memTo,const void *memFrom,size_t size)
 
 ## 字串中各个单词的翻转
 
+考察如何对字符串进行操作。
+
+字符串翻转
+{% highlight C linenos %}
+void Reverse(char *p_begin,char *p_end)
+{
+	if(p_begin == NULL || p_end == NULL)
+		return;
+	// start swap
+	while(p_begin < p_end){
+
+		char tmp = *p_begin;
+		*p_begin = *p_end;
+		*p_end = tmp;
+		p_begin++;
+		p_end--;
+	}
+}
+// 翻转英语句子
+char *ReverseSentence(char *p_data)
+{
+	if(p_data == NULL)
+		return NULL;
+
+	char *p_begin = p_data;
+
+	// 找到字符的末尾
+	char *p_end = p_data;
+	while(*p_end != '\0')
+		p_end++;
+	// 切记这里要回退一下，让p_end指向最后一个字符
+	p_end--;
+
+	// 翻转整个句子
+	Reverse(p_begin,p_end);
+
+	// 重新修改指针的指向，但是p_data的内容已经修改
+	p_begin = p_end = p_data;
+
+	// 找到单词并翻转 关键是如何确定一个单词
+
+	while(p_begin != '\0'){
+		// 在交换之后，两个指针都指向空空格，所以需要同时前进
+		if(*p_begin == ' '){
+			p_begin++;
+			p_end++;
+		}else if(*p_end == ' ' || *p_end == '\0'){// =='\0'让p_begin == '\0'跳出loop
+			// 调整好指针的指向
+			Reverse(p_begin,--p_end);
+			// 完成交换之后，把两个指针的指向改为指向同一个字符,以便下次确定位置
+			p_begin = ++p_end;
+		}else{
+			// 一直走，直到遇到空格
+			p_end++;
+		}
+	}
+	return p_data;
+}
+
+{% endhighlight %}
 
 ## 字符串是否是回文
+
+{% highlight C linenos %}
 int IsRevStr(char *str)
 {
 	int		i,len;
@@ -553,6 +616,7 @@ int IsRevStr(char *str)
 	}
 	return found;
 }
+{% endhighlight %}
 
 ## 实现strcmp函数
 
@@ -576,9 +640,14 @@ int strcmp(const char *src,const char *dst)
 
 ## 查找两个字符串的最大公共子串
 
+采用KMP的方法是最好的。复杂度O(m+n)
+
+
 ## 将十进制的数，转换为二进制和十六进制
 
 ## 实现任意长度的两个正整数相加
+
+这是一个大数的问题，需要通过字符串来模拟数字的加法运算。
 
 ## 实现strcat函数
 
@@ -620,7 +689,7 @@ int CheckCPU()
 {
 	union w
 	{
-		int		a;
+		int	a;
 		char	b;
 	}c;
 	c.a = 1;
@@ -646,6 +715,9 @@ int CheckCPU()
 
 ## 与全局对象相比，使用静态数据成员有什么优势
 
+ + 静态数据成员没有进入程序的全局名字空间，因此不存在程序中其他全局名字冲突的可能性
+ + 使用静态数据成员可以隐藏信息，因为静态成员可以是private成员，而全局对象不能
+
 ## 初始化列表不能用assignment
 
 ## main函数执行前还会执行什么代码
@@ -658,17 +730,152 @@ int CheckCPU()
 
 ## 复制构造函数与赋值函数有什么区别
 
+有三个方面的区别：
+
+ + 复制构造函数是一个对象来初始化一块内存区域，这块内存就是新对象的内存区
+
+{% highlight C linenos %}
+class A;
+A a;
+A b = a;	// 复制构造函数
+A c(a)		// 复制构造函数
+{% endhighlight %}
+
+而对于赋值函数是`对于一个已经被初始化的对象来进行operator=操作.`
+{% highlight C linenos %}
+class A;
+A a;
+A b;
+b = a;	// 赋值构造函数
+
+{% endhighlight %}
+
+ + 一般来说是在数据成员包含指针对象的时候，应付两种不同的处理需求:**一种是复制指针对象，一种是引用指针对象**.`赋值构造函数在大多数情况下复制，赋值函数则是引用对象。`
+ + 实现不一样。复制构造函数首先是一个构造函数，它调用的时候是通过`参数传进来的那个对象来初始化产生一个对象`。赋值函数则是`把一个对象赋值给一个原有的对象`，所以原来的对象中有内存分配，`要先把内存释放掉，而且还要检查以下两个对象是不是同一个对象，如果是的话，就不和任何操作`。
+
 ## 编写String的构造函数，析构函数和赋值函数
+
+
+{% highlight C linenos %}
+class MString
+{
+public:
+	// MString(const char *str = NULL);	//普通构造函数
+	MString(const char *str);	//普通构造函数
+	MString(const MString &other);	// 复制构造函数
+	~MString(void);	// 析构函数
+	MString &operator=(const MString &other);	// 赋值函数
+
+private:
+	char *m_string;
+};
+
+MString::MString(const char *str = NULL)
+{
+	// special exception
+	if (str == NULL){
+		m_string = new char[1];
+		*m_string = '\0';
+	}else{
+		m_string = new char[strlen(str) + 1];
+		strcpy(m_string,str);
+	}
+}
+
+// 切记下面的const的好处
+MString::MString(const MString &other)
+{
+	m_string = new char [strlen(other.m_string) + 1];
+	strcpy(m_string,other.m_string);
+}
+
+MString &MString::operator =(const MString &other)
+{
+	if (this == &other){
+		return *this;
+	}
+	// delete other.m_string  prevent mem leak
+	delete [] m_string;
+	// renew alloc mem
+	m_string = new char[strlen(other.m_string) + 1];
+	strcpy(m_string,other.m_string);
+
+	return *this;
+}
+
+MString::~MString(void)
+{
+	if (m_string != NULL)
+	{
+		delete [] m_string;
+		m_string = NULL;
+	}
+}
+
+{% endhighlight %}
+
+临时对象：
+
+真正的临时对象是看不见的，它不会出现在程序代码中，大多数情况下，它会影响程序的执行的效率，所以有时想避免临时对象的产生。通常在以下两种情况下产生临时对象：
+
+ + 参数按值传递
+ + 返回值按值传递
+
+**note：引用必须有一个实在的，可引用的对象，否则引用是错误的，因此，在没有实在的、可引用的对象的时候，只有依赖临时对象**
 
 ## 为什么c不支持重载而c++支持
 
+函数重载是用来描述同名函数具有相同或者相似的功能，但数据类型或者参数不同的函数管理操作。例如，要进行不同数据类型的和操作。
+
+函数重载是用来描述同名函数具有相同或相似的功能，但数据类型或者参数不同的函数来管理操作。
+
+函数名通过C++编译器处理后包含了原函数名、函数参数数量以及返回类型信息，而C语言不会对函数名进行处理。
+
 ## 重载和重写的区别
+
+重载是指子类改写了父类的方法，重写是指同一个函数的不同版本之间参数的不同。
+
+重载是编写一个与已有函数同名但参数表不同(参数数量和参数类型不同)的方法，特征：
+ + 方法名必须相同
+ + 参数列表必须不相同，与参数列表的顺序无关
+ + 返回类型可以不同
+
+重写是派生类重写基类的虚函数，具有如下特征：
+
+ + 只有虚方法和抽象方法才能够被重写
+ + 相同的函数名
+ + 相同的参数列表
+ + 相同的返回值类型
+
+重载是一种语法规则，由编译器在编译阶段完成，不属于面向对象的编程；重写是由运行阶段决定的，是面向对象编程的重要特征。
+
+
 
 ## 私有继承和组合有什么相同点和不同点。
 
+使用组合表示`有一个(has-A)`的关系。如果在组合中需要使用一个对象的某些方法，则完全可以利用私有继承代替。
+私有继承下派生类会获得基类的一份备份，同时得到了访问基类的公共以及保护接口的权利和重写基类虚函数的能力，它意味这`以---实现`，它是组合的一种语法上的变形(聚合或者`有一个`)
+ + 相同点：都可以表示`有一个`关系
+ + 不同点：私有继承中派生类能访问基类的protected成员，并且可以重写基类的虚函数，甚至当基类是抽象的情况。组合不具有这些功能。
+
+<font color="red"> note:选择它们的原则为尽可能使用组合，万不得已才用继承</font>
+
 ## 什么是多态
 
+多态性的定义：同一操作作用与不同的对象，可以有不同的理解，产生不同的解释，产生不同的执行结果。有两种类型的多态性：
+ + 编译时的多态性。编译时的多态性是通过重载来实现的，对于非虚的成员来说，系统在编译时，根据传递的参数，返回的类型等信息决定实现何种操作。
+ + 运行时的多态性。运行时的多态性就是指直到系统运行时，才根据实际的情况来决定实现何种操作，C++，运行时的多态性通过虚成员实现。
+
 ## 虚函数是怎么实现的
+
+简单的来说，虚函数是通过`虚函数表来实现的`.
+ + 虚函数是通过一张虚函数表来实现的，有多少虚函数，就有多少指针；
+ + 在这个表中，主要是一个类的虚函数的地址表，这张表解决了继承，覆盖的问题；
+ + 实际上在编译的时候，编译器会自动加上虚表；
+ + 虚函数的作用是实现动态联编，也就是说在程序运行阶段动态的选择合适的成员函数，在定义虚函数之后，可以在基类的派生类中对虚函数重新定义；
+ + 虚表的使用方法是如果派生类在自己定义中没有修改基类的虚函数，我们就指向基类的虚函数，如果派生类修改了基类的虚函数，这时虚表则将原来指向接力的虚函数的地址替换为指向自身虚函数的地址；
+ + 必须通过的基类类型的引用和指针进行函数调用才会发生多态。
+
 
 ## 多继承的构造函数的顺序
 
@@ -679,7 +886,18 @@ int CheckCPU()
 
 ## 为什么要引入抽象基类和纯虚函数
 
+纯虚函数在基类中是没有定义的，必须子啊子类中加以实现，如果基类含有一个或者多个纯虚函数，那么它就属于抽象类，不能被实例化。
+
+为什么要引入抽象基类和纯虚函数
+ + 为了方便使用多态特性。
+ + 在很多情况下，基类本身生成对象是不合理的。定义纯虚函数相当与接口，能把派生类的共同行为提取出来。
+
 ## 虚函数和纯虚函数有什么区别
+
+ + 类里如果声明了虚函数，这个函数是可以实现的，哪怕是空的，它的作用就是为了能让这个函数在它的子类中可以被覆盖，这样编译器可以使用后期绑定来达到了多态了，纯虚函数只是一个接口，是个函数的声明而已，它要到子类中去实现。
+ + 虚函数在子类里面也可以不重载；但纯虚函数必须在子类中实现，通常要在这个函数前加上virtual关键字，是一个好习惯，虽然牺牲了一些性能，但是增加了面向对象的多态性，因为很难预料到父类里面的这个不在子类里面不去修改它的实现。
+ + 虚函数的类用于`实作继承`，也就说继承接口的同时也继承了父类的实现。当然大家也可以自己去实现。纯虚函数的类用于`界面继承`，即纯虚函数关注的接口的统一性，实现由子类来完成。
+ + 带纯虚函数的类叫虚基类，这种基类不能直接生成对象，而只有被继承，并重写其虚函数后，才能使用，这样的类也叫抽象类。
 
 ## 构造二叉排序树
 
@@ -714,6 +932,9 @@ T max(T a,T b)
 
 ## 函数模板和类模板分别是什么
 
+函数模板是一种抽象的函数定义，它代表一类同构函数。类模板是一种更高层次的抽象的类定义。
+
+函数模板的实例化是由编译程序在处理函数调用时自动完成的，而类模板的实例化必须由程序员在显式地指定。
 
 类模板实例的个数由参数类型的种类决定的。
 
@@ -727,6 +948,11 @@ Array<double> arr5;
 {% endhighlight %}
 
 ## 使用模板有什么缺点？如何避免
+
+template是节省时间和避免代码重复的非常好的方法。我们恶意只输入一个类模板，就能让编译器实例化所需要都很多个特定类以及函数。类模板的成员函数只有被使用时，才会被实例化，所以只有在每个函数都在实际中被使用时，我们才会得到这些函数。
+模板的缺点：不当的使用模板会`导致代码膨胀，即二进制代码臃肿而松散，会严重影响程序的运行效率。`
+
+解决方法：`把C++模板中与参数无关的代码分离出来。`
 
 ## 解释什么是模板的特化
 
