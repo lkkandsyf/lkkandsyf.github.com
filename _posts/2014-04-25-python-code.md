@@ -183,3 +183,8 @@ Point(x=3.0, y=5.0)
 
 ```
 
+
+**这是一个好的文字
+[class](http://lkkandsyf.github.com/pictures/00.ipynb)
+
+
