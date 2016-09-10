@@ -606,8 +606,9 @@ int IsRevStr(char *str)
 
 	if(str == NULL)
 		return -1;
+
 	len = strlen(str);
-	for(i = 0; i < len /2;i++){
+	for(i = 0; i < len / 2;i++){
 		if(*(str+i) != *(str + len -i -1))
 		{
 			found = 0;
@@ -644,6 +645,49 @@ int strcmp(const char *src,const char *dst)
 
 
 ## 将十进制的数，转换为二进制和十六进制
+
+{% highlight C linenos %}
+void Dec2Bin(unsigned int num,unsigned int *result)
+{
+	int		i = 0;
+	int		tmp;
+
+	// transform
+	while(num != 0){
+		tmp = num % 2;
+		result[i++] = tmp;
+		num /= 2;
+	}
+}
+
+int Bin2Dec(const char *buf)
+{
+	int		num = 0;
+
+	// 便于控制,通过p++来得到最终的bit数
+	char *p = buf;
+	int		w = 1;//weight
+
+	// 二进制的bit数
+	int n = 0;
+
+	while(*p != NULL)
+	{
+		if(*p >= '0'&& *p <= '1')
+			++n;
+		else
+			return -1;
+	}
+
+	// transform
+	while(n--){
+		num += (buf[n] - '0')* w;
+		w*=2;// 出现2 的次方
+	}
+	return num;
+
+}
+{% endhighlight %}
 
 ## 实现任意长度的两个正整数相加
 
@@ -722,11 +766,133 @@ int CheckCPU()
 
 ## main函数执行前还会执行什么代码
 
+main函数之前，主要是初始化系统的相关资源
+ + 设置栈指针
+ + 初始化static和全局变量，即data段
+ + 将未初始化部分的全局变量赋初值：数值型short，int，long等为0，bool为False，指针为NULL等等，即.bss段的内容
+ + 运行全局构造器，估计是C++中构造函数之类的
+ + 将main函数的参数，argc，argv等传递给main函数，然后运行main函数。
+
+`expands:`在main函数之后运行
+
+ + 全部对象的析构函数在main之后运行
+ + 可以用_onexit注册函数，在main函数之后运行
+
+**如果你需要加入一段在main退出后执行的代码，可以使用atexit函数。**
+
+
 ## C++默认的空类会产生哪些类成员函数
+
+	会产生六个默认的成员函数
+ + 默认构造函数
+ + 默认析构函数
+ + 拷贝构造函数
+ + 复制运算符
+ + 取地址运算符 非const
+ + 取地址运算符 const
+
+demo:
+{% highlight C linenos %}
+
+class Empty
+{
+public:
+	Empty();
+	Empty(const Empty &);
+	~Empty();
+	Empty& operator=(const Empty &);
+	Empty* operator&();
+	const Empty* operator&() const;
+}
+
+{% endhighlight %}
 
 ## explicit构造函数与普通构造函数的区别
 
+explict的主要用法就是放在`单参数`的构造函数中，`防止隐式转换`，导致函数的入口，出现`歧义`。
+
+如果可以使用A构造B，`未加explict的`构造函数，当使用B进行参数处理时，就可以使用A，使得`接口混乱`
+
+为了避免这种情况，使用`explict避免隐式构造，只能通过显示(explict)构造`
+
 ## 复制构造函数是什么?什么是深复制和浅复制
+
+复制构造函数，就把一个对象复制另一个相同的对象的过程。但是拷贝构造函数又分为两种情况，也就是深拷贝和浅拷贝。
+
+ + 浅拷贝：指的是在对象复制时，**只是对对象中的数据进行简单的赋值，默认拷贝构造函数执行的也是浅拷贝**,`大多数情况浅拷贝已经能很好的工作了，但是一旦对象在**动态成员，那么浅拷贝就会出现问题**`
+
+{% highlight C linenos %}
+class A
+{
+public:
+	A()
+	{
+		p = new int(10);
+	}
+	~A()
+	{
+		if(p != NULL)
+		{
+			delete p;
+		}
+	}
+private:
+	int width;
+	int height;
+	int *p;
+}
+
+int main()
+{
+	A a1;
+	A a2(a1);
+	return 0;
+}
+{% endhighlight %}
+
+这段代码运行时会出现错误，原因就是在进行对象复制时，对于动态分配的内容没有进行正确的操作。在销毁对象时，两个对象的析构函数将对同一个内存释放了两次，这显然是不对的。
+
+我们需要的不是两个p具有相同的值，而是两个p指向的空间有相同的值，解决方法`使用深拷贝`
+
+ + 深拷贝：在深拷贝的情况下，对于对象中的`动态成员，`就不是简简单单的赋值了，应该重新分配内存空间
+{% highlight C linenos %}
+class A
+{
+public:
+	A()
+	{
+		p = new int(10);
+	}
+	~A()
+	{
+		if(p != NULL)
+		{
+			delete p;
+		}
+	}
+	A(const A &a)
+	{
+		width = a.width;
+		height = a.height;
+		p = new int(10);
+		*p = *(a.p);
+	}
+private:
+	int width;
+	int height;
+	int *p;
+}
+
+int main()
+{
+	A a1;
+	A a2(a1);
+	return 0;
+}
+{% endhighlight %}
+
+这样调用之后就不会出错了。
+
 
 ## 复制构造函数与赋值函数有什么区别
 
