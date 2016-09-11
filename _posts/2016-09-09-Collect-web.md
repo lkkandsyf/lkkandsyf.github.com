@@ -13,6 +13,17 @@ tags : []
 * dir
 {:toc}
 
+
+## Search
+
+> + [www.google.com](www.google.com)
+> + [www.yahoo.com](www.yahoo.com)
+> + [www.yandex.com](www.yandex.com)
+> + [www.biying.cn](www.biying.cn)
+> + [www.baidu.com](www.baidu.com)
+
+
+
 ## C
 
 ## C++
@@ -30,5 +41,22 @@ tags : []
 ## C++
 ## C++
 ## C++
-## C++
+##
+
+## tech-web
+
+**Hack**
+
+> + [www.codesec.com](www.codesec.com)
+
+
+**blog**
+
+> + [www.51cto.com](www.51cto.com)
+> + [www.cnblog.com](www.cnblog.com)
+
+## lefe-web
+
+> + [www.twitter.com](www.twitter.com)
+> + [www.sina.com](www.sina.com)
 
