@@ -28,7 +28,7 @@ Transmission Control Protocol/Internet Protocol的简写，中译名为传输控
 
 至此，一个TCP连接就建立起来了。（详见下图）
 
-![image](http://lkkandsyf.github.com/pictures/hand-th-four.png)
+![image](http://lkkandsyf.github.com/pictures/three-hands.jpg)
 
 
 ### 3.终止TCP连接（四次挥手）
@@ -43,9 +43,22 @@ Transmission Control Protocol/Internet Protocol的简写，中译名为传输控
 + 服务器发送一个`FIN报文（报文6）给客户端`，表示自己也将关闭服务器端到客户端这个方向的连接。
 + 客户端收到`报文6后，发回一个ACK报文（报文7）给服务器，序号为报文6的序号加1`。
 
+![image](http://lkkandsyf.github.com/pictures/hand-th-four.png)
+
 至此，一个TCP连接就关闭了。（4次挥手不是关闭TCP连接的唯一办法，见下文Q3疑问）
 
+
+**连接与释放的整个过程,如图:**
+
+![image](http://lkkandsyf.github.com/pictures/connect-disconnect.jpg)
+
+
+
+
 ### 4.TCP/IP状态转换图
+
+
+
 
 TCP/IP连接过程中的的具体变化，以及各自的状态:
 
@@ -74,9 +87,11 @@ TCP/IP连接过程中的的具体变化，以及各自的状态:
    + **Q1 为什么在TCP协议里，建立连接是三次握手，而关闭连接却是四次握手呢？**
 
    A1: 因为当处于LISTEN状态的服务器端SOCKET当收到SYN报文（客户端希望新建一个TCP连接）后，它可以把ACK（应答作用）和SYN（同步作用）放在同一个报文里来发送给客户端。但在关闭TCP连接时，当收到对方的FIN报文时，对方仅仅表示对方没有数据发送给你了，但未必你的所有数据都已经全部发送给了对方，所以你大可不必马上关闭SOCKET（发送一个FIN报文），等你发送完剩余的数据给对方之后，再发送FIN报文给对方来表示你同意现在关闭连接了，所以通常情况下，这里的ACK报文和FIN报文都是分开发送的。
+
    + **Q2为什么TIME\_WAIT状态还需要等2*MSL秒之后才能返回到CLOSED 状态呢？**
 
    A2:因为虽然双方都同意关闭连接了，而且握手的4个报文也都发送完毕，按理可以直接回到CLOSED 状态（就好比从SYN_SENT 状态到ESTABLISH状态那样），但是我们必须假想网络是不可靠的，你无法保证你最后发送的ACK报文一定会被对方收到，就是说对方处于LAST_ACK状态下的SOCKET可能会因为超时未收到ACK报文，而重发FIN报文，所以这个TIME_WAIT 状态的作用就是用来重发可能丢失的ACK报文。
+
    + **Q3关闭TCP连接一定需要4次挥手吗？**
 
    A3:不一定，4次挥手关闭TCP连接是最安全的做法。但在有些时候，我们不喜欢TIME_WAIT状态（如当MSL数值设置过大导致服务器端有太多TIME_WAIT状态的TCP连接，减少这些条目数可以更快地关闭连接，为新连接释放更多资源），这时我们可以通过设置SOCKET变量的SO_LINGER标志来避免SOCKET在close()之后进入TIME_WAIT状态，这时将通过发送RST强制终止TCP连接（取代正常的TCP四次握手的终止方式）。但这并不是一个很好的主意，TIME_WAIT对于我们来说往往是有利的。
