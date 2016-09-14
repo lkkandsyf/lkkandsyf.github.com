@@ -854,6 +854,45 @@ void *memcpy(void *memTo,const void *memFrom,size_t size)
 }
 {% endhighlight %}
 
+## 实现memmove函数
+
+实现void *memmove(void* dest,void* src,size_t count);
+功能:由src所指内存区域复制count个字节到dest所指内存区域
+说明:src和dest所指内存区域可以重叠，但复制后src内容会被更改。函数返回指向dest的指针
+
+code:
+{% highlight C linenos %}
+
+void* memmove(void *dst,const void *src,int count)
+{
+	assert(dst);
+	assert(src);
+	void *ret = dst;
+
+	if(dst <= src ||(char*)dst >= ((char *) src + count)){
+		while(count--){
+			*(char *)dst = *(char *)src;
+			dst = (char *)dst + 1;
+			src = (char *)src + 1;
+		}
+	}
+	else{
+		dst = (char *)dst + count + 1;
+		src = (char *)src + count + 1;
+
+		while(count--){
+			*(char *)dst = *(char *)src;
+			dst = (char *)dst - 1;
+			src = (char *)src -1;
+		}
+	}
+	return ret;
+}
+
+
+{% endhighlight %}
+
+
 ## strcpy与memcpy的区别
 
  + 复制的内容不同，strcpy只能复制字符串，而memcpy可以是任意内容，例如：字符数组，整型等
