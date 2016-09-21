@@ -508,6 +508,115 @@ delete[] matrix;
 {% endhighlight %}
 
 
+
+## 重载-覆盖-隐藏
+
+成员函数重载、覆盖与隐藏，这个很容易产生混淆，C++程序员必须`搞清楚`
+
+ + 重载
+
+1.相同的范围(在同一个类中)
+
+2.函数的名字相同
+
+3.参数不同
+
+4.virtual关键字可有可无
+
+ + 覆盖是指`派生类函数覆盖基类函数`
+
+1.不同的范围(分别位于派生类与基类)
+
+2.函数名字相同
+
+3.参数相同
+
+4.`基函数<font color="red">必须有virtual关键字</font>`
+
+```C
+#include<iostream>
+using namespace std;
+
+class Base
+{
+public:
+	void fun(int x){	cout << "Base::fun(int x)" << endl;	}
+	void fun(float x){	cout << "Base::fun(float x)" << endl;}
+	virtual void g(void) { cout << "Base::g(void)" << endl;	 }
+};
+
+class Derived:public Base
+{
+public:
+	virtual void g(void){	cout << "Derived::g(void)" << endl; }
+};
+
+
+
+int main()
+{
+	Derived d;
+	Base *p = &d;
+	p->fun(1);	// Base::fun(1) 重载
+
+	// 这里的f是必不可少的，要不然会出错
+	p->fun(1.1f);// Base::fun(1.1)	重载
+
+
+	p->g();		// Derived::g(void)		覆盖
+	return 0;
+}
+```
+
+ + 令人迷惑的`隐藏`
+
+这里的`隐藏`是指派生类的函数`屏蔽了`与其`同名的基类函数`，规则如下
+
+ + 如果派生类的函数与基类的函数同名，但是`参数不同`，此时，`不论有无virtual关键字`，`基类的函数`被`隐藏`(注意和重载的不同)
+ + 如果派生类的函数与基类的函数同名，并且`参数也相同`,但是`基类函数没有virtual关键字`,此时`基类的函数`被`隐藏`(注意和覆盖的不同)
+
+
+```C
+#include<iostream>
+using namespace std;
+
+class Base
+{
+public:
+	virtual	void fun(int x){	cout << "Base::fun(int x)" << endl;	}
+	void fun(float x){	cout << "Base::fun(float x)" << endl;}
+	void g(float x) { cout << "Base::g(float)" << endl;	 }
+	void f(float x){	cout << "base::f(float)" << endl;	}
+};
+
+class Derived:public Base
+{
+public:
+	virtual	void fun(int x){	cout << "Derived::fun(int x)" << endl;	}
+	void g(int x) { cout << "Derived::g(int)" << endl;	 }
+	void f(float x){	cout << "base::f(float)" << endl;	}
+};
+
+
+
+int main()
+{
+	Derived d;
+	Base *p = &d;
+	p->fun(1);	// Base::fun(1) 重载
+
+	// 这里的f是必不可少的，要不然会出错
+	p->fun(1.1f);// Base::fun(1.1)	重载
+
+
+	p->g();		// Derived::g(void)		覆盖
+	return 0;
+}
+
+1.Derived::fun(int x)覆盖了子类的Base::fun(int x)
+2.Derived::g(float)隐藏了Base::g(int),而不是重载
+3.Derived::f(float)隐藏了Base::f(float).,而不是覆盖
+
 ## 动态内存的传递
 
 分析如下程序：
