@@ -14,6 +14,9 @@ tags : [sort]
 {% highlight C %}
 void QuickSort(vector<int>& v,int left,int right)
 {
+	// exception
+	if(v.size()<= 0 || left < 0 || right < 0)
+		return;
 	if(left < right){
 		int	key = v[left];
 		int	low = left;
