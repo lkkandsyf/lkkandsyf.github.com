@@ -1,6 +1,6 @@
 ---
 layout: post
-category :secority
+category : secority
 tagline: "Supporting tagline"
 tags : [Big-data]
 ---
