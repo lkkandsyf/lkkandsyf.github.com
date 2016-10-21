@@ -11,6 +11,15 @@ tagline: Supporting tagline
 this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to look.
 ---
 
+
+**my blog**
+
++ [cnblog](http://www.cnblogs.com/lkkandsyf)
++ [oschina](https://my.oschina.net/liangkangkang)
+
+
+公司：`绿盟科技`
+
 目前工作:`数据分析研究员`
 
 # Overview
@@ -47,4 +56,6 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 ### 爱好
  + 文学
 
-	喜欢的作家:林清玄
+喜欢的作家
+ + [林清玄](http://www.xiexingcun.com/linqingxuan/)
+ + [琦君](http://www.yooread.com/8/3341/)

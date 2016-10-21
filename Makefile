@@ -1,4 +1,5 @@
 all:
+	git add .
 	jekyll build
 	jekyll serve
 

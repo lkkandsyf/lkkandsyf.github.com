@@ -225,3 +225,8 @@ zope.interface>=4.0.5)
 python性能分析工具
 
 sudo apt-get install python-profiler
+
+## python 升级带来的问题
+
+  + P1:vim: symbol lookup error: vim: undefined symbol: PyUnicodeUCS4_AsEncodedString
+  [link](http://stackoverflow.com/questions/26909293/vim-symbol-lookup-error-vim-undefined-symbol-pyunicodeucs4-asencodedstring)
