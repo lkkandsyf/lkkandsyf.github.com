@@ -16,6 +16,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 + [cnblog](http://www.cnblogs.com/lkkandsyf)
 + [oschina](https://my.oschina.net/liangkangkang)
++ [github](http://lkkandsyf.github.com)
 
 
 公司：`绿盟科技`
@@ -50,12 +51,11 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 6.了解样本分析/数据挖掘技术者优先考虑；有数据挖掘经验(spark mlib/R packages/scikit-learn)者优先考虑；了解网络安全，熟悉各类安全产品者优先考虑；了解若干主流分布式计算和图计算者优先考虑。
 
-
-
-
 ### 爱好
  + 文学
 
 喜欢的作家
+
  + [林清玄](http://www.xiexingcun.com/linqingxuan/)
+
  + [琦君](http://www.yooread.com/8/3341/)
