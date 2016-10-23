@@ -782,8 +782,181 @@ Scala目前基于平衡树的映射只提供了`不可变版本`，**构建可�
 
 #### 4.类
 
+1)Scala中的类是`公有可见性`的，且多个类可以包含在同一个源文件中。
+
+	class Counter{
+		private var value = 0	//类成员变量必须初始化，否则报错
+
+		def increment(){		//类中的方法默认是公有可见性
+			value += 1
+		}
+
+		def current() = value	//类中的取值方法，在定义时可省略括号，直接 def current = value
+	}
+
+类的使用
+
+	scala> class Counter{
+		     | private var value = 0
+			 | def increment(){
+			 	     | value += 1
+		 	          |
+			 }
+	      | def current = value
+	      |
+	}
+	defined class Counter
+	scala> var counter = new Counter
+	counter: Counter = Counter@619bfe29
+	scala> counter.current
+	res0: Int = 0
+	scala> counter.increment
+	scala> counter.current
+	res2: Int = 1
+
+Scala的类在`未提供构造器时`，也会提供`默认构造器`；且在调用无参构造器或无参方法可`省略方法后的括号`
+
+2)Scala类中的每个`字段`都有`geter`和`setter`方法，`私有字段`的`getter`和`setter`默认是`私有的`，公有字段的`getter`和`setter`默认是公有的。其中对于类中的属性value，Scala类默认生成的getter方法名为`value`,默认生成的setter方法名为`value_=`.使用时，我们可以重新定义获取或设置属性的方法。
+
+
+	scala> class Clock{
+	     | var hour = 0
+	     | var minute = 0
+	     | var second = 0
+  		 | def getTime():String = {
+         | return hour + ":" + minute +":"+second
+			}
+	}
+	defined class Clock
+
+对于Clock类中的属性，如hour，其对应的getter方法为hour，其对应的setter方法名为`hour_=`
+
+	scala> var clock = new Clock()
+	clock: Clock = Clock@7ff6804a
+
+	scala> clock.hour
+	res4: Int = 0
+
+	scala> clock.hour_=(12)
+
+	scala> clock.hour
+	res6: Int = 12
+
+注意：`可以重新定义获取Scala类中属性的方法`，但是最好不要与属性`默认对应的getter/setter方法重名`，否则会报错。
+
+3)对于Scala类总的val属性，只有默认的getter方法；对于private属性，其默认getter，setter都是private的，因而，对于不想提供setter方法的变量可以设置为val，对于不想提供getter，setter方法的变量可以设置为private.
+
+4)注意，Scala类中，定义函数时，若函数声明`省略了`函数名`后的括号`(由于无参数，可以省略)，必须参数`无括号`的形式，通过带括号形式`调用会报错`
+
+	class Counter{
+		var		value = 0
+
+		def current = value
+	}
+
+在类Counter定义中，对于方法current,由于不接受参数，所以定义时，省略了方法名current后的`括号`。此时，对于Counter的实例counter，调用current方法时，必须采用counter.current(无括号形式)
+
+5)构造器
+
+Scala的类可以有一个`主构造器`和`多个辅助构造器`。多个辅助构造器的名称为this，每一个辅助构造器都必须以调用已经定义的辅助构造器或主构造器开始定义。
+
+ + 主构造器
+
+如果一个类`没有显示定义主构造器`，则有一个默认的`无参主构造器`。如：
+
+```
+class Student(val name:String, var age:Int = 0, address:String = "", private var school:String = ""){
+	2     var grade:Int = if( age>7  ) age-7 else 0
+	3
+	4     println(" I'm in main constructor. ")
+	5
+	6     def info() = ""
+}
+```
+对于Scala类，`主构造器的参数`放置在类名后，由`括号`括起来。且对于`主构造器中var、val、private`等标注的参数，都会成为类的对应字段，并生成对应的`默认getter、setter方法`。如Student类中的name、age、school等。对于主构造器中的未用var、val标注的参数，如果在类的任何一个方法用用到该参数，该参数将会转换为类的字段，否则不会，如Student类的address属性。
+
+由于在Student类中的info方法中用到了参数address，所以Student共有name、age、address、school、grade等5个属性，且Scala根据对应属性的特点生成了默认的getter和setter方法。
+
+**对于主构造器的参数，也可以提供参数默认值。通过为主构造器提供默认值可减少辅助构造器的个数**.主构造器的函数体，是类中除了方法定义以外的其他语句，如在Student类的主构造器中，包含grade属性的初始化和prinln这两行语句。
+
+6)辅助构造器
+
+辅助构造器通过this来定义，且必须首先调用`主构造器`或者其他`已经定义的辅助构造器`。
+
+```
+class Person(val name:String){
+	 var age = 0
+	 var sex:Char = 'f'
+
+    println("main constructor...")
+
+     def this(name:String,  age:Int){
+	       this(name)        //调用主构造器
+	        this.age = age     //使用this关键字
+	         println(" auxiliary constructor1 ")
+
+	}
+	   def this(name:String, age:Int, sex:Char){
+	          this(name, age)
+	          this.sex = sex
+	          println(" auxiliary constructor2 ")
+	 }
+}
+```
+
+note：辅助构造器的参数前`不能添加val,var,标志`，否则会`报错`。
+
+7)私有构造器
+
+```
+class Person private(val name:String){
+  var age:Int = 1
+
+  def this(name: String, age:Int){
+         this(name)
+         this.age = age
+	}
+}
+```
+
+私有构造器通过在类名后`用private关键字`标注主构造器参数来表明，此时，可以通过辅助构造器`来创建该类的对象`。
+
+8)嵌套类
+
+```
+class Family(val h_name:String, val w_name:String){
+	class Husband(var name:String){
+         println(" I'm a husband ")
+	}
+
+	class Wife(var name:String){
+	        println(" I'm a Wife ")
+	 }
+
+	 var husband = new Husband(h_name)
+	 var wife = new Wife(w_name)
+
+	 def info(){
+	        println( "husband: "+husband.name+", wife:"+wife.name  )
+    }
+}
+```
+在Scala中，你几乎可以在`任何语法结构`中`嵌套语法结构`，如在`函数中定义函数，在类中定义类`。
+
 #### 5.对象
 
+
+1)
+2)
+3)
+
+4)
+5)
+6)
+
+7)
+8)
+9)
 
 
 
