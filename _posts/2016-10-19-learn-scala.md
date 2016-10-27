@@ -945,21 +945,147 @@ class Family(val h_name:String, val w_name:String){
 
 #### 5.对象
 
+1)Scala中没有`静态方法`和`静态字段`，但是可以用`object`语法来实现类似的功能。对象定义某个类的单个实例。Scala的object中可以实现类似的功能，用来存放`工具函数或常量`等。
 
-1)
-2)
-3)
+	object Sequence{
+	     private var next_num = 0
+	     val threshold = 100
 
-4)
-5)
-6)
+	     def getSequence() = {
+	         next_num += 1
+	         next_num
+		}
+	}
 
-7)
-8)
-9)
+使用object中的常量或方法，通过object名直接调用，对象构造器在对象`第一次被使用`时调用(如果某对象一直`未被使用`，那么其构造器也不会被`调用`)
 
+object的构造器`不接受参数传递`
 
+	scala> Seq.getSequence
+	res4:	Int = 1
+	scala> Seq.threshold
+	res5:	Int = 100
 
+2)伴生对象
+
+可以将在Scala中定义的`静态常量、方法等`放置到Scala的类的伴生对象中，伴生对象与`类同名`，且`必须放置同一个源文件中`。类可以访问伴生对象私有属性，但是必须通过`伴生对象.属性名`或`伴生对象.方法`调用
+
+**伴生对象是类的一个`特殊实例`**
+
+```
+class Counter{
+     def getTotalCounter()= Counter.getCount
+}
+object Counter{
+     private var cnt = 0
+     private def getCount()= cnt
+}
+```
+
+如在类Counter方法其伴生对象的使用方法getCount，必须通过Counter.getCount()的方式调用。
+
+3)对象可以继承或扩展多个特质
+
+```
+abstract class Person(var name:String, var age:Int){
+     def info():Unit
+}
+object XiaoMing extends Person("XiaoMing", 5){
+     def info(){
+        println("name is" +naem +",age is " + age)
+	}
+}
+
+```
+
+4)apply方法
+
+当遇到object(参数1，参数2，...,参数n)的形式的调用时，apply方法便会调用。
+
+5)main方法--Scala程序的入口
+
+main方法定义在object中，形式如下
+
+```
+object  Hello{
+	def main(args:Array[String]){
+		println("hello world")
+	}
+}
+```
+
+可以通过scalac 源文件名，然后通过scala 类名来执行主程序
+
+6)还可以通过`扩展特质App`来运行指定代码
+
+```
+object hello extens App{
+	println("A `hello world` from hello world")
+}
+```
+通过扩展App特质的方式执行程序，将要执行的程序放到了object的主构造器中。
+
+7)枚举
+
+Scala并没有定义枚举类型，但是可以通过定义扩展Enumeration的对象，并用value方法初始化枚举中所有可选的值，提供枚举。
+
+```
+object TrafficeLight extends Enumeration{
+	val Red,Yellow,Green = value
+}
+```
+
+上述实例中的 val Red,Yellow,Green = value语句，相当于
+
+```
+val red = value
+val Yellow = value
+val Green = value
+```
+
+用value方法来`初始化枚举类变量`时，value方法会返回内部类的新实例，且该内部类也叫value。另外，在调用value方法时，可传入`ID，名称`两个参数。如果没有指定ID，默认`从0开始，后面参数的ID加1`，如果未指定名称，默认与属性字段同名。
+
+```
+object TrafficLight extends Enumeration{
+	val Red = value(1,"stop")
+	val Yellow = value("wait")// 可以单独传名字
+	val Green = value(4)	// 可以传入ID
+}
+```
+
+上例中，Yellow属性就`仅定义了名称`，Green`仅定义ID`
+
+```
+scala>TrafficLight.Red
+res10:TrafficLight.value = Stop
+scala>TrafficLight.Green
+res11:TrafficLight.value = Green
+```
+
+参数在`不指定名称`时，默认参数的value为`字段名`
+
+**note:枚举类型的值是对象的value,如上面中的枚举类型是TrafficLight.value**
+
+8)通过id方法来获取枚举类型值的ID
+
+```
+scala>TrafficLight.Green.id
+res12: Int = 4
+```
+
+9)通过values方法获取所有枚举值的集合
+
+```
+scala>TrafficLight.values
+res13:TrafficLight.ValueSet = TrafficLight.ValueSets(Stop,Wait,Green)
+```
+
+10)通过ID来获取对应的枚举对象
+
+```
+scala>TrafficLight(1)
+res14:TrafficLight.value = Stop
+```
 ### Scala API download
 
 只要我们按照如下的格式，就可以下载到对于版本的API了。

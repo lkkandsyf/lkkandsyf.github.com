@@ -11,17 +11,25 @@ tagline: Supporting tagline
 this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to look.
 ---
 
+**gmail**
+
+lkkforworld@gmail.com
+
 
 **my blog**
 
 + [cnblog](http://www.cnblogs.com/lkkandsyf)
 + [oschina](https://my.oschina.net/liangkangkang)
+
+**code repo**
+
 + [github](http://lkkandsyf.github.com)
++ [oschina](http://git.oschina.net/lkk_gczx)
 
 
-公司：`绿盟科技`
+`公司`:[绿盟科技](https://nsfocusglobal.com/)
 
-目前工作:`数据分析研究员`
+`工作`:数据分析研究员
 
 # Overview
 {:.no_toc}
