@@ -26,6 +26,9 @@ lkkforworld@gmail.com
 + [github](http://lkkandsyf.github.com)
 + [oschina](http://git.oschina.net/lkk_gczx)
 
+**Docker**
+
+docker:lkklinux `
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
@@ -67,3 +70,11 @@ lkkforworld@gmail.com
  + [林清玄](http://www.xiexingcun.com/linqingxuan/)
 
  + [琦君](http://www.yooread.com/8/3341/)
+
+ + 电影
+
+website
+
+ + [megasharemovie.net](megasharemovie.net/movie)
+ + [vioozwatch32moive.org](vioozwatch32moive.org)
+

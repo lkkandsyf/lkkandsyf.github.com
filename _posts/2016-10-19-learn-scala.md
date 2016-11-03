@@ -414,6 +414,28 @@ __for 推导式__
 
   最后说一下，假设方法体中`仅包含一个表达式`，那么Scala允许你省略花括号，所以说，使用=能够避免可能的解析歧义。
 
+#### 7.match
+
+	scala>def level(s:Int) = s match{
+		case n if n >= 90 => "good"
+		case n if n >= 80 => "good2"
+		case n if n >= 70 => "good3"
+		case n if n >= 60 => "good3"
+		case _ => "bad"
+	}
+	scala> levle(51)
+	res2:String = bad
+
+	scala> levle(91)
+	res2:String = good
+
+	scala> levle(81)
+	res2:String = good2
+
+可以看到，模式匹配可以使用swith相同的功能。但是switch需要使用break明确通知终止之后的判断不同，scala中match case是`默认break`的,只要其中一个case语句匹配，就会终止后的所有比较。且对应的case语句的表达式的值将作为整个match case表达式的值返回。
+
+Scala中的模式匹配还有类型匹配，数据抽取，谓词判断等其它有用的功能。
+
 ### 数组-映射-元组-类-对象
 
 #### 1.数组
@@ -726,6 +748,12 @@ Scala目前基于平衡树的映射只提供了`不可变版本`，**构建可�
 	scala> mapArr.toMap
 	res31: scala.collection.immutable.Map[Int,Char] = Map(1 -> a, 2 -> b, 3 -> c)
 
+
+Scala的immutable
+collection并没有添加和删除元素的操作，其定义+（List使用::在头部添加）操作都是生成一个新的集合，而要删除一个元素一般使用.filterNot函数来映射一个新的集合实现。
+
+（注：Scala中也scala.collection.mutable._集合，它定义了不可变集合的相应可变集合版本。一般情况下，除非一性性能优先的操作（其实Scala集合采用了共享变量的优化，生成一个新集合并不会生成所有元素的副本，它将会和老的集合共享大元素。因为Scala中变量默认都是不可变的），推荐还是采用不可变集合。因为它更直观、线程安全，你可以确定你的变量不会在其它地方被不小心的更改。）
+
 #### 3.元组
 
 1.元组是`不同类型的值`的聚集，`对偶`是最简单的元组.
@@ -780,13 +808,66 @@ Scala目前基于平衡树的映射只提供了`不可变版本`，**构建可�
 
 上例中，`函数定义返回值`类型为`元组`(Int,String).
 
-#### 4.类
+#### 4.List
+
+python中，常用的集合类型：list,tuple,set,dict.Scala中对应的是:List,Tuple[X],Set,Map.
+
+Scala中List是一个`递归不可变集合`，它很精妙的使用`递归`结构定义了一个列表集合。
+
+	scala>val list = 1::2::3::4::5::Nil
+	list:List[Int] = List(1,2,3,4,5)
+
+List采用`前缀`操作的方式(所有的操作都在列表的顶端)进行，::操作符的作用是将一个元素和列表连接起来，并把元素放在`列表的开头`，这样List的操作就可以定义成一个`递归操作`。添加一个元素就是把元素加到list的开头，List只需要`改下头指针`，而删除一个元素就是把List的头指针指向列表中的第二个元素。这样，List的实现就非常的高效，它也不需要对内存做任何的转移操作。List有很多常用的方法
+
+	scala> list.indexOf(3)
+	res6: Int = 2
+
+	scala> 0 :: list
+	res8: List[Int] = List(0, 1, 2, 3, 4, 5)
+
+	scala> list.reverse
+	res9: List[Int] = List(5, 4, 3, 2, 1)
+
+	scala> list.filter(item => item == 3)
+	res11: List[Int] = List(3)
+
+	scala> list
+	res12: List[Int] = List(1, 2, 3, 4, 5)
+
+	scala> val list2 = List(4, 5, 6, 7, 8, 9)
+	list2: List[Int] = List(4, 5, 6, 7, 8, 9)
+
+	scala> list.intersect(list2)
+	res13: List[Int] = List(4, 5)
+
+	scala> list.union(list2)
+	res14: List[Int] = List(1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9)
+
+	scala> list.diff(list2)
+	res15: List[Int] = List(1, 2, 3)
+
+Scala中默认都是`Immutable collection`，在集合上定义的操作都`不会更改集合本身`，而是生成一个`新的集合`。Python中只有set上有求交、并、差积运算，Scala中将其范化到所以序列集合上（Seq、List、Set、Array……）都可以支持。
+
+#### 5.Set
+
+Set是一个`不重复且无序的`集合，初始化一个Set需要使用Set对象:
+
+	scala> val set = Set("Python", "Scala", "Java", "C++", "Javascript", "C#", "PHP")
+	set: scala.collection.immutable.Set[String] = Set(Scala, C#, Python, Javascript, PHP, C++, Java)
+
+	scala> set + "Go"
+	res21: scala.collection.immutable.Set[String] = Set(Scala, C#, Go, Python, Javascript, PHP, C++, Java)
+
+	scala> set filterNot (item => item == "PHP")
+	res22: scala.collection.immutable.Set[String] = Set(Scala, C#, Python, Javascript, C++, Java)
+
+#### 6.类
 
 1)Scala中的类是`公有可见性`的，且多个类可以包含在同一个源文件中。
 
 	class Counter{
 		private var value = 0	//类成员变量必须初始化，否则报错
-
+`
 		def increment(){		//类中的方法默认是公有可见性
 			value += 1
 		}
@@ -943,7 +1024,7 @@ class Family(val h_name:String, val w_name:String){
 ```
 在Scala中，你几乎可以在`任何语法结构`中`嵌套语法结构`，如在`函数中定义函数，在类中定义类`。
 
-#### 5.对象
+#### 7.对象
 
 1)Scala中没有`静态方法`和`静态字段`，但是可以用`object`语法来实现类似的功能。对象定义某个类的单个实例。Scala的object中可以实现类似的功能，用来存放`工具函数或常量`等。
 
@@ -1086,6 +1167,29 @@ res13:TrafficLight.ValueSet = TrafficLight.ValueSets(Stop,Wait,Green)
 scala>TrafficLight(1)
 res14:TrafficLight.value = Stop
 ```
+
+#### 8.函数
+
+在Scala中，函数是一等公民。函数可以像类型一样被赋值给一个变量，也可以做为一个函数的参数被传入，甚至还可以做为函数的返回值返回（这就是函数式编程）。
+
+	scala> def calc(n1: Int, n2: Int): (Int, Int) = {
+			|   (n1 + n2, n1 * n2)
+				|
+	}
+	calc: (n1: Int, n2: Int)(Int, Int)
+
+	scala> val (add, sub) = calc(5, 1)
+	add: Int = 6
+	sub: Int = 5
+
+这里定义了一个函数：calc，它有两个参数：n1和n2，其类型为：Int。cala函数的返回值类型是一个有两个元素的元组，在Scala中可以简写为：(Int,
+Int)。在Scala中，代码段的最后一句将做为函数返回值，所以这里不需要显示的写return关键字。
+
+而val (add, sub) = calc(5,
+1)一句，是Scala中的抽取功能。它直接把calc函数返回的一个Tuple2值赋给了add他sub两个变量。
+
+
+
 ### Scala API download
 
 只要我们按照如下的格式，就可以下载到对于版本的API了。
