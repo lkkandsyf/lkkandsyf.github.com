@@ -1,0 +1,553 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Python Upgrade</title>
+	<meta name="author" content="kangkangliang">
+	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Python Upgrade" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<nav class="nav-global">
+					<ul>
+						<li class="logo"><a href="/">既生而为人，就要承担，安然接受人生可能发生的一切。</a></li>
+						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="page"><a href="/pages.html">pages</a></li>
+						<li class="category"><a href="/categories.html">categories</a></li>
+						<li class="tag"><a href="/tags.html">tags</a></li>
+						<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
+									allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header>
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">Python Upgrade</h1>
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+			<div class="bd">
+				<div class="entry-content">
+					
+<h1 class="no_toc" id="overview">Overview</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#ubuntu" id="markdown-toc-ubuntu">Ubuntu</a></li>
+  <li><a href="#centos" id="markdown-toc-centos">Centos</a></li>
+  <li><a href="#python-package-install" id="markdown-toc-python-package-install">python package install</a></li>
+  <li><a href="#section" id="markdown-toc-section">常用的包整理</a></li>
+  <li><a href="#tensorflow" id="markdown-toc-tensorflow">tensorflow</a></li>
+  <li><a href="#tools" id="markdown-toc-tools">tools</a></li>
+  <li><a href="#python-" id="markdown-toc-python-">python 升级带来的问题</a></li>
+</ul>
+
+<h2 id="ubuntu">Ubuntu</h2>
+
+<p>1.安装bz2</p>
+
+<p>sudo apt-get install libbz2-dev</p>
+
+<p>2.下载<a href="https://www.python.org/">python</a>源代码
+tar xf python.tar.xz
+./configure –prefix=/usr/local –enable-shared CFLAGS=-fPIC
+make -j 8
+sudo make install
+建立动态链接
+sudo ln -s /usr/bin/python /usr/local/python/bin/python</p>
+
+<p>测试:
+python -V</p>
+
+<h2 id="centos">Centos</h2>
+
+<p>1.安装bz2</p>
+
+<p>sudo yum install bzip2-devel
+yum install bzip2-devel</p>
+
+<p>2.下载<a href="https://www.python.org/">python</a>源代码
+tar xf python.tar.xz
+./configure –prefix=/usr/local –enable-shared CFLAGS=-fPIC
+make -j 8
+sudo make install
+建立动态链接
+sudo ln -s /usr/bin/python /usr/local/python/bin/python</p>
+
+<p>测试:
+python -V</p>
+
+<h2 id="python-package-install">python package install</h2>
+
+<p>linux下使用包管理器pip.</p>
+
+<ul>
+  <li>命令安装pip
+sudo apt-get install python-pip</li>
+  <li>下载源码安装
+ sudo python setup.py install</li>
+</ul>
+
+<h2 id="section">常用的包整理</h2>
+
+<p>建议首先安装Anaconda python distribution,这里提供了大多数的必需包。以及一些库的依赖。使用脚本安装。</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre></td><td class="code"><pre><span class="n">Anaconda</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Anaconda</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">sudo</span> <span class="p">.</span><span class="o">/</span><span class="n">Anaconda</span><span class="p">.</span><span class="n">sh</span>
+<span class="err">根据提示安装下去，就可以了，然后就修改你的</span><span class="p">.</span><span class="n">bashrc</span><span class="p">,</span><span class="err">以及对应的</span><span class="p">.</span><span class="n">zhsrc</span>
+
+<span class="err">再安装其他的包</span>
+<span class="n">sudo</span> <span class="n">sh</span> <span class="n">install</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">package</span><span class="p">.</span><span class="n">sh</span>
+
+<span class="n">install</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">install</span><span class="p">.</span><span class="n">sh</span><span class="o">:</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="k">for</span> <span class="n">req</span> <span class="n">in</span> <span class="err">$</span><span class="p">(</span><span class="n">cat</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span><span class="p">);</span> <span class="k">do</span> <span class="n">pip</span> <span class="n">install</span> <span class="err">$</span><span class="n">req</span><span class="p">;</span> <span class="n">done</span>
+
+<span class="n">requirements</span><span class="p">.</span><span class="n">txt</span><span class="o">:</span>
+<span class="n">adium</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">ubuntu</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">xapian</span><span class="o">-</span><span class="n">index</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">45</span>
+<span class="n">backports</span><span class="o">-</span><span class="n">abc</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span>
+<span class="n">backports</span><span class="p">.</span><span class="n">shutil</span><span class="o">-</span><span class="n">get</span><span class="o">-</span><span class="n">terminal</span><span class="o">-</span><span class="n">size</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">backports</span><span class="p">.</span><span class="n">ssl</span><span class="o">-</span><span class="n">match</span><span class="o">-</span><span class="n">hostname</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">certifi</span><span class="o">&gt;=</span><span class="mi">2016</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">28</span>
+<span class="n">chardet</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">colorama</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">5</span>
+<span class="n">command</span><span class="o">-</span><span class="n">not</span><span class="o">-</span><span class="n">found</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">configparser</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">Cython</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">24</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">dask</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">debtagshw</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">decorator</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">defer</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">dirspec</span><span class="o">&gt;=</span><span class="mi">13</span><span class="p">.</span><span class="mi">10</span>
+<span class="n">duplicity</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">23</span>
+<span class="n">easydict</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">entrypoints</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">gprof2dot</span>
+<span class="n">h5py</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">html5lib</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">999</span>
+<span class="n">httplib2</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span>
+<span class="n">ipdb</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span>
+<span class="n">ipykernel</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">ipython</span><span class="o">&gt;=</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">ipython</span><span class="o">-</span><span class="n">genutils</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">ipywidgets</span><span class="o">&gt;=</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">jedi</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">Jinja2</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">jsonschema</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">jupyter</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">client</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">console</span><span class="o">&gt;=</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">core</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">leveldb</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">193</span>
+<span class="n">lockfile</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span>
+<span class="n">lxml</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">Markdown</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span>
+<span class="n">MarkupSafe</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">18</span>
+<span class="n">matplotlib</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">mistune</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">mock</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">MySQL</span><span class="o">-</span><span class="n">python</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">nbconvert</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">nbformat</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">networkx</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">11</span>
+<span class="n">nose</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">7</span>
+<span class="n">notebook</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">numpy</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">oauthlib</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">oneconf</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">PAM</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">pandas</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">18</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pathlib2</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">pexpect</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pickleshare</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">Pillow</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">piston</span><span class="o">-</span><span class="n">mini</span><span class="o">-</span><span class="n">client</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">5</span>
+<span class="n">prompt</span><span class="o">-</span><span class="n">toolkit</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">protobuf</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">ptyprocess</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pycrypto</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pycups</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">66</span>
+<span class="n">pycurl</span><span class="o">&gt;=</span><span class="mi">7</span><span class="p">.</span><span class="mi">19</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">Pygments</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">pygobject</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">pygraphviz</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pyOpenSSL</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">13</span>
+<span class="n">pyparsing</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pyserial</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">pysmbc</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">pysqlite</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">python</span><span class="o">-</span><span class="n">gflags</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">pyxdg</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">25</span>
+<span class="n">PyYAML</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">11</span>
+<span class="n">pyzmq</span><span class="o">&gt;=</span><span class="mi">14</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">qtconsole</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">reportlab</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">requests</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">scikit</span><span class="o">-</span><span class="n">image</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">scikit</span><span class="o">-</span><span class="n">learn</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">18</span>
+<span class="n">scipy</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">18</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">setuptools</span><span class="o">&gt;=</span><span class="mi">25</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">simplegeneric</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">six</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">import</span><span class="o">-</span><span class="n">id</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">.</span><span class="mi">21</span>
+<span class="n">system</span><span class="o">-</span><span class="n">service</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">terminado</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">tornado</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">traitlets</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">Twisted</span><span class="o">-</span><span class="n">Core</span><span class="o">&gt;=</span><span class="mi">13</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">Twisted</span><span class="o">-</span><span class="n">Web</span><span class="o">&gt;=</span><span class="mi">13</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">unity</span><span class="o">-</span><span class="n">lens</span><span class="o">-</span><span class="n">photos</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">urllib3</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">urwid</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">vboxapi</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">wcwidth</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">7</span>
+<span class="n">wheel</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">24</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">widgetsnbextension</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">xdot</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span>
+<span class="n">zope</span><span class="p">.</span><span class="n">interface</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<font color="red">note </font>
+
+<ul>
+  <li>遇到timeout 超时</li>
+</ul>
+
+<p>1.加大超时时间，sudo pip install xxxx timeout 100</p>
+
+<p>2.到官网下载包，xxx.whl
+ sudo pip install xx.whl</p>
+
+<p>3.源代码编译</p>
+
+<p>sudo python setup.py install</p>
+
+<ul>
+  <li>如果网速不好，就使用国内的源。
+ sudo pip install numpy –upgrade -i http://pypi.douban.com/simple –trusted-host pypi.douban.com</li>
+</ul>
+
+<p>pipy国内镜像目前有：</p>
+
+<p>http://pypi.douban.com/  豆瓣</p>
+
+<p>http://pypi.hustunique.com/  华中理工大学</p>
+
+<p>http://pypi.sdutlinux.org/  山东理工大学</p>
+
+<p>http://pypi.mirrors.ustc.edu.cn/  中国科学技术大学</p>
+
+<ul>
+  <li>测试模块
+ python -c “import theano;theano.test()”</li>
+</ul>
+
+<h2 id="tensorflow">tensorflow</h2>
+
+<ul>
+  <li>cpu
+ sudo pip install –ignore-installed –upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl -i http://pypi.douban.com/simple
+ –trusted-host pypi.douban.com</li>
+  <li>gpu</li>
+</ul>
+
+<h2 id="tools">tools</h2>
+
+<p>python性能分析工具</p>
+
+<p>sudo apt-get install python-profiler</p>
+
+<h2 id="python-">python 升级带来的问题</h2>
+
+<ul>
+  <li>P1:vim: symbol lookup error: vim: undefined symbol: PyUnicodeUCS4_AsEncodedString
+  <a href="http://stackoverflow.com/questions/26909293/vim-symbol-lookup-error-vim-undefined-symbol-pyunicodeucs4-asencodedstring">link</a></li>
+</ul>
+
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2016-10-15T00:00:00+08:00" datetime="2016-10-15T00:00:00+08:00" pubdate>
+							<span class="month"><abbr>October</abbr></span>
+							<span class="day">15</span>
+							<span class="year">2016</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#Python-ref">
+    		Python <span>1</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#Pyhon-package-ref">Pyhon-package <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div><!-- meta -->
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="liangkangkang" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/liangkangkang" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					<div class="comment">
+					
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Liangkangkang.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Liangkangkang</span></a>
+
+
+
+
+					</div>
+				</div><!-- misc-content -->
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/2016/10/15/Resume" title="View Resume">&laquo; Resume</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+							<li class="next"><a class="internal" rel="next"  href="/2016/10/16/elk" title="View Elk">Elk &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">kangkangliang</span> - <span class="fn email">liangkangkang@yahoo.com</span></address></li>
+						<li class="github"><a href="http://github.com/lkkandsyf/" rel="me">github.com/lkkandsyf</a></li>
+						<li class="twitter"><a href="http://twitter.com/liangkangkang/" rel="me">twitter.com/liangkangkang</a></li>
+						<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
+					</ul>
+				</div><!-- misc -->
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/python/2016/10/15/Python-upgrade" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+
+
+
+</body>
+</html>
+
