@@ -13,7 +13,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 **gmail**
 
-lkkforworld@gmail.com
+[lkkforworld@gmail.com](https://mail.google.com)
 
 
 **my blog**
@@ -28,7 +28,7 @@ lkkforworld@gmail.com
 
 **Docker**
 
-docker:lkklinux `
+[docker:lkklinux](https://dashboard.daocloud.io/)
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 

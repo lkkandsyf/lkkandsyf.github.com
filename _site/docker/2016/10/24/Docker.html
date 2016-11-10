@@ -58,14 +58,157 @@
 
 <ul id="markdown-toc">
   <li><a href="#docker-learn-note" id="markdown-toc-docker-learn-note">Docker learn note</a></li>
+  <li><a href="#section" id="markdown-toc-section">拉取和推送</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">制作镜像</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">挂载本地目录</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">导入和导出镜像</a></li>
+  <li><a href="#problem" id="markdown-toc-problem">Problem</a></li>
 </ul>
 
 <h2 id="docker-learn-note">Docker learn note</h2>
 
 <ul>
   <li><a href="http://blog.opskumu.com/docker.html">Kumu-docker</a></li>
-  <li><a href="http://blog.daocloud.io/how-to-master-docker-image/">玩转Docker</a></li>
+  <li>
+    <p><a href="http://blog.daocloud.io/how-to-master-docker-image/">玩转Docker</a></p>
+  </li>
+  <li><a href="http://dev.aliyun.com/search.html">阿里云加速</a></li>
 </ul>
+
+<h2 id="section">拉取和推送</h2>
+
+<ul>
+  <li>拉取</li>
+</ul>
+
+<p>首先，我们通过docker search image-name来搜索需要的镜像。然后通过docker pull image-name 来拉取镜像。</p>
+
+<ul>
+  <li>推送</li>
+</ul>
+
+<p>通过拉取基本的镜像之后，我们可以通过Dockfile或者commit来构建镜像，一般都会选择Dockfile来构建自己需要的镜像.</p>
+
+<p>推送镜像的时候，我们需要登录dockerhub或者daocloud的网站进行注册，在需要推送的机器上使用命令登录</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker login
+</code></pre>
+</div>
+
+<p>查看信息</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cat .dockercfg
+</code></pre>
+</div>
+
+<p>我们可以使用docker tag	来添加自己的名字。用docker images来查看镜像</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker push daocloud-name/repo-name:latest
+</code></pre>
+</div>
+
+<p>通过上面的命令就可以推送到dockerhub或者daocloud上，我们可以看到自己推送的tag，但是在推送之前必须把使用该镜像的容器stop，否则不能推送成功。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker push daocloud-name/repo-name:v1
+</code></pre>
+</div>
+
+<h2 id="section-1">制作镜像</h2>
+
+<p>两种方式制作镜像</p>
+
+<ul>
+  <li>docker commit命令</li>
+</ul>
+
+<p>操作完之后，我们通过docker commit image-id daocloud-user-name/repo-name,通过docker images daocloud-user-name/repo-name来检查刚才创建的镜像</p>
+
+<p>提交一个新的定制的镜像，docker commit -m “A new custom image” -a “author info” image-id daocloud-user-name/repo-name:context</p>
+
+<p>-m:来指定新的镜像的提交信息</p>
+
+<p>-a:列出该镜像的作者信息</p>
+
+<p>daocloud-user-name/repo-name:指定了镜像的用户名和仓库名，并且为该镜像增加了一个context的标签。</p>
+
+<p>可以使用docker inspect命令来查看新创建的镜像的详细信息.docker inspect daocloud-user-name/repo-name:context</p>
+
+<p>从新提交的镜像运行一个新的容器，docker run -it daocloud-user-name/repo-name:context /bin/bash可以看出我们用了完整的标签来指定这个镜像。</p>
+
+<ul>
+  <li>使用docker build命令和Dockfile文件(推荐)</li>
+</ul>
+
+<p>简单demo:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir first-docker-file
+cd first-docker-file
+touch Dockfile
+</code></pre>
+</div>
+
+<p>执行docker build命令时，Dockerfile中的所有指令都会被执行并且提交。并且在该命令成功结束后返回一个<code class="highlighter-rouge">新的镜像</code>。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker build -t="daocloud-user-name/repo-name" .
+</code></pre>
+</div>
+
+<p>开始构建新的对象。如果没有指定任何tag，Docker将会自动为镜像设置一个latest标签</p>
+
+<p><a href="">Dockfile-command</a></p>
+
+<h2 id="section-2">挂载本地目录</h2>
+
+<p>docker可以把一个宿主机上的<code class="highlighter-rouge">目录</code>挂载到<code class="highlighter-rouge">镜像里</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -it -v /home/user/Downloads:/usr/share ubuntu:14.04 /bin/bash
+</code></pre>
+</div>
+
+<p>通过<code class="highlighter-rouge">-v</code>参数，冒号前为<code class="highlighter-rouge">宿主机目录</code>，必须为<code class="highlighter-rouge">绝对路径</code>，冒号后面为<code class="highlighter-rouge">镜像内挂载的目录的路径</code></p>
+
+<p>现在镜像内就可以访问共享宿主机里面的文件了。</p>
+
+<p>默认挂载的路径<code class="highlighter-rouge">权限</code>为读写。如果指定为<code class="highlighter-rouge">只读</code>可以使用:ro</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -it -v /home/user/Downloads:/usr/share:ro ubuntu:14.04 /bin/bash
+</code></pre>
+</div>
+
+<p>docker还提供了一个<code class="highlighter-rouge">高级</code>的用法，叫做<code class="highlighter-rouge">数据卷</code>。</p>
+
+<p>数据卷:“其实就是一个<code class="highlighter-rouge">正常的容器</code>，专门用来提供数据卷供<code class="highlighter-rouge">其他容器挂载</code>”,感觉像是由一个容器定义的一个<code class="highlighter-rouge">数据挂载信息</code>。其他的容器启动就可以直接挂载数据卷中定义的挂载信息。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -v /home/user/Downloads:/usr/share --name dataVol ubuntu:14.04 /bin/bash
+</code></pre>
+</div>
+
+<p>创建一个普通的容器。用<code class="highlighter-rouge">--name</code>给它指定一个名(不指定的话，就会随机产生一个名字)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker ps -l
+</code></pre>
+</div>
+
+<p>再创建一个新的容器，来使用这个数据卷。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -it --volumes-from dataVol ubuntu14.04 /bin/bash
+</code></pre>
+</div>
+
+<p>–volumes-from用来指定要从哪个数据卷来挂载数据。同样都是在/usr/share目录下。</p>
+
+<h2 id="section-3">导入和导出镜像</h2>
+
+<h2 id="problem">Problem</h2>
+
+<ul>
+  <li>
+    <p>Repository busybox already being pulled by another client. Waiting.</p>
+
+    <p>restart the docker : service docker restart</p>
+  </li>
+</ul>
+
 
 					<div class="meta">
 						<p class="date-publish">

@@ -195,8 +195,9 @@ zope.interface>=4.0.5)
 
  sudo python setup.py install
 
- + 如果网速不好，就使用国内的源。
- sudo pip install numpy --upgrade -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+ 如果网速不好，就使用国内的源。
+
+	sudo pip install numpy --upgrade -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
  pipy国内镜像目前有：
 
