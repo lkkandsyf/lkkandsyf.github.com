@@ -30,6 +30,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 [docker:lkklinux](https://dashboard.daocloud.io/)
 
+
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
 `工作`:数据分析研究员

@@ -231,3 +231,204 @@ sudo apt-get install python-profiler
 
   + P1:vim: symbol lookup error: vim: undefined symbol: PyUnicodeUCS4_AsEncodedString
   [link](http://stackoverflow.com/questions/26909293/vim-symbol-lookup-error-vim-undefined-symbol-pyunicodeucs4-asencodedstring)
+
+## pyenv
+
+为了解决系统中Python不同的版本的问题，便于控制版本，出现了pyenv--python版本切换工具，另外一个工具virtualenv也提供了一个种功能，就是将一个目录建立一个虚拟的python环境，这样，用户就可以建立多个虚拟环境。每个环境里的python版本可以是不同的，也可以是相同的，而且环境之间相互独立。
+
+依赖包
+
+	readline readline-devel readline-static
+	openssl openssl-devel openssl-static
+	sqlite-devel
+	bzip2-devel bzip2-libs
+
+Pyenv原理
+
+pyenv 的美好之处在于，它并没有使用将不同的 $PATH 植入不同的 shell 这种高耦合的工作方式，而是简单地在 $PATH的最前面插入了一个垫片路径（shims）：~/.pyenv/shims:/usr/local/bin:/usr/bin:/bin。所有对 Python 可执行文件的查找都会首先被这个 shims 路径截获，从而架空了后面的系统路径。
+
+安装pyenv
+
+[official guide](https://github.com/yyuu/pyenv#installation)
+
+手动安装
+
+```
+$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile	#修改环境变量
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile	#修改环境变量
+$ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile	#最后添加pyenv init
+$ exec $SHELL			#输入命令重启Shell，然后就可以重启pyenv
+```
+
+myself config
+```
+$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+$ exec $SHELL
+```
+
+basic command
+
+	pyenv commands			#help	查看有用的命令
+	pyenv install --list	#查看pyevn可安装的版本列表
+	pyenv install -l
+	pyenv install x.x.x		#安装指定版本python
+	pyenv rehash			#安装结束之后，必须更新数据库,否则不会生效
+	pyenv uninstall x.x.x	#卸载指定版本python
+	pyenv rehash			#卸载结束之后，必须更新数据库
+	pyven versions			#查看当前已经安装的python版本
+	*system(set by /home/user/.pyenv/version)		#系统默认版本
+	2.7.6
+	3.4.1
+	...
+
+安装完成之后，就可以使用pyenv进行版本切换了。
+
+python优先级shell>local>global
+
+	pyenv local version or --unset
+	pyenv global version or --unset
+	pyenv shell version,versions or --unset
+	pyenv local x.x.x		#在当前目录改变python的版本
+	pyenv local --unset		#取消 改变
+	pyenv global x.x.x		#全局改变python版本
+	pyenv shell x.x.x		#改变当前shell的python版本
+
+	pyenv which python-version
+
+	$ pyenv global 3.4.0 -- 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
+	$ pyenv local 2.7.3 -- 设置面向程序的本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+	pyenv 会从当前目录开始向上逐级查找 .python-version 文件，直到根目录为止。若找不到，就用 global 版本。
+	$ pyenv shell pypy-2.2.1 -- 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。--unset
+	参数可以用于取消当前 shell 设定的版本。
+	$ pyenv shell --unset
+
+升级
+```
+$ cd ~/.pyenv
+$ git pull
+```
+
+卸载
+```
+rm -rf ~/.pyenv		#快速方便
+```
+
+eg:在pyenv中使用virtualenv部署werkzueg的测试app
+
+	#将virtualenv安装在pyenv中
+	pyenv local pypy-2.3.1
+	pyenv virtualenv venv_pypy
+	pyenv local venv_pypy
+	which python
+	pip install -Ur requirements.txt
+	pip install -U Gunicorn
+	pyenv rehash
+	which gunicorn
+	gunicorn -b:5000 -w 9 werkzeug:test_app
+
+python virtualevn创建_纯净虚拟环境_
+
+虽然直接通过pip来安装virtualenv也是可以的，但是通过pyenv插件的形式安装virtualenv的虚拟环境更加方便，因为之后的操作会比较方便
+
+pyenv-virtualenv插件安装:项目[https://github.com/yyuu/pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv)
+
+pyenv帮助你在一台机上建立多个版本的python环境， 并提供方便的切换方法。
+
+virtualenv则就是将一个目录建立为一个虚拟的python环境， 这样的话， 用户可以建立多个虚拟环境， 每个环境里面的python版本可以是不同的， 也可以是相同的， 而且环境之间相互独立。
+
+pyenv-virtualenv是pyenv的插件
+
+	$ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+	$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+	$ exec "$SHELL"			#restart shell
+
+这个插件就安装在.pyenv文件下了。
+
+创建一个python版本的虚拟环境
+
+	pyenv virtualenv x.x.x(version) envxxx(virtual_env_name)
+
+这样就创建一个python的虚拟环境，这个环境的真是目录位于:~/.pyenv/versions/下,x.x.x必须为当前系统中已经安装好的python版本，否则会出错，我们可以通过pyenv version来查看当前的_虚拟环境_
+
+切换和使用新的python虚拟环境
+
+	pyenv activate envxxx
+
+这样就可以切换到这个版本的虚拟环境，通过python来查看版本，发现处于虚拟环境中了，可以为所欲为了。如果要切换到系统环境
+
+	pyenv deactivate
+
+列表virtualenv
+
+		pyenv virtualenvs
+
+如果要删除这个虚拟环境，只要直接删除它所在的目录就可以了
+
+	rm -rf ~/.pyenv/version/envxxx
+
+或者直接卸载
+
+	pyenv uninstall envxxx
+
+
+## Anaconda
+
+使用conda list查看anaconda安装自带的包
+
+	conda  list
+
+使用conda
+list命令的环境时，python版本切换到anaconda版本下，不然，这个命令无法查询，在anancoda环境下，也是可以通过pip来安装其他包的。
+
+给anaconda安装包
+
+	conda install xxx	#如果需要指定版本[package-name]=x.x
+
+多个python版本并存，尤其是2.x和3.x的并存
+
+这个通过virtualenv可以做到，Anaconda也可以实现，下面用create命令来创建多个环境
+
+	conda create -n python2 python=2.7
+
+这样就会在Anaconda的安装目录下的envs目录创建python2
+
+## virtualenv
+
+简单来说，你的每一个项目都可以拥有一个单独的，孤立的python环境，你可以把所有的包安装到各自孤立的环境中，通过pip来安装virtualenv
+
+	sudo pip install virtualenv
+
+安装完成之后，为你的项目创建_孤立_的python环境
+
+	mkdir my_project_venv
+	virtualenv --distribute my_project_venv
+
+创建一个名叫my\_project\_venv的文件夹，由于存储新的python环境，--disribute参数告诉virtualenv使用基于distribute包来开发新的，更好的打包系统，而不是基于setuptools的旧系统，--distribute参数将会自动在虚拟环境中安装pip，免去了手动安装的麻烦。
+
+激活虚拟环境
+
+	cd my_project_venv
+	source bin/activate
+
+使用source命令启动activate脚步，你的命令行提示符应该会变成这样
+
+	(my_project_venv)$
+
+关闭虚拟环境
+
+	(my_project_venv) deactivate
+
+当你的_系统层面_安装virtualenv时(如果激活了虚拟环境，请先关闭)，可以通过下面的命令来查看使用哪个执行文件
+
+	which python
+	/usr/bin/python
+	which pip
+	/usr/local/bin/pip
+
+note:
+
+ + 在通过pyenv install Anxxx发现，如何网络不可达，就会出现curl:SSL read:error errno,找一个网络速比较好的地方，再进行安装。

@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Thu, 10 Nov 2016 11:20:26 +0800</lastBuildDate>
-        <pubDate>Thu, 10 Nov 2016 11:20:26 +0800</pubDate>
+        <lastBuildDate>Fri, 11 Nov 2016 20:22:47 +0800</lastBuildDate>
+        <pubDate>Fri, 11 Nov 2016 20:22:47 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -16,55 +16,351 @@
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;基础语法&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;控制结构&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;数据结构&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;模块与函数&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;字符串与正则表达式&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;文件处理&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;面向对象编程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;异常处理与程序调试&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#pythonhtml&quot; id=&quot;markdown-toc-pythonhtml&quot;&gt;Python和HTML&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#pythonxml&quot; id=&quot;markdown-toc-pythonxml&quot;&gt;Python和XML&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-django&quot; id=&quot;markdown-toc-python-django&quot;&gt;Python-Django&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;Python的进程和线程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ipython&quot; id=&quot;markdown-toc-ipython&quot;&gt;Ipython&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jupyter&quot; id=&quot;markdown-toc-jupyter&quot;&gt;Jupyter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-1&quot; id=&quot;markdown-toc-python-1&quot;&gt;Python网络编程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-2&quot; id=&quot;markdown-toc-python-2&quot;&gt;Python网络应用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python-3&quot; id=&quot;markdown-toc-python-3&quot;&gt;Python测试驱动开发&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;&lt;strong&gt;语言基础&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;基础语法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;控制结构&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;数据结构&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;模块与函数&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;字符串与正则表达式&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;文件处理&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;面向对象编程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;异常处理与程序调试&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;&lt;strong&gt;Python应用&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#pythonhtml&quot; id=&quot;markdown-toc-pythonhtml&quot;&gt;Python和HTML&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pythonxml&quot; id=&quot;markdown-toc-pythonxml&quot;&gt;Python和XML&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#python-django&quot; id=&quot;markdown-toc-python-django&quot;&gt;Python-Django&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tdd&quot; id=&quot;markdown-toc-tdd&quot;&gt;TDD&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#python-1&quot; id=&quot;markdown-toc-python-1&quot;&gt;Python的进程和线程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ipython&quot; id=&quot;markdown-toc-ipython&quot;&gt;Ipython&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jupyter&quot; id=&quot;markdown-toc-jupyter&quot;&gt;Jupyter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#python-2&quot; id=&quot;markdown-toc-python-2&quot;&gt;Python网络编程&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#python-3&quot; id=&quot;markdown-toc-python-3&quot;&gt;Python网络应用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#python-4&quot; id=&quot;markdown-toc-python-4&quot;&gt;Python测试驱动开发&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pdb&quot; id=&quot;markdown-toc-pdb&quot;&gt;pdb&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;基础语法&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;&lt;strong&gt;语言基础&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;控制结构&lt;/h2&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;基础语法&lt;/h3&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;数据结构&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;优化代码&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;模块与函数&lt;/h2&gt;
+    &lt;p&gt;import py_compile&lt;/p&gt;
 
-&lt;h2 id=&quot;section-4&quot;&gt;字符串与正则表达式&lt;/h2&gt;
+    &lt;p&gt;python -O m py_compile xxx.py&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;section-5&quot;&gt;文件处理&lt;/h2&gt;
+&lt;p&gt;参数 -O 表示生成优化代码，参数 -m 表示把导入的py_compile模块作为脚步运行，编译xxx.py需要调用py_compile模块的compile()方法，xxx.py 需要编译的文件，最后会生成一个xxx.pyo的文件&lt;/p&gt;
 
-&lt;h2 id=&quot;section-6&quot;&gt;面向对象编程&lt;/h2&gt;
+&lt;p&gt;变量名，包名，模块名通常采用&lt;code class=&quot;highlighter-rouge&quot;&gt;小写，可使用下划线&lt;/code&gt;，类名一个字符&lt;code class=&quot;highlighter-rouge&quot;&gt;大写&lt;/code&gt;，类的私有属性必须有&lt;code class=&quot;highlighter-rouge&quot;&gt;两个下划线&lt;/code&gt;，对象名&lt;code class=&quot;highlighter-rouge&quot;&gt;小写&lt;/code&gt;。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-7&quot;&gt;异常处理与程序调试&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;代码缩进&lt;/code&gt;是Python的基本语法&lt;/p&gt;
 
-&lt;h2 id=&quot;pythonhtml&quot;&gt;Python和HTML&lt;/h2&gt;
+&lt;p&gt;模块导入&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt;
+	&lt;span class=&quot;nn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;使用空行分割代码&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;funX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;funX&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;h2 id=&quot;pythonxml&quot;&gt;Python和XML&lt;/h2&gt;
+		&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;funY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;funY&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;h2 id=&quot;python-django&quot;&gt;Python-Django&lt;/h2&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;funX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;funY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;python&quot;&gt;Python的进程和线程&lt;/h2&gt;
+&lt;p&gt;注释：单行注释，块注释，中文注释 #-&lt;em&gt;-coding: UTF-8-&lt;/em&gt;-&lt;/p&gt;
 
-&lt;h2 id=&quot;ipython&quot;&gt;Ipython&lt;/h2&gt;
+&lt;p&gt;单行语句，太长，用\来分割&lt;/p&gt;
+
+&lt;p&gt;局部变量和全局变量(global),常量const模块&lt;/p&gt;
+
+&lt;p&gt;Python根据变量的自动&lt;code class=&quot;highlighter-rouge&quot;&gt;判断变量的类型&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;c&quot;&gt;#这两个i并不是同一个对象&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+	&lt;span class=&quot;mi&quot;&gt;12865880&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+	&lt;span class=&quot;mi&quot;&gt;12865856&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;字符串&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'hello world'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'''he says hello world&quot;'''&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#三引号中带有双引号，双引号也会输出&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;he&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;says&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;class Hello:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	'''hello class '''&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	def printHello():&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;		'''print hello world'''&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;		print(&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	print(Hello.__doc__)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	print(Hello.printHello.__doc__)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#转义字符&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	str = 'he say :&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`hello world!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;	print (str)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#特别注意多个引号在一起时，要让编译器知道```的存在&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;运算符和表达式&lt;/p&gt;
+
+&lt;p&gt;算术运算符:+,-,*,/,%,**&lt;/p&gt;
+
+&lt;p&gt;关系运算符:&amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=,==,!=&lt;/p&gt;
+
+&lt;p&gt;逻辑运算符:and,or,not&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;控制结构&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;if条件语句&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;if…elif..else判断语句&lt;/p&gt;
+
+&lt;p&gt;if嵌套语句&lt;/p&gt;
+
+&lt;p&gt;Python中没有switch语句，而是使用字典来代替的。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;__future__&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;division&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;while循环&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;_注意_while循环中的else子句也属于循环的一部分，最后一次的循环结束后将执行else子句&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d loop &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x=&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;for 循环&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;for…in…循环通常与range()函数一起使用，rangge返回一个列表，for…in…遍历列表中的元素&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;break和continue&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;break语句不能运行在&lt;code class=&quot;highlighter-rouge&quot;&gt;循环体或分支语句之外&lt;/code&gt;，否则，Python解释器会提示错误。&lt;/p&gt;
+
+&lt;p&gt;冒泡排序&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bubbleSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#把数值小的放到顶端&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;46&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;bubbleSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;数据结构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;元组&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;元组是Python中常用的一种数据结构。元组由不同的元素组成，每个元素可以存储&lt;code class=&quot;highlighter-rouge&quot;&gt;不同类型的数据&lt;/code&gt;，如字符串，数字甚至元组。元组是&lt;code class=&quot;highlighter-rouge&quot;&gt;写保护&lt;/code&gt;的，即元组创建后不能再做任务&lt;code class=&quot;highlighter-rouge&quot;&gt;修改操作&lt;/code&gt;，元组通常代表&lt;code class=&quot;highlighter-rouge&quot;&gt;一行&lt;/code&gt;数据，而在元组中的元素代表&lt;code class=&quot;highlighter-rouge&quot;&gt;不同&lt;/code&gt;的数据项。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ele1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ele2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#元组的创建&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#元组的初始化，元素之间逗号分割&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#空元组&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#如果元组中只有元素，记得在后面加上,否则输出tuple[0]的结果不是自己想要的&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#元组中元素的值通过索引访问，索引就是下标。元组中的元组创建之后就不能修改，元组不存在任何添加，删除元素的操作，元组不存在其他任何的方法&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#元组分片tuple[m:n]支持负数操作&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#元组可以由其他元组组成，例如二元元组可以表示&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'t4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#access&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#打包&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#解包&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;列表&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;字典&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;序列&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;模块与函数&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;字符串与正则表达式&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;文件处理&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;面向对象编程&lt;/h3&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;异常处理与程序调试&lt;/h3&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;&lt;strong&gt;Python应用&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;pythonhtml&quot;&gt;Python和HTML&lt;/h3&gt;
+
+&lt;h3 id=&quot;pythonxml&quot;&gt;Python和XML&lt;/h3&gt;
+
+&lt;h3 id=&quot;python-django&quot;&gt;Python-Django&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;django&lt;/li&gt;
+  &lt;li&gt;MVC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tdd&quot;&gt;TDD&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;unittest&lt;/li&gt;
+  &lt;li&gt;doctest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;python-1&quot;&gt;Python的进程和线程&lt;/h3&gt;
+
+&lt;p&gt;进程和线程的相关模块&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;os/sys：包含基本_进程_管理函数&lt;/li&gt;
+  &lt;li&gt;signal：Python基本库中_信号_的相关函数&lt;/li&gt;
+  &lt;li&gt;subprocess：Python基本库中多_进程_的相关模块&lt;/li&gt;
+  &lt;li&gt;theading：Python基本库中_线程_相关的模块&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;进程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;popen:生成新的进程
+abort/exit：终止进程
+system：直接生成字符串所代表的进程
+exec家族：在现有的进程环境下生成新的进程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;线程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;theading模块中Thead类的常用方法
+start:开始运行生成的线程实例
+run:重载这个方法，作为线程的运行部分
+join:等待线程的结束
+getName:返回线程的名字
+setName:设置线程的名字
+isAlive:查看线程是否还是活动的
+isDaemon:查看线程是否后台运行标志
+setDaemon:设置线程的后台运行标志
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;线程数据同步的常用方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;锁机制&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用互斥锁实现数据同步，
+acquire：获取锁，
+release：释放锁
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;条件变量&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;同样使用互斥锁，可以实现带有条件的临界区访问
+acquire：获取锁
+release：释放锁
+wait：阻塞线程，直到有事件来唤醒
+notify：唤醒等待次条件变量的线程
+notifyAll：同notify，但是将会唤醒所有等待次条件的线程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;信号量&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;acquire：获取资源，将内部计数器减少1，如果内部计数器为0，则等待
+release：释放资源，将内部计数器加1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;同步队里&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用同步队列的入队和出对来有效的实现数据同步
+qsize：队里的长度（线程的原因，不一定准确）
+empyt：队列是否为空（线程的原因，不一定准确）
+full：队里是否已满（线程的原因，不一定准确）
+put：将任务入队
+put_nowait:将任务入队，如果队列已满，则跑出Full异常
+get：将任务出队
+get_nowait:将任务出队，如果队列为空则抛出Empyt异常
+task_done:指示上一个入队任务是否完成操作
+join:等待队列中任务完成任务
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;ipython&quot;&gt;Ipython&lt;/h3&gt;
 
 &lt;p&gt;Ipython的特性&lt;/p&gt;
 
@@ -92,41 +388,41 @@
 
 &lt;p&gt;这里还提供了cd命令的一个参数-q使得Ipython不用打印此消息。&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dhist&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#history [n] [m] n - m  command&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;history&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#环境变量&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#分页&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pfile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module_name&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#查看相关信息&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pdef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function_name&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#函数原型&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pdoc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function_name&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#函数文档字符串&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pinfo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function_name&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#函数的相关信息&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;psearch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object_name&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#搜索当前名字空间中已有的Python对象。&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;psearch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#搜索以a开头的Python对象&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;psearch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buidtin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#-选项将内置函数去掉&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;psource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object_name&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#输出对象代码&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;bg&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#将后面的函数放在后台执行&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pycat&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#用语法高亮显示一个pythonfile&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#重复上次的命令&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#执行文件&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#将代码保存为文件&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#计算时间&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;who&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#打印所有的Python变量&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;who_ls&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#返回所有的Python变量的列表&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;whos&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#和who相似，但会输出更加详细的信息&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dhist [n] [m] #history [n] [m] n - m  command
+history -r
+env	#环境变量
+page #分页
+pfile module_name #查看相关信息
+pdef function_name #函数原型
+pdoc function_name #函数文档字符串
+pinfo function_name#函数的相关信息
+psearch object_name #搜索当前名字空间中已有的Python对象。
+psearch a*	#搜索以a开头的Python对象
+psearch -e buidtin a* #-选项将内置函数去掉
+psource object_name #输出对象代码
+bg	#将后面的函数放在后台执行
+pycat #用语法高亮显示一个pythonfile
+r #重复上次的命令
+run #执行文件
+save #将代码保存为文件
+time #计算时间
+who #打印所有的Python变量
+who_ls #返回所有的Python变量的列表
+whos #和who相似，但会输出更加详细的信息
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;使用_符号访问输出结果。&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#不能赋值给某个变量，因为返回的是一个list&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;py&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;py&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#列出次模块中支持的所有的方法和成员&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#帮助手册&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#查看详细信息&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!command
+result = !command
+!!command #不能赋值给某个变量，因为返回的是一个list
+!python test.py
+%run test.py
+import sys
+dir(sys) #列出次模块中支持的所有的方法和成员
+help(object)	#帮助手册
+?/??	#查看详细信息
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -164,9 +460,10 @@
 &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;netstat -an&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;h2 id=&quot;jupyter&quot;&gt;Jupyter&lt;/h2&gt;
 
-&lt;h2 id=&quot;python-1&quot;&gt;Python网络编程&lt;/h2&gt;
+&lt;h3 id=&quot;jupyter&quot;&gt;Jupyter&lt;/h3&gt;
+
+&lt;h3 id=&quot;python-2&quot;&gt;Python网络编程&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;socket&lt;/li&gt;
@@ -182,7 +479,7 @@
 
 &lt;p&gt;Twisted是一个面向对象，基于事件驱动的顶级通信框架，可以完成大部分的网络的应用任务。&lt;/p&gt;
 
-&lt;h2 id=&quot;python-2&quot;&gt;Python网络应用&lt;/h2&gt;
+&lt;h3 id=&quot;python-3&quot;&gt;Python网络应用&lt;/h3&gt;
 
 &lt;p&gt;常用的模块&lt;/p&gt;
 
@@ -195,13 +492,47 @@
   &lt;li&gt;scapy&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;python-3&quot;&gt;Python测试驱动开发&lt;/h2&gt;
+&lt;h3 id=&quot;python-4&quot;&gt;Python测试驱动开发&lt;/h3&gt;
 
-&lt;h1 id=&quot;section-8&quot;&gt;#&lt;/h1&gt;
-&lt;h1 id=&quot;section-9&quot;&gt;#&lt;/h1&gt;
-&lt;h1 id=&quot;section-10&quot;&gt;#&lt;/h1&gt;
-&lt;h1 id=&quot;section-11&quot;&gt;#&lt;/h1&gt;
-&lt;h1 id=&quot;section-12&quot;&gt;#&lt;/h1&gt;
+&lt;h3 id=&quot;pdb&quot;&gt;pdb&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2/library/pdb.html&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;python中有个pdb模块，使python代码也可以像gdb那样进行调试，一般情况下pdb模块可以在代码内直接使用，也可以通过命令行参数的形式添加该模块进行调试(python -m pdb file.py)。在代码中直接使用pdb模块调试时，import pdb模块后，然后在需要调试的代码出添加pdb.set_trace()命令即可，运行程序后，在运行到次代码处会自动停止，进入调试模式。&lt;/p&gt;
+
+&lt;p&gt;一般常用的调试命令有：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;q  退出debug
+h  打印可用的调试命令
+b  设置断点，b 5 在第五行设置断点
+h command  打印command的命令含义
+disable codenum  使某一行断点失效
+enable codenum   使某一行的断点有效
+condition codenum xxx  针对断点设置条件
+c    继续执行程序，直到下一个断点
+n    执行下一行代码，如果当前语句有函数调用，则不会进入函数体中
+s    执行下一行代码，但是s会进入函数
+w    打印当前执行点的位置
+j    codenum  让程序跳转到指定的行
+l    列出附近的源码
+p    打印一个参数的值
+a    打印当前函数及参数的值
+回车  重复执行上一行
+return 或 r	执行代码直到从当前函数返回
+cl	清除断点
+w ，Print a stack trace, with the most recent frame at the bottom.An arrow indicates the &quot;current frame&quot;, which determines the context of most commands. 'bt'
+n alias for this command.
+d ，Move the current frame one level down in the stack trace
+(to a newer frame).
+u ，Move the current frame one level up in the stack trace
+(to an older frame).使用 u 和 d 命令，我们可以在栈帧之间切换，用以获取其相关上下文变量信息。w可以显示最近的一些栈帧信息。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;调试过程如下:python -m pdb xxx.py&lt;/p&gt;
+
+&lt;p&gt;参考&lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/&quot;&gt;http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/&lt;/a&gt;&lt;/p&gt;
+
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Python-basic</guid>
@@ -2338,6 +2669,9 @@ axel -n 10 https://download.elastic.co/elasticsearch/release/org/elasticsearch/d
   &lt;li&gt;&lt;a href=&quot;#tensorflow&quot; id=&quot;markdown-toc-tensorflow&quot;&gt;tensorflow&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#python-&quot; id=&quot;markdown-toc-python-&quot;&gt;python 升级带来的问题&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pyenv&quot; id=&quot;markdown-toc-pyenv&quot;&gt;pyenv&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#anaconda&quot; id=&quot;markdown-toc-anaconda&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#virtualenv&quot; id=&quot;markdown-toc-virtualenv&quot;&gt;virtualenv&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h2&gt;
@@ -2679,6 +3013,248 @@ sudo apt-get install python-pip&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;P1:vim: symbol lookup error: vim: undefined symbol: PyUnicodeUCS4_AsEncodedString
   &lt;a href=&quot;http://stackoverflow.com/questions/26909293/vim-symbol-lookup-error-vim-undefined-symbol-pyunicodeucs4-asencodedstring&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pyenv&quot;&gt;pyenv&lt;/h2&gt;
+
+&lt;p&gt;为了解决系统中Python不同的版本的问题，便于控制版本，出现了pyenv–python版本切换工具，另外一个工具virtualenv也提供了一个种功能，就是将一个目录建立一个虚拟的python环境，这样，用户就可以建立多个虚拟环境。每个环境里的python版本可以是不同的，也可以是相同的，而且环境之间相互独立。&lt;/p&gt;
+
+&lt;p&gt;依赖包&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;readline readline-devel readline-static
+openssl openssl-devel openssl-static
+sqlite-devel
+bzip2-devel bzip2-libs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Pyenv原理&lt;/p&gt;
+
+&lt;p&gt;pyenv 的美好之处在于，它并没有使用将不同的 $PATH 植入不同的 shell 这种高耦合的工作方式，而是简单地在 $PATH的最前面插入了一个垫片路径（shims）：~/.pyenv/shims:/usr/local/bin:/usr/bin:/bin。所有对 Python 可执行文件的查找都会首先被这个 shims 路径截获，从而架空了后面的系统路径。&lt;/p&gt;
+
+&lt;p&gt;安装pyenv&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yyuu/pyenv#installation&quot;&gt;official guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;手动安装&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;' &amp;gt;&amp;gt; ~/.bash_profile	#修改环境变量
+$ echo 'export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.bash_profile	#修改环境变量
+$ echo 'eval &quot;$(pyenv init -)&quot;' &amp;gt;&amp;gt; ~/.bash_profile	#最后添加pyenv init
+$ exec $SHELL			#输入命令重启Shell，然后就可以重启pyenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;myself config&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;' &amp;gt;&amp;gt; ~/.zshrc
+$ echo 'export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.zshrc
+$ echo 'eval &quot;$(pyenv init -)&quot;' &amp;gt;&amp;gt; ~/.zshrc
+$ exec $SHELL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;basic command&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv commands			#help	查看有用的命令
+pyenv install --list	#查看pyevn可安装的版本列表
+pyenv install -l
+pyenv install x.x.x		#安装指定版本python
+pyenv rehash			#安装结束之后，必须更新数据库,否则不会生效
+pyenv uninstall x.x.x	#卸载指定版本python
+pyenv rehash			#卸载结束之后，必须更新数据库
+pyven versions			#查看当前已经安装的python版本
+*system(set by /home/user/.pyenv/version)		#系统默认版本
+2.7.6
+3.4.1
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;安装完成之后，就可以使用pyenv进行版本切换了。&lt;/p&gt;
+
+&lt;p&gt;python优先级shell&amp;gt;local&amp;gt;global&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv local version or --unset
+pyenv global version or --unset
+pyenv shell version,versions or --unset
+pyenv local x.x.x		#在当前目录改变python的版本
+pyenv local --unset		#取消 改变
+pyenv global x.x.x		#全局改变python版本
+pyenv shell x.x.x		#改变当前shell的python版本
+
+pyenv which python-version
+
+$ pyenv global 3.4.0 -- 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
+$ pyenv local 2.7.3 -- 设置面向程序的本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+pyenv 会从当前目录开始向上逐级查找 .python-version 文件，直到根目录为止。若找不到，就用 global 版本。
+$ pyenv shell pypy-2.2.1 -- 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。--unset
+参数可以用于取消当前 shell 设定的版本。
+$ pyenv shell --unset
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;升级&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/.pyenv
+$ git pull
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;卸载&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm -rf ~/.pyenv		#快速方便
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;eg:在pyenv中使用virtualenv部署werkzueg的测试app&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#将virtualenv安装在pyenv中
+pyenv local pypy-2.3.1
+pyenv virtualenv venv_pypy
+pyenv local venv_pypy
+which python
+pip install -Ur requirements.txt
+pip install -U Gunicorn
+pyenv rehash
+which gunicorn
+gunicorn -b:5000 -w 9 werkzeug:test_app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;python virtualevn创建_纯净虚拟环境_&lt;/p&gt;
+
+&lt;p&gt;虽然直接通过pip来安装virtualenv也是可以的，但是通过pyenv插件的形式安装virtualenv的虚拟环境更加方便，因为之后的操作会比较方便&lt;/p&gt;
+
+&lt;p&gt;pyenv-virtualenv插件安装:项目&lt;a href=&quot;https://github.com/yyuu/pyenv-virtualenv&quot;&gt;https://github.com/yyuu/pyenv-virtualenv&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;pyenv帮助你在一台机上建立多个版本的python环境， 并提供方便的切换方法。&lt;/p&gt;
+
+&lt;p&gt;virtualenv则就是将一个目录建立为一个虚拟的python环境， 这样的话， 用户可以建立多个虚拟环境， 每个环境里面的python版本可以是不同的， 也可以是相同的， 而且环境之间相互独立。&lt;/p&gt;
+
+&lt;p&gt;pyenv-virtualenv是pyenv的插件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+$ echo 'eval &quot;$(pyenv virtualenv-init -)&quot;' &amp;gt;&amp;gt; ~/.bash_profile
+$ exec &quot;$SHELL&quot;			#restart shell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这个插件就安装在.pyenv文件下了。&lt;/p&gt;
+
+&lt;p&gt;创建一个python版本的虚拟环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv virtualenv x.x.x(version) envxxx(virtual_env_name)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这样就创建一个python的虚拟环境，这个环境的真是目录位于:~/.pyenv/versions/下,x.x.x必须为当前系统中已经安装好的python版本，否则会出错，我们可以通过pyenv version来查看当前的_虚拟环境_&lt;/p&gt;
+
+&lt;p&gt;切换和使用新的python虚拟环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv activate envxxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这样就可以切换到这个版本的虚拟环境，通过python来查看版本，发现处于虚拟环境中了，可以为所欲为了。如果要切换到系统环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv deactivate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;列表virtualenv&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	pyenv virtualenvs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果要删除这个虚拟环境，只要直接删除它所在的目录就可以了&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm -rf ~/.pyenv/version/envxxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;或者直接卸载&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyenv uninstall envxxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;anaconda&quot;&gt;Anaconda&lt;/h2&gt;
+
+&lt;p&gt;使用conda list查看anaconda安装自带的包&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda  list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用conda
+list命令的环境时，python版本切换到anaconda版本下，不然，这个命令无法查询，在anancoda环境下，也是可以通过pip来安装其他包的。&lt;/p&gt;
+
+&lt;p&gt;给anaconda安装包&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda install xxx	#如果需要指定版本[package-name]=x.x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;多个python版本并存，尤其是2.x和3.x的并存&lt;/p&gt;
+
+&lt;p&gt;这个通过virtualenv可以做到，Anaconda也可以实现，下面用create命令来创建多个环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create -n python2 python=2.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这样就会在Anaconda的安装目录下的envs目录创建python2&lt;/p&gt;
+
+&lt;h2 id=&quot;virtualenv&quot;&gt;virtualenv&lt;/h2&gt;
+
+&lt;p&gt;简单来说，你的每一个项目都可以拥有一个单独的，孤立的python环境，你可以把所有的包安装到各自孤立的环境中，通过pip来安装virtualenv&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pip install virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;安装完成之后，为你的项目创建_孤立_的python环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir my_project_venv
+virtualenv --distribute my_project_venv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;创建一个名叫my_project_venv的文件夹，由于存储新的python环境，–disribute参数告诉virtualenv使用基于distribute包来开发新的，更好的打包系统，而不是基于setuptools的旧系统，–distribute参数将会自动在虚拟环境中安装pip，免去了手动安装的麻烦。&lt;/p&gt;
+
+&lt;p&gt;激活虚拟环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd my_project_venv
+source bin/activate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用source命令启动activate脚步，你的命令行提示符应该会变成这样&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(my_project_venv)$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关闭虚拟环境&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(my_project_venv) deactivate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;当你的_系统层面_安装virtualenv时(如果激活了虚拟环境，请先关闭)，可以通过下面的命令来查看使用哪个执行文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which python
+/usr/bin/python
+which pip
+/usr/local/bin/pip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;note:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在通过pyenv install Anxxx发现，如何网络不可达，就会出现curl:SSL read:error errno,找一个网络速比较好的地方，再进行安装。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</link>
