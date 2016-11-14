@@ -57,7 +57,9 @@ linux下使用包管理器pip.
 sudo apt-get install python-pip
  + 下载源码安装
  sudo python setup.py install
-
+ + get-pip.py
+ wget https://bootstrap.pypa.io/get-pip.py
+ python get-pip.py
 
 ## 常用的包整理
 

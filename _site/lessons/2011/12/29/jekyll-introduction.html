@@ -473,6 +473,76 @@ As noted, our main programming constraint is the fact that our API is limited to
 <p>Please take a look at <a href=""></a>
 or jump right into <a href="">Usage</a> if you’d like.</p>
 
+<h2 id="ubuntu-install-jekyll">Ubuntu install jekyll</h2>
+
+<p>根据最新版本的要求， Jekyll 3 要求 Ruby 2.0.0 及以上的版本。但 Ubuntu 14.04 apt-get 默认提供的版本较低，所以需要从其他地方安装最新的版本。</p>
+
+<h3 id="rbenv">安装 rbenv</h3>
+
+<p>从 Github 上 clone, 再添加路径 :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre>
+</div>
+
+<p>然后我们需要一个 rbenv 插件 ruby-build 来编译并安装 Ruby .</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre>
+</div>
+
+<p>安装 rbenv-gem-rehash . 当使用 gem 安装或卸载 Ruby package 时，这个插件自动调用 rbenv rehash .</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+</code></pre>
+</div>
+
+<h3 id="nodejs">安装Node.js</h3>
+
+<p>官网提供的方法是：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+</div>
+
+<p>npm 也会被安装.</p>
+
+<h3 id="ruby-2x--jekyll-3x">安装 Ruby 2.x 和 Jekyll 3.x</h3>
+
+<p>首先确定相关的依赖已经安装.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev libffi-dev python-software-properties
+</code></pre>
+</div>
+
+<p>然后运行下面的语句：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rbenv install 2.2.3
+rbenv global 2.2.3
+gem install bundle
+gem install jekyll
+</code></pre>
+</div>
+
+<p>通过下面的方法检查安装是否成功.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll -v
+jekyll new my-site
+cd my-site
+jekyll serve
+</code></pre>
+</div>
+<p>在浏览器中，输入 <a href="http://localhost:4000">http://localhost:4000</a> 查看你的网页.</p>
+
+<p>大功告成！</p>
+
 					<div class="meta">
 						<p class="date-publish">
 							Published: 

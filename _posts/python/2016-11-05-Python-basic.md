@@ -203,11 +203,283 @@ tuple = ("a","b","c")
 a,b,c = tuple
 print (a,b,c)
 
+```
+元组的遍历:元组的遍历是指通过循环语句依次访问元组中各个元素的值。遍历元组需要用到两个函数range(),len(),range和len都是内建函数，这些函数可以直接使用，不需要import语句导入。内建函数是Python自动导入的函数。
+```python
+tuple= (("apple","banana"),("grape","orange"),("watermelon",),("grape",))
+for i in range(len(tuple)):
+	print ("tuple[%d]:",%i " ",)
+	for j in range(len(tuple[i])):
+		print (tuple[i][j]," " ,)
+	print()
 
+#the second
+tuple= (("apple","banana"),("grape","orange"),("watermelon",),("grape",))
+for i in tuple:	#遍历元组
+	for j in i:	#同样对子元组进行遍历
+		print (j)	#依次打印元素
 ```
  + 列表
 
+列表是Python内置的一种数据结构。它由一系列元素组成，所有元素被包含在一对方括号中。列表创建后，可以执行添加或删除操作。list = [ele1,ele2,....],追加append(object),object可以是`元组，列表，字典或任何对象`，列表的删除remove(value),如果value不在列表中，将会抛出异常.
+```python
+list = ["apple","banana","grape","orange"]		#定义列表
+print (list)
+print (list[2])
+list.append("watermelon")			#add one elem
+list.insert(1,"grapefruit")			#向列表中插入元素
+print (list)
+list.remove("grape")
+print (list)
+list.remove("a")					#列表中没有，就会抛出异常
+print (list.pop())					#打印从列表弹出的元素，即最后一个元素
+print (list)
+```
+
+列表的使用
+```python
+list = {"apple","banana","grape","orange"}
+print (list[-2])
+print (list[1:3])
+print (list[-3:-1])
+
+list = [["apple","banana"],["grape","orange"],["watermelon"],["grapefruit"]]
+
+for i in range(len(list)):
+	print ("list[%d]"%i,"",)
+	for j in range(len(list[i])):
+		print (list[i][j],"",)
+	print()
+```
+列表连接
+```python
+list1 = ["apple","banana"]
+list1 = ["grape","orange"]
+list1.extend(list2)
+print (list1)
+
+list3 = ["watermelon"]
+list1 = list1 + list3
+print (list1)
+
+list1 += ["grapefruit"]
+print (list1)
+
+list1 = ["apple","banana"] * 2
+print (list1)
+
+```
+列表的查找，排序，反转
+```python
+list = ["apple","banana","grape","orange"]
+print (list.index("grape"))		#打印grape的索引
+print (list.index("orange"))	#打印oranage的索引
+print ("orange" in list)		#True
+
+list = ["banana","apple","orange","grape"]
+list.sort()
+print ("sort list:",list)
+
+list.reverse()
+print ("reverse list:",list)
+```
+列表的方法
+
+ + append(object):在列表的末尾添加一个对象object
+ + insert(index,object):在指定索引index出插入一个对象object
+ + remove(value):删除列表中`首次`出现的value值
+ + pop([index]):删除索引index指定的值，如果index不指定，删除列表中`最后一个元素`
+ + extend(iterable):将iterable指定的元素添加到列表的末尾
+ + index(value,[start,[stop]]):返回value出现在列表中的索引
+ + sort(cmp=None,key=None,reverse=False):列表的排序
+ + reverse():列表的反转
+
+列表实现堆栈和队列
+```python
+#堆栈(先进后出)
+list = ["apple","grape","grape"]
+list.append("orange")
+print (list)
+
+print ("the pop element:",list.pop())
+print (list)
+
+#队列(先进先出)
+list = ["apple","grape","grape"]
+list.append("orange")
+print (list)
+
+print ("the pop element:",list.pop(0))#弹出第一个元素
+print (list)
+```
  + 字典
+
+字典是由`键-值`对组成的集合，字典中的`值`通过`键`来引用,`键-值`对之间用`逗号`隔开，并且包含在一对`花括号`中。
+
+	dictionary = {key1:value1,key2:value2,....}
+
+其中key1，key2表示字典的key值，value1，value2等表示字典的value值。如果需要一个`空的字典`，只需要一对`花括号`即可
+
+	dictionary = {}
+
+字典的创建和访问
+```python
+dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
+print (dict)
+print (dict["a"])
+
+
+dict = {1:"apple",2:"banana",3:"grape",4,"orange"}
+print (dict)
+print (dict[1])
+
+print ("%s, %(a)s,%(b)s" %{"a":"apple","b":"banana"})
+# %s输出这个字典的内容
+#%(a)s:获取对应key值为"a"的value值
+#%(b)s:获取对应key值为"b"的value值
+
+```
+字典的`键`是区分`大小写`的，例如:dict["a"]和dict["A"]分别执行不同的值。
+
+```python
+dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
+dict["w"] = "watermelon"		#增加元素
+del(dict["a"])					#删除字典中键为"a"的元素
+dict["g"] = "grapefruit"		#修改字典中键为"g"的值
+print (dict.pop("b"))			#弹出字典中键为"b"的元素
+print (dict)
+dict.clear()					#清除字典中所有的元素
+print (dict)
+
+#字典的遍历
+dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
+for k in dict:
+	print ("dict[%s] = "%k,dict[k])
+
+#使用item返回一个由若干个元组组成的列表
+dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
+print (dict.items())
+
+#可见items()把字典中每对key和value组成了一个元组，并把这些元组存放在列表中返回
+dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
+for (k,v) in dict.items():
+	print ("ditc[%s] = "%k,v)
+```
+混合型字典：使用元组，列表或字典作为value值创建的字典
+
+	dict ={"key1":(tuple),"key2":[list],"key3":[dictionary],....}
+
+```python
+dict = {"a":{"apple,"},"bo":{"b":"banana","o":orange},"g":["grape","grapefruit"]}
+print (dict["a"])		#整个元组
+print (dict["a"][0])	#元组的第一个元素
+print (dict["bo"])		#输出字典
+print (dict["g"])		#输出列表
+print (dict["g"][1])	#输出列表中的第二个元素
+```
+
+字典的方法keys(),values()分别返回字典key列表和value列表
+```python
+dict = {"a":"apple","b":"banana","c":"grape","d":"orange"}
+#输出key的列表
+print (dict.keys())
+#输出value的列表
+print (dict.values())
+```
+要获取字典中某个value值，可以使用dict[key]的结构来访问。另一种获取value值的办法是使用字典的get()，get()的声明
+
+	D.get(k[,d]) -> D[k]
+
+参数k表示字典的键值，参数d可以作为get()的返回值，参数d可以默认，默认值是None。get()相当与一条if ... else ...语句，如果参数k在字典D中，get()将返回D[k],如果参数k不在字典D中，则返回参数d。
+```python
+#get()的等价语句
+D = {"key1":"vaule1","key2","value2"}
+if "key1" in D:
+	print (D["key1"])
+else:
+	print ("None")
+
+#get使用
+dict = {"a":"apple","b":"banana","c":"grape","d","orange"}
+print (dict)
+print (dict.get("c","apple"))#获取键为c的值，不存在就返回默认值apple
+print (dict.get("e","apple"))#获取键为e的值，不存在就返回默认值apple
+```
+如果需要添加新的元素到`已经存在的字典`中，可以调用字典的update(),update把一个字典的key和value值全部复制到另一个字典中，update相当与一个`合并函数`
+
+	D.update(E) -> None
+
+合并字典
+```python
+D = {"key1":"value1","key2","value2"}
+E1= {"key3":"value3","key4","value4"}
+for k in E:
+	D[k] = E[k]	#如果字典中有相同的值，就会覆盖,update函数也是一样
+print (D)
+
+#update
+dict = {"a":"apple","b":"banana"}
+print (dict)
+dict2 = {"c":"grape","d":"orange"}
+dict.update(dict2)
+print (dict)
+```
+`字典不属于序列`，所以字典`没有顺序性`，update之后，字典中的各元素的排列顺序是`无序的`。
+
+setdefault()的使用
+```python
+#设置默认值
+dict = {}
+dict.setdefault("a")
+print (dict)				#{"a",None}
+dict["a"] = "apple"			# dict["a"] = "apple"
+dict.setdefault("a","None")	#再次设置默认值None
+print (dict)				#由于设置了dict["a"]的值为"apple",即使再次调用setdefault()也不会影响value值，所以dict["a"]的值仍然为apple，而不是"default"
+```
+字典的常用方法
+ + items() 返回(key,value)元组组成的列表
+ + iteritems() 返回执行字典的遍历器
+ + setfault(k[,d]) 创建新的元素并设置默认的值
+ + pop(k[,d]) 移除索引k对应的value值，并返回该值
+ + get(k[,d]) 返回索引k对应的value值
+ + keys() 返回字典中key的列表
+ + values() 返回字典中value的列表
+ + update(E) 把字典E中的数据扩展到原字典中
+ + copy()  复制一个字典中所有的数据
+
+字典的排序，复制
+```python
+dict = {"a":"apple","b":"banana","c":"grape","d","orange"}
+print (dict)
+#按照key排序
+print (sorted(dict.items(),key=lambda d:d[0]))
+#按照value排序
+print (sorted(dict.items(),key=lambda d:d[1]))
+```
+字典的copy，实现了字典的浅拷贝操作
+```python
+dict1 = {"a":"apple","b":"banana","c":"grape","d","orange"}
+dict2 = {"e":"watermelon","d","dance"}
+dict2 = dict1.copy()		#拷贝dict1并赋给dict2
+print (dict2)
+
+```
+身拷贝能够对拷贝对象内部所有的数据和引用，引用相当用C语言中的指针的概念，Python中`并不存在指针`，但是变量的内存结构中通过引用来为`维护变量`，而`浅拷贝`只是`复制数据`，并没有`复制数据的引用`，新的数据的旧的数据使用`同一块内存空间`，例如，字典B浅拷贝字典A的数据，如果字典B的数据发生`添加，删除或修改操作`，字典A的数据`也将发生变化`，相反，如果字典B`深拷贝`字典A的数据，字典B的数据`发生变化`，也`不会影响到字典A`
+
+深拷贝和浅拷贝应用于`Python`中的`任何对象`，不只是字典，在Python中可以使用copy模块来实现对象的深拷贝和浅拷贝，deepcopy()用于深拷贝操作，copy()用于浅拷贝操作。
+```python
+#字典的深拷贝
+import copy
+dict = {"a":"apple","b":"banana","c":"grape","d","orange"}
+dict2 = copy.deepcopy(dict)				#深拷贝
+dict3 = copy.copy(dict)					#浅拷贝 === dict3 = dict.copy()
+dict2["b"] = "liangkangkang"			#不会受到影响
+print(dict)
+dict3["b"] = "liangkangkang"			#会受到影响
+print(dict)
+```
+
+
 
  + 序列
 
@@ -458,3 +730,6 @@ python中有个pdb模块，使python代码也可以像gdb那样进行调试，�
 
 参考[http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/](http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/)
 
+### ipdb
+
+ipdb是pdb的交互式debug

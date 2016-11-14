@@ -16,11 +16,11 @@ tags : []
 
 ## Search
 
-> + [www.google.com](www.google.com)
-> + [www.yahoo.com](www.yahoo.com)
-> + [www.yandex.com](www.yandex.com)
-> + [www.biying.cn](www.biying.cn)
-> + [www.baidu.com](www.baidu.com)
+> + [google](http://www.google.com)
+> + [yahoo](http://www.yahoo.com)
+> + [yandex](http://www.yandex.com)
+> + [biying](http://www.biying.cn)
+> + [baidu](http://www.baidu.com)
 
 
 
@@ -28,8 +28,8 @@ tags : []
 
 ## C++
 
-> + [www.cplusplus.com](www.cplusplus.com)
-> + [www.learncpp.com](www.learncpp.com)
+> + [cplusplus](http://www.cplusplus.com/)
+> + [learncpp](http://www.learncpp.com/)
 
 
 ## C++
@@ -47,16 +47,20 @@ tags : []
 
 **Hack**
 
-> + [www.codesec.com](www.codesec.com)
+> + [codesec](http://www.codesec.net)
 
 
 **blog**
 
-> + [www.51cto.com](www.51cto.com)
-> + [www.cnblog.com](www.cnblog.com)
+> + [51cto](http://www.51cto.com)
+> + [cnblog](http://www.cnblogs.com)
+
+
+**tech**
+ > + [https://ddatsh.com/](https://ddatsh.com/)
+
 
 ## lefe-web
 
-> + [www.twitter.com](www.twitter.com)
-> + [www.sina.com](www.sina.com)
+> + [sina](http://www.sina.com.cn)
 
