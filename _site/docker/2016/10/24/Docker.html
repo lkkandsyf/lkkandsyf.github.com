@@ -75,6 +75,8 @@
   <li><a href="http://dev.aliyun.com/search.html">阿里云加速</a></li>
 </ul>
 
+<hr />
+
 <h2 id="section">拉取和推送</h2>
 
 <ul>
@@ -112,6 +114,8 @@
 <div class="highlighter-rouge"><pre class="highlight"><code>docker push daocloud-name/repo-name:v1
 </code></pre>
 </div>
+
+<hr />
 
 <h2 id="section-1">制作镜像</h2>
 
@@ -157,6 +161,8 @@ touch Dockfile
 
 <p><a href="">Dockfile-command</a></p>
 
+<hr />
+
 <h2 id="section-2">挂载本地目录</h2>
 
 <p>docker可以把一个宿主机上的<code class="highlighter-rouge">目录</code>挂载到<code class="highlighter-rouge">镜像里</code></p>
@@ -197,7 +203,46 @@ touch Dockfile
 
 <p>–volumes-from用来指定要从哪个数据卷来挂载数据。同样都是在/usr/share目录下。</p>
 
+<hr />
+
 <h2 id="section-3">导入和导出镜像</h2>
+
+<p>可以使用docker save和docker load来存储镜像和载入镜像</p>
+
+<p>保存镜像</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker images			#镜像列表
+sudo docker save -o xxxx.jar 要保存的镜像		#保存镜像为文件
+sudo docker mirrorId &gt; path/xxx.tar
+sudo docker save ubuntu.tar repo/ubuntu
+#完成之后用ls查看
+</code></pre>
+</div>
+
+<p>加载镜像</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker load --input xxx.tar
+#or
+sudo docker load &lt; xxx.tar
+</code></pre>
+</div>
+
+<p>导出export和保存save的区别</p>
+
+<ul>
+  <li>export导出的镜像文件大小  小于 save保存的镜像</li>
+  <li>export 导出（import导入）是根据容器拿到的镜像，再导入时会丢失镜像所有的历史，所以无法进行回滚操作（docker tag <LAYER ID=""> <IMAGENAME>）；而save保存（load加载）的镜像，没有丢失镜像的历史，可以回滚到之前的层（layer）。（查看方式：docker images --tree）</IMAGENAME></LAYER></li>
+</ul>
+
+<p>注：导入加载进来觉得不合适可以使用 docker rm 容器ID 、 docker rmi 镜像ID 来删掉。</p>
+
+<p>移除所有的容器和镜像（大扫除）：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a)
+</code></pre>
+</div>
+
+<hr />
 
 <h2 id="problem">Problem</h2>
 

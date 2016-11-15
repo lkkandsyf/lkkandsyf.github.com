@@ -79,3 +79,12 @@ website
  + [megasharemovie.net](megasharemovie.net/movie)
  + [vioozwatch32moive.org](vioozwatch32moive.org)
 
+### think
+
+对自己太心慈手软
+
+对自己狠一点，当别人也会考虑
+
+不能太想得到，要考虑以后的事情
+
+既然给不了，何必去强求

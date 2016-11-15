@@ -580,8 +580,408 @@ import ModuleNname
 from  ModuleNname import *			#导入所有
 ```
 
+**模块的属性**
+
+例如,\_\_name==\_\_用来判断当前的模块是否是程序的`入口`，如果当前的程序正在使用，\_\_name\_\_的值为\_\_main\_\_,通常给每个模块添加一个`条件语句，用来端度测试该模块的功能`
+```python
+
+	if __name__ == "__main__":
+		print ("myModule 作为程序正在运行")
+	else:
+		print ("myModule被另一个程序调用")
+```
+
+模块内建函数，利用这些函数可以实现数据类型的转换和数据的计算，序列的处理等功能。常用的内联模块函数
+
+apply()调用可变参数的列表的函数的功能只能使用在列表前添加\*来实现
+
+filter()可以对某个序列做过滤操作，判断自定义函数的结果是否为真来过滤，并一次性返回结果。从给定的列表总过滤大于0的数字
+```python
+	def func(x):
+		if x > 0:
+			return x
+	print (filter(func,range(-9,10)))	#调用filter函数，返回filter对象
+	print (list(filter(func,range(-9,10))))#将filter对象转换为列表
+```
+filter中的`过滤函数func的参数不能为空`，否则，没有可以存储sequence元素的变量，func也不能处理过滤
+
+reduce()对序列重点数据可以通过循环来操作，比如累加，Python3中reduce移动到了functools模块中，使用前，必须提前导入
+```python
+	def sum(x,y):
+		return x + y
+
+	from functools import reduce
+	print (reduce(sum,range(0,10)))		#0+1+2+...+..9 = 45
+	print (reduce(sum,range(0,10),10))		#10 + 0+1+2+...+..9 = 55
+	print (reduce(sum,range(0,0),10))		#返回空的列表，在加上10，结果为10
+```
+map(),map可以对元组进行解包。调用时，map的第一个参数是None。
+```python
+	class  map(object)
+		map(func,*iterables) -->map object
+```
+
+参数func是自定义的函数，实现对序列每个元素的操作
+
+参数iterables是待处理的序列，参数iterables的个数可以是多个
+
+map的返回值是对序列元素处理后的列表
+```python
+	def power(x):
+		return x**x
+	print (map(power,range(1,5)))
+	print (list(map(power,range(1,5))))	#[1,4,27,256]
+
+	def power2(x,y):
+		return x ** y
+	print (map(power2,range(1,5)),range(5,1,-1))
+	print (list(map(power2,range(1,5)),range(5,1,-1)))#[1,16,27,16]
+```
+如果Map中提供多个序列，则每个序列中的元素一一对应进行计算。如果每个序列的长度不相同，则短的序列后补充None，再进行计算。
+
+常用的内置模块函数
+
+abs(x):返回x的绝对值
+
+bool(x):把一个值或表达式转换为bool类型，如果是表达式x为值，返回true，否则返回false
+
+eval(s[,gloabl[,local]]):计算表达式的值
+
+float(x)把数字或字符串转换为浮点类型
+
+hash(object):返回一个对象的hash值
+
+help(object):返回内置函数的帮助说明
+
+id(x):返回一个对象的id
+
+input([prompt]):接受控制台的输入，并把输入的值转换为数字
+
+int(x):把数字或字符串转换我整形
+
+len(obj):对象包含的元素的个数
+
+range([start,]end[,step]):生成一个列表并返回
+
+reduce(func,sequence[,initial]):对序列的值进行累计操作
+
+round(x):四舍五入
+
+set([iterable]):返回一个set集合
+
+sort(iterable[,cmp[,key[,reverse]]]):返回一个sort后的列表
+
+sum(iterable[,start=0]):返回一个序列的和
+
+type(obj):返回一个对象的类型
+
+zip(iter1[,iter2[..]]):把n个序列作为列表的元素返回
+
+**自定义包**
+
+包就是一个`至少包含__init__.py`的文件夹，包就是为了`实现程序的重用`，它实现一个常用的功能的代码组合到一个包总，调用包的服务从而实现重用。
+```python
+	---parent
+		| __init__.py
+		|pack
+			| __init__.py
+			| myModule.py
+		|pack2
+			| __init__.py
+			| myModule.py
+
+	#pack中的myModule.py
+	def func():
+		print ("pack.myModule.func")
+
+	if __name__ == '__main__':
+		print ('myModule作为主程序运行')
+	else:
+		print ('myModule被另一个模块调用')
+
+	#pack2的myModule2模块
+	def func():
+		print ('pack2.myModule.func')
+	if __name__ == '__main__':
+		print ('myModule2作为主程序运行')
+	else:
+		print ('myModule2被另一个程序调用')
+
+	#main 模块来调用两个pack的函数
+	from pack import myModule
+	from pack2 import myModule2
+
+	myModule.func()
+	myModule2.func()
+
+```
+\_\_init\_\_.py，也可以用于提供当前包的模块列表，例如，在pack包的\_\_init\_\_.py文件中前面添加一行代码
+
+```python
+	__all__ = ["myModule"]
+```
+
+\_\_all\_\_用于记录当前pack包所包含的模块。其中方括号中的内容是`模块名的列表`，如果模块数量超过2个，使用逗号分开。同理，在pack2包也添加一行类似的代码
+```python
+	__all__ = ["myModule2"]
+```
+这样就可以在main模块中一次导入pack,pack2包中所有的模块
+```python
+
+	#main 模块来调用两个pack的函数
+	from pack import *
+	from pack2 import *
+
+	myModule.func()
+	myModule2.func()
+```
+首先执行pack中init文件，然后在all属性查找pack包含的模块，如果没有记录的模块，就会报错。
+
+函数：函数就是一段可以`重复多次调用的代码`，通过输入的参数值，返回需要的结果
+
+函数定义：使用关键字def,函数在使用前，必须定义，函数的类型即返回值的类型
+```python
+	def funName(参数1，参数2,...):
+		...
+	return 表达式
+```
+参数中，用逗号隔开的，这些都是形式参数，括号后面以冒号结束，冒号下面就是函数的主体。实际参数必须与形式参数一一对应，否则将出现错误计算，具有默认值的参数例外。
+
+函数的参数：在C/C++中参数的传递有值传递和引用传递两种方式，而Python中任何东西都是对象，所以参数只支持引用传递的方式，Python通过名称绑定的机制，把实际的参数和形式参数绑在一起。即把形式参数传递到函数所在的`局部命名空间中`，形式参数和实际参数`指向内存中同一个存储空间`
+
+函数的参数支持默认值，当某个参数没有传递实际值时，函数使用默认的参数进行计算。
+```python
+	def arithmetic(x = 1,y = 1,operator = "+"):
+		result = {
+			"+" : x + y
+			"-" : x - y
+			"*" : x * y
+			"/" : x / y
+		}
+```
+参数可以是变量，也可以是元组，列表等内置数据结构。
+
+`列表作为参数传递`
+```python
+	def arithmetric(args=[],operator="+"):
+		x = args[0]
+		y = args[1]
+		result = {
+			"+" : x + y
+			"-" : x - y
+			"*" : x * y
+			"/" : x / y
+		}
+	print (arithmetric([1,2]))
 
 
+	def func(*args):
+		print args
+
+	func(1,2,3)
+```
+Python还提供了另外一个标识符"\*\*"，在形式参数的前面添加"\*\*",可以引用一个字典。根据实际的参数的赋值表达式生成字典。
+
+**传递可变参数**
+```python
+	def search(*t,**d):
+		keys = d.keys()
+		values = d.values()
+
+	search("one","three","one=1","two=2","three=3")
+```
+
+**函数的返回值**
+
+返回值使用return语句，return语句后面可以是变量或表达式。
+
+**没有返回值的函数**
+```python
+	def func():
+		pass	#pass关键字，相当与占位符
+	print (func())
+```
+None是Python中的对象，不属于数字也不属于字符串。当函数中return语句不带`任何参数时`，返回的结果也是`None`
+```python
+	def func():
+		return
+
+	print (func())
+```
+如果需要`返回多个值`,可以把这些值`打包`到元组中，在调用时，对返回的元组进行`解包`即可，下面的代码实现输入变量的反转。例如输入1,2,3输出2,1,0
+```python
+	#返回多个值
+	def func(x,y,z):
+		l = [x,y,z]
+		l.reverse()
+		numbers = tuple(l)
+		return numbers
+
+	x,y,z = func(0,1,2)
+	print (x,y,z)
+
+	#second
+	#返回多个值
+	def func(x,y,z):
+		l = [x,y,z]
+		l.reverse()
+		a,b,c = tuple(l)	#解包
+		return a,b,c
+
+	x,y,z = func(0,1,2)
+	print (x,y,z)
+```
+**嵌套函数**
+
+函数的嵌套是指在`函数的内部调用其他函数`，函数的嵌套层数不能过多，否则，容易造成`代码的可读行差，不易维护等问题`，一般函数的嵌套控制在3层以内。
+```python
+def sum(a,b):
+	return a + b
+def sub(a,b):
+	return a - b
+
+def func():
+	x = 1
+	y = 2
+	m = 3
+	n = 4
+	return sum(x,y)*sub(m,n)
+
+print (func())
+
+#second
+
+def func():
+	x = 1
+	y = 2
+	m = 3
+	n = 4
+	def sum(a,b):
+		return a + b
+	def sub(a,b):
+		return a - b
+	return sum(x,y)*sub(m,n)
+
+print (func())
+
+#three
+#内部函数可以直接调用外部函数定义的变量
+def func():
+	x = 1
+	y = 2
+	m = 3
+	n = 4
+	def sum():
+		return a + b
+	def sub():
+		return a - b
+	return sum()*sub()
+
+print (func())
+```
+
+**递归函数**
+
+递归函数需要`编写递归结束的条件`，否则，递归程序将无法结束。一般通过判断语句来结束程序
+```python
+#计算阶乘
+def refunc(n):
+	i = 1
+	fi n > 1:
+		i = n
+		n = n * refunc(n-1)
+	print ("%d! =",%i,n)
+	return n
+
+refunc(5)
+```
+每次调用递归函数都会复制函数中的所有变量，再执行递归函数。程序需要更多的存储空间，对程序的性能有一定的影响，因此，对于没有必要进行递归的程序，最好`其他方法进行改进`
+```python
+#使用reduce计算阶乘
+from functools import reduce
+print ("5! = ",reduce(lambda x,y:x*y,range(1,6)))
+```
+
+**lambda函数**
+
+lambda函数用于创建一个匿名函数，函数名未知和标识符进行绑定。使用lambda函数可以返回一些简单的运算结果，lambda函数的格式：
+```python
+	lambda 变量1，变量2，...:表达式
+```
+```python
+#赋值
+func = lamdba 变量1，变量2...:表达式
+
+func()
+#这样就就把lambda和变量func绑定到一起了，变量func的名称即使函数名，lambda可以消除内部函数
+
+def func():
+	x = 1
+	y = 2
+	m = 3
+	n = 4
+	sum = lambda x,y:x+y
+	pirint (sum)
+	sub = lambda m,n:m-n
+	pirint (sub)
+	return sum(x,y)*sub(m,n)
+
+print (func())
+
+#一个数的绝对值
+print ((lambda:x-x)(-2))		#输出2
+```
+**Generator函数**
+
+生成器的作用使一次产生一个数据项，并把数据项输出。Generator函数可以在`for循环中遍历`，Generator函数每次`返回一个数据项的特性`，使得迭代器的性能更佳。
+
+Generator函数定义
+```python
+	def 函数名(参数列表):
+		....
+		yield 表达式
+```
+Generator函数的定义和普通函数定义没有什么区别，只要在函数体内使用yield生成数据项即可。Generator函数可以在`for循环中遍历`,而且可以通过next()方法获得yield生成的数据项。
+```python
+#定义Generator函数
+def func(n):
+	for i in range(n):
+		yield i
+
+#for loop
+for i in func(3):
+	print (i)
+
+#使用next方法
+r = func(3)
+print (r.next())
+print (r.next())
+print (r.next())
+print (r.next())
+
+```
+
+yield 和 return的区别:原理不相同，yield生成值并不会中止程序的执行，返回值后程序继续往后执行。return返回值后，程序将中止执行
+```python
+def func(n):
+	for i in range(n):
+		return i
+
+def func2(n):
+	for i in range(n):
+		yield i
+
+print (func(3))
+
+f = func2(3)
+print (f.next())
+print (f.next())
+
+```
+
+Generator函数可以返回元素的值，而序列也可以获取元素的值。但是两者还存在很大的区别。Generator函数一次只返回一个数据项，占用更少的内存。每次生成数据都要记录当前状态，便于下一次生成数据。数据的访问是通过next方法实现的。当访问越界时，Generator函数会抛出异常StopIteration。序列一次返回所有的数据，元素的访问是通过索引来完成的，当访问越界时序列提示list index out of range.
+
+当程序需要`较高的性能或一次需要一个值进行处理`，使用Generator函数，当需要`一次获取一组元素时，使用序列`
 
 ---
 
