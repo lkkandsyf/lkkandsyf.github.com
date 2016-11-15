@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 14 Nov 2016 11:42:38 +0800</lastBuildDate>
-        <pubDate>Mon, 14 Nov 2016 11:42:38 +0800</pubDate>
+        <lastBuildDate>Mon, 14 Nov 2016 22:42:44 +0800</lastBuildDate>
+        <pubDate>Mon, 14 Nov 2016 22:42:44 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -37,7 +37,6 @@
       &lt;li&gt;&lt;a href=&quot;#jupyter&quot; id=&quot;markdown-toc-jupyter&quot;&gt;Jupyter&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#python-2&quot; id=&quot;markdown-toc-python-2&quot;&gt;Python网络编程&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#python-3&quot; id=&quot;markdown-toc-python-3&quot;&gt;Python网络应用&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#python-4&quot; id=&quot;markdown-toc-python-4&quot;&gt;Python测试驱动开发&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#pdb&quot; id=&quot;markdown-toc-pdb&quot;&gt;pdb&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#ipdb&quot; id=&quot;markdown-toc-ipdb&quot;&gt;ipdb&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -134,6 +133,8 @@
 
 &lt;p&gt;逻辑运算符:and,or,not&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;section-2&quot;&gt;控制结构&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;if条件语句&lt;/strong&gt;&lt;/p&gt;
@@ -211,6 +212,8 @@
 	&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;数据结构&lt;/h3&gt;
 
@@ -491,35 +494,176 @@
 &lt;/div&gt;
 &lt;p&gt;字典的常用方法&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;items()&lt;/li&gt;
-  &lt;li&gt;iteritems()&lt;/li&gt;
-  &lt;li&gt;setfault(k[,d])&lt;/li&gt;
-  &lt;li&gt;pop(k[,d])&lt;/li&gt;
-  &lt;li&gt;get(k[,d])&lt;/li&gt;
-  &lt;li&gt;keys()&lt;/li&gt;
-  &lt;li&gt;values()&lt;/li&gt;
-  &lt;li&gt;update(E)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;copy()&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;items() 返回(key,value)元组组成的列表&lt;/li&gt;
+  &lt;li&gt;iteritems() 返回执行字典的遍历器&lt;/li&gt;
+  &lt;li&gt;setfault(k[,d]) 创建新的元素并设置默认的值&lt;/li&gt;
+  &lt;li&gt;pop(k[,d]) 移除索引k对应的value值，并返回该值&lt;/li&gt;
+  &lt;li&gt;get(k[,d]) 返回索引k对应的value值&lt;/li&gt;
+  &lt;li&gt;keys() 返回字典中key的列表&lt;/li&gt;
+  &lt;li&gt;values() 返回字典中value的列表&lt;/li&gt;
+  &lt;li&gt;update(E) 把字典E中的数据扩展到原字典中&lt;/li&gt;
+  &lt;li&gt;copy()  复制一个字典中所有的数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;字典的排序，复制&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#按照key排序&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#按照value排序&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;字典的copy，实现了字典的浅拷贝操作&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dict1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;e&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;watermelon&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dict1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#拷贝dict1并赋给dict2&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dict2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;身拷贝能够对拷贝对象内部所有的数据和引用，引用相当用C语言中的指针的概念，Python中&lt;code class=&quot;highlighter-rouge&quot;&gt;并不存在指针&lt;/code&gt;，但是变量的内存结构中通过引用来为&lt;code class=&quot;highlighter-rouge&quot;&gt;维护变量&lt;/code&gt;，而&lt;code class=&quot;highlighter-rouge&quot;&gt;浅拷贝&lt;/code&gt;只是&lt;code class=&quot;highlighter-rouge&quot;&gt;复制数据&lt;/code&gt;，并没有&lt;code class=&quot;highlighter-rouge&quot;&gt;复制数据的引用&lt;/code&gt;，新的数据的旧的数据使用&lt;code class=&quot;highlighter-rouge&quot;&gt;同一块内存空间&lt;/code&gt;，例如，字典B浅拷贝字典A的数据，如果字典B的数据发生&lt;code class=&quot;highlighter-rouge&quot;&gt;添加，删除或修改操作&lt;/code&gt;，字典A的数据&lt;code class=&quot;highlighter-rouge&quot;&gt;也将发生变化&lt;/code&gt;，相反，如果字典B&lt;code class=&quot;highlighter-rouge&quot;&gt;深拷贝&lt;/code&gt;字典A的数据，字典B的数据&lt;code class=&quot;highlighter-rouge&quot;&gt;发生变化&lt;/code&gt;，也&lt;code class=&quot;highlighter-rouge&quot;&gt;不会影响到字典A&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;深拷贝和浅拷贝应用于&lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;任何对象&lt;/code&gt;，不只是字典，在Python中可以使用copy模块来实现对象的深拷贝和浅拷贝，deepcopy()用于深拷贝操作，copy()用于浅拷贝操作。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#字典的深拷贝&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;copy&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banana&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deepcopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#深拷贝&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;					&lt;span class=&quot;c&quot;&gt;#浅拷贝 === dict3 = dict.copy()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;liangkangkang&quot;&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#不会受到影响&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dict3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;liangkangkang&quot;&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#会受到影响&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;全局字典—-sys.modules模块&lt;/p&gt;
+
+&lt;p&gt;sys.modules是一个全局模块，这个字典是Python启动后就加载在&lt;code class=&quot;highlighter-rouge&quot;&gt;内存&lt;/code&gt;中。每当程序员&lt;code class=&quot;highlighter-rouge&quot;&gt;导入&lt;/code&gt;新的模块，sys.moules都将记录这些模。字典sys.modules对加载的模块起到了缓存的作用。当某个模块&lt;code class=&quot;highlighter-rouge&quot;&gt;第一次&lt;/code&gt;导入时，字典sys.modules将自动记录该模块，当&lt;code class=&quot;highlighter-rouge&quot;&gt;第二次&lt;/code&gt;导入此模块时，Python会直接到字典中&lt;code class=&quot;highlighter-rouge&quot;&gt;查找&lt;/code&gt;，从而加快了程序的&lt;code class=&quot;highlighter-rouge&quot;&gt;运行速度&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#查看模块&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;os&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#模块过滤&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;copy.string&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#zip对set集合进行解包&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
   &lt;li&gt;序列&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;序列是具有&lt;code class=&quot;highlighter-rouge&quot;&gt;索引和切片能力的集合&lt;/code&gt;,元组，列表，和字符串具有通过索引来访问某个具体的值，或通过切片返回一段切片的能力，因此,&lt;code class=&quot;highlighter-rouge&quot;&gt;元组，列表或字符串&lt;/code&gt;都属于&lt;code class=&quot;highlighter-rouge&quot;&gt;序列&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#序列索引&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#apple&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#orange&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#apple&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#orange&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#a&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#e&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#分片操作&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grape&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;apple&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#app&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#le&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#ppl&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:])&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#apple&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;分片&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表示从序列第一个元素到第三个元素的值，分片&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表示整个序列&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;元组和列表都具有序列的特性，但是它们的区别也很明显。元组是&lt;code class=&quot;highlighter-rouge&quot;&gt;只读的一组数据&lt;/code&gt;，而且元组&lt;code class=&quot;highlighter-rouge&quot;&gt;没有提供排序和查找的方法&lt;/code&gt;，列表的数据可读写，而且提供了丰富的方法，支持排序，查找操作。&lt;code class=&quot;highlighter-rouge&quot;&gt;列表的数据通常具有相同的意义&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;				元组					列表
+支持负索引			yes					yes
+支持分片				yes					yes
+支持添加删除修改			no					yes
+支持排序查找			no					yes
+数据的含义		一组不同含义的数据				一组相同含义的数据组成
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;section-4&quot;&gt;模块与函数&lt;/h3&gt;
+
+&lt;p&gt;Python的程序由包(package),模块(module)和函数组成。模块是处理某一类问题的集合，模块函数由函数和类组成。包是由一系列模块组成的集合。包就是一个&lt;code class=&quot;highlighter-rouge&quot;&gt;完成疼任务的工具箱&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;包必须&lt;code class=&quot;highlighter-rouge&quot;&gt;至少包含一个__init__.py文件&lt;/code&gt;，这个文件可以&lt;code class=&quot;highlighter-rouge&quot;&gt;为空&lt;/code&gt;，它用于&lt;code class=&quot;highlighter-rouge&quot;&gt;标示&lt;/code&gt;当前的文件夹是&lt;code class=&quot;highlighter-rouge&quot;&gt;一个包&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;一个Python文件就是一个模块,一个文件即是一个模块。模块是由代码，函数或类组成的。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#自定义模块&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#myModule.py&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myModule.func&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;myFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MyModule.MyClass.myFunc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#同一个目录下的call_module.py&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#调用自定义的模块&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;myModule&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#导入模块&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;myModule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myModule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#实例对象&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#调用方法&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;两个文件必须放到&lt;code class=&quot;highlighter-rouge&quot;&gt;同一个目录下&lt;/code&gt;，或放在sys.path所列出的目录下，否则，Python解释器找不到&lt;code class=&quot;highlighter-rouge&quot;&gt;自定义的模块&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;当Python导入一个模块时，Python首先查找当前路径，然后查找lib目录，site-packages目录(Python/Lib/site-packages)和环境变量PYTHONPATH设置的目录。如果导入的模块没有找到，在以上路径搜索一下，是否含有这个模块，通过sys.path语句搜索模块的查找路径。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#导入模块&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ModuleNname&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt;  &lt;span class=&quot;nn&quot;&gt;ModuleNname&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#导入所有&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;section-5&quot;&gt;字符串与正则表达式&lt;/h3&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;section-6&quot;&gt;文件处理&lt;/h3&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;section-7&quot;&gt;面向对象编程&lt;/h3&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;section-8&quot;&gt;异常处理与程序调试&lt;/h3&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;python&quot;&gt;&lt;strong&gt;Python应用&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;pythonhtml&quot;&gt;Python和HTML&lt;/h3&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;pythonxml&quot;&gt;Python和XML&lt;/h3&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;python-django&quot;&gt;Python-Django&lt;/h3&gt;
 
@@ -528,12 +672,16 @@
   &lt;li&gt;MVC&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;tdd&quot;&gt;TDD&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;unittest&lt;/li&gt;
   &lt;li&gt;doctest&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;python-1&quot;&gt;Python的进程和线程&lt;/h3&gt;
 
@@ -611,6 +759,8 @@ task_done:指示上一个入队任务是否完成操作
 join:等待队列中任务完成任务
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;ipython&quot;&gt;Ipython&lt;/h3&gt;
 
@@ -744,7 +894,7 @@ help(object)	#帮助手册
   &lt;li&gt;scapy&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;python-4&quot;&gt;Python测试驱动开发&lt;/h3&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;pdb&quot;&gt;pdb&lt;/h3&gt;
 
@@ -785,9 +935,13 @@ u ，Move the current frame one level up in the stack trace
 
 &lt;p&gt;参考&lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/&quot;&gt;http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/&lt;/a&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;ipdb&quot;&gt;ipdb&lt;/h3&gt;
 
-&lt;p&gt;ipdb是pdb的交互式debug&lt;/p&gt;
+&lt;p&gt;ipdb是pdb的交互式debug,ipdb debug.py 直接对程序进行调试&lt;/p&gt;
+
+&lt;hr /&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Python-basic</guid>

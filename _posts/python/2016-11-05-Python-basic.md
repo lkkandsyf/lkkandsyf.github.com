@@ -98,6 +98,7 @@ class Hello:
 
 逻辑运算符:and,or,not
 
+---
 
 ### 控制结构
 
@@ -176,6 +177,8 @@ def main():
 if __name__ == '__main__':
 	main()
 ```
+
+---
 
 ### 数据结构
 
@@ -478,36 +481,157 @@ print(dict)
 dict3["b"] = "liangkangkang"			#会受到影响
 print(dict)
 ```
+全局字典----sys.modules模块
 
+sys.modules是一个全局模块，这个字典是Python启动后就加载在`内存`中。每当程序员`导入`新的模块，sys.moules都将记录这些模。字典sys.modules对加载的模块起到了缓存的作用。当某个模块`第一次`导入时，字典sys.modules将自动记录该模块，当`第二次`导入此模块时，Python会直接到字典中`查找`，从而加快了程序的`运行速度`
+```python
+#查看模块
+import sys
+print (sys.modules.keys())
+print (sys.modules.values())
+print (sys.modules["os"]
 
+#模块过滤
+import sys
+d = sys.modules.copy()
+import copy.string
+print (zip(set(sys.modules) - set(d)))	#zip对set集合进行解包
+```
 
  + 序列
 
+序列是具有`索引和切片能力的集合`,元组，列表，和字符串具有通过索引来访问某个具体的值，或通过切片返回一段切片的能力，因此,`元组，列表或字符串`都属于`序列`
+```python
+#序列索引
+tuple = ("apple","banna","grape","orange")
+list = ["apple","banna","grape","orange"]
+str = "apple"
+print (tuple(0))		#apple
+print (tuple(-1))		#orange
+print (list[0])			#apple
+print (list[-1])		#orange
+print (str[0])			#a
+print (str[-1])			#e
+
+#分片操作
+tuple = ("apple","banna","grape","orange")
+list = ["apple","banna","grape","orange"]
+str = "apple"
+print (tuple[:3])
+print (tuple[3:])
+print (tuple[1:-1])
+print (tuple[:])
+
+print (list[:3])
+print (list[3:])
+print (list[1:-1])
+print (list[:])
+
+print (str[:3])				#app
+print (str[3:])				#le
+print (str[1:-1])			#ppl
+print (str[:])				#apple
+
+分片seq[:3]表示从序列第一个元素到第三个元素的值，分片[:]表示整个序列
+```
+元组和列表都具有序列的特性，但是它们的区别也很明显。元组是`只读的一组数据`，而且元组`没有提供排序和查找的方法`，列表的数据可读写，而且提供了丰富的方法，支持排序，查找操作。`列表的数据通常具有相同的意义`。
+```
+				元组					列表
+支持负索引			yes					yes
+支持分片				yes					yes
+支持添加删除修改			no					yes
+支持排序查找			no					yes
+数据的含义		一组不同含义的数据				一组相同含义的数据组成
+```
+---
+
 ### 模块与函数
+
+Python的程序由包(package),模块(module)和函数组成。模块是处理某一类问题的集合，模块函数由函数和类组成。包是由一系列模块组成的集合。包就是一个`完成疼任务的工具箱`.
+
+包必须`至少包含一个__init__.py文件`，这个文件可以`为空`，它用于`标示`当前的文件夹是`一个包`
+
+一个Python文件就是一个模块,一个文件即是一个模块。模块是由代码，函数或类组成的。
+```python
+#自定义模块
+#myModule.py
+def func():
+	print ("myModule.func")
+
+class MyClass:
+	def myFunc(self):
+		print ("MyModule.MyClass.myFunc")
+
+#同一个目录下的call_module.py
+#调用自定义的模块
+import myModule			#导入模块
+
+myModule.func()
+myClass = myModule.MyClass()	#实例对象
+myClass.myFunc()				#调用方法
+
+```
+两个文件必须放到`同一个目录下`，或放在sys.path所列出的目录下，否则，Python解释器找不到`自定义的模块`
+
+当Python导入一个模块时，Python首先查找当前路径，然后查找lib目录，site-packages目录(Python/Lib/site-packages)和环境变量PYTHONPATH设置的目录。如果导入的模块没有找到，在以上路径搜索一下，是否含有这个模块，通过sys.path语句搜索模块的查找路径。
+```python
+#导入模块
+import ModuleNname
+from  ModuleNname import *			#导入所有
+```
+
+
+
+
+---
 
 ### 字符串与正则表达式
 
+---
+
+
+
 ### 文件处理
+
+---
 
 ### 面向对象编程
 
+
+---
+
+
 ### 异常处理与程序调试
+
+
+---
+
 
 ## **Python应用**
 
 ### Python和HTML
 
+---
+
+
 ### Python和XML
+
+---
+
 
 ### Python-Django
 
  + django
  + MVC
 
+---
+
 ### TDD
 
  + unittest
  + doctest
+
+---
 
 ### Python的进程和线程
 
@@ -572,6 +696,9 @@ _同步队里_
 	get_nowait:将任务出队，如果队列为空则抛出Empyt异常
 	task_done:指示上一个入队任务是否完成操作
 	join:等待队列中任务完成任务
+
+---
+
 
 ### Ipython
 
@@ -691,7 +818,7 @@ Twisted是一个面向对象，基于事件驱动的顶级通信框架，可以�
  + pysnmp
  + scapy
 
-### Python测试驱动开发
+---
 
 ### pdb
 
@@ -730,6 +857,10 @@ python中有个pdb模块，使python代码也可以像gdb那样进行调试，�
 
 参考[http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/](http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/)
 
+---
+
 ### ipdb
 
-ipdb是pdb的交互式debug
+ipdb是pdb的交互式debug,ipdb debug.py 直接对程序进行调试
+
+---
