@@ -46,3 +46,19 @@ git clone https://github.com/XX-net/XX-Net
 AppID:myappid-227
 
 web:http://127.0.0.1:8085/?module=gae_proxy&menu=status
+
+
+## shadowsock
+
+添加源
+
+	sudo add-apt-repository ppa:hzwhuang/ss-qt5
+	#install
+	sudo apt-get update
+	sudo apt-get install shadowsocks-qt5
+
+ok。
+
+免费账号：
+[free-one](http://freessr.top/)
+[free-two](http://freevpnss.cc/)
