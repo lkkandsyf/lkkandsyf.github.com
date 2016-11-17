@@ -4,11 +4,11 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-11-16T21:12:34+08:00</updated>
+ <updated>2016-11-17T08:30:34+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
-   <email>liangkangkang@yahoo.com</email>
+   <email>lkkforworld@gmail.com</email>
  </author>
 
  
@@ -1183,7 +1183,15 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;参数substring表示待查找的字符串，start表示开始索引的位置，end表示结束索引的位置，即在分片[start:end]中查找。如果找到字符串substring，则返回substring在&lt;code class=&quot;highlighter-rouge&quot;&gt;源字符串中第一次出现的索引&lt;/code&gt;，否则返回-1.&lt;/p&gt;
+&lt;p&gt;参数substring表示待查找的字符串，start表示开始索引的位置，end表示结束索引的位置，即在分片[start:end]中查找。如果找到字符串substring，则返回substring在&lt;code class=&quot;highlighter-rouge&quot;&gt;源字符串中第一次出现的索引&lt;/code&gt;，否则返回-1.rfind的参数和find是一样的。不同的是从 字符串的尾部开始查找子串。&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#查找字符串&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;this is a apple&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# 8		第一次出现的索引&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;this is a apple&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# 10	最后一次出现索引&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;repacle函数repale(old,new[,max]):old表示被替换的字符串，new：表示替换old的字符串，参数max表示使用new替换old的次数，返回一个新的字符串，如果字符串old不在源字符串中，则函数返回源字符串的值。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1685,23 +1693,72 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  
  <entry>
    <title>Spark</title>
-   <link href="http://lkkandsyf.github.io/2016/10/24/Spark"/>
+   <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
    <updated>2016-10-24T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/2016/10/24/Spark</id>
+   <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#jupyter-spark&quot; id=&quot;markdown-toc-jupyter-spark&quot;&gt;Jupyter-spark&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-command&quot; id=&quot;markdown-toc-spark-command&quot;&gt;Spark-command&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;jupyter-spark&quot;&gt;Jupyter-spark&lt;/h2&gt;
 
 &lt;p&gt;我们可以使用Apache提供的toree来使用。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://toree.incubator.apache.org/documentation/user/quick-start.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://toree.incubator.apache.org/documentation/user/quick-start.html&quot;&gt;https://toree.incubator.apache.org/documentation/user/quick-start.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;启动了jupyter，可直接在http://localhost:4040/jobs/来监控所有的作业。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;spark-command&quot;&gt;Spark-command&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;spark-shell&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Usage:spark-submit [options] &amp;lt;app jar&lt;/td&gt;
+      &lt;td&gt;python file&amp;gt; [app options]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;参数名称										含义
+
+--master MATER\_URL
+--deploy-mode DEPLOY\_MODE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;pyspark&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;spark-submit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
 </content>
  </entry>
  
@@ -1982,6 +2039,10 @@ sudo apt-get install shadowsocks-qt5
 &lt;/div&gt;
 
 &lt;p&gt;ok。&lt;/p&gt;
+
+&lt;p&gt;免费账号：
+&lt;a href=&quot;http://freessr.top/&quot;&gt;free-one&lt;/a&gt;
+&lt;a href=&quot;http://freevpnss.cc/&quot;&gt;free-two&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
