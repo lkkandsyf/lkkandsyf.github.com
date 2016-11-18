@@ -1128,26 +1128,649 @@ sen = "this is a apple"
 print (sen.rfind("a"))		# 10	最后一次出现索引
 ```
 repacle函数repale(old,new[,max]):old表示被替换的字符串，new：表示替换old的字符串，参数max表示使用new替换old的次数，返回一个新的字符串，如果字符串old不在源字符串中，则函数返回源字符串的值。
+```python
+#字符串的替换
+sen = "hello world,hello china"
+print (sen.replace("hello","hi"))		#全部替换
+print (sen.replace("hello","hi",1))		#第一个被替换
+print (sen.replace("abc","hi"))			#替换失败，返回源字符串
+```
+日期与字符串的转换
+
+Python中提供了time模块处理日期和时间，
+
+**时间到字符串**
+
+函数strftime()可以从时间到字符串的转换,strftime的声明
+
+
+	strftime(format[,tuple]) -> string
+
+参数format表示格式化日期的特殊字符，例如,"%Y-%m-%d",参数tuple表示需要转换的时间，用元组存储，元组中的元素分别表示年，月，日，时，分，秒。函数返回一个表示时间的字符串
+
+**字符串到时间**
+
+字符串到时间需要进行两次转换，需要使用time模块和datetime模块，转换的过程分为三个步骤
+
+ + 调用函数strptime()把字符串转换为一个元组，进行第一次转换。strptime()的声明如:strptime(string,format) -> struct\_time,参数string表示需要转换的字符串，参数format表示日期时间的输出格式。函数返回一个存放时间的元组。
+ + 把表示时间的元组赋给表示年，月，日的三个变量
+ + 把表示年，月，日的三个变量传递给函数datetime()，进行第二次转换，datetime类的datetime函数为datetime(year,month,day[[,hour[,minute]]]),参数year，month，day分别表示年，月，日，这三个参数不可少。函数返回一个datetime类型的变量
+
+```python
+import time ,datetime
+
+#时间到字符串的转换
+print (time.strftime("%Y-%m-%d %X",time.localtime()))
+
+#字符串到时间的转换
+t = time.strptime("2005-02-04","%Y-%m-%d")
+y,m,d = t[0:3]
+print (datetime.datetime(y,m,d))
+```
+格式化日期的特殊标记是`区分大小写的`
+
+
+**正则表达式**
+
+正则表达式的特殊字符
+
+ + ^	正则表达之的开始字符
+ + $	正则表达之的结束字符
+ + \w	匹配字母，数字，下划线
+ + \W	匹配不是字母，数字，下划线
+ + \s	匹配空白字符
+ + \S	匹配不是空白字符
+ + \d 	匹配数字
+ + \D	匹配非数字
+ + \b	匹配单词的开始和结束
+ + \B	匹配不是单词的开始和结束
+ + .	匹配任意字符，包括汉字
+ + [m]	匹配单个字符串
+ + [m1m2..n]	匹配多个字符串
+ + [m-n]	匹配m-n区间的数字，字母
+ + [^m]		匹配除m以外的字符串
+ + ()		对正则表达式进行分组，一对圆括号表示一组
+
+`note`其中，匹配符"[]"，可以指定一个匹配范围，例如"[ok]",将匹配包含"o"或"k"的字符。同时"[]",可以与\w,\s,\d等标记等价，如[0-9a-zA-Z] 等价\w [^0-9]等价\D
+
+^与[^m]两个是不同的，后者的"^"表示除了的意思
+
+正则表达式中的常用限定符
+
+ + * 匹配`零次或多次`
+ + + 匹配`一次或多次`
+ + ? 匹配`一次或零次`
+ + {m} 重复m次
+ + {m.n} 重复m到n次，其中n可以省略，表示m到`无限次`
+
+利用{}可以控制重复的次数，\d{1,4}表示1~3为数字，"("和")"是正则表达式中特殊的字符，如果把它们作为普通字符处理需要加上转义\
+
+
+`限定符与?的组合`
+
+ + *? 匹配零次或多次，且最短匹配
+ + +? 匹配一次或多次，且最短匹配
+ + ?? 匹配一次或零次，且最短匹配
+ + {m.n}? 重复m次，且最短匹配
+ + (?#...) 表达式中的注释
+ + (?P<name>) 给分组命令，name表示分组的名称
+ + (?P=name) 使用名为name的分组
+
+**re模块**
+
+```python
+
+In [1]: import re
+
+In [2]: s = "HELLO WORLD"
+
+In [3]: s
+Out[3]: 'HELLO WORLD'
+
+In [4]: print (re.findall(r"^hello",s))
+[]
+
+In [5]: print (re.findall(r"^hello",s,re.I))			#忽略大小写
+['HELLO']
+
+In [6]: print (re.findall("WORLD$",s,))
+['WORLD']
+
+In [7]: print (re.findall(r"World$",s,re.I))
+['WORLD']
+
+In [8]: print (re.findall(r"\b\w+\b",s))				#匹配英文单词
+['HELLO', 'WORLD']
+
+################################################
+
+In [1]: import re
+
+In [2]: s = "hello world"
+
+In [3]: print (re.sub("hello","hi",s))	#sub()先创建变量s的拷贝，然后在拷贝中替换字符串，并不会改变变量s的内容
+hi world
+
+In [4]: print (re.sub("hello","hi",s[-4:]))
+orld
+
+In [5]: print (re.sub("world","China",s[-5:]))
+China
+
+```
+与sub类似的就是subn功能相同，但是多返回一个值，即匹配后的替换次数
+```python
+import re
+
+########compile
+s = "1abc23def45"
+p = re.compile(r"\d+")
+print (p.findall(s))
+print (p.pattern)
+
+```
+
+正则表达的分组
+```python
+import re
+p = re.compile(r"(abc)\1")
+m = p.match("abcabcabc")
+print(m.group(0))
+print(m.group(1))
+print(m.group())
+
+
+p = re.compile(r"(?P<one>abc)(?P=one)")
+m = p.search("abcabcabc")
+
+print (m.group("one"))
+print (m.groupdict().keys())
+print (m.groupdict().values())
+print (m.re.pattern)
+```
 
 ---
 
-
-
 ### 文件处理
+
+**基本操作**
+
+文件通常用于存储数据或应用系统的参数。Python提供了os，os.path,shutil模块处理文件，其中包括打开文件，读写文件，复制和删除文件等函数
+
+**`文件的创建`**
+
+	open(file,mode='r',buffering=-1,encoding=None,error=None,newline=None,closefd=True,opener=None) -> file object
+
+参数file是被打开的文件名称，如果`文件不存在`，open将创建name文件，然后在打开该文件，参数mode是指文件打开的模式，文件的打开模式
+
+ + r	以只读的方式打开文件
+ + r+	以读写的方式打开
+ + w	以写入的方式打开文件，先删除文件的原有内容，在重新写入新的内容，如果文件不存在，就创建一个新的文件
+ + w+	以读写的方式打开文件，先删除文件的原有内容，在重新写入新的内容，如果文件不存在，就创建一个新的文件
+ + a	以写入的方式打开文件，在文件的末尾追加新的内容，如果文件不存在，则创建一个新的文件
+ + a+	以读写的方式打开文件，在文件的末尾追加新的内容，如果文件不存在，则创建一个新的文件
+ + b	以二进制的模式打开文件，可与r,w,a,+结合使用
+ + U	支持所有的换行符号，"\r","\n","\r\n"都表示换行
+
+参数buffering设置缓存模式，0表示不缓存，1表示行缓冲，如果大于1则表示缓冲区的大小，以字节为单位。open返回1个file对象，file对象可以对文件进行各种操作。
+
+文件的常用属性和方法
+
+closed		判断文件是否关闭，如果文件关闭，返回True
+
+encoding	显示文件的编码类型
+
+mode		显示文件的打开模式
+
+name		显示文件的名称
+
+newline		文件使用的换行模式
+
+file(name[,mode[,buffering])	以mode的方式打开文件，如果不存在就创建，再打开文件buffering表示缓存模式，0不缓存，1表示行缓存，大于1表示缓冲区的大小
+
+flush()		把缓冲区的内容写入磁盘
+
+close()		关闭文件
+
+read([size])	从文件中读取size个字符的内容，作为字符串返回
+
+readline([size])	从文件中读取一行，如果指定size，表示每行每次读取的字节数，依然`读完整行的内容`
+
+realines([size])	把文件中的每行存储在列表中返回，如果指定size，表示每次读取的字节数
+
+seek(offset[,whence])	把文件指针移动到一个新的位置，offset表示相对于whence的位置，whence：0表示文件开头，1文件当前位置，2表示文件末尾
+
+tell()		返回文件指针当前的位置
+
+next()		返回下一行的内容，将文件制作移动到下一行
+
+truncate([size])	删除size个字节的内容
+
+write(str)			把字符串写入到文件
+
+writelines(sequence\_of\_string)	把字符串序列写入到文件
+
+```python
+#create file
+context = ```hello world```
+
+f = open('hello.txt',w)	#open file
+f.write(context)		#write str
+f.close()				#close file
+```
+
+**`文件的读取`**
+
+文件的读取有多种方式，可以使用readline,readlines,read函数读取文件
+
+ + readline
+
+readline每次读取文件中的一行，需要使用永真表达式读取文件，当文件指针移动到文件的末尾，依然用readline读取文件将出现错误，因此需要添加yield判断语句，如果到末尾，就跳出loop
+
+```python
+f = open("hello.txt")
+while True:
+	line = f.readline()
+	if line:
+		print (line)
+	else:
+		break
+
+f.close()
+```
+
+ + 多行读取方式readlines
+
+使用readlines读取文件，一次性读取文件的多行数据
+
+```python
+f = file('hello.txt')
+lines = f.readlines()
+for line in lines:
+	print (line)
+
+f.close()
+```
+ + read
+
+一次性读取所有的内容，并赋值给一个变量
+```python
+f = open('hello.txt')
+context = f.read()
+print (context)
+f.close()
+
+#控制read的参数
+f = open('hello.txt')
+context = f.read(5)
+print (context)
+print (f.tell())
+context = f.read(5)
+print (context)
+print (f.tell())			#输出文件指针的位置
+f.close()
+```
+
+**`文件的写入`**
+
+文件的写入也有多种方法，可以使用write(),writelines()方法写入文件，write把字符串写入文件，writelines方法把列表中存储的内容写入文件
+
+```python
+#use writelines
+f = file("hello.txt","w+")
+li = ["helloworld \n","hello china"]
+f.writelines(li)
+f.close()
+
+#追加新的内容到文件
+f = fiel("hello.txt",a+)
+context = "goodbye"
+f.write(context)
+f.close()
+```
+如果要写入的字符串非常多，可以使用writelines(),提供效率，如果需要写入少量的字符串，直接使用write即可
+
+**`文件的删除`**
+
+文件的删除需要使用os模块和os.path模块
+
+os模块常用的函数
+
+ + access(path,mode)			按照mode指定的权限访问文件
+ + chmod(path,mode)				改变文件的访问权限，mode用UNIX系统中权限代号
+ + open(filename,flag[,mode=777]) 按照mode指定的权限打开文件，默认情况下，给所有的用户读写执行
+ + remove(path)					删除path的文件
+ + rename(old,new)				重命名文件或目录
+ + stat(path)					返回path指定文件的所有属性
+ + fstat()						返回打开文件的所有属性
+ + lseek()						设置文件的当前位置，返回当前位置的字节数
+ + startfile()					启动关联程序打开文件
+ + tmpfile ()					创建临时文件，文件创建在os的临时目录
+
+os.模块的open与内建函数open的用法`不一样`,文件的删除需要调用remove函数实现，要删除文件之前要先判断文件是否存在，如存在则删除文件，否则不进行任何操作。
+
+os.path模块常用的函数
+
+ + abspath(path)	返回path所在的绝对路径
+ + dirnaem(p)		返回目录的路径
+ + exists(path)		判断文件是否存储
+ + getatime(filename)	返回文件的最后访问时间
+ + getctime(filename)	返回文件的创建时间
+ + getmtime(filename)	返回文件的最后的修改时间
+ + getsize(filename)	返回文件的大小
+ + isab(s)				测试路径是否是绝对路径
+ + isdir(path)			判断path是否为目录
+ + isfile(path)			判断path是否为文件
+ + split(p)				对路径进行分割，以列表的形式返回
+ + splitext(p)			从路径中分割文件的扩展名
+ + splitdriver(p)		从路径中分割驱动器的名称
+ + walk(top,func,arg)	遍历目录数与os.walk的功能相同
+
+```python
+#文件删除
+file("hello.txt""w")
+if os.path.exists("hello.txt"):
+	os.remove("hello.txt")
+```
+
+**`文件的复制`**
+
+file类没有提供文件的直接复制方法，可以使用read,write方法，同样实现文件的复制功能
+
+```python
+#use read write to realise to cope file
+src = file("hello.txt","w")
+li = ["hello world\n","liangkangkang\n"]
+src.writelines(li)
+src.close()
+
+#start copy file
+src = open("hello.txt","w")
+dst = open("hello2.txt","w")
+dst.wrtie(src.read())		#一次复制所有内容
+src.close()
+dst.close()
+```
+使用shutil模块来实现文件的复制
+```python
+import shutil
+
+shutil.copyfile("hello.txt","hello2.txt")
+shutil.move("hello.txt","../")
+shutil.move("hello2.txt","hello3.txt")
+
+```
+
+**`文件的重命名`**
+
+os模块的rename函数实现文件或目录重命名
+```python
+#modify filename
+import os
+li = os.listdir(".")
+print (li)
+
+if "hello.txt" in li:
+	os.rename("hello.txt","hi.txt")
+elif "hi.txt" in li:
+	os.rename("hi.txt",hello.txt)
+
+#大量后缀的文件修改
+#把后缀为html的文件改为htm
+import os
+files = os.listdir(".")
+for filename  in files:
+	pos = filename.find(".")
+	if filename[pos + 1:] == "html":
+		newname = filenaem[:pos+1]+"htm"
+		os.rename(filename,newname)
+
+#下面也是一种方法
+import os
+files = os.listdir(".")
+for filename  in files:
+	li = os.path.splitext(filename)		#返回文件名和后缀名的列表
+	if li[1] == "html":
+		newname = li[0] + ".htm"
+		os.rename(filename,newname)
+```
+
+**`文件内容的搜索和替换`**
+
+```python
+#从文件hello.txt中找出字符串"hello",并统计"hello"出现的次数
+import re
+
+f1 = file("hello.txt",'r')
+count = 0
+
+for s in f1.readlines():
+	li = re.findall("hello",s)
+	if len(li) > 0:
+		count = count + li.count("hello")
+
+print ("the sum:" + str(count) + "hello")
+f1.close()
+
+#文件的替换
+f1 = file("hello.txt","r")
+f1 = file("hello2.txt","w")
+
+for s in f1.readlines():
+	f2.write(s.relplace("hello"),"hi")
+
+f1.close()
+f2.close()
+```
+
+
+**`文件的比较`**
+python提供了difflib模块
+```python
+import difflib
+
+f1 = file("hello.txt",'r')
+f2 = file("hi.txt",'w')
+src = f1.read()
+dst = f2.read()
+
+print (src)
+print (dst)
+
+s = difflib.SequenceMatcher(lambda x:x == "",src,dst)
+for tag ,i1,i2,j1,j2 in s.get_opcodes():
+	print ("%s src[%d;%d] = %s dst[%d:%d] = %d " %(tag,i1,i2,src[i1:i2],j1,j2,dst[j1:j2]))
+
+```
+配置文件模块configparser
+
+**目录操作**
+
+**`创建和删除目录`**
+
+os模块中提供常用的目录处理函数
+
+ + mkdir(path[,mode=0777])
+ + makedirs(name,mode=511)
+ + rmdir(path)
+ + removedir(path)
+ + listdir(path)
+ + getcwd()
+ + chdir(path)
+ + walk(top,topdown=True,onerror=None)
+
+目录的创建和删除可以使用mkdir,makedirs,rmdir,removedirs实现
+```python
+import os
+
+os.mkdir("hello")
+os.rmdir("hello")
+os.makedirs("hello/world")
+os.removedirs("hello/world")
+
+```
+如果需要一次性创建，删除多个目录，应使用makedirs,removedirs函数,mkdir和rmdir一次只能创建一个目录和删除一个目录
+
+
+**`目录的遍历`**
+
+目录的遍历有两种方式，递归函数，os.walk
+
+```python
+#递归遍历目录
+
+import os
+def VisitDir(path):
+	li = os.listdir(path)
+	for p in li:
+		pathname = os.path.join(path.p)
+		if not os.path.isfile(pathname)
+			VisitDir(pathname)
+		else:
+			print (pathname)
+
+if __name__ == "__main__":
+	path = "."
+	VisitDir(path)
+
+#os模块提供了同名的函数walk函数，os.walk可用于目录的遍历，功能类似于so.path模块的walk函数,os.walk不需要回调函数，更容易使用。
+#使用os.walk
+import os
+def VisitDir(path):
+	for root,dir,files,in os.walk(path):
+		for filepath in files:
+			print (os.path,join(root,filepath))
+
+if __name__ == "__main__"
+	path = "."
+	VisitDir(path)
+```
+
+**`文件和流`**
+
+sys模块提供了3种基本的流对象stdin,stdout,stderr.
+
+```python
+#stdin
+import sys
+sys.stdin = open("hello.txt","r")
+for line in sys.stdin.readlines():
+	print (line)
+
+#stdout
+import sys
+sys.stdout = opeon(r"hello.txt","a")
+print ("goodbye")
+sys.stdout.close()
+
+
+#stderr
+
+import sys,time
+sys.stderr = open("record.log","a")
+f = open(r"hello.txt","r")
+t =- time.strftime("%Y-%m-%d %X",time.localtime())
+context = f.read()
+if context:
+	sys.stderr.write(t+" "+context)
+else:
+	raise Exception,t+"raise excepion"
+
+```
+
+文件处理
+```python
+#文件属性浏览程序,通过给定的目录路径查看文件的名称，大小，创建时间，最后修改时间和最后访问时间。
+#实现分为3个步骤
+#1.通过遍历path指定的目录，获取每个子目录的路径
+#2.遍历子目录的所有的文件，并返回文件的属性列表
+#分解属性列表，对属性列表的值进行格式化输出
+
+def ShowFileProperties(path):
+	```显示文件 的属性，包含路径，大小，创建日期，最后修改日期，最后访问日期```
+	import time,os
+	for root,dirs,files,files in os.walk(path,True):
+		print ("pos:"+root)
+		for filename in files:
+			state = os.stat(os.path.join(root,filename))
+			info = "filename:"+filename+" "
+			info = info +"size:"+("%d"%state[-4]) + " "
+			t = time.strftime("%Y-%m-%d %X",time.localtime(state[-1]))
+			info = info +"create itme:" + t + ""
+			t = time.strftime("%Y-%m-%d %X",time.localtime(state[-2]))
+			info = info +"last modify:" + t + " "
+			t = time.strftime("%Y-%m-%d %X",time.localtime(state[-3]))
+			info = info +"last access:" + t + " "
+			print (info)
+
+if __name__ == "__main__":
+	path = "."
+	ShowFileProperties(path)
+
+```
 
 ---
 
 ### 面向对象编程
 
+面向对象概述
+
+ + 用例图
+ +
+ +
+ +
+ +
+ +
+ +
+ +
+
+**类和对象**
+
+**属性和方法**
+
+**内部类的使用**
+
+**继承**
+
+**运算符重载**
+
+**Python设计模式**
+
+**类和对象**
+
+
+**``**
+
+**``**
+
+**``**
+
+**``**
+
+**``**
 
 ---
 
 
 ### 异常处理与程序调试
 
+**异常处理**
+
+**`Python中异常`**
+
+**`try..except使用`**
+
+**`try..finally使用`**
+
+**`使用raise抛出异常`**
+
+**`自定义异常`**
+
+**`assert语句的使用`**
+
+**`异常信息`**
 
 ---
-
 
 ## **Python应用**
 

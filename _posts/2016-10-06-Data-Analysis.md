@@ -34,5 +34,6 @@ tags : [Big-data]
 
 ![image](http://lkkandsyf.github.com/pictures/big-data-structure.png)
 
+[blog](http://www.cnblogs.com/gnool/p/5645036.html)
 
 

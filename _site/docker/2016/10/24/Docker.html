@@ -58,10 +58,16 @@
 
 <ul id="markdown-toc">
   <li><a href="#docker-learn-note" id="markdown-toc-docker-learn-note">Docker learn note</a></li>
-  <li><a href="#section" id="markdown-toc-section">拉取和推送</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">制作镜像</a></li>
-  <li><a href="#section-2" id="markdown-toc-section-2">挂载本地目录</a></li>
-  <li><a href="#section-3" id="markdown-toc-section-3">导入和导出镜像</a></li>
+  <li><a href="#docker" id="markdown-toc-docker">安装Docker</a></li>
+  <li><a href="#section" id="markdown-toc-section">核心概念</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">拉取和推送</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">制作镜像</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">挂载本地目录</a></li>
+  <li><a href="#section-4" id="markdown-toc-section-4">导入和导出镜像</a></li>
+  <li><a href="#section-5" id="markdown-toc-section-5">数据卷</a></li>
+  <li><a href="#section-6" id="markdown-toc-section-6">网络配置</a></li>
+  <li><a href="#docker-cmd" id="markdown-toc-docker-cmd">Docker cmd</a></li>
+  <li><a href="#dockerfile" id="markdown-toc-dockerfile">Dockerfile</a></li>
   <li><a href="#problem" id="markdown-toc-problem">Problem</a></li>
 </ul>
 
@@ -77,13 +83,56 @@
 
 <hr />
 
-<h2 id="section">拉取和推送</h2>
+<h2 id="docker">安装Docker</h2>
+
+<p>Ubuntu:14.04中安装</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$sudo apt-get update
+$sudo apt-get install apt-transport-https ca-certificates
+$sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+$ echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
+$sudo apt-get update
+$sudo apt-get install docker-engine
+$sudo service docker start
+$sudo docker run hello-world
+</code></pre>
+</div>
+
+<p>卸载Docker</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$sudo apt-get purge docker-engine
+$sudo apt-get autoremove --purge docker-engine
+$rm -rf /var/lib/docker
+</code></pre>
+</div>
+
+<p>升级Docker</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$sudo apt-get update
+$sudo apt-get upgrade docker-engine
+</code></pre>
+</div>
+
+<p>官网<a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">https://docs.docker.com/engine/installation/linux/ubuntulinux/</a></p>
+
+<h2 id="section">核心概念</h2>
+
+<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
+
+<p>Docker有三大核心概念：镜像（Image）、容器（Container）、仓库（Repository）。</p>
+
+<h2 id="section-1">拉取和推送</h2>
 
 <ul>
   <li>拉取</li>
 </ul>
 
 <p>首先，我们通过docker search image-name来搜索需要的镜像。然后通过docker pull image-name 来拉取镜像。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker pull name[:TAG]
+sudo docker pull ubuntu:latest
+</code></pre>
+</div>
 
 <ul>
   <li>推送</li>
@@ -117,7 +166,7 @@
 
 <hr />
 
-<h2 id="section-1">制作镜像</h2>
+<h2 id="section-2">制作镜像</h2>
 
 <p>两种方式制作镜像</p>
 
@@ -159,11 +208,9 @@ touch Dockfile
 
 <p>开始构建新的对象。如果没有指定任何tag，Docker将会自动为镜像设置一个latest标签</p>
 
-<p><a href="">Dockfile-command</a></p>
-
 <hr />
 
-<h2 id="section-2">挂载本地目录</h2>
+<h2 id="section-3">挂载本地目录</h2>
 
 <p>docker可以把一个宿主机上的<code class="highlighter-rouge">目录</code>挂载到<code class="highlighter-rouge">镜像里</code></p>
 
@@ -205,7 +252,7 @@ touch Dockfile
 
 <hr />
 
-<h2 id="section-3">导入和导出镜像</h2>
+<h2 id="section-4">导入和导出镜像</h2>
 
 <p>可以使用docker save和docker load来存储镜像和载入镜像</p>
 
@@ -236,9 +283,429 @@ sudo docker load &lt; xxx.tar
 
 <p>注：导入加载进来觉得不合适可以使用 docker rm 容器ID 、 docker rmi 镜像ID 来删掉。</p>
 
-<p>移除所有的容器和镜像（大扫除）：</p>
+<p>移除所有的容器和镜像：</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a)
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="section-5">数据卷</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -it --volumes-from dataVol ubuntu14.04 /bin/bash
+</code></pre>
+</div>
+
+<h2 id="section-6">网络配置</h2>
+
+<p><strong>端口映射</strong></p>
+
+<p>从外部访问容器应用，可以通过-p/-P参数来指定端口映射。使用-P时，Docker会随机映射一个端口到容器内部开放的端口。-p会映射到指定的端口，支持的格式有</p>
+
+<ul>
+  <li>ip地址:主机端口:容器端口</li>
+  <li>ip地址::容器端口</li>
+  <li>主机端口:容器端口</li>
+</ul>
+
+<p>查看映射端口配置</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo  port containerid  port
+</code></pre>
+</div>
+
+<p>容器有自己内部往来和IP地址</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker inspect containerid
+</code></pre>
+</div>
+
+<p>exam:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker run -it -p 127.0.0.1:4001:4000 jekyll/jekyll /bin/bash
+jekyll build
+jekyll serve
+</code></pre>
+</div>
+
+<p>然后通过外部浏览器来访问localhost:4001</p>
+
+<p><strong>容器互联</strong></p>
+
+<p>容器的连接系统是除了端口映射另外一种可以与容器中应用进行交互的方式，它会在源和接受容器之间创建一个隧道，接受容器可以看到源容器的指定的信息</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker run -d -p --name blog jekyll/jekyll
+</code></pre>
+</div>
+
+<p>容器的名字<code class="highlighter-rouge">必须是唯一的</code>，执行docker run 时，如果加上–rm参数，容器在终止的时候会立即被删除，但是不能与-d参数一起使用。</p>
+
+<p>使用–link参数可以让容器直接建立安全的连接进行交互。</p>
+
+<p>首先创建一个数据库的容器</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo dcoker run -d --name db training/postgres
+</code></pre>
+</div>
+
+<p>创建web容器</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker run -d -p --name web --link db:db training/webapp python app.py
+</code></pre>
+</div>
+
+<p>此时db容器和web容器相互联系。–link参数:–link name:alias,name是要连接的容器，alias是这个容器的别名，可以使用docker ps查看容器的信息，其中name列就能看出互联的状态</p>
+
+<p>docker在两个<code class="highlighter-rouge">互联</code>容器直接建立一个<code class="highlighter-rouge">安全隧道</code>，不需要把它们的端口<code class="highlighter-rouge">映射到宿主主机上</code>，也可以避免端口的暴露。</p>
+
+<p>Docker提供两种方式公开连接信息</p>
+
+<ul>
+  <li>环境变量</li>
+  <li>更新/etc/hosts文件</li>
+</ul>
+
+<p>使用env命令可以看到容器的环境变量</p>
+
+<hr />
+
+<h2 id="docker-cmd">Docker cmd</h2>
+
+<p><a href="https://docs.docker.com/engine/reference/commandline/">Dockfile-command</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker login
+docker logout
+docker diff
+docker build
+docker commit
+docker create
+docker cp
+docker events
+docker export
+docker info
+docker kill
+docker pull
+docker run
+docker image
+docker tag
+docker inspect
+docker search
+docker rmi
+docker commit
+docker save
+docker load
+docker push
+docker logs
+docker ps
+docker restart
+docker attach
+docker exec
+docker top
+docker stop
+docker start
+docker port
+docker pause
+docker history
+docker version
+docker wait
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="dockerfile">Dockerfile</h2>
+
+<p>我们可以是Dockfile文件<code class="highlighter-rouge">快速创建自定义的镜像</code>,一般分为<code class="highlighter-rouge">4个部分</code></p>
+
+<ul>
+  <li>基础镜像信息</li>
+  <li>维护者信息</li>
+  <li>镜像操作指令</li>
+  <li>容器启动时的执行命令</li>
+</ul>
+
+<p><strong>指令</strong></p>
+
+<p>指令的一半格式是INSTRUCTION arguments</p>
+
+<p><strong>FROM</strong></p>
+
+<p>格式为:FROM <image> or FROM <image>:<tag>
+Dockerfile文件第一行必须为FROM指令，如果在同一个Dockerfile创建多个镜像时，可以使用多个FROM指令(每个镜像一次)</tag></image></image></p>
+
+<p><strong>MAINTAINER</strong></p>
+
+<p>指定维护者信息,格式为：MAINTAINER <name></name></p>
+
+<p><strong>RUN</strong></p>
+
+<p>格式为RUN <command />或者RUN[“executable”,”param1”,”param2”],前者将在shell终端运行命令，即/bin/sh -c,后者在使用exec执行。第二种方式可以指定<code class="highlighter-rouge">其他终端实现</code>，如:RUN [“/bin/bash”,”-c”,”echo hello”],RUN命令将在当前镜像基础上执行执行命令,并提交为新的镜像，当命令较长时，可以使用\来换行。</p>
+
+<p><strong>CMD</strong></p>
+
+<p>指定启动容器时执行的命令，每个Dockerfile<code class="highlighter-rouge">只能有一条CMD命令</code>，如果指定了多个命令，只有<code class="highlighter-rouge">最后一条命令执行</code>,该命令支持三种格式：</p>
+
+<ul>
+  <li>CMD [“executable”,”param1”,”param2”]:使用exec执行</li>
+  <li>CMD command param1 param2:在/bin/bash中执行，提供给需要交互的应用</li>
+  <li>CMD [“param1”,”param2”]:提供给ENTRYPOINT默认参数</li>
+</ul>
+
+<p>如果在其中容器中指定了运行的命令，就会覆盖掉CMD命令</p>
+
+<p><strong>EXPOSE</strong></p>
+
+<p>告诉Docker服务器容器需要暴露的端口号，<code class="highlighter-rouge">供互联系统使用</code></p>
+
+<p>格式:EXPOSE <port> [<port>...]</port></port></p>
+
+<p>在容器启动时，需要通过-P让Docker主机自动分配一个端口转发到指定的端口，使用-p则可以具体指定哪个本地端口会映射过来。</p>
+
+<p><strong>ENV</strong></p>
+
+<p>指定环境变量，会被后面RUN指令使用，并在容器运行时保持</p>
+
+<p>格式:ENV <key> <value></value></key></p>
+
+<p><strong>ADD</strong></p>
+
+<p>该命令向容器中复制文件</p>
+
+<p>格式:ADD <src> <dst>
+指定的src会被复制到dst，src可以是Dockerfile所在目录的一个`相对路径(文件或者目录)，也可以是一个URL，还可以是一个tar包，--会自动解包为一个目录`</dst></src></p>
+
+<p><strong>COPY</strong></p>
+
+<p>格式:COPY <src> <dst></dst></src></p>
+
+<p>复制主机的<src>(Dockerfile所在的目录的相对路径，文件或目录)为容器<dst>,目标路径不存在时会自动创建。</dst></src></p>
+
+<p><strong>ENTRYPOINT</strong></p>
+
+<p>配置容器启动后执行的命令，并且不尅被docker run命令提供过的参数覆盖</p>
+
+<p>格式:</p>
+
+<ul>
+  <li>ENTRYPOINT [“executable”,”param1”,”param2”]</li>
+  <li>ENTRYPOINT command param1 param2:shell中执行</li>
+</ul>
+
+<p>同样的，每个Dockerfile中<code class="highlighter-rouge">只能有一个该指令，指定多个时，只有最后一个生效</code></p>
+
+<p><strong>VOLUME</strong></p>
+
+<p>创建一个可以从本地主机或其他容器挂载的挂载点，一般是<code class="highlighter-rouge">用来存放数据库和需要保持的数据等</code>。</p>
+
+<p><strong>USER</strong></p>
+
+<p>指定运行容器时用户名或UID，后续的RUN也会指定为该用户</p>
+
+<p>格式: USER daemon</p>
+
+<p><strong>WORKDIR</strong></p>
+
+<p>为后续的RUN，CMD，ENTRYPOINT执行配置工作路径</p>
+
+<p>格式:WORKDIR /path/to/workdir</p>
+
+<p>可以使用多个该指令，后续指令如果是相对路径，则会<code class="highlighter-rouge">基于之前的命令执行路径</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>workdir /A
+workdir B
+RUN X
+</code></pre>
+</div>
+
+<p>则最终的路径为:/A/B.</p>
+
+<p><strong>ONBUILD</strong></p>
+
+<p>配置当前所创建的镜像作为其他新创建镜像的基础镜像，所执行的操作指令。</p>
+
+<p>格式:ONBUILD [INSTRUCTION]</p>
+
+<p>比如:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ONBUILD ADD . /app/src
+ONBUILD RUN /usr/local --dir /app/src
+....
+</code></pre>
+</div>
+
+<p>如果基于以上继续创建新镜像时，新的Dockerfile中使用的FROM指定以上为基础镜像，会自动执行ONBUILD指令内容，等价后面添加两条指令。</p>
+
+<p><strong>LABLE</strong></p>
+
+<p><strong>STOPSIGNAL</strong></p>
+
+<p><strong>ONBUILD</strong></p>
+
+<p><strong>创建镜像</strong></p>
+
+<p>编写好Dockerfile，可以通过docker build来创建镜像</p>
+
+<p>基本格式:docker buidl 选项 路径</p>
+
+<p>该命令会自动读取指定路径(包含子目录)的Dockerfile，并将路径下的所有内容发送到docker服务器，创建镜像</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo docker build -t image_name /src/dockerfile_path
+</code></pre>
+</div>
+
+<p><strong>Dockerfile</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Dockerfile for ELK stack
+# Elasticsearch 5.0.0, Logstash 5.0.0, Kibana 5.0.0
+
+# Build with:
+# docker build -t &lt;repo-user&gt;/elk .
+
+# Run with:
+# docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk &lt;repo-user&gt;/elk
+
+FROM phusion/baseimage
+MAINTAINER Sebastien Pujadas http://pujadas.net
+ENV REFRESHED_AT 2016-10-30
+
+###############################################################################
+#                                INSTALLATION
+###############################################################################
+
+### install prerequisites (cURL, gosu)
+
+ENV GOSU_VERSION 1.8
+
+RUN set -x \
+ &amp;&amp; apt-get update -qq \
+ &amp;&amp; apt-get install -qqy --no-install-recommends ca-certificates curl \
+ &amp;&amp; rm -rf /var/lib/apt/lists/* \
+ &amp;&amp; curl -L -o /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)" \
+ &amp;&amp; curl -L -o /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc" \
+ &amp;&amp; export GNUPGHOME="$(mktemp -d)" \
+ &amp;&amp; gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
+ &amp;&amp; gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
+ &amp;&amp; rm -r "$GNUPGHOME" /usr/local/bin/gosu.asc \
+ &amp;&amp; chmod +x /usr/local/bin/gosu \
+ &amp;&amp; gosu nobody true \
+ &amp;&amp; apt-get clean \
+ &amp;&amp; set +x
+
+
+### install Elasticsearch
+
+ENV ES_VERSION 5.0.0
+ENV ES_GID 991
+ENV ES_UID 991
+
+RUN curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+RUN apt-get install apt-transport-https
+RUN echo deb https://artifacts.elastic.co/packages/5.x/apt stable main &gt; /etc/apt/sources.list.d/elasticsearch-5.x.list
+
+RUN groupadd -r elasticsearch -g ${ES_GID} \
+ &amp;&amp; useradd -r -s /usr/sbin/nologin -M -c "Elasticsearch service user" -u ${ES_UID} -g elasticsearch elasticsearch \
+ &amp;&amp; apt-get update -qq \
+ &amp;&amp; apt-get install -qqy \
+		elasticsearch \
+		openjdk-8-jdk \
+ &amp;&amp; apt-get clean
+
+
+### install Logstash
+
+ENV LOGSTASH_VERSION 5.0.0
+ENV LOGSTASH_HOME /opt/logstash
+ENV LOGSTASH_PACKAGE logstash-${LOGSTASH_VERSION}.tar.gz
+ENV LOGSTASH_GID 992
+ENV LOGSTASH_UID 992
+
+RUN mkdir ${LOGSTASH_HOME} \
+ &amp;&amp; curl -O https://artifacts.elastic.co/downloads/logstash/${LOGSTASH_PACKAGE} \
+ &amp;&amp; tar xzf ${LOGSTASH_PACKAGE} -C ${LOGSTASH_HOME} --strip-components=1 \
+ &amp;&amp; rm -f ${LOGSTASH_PACKAGE} \
+ &amp;&amp; groupadd -r logstash -g ${LOGSTASH_GID} \
+ &amp;&amp; useradd -r -s /usr/sbin/nologin -d ${LOGSTASH_HOME} -c "Logstash service user" -u ${LOGSTASH_UID} -g logstash logstash \
+ &amp;&amp; mkdir -p /var/log/logstash /etc/logstash/conf.d \
+ &amp;&amp; chown -R logstash:logstash ${LOGSTASH_HOME} /var/log/logstash
+
+ADD ./logstash-init /etc/init.d/logstash
+RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
+ &amp;&amp; chmod +x /etc/init.d/logstash
+
+
+### install Kibana
+
+ENV KIBANA_VERSION 5.0.0
+ENV KIBANA_HOME /opt/kibana
+ENV KIBANA_PACKAGE kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz
+ENV KIBANA_GID 993
+ENV KIBANA_UID 993
+
+RUN mkdir ${KIBANA_HOME} \
+ &amp;&amp; curl -O https://artifacts.elastic.co/downloads/kibana/${KIBANA_PACKAGE} \
+ &amp;&amp; tar xzf ${KIBANA_PACKAGE} -C ${KIBANA_HOME} --strip-components=1 \
+ &amp;&amp; rm -f ${KIBANA_PACKAGE} \
+ &amp;&amp; groupadd -r kibana -g ${KIBANA_GID} \
+ &amp;&amp; useradd -r -s /usr/sbin/nologin -d ${KIBANA_HOME} -c "Kibana service user" -u ${KIBANA_UID} -g kibana kibana \
+ &amp;&amp; mkdir -p /var/log/kibana \
+ &amp;&amp; chown -R kibana:kibana ${KIBANA_HOME} /var/log/kibana
+
+ADD ./kibana-init /etc/init.d/kibana
+ADD ./kibana.yml ${KIBANA_HOME}/config/kibana.yml
+
+RUN sed -i -e 's#^KIBANA_HOME=$#KIBANA_HOME='$KIBANA_HOME'#' /etc/init.d/kibana \
+ &amp;&amp; chmod +x /etc/init.d/kibana
+
+
+###############################################################################
+#                               CONFIGURATION
+###############################################################################
+
+### configure Elasticsearch
+
+ADD ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+
+
+### configure Logstash
+
+# certs/keys for Beats and Lumberjack input
+RUN mkdir -p /etc/pki/tls/certs &amp;&amp; mkdir /etc/pki/tls/private
+ADD ./logstash-beats.crt /etc/pki/tls/certs/logstash-beats.crt
+ADD ./logstash-beats.key /etc/pki/tls/private/logstash-beats.key
+
+# filters
+ADD ./02-beats-input.conf /etc/logstash/conf.d/02-beats-input.conf
+ADD ./10-syslog.conf /etc/logstash/conf.d/10-syslog.conf
+ADD ./11-nginx.conf /etc/logstash/conf.d/11-nginx.conf
+ADD ./30-output.conf /etc/logstash/conf.d/30-output.conf
+
+# patterns
+ADD ./nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
+RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
+
+
+### configure logrotate
+
+ADD ./elasticsearch-logrotate /etc/logrotate.d/elasticsearch
+ADD ./logstash-logrotate /etc/logrotate.d/logstash
+ADD ./kibana-logrotate /etc/logrotate.d/kibana
+RUN chmod 644 /etc/logrotate.d/elasticsearch \
+ &amp;&amp; chmod 644 /etc/logrotate.d/logstash \
+ &amp;&amp; chmod 644 /etc/logrotate.d/kibana
+
+
+###############################################################################
+#                                   START
+###############################################################################
+
+ADD ./start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+EXPOSE 5601 9200 9300 5044
+VOLUME /var/lib/elasticsearch
+
+CMD [ "/usr/local/bin/start.sh" ]
 </code></pre>
 </div>
 
