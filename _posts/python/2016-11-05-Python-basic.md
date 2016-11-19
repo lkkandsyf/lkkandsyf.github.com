@@ -1713,46 +1713,738 @@ if __name__ == "__main__":
 
 ### 面向对象编程
 
-面向对象概述
+**面向对象概述**
 
  + 用例图
- +
- +
- +
- +
- +
- +
- +
+
+用例图描述`系统使用者与系统之间的交互关系`。用例图通常用在`系统的分析阶段`，分析系统中的`主要流程`。用例图用于描述`不同的业务实体，以及实体之间的关系`
+
+ + 活动图
+
+`活动图是对用例图的补充`,用与分析复杂的`用例`，表示用例中的`逻辑行为`，活动图类似于传统的`数据流程图`，可以描述业务的流程，帮助分析人员确定`用例中的交互及其关系`
+
+ + 状态图
+
+状态图用于`对系统的行为进行建模`，用于分析和设计阶段之间的过渡时期。状态图和活动图有些类似，状态图是对单个对象的描述，强调对象内部状态的变迁过程。
+
+ + 类图
+
+类图包括`属性，操作以及访问权限等内容。`类图用于系统设计阶段，根据系统用力提炼出系统中的对象。类图是面向对象设计的核心，通过类图`可以直接表示抽象，继承，多态等面向对象的特性`，能够表现系统架构设计及系统中`对象之间的层次关系`
+
+ + 序列图和协助图
+
+序列图和协助图都可以用于描述系统中对象之间的行为，是对系统具体行为的设计。序列图和协助图通常用于类图设计完成后的最后一个步骤。序列图是对用力的具体体现，通过消息的方式描述系统中对象的生命周期和控制流程，而协助图侧重与对消息的建模，描述`系统对象之间的交互关系`
+
+ + 组件图和部署图
+
+组件图用于描述`系统组件之间的交互，类和组件的依赖关系`，部署图用于描述系统的部署以及组件之间的配置。
+
+这些图都可以使用UML来制作。
 
 **类和对象**
+
+类和对象是面向对象中的两个重要的概念。类是抽象，对象是实例。
+
+Python使用class关键字定义一个类，类名的`首字符一般要写`
+```python
+#继承object
+class Class_name(object):
+	....
+
+#不显示继承
+class Class_name:
+
+
+#demo
+#类的创建
+class Fruit:
+	def __init__(self):
+		self.name = name
+		self.color = color
+	def grow(self):
+		print ("Fruit grow....")
+```
+类的方法必须有个self参数，但是在方法调用时，可以不传递这个参数。
+
+```python
+#对象创建
+
+if __name__ == "__main__ :
+	fruit = Fruit()
+	furit.grow()
+```
 
 **属性和方法**
 
-**内部类的使用**
+类由`属性和方法组成`,类的属性是对数据的封装，而类的方法则表示对象具有的行为，类通常有函数(实例方法)和变量(类变量)组成，Python的构造函数，析构函数，私有属性或方法都通过名称约定区分的。
+
+Python使用`约定属性的名称来达到数据封装的目的`，如果属性的名字以两个下划线开始，就`表示为私有属性`，反之，没有使用下划线开始的都表示为共有属性，Python中没有保护类型的修饰符。
+
+Python中的属性`分为实例属性和静态属性`。实例属性是一个self作为前缀的属性，\_\_ini\_\_方法即Python类的构造函数,静态变量可以被类直接调用，而不被实例化对象调用。当创建新的实例化对象后，静态变量并不会获得新的的内存空间，而是使用类创建的内存空间。因此，`静态变量`能够被多个实例化的对象`共享`,在Python中静态变量称为`类变量`，类变量可以在该类的所有`实例中`被共享。
+```pyhon
+class Fruit:
+	price = 0					#类属性
+
+	def __init__(self):
+		self.color = "red"		#实例属性
+		zone = "china"			#局部变量
+
+if __name__ == "__main__":
+	print(Fruit.price)
+	apple = Fruit()
+	print (apple.color)
+	Fruit.price = Fruit.price + 10
+	print ("apple's price :" +str(apple.price))
+	banana = Fruit()
+	print ("banaan's price :" + str(banana.price))
+```
+Python的类和对象都可以访问i`类属性`，而Java中的静态变量只能被类调用。
+
+Python对类的属性和方法的定义次序并没有要求，合理的方式是把类属性定义在类中`最前面，然后在定义私有方法，最后定义共有方法`
+
+**`内置属性`**
+```python
+class Fruit:
+	def __init__(self):
+		self.__color = "red"
+
+class Apple(Fruit):
+	"""this is doc"""
+	pass
+
+if __name__ == "__main__":
+	fruit = Fruit()
+	apple = Aplle()
+	print (Apple.__bases__)		#输出基类的组成的元组
+	print (apple.__dict__)		#输出属性组成的字典
+	print (apple.__module__)	#输出类所在的模块名
+	print (apple.__doc__)		#输出doc文档
+
+```
+
+**`方法`**
+
+类的方法分为共有方法和私有方法。私有方法不能被模块外的类或方法调用，私有方法也不能被外部的类或函数调用。Python使用函数staticmethod()或者@staticmethod修饰器把普通的函数转换为`静态方法`，Python的中静态方法并没有和类的实例进行名称绑定，要调用只需要使用类名组委的它的前缀即可。
+```python
+class Fruit:
+	price = 0								#类变量
+	def __init__(self):
+		self.__color = "red"				#定义私有变量
+
+	def getColor(self):
+		print(self.__color)					#打印私有变量
+
+	@ staticmethod							#使用@staticmethod修饰器静态方法
+	def getPrice():
+		print (Fruit.price)
+
+	def __getPrice():						#定义私有函数
+		Fruit.price = Fruit.price + 10
+		print (Fruit.price)
+
+	count = staticmethod(__getPrice)		#使用staticmethod方法定义静态方法
+
+if __name == "__main__":
+	apple = Fruit()							#实例化apple
+	apple.getColor()						#使用实例调用静态方法
+	Fruit.count()							#使用类名调用静态方法
+	banana = Fruit()
+	Fruit.count()							#静态方法再次调用
+	Fruit.getPrice()
+```
+类的外部不能`直接访问私有方法`
+
+上面的代码的getColor方法中有1个参数self参数，该参数是`区别方法和函数的标志`。类的方法`至少需要一个参数`，该方法不必给该参数赋值。通常这个特殊的参数被命令为self，self参数表示指向`实例对象本身`，self参数是`用于区分函数和类的方法`,self必须显示调用，因为Python是动态语言，没有提供声明变量的方式，这样就无法知道在方法中要赋值的变量是不是局部变量或是需要保存成实例属性。
+
+Python中还有一个种方法称为类方法。类方法是将本身作为操作对象的方法。类方法可以使函数classmethod或@classmethod修饰器定义。而与实例方法不同的是，把类方法作为第一个参数(cls)传递。把上面的静态方法，修改为类方法
+```python
+	@ cclassmethod
+	def getPrice(cls):
+		print(cls.price)
+
+
+	def __getPrice(cls):
+		cls.price = cls.price + 10
+		print (cls.price)
+
+	count = classmethod(__getPrice)
+```
+可见类方法和静态方法是十分相似的，`如果某个方法需要被其他实例共享，同事又需要使用当前实例的属性，则定义为类方法`
+
+self参数的名称可以是`任意合法的变量名`，建议使用self作为参数名，便于程序的阅读和统一，对于类方法，约定使用cls作为参数名。
+
+**`内部类的使用`**
+
+在某个类的内部定义的类成为`内部类`，内部类中的方法可以使用两种方法调用
+
+第`一`种方法是`直接使用外部类调用内部类`，生成`内部类的实例`，再调用内部类的方法
+```python
+object_name = outcloass_name.inclass_name()
+object_name.method()
+```
+其中outclass\_name表示外部类的名称，inclass\_name表示内部类的名称，object\_name表示内部类的实例。
+
+第`二`种方法先对外部类进行实例化，然后对实例化内部类，最后调用内部类的方法。
+```python
+out_name = outclass_name()
+in_name = out_name.inclass_name()
+in_name.method()
+```
+其中out\_name表示外部类的实例，in\_name表示内部类的实例
+```python
+class Car:
+	class Door:					#内部类
+		def open(self):
+			print ("open door")
+	class Wheel:				#内部类
+		def run(self):
+			print ("car run")
+
+
+if __name__ == "__main__":
+	car = Car()					#实例化car
+	backDoor = Car.Door()		#内部类的实例化方法1类名
+	fontDoor = car.Door()		#内部类的实例化方法2对象名
+	backDoor.open()
+	fontDoor.open()
+	wheel = Car.Wheel()
+	wheel.run()
+```
+内部类并不适合藐视类之间的组合关系，而把Door,Wheel类的对象作为类的属性使用。内部类容易造成`程序结构的复杂`，不提倡使用
+
+**`__init__方法`**
+
+构造函数用于初始化类的内部状态,Python的构造函数为\_\_init\_\_.除了用于定义实例变量外，还用于程序的初始化。\_\_init\_\_是`可选的`，如果不提供\_\_init\_\_方法，Python将会给出一个默认的\_\_init\_\_方法。
+```python
+class Fruit:
+	def __init__(self,color):
+		self.__color = color
+		print (self.__color)
+
+	def getColor(self):
+		print (self.__color)
+
+	def setColor(self.color):
+		self.__color = color
+		print (self.__color)
+
+
+if __name__ == "__main__":
+	color = "red"
+	Fruit = Fruit(color)
+	fruit.getColor()
+	fruit.setColor("blue")
+```
+\_\_init\_\_方法和传统的开发语言一样不能`返回任何值`
+
+
+**`__del__方法`**
+
+析构函数用于释放对象占用的资源，Python提供了析构函数\_\_del\_\_(),析构函数可以释放对象的资源，是另一种释放资源的方法，析构函数是可选的，如果不提供，Python会在后台提供默认的析构函数
+```python
+
+class Fruit:
+	def __init__(self):
+		self.color = color
+
+	def __del__(self):
+		self.__color = ""
+
+	def grow(self):
+		print ("Fruit grow....")
+
+
+if __name__ == "__main__ :
+	color = "red"
+	fruit = Fruit(color)
+	furit.grow()
+#使用Python编写程序，可以不考虑后台的内存管理，直接面对 程序编程
+```
+
+**`垃圾回收机制`**
+
+Python提供了gc模块，如果要设置调用垃圾回收器，可以使用gc模块函数实现
+
+
+**`类的内置方法`**
+
+常用的内置方法
+```python
+__init__(self)				#初始化对象，在创建新对象时调用
+__del__(self)				#释放对象，在对象释放被删除之前调用
+__new__(cls,*args,**kwd)	#实例的生成操作
+__str__(self)				#在使用print语句被调用
+__getitem(self,key)			#获取序列的索引key对应的值，等价与seq[key]
+__len__(self)				#在调用内联函数len()被调用
+__cmp__(src,dst)			#比较两个对象src和dst
+__getattr(s,name)			#获取属性的值
+__setattr(s,name,val)		#设置属性的值
+__delattr(s,name)			#删除name的属性
+__call__(self,*args)		#把实例对象作为函数调用
+__gt__(self,other)			#判断self对象是否大于other对象
+__lt__(self,other)			#判断self对象是否小于other对象
+__ge__(self,other)			#判断self对象是否大于或等于other对象
+__le__(self,other)			#判断self对象是否小于或等于other对象
+__eq__(self,other)			#判断self对象是否等于other对象
+
+```
+ + \_\_new\_\_()
+
+\_\_new\_\_()在\_\_init\_\_()之前被调用，用于创建实例对象。利用这个方法和类的属性的特性可以实现设计模式中`单例模式`，单例模式是创建`唯一对象`，单例模式设计的类`只实例化一个对象`
+```python
+class Singleton(object):			#定义实例
+	__instance = None
+
+	def __init__(self):
+		pass
+
+	def __new__(cls,*args,**kwd):		#在__init__之前调用
+		if Singleton.__instance is None:		#生成唯一实例
+				Singleton.__instance = object.__new__(cls,*args,**kwd)
+		return Singleton.__instance
+
+```
+ + \_\_getitem\_\_()
+
+如果类中把某个属性定义为`序列`，就可以该方法输出序列中的各个元素。
+```python
+class FruitShop():
+	def __getitem__(self):
+		return self.fruit[i]
+
+if __name__ == "__main__ :
+	shop = FruitShop()
+	shop.fruits = ["apple","banana"]		#给fruit赋值
+	print (shop[1])
+	for item in shop:						#输出水果
+		print (item,end="")
+
+```
+
+ + \_\_str\_\_()
+
+它表示对象代表的意义，返回一个字符串，实现了该方法后，就可以直接用print方法输出结果,也可以通过str()来出发\_\_str\_\_()的执行。这就把`对象和字符串关联起来`，便于某些程序的实现，可是用这个字符串表示某个类
+
+```python
+class Fruit:
+	```Fruit class```
+	def __str__(self):			#定义对象的字符串表示
+		return self.__doc__		#doc
+
+if __name__ == "__main__ :
+	fruit = Fruit()
+	print (str(fruit))			#调用__str__
+	print (fruit)
+```
+
+ + \_\_call\_\_()
+
+使用该方法可以`模拟静态方法`
+```python
+class Fruit:
+	class Growth:			#内部类
+		def __call__(self):
+			print ("grow....")
+
+
+	grow = Growth()			#返回__call__的内容
+
+if __name__ == "__main__ :
+	fruit = Fruit()
+	fruit.grow()			#使用实例调用
+	Fruit.grow()			#使用类名调用
+
+```
+
+**`方法的动态特性`**
+
+Python作为动态语言，编写的程序具有很强的动态性，可以`动态的添加类的方法`，把某个定义的函数添加到类中
+
+	class_name.method_name = function_name
+
+```python
+class Fruit:
+	pass
+
+def add(self):					#定义在类外部的函数
+	print ("grow...")
+
+if __name__ == "__main__ :
+	Fruit.grow = add			#动态添加add函数
+	fruit = Fruit()
+	fruit.grow()
+```
+利用动态特性，可以对已经定义的方法，进行修改
+
+	class_name.method_name = function_name
+
+```python
+
+class Fruit:
+	pass
+
+def update(self):					#定义在类外部的函数
+	print ("grow...")
+
+if __name__ == "__main__ :
+	fruit = Fruit()
+	fruit.grow()
+	fruit.grow = update				#将grow方法更新为update方法
+	fruit.grow()
+
+```
 
 **继承**
 
+继承是面向对象的重要特性之一。通过继承可以创建新类，目的是使用或修改现有的类的行为。原始的类被成为父类或超类，新类称为子类或派生类。继承可以实现代码的重用.类之间存在`继承，组合，依赖等关系`，可以使用ＵＭＬ工具表示类之间的关系。
+
+```python
+class Fruit:
+	def __init__(self,color):
+		self.color = color
+		print ("fruit's color :%s"%self.color)
+
+	def grow(self):
+		print ("grow...")
+
+class Apple(Fruit):
+	def __init__(self,color):
+		Fruit.__init__(self.color)
+		print ("apple's color ;%s"%self.color)
+
+class Banana(Fruit):
+	def __init__(self,color):			#调用父类的构造函数
+		Fruit.__init__(self.color)
+		print ("banana's color ;%s"%self.color)
+
+	def grow(self):
+		print ("banana grow...")
+
+if __name__ == "__main__ :
+	apple =  Apple("red")
+	apple.grow()
+	banana = Banana("yellow")
+	banana.grow()
+```
+还可以使用super类的super()调用父来的构造函数。
+
+	super(type,obj)
+
+type是某个类，obj是type类实例化的对象，super可以绑定type类的对象。
+```python
+#使用super调用父类
+class Fruit:
+	def __init__(self):
+		print ("parent")
+
+class Apple(Fruit):
+	def __init__(self,color):
+		suple(Apple,self).__init__()		#使用ｓｕｐｅｒ调用父类
+		print ("apple's color ;%s"%self.color)
+
+if __name__ == "__main__ :
+	Apple()
+
+```
+super类的实现代码继承了object,因此Fruit类必须继承object,如果不继承object,使用super将会出现错误。
+
+**`抽象基类`**
+
+抽象基类是对一类事物的特征行为的抽象，由抽象方法组成。在Python3中有abc模块,抽象基类`不能直接实例化`
+```python
+from abc import ABCMeta,abstractmethod
+class Fruit(metaclass=ABCMeta):
+	@abstractmethod
+	def grow(self):
+		pass
+
+class Apple(Fruit):
+	def grow(self):
+		print("Apple growing")
+
+if __name__ == "__main__ :
+	apple = Apple()
+	apple.grow()
+
+```
+
+**`多态性`**
+
+同一种方法，实现不同的功能
+```python
+class Fruit:
+	def __init__(self,color=None):
+		self.color = color
+
+class Apple(Fruit):
+	def __init__(self,color = "red"):
+		Fruit.__init__(self.color)
+
+
+class Banana(Fruit):
+	def __init__(self,color = "yellow")
+		Fruit.__init__(self.color):			#调用父类的构造函数
+
+class FruitShop:
+	def sellFruit(self,fruit):
+		if isinstance(fruit,Apple):
+			print ("self apple")
+		if isinstance(fruit,Banana):
+			print ("self banana")
+		if isinstance(fruit,fruit):
+			print ("self fruit")
+
+if __name__ == "__main__ :
+		shop = FruitShop()
+		apple = Apple("red")
+		banana = Banana("yellow")
+		shop.sellFruit(apple)		#参数多态性
+		shop.sellFruit(banana)		#参数多态性
+```
+
+**`多重继承`**
+
+Python支持多重继承，即１一个类可以继承多个父类。
+
+	class_name(parent_class1,parent_class2...)
+
+西瓜继承蔬菜和水果，蔬菜继承水果。
+
+```python
+class Fruit:
+	def __init__(self):
+		print ("initial Fruit")
+
+	def grow(self):
+		print ("grow ...")
+
+
+class Vegetable(object):
+	def __init__(self):
+		print ("initial Vegetable")
+
+	def plant(self):
+		print ("plant...")
+
+class Watermelon(Vegetable,Fruit):
+	pass
+
+if __name__ == "__main__ :
+		w = Watermelon()
+		w.grow()
+		w.plant()
+
+```
+作为一般规则，在大多数程序中，最好避免多重继承，但是多重继承有利于定义所谓的混合类(Mixin)
+
+**`Minix机制`**
+
+还是苹果和香蕉的例子，都继承水果类，但是从去皮的角度，可以分为削皮和剥皮。
+```python
+class Fruit:
+	def __init__(self):
+		pass
+
+class HuskedFruit(Fruit):
+	def __init__(self)
+		print ("initial HuskedFruit")
+
+	def hush(self):
+		print ("husk...")
+
+class DecorticateFruit(Fruit):
+	def __init__(self)
+		print ("initial DecorticateFruit")
+
+	def hush(self):
+		print ("decorticate...")
+
+class Apple(HuskedFruit):
+	pass
+
+class Banana(DecorticateFruit):
+	pass
+
+```
+`如果按照季节对水果进行分类`，整个结构将发生变化。例如把水果分为夏季水果和冬季水果。
+
+```python
+class Fruit:
+	def __init__(self):
+		pass
+
+class HuskedFruit(Fruit):
+	def __init__(self)
+		print ("initial HuskedFruit")
+
+	def hush(self):
+		print ("husk...")
+
+class DecorticateFruit(Fruit):
+	def __init__(self)
+		print ("initial DecorticateFruit")
+
+	def hush(self):
+		print ("decorticate...")
+
+class Apple(HuskedFruit,Fruit):		#水果，并且是削皮水果
+	pass
+
+class Banana(DecorticateFruit,Fruit):	#水果，并且剥皮水果
+	pass
+
+```
+
 **运算符重载**
+
+Python把运算符和类的内置方法`关联起来`，每个运算符都对应一个１个函数，例如,\_\_init\_\_()表示运算符"+"等
+
+```python
+class Fruit:
+	def __init__(self,price=0):
+		self.price = price
+
+	def __add__(self,other):
+		return self.price + other.price
+
+	def __gt__(self,other):
+		if self.price > other.price:
+			flag = True
+		else:
+			flag = false
+		return flag
+
+class Apple(Fruit):
+	pass
+
+class Banana(Fruit):
+	pass
+
+if __name__ == "__main__ :
+	apple = Apple()
+	print ("apple price:",apple.price)
+	banana = Banana()
+	print ("bananan price:",banana.price)
+	print (apple>banana)
+	total = apple + banana
+	print ("total:",total)
+
+#对<< >>重载
+
+import sys
+
+class Stream:
+	def __init__(self,file):
+		self.file = file
+
+	def __lshifht__(self,obj):		#对<< 进行重载
+		self.file.write(str(obj))
+		return self
+
+class Fruit(Stream):
+	def __init__(self,price=0,file=None):
+		Stream.__init__(self,price)
+		self.price = price
+
+classs Apple(Fruit):
+	pass
+
+class Banana(Fruit):
+	pass
+
+if __name__ == "__main__ :
+	apple = Apple(2,sys.stdout)
+	banana = Banana(2,stdout)
+	endl = "\n"
+	apple << apple.price << endl;
+	apple << banana.price << endl;
+```
 
 **Python设计模式**
 
-**类和对象**
+设计模式是面向对象程序设计的解决方案，是复用性程序设计的经验总结。
+
+设计模式根据目的不同而分为`创建型模式`,`结构型模式`,`行为模式`.
+
+ + 创建型模式:提出了对象创建的解决方案，以及数据封装的方法。降低了创建对象时代码实现复杂度，使对象的创建能满足特定的要求，例如，工厂模式，抽象工厂模式，单例模式，生成器模式。
+ + 结构型模式:描述了对象之间的体系结构，通过组合，继承等方式改善体系结构降低体系结构中组件的依赖性，例如，适配器模式，桥接模式，组合模式，装饰器模式，外观模式。
+ + 行为型模式:描述了对象之间的交互和各自的职责，有助于实现程序中对象的通信和流程的控制，例如，迭代器模式，解释器模式，中介者模式，观察者模式。
+
+```python
+#python实现工厂模式
+class Factory:						#工厂类
+	def createFruit(self,fruit):	#工厂方法
+		if fruit == "apple":		#如果是apple则返回类Apple
+			return Apple()
+		elif fruit == "banana":		#如果是banana则返回类Banana
+			return Banana()
+
+class Fruit:
+	def __str__(self):
+		return "fruit"
+
+class Apple(Fruit):
+	def __str__(self):
+		return "apple"
+
+class Banana(Fruti):
+	def __str__(self):
+		return "banana"
 
 
-**``**
+if __name__ == '__main__':
+	factory = Factory()
+	print (factory.createFruit("apple"))		#创建apple对象
+	print (factory.createFruit("banana"))		#创建banana对象
 
-**``**
+```
 
-**``**
-
-**``**
-
-**``**
+工厂方法模式的应用非常广泛，通常用于设计对象的生成以及系统的框架。
 
 ---
 
-
 ### 异常处理与程序调试
+
+异常是任何语言必不可少的一部分。Python提供了强大的异常处理机制，通过捕获异常可以提高程序的健壮性。异常处理还具有释放对象，中止循环的运行等作用。
+
+异常如：序列的下标越界，打开不存在的文件，空引用等。
+
+ + StopIteration,
+
+ + ArithmeticError
+
+ + AssertionError
+
+ + AttributeError
+
+ + BufferError
+
+ + EOFError
+
+ + ImportError
+
+ + LookupError
+
+ + MemoryError
+
+ + NameError
+
+ + OSError
+
+ + ReferenceError
+
+ + RuntimeError
+
+ + SyntaxError
+
+ + SystemError
+
+ + TyepError
+
+ + ValueError
+
+ + WarningError
+
 
 **异常处理**
 
