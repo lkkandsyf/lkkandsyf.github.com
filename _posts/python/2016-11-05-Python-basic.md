@@ -29,23 +29,26 @@ tags : []
 `代码缩进`是Python的基本语法
 
 模块导入
+
 ```python
-	import
-	from ... import ...
+import
+from ... import ...
+
 ```
 使用空行分割代码
+
 ```python
-	class A:
-		def funX(self)
-			print("funX")
+class A:
+	def funX(self)
+		print("funX")
 
-		def funY(self)
-			print("funY")
+	def funY(self)
+		print("funY")
 
-	if __name__ = "__main__"
-		a = A()
-		a.funX()
-		a.funY()
+if __name__ = "__main__"
+	a = A()
+	a.funX()
+	a.funY()
 ```
 
 注释：单行注释，块注释，中文注释 #-*-coding: UTF-8-*-
@@ -55,16 +58,19 @@ tags : []
 局部变量和全局变量(global),常量const模块
 
 Python根据变量的自动`判断变量的类型`
+
 ```python
-	#这两个i并不是同一个对象
-	In [2]: i = 1
-	In [3]: print(id(i))
-	12865880
-	In [4]: i = 2
-	In [5]: print(id(i))
-	12865856
+#这两个i并不是同一个对象
+In [2]: i = 1
+In [3]: print(id(i))
+12865880
+In [4]: i = 2
+In [5]: print(id(i))
+12865856
 ```
+
 字符串
+
 ```python
 In [6]: str = "hello"
 In [7]: print (str)
@@ -1781,7 +1787,7 @@ if __name__ == "__main__ :
 Python使用`约定属性的名称来达到数据封装的目的`，如果属性的名字以两个下划线开始，就`表示为私有属性`，反之，没有使用下划线开始的都表示为共有属性，Python中没有保护类型的修饰符。
 
 Python中的属性`分为实例属性和静态属性`。实例属性是一个self作为前缀的属性，\_\_ini\_\_方法即Python类的构造函数,静态变量可以被类直接调用，而不被实例化对象调用。当创建新的实例化对象后，静态变量并不会获得新的的内存空间，而是使用类创建的内存空间。因此，`静态变量`能够被多个实例化的对象`共享`,在Python中静态变量称为`类变量`，类变量可以在该类的所有`实例中`被共享。
-```pyhon
+```python
 class Fruit:
 	price = 0					#类属性
 
@@ -1803,6 +1809,7 @@ Python的类和对象都可以访问i`类属性`，而Java中的静态变量只�
 Python对类的属性和方法的定义次序并没有要求，合理的方式是把类属性定义在类中`最前面，然后在定义私有方法，最后定义共有方法`
 
 **`内置属性`**
+
 ```python
 class Fruit:
 	def __init__(self):
@@ -1858,16 +1865,16 @@ if __name == "__main__":
 
 Python中还有一个种方法称为类方法。类方法是将本身作为操作对象的方法。类方法可以使函数classmethod或@classmethod修饰器定义。而与实例方法不同的是，把类方法作为第一个参数(cls)传递。把上面的静态方法，修改为类方法
 ```python
-	@ cclassmethod
-	def getPrice(cls):
-		print(cls.price)
+@ classmethod
+def getPrice(cls):
+	print(cls.price)
 
 
-	def __getPrice(cls):
-		cls.price = cls.price + 10
-		print (cls.price)
+def __getPrice(cls):
+	cls.price = cls.price + 10
+	print (cls.price)
 
-	count = classmethod(__getPrice)
+count = classmethod(__getPrice)
 ```
 可见类方法和静态方法是十分相似的，`如果某个方法需要被其他实例共享，同事又需要使用当前实例的属性，则定义为类方法`
 
@@ -2320,7 +2327,7 @@ class Apple(Fruit):
 class Banana(Fruit):
 	pass
 
-if __name__ == "__main__ :
+if __name__ == "__main__":
 	apple = Apple()
 	print ("apple price:",apple.price)
 	banana = Banana()
@@ -2352,7 +2359,7 @@ classs Apple(Fruit):
 class Banana(Fruit):
 	pass
 
-if __name__ == "__main__ :
+if __name__ == "__main__":
 	apple = Apple(2,sys.stdout)
 	banana = Banana(2,stdout)
 	endl = "\n"
@@ -2392,7 +2399,7 @@ class Banana(Fruti):
 		return "banana"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	factory = Factory()
 	print (factory.createFruit("apple"))		#创建apple对象
 	print (factory.createFruit("banana"))		#创建banana对象
