@@ -2412,71 +2412,248 @@ if __name__ == "__main__":
 
 ### 异常处理与程序调试
 
-异常是任何语言必不可少的一部分。Python提供了强大的异常处理机制，通过捕获异常可以提高程序的健壮性。异常处理还具有释放对象，中止循环的运行等作用。
-
-异常如：序列的下标越界，打开不存在的文件，空引用等。
-
- + StopIteration,
-
- + ArithmeticError
-
- + AssertionError
-
- + AttributeError
-
- + BufferError
-
- + EOFError
-
- + ImportError
-
- + LookupError
-
- + MemoryError
-
- + NameError
-
- + OSError
-
- + ReferenceError
-
- + RuntimeError
-
- + SyntaxError
-
- + SystemError
-
- + TyepError
-
- + ValueError
-
- + WarningError
-
 
 **异常处理**
 
 **`Python中异常`**
 
+异常是任何语言必不可少的一部分。Python提供了强大的异常处理机制，通过捕获异常可以提高程序的健壮性。异常处理还具有释放对象，中止循环的运行等作用。
+
+异常如：序列的下标越界，打开不存在的文件，空引用等。
+
+Python3中，BaseException是所有异常类的`基类`,所有的内置异常都是它的派生类，Exception是除了SystemExit,GeneratorExit,KeyboardInterrupt之外的所有异常的基类，用户自定的异常也应该继承它，它包含一下异常
+
+ + StopIteration：当迭代器没有数据项触发，由内置函数next()和迭代器的__next__()方法触发
+
+ + ArithmeticError：算法异常的基类，包括OverflowError(溢出异常)，ZeroDivisionError(零除异常)和FloatingPointError(失败的浮点操作)
+
+ + AssertionError：assert语句失败时触发
+
+ + AttributeError：属性引用和属性赋值异常
+
+ + BufferError：缓存异常，当一个缓存相关的操作不能进行时触发
+
+ + EOFError：文件末尾，使用内置函数input()时生成，表示到达文件末尾。但是如read()和readline()等大多数I/O操作将返回一个空字符串表示EOF，而不是引发异常
+
+ + ImportError：导入异常，当import语句或者from语句无法在模块中找到相应文件名称时触发
+
+ + LookupError：当使用映射或者序列时，如果键值或索引无法找到的时候触发它是KeyError(映射中未找到键值)和IndexError(序列下标超出范围)的基类
+
+ + MemoryError：内存错误，当操作超出内存范围时触发
+
+ + NameError：名称异常，当局部或全局空间中无法找到文件名称时触发
+
+ + OSError：当一个系统函数返回一个系统相关的错误时触发。Python3中，EnvironmentError,IOError,WindowsError,VMError,socket.error,slect.error,nmap.error也整合到了OSError
+
+ + ReferenceError：引用异常，当底层的对象被销毁后访问弱引用时触发
+
+ + RuntimeError：包含其他分类中没有被包含进去的一般错误
+
+ + SyntaxError：语句错误，在import时也可能触发
+
+ + SystemError：编译器内部的错误
+
+ + TyepError：类型异常，当操作或者函数应用到不合适的类型时触发
+
+ + ValueError：值异常，当操作或者函数的类型正确，但是值不正确时触发
+
+ + WarningError：警告，Python中有个warning模块，用来通知程序员不支持的功能
+
+Python内的异常使用继承结构构建，这种设计方式非常灵活，可以在异常处理程序中捕获基类异常，也可以捕获各种子类的异常。Python使用try...except语句捕获异常，异常类型定义在try子句的后面。
+
 **`try..except使用`**
+
+try...except语句用于处理问题语句，捕获可能出现的异常.try子句中代码块`放置可能出现异常`的语句，except子句中的`代码块处理异常`,当异常出现时，Python会自动生成一个异常对象。该对象包括异常的具体信息，以及异常的种类和错误位置。比如读取一个不存在的文件
+```python
+try:
+	open("hello.txt","r")
+	print ("read file")
+except FileNotFoundError:
+	print ("file not exists")
+except:				#其他异常就到这里
+	print ("program excepiton")
+```
+try...except语句后还可以添加1个else子句。当try子句中的代码发生异常时，程序直接跳到except子句，反之，程序将执行else子句。
+```python
+try:
+	result = 10/0
+except ZeroDivisionError:
+	prnt ("zero appear")
+else:
+	print (result)
+
+```
+这上面的语句只能执行一个异常。
+
+嵌套异常
+```python
+try:
+	s = "hello"
+	try:
+		print (s[0] + s[1])
+		print (s[0] - s[1])
+	except TypeError:
+		print ("字符串不知减法运算")
+except:
+	print ("excepiton")
+
+```
+如果外层的try子句中的代码块引发异常，程序将直接跳到外层try对应的except子句，而内部的try子句的代码块将不会执行。
+
+try..except嵌套的语句通常用于释放已经创建的系统资源。
 
 **`try..finally使用`**
 
+try..except语句后面还可以添加一个finall子句，finally子句的作用与Java中finally子句类似。无论异常是否发生，finally子句都会被执行。所有的`finally自己通常用于关闭异常而不能释放的系统资源`。
+```python
+# finaly的错误使用
+try:
+	f = open("hello.txt","r")
+	print ("read file")
+except FileNotFoundError:
+	print ("file not exists")
+finall:
+	f.close()
+```
+上面的程序会报错，说ｆ不是try语句的中f，因此，解释器认为变量f没有定义。
+
+因此要把文件的打开操作置于try子句的外层，使f具有全局性，同时也要捕获文件打开的异常，这种情况就可以使用异常嵌套的语句，使每个try子句都必须有１个except子句或者finally子句与之对应。
+```python
+
+try:
+	f = open("hello.txt","r")
+	try:
+		print (f.read(4))
+	except:
+		print ("file read error")
+	finall:
+		print ("release system memory")
+		f.close()			#释放资源
+except FileNotFoundError:
+	print ("file not exists")
+```
+由于Python动态语句的特殊性，如果要在某个代码块中使用同一级其他代码块中定义的变量，可以考虑嵌套的方式或全局变量来实现。
+
 **`使用raise抛出异常`**
+
+当程序出现错误时，Python会自动引发异常，也可以通过raise语句显示引发异常。一旦执行了raise语句，raise语句后的代码将不能被执行。
+```python
+try:
+	s = None
+	if s is None:
+		print ("s是空对象")
+		rasie NameError
+	print (len(s))
+
+except TyepError:
+	print ("空对象没有长度")
+```
 
 **`自定义异常`**
 
+Python允许程序员自定义异常类型，用于描述Python异常体系总没有涉及的异常情况。`自定义异常必须继承Exception类`。自定义异常按照命名规范以Error结尾，显式地告诉程序该类是异常类。自定义异常使用raise语句来触发，而且只能通过`手工方式触发`。
+```python
+from __future__ import division
+
+class DivisionException(Exception):			#自定义异常
+	def __init__(self,x,y):
+		Exception.__init__(self,x,y)
+		self.x = x
+		self.y = y
+
+if __name__ == "__main__":
+	try:
+		x = 3
+		y = 2
+		if x % y > 0:
+			print (x / y)
+			raise DivisionException(x,y)	#如果注释掉，将不会触发
+	except DivisionException,div:			#div是DivisionExcepiont的对象
+		print ("divisionException:x/y = %.2f"%(div.x/div/y))
+```
+
 **`assert语句的使用`**
+
+assert语句用于检测某个条件表达式是否为真。assert语句又称为断言语句，即assert认为检测表达式永远为真
+```python
+t = ("hello",)
+assert len(t) >= 1
+t = ("hello")			#没有逗号，当成字符串处理
+assert len(t) == 1		#出错
+
+```
+assert语句还可以传递提示信息给AssertionError异常。当assert语句断言失败时，提示信息将打印控制台
+```python
+month = 13
+assert  1 <= month <= 12,"month error"		#出现错误
+```
 
 **`异常信息`**
 
+Python程序出现错误时，都会输出相关的异常信息，并支出错误的行号和错误的程序的代码。
+```python
+def fun():
+	a = 10
+	b = 0
+	return a / b
+
+def foramt():
+	print ("a/b:"+str(fun()))
+
+
+if __name__ == "__main__":
+	format()
+```
+异常的方向为main-\>format-\>fun
+
+Python将产生traceback对象，记录异常信息和当前程序的状态。traceback对象先记录主程序的状态，然后记录format中的状态，最后记录fun中状态。当fun出现异常时，traceback对象将输出记录的信息
+
+```python
+import sys
+
+try:
+	x = 10 / 0
+
+except Exception as ex:
+	print (ex)
+	print (sys.exc_info)
+
+```
+
+**`debug`**
+
+使用ipdb
+```python
+#sudo pip install ipdb
+ipdb xxx.py
+>help
+```
+break or b			设置断点
+
+continue or c		继续执行程序
+
+list or l			查看当前的代码段
+
+setp or s			进入函数
+
+return or r			执行代码知道当前函数返回
+
+exit or q			终止并退出
+
+next or n			执行下一步
+
+pp					打印变量的值
+
+help				help
+
 ---
+
 
 ## **Python应用**
 
 ### Python和HTML
 
 ---
-
 
 ### Python和XML
 
