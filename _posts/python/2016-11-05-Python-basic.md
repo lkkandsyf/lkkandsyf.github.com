@@ -1,6 +1,6 @@
 ---
 layout: post
-category :
+category : Python
 tagline: "Supporting tagline"
 tags : []
 ---

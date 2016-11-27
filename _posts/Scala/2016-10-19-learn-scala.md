@@ -15,7 +15,7 @@ tags : [scala sbt]
 
 ## tools
 
-[sbt]()
+[sbt](https://lkkandsyf.github.io/scala/2016/11/05/sbt-debug)
 
 ### 基础
 
@@ -25,10 +25,11 @@ tags : [scala sbt]
 
  + 类型推断：变量的类型由scala根据初始化变量的表达式推断出来，`鼓励使用val`；**note:声明变量时不做初始化会报错**
  + 明确类型：scala的`变量或函数的类型总是写在变量或函数的后面`.
-{% highlight C %}
+
+```scala
 val a:Int = 1
 val str:String = "hello world"
-{% endhighlight %}
+```
 
 #### 2.常用的类型
 
@@ -218,15 +219,17 @@ Scala的for循环结构:（for循环中，变量前面`不带var或val标志符`
 
 __可以在for loop括号里面同事包含`多组"变量<- 表达式"结构`，组之间用`分号`隔开__
 
+```scala
 	for(i <- 1 until 3; j <- until 3){
 		println(i*j)
 	}
-	for loop的这种结构类似Java中嵌套环结构,也可以用
+	//for loop的这种结构类似Java中嵌套环结构,也可以用
 
 	for{i <- 1 until 3		// 使用大括号，使用换行来分割组
 		j <- until 3 }{
 			println(i*j)
 	}
+```
 
 __可以为嵌套循环通过if表达式添加条件__
 
@@ -896,12 +899,13 @@ Scala的类在`未提供构造器时`，也会提供`默认构造器`；且在�
 3)对于Scala类总的val属性，只有默认的getter方法；对于private属性，其默认getter，setter都是private的，因而，对于不想提供setter方法的变量可以设置为val，对于不想提供getter，setter方法的变量可以设置为private.
 
 4)注意，Scala类中，定义函数时，若函数声明`省略了`函数名`后的括号`(由于无参数，可以省略)，必须参数`无括号`的形式，通过带括号形式`调用会报错`
+```scala
+class Counter{
+	var		value = 0
 
-	class Counter{
-		var		value = 0
-
-		def current = value
-	}
+	def current = value
+}
+```
 
 在类Counter定义中，对于方法current,由于不接受参数，所以定义时，省略了方法名current后的`括号`。此时，对于Counter的实例counter，调用current方法时，必须采用counter.current(无括号形式)
 
@@ -913,15 +917,16 @@ Scala的类可以有一个`主构造器`和`多个辅助构造器`。多个辅�
 
 如果一个类`没有显示定义主构造器`，则有一个默认的`无参主构造器`。如：
 
-```
+```scala
 class Student(val name:String, var age:Int = 0, address:String = "", private var school:String = ""){
-	2     var grade:Int = if( age>7  ) age-7 else 0
-	3
-	4     println(" I'm in main constructor. ")
-	5
-	6     def info() = ""
+	var grade:Int = if( age>7  ) age-7 else 0
+
+	println(" I'm in main constructor. ")
+
+	def info() = ""
 }
 ```
+
 对于Scala类，`主构造器的参数`放置在类名后，由`括号`括起来。且对于`主构造器中var、val、private`等标注的参数，都会成为类的对应字段，并生成对应的`默认getter、setter方法`。如Student类中的name、age、school等。对于主构造器中的未用var、val标注的参数，如果在类的任何一个方法用用到该参数，该参数将会转换为类的字段，否则不会，如Student类的address属性。
 
 由于在Student类中的info方法中用到了参数address，所以Student共有name、age、address、school、grade等5个属性，且Scala根据对应属性的特点生成了默认的getter和setter方法。
@@ -932,7 +937,7 @@ class Student(val name:String, var age:Int = 0, address:String = "", private var
 
 辅助构造器通过this来定义，且必须首先调用`主构造器`或者其他`已经定义的辅助构造器`。
 
-```
+```scala
 class Person(val name:String){
 	 var age = 0
 	 var sex:Char = 'f'
@@ -957,7 +962,7 @@ note：辅助构造器的参数前`不能添加val,var,标志`，否则会`报�
 
 7)私有构造器
 
-```
+```scala
 class Person private(val name:String){
   var age:Int = 1
 
@@ -972,7 +977,7 @@ class Person private(val name:String){
 
 8)嵌套类
 
-```
+```scala
 class Family(val h_name:String, val w_name:String){
 	class Husband(var name:String){
          println(" I'm a husband ")
@@ -996,17 +1001,20 @@ class Family(val h_name:String, val w_name:String){
 
 1)Scala中没有`静态方法`和`静态字段`，但是可以用`object`语法来实现类似的功能。对象定义某个类的单个实例。Scala的object中可以实现类似的功能，用来存放`工具函数或常量`等。
 
-	object Sequence{
-	     private var next_num = 0
-	     val threshold = 100
+```scala
+object Sequence{
+		private var next_num = 0
+		val threshold = 100
 
-	     def getSequence() = {
-	         next_num += 1
-	         next_num
-		}
+		def getSequence() = {
+			next_num += 1
+			next_num
 	}
+}
 
+```
 使用object中的常量或方法，通过object名直接调用，对象构造器在对象`第一次被使用`时调用(如果某对象一直`未被使用`，那么其构造器也不会被`调用`)
+
 
 object的构造器`不接受参数传递`
 
@@ -1021,7 +1029,7 @@ object的构造器`不接受参数传递`
 
 **伴生对象是类的一个`特殊实例`**
 
-```
+```scala
 class Counter{
      def getTotalCounter()= Counter.getCount
 }
@@ -1035,7 +1043,7 @@ object Counter{
 
 3)对象可以继承或扩展多个特质
 
-```
+```scala
 abstract class Person(var name:String, var age:Int){
      def info():Unit
 }
@@ -1055,7 +1063,7 @@ object XiaoMing extends Person("XiaoMing", 5){
 
 main方法定义在object中，形式如下
 
-```
+```scala
 object  Hello{
 	def main(args:Array[String]){
 		println("hello world")
@@ -1067,7 +1075,7 @@ object  Hello{
 
 6)还可以通过`扩展特质App`来运行指定代码
 
-```
+```scala
 object hello extens App{
 	println("A `hello world` from hello world")
 }
@@ -1078,7 +1086,7 @@ object hello extens App{
 
 Scala并没有定义枚举类型，但是可以通过定义扩展Enumeration的对象，并用value方法初始化枚举中所有可选的值，提供枚举。
 
-```
+```scala
 object TrafficeLight extends Enumeration{
 	val Red,Yellow,Green = value
 }
@@ -1086,7 +1094,7 @@ object TrafficeLight extends Enumeration{
 
 上述实例中的 val Red,Yellow,Green = value语句，相当于
 
-```
+```scala
 val red = value
 val Yellow = value
 val Green = value
@@ -1094,7 +1102,7 @@ val Green = value
 
 用value方法来`初始化枚举类变量`时，value方法会返回内部类的新实例，且该内部类也叫value。另外，在调用value方法时，可传入`ID，名称`两个参数。如果没有指定ID，默认`从0开始，后面参数的ID加1`，如果未指定名称，默认与属性字段同名。
 
-```
+```scala
 object TrafficLight extends Enumeration{
 	val Red = value(1,"stop")
 	val Yellow = value("wait")// 可以单独传名字
@@ -1104,7 +1112,7 @@ object TrafficLight extends Enumeration{
 
 上例中，Yellow属性就`仅定义了名称`，Green`仅定义ID`
 
-```
+```scala
 scala>TrafficLight.Red
 res10:TrafficLight.value = Stop
 scala>TrafficLight.Green
@@ -1117,21 +1125,21 @@ res11:TrafficLight.value = Green
 
 8)通过id方法来获取枚举类型值的ID
 
-```
+```scala
 scala>TrafficLight.Green.id
 res12: Int = 4
 ```
 
 9)通过values方法获取所有枚举值的集合
 
-```
+```scala
 scala>TrafficLight.values
 res13:TrafficLight.ValueSet = TrafficLight.ValueSets(Stop,Wait,Green)
 ```
 
 10)通过ID来获取对应的枚举对象
 
-```
+```scala
 scala>TrafficLight(1)
 res14:TrafficLight.value = Stop
 ```
@@ -1169,5 +1177,4 @@ example:
 
 	axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.txz
 	axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
-
 

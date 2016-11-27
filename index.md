@@ -34,9 +34,34 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 **Docker**
 
 国内
-+[docker:lkklinux](https://dashboard.daocloud.io/)
+
+ + lkklinux:[Docker](https://dashboard.daocloud.io/)
 
 国外
+
+
+**`技术领域`**
+
+ + 数据分析:[`Spark`](https://apache.spark.org)
+ + 容器:[`Docker`](http://www.docker.com/)
+ + 日志实时分析:[`elk`](https://www.elastic.co/products)
+ + 机器学习:[`scikit-learn`](http://scikit-learn.org/)
+ + 深度学习:[`Caffe`](http://caffe.berkeleyvision.org/)
+ + 深度学习:[`Tensorflow`](https://www.tensorflow.org/)
+ + 图像处理:[`Opencv`](http://opencv.org)
+ + 网络安全:nfdump,nfsee
+ + Akka
+ + Kafka
+
+
+**`编程语言`**
+
+基本语言:C/C++,Scala,Java,Python
+
+
+**'IRC'**
+
+ + docker
 
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
@@ -84,8 +109,8 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 website
 
- + [megasharemovie.net](megasharemovie.net/movie)
- + [vioozwatch32moive.org](vioozwatch32moive.org)
+ + [megasharemovie.net](http://megasharemovie.net/movie)
+ + [vioozwatch32moive.org](http://vioozwatch32moive.org)
 
 ### think
 
@@ -96,3 +121,12 @@ website
 不能太想得到，要考虑以后的事情
 
 既然给不了，何必去强求
+
+---
+审问内心
+
+问问自己的内心需要的是什么。不管对于感情，还是对于认识大大小小的决策，都是如此。当然，有时候审问内心并且清楚之后坚持自我是一个痛苦的过程。尤其是当你发现自己的选择和周围人不一样的时候。
+
+要记得，最好不一定最适合你，最适合才最让你开心。还有，不要畏难，除非你认为你最适合干简单的事。难与不难，人多与人少，适合与不适合，三件不同的事，有时要分开考虑。
+
+---

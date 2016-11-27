@@ -102,7 +102,7 @@
 
 <h2 id="tools">tools</h2>
 
-<p><a href="">sbt</a></p>
+<p><a href="https://lkkandsyf.github.io/scala/2016/11/05/sbt-debug">sbt</a></p>
 
 <h3 id="section">基础</h3>
 
@@ -117,8 +117,10 @@ var 标志符：声明变量；
   <li>明确类型：scala的<code class="highlighter-rouge">变量或函数的类型总是写在变量或函数的后面</code>.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">val</span> <span class="n">a</span><span class="o">:</span><span class="n">Int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">val</span> <span class="n">str</span><span class="o">:</span><span class="n">String</span> <span class="o">=</span> <span class="s">"hello world"</span></code></pre></figure>
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">val</span> <span class="n">a</span><span class="k">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">val</span> <span class="n">str</span><span class="k">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">"hello world"</span>
+</code></pre>
+</div>
 
 <h4 id="section-2">2.常用的类型</h4>
 
@@ -346,15 +348,15 @@ scala&gt; for(i &lt;- 0 until str.length)
 
 <p><strong>可以在for loop括号里面同事包含<code class="highlighter-rouge">多组"变量&lt;- 表达式"结构</code>，组之间用<code class="highlighter-rouge">分号</code>隔开</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>for(i &lt;- 1 until 3; j &lt;- until 3){
-	println(i*j)
-}
-for loop的这种结构类似Java中嵌套环结构,也可以用
-
-for{i &lt;- 1 until 3		// 使用大括号，使用换行来分割组
-	j &lt;- until 3 }{
-		println(i*j)
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>	<span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">until</span> <span class="mi">3</span><span class="o">;</span> <span class="n">j</span> <span class="k">&lt;-</span> <span class="n">until</span> <span class="mi">3</span><span class="o">){</span>
+		<span class="n">println</span><span class="o">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="o">)</span>
+	<span class="o">}</span>
+	<span class="c1">//for loop的这种结构类似Java中嵌套环结构,也可以用
+</span>
+	<span class="k">for</span><span class="o">{</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">until</span> <span class="mi">3</span>		<span class="c1">// 使用大括号，使用换行来分割组
+</span>		<span class="n">j</span> <span class="k">&lt;-</span> <span class="n">until</span> <span class="mi">3</span> <span class="o">}{</span>
+			<span class="n">println</span><span class="o">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="o">)</span>
+	<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1115,12 +1117,11 @@ res6: Int = 12
 <p>3)对于Scala类总的val属性，只有默认的getter方法；对于private属性，其默认getter，setter都是private的，因而，对于不想提供setter方法的变量可以设置为val，对于不想提供getter，setter方法的变量可以设置为private.</p>
 
 <p>4)注意，Scala类中，定义函数时，若函数声明<code class="highlighter-rouge">省略了</code>函数名<code class="highlighter-rouge">后的括号</code>(由于无参数，可以省略)，必须参数<code class="highlighter-rouge">无括号</code>的形式，通过带括号形式<code class="highlighter-rouge">调用会报错</code></p>
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Counter</span><span class="o">{</span>
+	<span class="k">var</span>		<span class="n">value</span> <span class="k">=</span> <span class="mi">0</span>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Counter{
-	var		value = 0
-
-	def current = value
-}
+	<span class="k">def</span> <span class="n">current</span> <span class="k">=</span> <span class="n">value</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1136,15 +1137,16 @@ res6: Int = 12
 
 <p>如果一个类<code class="highlighter-rouge">没有显示定义主构造器</code>，则有一个默认的<code class="highlighter-rouge">无参主构造器</code>。如：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Student(val name:String, var age:Int = 0, address:String = "", private var school:String = ""){
-	2     var grade:Int = if( age&gt;7  ) age-7 else 0
-	3
-	4     println(" I'm in main constructor. ")
-	5
-	6     def info() = ""
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span> <span class="k">var</span> <span class="n">age</span><span class="k">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">address</span><span class="k">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="o">,</span> <span class="k">private</span> <span class="k">var</span> <span class="n">school</span><span class="k">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="o">){</span>
+	<span class="k">var</span> <span class="n">grade</span><span class="k">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="k">if</span><span class="o">(</span> <span class="n">age</span><span class="o">&gt;</span><span class="mi">7</span>  <span class="o">)</span> <span class="n">age</span><span class="o">-</span><span class="mi">7</span> <span class="k">else</span> <span class="mi">0</span>
+
+	<span class="n">println</span><span class="o">(</span><span class="s">" I'm in main constructor. "</span><span class="o">)</span>
+
+	<span class="k">def</span> <span class="n">info</span><span class="o">()</span> <span class="k">=</span> <span class="s">""</span>
+<span class="o">}</span>
 </code></pre>
 </div>
+
 <p>对于Scala类，<code class="highlighter-rouge">主构造器的参数</code>放置在类名后，由<code class="highlighter-rouge">括号</code>括起来。且对于<code class="highlighter-rouge">主构造器中var、val、private</code>等标注的参数，都会成为类的对应字段，并生成对应的<code class="highlighter-rouge">默认getter、setter方法</code>。如Student类中的name、age、school等。对于主构造器中的未用var、val标注的参数，如果在类的任何一个方法用用到该参数，该参数将会转换为类的字段，否则不会，如Student类的address属性。</p>
 
 <p>由于在Student类中的info方法中用到了参数address，所以Student共有name、age、address、school、grade等5个属性，且Scala根据对应属性的特点生成了默认的getter和setter方法。</p>
@@ -1155,24 +1157,24 @@ res6: Int = 12
 
 <p>辅助构造器通过this来定义，且必须首先调用<code class="highlighter-rouge">主构造器</code>或者其他<code class="highlighter-rouge">已经定义的辅助构造器</code>。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Person(val name:String){
-	 var age = 0
-	 var sex:Char = 'f'
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">){</span>
+	 <span class="k">var</span> <span class="n">age</span> <span class="k">=</span> <span class="mi">0</span>
+	 <span class="k">var</span> <span class="n">sex</span><span class="k">:</span><span class="kt">Char</span> <span class="o">=</span> <span class="sc">'f'</span>
 
-    println("main constructor...")
+    <span class="n">println</span><span class="o">(</span><span class="s">"main constructor..."</span><span class="o">)</span>
 
-     def this(name:String,  age:Int){
-	       this(name)        //调用主构造器
-	        this.age = age     //使用this关键字
-	         println(" auxiliary constructor1 ")
+     <span class="k">def</span> <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span>  <span class="n">age</span><span class="k">:</span><span class="kt">Int</span><span class="o">){</span>
+	       <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="o">)</span>        <span class="c1">//调用主构造器
+</span>	        <span class="k">this</span><span class="o">.</span><span class="n">age</span> <span class="k">=</span> <span class="n">age</span>     <span class="c1">//使用this关键字
+</span>	         <span class="n">println</span><span class="o">(</span><span class="s">" auxiliary constructor1 "</span><span class="o">)</span>
 
-	}
-	   def this(name:String, age:Int, sex:Char){
-	          this(name, age)
-	          this.sex = sex
-	          println(" auxiliary constructor2 ")
-	 }
-}
+	<span class="o">}</span>
+	   <span class="k">def</span> <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span> <span class="n">age</span><span class="k">:</span><span class="kt">Int</span><span class="o">,</span> <span class="n">sex</span><span class="k">:</span><span class="kt">Char</span><span class="o">){</span>
+	          <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">)</span>
+	          <span class="k">this</span><span class="o">.</span><span class="n">sex</span> <span class="k">=</span> <span class="n">sex</span>
+	          <span class="n">println</span><span class="o">(</span><span class="s">" auxiliary constructor2 "</span><span class="o">)</span>
+	 <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1180,14 +1182,14 @@ res6: Int = 12
 
 <p>7)私有构造器</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Person private(val name:String){
-  var age:Int = 1
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span> <span class="k">private</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">){</span>
+  <span class="k">var</span> <span class="n">age</span><span class="k">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
 
-  def this(name: String, age:Int){
-         this(name)
-         this.age = age
-	}
-}
+  <span class="k">def</span> <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">age</span><span class="k">:</span><span class="kt">Int</span><span class="o">){</span>
+         <span class="k">this</span><span class="o">(</span><span class="n">name</span><span class="o">)</span>
+         <span class="k">this</span><span class="o">.</span><span class="n">age</span> <span class="k">=</span> <span class="n">age</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1195,22 +1197,22 @@ res6: Int = 12
 
 <p>8)嵌套类</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Family(val h_name:String, val w_name:String){
-	class Husband(var name:String){
-         println(" I'm a husband ")
-	}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Family</span><span class="o">(</span><span class="k">val</span> <span class="n">h_name</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span> <span class="k">val</span> <span class="n">w_name</span><span class="k">:</span><span class="kt">String</span><span class="o">){</span>
+	<span class="k">class</span> <span class="nc">Husband</span><span class="o">(</span><span class="k">var</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">){</span>
+         <span class="n">println</span><span class="o">(</span><span class="s">" I'm a husband "</span><span class="o">)</span>
+	<span class="o">}</span>
 
-	class Wife(var name:String){
-	        println(" I'm a Wife ")
-	 }
+	<span class="k">class</span> <span class="nc">Wife</span><span class="o">(</span><span class="k">var</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">){</span>
+	        <span class="n">println</span><span class="o">(</span><span class="s">" I'm a Wife "</span><span class="o">)</span>
+	 <span class="o">}</span>
 
-	 var husband = new Husband(h_name)
-	 var wife = new Wife(w_name)
+	 <span class="k">var</span> <span class="n">husband</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Husband</span><span class="o">(</span><span class="n">h_name</span><span class="o">)</span>
+	 <span class="k">var</span> <span class="n">wife</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Wife</span><span class="o">(</span><span class="n">w_name</span><span class="o">)</span>
 
-	 def info(){
-	        println( "husband: "+husband.name+", wife:"+wife.name  )
-    }
-}
+	 <span class="k">def</span> <span class="n">info</span><span class="o">(){</span>
+	        <span class="n">println</span><span class="o">(</span> <span class="s">"husband: "</span><span class="o">+</span><span class="n">husband</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s">", wife:"</span><span class="o">+</span><span class="n">wife</span><span class="o">.</span><span class="n">name</span>  <span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 <p>在Scala中，你几乎可以在<code class="highlighter-rouge">任何语法结构</code>中<code class="highlighter-rouge">嵌套语法结构</code>，如在<code class="highlighter-rouge">函数中定义函数，在类中定义类</code>。</p>
@@ -1219,18 +1221,18 @@ res6: Int = 12
 
 <p>1)Scala中没有<code class="highlighter-rouge">静态方法</code>和<code class="highlighter-rouge">静态字段</code>，但是可以用<code class="highlighter-rouge">object</code>语法来实现类似的功能。对象定义某个类的单个实例。Scala的object中可以实现类似的功能，用来存放<code class="highlighter-rouge">工具函数或常量</code>等。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>object Sequence{
-     private var next_num = 0
-     val threshold = 100
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">object</span> <span class="nc">Sequence</span><span class="o">{</span>
+		<span class="k">private</span> <span class="k">var</span> <span class="n">next_num</span> <span class="k">=</span> <span class="mi">0</span>
+		<span class="k">val</span> <span class="n">threshold</span> <span class="k">=</span> <span class="mi">100</span>
 
-     def getSequence() = {
-         next_num += 1
-         next_num
-	}
-}
+		<span class="k">def</span> <span class="n">getSequence</span><span class="o">()</span> <span class="k">=</span> <span class="o">{</span>
+			<span class="n">next_num</span> <span class="o">+=</span> <span class="mi">1</span>
+			<span class="n">next_num</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
 </code></pre>
 </div>
-
 <p>使用object中的常量或方法，通过object名直接调用，对象构造器在对象<code class="highlighter-rouge">第一次被使用</code>时调用(如果某对象一直<code class="highlighter-rouge">未被使用</code>，那么其构造器也不会被<code class="highlighter-rouge">调用</code>)</p>
 
 <p>object的构造器<code class="highlighter-rouge">不接受参数传递</code></p>
@@ -1248,13 +1250,13 @@ res5:	Int = 100
 
 <p><strong>伴生对象是类的一个<code class="highlighter-rouge">特殊实例</code></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Counter{
-     def getTotalCounter()= Counter.getCount
-}
-object Counter{
-     private var cnt = 0
-     private def getCount()= cnt
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Counter</span><span class="o">{</span>
+     <span class="k">def</span> <span class="n">getTotalCounter</span><span class="o">()</span><span class="k">=</span> <span class="nc">Counter</span><span class="o">.</span><span class="n">getCount</span>
+<span class="o">}</span>
+<span class="k">object</span> <span class="nc">Counter</span><span class="o">{</span>
+     <span class="k">private</span> <span class="k">var</span> <span class="n">cnt</span> <span class="k">=</span> <span class="mi">0</span>
+     <span class="k">private</span> <span class="k">def</span> <span class="n">getCount</span><span class="o">()</span><span class="k">=</span> <span class="n">cnt</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1262,14 +1264,14 @@ object Counter{
 
 <p>3)对象可以继承或扩展多个特质</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>abstract class Person(var name:String, var age:Int){
-     def info():Unit
-}
-object XiaoMing extends Person("XiaoMing", 5){
-     def info(){
-        println("name is" +naem +",age is " + age)
-	}
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Person</span><span class="o">(</span><span class="k">var</span> <span class="n">name</span><span class="k">:</span><span class="kt">String</span><span class="o">,</span> <span class="k">var</span> <span class="n">age</span><span class="k">:</span><span class="kt">Int</span><span class="o">){</span>
+     <span class="k">def</span> <span class="n">info</span><span class="o">()</span><span class="k">:</span><span class="kt">Unit</span>
+<span class="o">}</span>
+<span class="k">object</span> <span class="nc">XiaoMing</span> <span class="k">extends</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"XiaoMing"</span><span class="o">,</span> <span class="mi">5</span><span class="o">){</span>
+     <span class="k">def</span> <span class="n">info</span><span class="o">(){</span>
+        <span class="n">println</span><span class="o">(</span><span class="s">"name is"</span> <span class="o">+</span><span class="n">naem</span> <span class="o">+</span><span class="s">",age is "</span> <span class="o">+</span> <span class="n">age</span><span class="o">)</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 
 </code></pre>
 </div>
@@ -1282,11 +1284,11 @@ object XiaoMing extends Person("XiaoMing", 5){
 
 <p>main方法定义在object中，形式如下</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>object  Hello{
-	def main(args:Array[String]){
-		println("hello world")
-	}
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">object</span>  <span class="nc">Hello</span><span class="o">{</span>
+	<span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span><span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">]){</span>
+		<span class="n">println</span><span class="o">(</span><span class="s">"hello world"</span><span class="o">)</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
@@ -1294,9 +1296,9 @@ object XiaoMing extends Person("XiaoMing", 5){
 
 <p>6)还可以通过<code class="highlighter-rouge">扩展特质App</code>来运行指定代码</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>object hello extens App{
-	println("A `hello world` from hello world")
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">object</span> <span class="nc">hello</span> <span class="n">extens</span> <span class="nc">App</span><span class="o">{</span>
+	<span class="n">println</span><span class="o">(</span><span class="s">"A `hello world` from hello world"</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 <p>通过扩展App特质的方式执行程序，将要执行的程序放到了object的主构造器中。</p>
@@ -1305,36 +1307,36 @@ object XiaoMing extends Person("XiaoMing", 5){
 
 <p>Scala并没有定义枚举类型，但是可以通过定义扩展Enumeration的对象，并用value方法初始化枚举中所有可选的值，提供枚举。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>object TrafficeLight extends Enumeration{
-	val Red,Yellow,Green = value
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">object</span> <span class="nc">TrafficeLight</span> <span class="k">extends</span> <span class="nc">Enumeration</span><span class="o">{</span>
+	<span class="k">val</span> <span class="nc">Red</span><span class="o">,</span><span class="nc">Yellow</span><span class="o">,</span><span class="nc">Green</span> <span class="k">=</span> <span class="n">value</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
 <p>上述实例中的 val Red,Yellow,Green = value语句，相当于</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>val red = value
-val Yellow = value
-val Green = value
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">val</span> <span class="n">red</span> <span class="k">=</span> <span class="n">value</span>
+<span class="k">val</span> <span class="nc">Yellow</span> <span class="k">=</span> <span class="n">value</span>
+<span class="k">val</span> <span class="nc">Green</span> <span class="k">=</span> <span class="n">value</span>
 </code></pre>
 </div>
 
 <p>用value方法来<code class="highlighter-rouge">初始化枚举类变量</code>时，value方法会返回内部类的新实例，且该内部类也叫value。另外，在调用value方法时，可传入<code class="highlighter-rouge">ID，名称</code>两个参数。如果没有指定ID，默认<code class="highlighter-rouge">从0开始，后面参数的ID加1</code>，如果未指定名称，默认与属性字段同名。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>object TrafficLight extends Enumeration{
-	val Red = value(1,"stop")
-	val Yellow = value("wait")// 可以单独传名字
-	val Green = value(4)	// 可以传入ID
-}
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">object</span> <span class="nc">TrafficLight</span> <span class="k">extends</span> <span class="nc">Enumeration</span><span class="o">{</span>
+	<span class="k">val</span> <span class="nc">Red</span> <span class="k">=</span> <span class="n">value</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="s">"stop"</span><span class="o">)</span>
+	<span class="k">val</span> <span class="nc">Yellow</span> <span class="k">=</span> <span class="n">value</span><span class="o">(</span><span class="s">"wait"</span><span class="o">)</span><span class="c1">// 可以单独传名字
+</span>	<span class="k">val</span> <span class="nc">Green</span> <span class="k">=</span> <span class="n">value</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>	<span class="c1">// 可以传入ID
+</span><span class="o">}</span>
 </code></pre>
 </div>
 
 <p>上例中，Yellow属性就<code class="highlighter-rouge">仅定义了名称</code>，Green<code class="highlighter-rouge">仅定义ID</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>scala&gt;TrafficLight.Red
-res10:TrafficLight.value = Stop
-scala&gt;TrafficLight.Green
-res11:TrafficLight.value = Green
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">scala</span><span class="o">&gt;</span><span class="nc">TrafficLight</span><span class="o">.</span><span class="nc">Red</span>
+<span class="n">res10</span><span class="k">:</span><span class="kt">TrafficLight.value</span> <span class="o">=</span> <span class="nc">Stop</span>
+<span class="n">scala</span><span class="o">&gt;</span><span class="nc">TrafficLight</span><span class="o">.</span><span class="nc">Green</span>
+<span class="n">res11</span><span class="k">:</span><span class="kt">TrafficLight.value</span> <span class="o">=</span> <span class="nc">Green</span>
 </code></pre>
 </div>
 
@@ -1344,22 +1346,22 @@ res11:TrafficLight.value = Green
 
 <p>8)通过id方法来获取枚举类型值的ID</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>scala&gt;TrafficLight.Green.id
-res12: Int = 4
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">scala</span><span class="o">&gt;</span><span class="nc">TrafficLight</span><span class="o">.</span><span class="nc">Green</span><span class="o">.</span><span class="n">id</span>
+<span class="n">res12</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">4</span>
 </code></pre>
 </div>
 
 <p>9)通过values方法获取所有枚举值的集合</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>scala&gt;TrafficLight.values
-res13:TrafficLight.ValueSet = TrafficLight.ValueSets(Stop,Wait,Green)
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">scala</span><span class="o">&gt;</span><span class="nc">TrafficLight</span><span class="o">.</span><span class="n">values</span>
+<span class="n">res13</span><span class="k">:</span><span class="kt">TrafficLight.ValueSet</span> <span class="o">=</span> <span class="nc">TrafficLight</span><span class="o">.</span><span class="nc">ValueSets</span><span class="o">(</span><span class="nc">Stop</span><span class="o">,</span><span class="nc">Wait</span><span class="o">,</span><span class="nc">Green</span><span class="o">)</span>
 </code></pre>
 </div>
 
 <p>10)通过ID来获取对应的枚举对象</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>scala&gt;TrafficLight(1)
-res14:TrafficLight.value = Stop
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">scala</span><span class="o">&gt;</span><span class="nc">TrafficLight</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">res14</span><span class="k">:</span><span class="kt">TrafficLight.value</span> <span class="o">=</span> <span class="nc">Stop</span>
 </code></pre>
 </div>
 
