@@ -5,10 +5,54 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Fri, 25 Nov 2016 22:33:55 +0800</lastBuildDate>
-        <pubDate>Fri, 25 Nov 2016 22:33:55 +0800</pubDate>
+        <lastBuildDate>Mon, 28 Nov 2016 21:43:44 +0800</lastBuildDate>
+        <pubDate>Mon, 28 Nov 2016 21:43:44 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Mongodb</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ubuntu-install&quot; id=&quot;markdown-toc-ubuntu-install&quot;&gt;Ubuntu install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ubuntu-install&quot;&gt;Ubuntu install&lt;/h2&gt;
+
+&lt;p&gt;下载软件包&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/&quot;&gt;tar.gz&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#mongodb download tarball  64bit
+sudo mkdir /usr/local/mongodb
+#add PATH to .bashrc
+export PATH=/usr/local/mongodb/bin:$PATH
+source ~/.bashrc
+#run
+cd
+mkdir mongodb/data -p
+#守护进程
+mongod --dbpath=/home/lkk/mongodb/data/ --logpath=/home/lkk/mongodb/db.logs
+
+#mongodb shell
+sudo apt-get install mongodb-clients
+#run
+mongo
+#help
+help
+db.help()
+
+#python API
+sudo pip install pymongo -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+ipython
+import pymongo
+#no error you can use happy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+                <link>http://lkkandsyf.github.io/2016/11/28/Mongodb</link>
+                <guid>http://lkkandsyf.github.io/2016/11/28/Mongodb</guid>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>Vim</title>
@@ -3437,6 +3481,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#jupyter-spark&quot; id=&quot;markdown-toc-jupyter-spark&quot;&gt;Jupyter-spark&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#spark-command&quot; id=&quot;markdown-toc-spark-command&quot;&gt;Spark-command&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#docker-scala-spark&quot; id=&quot;markdown-toc-docker-scala-spark&quot;&gt;docker-scala-spark&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#spark-e-book&quot; id=&quot;markdown-toc-spark-e-book&quot;&gt;spark e-book&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -3563,6 +3608,62 @@ sudo apt-get autoremove ntop	// 只下载这个软件
   &lt;li&gt;宽依赖(wide dependencies)：是指父RDD的分区被多个子RDD的分区所依赖，如join则会导致宽依赖&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;这样划分有两个好处:&lt;/p&gt;
+
+&lt;p&gt;首先，窄依赖支持在一个结点上管道化执行。例如基于一对一的关系，可以在filter之后执行map&lt;/p&gt;
+
+&lt;p&gt;其次，窄依赖支持更高效的故障还原。因为对于窄依赖，只有丢失的父RDD的分区需要重新计算&lt;/p&gt;
+
+&lt;p&gt;对于宽依赖，一个结点的故障可能导致来之所有的父RDD的分区丢失，因此就需要完全重新执行。因此对于宽依赖，Spark会在持有各自父分区的结点上，将中间数据持久化来简化故障还原。&lt;/p&gt;
+
+&lt;p&gt;RDD操作&lt;/p&gt;
+
+&lt;p&gt;转换(transformation)现有的RDD通过转换生成一个新的RDD,转换是延时执行(lazy)的&lt;/p&gt;
+
+&lt;p&gt;动作(action)在RDD上运行计算之后，返回的结果给驱动程序或写入文件系统，触发job&lt;/p&gt;
+
+&lt;p&gt;transformation&lt;/p&gt;
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//对调用map的RDD数据集中的每个element都使用func,然后返回一个新的RDD,这个返回的数据集是分布式数据集
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//对调用filter的RDD数据集中的每个元素都使用func，然后返回一个包含使func为true的元素构成的的RDD
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//和map差不多，但是flatMap生的是多个结果
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapPartitions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//和map很像，但map是每个element,而mapPartitions是每个partition
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;smaple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withReplacement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fraction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//抽样
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otherDataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//返回一个新的数据集，包含源数据集和给定的数据集的元素的集合
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disince&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//返回一个新的数据集，这个数据和含有的是源数据集中的distinct的element
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groupBeKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 返回(K,Seq[V]),也就是hadoop中的reduce函数的接受的key-valuelist
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduceByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//就是一个给定的reducefunc再作用在groupBeKey产生的(K,Seq[V]),比如，求和求平均数
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ascending&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//按照Key进行排序，是升序还是降序，ascending是布尔类型
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otherDataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//当两个KV的数据集(K,V)和(K,W)，返回是(K,(V,W))的数据集的numTasks是为并发的任务数
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cogroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otherDataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;numTasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 当有两个KV的数据集(K,V)和(K,W)，返回的是(K,Seq[V],Seq[W])的数据集，numTasks为并发的任务数
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cartesain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;otherDataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//笛卡尔积m*n
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;actions&lt;/p&gt;
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//聚集，但是传入的函数是两个参数返回一个值，这个函数必须满足交换律和结合律
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//一般在filter或者足够小的结果的时候，再用collect封装返回一个数组
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//返回的是数据集的element的个数
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//返回的是数据集的第一个元素
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//返回前n个element,这个是driver program返回的
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;takeSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withReplacement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//抽样返回一个数据集中的num个元素，随机种子seed
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAsTextFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//把数据集写到一个textfile中，或者hdfs，或者支持的文件系统中，spark把每条记录都转换为一行记录，然后写到file中。
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAsSequenceFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//只能用在key-value对上，然后生成SequenceFile写到本地或者hadoop文件系统
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAsObjectFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//把数据写到一个java序列化的文件中，用SparkContext.objectFile()装载
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 返回的是key对应的个数的一个map,作用于一个RDD
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//对dataset中的每个元素都使用func
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;缓存的操作&lt;/p&gt;
+
+&lt;p&gt;使用persist和cache方法将任意的RDD缓存到内存，磁盘文件系统中&lt;/p&gt;
+
+&lt;p&gt;缓存是容错的可以通过构建它的transformation自动重构&lt;/p&gt;
+
+&lt;p&gt;被缓存的RDD被使用的时，存取速度会被大大加速&lt;/p&gt;
+
+&lt;p&gt;persisit可以指定一个StorageLevel&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;创建SparkContext步骤&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -3571,6 +3672,79 @@ sudo apt-get autoremove ntop	// 只下载这个软件
   &lt;li&gt;利用SparkConf对象来初始化SparkContext&lt;/li&gt;
   &lt;li&gt;创建RDD,并执行相应的Transformation和action并得到最后的结果&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;广播变量(Broadcast Variables)&lt;/p&gt;
+
+&lt;p&gt;广播变量缓存到各个节点的内存中，而不是每个Task&lt;/p&gt;
+
+&lt;p&gt;广播变量被创建后，能在集群中运行的任何函数调用&lt;/p&gt;
+
+&lt;p&gt;广播变量是只读的，不能在被广播后修改&lt;/p&gt;
+
+&lt;p&gt;对于大数据集的广播，Spark尝试使用高效的广播算法来降低通信成本&lt;/p&gt;
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;broadcastVar&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;broadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;broadcastVar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;累加器&lt;/p&gt;
+
+&lt;p&gt;累加器只支持加法操作，可以高效地并行，用于实现计数器和变量求和&lt;/p&gt;
+
+&lt;p&gt;Spark原生支持数值类型和标准可变集合的计数器，但用户可以添加新的类型&lt;/p&gt;
+
+&lt;p&gt;只有驱动程序才能获取累加器的值&lt;/p&gt;
+
+&lt;p&gt;核心模块—Schedule整体&lt;/p&gt;
+
+&lt;p&gt;Scheduler模块是Spark最核心的模块之一，充分体现了Spark与MapReduce的不同之处，体现了Spark DAG思想的精巧和设计的优雅。&lt;/p&gt;
+
+&lt;p&gt;Scheduler模块分为两大主要部分,DAGScheduler和TaskScheduler.&lt;/p&gt;
+
+&lt;p&gt;创建RDD，经过一系列Transformation,最后Action—-&amp;gt;Action会触发SparkContext的rubjob方法，交给DAGSchedule处理—-&amp;gt;DAGScheduler将DAG生成Stage—–&amp;gt;将Stage交给TaskScheduler—&amp;gt;本地或者集群的Executor上运行。&lt;/p&gt;
+
+&lt;p&gt;DAGScheduler把一个spark作业转换成Stage的DAG，根据RDD和Stage之间的关系，找出开销最小的调度方法，然后把stage以TaskSet的形式提交给TaskScheduler&lt;/p&gt;
+
+&lt;p&gt;SchedulableBuilder主要负责TaskSet的调度。核心接口:getSortedTaskSetQueue,该接口返回排序后的TaskSetManager队列，该接口供TaskSchedulerImpl调用。SchedulableBuilder维护的是一棵树，跟节点是rootpool,叶子节点是TaskSetManager对象。&lt;/p&gt;
+
+&lt;p&gt;TaskSet优先级排序有两种算法，一种是FIFO,另一种是Fair，所以SchedulableBuilder又两种实现:FIFO　SchedulableBuilder和FairSchedulableBuilder.&lt;/p&gt;
+
+&lt;p&gt;FIFO(默认模式)是先进先出型，根据TaskSet对应的stageID的顺序来调度。只有一个pool—rootpool和叶子节点—TaskSetManager.&lt;/p&gt;
+
+&lt;p&gt;Fair(模式)是公平调度型，根据所管理的pool/TaskSetManager中正在运行的任务的数量来判断优先级。所构建的调度池是两级的结构，即rootpool管理一组pool,子pool进一步管理属于该调度池的TaskSetManager.&lt;/p&gt;
+
+&lt;p&gt;TaskSetManager主要负责一个taskset中task的调度和跟踪&lt;/p&gt;
+
+&lt;p&gt;核心接口:resourceOffer,该接口根据输入的资源在taskset内部调度一个task,主要考虑因素是Locality,该接口供TaskSchedulerImpl调度。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;根据task的perferredLocations得到每个Task的Localitylevel&lt;/li&gt;
+  &lt;li&gt;resourceOffe根据资源和maxLocality(最大宽松的本地化级别)调度task&lt;/li&gt;
+  &lt;li&gt;最终调度task的allowedLocality是该TaskSet允许的Locality(最大不超过输入的maxLocality),该TaskSet允许的Locality最初默认值是最严格本地化级别。如果lastLaunchTime(最近一次该taskset发布的task的时间)与当前时间差超时，会放宽locality的要求，选择低一优先级的locality.&lt;/li&gt;
+  &lt;li&gt;在allowedLocality范围内，优先调度更local的task,也就是最好在同个进程里，次好是同个node(机器)上，再次是同机架。在allowedLocality范围内，在该taskset没有找到task,那么返回None.(上一层调用会继续查询其他的taskset是否有满足指定localityLevel的task)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SchedulerBackend是trait,封装了多种backend,用于与底层资源调度系统交互(mesos/YARN),配合TaskScheduler实现具体任务所需要的资源分配。&lt;/p&gt;
+
+&lt;p&gt;核心接口:reviveOffers，与TaskSchedulerImpl交互完成task的Launch&lt;/p&gt;
+
+&lt;p&gt;SchedluerBackend值关心资源，不关心task.提交资源供TaskSchedulerImpl分配task&lt;/p&gt;
+
+&lt;p&gt;ReviveOffers的实现&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将空闲资源(freeCore,executor,host)以及workerOfferList形式组织。&lt;/li&gt;
+  &lt;li&gt;调用TaskSchedulerImpl的resourceOffers(),为workerOfferList空闲资源分配相应的task&lt;/li&gt;
+  &lt;li&gt;调用launchTasks，向executorActor发送LaunchTask消息。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parallelize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*SimpleApp.scala*/&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.spark.SparkContext&lt;/span&gt;
@@ -3620,7 +3794,19 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 &lt;hr /&gt;
 &lt;hr /&gt;
 &lt;hr /&gt;
+
 &lt;hr /&gt;
+
+&lt;h3 id=&quot;docker-scala-spark&quot;&gt;docker-scala-spark&lt;/h3&gt;
+
+&lt;p&gt;这里收集了一些关于scala，spark编程的docker.
+dockoey/jupyter-scala
+&lt;a href=&quot;https://hub.docker.com/r/dockoey/jupyter-scala/&quot;&gt;dockerhub&lt;/a&gt;
+&lt;a href=&quot;https://github.com/dockoey/jupyter-scala&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;all-spark-notebook
+&lt;a href=&quot;https://hub.docker.com/r/jupyter/all-spark-notebook/&quot;&gt;dockerhub&lt;/a&gt;
+&lt;a href=&quot;https://github.com/jupyter/docker-stacks&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;spark-e-book&quot;&gt;spark e-book&lt;/h3&gt;
 
@@ -7001,24 +7187,6 @@ grep -w abc file -n
                 <link>http://lkkandsyf.github.io/2016/09/22/command</link>
                 <guid>http://lkkandsyf.github.io/2016/09/22/command</guid>
                 <pubDate>Thu, 22 Sep 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Weechat</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#usage&quot; id=&quot;markdown-toc-usage&quot;&gt;usage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;usage&quot;&gt;usage&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://robots.thoughtbot.com/weechat-for-slacks-irc-gateway&quot;&gt;basic-usage&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/2016/09/17/weechat</link>
-                <guid>http://lkkandsyf.github.io/2016/09/17/weechat</guid>
-                <pubDate>Sat, 17 Sep 2016 00:00:00 +0800</pubDate>
         </item>
 
 
