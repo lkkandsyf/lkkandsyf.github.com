@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 28 Nov 2016 21:43:44 +0800</lastBuildDate>
-        <pubDate>Mon, 28 Nov 2016 21:43:44 +0800</pubDate>
+        <lastBuildDate>Tue, 29 Nov 2016 19:39:55 +0800</lastBuildDate>
+        <pubDate>Tue, 29 Nov 2016 19:39:55 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -22,32 +22,55 @@
 &lt;h2 id=&quot;ubuntu-install&quot;&gt;Ubuntu install&lt;/h2&gt;
 
 &lt;p&gt;下载软件包&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/&quot;&gt;tar.gz&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#mongodb download tarball  64bit
-sudo mkdir /usr/local/mongodb
-#add PATH to .bashrc
-export PATH=/usr/local/mongodb/bin:$PATH
-source ~/.bashrc
-#run
-cd
-mkdir mongodb/data -p
-#守护进程
-mongod --dbpath=/home/lkk/mongodb/data/ --logpath=/home/lkk/mongodb/db.logs
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#mongodb download tarball  64bit&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#add PATH to .bashrc&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bashrc&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#run&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#守护进程&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mongod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbpath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lkk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logpath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lkk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logs&lt;/span&gt;
 
-#mongodb shell
-sudo apt-get install mongodb-clients
-#run
-mongo
-#help
-help
-db.help()
+&lt;span class=&quot;c&quot;&gt;#mongodb shell&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clients&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#run&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mongo&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#help&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-#python API
-sudo pip install pymongo -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
-ipython
-import pymongo
-#no error you can use happy
+&lt;span class=&quot;c&quot;&gt;#python API&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pymongo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pypi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;douban&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;simple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trusted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pypi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;douban&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#指定版本&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#sudo pip install pymongo=x.x.x -i http://pypi.douban.com/simple --trusted-host pypi.douban.com&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ipython&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pymongo&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#no error you can use happy&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;p&gt;mongodb开机启动&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/re.local
+#add
+mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://robomongo.org/&quot;&gt;mongodb可视化工具&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://api.mongodb.com/python/&quot;&gt;Python API&lt;/a&gt;
+&lt;a href=&quot;http://xitongjiagoushi.blog.51cto.com/9975742/1657096&quot;&gt;help web&lt;/a&gt;
+&lt;a href=&quot;http://www.cnblogs.com/cswuyg/p/4595799.html&quot;&gt;mongo shell&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;help doc
+&lt;a href=&quot;http://www.cnblogs.com/yanhongjun/p/5778344.html&quot;&gt;link&lt;/a&gt;
+&lt;a href=&quot;http://jingyan.baidu.com/article/a3aad71aa1abe7b1fa009641.html&quot;&gt;link&lt;/a&gt;
+&lt;a href=&quot;http://jingyan.baidu.com/article/ad310e80ae6d971849f49ed3.html&quot;&gt;link&lt;/a&gt;
+&lt;a href=&quot;http://jingyan.baidu.com/article/08b6a591cb06f114a8092209.html&quot;&gt;link&lt;/a&gt;
+xlrd
+&lt;a href=&quot;http://www.jb51.net/article/60510.htm&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/2016/11/28/Mongodb</guid>
