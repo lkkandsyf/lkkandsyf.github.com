@@ -264,6 +264,7 @@ $ exec $SHELL			#输入命令重启Shell，然后就可以重启pyenv
 ```
 
 myself config
+
 ```
 $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
