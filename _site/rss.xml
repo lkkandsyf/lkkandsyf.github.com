@@ -5,10 +5,26 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 30 Nov 2016 19:58:49 +0800</lastBuildDate>
-        <pubDate>Wed, 30 Nov 2016 19:58:49 +0800</pubDate>
+        <lastBuildDate>Sat, 03 Dec 2016 09:31:33 +0800</lastBuildDate>
+        <pubDate>Sat, 03 Dec 2016 09:31:33 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Restful</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#restful-api&quot; id=&quot;markdown-toc-restful-api&quot;&gt;Restful API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;restful-api&quot;&gt;Restful API&lt;/h2&gt;
+</description>
+                <link>http://lkkandsyf.github.io/2016/11/30/Restful</link>
+                <guid>http://lkkandsyf.github.io/2016/11/30/Restful</guid>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>Mongodb</title>
@@ -22,6 +38,7 @@
 &lt;h2 id=&quot;ubuntu-install&quot;&gt;Ubuntu install&lt;/h2&gt;
 
 &lt;p&gt;下载软件包&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/&quot;&gt;tar.gz&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#mongodb download tarball  64bit&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mongodb&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#add PATH to .bashrc&lt;/span&gt;
@@ -50,6 +67,7 @@
 &lt;span class=&quot;c&quot;&gt;#no error you can use happy&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;mongodb开机启动&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/re.local
 #add
@@ -6716,6 +6734,7 @@ $ exec $SHELL			#输入命令重启Shell，然后就可以重启pyenv
 &lt;/div&gt;
 
 &lt;p&gt;myself config&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 $ echo 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;' &amp;gt;&amp;gt; ~/.zshrc
 $ echo 'export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &amp;gt;&amp;gt; ~/.zshrc
@@ -7175,37 +7194,6 @@ which pip
                 <link>http://lkkandsyf.github.io/2016/10/02/ML-DM.md</link>
                 <guid>http://lkkandsyf.github.io/2016/10/02/ML-DM.md</guid>
                 <pubDate>Sun, 02 Oct 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Command</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;这里收集了一些关于Linux的基本命令手册&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#grep&quot; id=&quot;markdown-toc-grep&quot;&gt;grep&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;grep&quot;&gt;grep&lt;/h2&gt;
-
-&lt;p&gt;-w 精确匹配一个单词&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;file:
-abc
-abcd
-1abc2
-
-只想匹配abc那一行 就直接可以用-w参数
-grep -w abc file -n
-就可以达到效果了
-1:abc
-
-&lt;/code&gt;&lt;/pre&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/2016/09/22/command</link>
-                <guid>http://lkkandsyf.github.io/2016/09/22/command</guid>
-                <pubDate>Thu, 22 Sep 2016 00:00:00 +0800</pubDate>
         </item>
 
 
