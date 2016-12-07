@@ -935,8 +935,11 @@ def func():
 print (func())
 
 #一个数的绝对值
+
 print ((lambda:x-x)(-2))		#输出2
-```
+
+```python
+
 **Generator函数**
 
 生成器的作用使一次产生一个数据项，并把数据项输出。Generator函数可以在`for循环中遍历`，Generator函数每次`返回一个数据项的特性`，使得迭代器的性能更佳。

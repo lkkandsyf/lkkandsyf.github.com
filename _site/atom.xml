@@ -4,11 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
-<<<<<<< HEAD
- <updated>2016-12-05T07:25:16+00:00</updated>
-=======
- <updated>2016-12-06T19:45:23+08:00</updated>
->>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
+ <updated>2016-12-07T08:58:12+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -19,7 +15,7 @@
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+08:00</updated>
+   <updated>2016-12-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -30,7 +26,7 @@
 
 &lt;h2 id=&quot;gitbook&quot;&gt;Gitbook&lt;/h2&gt;
 
-&lt;p&gt;Gitbook这是一个编辑文档的好东西,我采用的别人的&lt;a href=&quot;&quot;&gt;docker&lt;/a&gt;,使用起来方便很多。&lt;/p&gt;
+&lt;p&gt;Gitbook这是一个编辑文档的好东西,我采用的别人的&lt;a href=&quot;https://hub.docker.com/r/fellah/gitbook/&quot;&gt;docker&lt;/a&gt;,使用起来方便很多。&lt;/p&gt;
 
 &lt;p&gt;帮助命令&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gitbook help
@@ -42,13 +38,20 @@ gitbook serve .
 &lt;p&gt;文档:pdf,html.epub&lt;/p&gt;
 
 &lt;p&gt;生成pdf文档，可以同步到githbu.io上面再生成pdf格式。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GitbookIO/gitbook&quot;&gt;office&lt;/a&gt;
+&lt;a href=&quot;http://www.chengweiyang.cn/gitbook/basic-usage/README.html&quot;&gt;basic&lt;/a&gt;
+&lt;a href=&quot;http://caibaojian.com/gitbook/&quot;&gt;zh&lt;/a&gt;
+&lt;a href=&quot;https://github.com/wwq0327/gitbook-zh&quot;&gt;demo&lt;/a&gt;
+&lt;a href=&quot;http://colobu.com/2014/10/09/gitbook-quickstart/&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/03/Gitbook"/>
-   <updated>2016-12-03T00:00:00+08:00</updated>
+   <updated>2016-12-03T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/03/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -80,11 +83,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-<<<<<<< HEAD
    <updated>2016-11-28T00:00:00+00:00</updated>
-=======
-   <updated>2016-11-28T00:00:00+08:00</updated>
->>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1194,15 +1193,18 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;#一个数的绝对值&lt;/span&gt;
+
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#输出2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Generator函数&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;生成器的作用使一次产生一个数据项，并把数据项输出。Generator函数可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;for循环中遍历&lt;/code&gt;，Generator函数每次&lt;code class=&quot;highlighter-rouge&quot;&gt;返回一个数据项的特性&lt;/code&gt;，使得迭代器的性能更佳。&lt;/p&gt;
+&lt;span class=&quot;sb&quot;&gt;``&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
 
-&lt;p&gt;Generator函数定义&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;函数名(参数列表):
+&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;
+
+&lt;span class=&quot;err&quot;&gt;生成器的作用使一次产生一个数据项，并把数据项输出。&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数可以在&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`for循环中遍历`&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数每次&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`返回一个数据项的特性`&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，使得迭代器的性能更佳。&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数定义&lt;/span&gt;
+&lt;span class=&quot;sb&quot;&gt;``&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;函数名(参数列表):
 		....
 		&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表达式&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1381,6 +1383,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;字符串的查找和替换,Python中提供了find函数&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find(substring[,start[,end]])
@@ -1388,6 +1391,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/div&gt;
 
 &lt;p&gt;参数substring表示待查找的字符串，start表示开始索引的位置，end表示结束索引的位置，即在分片[start:end]中查找。如果找到字符串substring，则返回substring在&lt;code class=&quot;highlighter-rouge&quot;&gt;源字符串中第一次出现的索引&lt;/code&gt;，否则返回-1.rfind的参数和find是一样的。不同的是从 字符串的尾部开始查找子串。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#查找字符串&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;this is a apple&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# 8		第一次出现的索引&lt;/span&gt;
@@ -1395,7 +1399,9 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# 10	最后一次出现索引&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;repacle函数repale(old,new[,max]):old表示被替换的字符串，new：表示替换old的字符串，参数max表示使用new替换old的次数，返回一个新的字符串，如果字符串old不在源字符串中，则函数返回源字符串的值。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#字符串的替换&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world,hello china&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#全部替换&lt;/span&gt;
@@ -1403,6 +1409,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#替换失败，返回源字符串&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;日期与字符串的转换&lt;/p&gt;
 
 &lt;p&gt;Python中提供了time模块处理日期和时间，&lt;/p&gt;
@@ -3953,9 +3960,10 @@ dockoey/jupyter-scala
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sudo apt-get update
 $sudo apt-get install apt-transport-https ca-certificates
 $sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-$ echo &quot;deb https://apt.dockerproject.org/repo ubuntu-trusty main&quot; | sudo tee /etc/apt/sources.list.d/docker.list
+$echo &quot;deb https://apt.dockerproject.org/repo ubuntu-trusty main&quot; | sudo tee /etc/apt/sources.list.d/docker.list
 $sudo apt-get update
 $sudo apt-get install docker-engine
+$or curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh - #来加速
 $sudo service docker start
 $sudo docker run hello-world
 &lt;/code&gt;&lt;/pre&gt;
@@ -7197,62 +7205,5 @@ which pip
 </content>
  </entry>
  
-<<<<<<< HEAD
- <entry>
-   <title>Data Analysis</title>
-   <link href="http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis"/>
-   <updated>2016-10-06T00:00:00+00:00</updated>
-   <id>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;数据分析技术&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;数据分析技术&lt;/h2&gt;
-
-&lt;p&gt;1.Hadoop只能用作&lt;code class=&quot;highlighter-rouge&quot;&gt;存储和资源管理&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;2.spark只能作为&lt;code class=&quot;highlighter-rouge&quot;&gt;计算&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;3.storm只计算&lt;/p&gt;
-
-&lt;p&gt;4.kafka数据缓冲层(平衡流式数据量的过大或过小)&lt;/p&gt;
-
-&lt;p&gt;5.flume采集&lt;/p&gt;
-
-&lt;p&gt;6.Tachyon分布式内存文件系统(alluxio)&lt;/p&gt;
-
-&lt;p&gt;7.redis，mongoDB分布式数据库&lt;/p&gt;
-
-&lt;p&gt;8.实时搜索引擎solr和lucene&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;数据分析系统的布局&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/big-data-structure.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/gnool/p/5645036.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Ml Dm.md</title>
-   <link href="http://lkkandsyf.github.io/2016/10/02/ML-DM.md"/>
-   <updated>2016-10-02T00:00:00+00:00</updated>
-   <id>http://lkkandsyf.github.io/2016/10/02/ML-DM.md</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-
-&lt;p&gt;##Machine Learning&lt;/p&gt;
-
-&lt;p&gt;##Data Mining&lt;/p&gt;
-</content>
- </entry>
- 
-=======
->>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
  
 </feed>
