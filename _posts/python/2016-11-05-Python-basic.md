@@ -115,6 +115,7 @@ if...elif..else判断语句
 if嵌套语句
 
 Python中没有switch语句，而是使用字典来代替的。
+
 ```python
 from __future__ import division
 
@@ -132,6 +133,7 @@ print(result.get(operator))
 ```
 
 **while循环**
+
 ```python
 while(expr)
 	...
@@ -161,13 +163,14 @@ for var in set:
 else:
 	...
 ```
-for...in...循环通常与range()函数一起使用，rangge返回一个列表，for...in...遍历列表中的元素
+for...in...循环通常与range()函数一起使用，range返回一个列表，for...in...遍历列表中的元素
 
 **break和continue**
 
 break语句不能运行在`循环体或分支语句之外`，否则，Python解释器会提示错误。
 
 冒泡排序
+
 ```python
 def bubbleSort(numbers):
 	for j in range(len(numbers),-1,-1,-1):
@@ -191,6 +194,7 @@ if __name__ == '__main__':
  + 元组
 
 元组是Python中常用的一种数据结构。元组由不同的元素组成，每个元素可以存储`不同类型的数据`，如字符串，数字甚至元组。元组是`写保护`的，即元组创建后不能再做任务`修改操作`，元组通常代表`一行`数据，而在元组中的元素代表`不同`的数据项。
+
 ```python
 tuple = (ele1,ele2,...)			#元组的创建
 tuple = ("apple","banana","grape","orange")	#元组的初始化，元素之间逗号分割
@@ -213,7 +217,9 @@ a,b,c = tuple
 print (a,b,c)
 
 ```
+
 元组的遍历:元组的遍历是指通过循环语句依次访问元组中各个元素的值。遍历元组需要用到两个函数range(),len(),range和len都是内建函数，这些函数可以直接使用，不需要import语句导入。内建函数是Python自动导入的函数。
+
 ```python
 tuple= (("apple","banana"),("grape","orange"),("watermelon",),("grape",))
 for i in range(len(tuple)):
@@ -231,6 +237,7 @@ for i in tuple:	#遍历元组
  + 列表
 
 列表是Python内置的一种数据结构。它由一系列元素组成，所有元素被包含在一对方括号中。列表创建后，可以执行添加或删除操作。list = [ele1,ele2,....],追加append(object),object可以是`元组，列表，字典或任何对象`，列表的删除remove(value),如果value不在列表中，将会抛出异常.
+
 ```python
 list = ["apple","banana","grape","orange"]		#定义列表
 print (list)
@@ -246,6 +253,7 @@ print (list)
 ```
 
 列表的使用
+
 ```python
 list = {"apple","banana","grape","orange"}
 print (list[-2])
@@ -261,6 +269,7 @@ for i in range(len(list)):
 	print()
 ```
 列表连接
+
 ```python
 list1 = ["apple","banana"]
 list1 = ["grape","orange"]
@@ -279,6 +288,7 @@ print (list1)
 
 ```
 列表的查找，排序，反转
+
 ```python
 list = ["apple","banana","grape","orange"]
 print (list.index("grape"))		#打印grape的索引
@@ -304,6 +314,7 @@ print ("reverse list:",list)
  + reverse():列表的反转
 
 列表实现堆栈和队列
+
 ```python
 #堆栈(先进后出)
 list = ["apple","grape","grape"]
@@ -332,6 +343,7 @@ print (list)
 	dictionary = {}
 
 字典的创建和访问
+
 ```python
 dict = {"a":"apple","b":"banana","g":"grape","o","orange"}
 print (dict)
@@ -376,9 +388,9 @@ for (k,v) in dict.items():
 ```
 混合型字典：使用元组，列表或字典作为value值创建的字典
 
-	dict ={"key1":(tuple),"key2":[list],"key3":[dictionary],....}
-
 ```python
+dict ={"key1":(tuple),"key2":[list],"key3":[dictionary],....}
+
 dict = {"a":{"apple,"},"bo":{"b":"banana","o":orange},"g":["grape","grapefruit"]}
 print (dict["a"])		#整个元组
 print (dict["a"][0])	#元组的第一个元素
@@ -388,18 +400,21 @@ print (dict["g"][1])	#输出列表中的第二个元素
 ```
 
 字典的方法keys(),values()分别返回字典key列表和value列表
+
 ```python
 dict = {"a":"apple","b":"banana","c":"grape","d":"orange"}
 #输出key的列表
 print (dict.keys())
 #输出value的列表
 print (dict.values())
+
 ```
 要获取字典中某个value值，可以使用dict[key]的结构来访问。另一种获取value值的办法是使用字典的get()，get()的声明
 
 	D.get(k[,d]) -> D[k]
 
 参数k表示字典的键值，参数d可以作为get()的返回值，参数d可以默认，默认值是None。get()相当与一条if ... else ...语句，如果参数k在字典D中，get()将返回D[k],如果参数k不在字典D中，则返回参数d。
+
 ```python
 #get()的等价语句
 D = {"key1":"vaule1","key2","value2"}
@@ -419,6 +434,7 @@ print (dict.get("e","apple"))#获取键为e的值，不存在就返回默认值a
 	D.update(E) -> None
 
 合并字典
+
 ```python
 D = {"key1":"value1","key2","value2"}
 E1= {"key3":"value3","key4","value4"}
@@ -436,6 +452,7 @@ print (dict)
 `字典不属于序列`，所以字典`没有顺序性`，update之后，字典中的各元素的排列顺序是`无序的`。
 
 setdefault()的使用
+
 ```python
 #设置默认值
 dict = {}
@@ -445,6 +462,7 @@ dict["a"] = "apple"			# dict["a"] = "apple"
 dict.setdefault("a","None")	#再次设置默认值None
 print (dict)				#由于设置了dict["a"]的值为"apple",即使再次调用setdefault()也不会影响value值，所以dict["a"]的值仍然为apple，而不是"default"
 ```
+
 字典的常用方法
  + items() 返回(key,value)元组组成的列表
  + iteritems() 返回执行字典的遍历器
@@ -457,6 +475,7 @@ print (dict)				#由于设置了dict["a"]的值为"apple",即使再次调用setd
  + copy()  复制一个字典中所有的数据
 
 字典的排序，复制
+
 ```python
 dict = {"a":"apple","b":"banana","c":"grape","d","orange"}
 print (dict)
@@ -466,6 +485,7 @@ print (sorted(dict.items(),key=lambda d:d[0]))
 print (sorted(dict.items(),key=lambda d:d[1]))
 ```
 字典的copy，实现了字典的浅拷贝操作
+
 ```python
 dict1 = {"a":"apple","b":"banana","c":"grape","d","orange"}
 dict2 = {"e":"watermelon","d","dance"}
@@ -476,6 +496,7 @@ print (dict2)
 身拷贝能够对拷贝对象内部所有的数据和引用，引用相当用C语言中的指针的概念，Python中`并不存在指针`，但是变量的内存结构中通过引用来为`维护变量`，而`浅拷贝`只是`复制数据`，并没有`复制数据的引用`，新的数据的旧的数据使用`同一块内存空间`，例如，字典B浅拷贝字典A的数据，如果字典B的数据发生`添加，删除或修改操作`，字典A的数据`也将发生变化`，相反，如果字典B`深拷贝`字典A的数据，字典B的数据`发生变化`，也`不会影响到字典A`
 
 深拷贝和浅拷贝应用于`Python`中的`任何对象`，不只是字典，在Python中可以使用copy模块来实现对象的深拷贝和浅拷贝，deepcopy()用于深拷贝操作，copy()用于浅拷贝操作。
+
 ```python
 #字典的深拷贝
 import copy
@@ -490,6 +511,7 @@ print(dict)
 全局字典----sys.modules模块
 
 sys.modules是一个全局模块，这个字典是Python启动后就加载在`内存`中。每当程序员`导入`新的模块，sys.moules都将记录这些模。字典sys.modules对加载的模块起到了缓存的作用。当某个模块`第一次`导入时，字典sys.modules将自动记录该模块，当`第二次`导入此模块时，Python会直接到字典中`查找`，从而加快了程序的`运行速度`
+
 ```python
 #查看模块
 import sys
@@ -507,6 +529,7 @@ print (zip(set(sys.modules) - set(d)))	#zip对set集合进行解包
  + 序列
 
 序列是具有`索引和切片能力的集合`,元组，列表，和字符串具有通过索引来访问某个具体的值，或通过切片返回一段切片的能力，因此,`元组，列表或字符串`都属于`序列`
+
 ```python
 #序列索引
 tuple = ("apple","banna","grape","orange")
@@ -539,8 +562,11 @@ print (str[1:-1])			#ppl
 print (str[:])				#apple
 
 分片seq[:3]表示从序列第一个元素到第三个元素的值，分片[:]表示整个序列
+
 ```
+
 元组和列表都具有序列的特性，但是它们的区别也很明显。元组是`只读的一组数据`，而且元组`没有提供排序和查找的方法`，列表的数据可读写，而且提供了丰富的方法，支持排序，查找操作。`列表的数据通常具有相同的意义`。
+
 ```
 				元组					列表
 支持负索引			yes					yes
