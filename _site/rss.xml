@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 07 Dec 2016 09:20:14 +0000</lastBuildDate>
-        <pubDate>Wed, 07 Dec 2016 09:20:14 +0000</pubDate>
+        <lastBuildDate>Wed, 07 Dec 2016 19:47:43 +0800</lastBuildDate>
+        <pubDate>Wed, 07 Dec 2016 19:47:43 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -43,7 +43,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -59,7 +59,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/03/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/03/Gitbook</guid>
-                <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 03 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -75,7 +75,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -140,7 +140,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -172,7 +172,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -204,7 +204,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1215,20 +1215,22 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#输出2&lt;/span&gt;
 
-&lt;span class=&quot;sb&quot;&gt;``&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;
+&lt;p&gt;&lt;strong&gt;Generator函数&lt;/strong&gt;&lt;/p&gt;
 
-&lt;span class=&quot;err&quot;&gt;生成器的作用使一次产生一个数据项，并把数据项输出。&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数可以在&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`for循环中遍历`&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数每次&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`返回一个数据项的特性`&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，使得迭代器的性能更佳。&lt;/span&gt;
+&lt;p&gt;生成器的作用使一次产生一个数据项，并把数据项输出。Generator函数可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;for循环中遍历&lt;/code&gt;，Generator函数每次&lt;code class=&quot;highlighter-rouge&quot;&gt;返回一个数据项的特性&lt;/code&gt;，使得迭代器的性能更佳。&lt;/p&gt;
 
-&lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;函数定义&lt;/span&gt;
-&lt;span class=&quot;sb&quot;&gt;``&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;函数名(参数列表):
+&lt;p&gt;Generator函数定义&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;函数名(参数列表):
 		....
 		&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;表达式&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Generator函数的定义和普通函数定义没有什么区别，只要在函数体内使用yield生成数据项即可。Generator函数可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;for循环中遍历&lt;/code&gt;,而且可以通过next()方法获得yield生成的数据项。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#定义Generator函数&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -3303,7 +3305,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3523,7 +3525,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3539,7 +3541,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3591,7 +3593,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3937,7 +3939,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -4614,7 +4616,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -4689,7 +4691,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6047,7 +6049,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6422,7 +6424,7 @@ axel -n 10 https://download.elastic.co/elasticsearch/release/org/elasticsearch/d
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/16/elk</link>
                 <guid>http://lkkandsyf.github.io/2016/10/16/elk</guid>
-                <pubDate>Sun, 16 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 16 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7032,7 +7034,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</link>
                 <guid>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</guid>
-                <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7176,7 +7178,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/15/Resume</link>
                 <guid>http://lkkandsyf.github.io/2016/10/15/Resume</guid>
-                <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7192,7 +7194,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/07/XX-net</link>
                 <guid>http://lkkandsyf.github.io/2016/10/07/XX-net</guid>
-                <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 07 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7208,7 +7210,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/06/Nginx</link>
                 <guid>http://lkkandsyf.github.io/2016/10/06/Nginx</guid>
-                <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7224,7 +7226,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/06/HiveQL</link>
                 <guid>http://lkkandsyf.github.io/2016/10/06/HiveQL</guid>
-                <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
 
