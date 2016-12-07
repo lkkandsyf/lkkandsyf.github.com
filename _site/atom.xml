@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-03T09:31:33+08:00</updated>
+ <updated>2016-12-05T07:25:16+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+08:00</updated>
+   <updated>2016-11-30T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -30,9 +30,9 @@
  
  <entry>
    <title>Mongodb</title>
-   <link href="http://lkkandsyf.github.io/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/2016/11/28/Mongodb</id>
+   <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
+   <updated>2016-11-28T00:00:00+00:00</updated>
+   <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
@@ -74,10 +74,10 @@
 &lt;/div&gt;
 
 &lt;p&gt;mongodb开机启动&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/re.local
 #add
 mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -88,7 +88,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;a href=&quot;http://www.cnblogs.com/cswuyg/p/4595799.html&quot;&gt;mongo shell&lt;/a&gt;
 &lt;a href=&quot;http://www.jianshu.com/p/5c4cd03d29ae&quot;&gt;code&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;xlrd
+&lt;p&gt;xlrd 读取excel文件的库
 &lt;a href=&quot;http://www.jb51.net/article/60510.htm&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
@@ -96,7 +96,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+08:00</updated>
+   <updated>2016-11-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -128,7 +128,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+08:00</updated>
+   <updated>2016-11-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -160,7 +160,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3227,7 +3227,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3447,7 +3447,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3463,7 +3463,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+08:00</updated>
+   <updated>2016-10-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3515,7 +3515,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3861,7 +3861,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -4537,7 +4537,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+08:00</updated>
+   <updated>2016-10-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -4612,7 +4612,7 @@ sudo apt-get install shadowsocks-qt5
  <entry>
    <title>Learn Scala</title>
    <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+08:00</updated>
+   <updated>2016-10-19T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5970,7 +5970,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
  <entry>
    <title>Elk</title>
    <link href="http://lkkandsyf.github.io/2016/10/16/elk"/>
-   <updated>2016-10-16T00:00:00+08:00</updated>
+   <updated>2016-10-16T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/16/elk</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6345,7 +6345,7 @@ axel -n 10 https://download.elastic.co/elasticsearch/release/org/elasticsearch/d
  <entry>
    <title>Python Upgrade</title>
    <link href="http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade"/>
-   <updated>2016-10-15T00:00:00+08:00</updated>
+   <updated>2016-10-15T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6955,7 +6955,7 @@ which pip
  <entry>
    <title>Resume</title>
    <link href="http://lkkandsyf.github.io/2016/10/15/Resume"/>
-   <updated>2016-10-15T00:00:00+08:00</updated>
+   <updated>2016-10-15T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/15/Resume</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7099,7 +7099,7 @@ which pip
  <entry>
    <title>Xx Net</title>
    <link href="http://lkkandsyf.github.io/2016/10/07/XX-net"/>
-   <updated>2016-10-07T00:00:00+08:00</updated>
+   <updated>2016-10-07T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/07/XX-net</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7115,7 +7115,7 @@ which pip
  <entry>
    <title>Nginx</title>
    <link href="http://lkkandsyf.github.io/2016/10/06/Nginx"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/06/Nginx</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7131,7 +7131,7 @@ which pip
  <entry>
    <title>Hiveql</title>
    <link href="http://lkkandsyf.github.io/2016/10/06/HiveQL"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/06/HiveQL</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7147,7 +7147,7 @@ which pip
  <entry>
    <title>Data Analysis</title>
    <link href="http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7186,7 +7186,7 @@ which pip
  <entry>
    <title>Ml Dm.md</title>
    <link href="http://lkkandsyf.github.io/2016/10/02/ML-DM.md"/>
-   <updated>2016-10-02T00:00:00+08:00</updated>
+   <updated>2016-10-02T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/02/ML-DM.md</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;

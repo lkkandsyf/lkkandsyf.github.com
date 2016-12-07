@@ -1121,11 +1121,13 @@ def reverse(s):
 def reverse(s):
 	return s[::-1]
 ```
+
 字符串的查找和替换,Python中提供了find函数
 
 	find(substring[,start[,end]])
 
 参数substring表示待查找的字符串，start表示开始索引的位置，end表示结束索引的位置，即在分片[start:end]中查找。如果找到字符串substring，则返回substring在`源字符串中第一次出现的索引`，否则返回-1.rfind的参数和find是一样的。不同的是从 字符串的尾部开始查找子串。
+
 ```python
 #查找字符串
 sen = "this is a apple"
@@ -1133,7 +1135,9 @@ print (sen.find("a"))		# 8		第一次出现的索引
 sen = "this is a apple"
 print (sen.rfind("a"))		# 10	最后一次出现索引
 ```
+
 repacle函数repale(old,new[,max]):old表示被替换的字符串，new：表示替换old的字符串，参数max表示使用new替换old的次数，返回一个新的字符串，如果字符串old不在源字符串中，则函数返回源字符串的值。
+
 ```python
 #字符串的替换
 sen = "hello world,hello china"
@@ -1141,6 +1145,7 @@ print (sen.replace("hello","hi"))		#全部替换
 print (sen.replace("hello","hi",1))		#第一个被替换
 print (sen.replace("abc","hi"))			#替换失败，返回源字符串
 ```
+
 日期与字符串的转换
 
 Python中提供了time模块处理日期和时间，
