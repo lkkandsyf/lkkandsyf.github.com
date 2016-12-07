@@ -47,6 +47,8 @@ AppID:myappid-227
 
 web:http://127.0.0.1:8085/?module=gae_proxy&menu=status
 
+web:http://127.0.0.1:8085/
+
 
 ## shadowsock
 

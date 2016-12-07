@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 07 Dec 2016 19:48:02 +0800</lastBuildDate>
-        <pubDate>Wed, 07 Dec 2016 19:48:02 +0800</pubDate>
+        <lastBuildDate>Wed, 07 Dec 2016 19:48:05 +0800</lastBuildDate>
+        <pubDate>Wed, 07 Dec 2016 19:48:05 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -44,22 +44,6 @@ gitbook serve .
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
                 <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Gitbook</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
-</description>
-                <link>http://lkkandsyf.github.io/2016/12/03/Gitbook</link>
-                <guid>http://lkkandsyf.github.io/2016/12/03/Gitbook</guid>
-                <pubDate>Sat, 03 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7226,6 +7210,45 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/06/HiveQL</link>
                 <guid>http://lkkandsyf.github.io/2016/10/06/HiveQL</guid>
+                <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Data Analysis</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;数据分析技术&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;数据分析技术&lt;/h2&gt;
+
+&lt;p&gt;1.Hadoop只能用作&lt;code class=&quot;highlighter-rouge&quot;&gt;存储和资源管理&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;2.spark只能作为&lt;code class=&quot;highlighter-rouge&quot;&gt;计算&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;3.storm只计算&lt;/p&gt;
+
+&lt;p&gt;4.kafka数据缓冲层(平衡流式数据量的过大或过小)&lt;/p&gt;
+
+&lt;p&gt;5.flume采集&lt;/p&gt;
+
+&lt;p&gt;6.Tachyon分布式内存文件系统(alluxio)&lt;/p&gt;
+
+&lt;p&gt;7.redis，mongoDB分布式数据库&lt;/p&gt;
+
+&lt;p&gt;8.实时搜索引擎solr和lucene&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;数据分析系统的布局&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/big-data-structure.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/gnool/p/5645036.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</link>
+                <guid>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</guid>
                 <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
