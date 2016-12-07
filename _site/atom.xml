@@ -4,13 +4,62 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
+<<<<<<< HEAD
  <updated>2016-12-05T07:25:16+00:00</updated>
+=======
+ <updated>2016-12-06T19:45:23+08:00</updated>
+>>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Gitbook</title>
+   <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
+   <updated>2016-12-04T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#gitbook&quot; id=&quot;markdown-toc-gitbook&quot;&gt;Gitbook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gitbook&quot;&gt;Gitbook&lt;/h2&gt;
+
+&lt;p&gt;Gitbook这是一个编辑文档的好东西,我采用的别人的&lt;a href=&quot;&quot;&gt;docker&lt;/a&gt;,使用起来方便很多。&lt;/p&gt;
+
+&lt;p&gt;帮助命令&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gitbook help
+gitbook serve .
+# localhost:4000进行访问
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;文档:pdf,html.epub&lt;/p&gt;
+
+&lt;p&gt;生成pdf文档，可以同步到githbu.io上面再生成pdf格式。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Gitbook</title>
+   <link href="http://lkkandsyf.github.io/2016/12/03/Gitbook"/>
+   <updated>2016-12-03T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/2016/12/03/Gitbook</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Restful</title>
@@ -31,7 +80,11 @@
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
+<<<<<<< HEAD
    <updated>2016-11-28T00:00:00+00:00</updated>
+=======
+   <updated>2016-11-28T00:00:00+08:00</updated>
+>>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7144,6 +7197,7 @@ which pip
 </content>
  </entry>
  
+<<<<<<< HEAD
  <entry>
    <title>Data Analysis</title>
    <link href="http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis"/>
@@ -7198,5 +7252,7 @@ which pip
 </content>
  </entry>
  
+=======
+>>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
  
 </feed>

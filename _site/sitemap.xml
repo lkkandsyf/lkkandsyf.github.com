@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/2016/12/04/Gitbook</loc>
+<lastmod>2016-12-04T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/2016/12/03/Gitbook</loc>
+<lastmod>2016-12-03T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>/2016/11/30/Restful</loc>
 <lastmod>2016-11-30T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>/mongodb/2016/11/28/Mongodb</loc>
+<<<<<<< HEAD
 <lastmod>2016-11-28T00:00:00+00:00</lastmod>
+=======
+<lastmod>2016-11-28T00:00:00+08:00</lastmod>
+>>>>>>> 72030f2483d7b9626e6c9d4c4ea7aabe806f8493
 </url>
 <url>
 <loc>/vim/2016/11/24/Vim</loc>
