@@ -782,6 +782,7 @@ zip(iter1[,iter2[..]]):把n个序列作为列表的元素返回
 函数的参数：在C/C++中参数的传递有值传递和引用传递两种方式，而Python中任何东西都是对象，所以参数只支持引用传递的方式，Python通过名称绑定的机制，把实际的参数和形式参数绑在一起。即把形式参数传递到函数所在的`局部命名空间中`，形式参数和实际参数`指向内存中同一个存储空间`
 
 函数的参数支持默认值，当某个参数没有传递实际值时，函数使用默认的参数进行计算。
+
 ```python
 	def arithmetic(x = 1,y = 1,operator = "+"):
 		result = {
@@ -794,6 +795,7 @@ zip(iter1[,iter2[..]]):把n个序列作为列表的元素返回
 参数可以是变量，也可以是元组，列表等内置数据结构。
 
 `列表作为参数传递`
+
 ```python
 	def arithmetric(args=[],operator="+"):
 		x = args[0]
@@ -828,12 +830,14 @@ Python还提供了另外一个标识符"\*\*"，在形式参数的前面添加"\
 返回值使用return语句，return语句后面可以是变量或表达式。
 
 **没有返回值的函数**
+
 ```python
 	def func():
 		pass	#pass关键字，相当与占位符
 	print (func())
 ```
 None是Python中的对象，不属于数字也不属于字符串。当函数中return语句不带`任何参数时`，返回的结果也是`None`
+
 ```python
 	def func():
 		return
@@ -841,6 +845,7 @@ None是Python中的对象，不属于数字也不属于字符串。当函数中r
 	print (func())
 ```
 如果需要`返回多个值`,可以把这些值`打包`到元组中，在调用时，对返回的元组进行`解包`即可，下面的代码实现输入变量的反转。例如输入1,2,3输出2,1,0
+
 ```python
 	#返回多个值
 	def func(x,y,z):
@@ -866,6 +871,7 @@ None是Python中的对象，不属于数字也不属于字符串。当函数中r
 **嵌套函数**
 
 函数的嵌套是指在`函数的内部调用其他函数`，函数的嵌套层数不能过多，否则，容易造成`代码的可读行差，不易维护等问题`，一般函数的嵌套控制在3层以内。
+
 ```python
 def sum(a,b):
 	return a + b
@@ -915,6 +921,7 @@ print (func())
 **递归函数**
 
 递归函数需要`编写递归结束的条件`，否则，递归程序将无法结束。一般通过判断语句来结束程序
+
 ```python
 #计算阶乘
 def refunc(n):
@@ -928,6 +935,7 @@ def refunc(n):
 refunc(5)
 ```
 每次调用递归函数都会复制函数中的所有变量，再执行递归函数。程序需要更多的存储空间，对程序的性能有一定的影响，因此，对于没有必要进行递归的程序，最好`其他方法进行改进`
+
 ```python
 #使用reduce计算阶乘
 from functools import reduce
@@ -937,9 +945,11 @@ print ("5! = ",reduce(lambda x,y:x*y,range(1,6)))
 **lambda函数**
 
 lambda函数用于创建一个匿名函数，函数名未知和标识符进行绑定。使用lambda函数可以返回一些简单的运算结果，lambda函数的格式：
+
 ```python
 	lambda 变量1，变量2，...:表达式
 ```
+
 ```python
 #赋值
 func = lamdba 变量1，变量2...:表达式
@@ -999,6 +1009,7 @@ print (r.next())
 ```
 
 yield 和 return的区别:原理不相同，yield生成值并不会中止程序的执行，返回值后程序继续往后执行。return返回值后，程序将中止执行
+
 ```python
 def func(n):
 	for i in range(n):
@@ -1025,11 +1036,13 @@ Generator函数可以返回元素的值，而序列也可以获取元素的值�
 ### 字符串与正则表达式
 
 Python中也提供了字符串格式化，将若干值插入`带有"%"标记的字符串中，从而可以动态的输出字符串`。
+
 ```python
 "%s" %str				#单个格式化
 "%s %s" %(str1,str2)	#多个格式化
 ```
 code:
+
 ```python
 #格式化字符串
 str1 = "verison"
@@ -1049,6 +1062,7 @@ print ("the :%.1f" %1.25))	#精确到小数点后一位
 print ("the :%f.2" %1.25))	#精确到小数点后两位
 ```
 其他的格式：%c,%s,%d,%u,%o,%x,%X,%f,%e,%E,%g,%G,%p.要输出%可以通过%%来输出
+
 ```python
 #使用字典格式多个值
 print ("%(version)s:%(num)1.f"%("version":"version","num":2))
@@ -1066,6 +1080,7 @@ print ("%30s"%word)
 转义字符\会经常遇到。\n,\t各占一个字符，Python中还提供了strip,lstrip,rstrip函数来去掉字符串中的转义字符.
 
 字符串的合并，使用+来实现。可能有些麻烦，Python提供了join连接字符串函数
+
 ```python
 #join
 strs = ["hello","world"]
@@ -1082,6 +1097,7 @@ print result
 
 ```
 字符串的截取string[start:end:step]
+
 ```python
 str1 = "hello world"
 print (str1[0:3])		#第一个字符到第三个字符
@@ -1089,10 +1105,12 @@ print (str1[::3])		#省略了开始和结束的字符，从字符串的第一个
 print (str1[1::2])		#从第二个字符开始，以步长为2截取字符
 ```
 如果要同时截取多个子串，可以使用函数split函数
+
 ```python
 split([char][,num])
 ```
 参数char表示用于分割的字符，默认的分割字符是空格，num表示分割的次数。如果num等于2，将把源字符串分割为3个子串，默认将根据字符char在字符串中出现的个数来分割子串，函数的返回值是由子串组成的列表
+
 ```python
 sentence = "bob said:1,2,3,4"
 print ("使用空格取子串:",sentence.split())
@@ -1100,12 +1118,14 @@ print ("使用逗号取子串:",sentence.split(","))
 print ("使用两个逗号取子串:",sentence.split(",",2))
 ```
 字符串连接之后，Python将分配新的空间给连接后的字符串，源字符串保持不变。
+
 ```python
 str1 = "a"
 print (id(str1))
 print (id(str1 +"b"))		#两个结果不一样
 ```
 字符串的比较
+
 ```python
 str1 = 1
 str2 = "1"
@@ -1120,6 +1140,7 @@ else:
 	print ("the same not")
 ```
 比较字符，python提供了startswith()和endswith()函数
+
 ```python
 #比较两个字符的开始和结束
 word = "hello world"
@@ -1132,6 +1153,7 @@ print (world.endswith("ld",6,len(word)))
 `startswith(),endswith()相当于分片[0:n]`，n是源字符串的最后一个索引，这两个`不能用于比较源字符串中任意一部分的子串`。
 
 字符串反转
+
 ```python
 #循环实现字符串反转
 def reverse(s):
@@ -1301,6 +1323,7 @@ China
 
 ```
 与sub类似的就是subn功能相同，但是多返回一个值，即匹配后的替换次数
+
 ```python
 import re
 
@@ -1313,6 +1336,7 @@ print (p.pattern)
 ```
 
 正则表达的分组
+
 ```python
 import re
 p = re.compile(r"(abc)\1")
@@ -1436,6 +1460,7 @@ f.close()
  + read
 
 一次性读取所有的内容，并赋值给一个变量
+
 ```python
 f = open('hello.txt')
 context = f.read()
@@ -1534,6 +1559,7 @@ src.close()
 dst.close()
 ```
 使用shutil模块来实现文件的复制
+
 ```python
 import shutil
 
@@ -1546,6 +1572,7 @@ shutil.move("hello2.txt","hello3.txt")
 **`文件的重命名`**
 
 os模块的rename函数实现文件或目录重命名
+
 ```python
 #modify filename
 import os
@@ -1608,6 +1635,7 @@ f2.close()
 
 **`文件的比较`**
 python提供了difflib模块
+
 ```python
 import difflib
 
@@ -1642,6 +1670,7 @@ os模块中提供常用的目录处理函数
  + walk(top,topdown=True,onerror=None)
 
 目录的创建和删除可以使用mkdir,makedirs,rmdir,removedirs实现
+
 ```python
 import os
 
@@ -1788,6 +1817,7 @@ if __name__ == "__main__":
 类和对象是面向对象中的两个重要的概念。类是抽象，对象是实例。
 
 Python使用class关键字定义一个类，类名的`首字符一般要写`
+
 ```python
 #继承object
 class Class_name(object):
@@ -1823,6 +1853,7 @@ if __name__ == "__main__ :
 Python使用`约定属性的名称来达到数据封装的目的`，如果属性的名字以两个下划线开始，就`表示为私有属性`，反之，没有使用下划线开始的都表示为共有属性，Python中没有保护类型的修饰符。
 
 Python中的属性`分为实例属性和静态属性`。实例属性是一个self作为前缀的属性，\_\_ini\_\_方法即Python类的构造函数,静态变量可以被类直接调用，而不被实例化对象调用。当创建新的实例化对象后，静态变量并不会获得新的的内存空间，而是使用类创建的内存空间。因此，`静态变量`能够被多个实例化的对象`共享`,在Python中静态变量称为`类变量`，类变量可以在该类的所有`实例中`被共享。
+
 ```python
 class Fruit:
 	price = 0					#类属性
@@ -1868,6 +1899,7 @@ if __name__ == "__main__":
 **`方法`**
 
 类的方法分为共有方法和私有方法。私有方法不能被模块外的类或方法调用，私有方法也不能被外部的类或函数调用。Python使用函数staticmethod()或者@staticmethod修饰器把普通的函数转换为`静态方法`，Python的中静态方法并没有和类的实例进行名称绑定，要调用只需要使用类名组委的它的前缀即可。
+
 ```python
 class Fruit:
 	price = 0								#类变量
@@ -1900,6 +1932,7 @@ if __name == "__main__":
 上面的代码的getColor方法中有1个参数self参数，该参数是`区别方法和函数的标志`。类的方法`至少需要一个参数`，该方法不必给该参数赋值。通常这个特殊的参数被命令为self，self参数表示指向`实例对象本身`，self参数是`用于区分函数和类的方法`,self必须显示调用，因为Python是动态语言，没有提供声明变量的方式，这样就无法知道在方法中要赋值的变量是不是局部变量或是需要保存成实例属性。
 
 Python中还有一个种方法称为类方法。类方法是将本身作为操作对象的方法。类方法可以使函数classmethod或@classmethod修饰器定义。而与实例方法不同的是，把类方法作为第一个参数(cls)传递。把上面的静态方法，修改为类方法
+
 ```python
 @ classmethod
 def getPrice(cls):
@@ -1921,6 +1954,7 @@ self参数的名称可以是`任意合法的变量名`，建议使用self作为�
 在某个类的内部定义的类成为`内部类`，内部类中的方法可以使用两种方法调用
 
 第`一`种方法是`直接使用外部类调用内部类`，生成`内部类的实例`，再调用内部类的方法
+
 ```python
 object_name = outcloass_name.inclass_name()
 object_name.method()
@@ -1928,12 +1962,14 @@ object_name.method()
 其中outclass\_name表示外部类的名称，inclass\_name表示内部类的名称，object\_name表示内部类的实例。
 
 第`二`种方法先对外部类进行实例化，然后对实例化内部类，最后调用内部类的方法。
+
 ```python
 out_name = outclass_name()
 in_name = out_name.inclass_name()
 in_name.method()
 ```
 其中out\_name表示外部类的实例，in\_name表示内部类的实例
+
 ```python
 class Car:
 	class Door:					#内部类
@@ -1958,6 +1994,7 @@ if __name__ == "__main__":
 **`__init__方法`**
 
 构造函数用于初始化类的内部状态,Python的构造函数为\_\_init\_\_.除了用于定义实例变量外，还用于程序的初始化。\_\_init\_\_是`可选的`，如果不提供\_\_init\_\_方法，Python将会给出一个默认的\_\_init\_\_方法。
+
 ```python
 class Fruit:
 	def __init__(self,color):
@@ -1984,8 +2021,8 @@ if __name__ == "__main__":
 **`__del__方法`**
 
 析构函数用于释放对象占用的资源，Python提供了析构函数\_\_del\_\_(),析构函数可以释放对象的资源，是另一种释放资源的方法，析构函数是可选的，如果不提供，Python会在后台提供默认的析构函数
-```python
 
+```python
 class Fruit:
 	def __init__(self):
 		self.color = color
@@ -2012,6 +2049,7 @@ Python提供了gc模块，如果要设置调用垃圾回收器，可以使用gc�
 **`类的内置方法`**
 
 常用的内置方法
+
 ```python
 __init__(self)				#初始化对象，在创建新对象时调用
 __del__(self)				#释放对象，在对象释放被删除之前调用
@@ -2034,6 +2072,7 @@ __eq__(self,other)			#判断self对象是否等于other对象
  + \_\_new\_\_()
 
 \_\_new\_\_()在\_\_init\_\_()之前被调用，用于创建实例对象。利用这个方法和类的属性的特性可以实现设计模式中`单例模式`，单例模式是创建`唯一对象`，单例模式设计的类`只实例化一个对象`
+
 ```python
 class Singleton(object):			#定义实例
 	__instance = None
@@ -2050,6 +2089,7 @@ class Singleton(object):			#定义实例
  + \_\_getitem\_\_()
 
 如果类中把某个属性定义为`序列`，就可以该方法输出序列中的各个元素。
+
 ```python
 class FruitShop():
 	def __getitem__(self):
@@ -2083,6 +2123,7 @@ if __name__ == "__main__ :
  + \_\_call\_\_()
 
 使用该方法可以`模拟静态方法`
+
 ```python
 class Fruit:
 	class Growth:			#内部类
@@ -2174,6 +2215,7 @@ if __name__ == "__main__ :
 	super(type,obj)
 
 type是某个类，obj是type类实例化的对象，super可以绑定type类的对象。
+
 ```python
 #使用super调用父类
 class Fruit:
@@ -2194,6 +2236,7 @@ super类的实现代码继承了object,因此Fruit类必须继承object,如果�
 **`抽象基类`**
 
 抽象基类是对一类事物的特征行为的抽象，由抽象方法组成。在Python3中有abc模块,抽象基类`不能直接实例化`
+
 ```python
 from abc import ABCMeta,abstractmethod
 class Fruit(metaclass=ABCMeta):
@@ -2500,6 +2543,7 @@ Python内的异常使用继承结构构建，这种设计方式非常灵活，�
 **`try..except使用`**
 
 try...except语句用于处理问题语句，捕获可能出现的异常.try子句中代码块`放置可能出现异常`的语句，except子句中的`代码块处理异常`,当异常出现时，Python会自动生成一个异常对象。该对象包括异常的具体信息，以及异常的种类和错误位置。比如读取一个不存在的文件
+
 ```python
 try:
 	open("hello.txt","r")
@@ -2510,6 +2554,7 @@ except:				#其他异常就到这里
 	print ("program excepiton")
 ```
 try...except语句后还可以添加1个else子句。当try子句中的代码发生异常时，程序直接跳到except子句，反之，程序将执行else子句。
+
 ```python
 try:
 	result = 10/0
@@ -2522,6 +2567,7 @@ else:
 这上面的语句只能执行一个异常。
 
 嵌套异常
+
 ```python
 try:
 	s = "hello"
@@ -2541,6 +2587,7 @@ try..except嵌套的语句通常用于释放已经创建的系统资源。
 **`try..finally使用`**
 
 try..except语句后面还可以添加一个finall子句，finally子句的作用与Java中finally子句类似。无论异常是否发生，finally子句都会被执行。所有的`finally自己通常用于关闭异常而不能释放的系统资源`。
+
 ```python
 # finaly的错误使用
 try:
@@ -2554,6 +2601,7 @@ finall:
 上面的程序会报错，说ｆ不是try语句的中f，因此，解释器认为变量f没有定义。
 
 因此要把文件的打开操作置于try子句的外层，使f具有全局性，同时也要捕获文件打开的异常，这种情况就可以使用异常嵌套的语句，使每个try子句都必须有１个except子句或者finally子句与之对应。
+
 ```python
 
 try:
@@ -2573,6 +2621,7 @@ except FileNotFoundError:
 **`使用raise抛出异常`**
 
 当程序出现错误时，Python会自动引发异常，也可以通过raise语句显示引发异常。一旦执行了raise语句，raise语句后的代码将不能被执行。
+
 ```python
 try:
 	s = None
@@ -2588,6 +2637,7 @@ except TyepError:
 **`自定义异常`**
 
 Python允许程序员自定义异常类型，用于描述Python异常体系总没有涉及的异常情况。`自定义异常必须继承Exception类`。自定义异常按照命名规范以Error结尾，显式地告诉程序该类是异常类。自定义异常使用raise语句来触发，而且只能通过`手工方式触发`。
+
 ```python
 from __future__ import division
 
@@ -2619,6 +2669,7 @@ assert len(t) == 1		#出错
 
 ```
 assert语句还可以传递提示信息给AssertionError异常。当assert语句断言失败时，提示信息将打印控制台
+
 ```python
 month = 13
 assert  1 <= month <= 12,"month error"		#出现错误
@@ -2627,6 +2678,7 @@ assert  1 <= month <= 12,"month error"		#出现错误
 **`异常信息`**
 
 Python程序出现错误时，都会输出相关的异常信息，并支出错误的行号和错误的程序的代码。
+
 ```python
 def fun():
 	a = 10
