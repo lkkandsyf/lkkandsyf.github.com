@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-07T19:48:05+08:00</updated>
+ <updated>2016-12-08T05:11:21+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+08:00</updated>
+   <updated>2016-12-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -51,7 +51,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+08:00</updated>
+   <updated>2016-11-30T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -67,7 +67,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+08:00</updated>
+   <updated>2016-11-28T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -132,7 +132,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+08:00</updated>
+   <updated>2016-11-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -164,7 +164,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+08:00</updated>
+   <updated>2016-11-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -196,7 +196,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1023,6 +1023,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;函数的参数：在C/C++中参数的传递有值传递和引用传递两种方式，而Python中任何东西都是对象，所以参数只支持引用传递的方式，Python通过名称绑定的机制，把实际的参数和形式参数绑在一起。即把形式参数传递到函数所在的&lt;code class=&quot;highlighter-rouge&quot;&gt;局部命名空间中&lt;/code&gt;，形式参数和实际参数&lt;code class=&quot;highlighter-rouge&quot;&gt;指向内存中同一个存储空间&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;函数的参数支持默认值，当某个参数没有传递实际值时，函数使用默认的参数进行计算。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;arithmetic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;s&quot;&gt;&quot;+&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
@@ -1035,6 +1036,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;参数可以是变量，也可以是元组，列表等内置数据结构。&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;列表作为参数传递&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;arithmetric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;+&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -1069,12 +1071,14 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;返回值使用return语句，return语句后面可以是变量或表达式。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;没有返回值的函数&lt;/strong&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#pass关键字，相当与占位符&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;None是Python中的对象，不属于数字也不属于字符串。当函数中return语句不带&lt;code class=&quot;highlighter-rouge&quot;&gt;任何参数时&lt;/code&gt;，返回的结果也是&lt;code class=&quot;highlighter-rouge&quot;&gt;None&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
 
@@ -1082,6 +1086,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;如果需要&lt;code class=&quot;highlighter-rouge&quot;&gt;返回多个值&lt;/code&gt;,可以把这些值&lt;code class=&quot;highlighter-rouge&quot;&gt;打包&lt;/code&gt;到元组中，在调用时，对返回的元组进行&lt;code class=&quot;highlighter-rouge&quot;&gt;解包&lt;/code&gt;即可，下面的代码实现输入变量的反转。例如输入1,2,3输出2,1,0&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;c&quot;&gt;#返回多个值&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -1107,6 +1112,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;&lt;strong&gt;嵌套函数&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;函数的嵌套是指在&lt;code class=&quot;highlighter-rouge&quot;&gt;函数的内部调用其他函数&lt;/code&gt;，函数的嵌套层数不能过多，否则，容易造成&lt;code class=&quot;highlighter-rouge&quot;&gt;代码的可读行差，不易维护等问题&lt;/code&gt;，一般函数的嵌套控制在3层以内。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -1156,6 +1162,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;&lt;strong&gt;递归函数&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;递归函数需要&lt;code class=&quot;highlighter-rouge&quot;&gt;编写递归结束的条件&lt;/code&gt;，否则，递归程序将无法结束。一般通过判断语句来结束程序&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#计算阶乘&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;refunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
@@ -1169,6 +1176,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;每次调用递归函数都会复制函数中的所有变量，再执行递归函数。程序需要更多的存储空间，对程序的性能有一定的影响，因此，对于没有必要进行递归的程序，最好&lt;code class=&quot;highlighter-rouge&quot;&gt;其他方法进行改进&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#使用reduce计算阶乘&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;functools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reduce&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5! = &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
@@ -1178,9 +1186,11 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;&lt;strong&gt;lambda函数&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;lambda函数用于创建一个匿名函数，函数名未知和标识符进行绑定。使用lambda函数可以返回一些简单的运算结果，lambda函数的格式：&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;变量&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，变量&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表达式&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#赋值&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lamdba&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;变量&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，变量&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;表达式&lt;/span&gt;
 
@@ -1240,6 +1250,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/div&gt;
 
 &lt;p&gt;yield 和 return的区别:原理不相同，yield生成值并不会中止程序的执行，返回值后程序继续往后执行。return返回值后，程序将中止执行&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
@@ -1266,11 +1277,13 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;h3 id=&quot;section-5&quot;&gt;字符串与正则表达式&lt;/h3&gt;
 
 &lt;p&gt;Python中也提供了字符串格式化，将若干值插入&lt;code class=&quot;highlighter-rouge&quot;&gt;带有&quot;%&quot;标记的字符串中，从而可以动态的输出字符串&lt;/code&gt;。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#单个格式化&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#多个格式化&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;code:&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#格式化字符串&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;verison&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
@@ -1290,6 +1303,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;其他的格式：%c,%s,%d,%u,%o,%x,%X,%f,%e,%E,%g,%G,%p.要输出%可以通过%%来输出&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#使用字典格式多个值&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%(version)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%(num)1&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.f&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 
@@ -1307,6 +1321,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;转义字符\会经常遇到。\n,\t各占一个字符，Python中还提供了strip,lstrip,rstrip函数来去掉字符串中的转义字符.&lt;/p&gt;
 
 &lt;p&gt;字符串的合并，使用+来实现。可能有些麻烦，Python提供了join连接字符串函数&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#join&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;strs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1323,6 +1338,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;字符串的截取string[start:end:step]&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#第一个字符到第三个字符&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#省略了开始和结束的字符，从字符串的第一个字符开始以2为步长逐个截取字符&lt;/span&gt;
@@ -1330,10 +1346,12 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;如果要同时截取多个子串，可以使用函数split函数&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;参数char表示用于分割的字符，默认的分割字符是空格，num表示分割的次数。如果num等于2，将把源字符串分割为3个子串，默认将根据字符char在字符串中出现的个数来分割子串，函数的返回值是由子串组成的列表&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bob said:1,2,3,4&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;使用空格取子串:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;使用逗号取子串:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
@@ -1341,12 +1359,14 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;字符串连接之后，Python将分配新的空间给连接后的字符串，源字符串保持不变。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#两个结果不一样&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;字符串的比较&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -1361,6 +1381,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;比较字符，python提供了startswith()和endswith()函数&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#比较两个字符的开始和结束&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
@@ -1373,6 +1394,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;startswith(),endswith()相当于分片[0:n]&lt;/code&gt;，n是源字符串的最后一个索引，这两个&lt;code class=&quot;highlighter-rouge&quot;&gt;不能用于比较源字符串中任意一部分的子串&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;字符串反转&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#循环实现字符串反转&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
@@ -1559,6 +1581,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;与sub类似的就是subn功能相同，但是多返回一个值，即匹配后的替换次数&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;########compile&lt;/span&gt;
@@ -1571,6 +1594,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/div&gt;
 
 &lt;p&gt;正则表达的分组&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r&quot;(abc)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcabcabc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1704,6 +1728,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/ul&gt;
 
 &lt;p&gt;一次性读取所有的内容，并赋值给一个变量&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hello.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1806,6 +1831,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;使用shutil模块来实现文件的复制&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shutil&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;shutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copyfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello2.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1818,6 +1844,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;文件的重命名&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;os模块的rename函数实现文件或目录重命名&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#modify filename&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1879,6 +1906,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;文件的比较&lt;/code&gt;&lt;/strong&gt;
 python提供了difflib模块&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;difflib&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1915,6 +1943,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;目录的创建和删除可以使用mkdir,makedirs,rmdir,removedirs实现&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2072,6 +2101,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;类和对象是面向对象中的两个重要的概念。类是抽象，对象是实例。&lt;/p&gt;
 
 &lt;p&gt;Python使用class关键字定义一个类，类名的&lt;code class=&quot;highlighter-rouge&quot;&gt;首字符一般要写&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#继承object&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;....&lt;/span&gt;
@@ -2107,6 +2137,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;Python使用&lt;code class=&quot;highlighter-rouge&quot;&gt;约定属性的名称来达到数据封装的目的&lt;/code&gt;，如果属性的名字以两个下划线开始，就&lt;code class=&quot;highlighter-rouge&quot;&gt;表示为私有属性&lt;/code&gt;，反之，没有使用下划线开始的都表示为共有属性，Python中没有保护类型的修饰符。&lt;/p&gt;
 
 &lt;p&gt;Python中的属性&lt;code class=&quot;highlighter-rouge&quot;&gt;分为实例属性和静态属性&lt;/code&gt;。实例属性是一个self作为前缀的属性，__ini__方法即Python类的构造函数,静态变量可以被类直接调用，而不被实例化对象调用。当创建新的实例化对象后，静态变量并不会获得新的的内存空间，而是使用类创建的内存空间。因此，&lt;code class=&quot;highlighter-rouge&quot;&gt;静态变量&lt;/code&gt;能够被多个实例化的对象&lt;code class=&quot;highlighter-rouge&quot;&gt;共享&lt;/code&gt;,在Python中静态变量称为&lt;code class=&quot;highlighter-rouge&quot;&gt;类变量&lt;/code&gt;，类变量可以在该类的所有&lt;code class=&quot;highlighter-rouge&quot;&gt;实例中&lt;/code&gt;被共享。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;					&lt;span class=&quot;c&quot;&gt;#类属性&lt;/span&gt;
 
@@ -2152,6 +2183,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;方法&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;类的方法分为共有方法和私有方法。私有方法不能被模块外的类或方法调用，私有方法也不能被外部的类或函数调用。Python使用函数staticmethod()或者@staticmethod修饰器把普通的函数转换为&lt;code class=&quot;highlighter-rouge&quot;&gt;静态方法&lt;/code&gt;，Python的中静态方法并没有和类的实例进行名称绑定，要调用只需要使用类名组委的它的前缀即可。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;								&lt;span class=&quot;c&quot;&gt;#类变量&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -2184,6 +2216,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;上面的代码的getColor方法中有1个参数self参数，该参数是&lt;code class=&quot;highlighter-rouge&quot;&gt;区别方法和函数的标志&lt;/code&gt;。类的方法&lt;code class=&quot;highlighter-rouge&quot;&gt;至少需要一个参数&lt;/code&gt;，该方法不必给该参数赋值。通常这个特殊的参数被命令为self，self参数表示指向&lt;code class=&quot;highlighter-rouge&quot;&gt;实例对象本身&lt;/code&gt;，self参数是&lt;code class=&quot;highlighter-rouge&quot;&gt;用于区分函数和类的方法&lt;/code&gt;,self必须显示调用，因为Python是动态语言，没有提供声明变量的方式，这样就无法知道在方法中要赋值的变量是不是局部变量或是需要保存成实例属性。&lt;/p&gt;
 
 &lt;p&gt;Python中还有一个种方法称为类方法。类方法是将本身作为操作对象的方法。类方法可以使函数classmethod或@classmethod修饰器定义。而与实例方法不同的是，把类方法作为第一个参数(cls)传递。把上面的静态方法，修改为类方法&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;classmethod&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2205,6 +2238,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;在某个类的内部定义的类成为&lt;code class=&quot;highlighter-rouge&quot;&gt;内部类&lt;/code&gt;，内部类中的方法可以使用两种方法调用&lt;/p&gt;
 
 &lt;p&gt;第&lt;code class=&quot;highlighter-rouge&quot;&gt;一&lt;/code&gt;种方法是&lt;code class=&quot;highlighter-rouge&quot;&gt;直接使用外部类调用内部类&lt;/code&gt;，生成&lt;code class=&quot;highlighter-rouge&quot;&gt;内部类的实例&lt;/code&gt;，再调用内部类的方法&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;object_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outcloass_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inclass_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;object_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -2212,12 +2246,14 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;其中outclass_name表示外部类的名称，inclass_name表示内部类的名称，object_name表示内部类的实例。&lt;/p&gt;
 
 &lt;p&gt;第&lt;code class=&quot;highlighter-rouge&quot;&gt;二&lt;/code&gt;种方法先对外部类进行实例化，然后对实例化内部类，最后调用内部类的方法。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;out_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outclass_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;in_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inclass_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;in_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;其中out_name表示外部类的实例，in_name表示内部类的实例&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Door&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;					&lt;span class=&quot;c&quot;&gt;#内部类&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -2242,6 +2278,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__init__方法&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;构造函数用于初始化类的内部状态,Python的构造函数为__init__.除了用于定义实例变量外，还用于程序的初始化。__init__是&lt;code class=&quot;highlighter-rouge&quot;&gt;可选的&lt;/code&gt;，如果不提供__init__方法，Python将会给出一个默认的__init__方法。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;
@@ -2267,8 +2304,8 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__del__方法&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;析构函数用于释放对象占用的资源，Python提供了析构函数__del__(),析构函数可以释放对象的资源，是另一种释放资源的方法，析构函数是可选的，如果不提供，Python会在后台提供默认的析构函数&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;
 
@@ -2294,6 +2331,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;类的内置方法&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;常用的内置方法&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#初始化对象，在创建新对象时调用&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;__del__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;				&lt;span class=&quot;c&quot;&gt;#释放对象，在对象释放被删除之前调用&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;__new__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#实例的生成操作&lt;/span&gt;
@@ -2318,6 +2356,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;__new__()在__init__()之前被调用，用于创建实例对象。利用这个方法和类的属性的特性可以实现设计模式中&lt;code class=&quot;highlighter-rouge&quot;&gt;单例模式&lt;/code&gt;，单例模式是创建&lt;code class=&quot;highlighter-rouge&quot;&gt;唯一对象&lt;/code&gt;，单例模式设计的类&lt;code class=&quot;highlighter-rouge&quot;&gt;只实例化一个对象&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#定义实例&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;__instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
 
@@ -2336,6 +2375,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;如果类中把某个属性定义为&lt;code class=&quot;highlighter-rouge&quot;&gt;序列&lt;/code&gt;，就可以该方法输出序列中的各个元素。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FruitShop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__getitem__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -2373,6 +2413,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;使用该方法可以&lt;code class=&quot;highlighter-rouge&quot;&gt;模拟静态方法&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Growth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#内部类&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__call__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -2470,6 +2511,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;type是某个类，obj是type类实例化的对象，super可以绑定type类的对象。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#使用super调用父类&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -2490,6 +2532,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;抽象基类&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;抽象基类是对一类事物的特征行为的抽象，由抽象方法组成。在Python3中有abc模块,抽象基类&lt;code class=&quot;highlighter-rouge&quot;&gt;不能直接实例化&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;abc&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ABCMeta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abstractmethod&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;metaclass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ABCMeta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
 	&lt;span class=&quot;nd&quot;&gt;@abstractmethod&lt;/span&gt;
@@ -2820,6 +2863,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;try..except使用&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;try…except语句用于处理问题语句，捕获可能出现的异常.try子句中代码块&lt;code class=&quot;highlighter-rouge&quot;&gt;放置可能出现异常&lt;/code&gt;的语句，except子句中的&lt;code class=&quot;highlighter-rouge&quot;&gt;代码块处理异常&lt;/code&gt;,当异常出现时，Python会自动生成一个异常对象。该对象包括异常的具体信息，以及异常的种类和错误位置。比如读取一个不存在的文件&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;read file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2830,6 +2874,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;try…except语句后还可以添加1个else子句。当try子句中的代码发生异常时，程序直接跳到except子句，反之，程序将执行else子句。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ZeroDivisionError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -2842,6 +2887,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;这上面的语句只能执行一个异常。&lt;/p&gt;
 
 &lt;p&gt;嵌套异常&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -2861,6 +2907,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;try..finally使用&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;try..except语句后面还可以添加一个finall子句，finally子句的作用与Java中finally子句类似。无论异常是否发生，finally子句都会被执行。所有的&lt;code class=&quot;highlighter-rouge&quot;&gt;finally自己通常用于关闭异常而不能释放的系统资源&lt;/code&gt;。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# finaly的错误使用&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2874,6 +2921,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;上面的程序会报错，说ｆ不是try语句的中f，因此，解释器认为变量f没有定义。&lt;/p&gt;
 
 &lt;p&gt;因此要把文件的打开操作置于try子句的外层，使f具有全局性，同时也要捕获文件打开的异常，这种情况就可以使用异常嵌套的语句，使每个try子句都必须有１个except子句或者finally子句与之对应。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2893,6 +2941,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;使用raise抛出异常&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;当程序出现错误时，Python会自动引发异常，也可以通过raise语句显示引发异常。一旦执行了raise语句，raise语句后的代码将不能被执行。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -2908,6 +2957,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;自定义异常&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Python允许程序员自定义异常类型，用于描述Python异常体系总没有涉及的异常情况。&lt;code class=&quot;highlighter-rouge&quot;&gt;自定义异常必须继承Exception类&lt;/code&gt;。自定义异常按照命名规范以Error结尾，显式地告诉程序该类是异常类。自定义异常使用raise语句来触发，而且只能通过&lt;code class=&quot;highlighter-rouge&quot;&gt;手工方式触发&lt;/code&gt;。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;__future__&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;division&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DivisionException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;			&lt;span class=&quot;c&quot;&gt;#自定义异常&lt;/span&gt;
@@ -2939,6 +2989,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;assert语句还可以传递提示信息给AssertionError异常。当assert语句断言失败时，提示信息将打印控制台&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;month error&quot;&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;#出现错误&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -2947,6 +2998,7 @@ python提供了difflib模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;异常信息&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Python程序出现错误时，都会输出相关的异常信息，并支出错误的行号和错误的程序的代码。&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
 	&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
@@ -3297,7 +3349,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3517,7 +3569,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3533,7 +3585,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+08:00</updated>
+   <updated>2016-10-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3585,7 +3637,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -3931,7 +3983,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -4608,7 +4660,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+08:00</updated>
+   <updated>2016-10-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -4661,6 +4713,8 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 
 &lt;p&gt;web:http://127.0.0.1:8085/?module=gae_proxy&amp;amp;menu=status&lt;/p&gt;
 
+&lt;p&gt;web:http://127.0.0.1:8085/&lt;/p&gt;
+
 &lt;h2 id=&quot;shadowsock&quot;&gt;shadowsock&lt;/h2&gt;
 
 &lt;p&gt;添加源&lt;/p&gt;
@@ -4683,7 +4737,7 @@ sudo apt-get install shadowsocks-qt5
  <entry>
    <title>Learn Scala</title>
    <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+08:00</updated>
+   <updated>2016-10-19T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6041,7 +6095,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
  <entry>
    <title>Elk</title>
    <link href="http://lkkandsyf.github.io/2016/10/16/elk"/>
-   <updated>2016-10-16T00:00:00+08:00</updated>
+   <updated>2016-10-16T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/16/elk</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6416,7 +6470,7 @@ axel -n 10 https://download.elastic.co/elasticsearch/release/org/elasticsearch/d
  <entry>
    <title>Python Upgrade</title>
    <link href="http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade"/>
-   <updated>2016-10-15T00:00:00+08:00</updated>
+   <updated>2016-10-15T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7026,7 +7080,7 @@ which pip
  <entry>
    <title>Resume</title>
    <link href="http://lkkandsyf.github.io/2016/10/15/Resume"/>
-   <updated>2016-10-15T00:00:00+08:00</updated>
+   <updated>2016-10-15T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/15/Resume</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7170,7 +7224,7 @@ which pip
  <entry>
    <title>Xx Net</title>
    <link href="http://lkkandsyf.github.io/2016/10/07/XX-net"/>
-   <updated>2016-10-07T00:00:00+08:00</updated>
+   <updated>2016-10-07T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/07/XX-net</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7186,7 +7240,7 @@ which pip
  <entry>
    <title>Nginx</title>
    <link href="http://lkkandsyf.github.io/2016/10/06/Nginx"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/06/Nginx</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7202,7 +7256,7 @@ which pip
  <entry>
    <title>Hiveql</title>
    <link href="http://lkkandsyf.github.io/2016/10/06/HiveQL"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/06/HiveQL</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7218,7 +7272,7 @@ which pip
  <entry>
    <title>Data Analysis</title>
    <link href="http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
+   <updated>2016-10-06T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
