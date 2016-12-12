@@ -5,10 +5,30 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Thu, 08 Dec 2016 05:11:21 +0000</lastBuildDate>
-        <pubDate>Thu, 08 Dec 2016 05:11:21 +0000</pubDate>
+        <lastBuildDate>Sat, 10 Dec 2016 09:38:48 +0800</lastBuildDate>
+        <pubDate>Sat, 10 Dec 2016 09:38:48 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Machine Learn</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#basic-notion&quot; id=&quot;markdown-toc-basic-notion&quot;&gt;basic notion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;basic-notion&quot;&gt;basic notion&lt;/h2&gt;
+
+&lt;p&gt;随机梯度下降法，最小二乘法的区别&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.ethanrosenthal.com/2016/01/09/explicit-matrix-factorization-sgd-als/&quot;&gt;SGD LMS diff&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
+                <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>Gitbook</title>
@@ -43,7 +63,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -59,7 +79,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -124,7 +144,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -156,7 +176,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -188,7 +208,7 @@ mongod -dbpath=DATAPATH --logpath=LOGPATH/db.logs --fork --smallfiles
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3341,7 +3361,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3366,7 +3386,7 @@ u ，Move the current frame one level up in the stack trace
 &lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;sbt:当你启动sbt命令时，假设不指定任何&lt;code class=&quot;highlighter-rouge&quot;&gt;任务&lt;/code&gt;，SBT将启动一个&lt;code class=&quot;highlighter-rouge&quot;&gt;交互式REPL（REPL是 Read，Eval，Print，Loop的简写，代表了“读取-求值-打印-循环”）&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;sbt:当你启动sbt命令时，假设不指定任何&lt;code class=&quot;highlighter-rouge&quot;&gt;任务&lt;/code&gt;，SBT将启动一个&lt;code class=&quot;highlighter-rouge&quot;&gt;交互式REPL（REPL是 Read，Eval，Print，Loop的简写&lt;/code&gt;，代表了“读取-求值-打印-循环”）。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;运行sbt命令；&amp;gt;时SBT默认的交互式提示符，可以在#符号后编写sbt注释&lt;/p&gt;
@@ -3476,7 +3496,7 @@ javap [class]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;aassembly插件的目的是The goal is simple:Create a fat JAR of your project with all of its dependenies.&lt;/p&gt;
+&lt;p&gt;assembly插件的目的是The goal is simple:Create a fat JAR of your project with all of its dependenies.&lt;/p&gt;
 
 &lt;p&gt;使用：&lt;/p&gt;
 
@@ -3561,7 +3581,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3577,7 +3597,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3629,7 +3649,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3975,7 +3995,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -4652,7 +4672,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -4729,7 +4749,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -4785,6 +4805,10 @@ sudo apt-get install shadowsocks-qt5
 
 &lt;p&gt;&lt;a href=&quot;https://lkkandsyf.github.io/scala/2016/11/05/sbt-debug&quot;&gt;sbt&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;learn twitter scala course&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.github.io/effectivescala/index-cn.html&quot;&gt;effective scala&lt;/a&gt;
+&lt;a href=&quot;http://twitter.github.io/scala_school/zh_cn/index.html&quot;&gt;scala course&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;section&quot;&gt;基础&lt;/h3&gt;
 
 &lt;h4 id=&quot;section-1&quot;&gt;1.变量&lt;/h4&gt;
@@ -6087,7 +6111,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6462,7 +6486,7 @@ axel -n 10 https://download.elastic.co/elasticsearch/release/org/elasticsearch/d
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/16/elk</link>
                 <guid>http://lkkandsyf.github.io/2016/10/16/elk</guid>
-                <pubDate>Sun, 16 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 16 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7072,7 +7096,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</link>
                 <guid>http://lkkandsyf.github.io/python/2016/10/15/Python-upgrade</guid>
-                <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7216,7 +7240,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/15/Resume</link>
                 <guid>http://lkkandsyf.github.io/2016/10/15/Resume</guid>
-                <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7232,7 +7256,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/07/XX-net</link>
                 <guid>http://lkkandsyf.github.io/2016/10/07/XX-net</guid>
-                <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 07 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7248,7 +7272,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/06/Nginx</link>
                 <guid>http://lkkandsyf.github.io/2016/10/06/Nginx</guid>
-                <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7264,46 +7288,7 @@ which pip
 </description>
                 <link>http://lkkandsyf.github.io/2016/10/06/HiveQL</link>
                 <guid>http://lkkandsyf.github.io/2016/10/06/HiveQL</guid>
-                <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
-        </item>
-
-        <item>
-                <title>Data Analysis</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;数据分析技术&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;数据分析技术&lt;/h2&gt;
-
-&lt;p&gt;1.Hadoop只能用作&lt;code class=&quot;highlighter-rouge&quot;&gt;存储和资源管理&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;2.spark只能作为&lt;code class=&quot;highlighter-rouge&quot;&gt;计算&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;3.storm只计算&lt;/p&gt;
-
-&lt;p&gt;4.kafka数据缓冲层(平衡流式数据量的过大或过小)&lt;/p&gt;
-
-&lt;p&gt;5.flume采集&lt;/p&gt;
-
-&lt;p&gt;6.Tachyon分布式内存文件系统(alluxio)&lt;/p&gt;
-
-&lt;p&gt;7.redis，mongoDB分布式数据库&lt;/p&gt;
-
-&lt;p&gt;8.实时搜索引擎solr和lucene&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;数据分析系统的布局&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/big-data-structure.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/gnool/p/5645036.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</link>
-                <guid>http://lkkandsyf.github.io/secority/2016/10/06/Data-Analysis</guid>
-                <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 06 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
 

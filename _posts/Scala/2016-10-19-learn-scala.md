@@ -17,6 +17,10 @@ tags : [scala sbt]
 
 [sbt](https://lkkandsyf.github.io/scala/2016/11/05/sbt-debug)
 
+learn twitter scala course
+
+[effective scala](http://twitter.github.io/effectivescala/index-cn.html)
+[scala course](http://twitter.github.io/scala_school/zh_cn/index.html)
 ### 基础
 
 #### 1.变量
