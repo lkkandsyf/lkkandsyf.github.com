@@ -61,7 +61,17 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 **'IRC'**
 
- + docker
+```
+#docker
+#mongodb
+#python
+#vim
+#Linux
+#linuxba
+#linux-cn
+#perl
+#ubuntu-cn
+```
 
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
