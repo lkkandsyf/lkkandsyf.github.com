@@ -214,6 +214,11 @@ zope.interface>=4.0.5)
  + 测试模块
  python -c "import theano;theano.test()"
 
+`note:`pip 指定版本来安装
+
+```python
+sudo pip install package_name==x.x.x
+```
 
 ## tensorflow
 
