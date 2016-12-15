@@ -21,6 +21,10 @@ learn twitter scala course
 
 [effective scala](http://twitter.github.io/effectivescala/index-cn.html)
 [scala course](http://twitter.github.io/scala_school/zh_cn/index.html)
+
+cnblog
+[blog](http://hongqiang.info/scala)：这收集了许多比较全面的关于scala东西。[learn file](http://www.cnblogs.com/youarebest/p/5593349.html)
+
 ### 基础
 
 #### 1.变量
