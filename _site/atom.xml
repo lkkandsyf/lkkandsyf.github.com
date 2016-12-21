@@ -4,13 +4,82 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-16T22:49:47+08:00</updated>
+ <updated>2016-12-21T20:03:15+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Kafka</title>
+   <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
+   <updated>2016-12-20T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;这里介绍了关于Kafka的一些基本的知识&lt;/p&gt;
+
+&lt;p&gt;Kafka是一种&lt;code class=&quot;highlighter-rouge&quot;&gt;高吞吐量的分布式发布订阅消息系统&lt;/code&gt;，它可以处理消费者者规模的网站中&lt;code class=&quot;highlighter-rouge&quot;&gt;所有的动作流数据&lt;/code&gt;,这种动作(网页浏览，搜索和其他用户的行动)是在现在网络上的许多社会功能的一个关键因素。这些数据通常是用于吞吐量的要求而通过处理日志和日志聚合来解决。对于像Hadoop的一样的日志数据和离线分析系统，但又要&lt;code class=&quot;highlighter-rouge&quot;&gt;实时处理的限制&lt;/code&gt;，这是一个可行的解决方案。Kafka的目的是通过Hadoop的并行加载机制来统一线上和离线的消息处理，也是为了通过集群机来提供实时的消费&lt;/p&gt;
+
+&lt;p&gt;Kafak是一种高吞吐量的分布式发布订阅消息系统，有如下特性:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;通过O(1)的磁盘数据结构提供消息的&lt;code class=&quot;highlighter-rouge&quot;&gt;持久化&lt;/code&gt;，这种结构对于即使以TB的消息存储也能够保持长时间的稳定性能&lt;/li&gt;
+  &lt;li&gt;高吞吐量：即使是非常普通的硬件Kafka也可以支持每秒数百万的消息&lt;/li&gt;
+  &lt;li&gt;支持通过Kafka服务器和消费机器集群来分区消息&lt;/li&gt;
+  &lt;li&gt;支持Hadoop&lt;code class=&quot;highlighter-rouge&quot;&gt;并行数据&lt;/code&gt;加载&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;相关术语&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Broker：Kafka集群包含一个或多个服务器，这种服务器被称为broker&lt;/p&gt;
+
+&lt;p&gt;Topic:每条发布到Kafka集群的消息&lt;code class=&quot;highlighter-rouge&quot;&gt;都有一个类别&lt;/code&gt;，这个类别被称为Topic,(物理上不同的Topic的消息公开存储，逻辑上一个Topic的消息虽然保存于一个或多个broker上但用户只需指定消息的Topic即可以生产或消费数据而不必关系数据存于何处)&lt;/p&gt;
+
+&lt;p&gt;Partitoin:是物理上的概念，每个Topic包含一个或多个Partition&lt;/p&gt;
+
+&lt;p&gt;Producer:负责发布消息到Kafka broker&lt;/p&gt;
+
+&lt;p&gt;Consumer:消息消费者，向Kafka broker读取消息的客户端&lt;/p&gt;
+
+&lt;p&gt;Comsumer Group:每个Consumer术语一个特定的Comsumer Group(可为每个Consumer指定group name，若不指定group name则属于默认的group)&lt;/p&gt;
+
+&lt;p&gt;kafka对消息保存时根据Topic进行归类，发送消息者成为Producer,消息接受者成为Consumer，此外kafka集群有多个kafka实例组成。每个实例(server)成为broker。无论是kafka集群，还是producer和comsumer都依赖于zookeeper来保证系统可用性集群保存一些meta信息&lt;/p&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#kafka&quot; id=&quot;markdown-toc-kafka&quot;&gt;安装单机版Kafka&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kafka&quot;&gt;安装单机版Kafka&lt;/h2&gt;
+
+&lt;p&gt;从官网下载，&lt;a href=&quot;http://kafk.apache.org/downloads&quot;&gt;http://kafk.apache.org/downloads&lt;/a&gt;,这里采用的是2.11版本&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar xf kafka_x.x-x.x.x.tgz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;启动zookeeper和kafka&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/zookeeper-server-start.sh  config/zookeeper.properties
+/bin/kafka-server-start.sh config/server.properties
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果需要修改zookeeper的端口，在zookeeper.properties中修改后，也要&lt;code class=&quot;highlighter-rouge&quot;&gt;同步&lt;/code&gt;修改server.properties,producer.properties以及consumer.properties里的。&lt;/p&gt;
+
+&lt;p&gt;停止zookeeper和kafka&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bin/kafka-server-stop.sh
+bin/zookeeper-server-stop.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kafka.apache.org/documentation.html&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Ubuntu</title>
@@ -93,8 +162,9 @@ nameserver xxx.xxx.xx.xx
 
 &lt;p&gt;重启网络&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ifdown eth0		#重启网卡
-ifup eth0		#关闭网卡
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ifup eth0		#重启网卡
+ifdown eth0		#关闭网卡
+sudo /etc/init.d/networking restart	＃重启网络服务
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -160,6 +230,8 @@ sudo yum install -y lrzsz
 
 &lt;p&gt;(5) 重启网络服务。先断开网络，再重新连接。用ifconfig确认修改。&lt;/p&gt;
 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;遇到eth0没有IP&lt;/code&gt;,在桥接模式下。&lt;a href=&quot;http://bbs.csdn.net/topics/391021327&quot;&gt;solution&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;source-list&quot;&gt;source list&lt;/h2&gt;
 
 &lt;p&gt;碰到一些错误，就记录下来，以便以后使用&lt;/p&gt;
@@ -174,6 +246,18 @@ sudo yum install -y lrzsz
 sudo apt-get udpate
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There is no public key available for following key IDS xxxx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Correct commands line is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1397BC53640DB551
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://askubuntu.com/questions/766883/there-is-no-public-key-available-for-the-following-key-ids-1397bc53640db551&quot;&gt;more&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -4642,6 +4726,7 @@ u ，Move the current frame one level up in the stack trace
 &lt;h3 id=&quot;create-a-project&quot;&gt;Create a project&lt;/h3&gt;
 
 &lt;p&gt;创建约定好的文件夹&lt;/p&gt;
+
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch build.sbt
 mkdir -p src/main/resources	&lt;span class=&quot;c&quot;&gt;#存放jar，配置文件等&lt;/span&gt;
 mkdir -p src/main/scala		&lt;span class=&quot;c&quot;&gt;#存放scala编写的代码文件&lt;/span&gt;
@@ -8511,22 +8596,6 @@ which pip
    <link href="http://lkkandsyf.github.io/2016/10/07/XX-net"/>
    <updated>2016-10-07T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/10/07/XX-net</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Nginx</title>
-   <link href="http://lkkandsyf.github.io/2016/10/06/Nginx"/>
-   <updated>2016-10-06T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/2016/10/06/Nginx</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
