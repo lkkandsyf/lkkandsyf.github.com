@@ -139,4 +139,7 @@ website
 
 要记得，最好不一定最适合你，最适合才最让你开心。还有，不要畏难，除非你认为你最适合干简单的事。难与不难，人多与人少，适合与不适合，三件不同的事，有时要分开考虑。
 
+[如何招聘程序员](http://blog.csdn.net/haoel/article/details/6338025)
+[优秀程序员](http://blog.csdn.net/haoel/article/details/4013883)
+
 ---
