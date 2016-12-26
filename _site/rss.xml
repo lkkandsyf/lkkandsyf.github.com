@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 26 Dec 2016 08:40:13 +0000</lastBuildDate>
-        <pubDate>Mon, 26 Dec 2016 08:40:13 +0000</pubDate>
+        <lastBuildDate>Mon, 26 Dec 2016 22:45:40 +0800</lastBuildDate>
+        <pubDate>Mon, 26 Dec 2016 22:45:40 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -17,6 +17,7 @@
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#jdb&quot; id=&quot;markdown-toc-jdb&quot;&gt;jdb基本知识&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jdb-usage&quot; id=&quot;markdown-toc-jdb-usage&quot;&gt;jdb usage&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -93,6 +94,72 @@ jdb -classpath . Classname
 
 &lt;p&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&quot;&gt;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;jdb-usage&quot;&gt;jdb usage&lt;/h2&gt;
+
+&lt;p&gt;JDWP的全写是:Java Debug Wire Protocol:即JAVA调试器无线协议，它定义了调试器(Debugger)和被调试的JAVA虚拟机(target vm)之间的通信协议。在这里,我更要说明下：Debugger与Target vm,Target vm
+中运行着我们希望要调试的程序，它与一般运行的Java虚拟机没有什么区别，只是在启动时加载了Agent JDWP 从而具备了调试功能。而debugger 就是我们熟知的调试器，它向运行中的target vm
+发送命令来获取target vm 运行时的状态和控制Java 程序的执行。Debugger 和target vm 分别在各自的进程中运行，他们之间的通信协议就是JDWP。JDWP
+与其他许多协议不同，它仅仅定义了数据传输的格式，但并没有指定具体的传输方式。这就意味着一个JDWP 的实现可以不需要做任何修改就正常工作在不同的传输方式上（在JDWP
+传输接口中会做详细介绍）。JDWP 是语言无关的。理论上我们可以选用任意语言实现JDWP。然而我们注意到，在JDWP的两端分别是target vm 和debugger。Target vm 端，JDWP 模块必须以Agent library 的形式在Java 虚拟机启动时加载，并且它必须通过Java 虚拟机提供的JVMTI 接口实现各种debug
+的功能，所以必须使用C/C++ 语言编写。而debugger 端就没有这样的限制，可以使用任意语言编写，只要遵守JDWP 规范即可。JDI（Java Debug Interface）就包含了一个Java 的JDWP debugger 端的实现，JDK 中调试工具jdb 也是使用JDI 完成其调试功能的。&lt;/p&gt;
+
+&lt;p&gt;直接使用本机绑定的通讯端口，不指定进程&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=xxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用jdb调试Java程序&lt;/p&gt;
+
+&lt;p&gt;首先启动Java程序&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8000 MainClassName
+or
+java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8000 -jar xxx.jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;用以下命令附加到上面的运行的Java程序，用于调试分析&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;之后就可以使用threads,thread,where,list等命令开始调试&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;远程调试&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;远程调试Java程序是非常有用的。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -Xdebug -Xrunjdwp:transport=dt_socket,address=192.168.10.205:8000,suspend=y -jar remoting-debug.jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;client连接&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=192.168.10.205,port=8000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;切记是同一个目录，要不找不到源代码&lt;/p&gt;
+
+&lt;p&gt;two way:同一个目录下，两个终端&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;one terminal:
+Java -agentlib:jdwp=transport=dt_socket,server=y,address=8000 MainClassName
+or jar
+Java -agentlib:jdwp=transport=dt_socket,server=y,address=8000 -jar xxx.jar
+other terminal:
+jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;借鉴jdb调试&lt;a href=&quot;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&quot;&gt;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;教程&lt;a href=&quot;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&quot;&gt;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;软件指南针&lt;a href=&quot;http://www.softown.cn/post/180.html&quot;&gt;http://www.softown.cn/post/180.html&lt;/a&gt;这里介绍很多关于Java的工具&lt;/p&gt;
+
 &lt;h2 id=&quot;tools&quot;&gt;tools&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -111,7 +178,7 @@ jdb -classpath . Classname
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -279,7 +346,7 @@ jdb -classpath . Classname
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -290,6 +357,10 @@ jdb -classpath . Classname
 &lt;p&gt;Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。&lt;/p&gt;
 
 &lt;p&gt;Maven:这是Java项目的管理工具。&lt;/p&gt;
+
+&lt;p&gt;Maven库,&lt;a href=&quot;http://repo2.maven.org/maven2/&quot;&gt;http://repo2.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maven依赖查询,&lt;a href=&quot;http://mvnrepository.com/&quot;&gt;http://mvnrepository.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;&lt;strong&gt;基本命令&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
@@ -305,13 +376,13 @@ jdb -classpath . Classname
 
 &lt;p&gt;通过命令行的方式：&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn archetype:generate -DgroupId={project-packaging}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn archetype:generate -DgroupId={project-packagingName}
    -DartifactId={project-name}
-   -DarchetypeArtifactId=maven-archetype-quickstart
+   -DarchetypeArtifactId=maven-archetype-quickstart maven-archetype-webapp
    -DinteractiveMode=false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;maven3:&lt;/p&gt;
+&lt;p&gt;maven:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# firt way
 mvn archetype:generate		#新疆maven项目
@@ -352,10 +423,14 @@ mvn clean compile	#编译源代码
 mvn clean test
 mvn test-compile	#编译测试源代码
 mvn test	#运行应用程序中的单元测试
+mvn package	#打包
 mvn clean package	#根据项目生成jar
+mvn install		#在本地Repo安装jar
 mvn clean install	#在本地Repo中安装jar
 mvn dependency:tree列出jar包直接依赖引入的jar
+mvn dependency:resolve	#打印处已经解决依赖的列表
 mvn eclipse:eclipse	#生成eclipse项目文件
+mvn idea:idea	#生成ieda项目
 mvn eclipse clean	#清除以前编译的东西，重新再来
 mvn site-deploy	#生成站点目录并打包
 mvn deploy	#发布项目
@@ -365,7 +440,26 @@ mvnjetty:run	#启动jetty服务
 mvntomcat:run	#启动tomcat服务
 mvn clean package -Dmaven.test.skip=true	#清除以前的包后重新打包，跳过测试类
 mvn archetype:generate -DarchetypeCatalog=internal	#查看maven有哪些项目类型分类
+mvn  -Dtest package	#组合使用goal命令，只打包不测试
+mvn jar:jar	#只打jar
+mvn test-skipping compile-skipping test-compile		#(-skipping的灵活运用，也可以用于其他组合命令)
+mvn install:install-file -DgroupId=com -DartifactId=client -Dversion=0.1.0 -Dpackaging=jar -Dfile=lient-0.1.0.jar -DdownloadSource=true -DdownloadJavadocs=true #发布第三方jar到本地库中
+mvn -e	#显示详细错误信息
+mvn valitdate	#验证工程是否正确，所有需要的资源是否可用
+mvn verify	# 运行任何检查，验证包是否有效且达到质量标准
+mvn install -X # 想要查看完整的依赖踪迹，包含那些因为冲突或者其它原因而被拒绝引入的构件，打开 Maven 的调试标记运行
+mvn install -Dmaven.test.skip=true # 给任何目标添加maven.test.skip 属性就能跳过测试
+mvn install assembly:assembly # 构建装配Maven Assembly 插件是一个用来创建你应用程序特有分发包的插件
 
+mvn -v # 显示版本
+mvn help:describe -Dplugin=help #使用 help 插件的 describe 目标来输出 Maven Help 插件的信息。
+mvn help:describe -Dplugin=help -Dfull #使用Help 插件输出完整的带有参数的目标列
+mvn help:describe -Dplugin=compiler -Dmojo=compile -Dfull #获取单个目标的信息,设置 mojo 参数和 plugin 参数。此命令列出了Compiler 插件的compile 目标的所有信息
+mvn help:describe -Dplugin=exec -Dfull #列出所有 Maven Exec 插件可用的目标
+mvn help:effective-pom #看这个“有效的 (effective)”POM，它暴露了 Maven的默认设置
+mvnDebug tomcat:run 这条命令主要用来远程测试,它会监听远程测试用的8000端口,在eclipse里打开远程测试后,它就会跑起来了,设断点,调试mvn dependency:sources 故名思义,有了它,你就不用到处找源码了,运行一下,你项目里所依赖的jar包的源码就都有了
+mvn help:describe 你是否因为记不清某个插件有哪些goal而痛苦过,你是否因为想不起某个goal有哪些参数而苦恼,那就试试这个命令吧,它会告诉你一切的.参数: 1. -Dplugin=pluginName 2.-Dgoal(或-Dmojo)=goalName:与-Dplugin一起使用,它会列出某个插件的goal信息,如果嫌不够详细,同样可以加-Ddetail.(注:一个插件goal也被认为是一个 “Mojo”) 下面大家就运行mvn help:describe
+ -Dplugin=help -Dmojo=describe感受一下吧!
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -635,7 +729,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -728,7 +822,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -829,7 +923,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1009,7 +1103,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1029,7 +1123,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1065,7 +1159,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1088,7 +1182,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2196,7 +2290,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2282,7 +2376,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2314,7 +2408,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5467,7 +5561,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5695,7 +5789,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5711,7 +5805,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5763,7 +5857,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6249,7 +6343,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6926,7 +7020,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7003,7 +7097,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -8369,7 +8463,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
 
