@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 25 Dec 2016 22:42:52 +0800</lastBuildDate>
-        <pubDate>Sun, 25 Dec 2016 22:42:52 +0800</pubDate>
+        <lastBuildDate>Mon, 26 Dec 2016 08:40:13 +0000</lastBuildDate>
+        <pubDate>Mon, 26 Dec 2016 08:40:13 +0000</pubDate>
         <ttl>60</ttl>
 
 
@@ -111,7 +111,7 @@ jdb -classpath . Classname
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -279,7 +279,7 @@ jdb -classpath . Classname
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -635,7 +635,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -728,7 +728,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -829,7 +829,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1009,7 +1009,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1029,7 +1029,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1065,7 +1065,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1073,15 +1073,22 @@ gitbook serve .
                 <description>
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
+&lt;p&gt;一个通用的框架.python package eve &lt;a href=&quot;http://python-eve.org&quot;&gt;office&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.tutsplus.com/tutorials/building-rest-apis-using-eve--cms-22961&quot;&gt;https://code.tutsplus.com/tutorials/building-rest-apis-using-eve–cms-22961&lt;/a&gt;
+&lt;a href=&quot;https://docs.mongodb.com/ecosystem/tools/http-interfaces/&quot;&gt;https://docs.mongodb.com/ecosystem/tools/http-interfaces/&lt;/a&gt;
+&lt;a href=&quot;http://www.slideshare.net/nicolaiarocci/rest-ap-is-for-humans&quot;&gt;http://www.slideshare.net/nicolaiarocci/rest-ap-is-for-humans&lt;/a&gt;
+&lt;a href=&quot;https://www.drud.com/evegenie-python-eve-schema-generation-done-fast/&quot;&gt;https://www.drud.com/evegenie-python-eve-schema-generation-done-fast/&lt;/a&gt;&lt;/p&gt;
+
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#restful-api&quot; id=&quot;markdown-toc-restful-api&quot;&gt;Restful API&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;restful-api&quot;&gt;Restful API&lt;/h2&gt;
 </description>
-                <link>http://lkkandsyf.github.io/2016/11/30/Restful</link>
-                <guid>http://lkkandsyf.github.io/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+                <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
+                <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2189,7 +2196,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2275,7 +2282,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2307,7 +2314,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5460,7 +5467,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5688,7 +5695,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5704,7 +5711,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5756,7 +5763,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5781,6 +5788,8 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 
 &lt;p&gt;启动了jupyter，可直接在http://localhost:4040/jobs/来监控所有的作业。&lt;/p&gt;
 
+&lt;p&gt;由于Spark的开源项目更新比较快，一般情况以&lt;a href=&quot;http://spark.apache.org&quot;&gt;官网&lt;/a&gt;为主.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;spark-command&quot;&gt;Spark-command&lt;/h2&gt;
@@ -5800,28 +5809,33 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;参数名称								含义
 
---master MATER_URL			可以是spark://host:port,mesos://host:port,yarn,yarn-cluster,yarn-client,local
+--master MATER_URL		可以是spark://host:port,mesos://host:port,yarn,yarn-cluster,yarn-client,local
 --deploy-mode DEPLOY_MODE	Driver程序运行的地方，client或者cluster
---class CLASS_NAME			主类名称，含包名
---name NAME					Application名称
---jar JARS					Driver依赖的第三方jar包
---py-files PY_FILES			用逗号隔开的放置在Python应用程序PYTHONPATH上的.zip.egg,.py文件列表
---files FILES				用逗号隔开放置在每个executor工作目录的文件列表
+--class CLASS_NAME		主类名称，含包名
+--name NAME			Application名称
+--conf				spark的配置文件
+--jar JARS			Driver依赖的第三方jar包，多个jar包通过逗号隔开
+--py-files PY_FILES		用逗号隔开的放置在Python应用程序PYTHONPATH上的.zip.egg,.py文件列表
+--files FILES			用逗号隔开放置在每个executor工作目录的文件列表
 --properties-file FILE		设置应用程序属性的文件路径，默认是conf/spark-defaults.conf
---dirver-memory MEM			Driver程序使用内存的大小
+--dirver-memory MEM		Driver程序使用内存的大小
 --driver-java-options
 --driver-library-path		Driver程序的库路径
---dirver-class-path			Driver程序的类路径
+--dirver-class-path		Driver程序的类路径
 --executor-memory MEM		executor内存大小，默认是1G
---dirver-cores NUM			Driver程序使用的CPU个数，仅限Spark Alone模式
---supervise					失败后是否重启Driver，仅限Spark Alone模式
+--dirver-cores NUM		Driver程序使用的CPU个数，仅限Spark Alone模式
+--supervise			失败后是否重启Driver，仅限Spark Alone模式
 --total-executor-cores NUM	executor使用的总核数，仅限Spark Alone，Spark on Mesos模式
 --executor-cores NUM		每个executor使用的内核数，默认是1，仅限Spark on Yarn模式
---queue QUEUE_NAME			提交应用程序给哪个YARN的队列，默认是default队列，仅限Spark on Yarn模式
---num-executors NUM			启动executor数量，默认是2个，仅限Spark on Yarn模式
---archive ARCHIVE			仅限Spark on Yarn模式
+--queue QUEUE_NAME		提交应用程序给哪个YARN的队列，默认是default队列，仅限Spark on Yarn模式
+--num-executors NUM		启动executor数量，默认是2个，仅限Spark on Yarn模式
+--archive ARCHIVE		仅限Spark on Yarn模式
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;note:常见的部署策略是从同一物理位置，即同一个网关的服务器上提交应用程序，在这种设置中，采用Client模式比较合适，在Client模式中，Driver直接在用户的spark-submit进程中启动，应用程序的输入和输出连接到控制台(console)，因此，这个模式对于涉及REPL的应用程序尤为合适。&lt;/p&gt;
+
+&lt;p&gt;目前Standalone部署模式，Mesos集群模式，和Python编写的应用程序&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持Cluster&lt;/code&gt;模式&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;pyspark&lt;/strong&gt;&lt;/p&gt;
 
@@ -5855,6 +5869,8 @@ sudo apt-get autoremove ntop	// 只下载这个软件
   &lt;li&gt;Dataset的简称，弹性分布式数据集，是Spark最核心的模块和类，通过Scala集合转化，读取数据集合生成或者由其他RDD经过算子操作得到&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Spark编程模型的最主要的抽象，第一个抽象是RDD(Resilient Distributed Dataset，弹性分布式数据集)，它是一个特殊的&lt;code class=&quot;highlighter-rouge&quot;&gt;集合&lt;/code&gt;，支持多种来源，有容错机制，可以被缓存，支持并行操作；Spark的第二个抽象是两种共享变量，即支持并行计算的&lt;code class=&quot;highlighter-rouge&quot;&gt;广播变量&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;累加器&lt;/code&gt;.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;RDD&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Spark的最基本抽象，是分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象体现，RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现，RDD必须是可&lt;code class=&quot;highlighter-rouge&quot;&gt;序列化的，RDD可以cache到内存中&lt;/code&gt;&lt;/p&gt;
@@ -5885,14 +5901,30 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 
 &lt;p&gt;每个RDD都包含&lt;code class=&quot;highlighter-rouge&quot;&gt;五部分信息&lt;/code&gt;,即数据分区的集合，能根据本地性快速访问到数据的&lt;code class=&quot;highlighter-rouge&quot;&gt;偏好位置，依赖关系，计算方法，是否是哈希/范围分区的元数据&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;note:分区，最佳位置，依赖，函数，分区策略&lt;/p&gt;
+&lt;p&gt;note:分区，最佳位置，依赖，函数，分区策略,其中，分区，一系列的依赖关系和函数是三个基本特征。最佳位置和分区策略是可选特征。&lt;/p&gt;
+
+&lt;p&gt;常用的RDD特征说明&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RDD名称		|	分区			|	依赖		|	函数			|	最佳位置		|	分区策略	|
+HadoopRDD	|	HDFS Block		|	无		|	读取每一个Block块		|	HDFS Block位置	|	无	|
+MappedRDD	|	与父RDD一样		|	与父RDD一对一	|	读取分区中每一行数据	|	本地位置		|	无	|
+FilteredRDD	|	与父RDD一样		|	与父RDD一对一	|	计算父RDD每个分区并过滤	|	无(与父RDD一致)	|	无	|
+JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle数据并计算	|	无	|	HashPartitioner	|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;RDD将依赖划分成两种两种类型&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;窄依赖(narrow dependencies)：是指父RDD的每个分区都只被子RDD的一个分区所使用，如map就是一种窄依赖&lt;/li&gt;
-  &lt;li&gt;宽依赖(wide dependencies)：是指父RDD的分区被多个子RDD的分区所依赖，如join则会导致宽依赖&lt;/li&gt;
+  &lt;li&gt;窄依赖(narrow dependencies)：是指父RDD的每个分区都只被子RDD的一个分区所使用，如map就是一种窄依赖.窄依赖的RDD可以通过相同的键进行&lt;code class=&quot;highlighter-rouge&quot;&gt;联合分区&lt;/code&gt;，整个操作都可以在一个集群节点上进行，以流水线(pipeline)的方式计算所有父分区，不会造成网络之间的数据混合。&lt;/li&gt;
+  &lt;li&gt;宽依赖(wide dependencies)：是指父RDD的分区被多个子RDD的分区所依赖，如join则会导致宽依赖.宽依赖RDD会涉及数据混合，宽依赖，需要首先计算好所有的父分区数据，然后再节点之间Shuffle.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;窄依赖能够有效的进行失效节点的恢复，重新计算丢失RDD分区，不同节点之间可以并行计算；而对于以宽依赖的关系的血统(lineage)图，单个节点失效可能导致这个RDD的所有祖先丢失部分分区，因而需要整体重新计算。&lt;/p&gt;
+
+&lt;p&gt;note:Shuffle执行是固化操作，以及采取Persist缓存策略，可以在固化点，或者缓存点重新计算。&lt;/p&gt;
+
+&lt;p&gt;执行时，调度程序会检查依赖性的类型，将窄依赖的RDD划到一组处理当中，即Stage。宽依赖在一个执行中会跨越连续的Stage，同时需要显式的指定多个子RDD的分区。&lt;/p&gt;
 
 &lt;p&gt;这样划分有两个好处:&lt;/p&gt;
 
@@ -5901,6 +5933,8 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 &lt;p&gt;其次，窄依赖支持更高效的故障还原。因为对于窄依赖，只有丢失的父RDD的分区需要重新计算&lt;/p&gt;
 
 &lt;p&gt;对于宽依赖，一个结点的故障可能导致来之所有的父RDD的分区丢失，因此就需要完全重新执行。因此对于宽依赖，Spark会在持有各自父分区的结点上，将中间数据持久化来简化故障还原。&lt;/p&gt;
+
+&lt;p&gt;子RDD的每个分区依赖于常数个父分区，与&lt;code class=&quot;highlighter-rouge&quot;&gt;数据规模&lt;/code&gt;无关，输入输出是一对一的算子。当子RDD的每个分区依赖&lt;code class=&quot;highlighter-rouge&quot;&gt;单个父分区&lt;/code&gt;时,&lt;code class=&quot;highlighter-rouge&quot;&gt;分区结构不会发生变化&lt;/code&gt;，如Map，flatMp；当子RDD依赖多个&lt;code class=&quot;highlighter-rouge&quot;&gt;多个父分区时&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;分区结构发生变化&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;RDD操作&lt;/p&gt;
 
@@ -6064,7 +6098,117 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Spark-shell&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用Spark-shell来开发程序,在Spark-shell中&lt;code class=&quot;highlighter-rouge&quot;&gt;已经&lt;/code&gt;创建一个名为sc的SparkContext对象和sqlcontext的SQL context对象,在4个CPU核上运行Spark-shell:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd `echo $SPARK_HOME`
+./bin/spark-shell --master local[4]
+#如果指定jar路径
+./bin/spark-shell --master local[4] --jars testcode.jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;其中，–master用来设置context将要连接并使用的&lt;code class=&quot;highlighter-rouge&quot;&gt;资源主节点&lt;/code&gt;，master的值是Standalone模式的Spark集群地址，Meson或者YARN集群的URL,或者是一个local地址，使用–jars可以添加Jar的路径，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;逗号&lt;/code&gt;分割可以&lt;code class=&quot;highlighter-rouge&quot;&gt;添加多个包&lt;/code&gt;，Spark-shell的本质是在后台调用了spark-submit脚本来启动&lt;code class=&quot;highlighter-rouge&quot;&gt;应用程序&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;加载text文件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Spark创建sc之后，就可以加载本地文件创建RDD,我们可以加载Spark自带的本地README.md文件进行测试，返回一个MapPartitionsRDD文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val textFile = sc.textFile(&quot;file:///$SPARK_HOME/README.md&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;需要说明的是，加载HDFS文件和本地文件都是使用textFile,区别是添加前缀(hdfs://和file://)进行标识，从本地读取文件直接返回MapPartitionsRDD,而从HDFS读取的文件先转换成HadoopRDD,然后&lt;code class=&quot;highlighter-rouge&quot;&gt;隐式转换成MapPartitionsRDD&lt;/code&gt;。上面说的MapPartitionsRDD和HadoopRDD都是直接基于Spark的&lt;code class=&quot;highlighter-rouge&quot;&gt;弹性分布式数据集(RDD)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;对于RDD，可以执行Transformation返回新的RDD，也可以执行Action得到返回结果&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 获取RDD文件textFile的第一项
+scala&amp;gt;textFile.first()
+scala&amp;gt;textFile.count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;接下来通过Transformation操作，使用filter命令返回一个新的RDD，即抽取文件全部条目的一个子集，返回一个新的FilteredRDD&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//抽取含有&quot;spark&quot;的子集,可以链接多个Transformation和Action进行操作
+scala&amp;gt;textFile.filter(line =&amp;gt; line.split(&quot;Spark&quot;)).count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过RDD进行组合，来实现找出文本中&lt;code class=&quot;highlighter-rouge&quot;&gt;每行最多的单词数&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;词频统计&lt;/code&gt;等。&lt;/p&gt;
+
+&lt;p&gt;1.找出文本中每行最多单词数，基于RDD的Transformation和Action可以用作更复杂的运算&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.map(line =&amp;gt; line.split(&quot; &quot;).size).reduce((a,b) =&amp;gt; if (a &amp;gt; b) a else b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;split(““)进行分词，并统计分词后的单词数，创建一个基于单词数的新的RDD，然后针对该RDD执行Reduce操作使用(a,b)=&amp;gt; if (a,b) a else b&lt;/p&gt;
+
+&lt;p&gt;2.词频统计&lt;/p&gt;
+
+&lt;p&gt;从MapReduce开始，词频统计已经成为大数据处理最流行的入门程序，类似MapReduce，Spark也能很容易实现MapReduce&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//	结合flatMap,map和reduceBykey来计算文件中每个单词的词频
+scala&amp;gt;val wordCount = textFile.flatMap(line =&amp;gt; line.split(&quot; &quot;)).map(word =&amp;gt; (word,1)).reduceByKey((a,b) =&amp;gt; a + b)
+// 使用collect聚合单词统计结果
+scala&amp;gt;wordCount.collect()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;结合flatMap,map和reduceByKey来计算文件中每个单词的词频，并返回(string,int)类型的键值对ShuffleRDD(由于reduceByKey执行时需要进行Shuffle操作，返回的是一个Shuffle形式的RDD，ShuffleRDD)，最后使用collect聚合单词统计计算结果&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;note&lt;/strong&gt;:如果想让Scala的函数文本更加的简洁，可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;占位符&quot;_&quot;&lt;/code&gt;，占位符可以看做表达式里需要被&lt;code class=&quot;highlighter-rouge&quot;&gt;填入&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;，这个&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;在每次函数被调用时，由函数的&lt;code class=&quot;highlighter-rouge&quot;&gt;参数填入&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;当每个参数在函数文本中最多出现一次的 情况下，可以使用”&lt;em&gt;+&lt;/em&gt;“扩展成两个参数的函数文本；在&lt;code class=&quot;highlighter-rouge&quot;&gt;多个下划线指代多个参数&lt;/code&gt;，而不是&lt;code class=&quot;highlighter-rouge&quot;&gt;单个参数的重复使用&lt;/code&gt;。第一个下划线代表第一个参数，第二个下划线代表第二个参数，依次类推。&lt;/p&gt;
+
+&lt;p&gt;下面通过占位符来对词频进行统计，进行优化&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;默认的Spark是&lt;code class=&quot;highlighter-rouge&quot;&gt;不进行排序的&lt;/code&gt;，如果以排序的方式输出，需要进行key和value互换，然后采取sortByKey的方式，可以指定降序(false),升序(true),这样就完成的数据统计的排序&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_).map(x =&amp;gt; (x._2,x._1)).sortByKey(false).map(x =&amp;gt; (x._2,x._1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上面的代码通过第一个x=&amp;gt;(x._2,x._1)实现key和value的互换，然后通过sortByKey(false)实现降序排列，通过第二个x =&amp;gt; (x._2,x._1)再次互换，最后完成排序.&lt;/p&gt;
+
+&lt;p&gt;RDD 缓存 Spark也支持将数据集存放到一个集群的内存缓冲中，当数据被饭费访问时，如果在查询一个小而热的数据集，或运行一个像PageRank的迭代算法，是非常有用的，缓冲textFile变量&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.cache()
+scala&amp;gt;textFile.count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过cache缓存数据可以用于&lt;code class=&quot;highlighter-rouge&quot;&gt;非常大的数据集，支持跨越几十或几百个节点&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;spark-submit提交方式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;master如下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;local	以单线程本地运行Spark(完全无并行)&lt;/li&gt;
+  &lt;li&gt;local[K]	在本地以K个Worker线程运行Spark(这个数字设为你机器CPU核数的数目比较理想)&lt;/li&gt;
+  &lt;li&gt;local[*]	以与你机器上逻辑核数目相同的Worker线程运行Spark&lt;/li&gt;
+  &lt;li&gt;spark://HOST:PORT	直接连接到给定的Spark独立模式集群上的Master，该端口必须设置好，可供使用的，一般是默认是7070&lt;/li&gt;
+  &lt;li&gt;yarn-client	以Client模式连接到YARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
+  &lt;li&gt;yarn-cluster	以Cluster模式连接到ARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;具体代码&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Local模式在4个CPU核上提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Standalone模式提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://*.*.*.*:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7077&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;YARN模式提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;hr /&gt;
 &lt;hr /&gt;
 &lt;hr /&gt;
@@ -6105,7 +6249,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6782,7 +6926,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6859,7 +7003,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -8225,7 +8369,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
 
