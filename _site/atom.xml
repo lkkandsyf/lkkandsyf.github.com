@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-26T22:45:40+08:00</updated>
+ <updated>2016-12-27T10:24:55+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+08:00</updated>
+   <updated>2016-12-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -186,7 +186,7 @@ jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -354,7 +354,7 @@ jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -737,7 +737,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -830,7 +830,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+08:00</updated>
+   <updated>2016-12-20T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -931,7 +931,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+08:00</updated>
+   <updated>2016-12-16T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1111,7 +1111,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+08:00</updated>
+   <updated>2016-12-10T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1131,7 +1131,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+08:00</updated>
+   <updated>2016-12-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1167,7 +1167,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+08:00</updated>
+   <updated>2016-11-30T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1190,7 +1190,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+08:00</updated>
+   <updated>2016-11-28T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2298,7 +2298,7 @@ db.valColl.find()
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+08:00</updated>
+   <updated>2016-11-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2384,7 +2384,7 @@ change it by
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+08:00</updated>
+   <updated>2016-11-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2416,7 +2416,7 @@ change it by
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5569,7 +5569,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5797,7 +5797,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5813,7 +5813,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+08:00</updated>
+   <updated>2016-10-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5865,18 +5865,22 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#jupyter-spark&quot; id=&quot;markdown-toc-jupyter-spark&quot;&gt;Jupyter-spark&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#spark-command&quot; id=&quot;markdown-toc-spark-command&quot;&gt;Spark-command&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#docker-scala-spark&quot; id=&quot;markdown-toc-docker-scala-spark&quot;&gt;docker-scala-spark&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#spark-e-book&quot; id=&quot;markdown-toc-spark-e-book&quot;&gt;spark e-book&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark&quot; id=&quot;markdown-toc-spark&quot;&gt;Spark基础&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-mllib&quot; id=&quot;markdown-toc-spark-mllib&quot;&gt;Spark MLlib与机器学习&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#graphx&quot; id=&quot;markdown-toc-graphx&quot;&gt;GraphX图计算框架&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sparkr&quot; id=&quot;markdown-toc-sparkr&quot;&gt;SparkR&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-1&quot; id=&quot;markdown-toc-spark-1&quot;&gt;实战Spark&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-2&quot; id=&quot;markdown-toc-spark-2&quot;&gt;Spark高级&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;扩展&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#docker-scala-spark&quot; id=&quot;markdown-toc-docker-scala-spark&quot;&gt;docker-scala-spark&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-e-book&quot; id=&quot;markdown-toc-spark-e-book&quot;&gt;spark e-book&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;jupyter-spark&quot;&gt;Jupyter-spark&lt;/h2&gt;
@@ -5891,9 +5895,103 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;spark-command&quot;&gt;Spark-command&lt;/h2&gt;
+&lt;h2 id=&quot;spark&quot;&gt;Spark基础&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;spark-shell&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spark-shell&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用Spark-shell来开发程序,在Spark-shell中&lt;code class=&quot;highlighter-rouge&quot;&gt;已经&lt;/code&gt;创建一个名为sc的SparkContext对象和sqlcontext的SQL context对象,在4个CPU核上运行Spark-shell:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd `echo $SPARK_HOME`
+./bin/spark-shell --master local[4]
+#如果指定jar路径
+./bin/spark-shell --master local[4] --jars testcode.jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;其中，–master用来设置context将要连接并使用的&lt;code class=&quot;highlighter-rouge&quot;&gt;资源主节点&lt;/code&gt;，master的值是Standalone模式的Spark集群地址，Meson或者YARN集群的URL,或者是一个local地址，使用–jars可以添加Jar的路径，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;逗号&lt;/code&gt;分割可以&lt;code class=&quot;highlighter-rouge&quot;&gt;添加多个包&lt;/code&gt;，Spark-shell的本质是在后台调用了spark-submit脚本来启动&lt;code class=&quot;highlighter-rouge&quot;&gt;应用程序&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;加载text文件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Spark创建sc之后，就可以加载本地文件创建RDD,我们可以加载Spark自带的本地README.md文件进行测试，返回一个MapPartitionsRDD文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val textFile = sc.textFile(&quot;file:///$SPARK_HOME/README.md&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;需要说明的是，加载HDFS文件和本地文件都是使用textFile,区别是添加前缀(hdfs://和file://)进行标识，从本地读取文件直接返回MapPartitionsRDD,而从HDFS读取的文件先转换成HadoopRDD,然后&lt;code class=&quot;highlighter-rouge&quot;&gt;隐式转换成MapPartitionsRDD&lt;/code&gt;。上面说的MapPartitionsRDD和HadoopRDD都是直接基于Spark的&lt;code class=&quot;highlighter-rouge&quot;&gt;弹性分布式数据集(RDD)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;对于RDD，可以执行Transformation返回新的RDD，也可以执行Action得到返回结果&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 获取RDD文件textFile的第一项
+scala&amp;gt;textFile.first()
+scala&amp;gt;textFile.count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;接下来通过Transformation操作，使用filter命令返回一个新的RDD，即抽取文件全部条目的一个子集，返回一个新的FilteredRDD&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//抽取含有&quot;spark&quot;的子集,可以链接多个Transformation和Action进行操作
+scala&amp;gt;textFile.filter(line =&amp;gt; line.split(&quot;Spark&quot;)).count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过RDD进行组合，来实现找出文本中&lt;code class=&quot;highlighter-rouge&quot;&gt;每行最多的单词数&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;词频统计&lt;/code&gt;等。&lt;/p&gt;
+
+&lt;p&gt;1.找出文本中每行最多单词数，基于RDD的Transformation和Action可以用作更复杂的运算&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.map(line =&amp;gt; line.split(&quot; &quot;).size).reduce((a,b) =&amp;gt; if (a &amp;gt; b) a else b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;split(““)进行分词，并统计分词后的单词数，创建一个基于单词数的新的RDD，然后针对该RDD执行Reduce操作使用(a,b)=&amp;gt; if (a,b) a else b&lt;/p&gt;
+
+&lt;p&gt;2.词频统计&lt;/p&gt;
+
+&lt;p&gt;从MapReduce开始，词频统计已经成为大数据处理最流行的入门程序，类似MapReduce，Spark也能很容易实现MapReduce&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//	结合flatMap,map和reduceBykey来计算文件中每个单词的词频
+scala&amp;gt;val wordCount = textFile.flatMap(line =&amp;gt; line.split(&quot; &quot;)).map(word =&amp;gt; (word,1)).reduceByKey((a,b) =&amp;gt; a + b)
+// 使用collect聚合单词统计结果
+scala&amp;gt;wordCount.collect()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;结合flatMap,map和reduceByKey来计算文件中每个单词的词频，并返回(string,int)类型的键值对ShuffleRDD(由于reduceByKey执行时需要进行Shuffle操作，返回的是一个Shuffle形式的RDD，ShuffleRDD)，最后使用collect聚合单词统计计算结果&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;note&lt;/strong&gt;:如果想让Scala的函数文本更加的简洁，可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;占位符&quot;_&quot;&lt;/code&gt;，占位符可以看做表达式里需要被&lt;code class=&quot;highlighter-rouge&quot;&gt;填入&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;，这个&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;在每次函数被调用时，由函数的&lt;code class=&quot;highlighter-rouge&quot;&gt;参数填入&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;当每个参数在函数文本中最多出现一次的 情况下，可以使用”&lt;em&gt;+&lt;/em&gt;“扩展成两个参数的函数文本；在&lt;code class=&quot;highlighter-rouge&quot;&gt;多个下划线指代多个参数&lt;/code&gt;，而不是&lt;code class=&quot;highlighter-rouge&quot;&gt;单个参数的重复使用&lt;/code&gt;。第一个下划线代表第一个参数，第二个下划线代表第二个参数，依次类推。&lt;/p&gt;
+
+&lt;p&gt;下面通过占位符来对词频进行统计，进行优化&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;默认的Spark是&lt;code class=&quot;highlighter-rouge&quot;&gt;不进行排序的&lt;/code&gt;，如果以排序的方式输出，需要进行key和value互换，然后采取sortByKey的方式，可以指定降序(false),升序(true),这样就完成的数据统计的排序&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_).map(x =&amp;gt; (x._2,x._1)).sortByKey(false).map(x =&amp;gt; (x._2,x._1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上面的代码通过第一个x=&amp;gt;(x._2,x._1)实现key和value的互换，然后通过sortByKey(false)实现降序排列，通过第二个x =&amp;gt; (x._2,x._1)再次互换，最后完成排序.&lt;/p&gt;
+
+&lt;p&gt;RDD 缓存 Spark也支持将数据集存放到一个集群的内存缓冲中，当数据被饭费访问时，如果在查询一个小而热的数据集，或运行一个像PageRank的迭代算法，是非常有用的，缓冲textFile变量&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.cache()
+scala&amp;gt;textFile.count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过cache缓存数据可以用于&lt;code class=&quot;highlighter-rouge&quot;&gt;非常大的数据集，支持跨越几十或几百个节点&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;spark-submit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;写好app之后&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/SPARK_HOME/bin/spark-submit --master &quot;local[4]&quot; xxx.app(xxx.py or xx.jar)		#zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -5936,19 +6034,34 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 
 &lt;p&gt;目前Standalone部署模式，Mesos集群模式，和Python编写的应用程序&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持Cluster&lt;/code&gt;模式&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;pyspark&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;spark-submit提交方式&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spark.apache.org/docs/latest/api/python/&quot;&gt;Apache Python API docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;master如下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;local	以单线程本地运行Spark(完全无并行)&lt;/li&gt;
+  &lt;li&gt;local[K]	在本地以K个Worker线程运行Spark(这个数字设为你机器CPU核数的数目比较理想)&lt;/li&gt;
+  &lt;li&gt;local[*]	以与你机器上逻辑核数目相同的Worker线程运行Spark&lt;/li&gt;
+  &lt;li&gt;spark://HOST:PORT	直接连接到给定的Spark独立模式集群上的Master，该端口必须设置好，可供使用的，一般是默认是7070&lt;/li&gt;
+  &lt;li&gt;yarn-client	以Client模式连接到YARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
+  &lt;li&gt;yarn-cluster	以Cluster模式连接到ARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;spark-submit&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;具体代码&lt;/p&gt;
 
-&lt;p&gt;写好app之后&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/SPARK_HOME/bin/spark-submit --master &quot;local[4]&quot; xxx.app(xxx.py or xx.jar)		#zsh
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Local模式在4个CPU核上提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Standalone模式提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://*.*.*.*:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7077&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;YARN模式提交应用程序&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://zpjiang.me/2015/10/17/zsh-no-match-found-local-spark/&quot;&gt;Spark: zsh no matches found local&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pyspark&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spark.apache.org/docs/latest/api/python/&quot;&gt;Apache Python API docs&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;基本概念&lt;/strong&gt;&lt;/p&gt;
 
@@ -6059,6 +6172,36 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;键-值转换&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;常用的键值转换&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;groupByKey([numTasks]):当在一个由键值对(K,V)组成的数据集上调用时，按照key进行分组，返回一个(K,Iterator&lt;V&gt;)对的数据集。`note`:如果是为了按照key聚合数据(如求和或平均值)而进行分组，使用reduceByKey或combinBykey方法会产生更好的性能。默认情况下，输出的并行程序取决于父RDD的分区数，可以通过传递一个可选的numtasks参数设置不同的并行任务数。&lt;/V&gt;&lt;/li&gt;
+  &lt;li&gt;reduceByKey(func,[numsTasks]):当在一个键值对(K,V)数据集上调用时，按照key将数据分组，使用给定的func聚合values值，返回一个键值对(K,V)数据集，其中func函数的类型必须是(V,V)-&amp;gt;V,类似于groupByKey,Reduce并行任务数可通过可选的第二个参数配置。&lt;/li&gt;
+  &lt;li&gt;sortByKey([ascending],[numTasks]):返回一个以key排序(升序或降序)的(K,V)键值对组成的数据集，其中布尔型参数ascending决定升序还是降序，而numTasks为并行任务数目.&lt;/li&gt;
+  &lt;li&gt;join(otherDataset,[numTasks]):根据key连接两个数据集，将类型为(K,V)和(K,W)的数据集合并成一个(K,(V,W))类型的数据集。外连接通过leftouterjoin和rightouterjoin获得支持。其中，numTasks为并行的任务数目。&lt;/li&gt;
+  &lt;li&gt;cogroup(otherDataset,[numTasks]):当在两个形如(K,V)和(K,W)的键-值对数据集上调用时，返回一个(K,Iterator&lt;V&gt;,Iterator&lt;W&gt;)形式的数据集。&lt;/W&gt;&lt;/V&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parallelize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;org.apache.spark.rdd.RDD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ParallelCollectionRDD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parallelize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;&amp;gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rbk&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduceByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rbk&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gbk&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;groupByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gbk&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;kt&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CompactBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CompactBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CompactBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sbk&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sbk&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;actions&lt;/p&gt;
 
 &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//聚集，但是传入的函数是两个参数返回一个值，这个函数必须满足交换律和结合律
@@ -6085,6 +6228,54 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 
 &lt;p&gt;persisit可以指定一个StorageLevel&lt;/p&gt;
 
+&lt;p&gt;控制操作主要包括故障恢复，数据持久性，以及移除数据。其中缓存操作Cache/Pesist是惰性的，在进行执行操作时，才会执行，而Unpesist是即时的，会&lt;code class=&quot;highlighter-rouge&quot;&gt;立即释放内存&lt;/code&gt;。checkpoint会直接将RDD持久化到磁盘或HDFS等路径，不同于Cache/Persist的是，被checkpoint的RDD&lt;code class=&quot;highlighter-rouge&quot;&gt;不会因为作业的结束而被消除，会一直存在&lt;/code&gt;，并可以被后续的作业直接读取并加载。&lt;/p&gt;
+
+&lt;p&gt;在一个典型的分布式系统中，容错机制主要是采取检查点(checkpoint)机制和数据备份机制。故障恢复是有主动检查，以及不同机器之间的数据复制实现的。由于进行故障恢复需要跨集群网络来复制大量数据，这无疑是相当昂贵的。因此在Spark中则采取了不同数的方法进行故障恢复。作为大型的分布式集群，Spark针对工作负载会做出两种假设。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;处理时间是有限的&lt;/li&gt;
+  &lt;li&gt;保持数据持久性是外部数据源的职责，主要是让处理过程中的数据保持稳定。
+跨宽依赖的再执行能够涉及多个父RDD，从而引发全部的再执行。为了规避这一点，Spark会保持Map阶段中间数据的输出的持久，在机器发生故障的情况下，再执行只需回溯到Mapper持续输出的相应分区，来获取中间数据.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spark还提供了数据检查点和记录日志，用于获取持久化中间RDD，这样再执行就不必追溯到&lt;code class=&quot;highlighter-rouge&quot;&gt;最开始的阶段&lt;/code&gt;。通过比较恢复延迟和检查点开销进行权衡，Spark会自动化地选择相应的策略进行故障恢复。&lt;/p&gt;
+
+&lt;p&gt;Spark的持久化，是指在不同转换操作之间，将过程数据缓存在内存中，实现快速重用，或者故障快速恢复。持久化主要分为两类，主动持久化和自动持久化。自动持久化，主要目标是RDD重用，从而实现快速处理，是Spark构建迭代算法的关键。可用persist()方法来标记一个持久化的RDD，一旦被一个执行(action)触发计算，它将会被保留在计算节点的内存中并重用.此外，每一个RDD都可以用不同的&lt;code class=&quot;highlighter-rouge&quot;&gt;保存级别&lt;/code&gt;进行保存，从而允许持久化数据集在硬盘或内存作为序列化的Java对象，甚至&lt;code class=&quot;highlighter-rouge&quot;&gt;跨节点复制&lt;/code&gt;。持久化的等级选择，是通过将给StorageLevel对象传递给persis()方法进行确定的，cache()方法调用persist()的默认级别MEMORY_ONLY.&lt;/p&gt;
+
+&lt;p&gt;持久化等级&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MEMORY_ONLY:将RDD作为反序列化的对象存储于JVM中，如果内存不足，一些分区将不会被缓存，在需要的时会被重新计算&lt;/li&gt;
+  &lt;li&gt;MEMORY_AND_DISK:将RDD作为反序列化的对象存储在JVM中，如果内存不足，超出的分区将被保存的磁盘上，并且需要时被读取，重点:不会立即输出数据到磁盘&lt;/li&gt;
+  &lt;li&gt;MEMORY_ONLY_SER:将RDD作为序列化的Java对象进行存储(每一个分区占用一个字节的数组)，通常来说，这比对象反序列化的空间利用率更高，尤其当使用fast serializer时，但在读取会比较占用CPU&lt;/li&gt;
+  &lt;li&gt;MEMORY_AND_DISK_SER:与MEMORY_ONLY_SER相似，但超出内存的分区将存储在硬盘上，而不是在每次需要时重新计算。&lt;/li&gt;
+  &lt;li&gt;DISK_ONLY:只将RDD分区存储在硬盘上&lt;/li&gt;
+  &lt;li&gt;MEMORY_ONLY_2,MEMORY_AND_DISK_2:与上述存储级别一样，但是将每一个分区都复制到两个两个集群节点上&lt;/li&gt;
+  &lt;li&gt;OFF_HEAP:将RDD以序列化格式存储在Tachyon中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;相对于MEMORY_ONLY_SER,OFF_HEAP减小了垃圾回收的开销，同事也允许Executor变得更小且可共享内存设备，Executor的崩溃不会导致内存中的缓冲丢失，在这种模式下，Tachyon中的内存是不可丢弃的。&lt;/p&gt;
+
+&lt;p&gt;自动持久化，是指不需要用户调研persist(),Spark自动的保存一些Shuffle操作(reduceByKey)的中间结果。这样的做是为了避免在Shuffle过程中一个节点崩溃时重新计算所有的输入。&lt;/p&gt;
+
+&lt;p&gt;持久化时，一旦设置了就&lt;code class=&quot;highlighter-rouge&quot;&gt;不能改变&lt;/code&gt;，想要改变就要先&lt;code class=&quot;highlighter-rouge&quot;&gt;去持久化&lt;/code&gt;。推荐用于在重用RDD结果时调用Persist(),这样会使持久化变得&lt;code class=&quot;highlighter-rouge&quot;&gt;可控&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Persist()持久化RDD，修改了RDD的meta info中的StorageLevel。而检查点在持久化的同时切断了Lineage，修改了RDD的meta info中的Lineage.两者均可以返回经过修改的RDD对象自身，而非新的RDD对象，也均属于Lazy操作。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;选择存储等级&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Spark的不同存储等级，旨在&lt;code class=&quot;highlighter-rouge&quot;&gt;满足内存的使用和CPU效率权衡上的不同需求&lt;/code&gt;，建议通过以下步骤进行选择。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果你的RDD可以很好的与默认的存储级别(MEMORY_ONLY)契合，那么久不需要做任何的修改，这已经是CPU使用效率最高的选项，它是RDD的操作尽可能的快。&lt;/li&gt;
+  &lt;li&gt;如果不能与MEMORY_ONLY很好的契合，建议使用MEMORY_ONLY_SER并选择一个快速序列化的库，使对象在较高空间利用率的情况下，依然可以较好的被访问。&lt;/li&gt;
+  &lt;li&gt;尽可能不要将数据存储到硬盘上，除非计算数据集的函数，计算量特别大，或者它们过滤的大量的数据。否则，重新计算第一个分区的速度与从硬盘中读取的效率差不多。&lt;/li&gt;
+  &lt;li&gt;如果想拥有&lt;code class=&quot;highlighter-rouge&quot;&gt;更快故障恢复能力&lt;/code&gt;,可使用复制存储级别(用Spark来响应Web应用的请求)。所有的存储级别都有通过重新计算丢失数据恢复错误的容错机制，但是复制存储级别可以让你在RDD上持续的运行任务，而不需要等待丢失的分区被重新计算。&lt;/li&gt;
+  &lt;li&gt;如果想要定义自己的存储级别(如复制因子为3而不是2)，可以使用StorageLevel单例对象的apply()方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;RDD可以随意在RAM中进行缓存，因此它提供了更快的数据方法，目前，缓存的粒度为RDD级别，只能缓存全部的RDD。Spark自动监视每个节点上使用的缓存，在集群中没有足够的内存，Spark会根据缓存情况确定一个LRU(Least Recently Used,最近最少使用算法)的数据分区进行删除。&lt;/p&gt;
+
+&lt;p&gt;如果想手动删除RDD，而不想等待它从缓存中消失，可以使用RDD的unpersist()方法移除数据，unpersist()方法是立即生效的。&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;创建SparkContext步骤&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -6092,6 +6283,12 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
   &lt;li&gt;构建Spark应用程序的应用信息对象SparkConf&lt;/li&gt;
   &lt;li&gt;利用SparkConf对象来初始化SparkContext&lt;/li&gt;
   &lt;li&gt;创建RDD,并执行相应的Transformation和action并得到最后的结果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spark提供两种模式的共享变量:广播变量和累加器,Spark的第二个抽象便是可以在并行计算中使用的共享变量.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;广播变量:可以在内存的所有节点中被访问，用于缓存变量(只读)&lt;/li&gt;
+  &lt;li&gt;累加器:只能用来做加法的变量，如计数和求和。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;广播变量(Broadcast Variables)&lt;/p&gt;
@@ -6106,8 +6303,10 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 
 &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;broadcastVar&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;broadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;broadcastVar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;res0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;p&gt;在广播变量被创建后，可以在集群运行的任何函数中代替v值被调用，由于v值在第一次调用后缓存到任务节点，重复调用时不需要被再次传递到这些节点上。另外，对象v不能再广播后修改，这样可以保证所有的节点收到相同的广播值&lt;/p&gt;
 
 &lt;p&gt;累加器&lt;/p&gt;
 
@@ -6116,6 +6315,174 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;Spark原生支持数值类型和标准可变集合的计数器，但用户可以添加新的类型&lt;/p&gt;
 
 &lt;p&gt;只有驱动程序才能获取累加器的值&lt;/p&gt;
+
+&lt;p&gt;Spark原生支持Int和Double类型的累加器，程序员可以自己添加新的支持类型。&lt;/p&gt;
+
+&lt;p&gt;code:&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;org.apache.spark.Accumulator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parallelize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;....&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;res1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;作业执行解析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;基本组件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Spark基本的组件，包括负责集群运行的Master和Worker,负责作业运行的Client和Driver，以及负责集群资源管理器(YARN)和执行单元(Executor)等，并在组件的基础上，对于基于RDD数据集的&lt;code class=&quot;highlighter-rouge&quot;&gt;静态视图&lt;/code&gt;和基于Partition的动态视图进行了说明。为接下来的作业执行流程做了铺垫。&lt;/p&gt;
+
+&lt;p&gt;从架构上来说，每一个Spark Application都由控制集群的&lt;code class=&quot;highlighter-rouge&quot;&gt;主控节点Master&lt;/code&gt;，负责集群资源管理的Cluster Manager，执行具体任务的Worker节点和执行单元Executor，负责作业的提交的Client端和负责作业控制的Driver进程组成.&lt;/p&gt;
+
+&lt;p&gt;SparkClient负责任务的提交，Driver进程进程通过运行用户定义的main的函数，在集群上执行各种&lt;code class=&quot;highlighter-rouge&quot;&gt;并发操作和计算&lt;/code&gt;。其中SparkContext是应用程序与集群交互的唯一通道，主要包括：获取数据，交互操作，分析和构建DAG图，通过Scheduler调度任务，Block跟踪，Shuffle跟踪。&lt;/p&gt;
+
+&lt;p&gt;用户通过Client提交一个程序给Driver之后，Driver会将所有RDD的依赖关联在一起绘制一张DAG图；当运行任务时，调度Scheduler会配合组件Block Tracker和Shuffle Tracker进行工作；通过ClusterManager进行资源统一调配；具体任务在Worker节点进行，由Task线程池负责具体任务执行，线程池通过多个Task运行任务。由BlockManager和StraggleingTask快速恢复。&lt;/p&gt;
+
+&lt;p&gt;在图论中，如果一个有向图&lt;code class=&quot;highlighter-rouge&quot;&gt;无法从任一顶点&lt;/code&gt;经过若干条边回到该点，则这个图是一个有向无环图(Directed Acyclic Graph,DAG),是描述一项工程进行过程中的有效工具。&lt;/p&gt;
+
+&lt;p&gt;在Spark中，DAG图绘制完毕，&lt;code class=&quot;highlighter-rouge&quot;&gt;不会被立即执行，而是仅仅对数据进行标记&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;作业执行流程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;提交作业有两种方式，分别是Driver运行在集群中，Driver运行在客户端，接下来分别介绍两种方式的作业运行原理。无论基于哪种运行方式，基础概念是一致的。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Stage,一个Spark作业一般包含一到多个Stage&lt;/li&gt;
+  &lt;li&gt;Task,一个Stage包含一到多个Task，通过多个Task实现并行运行的功能&lt;/li&gt;
+  &lt;li&gt;DAGScheduler,实现将Spark作业分解成一到多个Stage，每个Stage根据RDD的Partition个数决定Task的个数，然后生成相应的TaskSet放到TaskScheduler中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;基于Standalone模式的Spark架构&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在Standalone模式下，有两种运行方式：以Driver运行在Worker上和以Driver运行在客户端，这两种方式可以通过参数–delpoy-mode进行配置，默认是Client模式(即Driver运行在客户端)。集群启动Master与Worker进程，Master负责接收客户端提交的作业，管理Worker，并提交Web展示集群和作业信息.&lt;/p&gt;
+
+&lt;p&gt;整个框架下，各种进行的角色：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Master:主控节点，负责接收client提交的作业，管理Worker，并命令Worker启动Driver和Executor。&lt;/li&gt;
+  &lt;li&gt;Worker：Slaves节点上的守护进程，负责管理本节点的资源，定期向Master汇报心跳，接收Master的命令，启动Driver和Executor。&lt;/li&gt;
+  &lt;li&gt;Client:客户端进行，负责提交作业到Master。&lt;/li&gt;
+  &lt;li&gt;Driver：一个Spark作业运行时包括一个Driver进程，也是作业的主进程，负责DAG图的构建，Stage的划分，Task的管理及调度以及生产SchedulerBackend用于Akka通信。主要组件包括DAGScheduler,TaskScheduler以及SchedulerBackend。&lt;/li&gt;
+  &lt;li&gt;Executor:执行作业的顶峰。每个Application一般会对应多个Worker，但是一个Application在每个Worker上只会产生一个Executor进行，每个Executor接收Driver的命令LaunchTask，一个Executor可以执行一到多个Task。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;提交一个任务到集群，以Standalone为例：首先启动Master，然后启动Worker，启动Worker时要向Master注册。&lt;/p&gt;
+
+&lt;p&gt;Master收到应用程序提交之后，需要注册并加载Driver，然后由Driver注册应用程序，由Master去Launch具体的Executor资源，由Driver去触发Executor进程Launch具体的Task。&lt;/p&gt;
+
+&lt;p&gt;作业执行流程详细描述：&lt;/p&gt;
+
+&lt;p&gt;客户端提交作业给Master，Master让一个Worker启动Driver，即SchedulerBackend。Worker创建一个DriverRunner线程，DriverRunner启动SchedulerBackend进程。另外，Master还会让其余Worker启动Executor，即ExecutorBackend。Worker创建一个ExecutorRunner线程，ExecutorRunner会启动ExecutorBackend线程。ExecutorBackend启动后会向Driver的SchedulerBackend注册。SchedulerBackend进程中包含DAGScheduler，它会根据用户线程生成执行计划，并调度执行。对于每个Stage的Task，都会被存放到TaskScheduler中，ExecutorBackend向SchedulerBackend汇报时把TaskScheduler中的Task调度到ExecutorBackend执行。所有Stage都完成后作业结束。&lt;/p&gt;
+
+&lt;p&gt;总结过程：client —&amp;gt; master 分支 变成一对多开始管理和调度。实时汇报情况。&lt;/p&gt;
+
+&lt;p&gt;程序在执行过程中，由Worker节点向Master发送心跳，随时汇报Worker的健康状况。针对几种&lt;code class=&quot;highlighter-rouge&quot;&gt;故障情况&lt;/code&gt;，给出了相应的处理方案。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Worker节点出现故障。Worker在退出之前，会将该Worker上的Executor杀掉；而Worker是需要定期发送心跳给Master的，Master通过心跳机制感知该Worker节点的故障，而后将该情况汇报给Driver，并将该Worker从节点中移除；这样Driver即可知道该Worker上对应的Executor已被杀死。&lt;/li&gt;
+  &lt;li&gt;Executor出现问题。ExecutorRunner会将情况汇报给Master，从而Master便知道Executor出现问题。但是此时运行该Executor的Worker是正常的，因此Master会发送LaunchExecutor指令给该Worker，让其&lt;code class=&quot;highlighter-rouge&quot;&gt;再次启动一个Executor&lt;/code&gt;；而Worker收到LaunchExecutor指令后便再启动Executor。&lt;/li&gt;
+  &lt;li&gt;Master出现故障，通过Zookeeper搭建Master的HA，一个作为Active，其他的作为Standby，一旦Active节点出现故障，能够及时切换。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Driver运行在客户端，和Driver运行在Worker节点上类似,但也有不同点。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;基于YARN模式的Spark架构&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在YARN模式下有两种运行方式：Driver运行在集群NodeManager和Driver运行在客户端。&lt;/p&gt;
+
+&lt;p&gt;SparkAppMaster相当于Standalone模式下的SchedulerBackend，Executor相当于Standalone模式下的ExecutorBackend，SparkAppMaster包括DAGScheduler和YARNClusterScheduler。&lt;/p&gt;
+
+&lt;p&gt;基于YARN的Spark作业首先由客户端生成作业信息，提交给ResourceManager，ResourceManager在某一NodeManager汇报时把AppMaster分配给NodeManager，NodeManager启动SparkAppMaster，SparkAppMaster启动后初始化作业，然后向ResourceManager申请资源，申请到相应资源后SparkAppMaster通过RPC让NodeManager启动相应的SparkExecutor，SparkExecutor向SparkAppMaster汇报并完成相应的任务。此外，SparkClient会通过AppMaster获取作业运行状态。&lt;/p&gt;
+
+&lt;p&gt;作业事件流和调度分析&lt;/p&gt;
+
+&lt;p&gt;任务提交到集群，集群将任务分配到具体的工作节点去处理。运行任务由4个参数，targetRDD,partitions,func,listens.runJob会把代码提交给DAGScheduler，DAGScheduler将代码绘制为DAG图，而根据依赖关系又将DAG图划分为不同的Stage，对应多个TaskSet，TaskSet交给TaskScheduler，TaskScheduler与资源服务器进行交互，资源管理器在根据不同的部署模式与集群进行交互，当然也可以在Local级别进行交互，TaskScheduler有自己的事件处理机制，task finish 和stage failure都是事件触发的。&lt;/p&gt;
+
+&lt;p&gt;作业处理调度框架&lt;/p&gt;
+
+&lt;p&gt;整个调度过程包括:生成RDD对象，构建DAGScheduler，任务调度，作业执行等几个部分。&lt;/p&gt;
+
+&lt;p&gt;1.生成RDD对象过程中，根据输入RDD进行解析，构建操作DAG图(build,operator DAG).代码中RDD进行转换(transformation)操作时惰性的(lazy)的，转换操作只会产生标记，并不会立即执行，只有遇到执行(action)操作时，执行操作调用runJob方法，从而提交至DAGScheduler，并绘制DAG图，程序才会真正执行.&lt;/p&gt;
+
+&lt;p&gt;2.构建DAGScheduler过程中，根据DAG划分任务阶段(split graph into stages of tasks),并将按照阶段(stage)提交任务集(TaskSet)&lt;/p&gt;
+
+&lt;p&gt;首先将整个DAG图划分成一个完整的Stage(也称finalStage)，然后从Stage中最后一个RDD起往前回溯。在回溯的过程中，不断判断RDD的依赖关系，如果是窄依赖(narrow dependncy)则继续回溯，如果是宽依赖(wide dependncy)则划分出一个新的Stage，从而将整个DAG图划分成多个Stage，每个Stage有一组Task组成。&lt;/p&gt;
+
+&lt;p&gt;如果满足:localExecutionEnabled为真；allowLocal为真；finalStage没有父State；partition数组为1这四个条件，则会在本地开启Local模式执行任务。否则，采取集群模式运行任务。只有满足该Stage没有未执行完毕的父Stage，则该Stage可以提交任务，并将任务集(Taskset)作为Stage的参数提交。&lt;/p&gt;
+
+&lt;p&gt;3.任务调度过程中，通过集群管理器分配资源启动具体任务(launch tasks via cluster manager),并重试失败或运行较慢任务(retry failed or straggling tasks)&lt;/p&gt;
+
+&lt;p&gt;DAGScheduler递交给TaskScheduler的是TaskSet，SchedulerBackend通过makeOffers申请资源，通过resourceOffer调度资源。另外TaskScheduler是通过TaskSetManager来管理这些Task的，当满足一定的条件，包括调度策略(FIFO和FAIR)以及延时调度(数据本地性)，则会将LaunchTask消息发送给ExecutorBackend。&lt;/p&gt;
+
+&lt;p&gt;当有任务失败或者Straggling Tasks时，在TaskScheduler层面会重新计算这些Task，只有超出Task的范围上升至Stage或者DAG层面时，才会交由DAGScheduler进行处理。任务失败之后，Stragging Tasks采取的措施是&lt;code class=&quot;highlighter-rouge&quot;&gt;看谁计算完&lt;/code&gt;，就要谁的结果。&lt;/p&gt;
+
+&lt;p&gt;4.作业执行过程中，执行任务(execute task),存储并管理数据模块(store and server block)&lt;/p&gt;
+
+&lt;p&gt;ExecutorBackend在接受到LaunchTask消息后，会在Executor上执行LaunchTask操作。LaunchTask操作总，会生成新的TaskRunner，并以线程的方式进行执行。在Task执行时，是需要分Task和ShuffleMapTask的，两者返回也不一样。&lt;/p&gt;
+
+&lt;p&gt;通过BlockMananger借口对存储进行管理，包括内存的读写和磁盘读写。其中，Shuffle的中间结果时需要写入磁盘的。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;运行时环境&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Spark中的每个应用程序都维护了自己的一套运行时的环境，该运行时环境在应用程序开始时构建，在运行程序结束时销毁。相对于所有的应用程序共有一套运行时环境的方式。极大的缓解了应用程序之间的相互影响。&lt;/p&gt;
+
+&lt;p&gt;总体来说，一个Spark的运行时环境由四个阶段组成。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;构建应用程序运行时环境&lt;/li&gt;
+  &lt;li&gt;将应用程转换为DAG图&lt;/li&gt;
+  &lt;li&gt;按照依赖关系调度执行DAG图&lt;/li&gt;
+  &lt;li&gt;销毁应用程序的运行环境。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1.为了运行一个应用程序，Spark首先根据应用程序资源需求构建一个运行时环境。这是通过与资源管理器交互来完成的。通常而言，存在两种运行时环境构建方式：粗粒度和细粒度。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;粗粒度：应用程序提交到集群之后，它在正式运行任务之前，将根据应用资源需求一次性将这些资源凑齐，之后使用这些资源运行任务，整个运行过程&lt;code class=&quot;highlighter-rouge&quot;&gt;不再申请新资源&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;细粒度：应用程序提交到集群之后，动态向集群管理申请资源，只要等到资源满足一个任务的运行，便开始运行该任务，而不必等到所有的资源全部到位。目前，基于Hadoop的MapReduce就是基于细粒度运行时环境构建方式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark on YARN，目前仅支持粗粒度构建方式&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;2.Spark将依赖分为窄依赖和宽依赖，基于以下两点原因;&lt;/p&gt;
+
+&lt;p&gt;首先，从数据混洗的角度，窄依赖的RDD可以通过相同的键进行联合分区，整个操作都可以在同一个集群节点上以流水线(pipeline)形式。例如，执行了Map后，紧接着执行Filter，不会造成网络之间的数据混洗。相反，宽依赖的RDD会涉及数据混洗，需要所有的父分区都是可用的，可能还需要进行跨节点传递数据。&lt;/p&gt;
+
+&lt;p&gt;其次，从失败恢复的角度考虑，窄依赖恢复更有效，只需要重新计算丢失的父分区，而且可以并行的在不同的节点进行重新计算。而宽依赖涉及RDD各级的多个父分区(parent partition),可能会导致全部重新计算。&lt;/p&gt;
+
+&lt;p&gt;在将应用程转换成DAG的过程中，Spark的调度程序会检查依赖关系的类型，根据RDD依赖关系将应用程序划分为若干个Stage，每个Stage启动一定的数目的任务进行并行处理。&lt;/p&gt;
+
+&lt;p&gt;Spark采用了&lt;code class=&quot;highlighter-rouge&quot;&gt;贪心算法&lt;/code&gt;划分阶段，如果子RDD的分区到父RDD的分区时窄依赖，就实施经典的Fusion(融合)优化，把对应的操作划分到一个Stage，如果连续的变换子序列都是窄依赖，就可以把很多个操作并到一个Stage，直到遇到一个宽依赖。这不但减少了大量的全局屏障(barrier)，而且无须物化很多中间结果的RDD，可极大的提高性能。Spark把这个乘坐流水线(pipeline)。&lt;/p&gt;
+
+&lt;p&gt;宽依赖在一个执行中会跨越连续的Stage，同时需要显式指定多个子RDD的分区。&lt;/p&gt;
+
+&lt;p&gt;DAGScheduler将Stage划分完成后，提交实际上是通过把Stage转换为TaskSet，然后通过TaskScheduler将计算任务最终提交到集群。&lt;/p&gt;
+
+&lt;p&gt;3.调度DAG执行图&lt;/p&gt;
+
+&lt;p&gt;在该阶段中，DAGScheduler将按照依赖关系调度执行每个Stage：优先选择那些不依赖任务阶段的Stage，待这些阶段执行完成后，在调度那些需要依赖的阶段已经完成Stage。依次进行，这样一直调度下去，直到所有的阶段运行完成。&lt;/p&gt;
+
+&lt;p&gt;在处理某个阶段时，Spark将为之启动一定数目的Task并行运行，为了提高任务的并行率。Spark借鉴了MapReduce中的优化机制。包括数据本地性和推测执行。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;数据本地性&lt;/li&gt;
+  &lt;li&gt;推测执行&lt;/li&gt;
+  &lt;li&gt;采取多线程执行具体的任务&lt;/li&gt;
+  &lt;li&gt;Executor上会有一个BlockManager模块，类似于KV系统(内存和硬盘共同作为存储设备)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不论采取何种模式的部署和经过多少次转换，典型的DAG执行流程如下:&lt;/p&gt;
+
+&lt;p&gt;1)RDD直接从外部数据源(HDFS,本地文件)创建&lt;/p&gt;
+
+&lt;p&gt;2)RDD经历一系列的Transformation(Map,flatMap,Filter,groupBy,Join),每一次都会产生不同的RDD，供下一个Transformation使用&lt;/p&gt;
+
+&lt;p&gt;3)当触发Action(count,collect,save,take)时，将最后一个RDD进行转换，输出到外部的数据源。&lt;/p&gt;
+
+&lt;p&gt;上述一系列的处理过程称为一个血统(lineage)，即DAG拓扑排序的结果。在Lineage中生成的RDD都是&lt;code class=&quot;highlighter-rouge&quot;&gt;不可变的&lt;/code&gt;，事实上，除非被缓存，每个RDD在进入下一个Transformation操作之前都只使用一次。&lt;/p&gt;
+
+&lt;p&gt;如果按照MapReduce，流程中任何&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark SQL与DataFrame&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark Streaming&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;核心模块—Schedule整体&lt;/p&gt;
 
@@ -6163,8 +6530,6 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parallelize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;accum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -6197,116 +6562,28 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Spark-shell&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;spark-mllib&quot;&gt;Spark MLlib与机器学习&lt;/h2&gt;
 
-&lt;p&gt;用Spark-shell来开发程序,在Spark-shell中&lt;code class=&quot;highlighter-rouge&quot;&gt;已经&lt;/code&gt;创建一个名为sc的SparkContext对象和sqlcontext的SQL context对象,在4个CPU核上运行Spark-shell:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd `echo $SPARK_HOME`
-./bin/spark-shell --master local[4]
-#如果指定jar路径
-./bin/spark-shell --master local[4] --jars testcode.jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h2 id=&quot;graphx&quot;&gt;GraphX图计算框架&lt;/h2&gt;
 
-&lt;p&gt;其中，–master用来设置context将要连接并使用的&lt;code class=&quot;highlighter-rouge&quot;&gt;资源主节点&lt;/code&gt;，master的值是Standalone模式的Spark集群地址，Meson或者YARN集群的URL,或者是一个local地址，使用–jars可以添加Jar的路径，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;逗号&lt;/code&gt;分割可以&lt;code class=&quot;highlighter-rouge&quot;&gt;添加多个包&lt;/code&gt;，Spark-shell的本质是在后台调用了spark-submit脚本来启动&lt;code class=&quot;highlighter-rouge&quot;&gt;应用程序&lt;/code&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;加载text文件&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;sparkr&quot;&gt;SparkR&lt;/h2&gt;
 
-&lt;p&gt;Spark创建sc之后，就可以加载本地文件创建RDD,我们可以加载Spark自带的本地README.md文件进行测试，返回一个MapPartitionsRDD文件&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val textFile = sc.textFile(&quot;file:///$SPARK_HOME/README.md&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;需要说明的是，加载HDFS文件和本地文件都是使用textFile,区别是添加前缀(hdfs://和file://)进行标识，从本地读取文件直接返回MapPartitionsRDD,而从HDFS读取的文件先转换成HadoopRDD,然后&lt;code class=&quot;highlighter-rouge&quot;&gt;隐式转换成MapPartitionsRDD&lt;/code&gt;。上面说的MapPartitionsRDD和HadoopRDD都是直接基于Spark的&lt;code class=&quot;highlighter-rouge&quot;&gt;弹性分布式数据集(RDD)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;对于RDD，可以执行Transformation返回新的RDD，也可以执行Action得到返回结果&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 获取RDD文件textFile的第一项
-scala&amp;gt;textFile.first()
-scala&amp;gt;textFile.count()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;接下来通过Transformation操作，使用filter命令返回一个新的RDD，即抽取文件全部条目的一个子集，返回一个新的FilteredRDD&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//抽取含有&quot;spark&quot;的子集,可以链接多个Transformation和Action进行操作
-scala&amp;gt;textFile.filter(line =&amp;gt; line.split(&quot;Spark&quot;)).count()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过RDD进行组合，来实现找出文本中&lt;code class=&quot;highlighter-rouge&quot;&gt;每行最多的单词数&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;词频统计&lt;/code&gt;等。&lt;/p&gt;
-
-&lt;p&gt;1.找出文本中每行最多单词数，基于RDD的Transformation和Action可以用作更复杂的运算&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.map(line =&amp;gt; line.split(&quot; &quot;).size).reduce((a,b) =&amp;gt; if (a &amp;gt; b) a else b)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;split(““)进行分词，并统计分词后的单词数，创建一个基于单词数的新的RDD，然后针对该RDD执行Reduce操作使用(a,b)=&amp;gt; if (a,b) a else b&lt;/p&gt;
-
-&lt;p&gt;2.词频统计&lt;/p&gt;
-
-&lt;p&gt;从MapReduce开始，词频统计已经成为大数据处理最流行的入门程序，类似MapReduce，Spark也能很容易实现MapReduce&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//	结合flatMap,map和reduceBykey来计算文件中每个单词的词频
-scala&amp;gt;val wordCount = textFile.flatMap(line =&amp;gt; line.split(&quot; &quot;)).map(word =&amp;gt; (word,1)).reduceByKey((a,b) =&amp;gt; a + b)
-// 使用collect聚合单词统计结果
-scala&amp;gt;wordCount.collect()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;结合flatMap,map和reduceByKey来计算文件中每个单词的词频，并返回(string,int)类型的键值对ShuffleRDD(由于reduceByKey执行时需要进行Shuffle操作，返回的是一个Shuffle形式的RDD，ShuffleRDD)，最后使用collect聚合单词统计计算结果&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;note&lt;/strong&gt;:如果想让Scala的函数文本更加的简洁，可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;占位符&quot;_&quot;&lt;/code&gt;，占位符可以看做表达式里需要被&lt;code class=&quot;highlighter-rouge&quot;&gt;填入&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;，这个&lt;code class=&quot;highlighter-rouge&quot;&gt;空白&lt;/code&gt;在每次函数被调用时，由函数的&lt;code class=&quot;highlighter-rouge&quot;&gt;参数填入&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;当每个参数在函数文本中最多出现一次的 情况下，可以使用”&lt;em&gt;+&lt;/em&gt;“扩展成两个参数的函数文本；在&lt;code class=&quot;highlighter-rouge&quot;&gt;多个下划线指代多个参数&lt;/code&gt;，而不是&lt;code class=&quot;highlighter-rouge&quot;&gt;单个参数的重复使用&lt;/code&gt;。第一个下划线代表第一个参数，第二个下划线代表第二个参数，依次类推。&lt;/p&gt;
-
-&lt;p&gt;下面通过占位符来对词频进行统计，进行优化&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;默认的Spark是&lt;code class=&quot;highlighter-rouge&quot;&gt;不进行排序的&lt;/code&gt;，如果以排序的方式输出，需要进行key和value互换，然后采取sortByKey的方式，可以指定降序(false),升序(true),这样就完成的数据统计的排序&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val wordCount = textFile.flatMap(_.split(&quot; &quot;)).map(_,1).reduceBeKey(_+_).map(x =&amp;gt; (x._2,x._1)).sortByKey(false).map(x =&amp;gt; (x._2,x._1))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上面的代码通过第一个x=&amp;gt;(x._2,x._1)实现key和value的互换，然后通过sortByKey(false)实现降序排列，通过第二个x =&amp;gt; (x._2,x._1)再次互换，最后完成排序.&lt;/p&gt;
-
-&lt;p&gt;RDD 缓存 Spark也支持将数据集存放到一个集群的内存缓冲中，当数据被饭费访问时，如果在查询一个小而热的数据集，或运行一个像PageRank的迭代算法，是非常有用的，缓冲textFile变量&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;textFile.cache()
-scala&amp;gt;textFile.count()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过cache缓存数据可以用于&lt;code class=&quot;highlighter-rouge&quot;&gt;非常大的数据集，支持跨越几十或几百个节点&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;spark-submit提交方式&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;master如下：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;local	以单线程本地运行Spark(完全无并行)&lt;/li&gt;
-  &lt;li&gt;local[K]	在本地以K个Worker线程运行Spark(这个数字设为你机器CPU核数的数目比较理想)&lt;/li&gt;
-  &lt;li&gt;local[*]	以与你机器上逻辑核数目相同的Worker线程运行Spark&lt;/li&gt;
-  &lt;li&gt;spark://HOST:PORT	直接连接到给定的Spark独立模式集群上的Master，该端口必须设置好，可供使用的，一般是默认是7070&lt;/li&gt;
-  &lt;li&gt;yarn-client	以Client模式连接到YARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
-  &lt;li&gt;yarn-cluster	以Cluster模式连接到ARN集群，该集群的位置可以在HADOOP_CONF_DIR变量中找到&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;具体代码&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Local模式在4个CPU核上提交应用程序&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Standalone模式提交应用程序&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://*.*.*.*:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7077&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;YARN模式提交应用程序&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;$YOUR_SPAKR_HMOE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classs&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;simpleApp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;spark-1&quot;&gt;实战Spark&lt;/h2&gt;
 
 &lt;hr /&gt;
 &lt;hr /&gt;
@@ -6314,22 +6591,27 @@ scala&amp;gt;textFile.count()
 &lt;hr /&gt;
 &lt;hr /&gt;
 &lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;hr /&gt;
+
+&lt;h2 id=&quot;spark-2&quot;&gt;Spark高级&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;调度管理&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;存储管理&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;监控管理&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;性能调优&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;扩展&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark-jobserver&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark Tachyon&lt;/strong&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 &lt;hr /&gt;
 
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;docker-scala-spark&quot;&gt;docker-scala-spark&lt;/h3&gt;
+&lt;h2 id=&quot;docker-scala-spark&quot;&gt;docker-scala-spark&lt;/h2&gt;
 
 &lt;p&gt;这里收集了一些关于scala，spark编程的docker.
 dockoey/jupyter-scala
@@ -6340,7 +6622,7 @@ dockoey/jupyter-scala
 &lt;a href=&quot;https://hub.docker.com/r/jupyter/all-spark-notebook/&quot;&gt;dockerhub&lt;/a&gt;
 &lt;a href=&quot;https://github.com/jupyter/docker-stacks&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;spark-e-book&quot;&gt;spark e-book&lt;/h3&gt;
+&lt;h2 id=&quot;spark-e-book&quot;&gt;spark e-book&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.safaribooksonline.com/library/view/building-a-recommendation/9781785282584/&quot;&gt;Building a Recommendation Engine with Scala&lt;/a&gt;&lt;/li&gt;
@@ -6351,7 +6633,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7028,7 +7310,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+08:00</updated>
+   <updated>2016-10-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7105,7 +7387,7 @@ sudo apt-get install shadowsocks-qt5
  <entry>
    <title>Learn Scala</title>
    <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+08:00</updated>
+   <updated>2016-10-19T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
