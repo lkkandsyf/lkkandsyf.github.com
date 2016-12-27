@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-27T10:24:55+00:00</updated>
+ <updated>2016-12-27T21:05:44+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+00:00</updated>
+   <updated>2016-12-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -159,11 +159,77 @@ jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;参数：&lt;/p&gt;
+
+&lt;p&gt;-XDebug 启用调试&lt;/p&gt;
+
+&lt;p&gt;-Xrunjdwp 加载JDWP的JPDA参考执行实例。&lt;/p&gt;
+
+&lt;p&gt;transport  用于在调试程序和 VM 使用的进程之间通讯。&lt;/p&gt;
+
+&lt;p&gt;dt_socket 套接字传输。&lt;/p&gt;
+
+&lt;p&gt;server=y/n VM是否需要作为调试服务器执行。&lt;/p&gt;
+
+&lt;p&gt;address=2345调试服务器监听的端口号。&lt;/p&gt;
+
+&lt;p&gt;suspend=y/n 是否在调试客户端建立连接之后启动 VM 。&lt;/p&gt;
+
+&lt;p&gt;关于suspend多说一句，如果设置为y，它会阻塞程序运行，直到有客户端连接到对应的监听端口(这里是9527)，程序才真正开始执行。我们有时候会抱怨程序一闪而过，还没来得及在本地加载上代码程序就执行完了，这种情况就可以使用suspend参数。&lt;/p&gt;
+
+&lt;p&gt;还有一个细节是-jar参数不能写到-Xug参数前，像这样无法启用调试：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar lib/Main.jar -Xdebug -Xrunjdwp:transport=dt_socket,address=9527,server=y,suspend=y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;要远程调试maven2启动的程序，例如mvn jetty:run，可以在启动程序时执行命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export MAVEN_OPTS=&quot;-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=y&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;cofig:&lt;/p&gt;
+
+&lt;p&gt;Java代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set MAVEN_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里对几个参数进行说明：&lt;/p&gt;
+
+&lt;p&gt;-Xdebug ：  启动debug模式&lt;/p&gt;
+
+&lt;p&gt;-Xnoagent：  禁用默认sun.tools.debug调试器&lt;/p&gt;
+
+&lt;p&gt;-Djava.compiler：指定编译器类型，可方便优化 jitc jitc_de等&lt;/p&gt;
+
+&lt;p&gt;-Xrunjdwp：启动调试协议JDWP，全称是Java Debug Wire Protocol，它定义了JPDA front-end和JPDA back-end之间通讯信息的二进制格式。这里的通讯信息主要包括两种：调试器发送给JVM的请求信息和JVM发送给调试器的调试信息。有如下子项：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-transport：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输。
+-server：y/n 该jvm是被调试者还是调试器
+-suspend：y/n 是否等待外部调试器的连接，如jetty启动时候，是否等待eclipse的远程连接后在进行jetty的初始化工作。在调试web容器的时候用的很多
+-address：监听端口
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用mvn来debug&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:exec -Dexec.executable=&quot;java&quot; -Dexec.args=&quot;-classpath %classpath -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=1044 com.mycompany.app.App&quot;
+jdb -attach 1044
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;借鉴jdb调试&lt;a href=&quot;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&quot;&gt;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;教程&lt;a href=&quot;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&quot;&gt;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;软件指南针&lt;a href=&quot;http://www.softown.cn/post/180.html&quot;&gt;http://www.softown.cn/post/180.html&lt;/a&gt;这里介绍很多关于Java的工具&lt;/p&gt;
+
+&lt;p&gt;泰晓科技&lt;a href=&quot;http://tinylab.org/use-jdb-to-debug-android-application/&quot;&gt;http://tinylab.org/use-jdb-to-debug-android-application/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;远程调试&lt;a href=&quot;http://www.jianshu.com/p/c6697ec09b25&quot;&gt;http://www.jianshu.com/p/c6697ec09b25&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;tools&lt;/h2&gt;
 
@@ -186,7 +252,7 @@ jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -354,7 +420,7 @@ jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -737,7 +803,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -830,7 +896,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+00:00</updated>
+   <updated>2016-12-20T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -931,7 +997,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+00:00</updated>
+   <updated>2016-12-16T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1111,7 +1177,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+00:00</updated>
+   <updated>2016-12-10T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1131,7 +1197,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+00:00</updated>
+   <updated>2016-12-04T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1167,7 +1233,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+00:00</updated>
+   <updated>2016-11-30T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1190,7 +1256,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+00:00</updated>
+   <updated>2016-11-28T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2298,7 +2364,7 @@ db.valColl.find()
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+00:00</updated>
+   <updated>2016-11-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2384,7 +2450,7 @@ change it by
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+00:00</updated>
+   <updated>2016-11-21T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2416,7 +2482,7 @@ change it by
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5569,7 +5635,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5797,7 +5863,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5813,7 +5879,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+00:00</updated>
+   <updated>2016-10-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5865,7 +5931,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+00:00</updated>
+   <updated>2016-10-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6633,7 +6699,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+00:00</updated>
+   <updated>2016-10-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7310,7 +7376,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+00:00</updated>
+   <updated>2016-10-21T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7387,7 +7453,7 @@ sudo apt-get install shadowsocks-qt5
  <entry>
    <title>Learn Scala</title>
    <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+00:00</updated>
+   <updated>2016-10-19T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
