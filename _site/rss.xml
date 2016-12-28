@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 27 Dec 2016 21:05:44 +0800</lastBuildDate>
-        <pubDate>Tue, 27 Dec 2016 21:05:44 +0800</pubDate>
+        <lastBuildDate>Wed, 28 Dec 2016 09:56:16 +0000</lastBuildDate>
+        <pubDate>Wed, 28 Dec 2016 09:56:16 +0000</pubDate>
         <ttl>60</ttl>
 
 
@@ -244,7 +244,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -412,7 +412,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -676,7 +676,7 @@ default(默认)&lt;/p&gt;
 
 &lt;p&gt;1.运行先前编译代码，exec:java不会自动编译代码，需要手动编译mvn compile来完成&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mnv compile
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn compile
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -795,7 +795,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -888,7 +888,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -989,7 +989,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1169,7 +1169,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1189,7 +1189,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1225,7 +1225,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1248,7 +1248,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2356,7 +2356,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2442,7 +2442,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2474,7 +2474,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5627,7 +5627,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5855,7 +5855,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5871,7 +5871,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5923,7 +5923,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5940,6 +5940,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
   &lt;li&gt;&lt;a href=&quot;#spark-1&quot; id=&quot;markdown-toc-spark-1&quot;&gt;实战Spark&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#spark-2&quot; id=&quot;markdown-toc-spark-2&quot;&gt;Spark高级&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;扩展&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-command-debug&quot; id=&quot;markdown-toc-spark-command-debug&quot;&gt;Spark command debug&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#docker-scala-spark&quot; id=&quot;markdown-toc-docker-scala-spark&quot;&gt;docker-scala-spark&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#spark-e-book&quot; id=&quot;markdown-toc-spark-e-book&quot;&gt;spark e-book&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -6409,6 +6410,7 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;&lt;strong&gt;作业执行流程&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;提交作业有两种方式，分别是Driver运行在集群中，Driver运行在客户端，接下来分别介绍两种方式的作业运行原理。无论基于哪种运行方式，基础概念是一致的。&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Stage,一个Spark作业一般包含一到多个Stage&lt;/li&gt;
   &lt;li&gt;Task,一个Stage包含一到多个Task，通过多个Task实现并行运行的功能&lt;/li&gt;
@@ -6420,6 +6422,7 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;在Standalone模式下，有两种运行方式：以Driver运行在Worker上和以Driver运行在客户端，这两种方式可以通过参数–delpoy-mode进行配置，默认是Client模式(即Driver运行在客户端)。集群启动Master与Worker进程，Master负责接收客户端提交的作业，管理Worker，并提交Web展示集群和作业信息.&lt;/p&gt;
 
 &lt;p&gt;整个框架下，各种进行的角色：&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Master:主控节点，负责接收client提交的作业，管理Worker，并命令Worker启动Driver和Executor。&lt;/li&gt;
   &lt;li&gt;Worker：Slaves节点上的守护进程，负责管理本节点的资源，定期向Master汇报心跳，接收Master的命令，启动Driver和Executor。&lt;/li&gt;
@@ -6439,6 +6442,7 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;总结过程：client —&amp;gt; master 分支 变成一对多开始管理和调度。实时汇报情况。&lt;/p&gt;
 
 &lt;p&gt;程序在执行过程中，由Worker节点向Master发送心跳，随时汇报Worker的健康状况。针对几种&lt;code class=&quot;highlighter-rouge&quot;&gt;故障情况&lt;/code&gt;，给出了相应的处理方案。&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Worker节点出现故障。Worker在退出之前，会将该Worker上的Executor杀掉；而Worker是需要定期发送心跳给Master的，Master通过心跳机制感知该Worker节点的故障，而后将该情况汇报给Driver，并将该Worker从节点中移除；这样Driver即可知道该Worker上对应的Executor已被杀死。&lt;/li&gt;
   &lt;li&gt;Executor出现问题。ExecutorRunner会将情况汇报给Master，从而Master便知道Executor出现问题。但是此时运行该Executor的Worker是正常的，因此Master会发送LaunchExecutor指令给该Worker，让其&lt;code class=&quot;highlighter-rouge&quot;&gt;再次启动一个Executor&lt;/code&gt;；而Worker收到LaunchExecutor指令后便再启动Executor。&lt;/li&gt;
@@ -6488,6 +6492,7 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;Spark中的每个应用程序都维护了自己的一套运行时的环境，该运行时环境在应用程序开始时构建，在运行程序结束时销毁。相对于所有的应用程序共有一套运行时环境的方式。极大的缓解了应用程序之间的相互影响。&lt;/p&gt;
 
 &lt;p&gt;总体来说，一个Spark的运行时环境由四个阶段组成。&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;构建应用程序运行时环境&lt;/li&gt;
   &lt;li&gt;将应用程转换为DAG图&lt;/li&gt;
@@ -6522,6 +6527,7 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;p&gt;在该阶段中，DAGScheduler将按照依赖关系调度执行每个Stage：优先选择那些不依赖任务阶段的Stage，待这些阶段执行完成后，在调度那些需要依赖的阶段已经完成Stage。依次进行，这样一直调度下去，直到所有的阶段运行完成。&lt;/p&gt;
 
 &lt;p&gt;在处理某个阶段时，Spark将为之启动一定数目的Task并行运行，为了提高任务的并行率。Spark借鉴了MapReduce中的优化机制。包括数据本地性和推测执行。&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;数据本地性&lt;/li&gt;
   &lt;li&gt;推测执行&lt;/li&gt;
@@ -6672,6 +6678,20 @@ JoinedRDD	|	每个Reduce任务一个分区	|	依赖所有父RDD	|	读取Shuffle�
 &lt;hr /&gt;
 &lt;hr /&gt;
 
+&lt;h2 id=&quot;spark-command-debug&quot;&gt;Spark command debug&lt;/h2&gt;
+
+&lt;p&gt;在主机端启动:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./spark-submit --master &quot;local[2]&quot;  --class com.nsfocus.streaming.JavaSparkPi  /home/lkk/job/demo/target/demo-1.0.jar --driver-java-options -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:9904,server=y,suspend=y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;监控主机和port进行debug,端口可以改变，只要系统没有使用就可以。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb 127.0.0.1:9904
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;docker-scala-spark&quot;&gt;docker-scala-spark&lt;/h2&gt;
 
 &lt;p&gt;这里收集了一些关于scala，spark编程的docker.
@@ -6691,7 +6711,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -7368,7 +7388,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -7445,7 +7465,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -8811,7 +8831,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
 
