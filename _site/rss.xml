@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 28 Dec 2016 09:56:16 +0000</lastBuildDate>
-        <pubDate>Wed, 28 Dec 2016 09:56:16 +0000</pubDate>
+        <lastBuildDate>Thu, 29 Dec 2016 22:35:01 +0800</lastBuildDate>
+        <pubDate>Thu, 29 Dec 2016 22:35:01 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -244,7 +244,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -412,7 +412,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -780,6 +780,53 @@ default(默认)&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;四,如何将jar包加入到Maven本地仓库&lt;/p&gt;
+
+&lt;p&gt;首先是配置好Maven环境。&lt;/p&gt;
+
+&lt;p&gt;然后在下载的jar包下执行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最后即可以在项目中的pom.xml中添加&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+  &amp;lt;groupId&amp;gt;com.microsoft.sqlserver&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;sqljdbc4&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;4.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;五.在运行时执行本地仓库的位置&lt;/p&gt;
+
+&lt;p&gt;本地仓库vs远程仓库&lt;/p&gt;
+
+&lt;p&gt;运行Maven的时候，Maven所需要的任何构件都是直接从本地仓库获取的。如果本地仓库没有，它会首先尝试从远程仓库下载构件至本地仓库，然后再使用本地仓库的构件。&lt;/p&gt;
+
+&lt;p&gt;Maven缺省的本地仓库地址为${user.home}/.m2/repository 。也就是说，一个用户会对应的拥有一个本地仓库。&lt;/p&gt;
+
+&lt;p&gt;你也可以自定义本地仓库的位置，修改${user.home}/.m2/settings.xml ：&lt;/p&gt;
+
+&lt;p&gt;xml代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;settings&amp;gt;
+   ...
+   &amp;lt;localRepository&amp;gt;D:\java\repository&amp;lt;/localRepository&amp;gt;
+   ...
+&amp;lt;/settings&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn clean install -Dmaven.repo.local=/home/user/myrepo/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://my.oschina.net/ghm7753/blog/373350&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -795,7 +842,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -888,7 +935,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -989,7 +1036,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1169,7 +1216,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1189,7 +1236,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1225,7 +1272,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1248,7 +1295,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2356,7 +2403,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2442,7 +2489,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2474,7 +2521,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5627,7 +5674,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5855,7 +5902,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5871,7 +5918,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5923,7 +5970,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6711,7 +6758,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7388,7 +7435,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7465,7 +7512,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -8831,7 +8878,7 @@ axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</guid>
-                <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 19 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
 

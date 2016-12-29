@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-28T09:56:16+00:00</updated>
+ <updated>2016-12-29T22:35:01+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+00:00</updated>
+   <updated>2016-12-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -252,7 +252,7 @@ jdb -attach 1044
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -420,7 +420,7 @@ jdb -attach 1044
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -785,6 +785,53 @@ default(默认)&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;四,如何将jar包加入到Maven本地仓库&lt;/p&gt;
+
+&lt;p&gt;首先是配置好Maven环境。&lt;/p&gt;
+
+&lt;p&gt;然后在下载的jar包下执行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最后即可以在项目中的pom.xml中添加&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+  &amp;lt;groupId&amp;gt;com.microsoft.sqlserver&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;sqljdbc4&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;4.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;五.在运行时执行本地仓库的位置&lt;/p&gt;
+
+&lt;p&gt;本地仓库vs远程仓库&lt;/p&gt;
+
+&lt;p&gt;运行Maven的时候，Maven所需要的任何构件都是直接从本地仓库获取的。如果本地仓库没有，它会首先尝试从远程仓库下载构件至本地仓库，然后再使用本地仓库的构件。&lt;/p&gt;
+
+&lt;p&gt;Maven缺省的本地仓库地址为${user.home}/.m2/repository 。也就是说，一个用户会对应的拥有一个本地仓库。&lt;/p&gt;
+
+&lt;p&gt;你也可以自定义本地仓库的位置，修改${user.home}/.m2/settings.xml ：&lt;/p&gt;
+
+&lt;p&gt;xml代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;settings&amp;gt;
+   ...
+   &amp;lt;localRepository&amp;gt;D:\java\repository&amp;lt;/localRepository&amp;gt;
+   ...
+&amp;lt;/settings&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn clean install -Dmaven.repo.local=/home/user/myrepo/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://my.oschina.net/ghm7753/blog/373350&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -803,7 +850,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -896,7 +943,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+00:00</updated>
+   <updated>2016-12-20T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -997,7 +1044,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+00:00</updated>
+   <updated>2016-12-16T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1177,7 +1224,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+00:00</updated>
+   <updated>2016-12-10T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1197,7 +1244,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+00:00</updated>
+   <updated>2016-12-04T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1233,7 +1280,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+00:00</updated>
+   <updated>2016-11-30T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1256,7 +1303,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+00:00</updated>
+   <updated>2016-11-28T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2364,7 +2411,7 @@ db.valColl.find()
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+00:00</updated>
+   <updated>2016-11-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2450,7 +2497,7 @@ change it by
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+00:00</updated>
+   <updated>2016-11-21T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2482,7 +2529,7 @@ change it by
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5635,7 +5682,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5863,7 +5910,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5879,7 +5926,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+00:00</updated>
+   <updated>2016-10-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5931,7 +5978,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+00:00</updated>
+   <updated>2016-10-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6719,7 +6766,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+00:00</updated>
+   <updated>2016-10-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7396,7 +7443,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+00:00</updated>
+   <updated>2016-10-21T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7473,7 +7520,7 @@ sudo apt-get install shadowsocks-qt5
  <entry>
    <title>Learn Scala</title>
    <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+00:00</updated>
+   <updated>2016-10-19T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
