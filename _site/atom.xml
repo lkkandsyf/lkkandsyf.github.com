@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2016-12-29T22:35:01+08:00</updated>
+ <updated>2016-12-30T09:54:19+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -13,9 +13,51 @@
 
  
  <entry>
+   <title>Idea</title>
+   <link href="http://lkkandsyf.github.io/ide/2016/12/30/idea"/>
+   <updated>2016-12-30T00:00:00+00:00</updated>
+   <id>http://lkkandsyf.github.io/ide/2016/12/30/idea</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;开发Scala,Java项目，需要一个好的IDE，idea是一个比较好的开发环境，熟练使用，对自己也是大有帮助。&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;debug&quot;&gt;debug&lt;/h2&gt;
+
+&lt;p&gt;一些基本的操作&lt;/p&gt;
+
+&lt;p&gt;设置断点：通过鼠标在行号的左边，点击，就ok了，再次点击就取消&lt;/p&gt;
+
+&lt;p&gt;next：F8	#运行一行代码&lt;/p&gt;
+
+&lt;p&gt;step: F7	#如果碰到函数，就进入&lt;/p&gt;
+
+&lt;p&gt;强制进入代码:Alt + Shift + F7&lt;/p&gt;
+
+&lt;p&gt;continue step out:Shift + F8&lt;/p&gt;
+
+&lt;p&gt;运行到光标出:Alt + F9&lt;/p&gt;
+
+&lt;p&gt;恢复程序:F9&lt;/p&gt;
+
+&lt;p&gt;显示执行哪一个断点:Alt + F10&lt;/p&gt;
+
+&lt;p&gt;debug 运行Java类，Ctrl + Shift + F9&lt;/p&gt;
+
+&lt;p&gt;正常运行Java来:Ctrl + Shift + F10&lt;/p&gt;
+
+&lt;p&gt;程序中的输出在Console显示。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+08:00</updated>
+   <updated>2016-12-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -252,7 +294,7 @@ jdb -attach 1044
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -420,7 +462,7 @@ jdb -attach 1044
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -850,7 +892,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -943,7 +985,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+08:00</updated>
+   <updated>2016-12-20T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1044,7 +1086,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+08:00</updated>
+   <updated>2016-12-16T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1224,7 +1266,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+08:00</updated>
+   <updated>2016-12-10T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1244,7 +1286,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+08:00</updated>
+   <updated>2016-12-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1280,7 +1322,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+08:00</updated>
+   <updated>2016-11-30T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1303,7 +1345,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+08:00</updated>
+   <updated>2016-11-28T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2411,7 +2453,7 @@ db.valColl.find()
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+08:00</updated>
+   <updated>2016-11-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2497,7 +2539,7 @@ change it by
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+08:00</updated>
+   <updated>2016-11-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2529,7 +2571,7 @@ change it by
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5682,7 +5724,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5910,7 +5952,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
+   <updated>2016-11-05T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5926,7 +5968,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+08:00</updated>
+   <updated>2016-10-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5978,7 +6020,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6766,7 +6808,7 @@ dockoey/jupyter-scala
  <entry>
    <title>Docker</title>
    <link href="http://lkkandsyf.github.io/docker/2016/10/24/Docker"/>
-   <updated>2016-10-24T00:00:00+08:00</updated>
+   <updated>2016-10-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/docker/2016/10/24/Docker</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7443,7 +7485,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
  <entry>
    <title>Out Of Wall</title>
    <link href="http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall"/>
-   <updated>2016-10-21T00:00:00+08:00</updated>
+   <updated>2016-10-21T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -7514,1372 +7556,6 @@ sudo apt-get install shadowsocks-qt5
 &lt;p&gt;免费账号：
 &lt;a href=&quot;http://freessr.top/&quot;&gt;free-one&lt;/a&gt;
 &lt;a href=&quot;http://freevpnss.cc/&quot;&gt;free-two&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Learn Scala</title>
-   <link href="http://lkkandsyf.github.io/scala/2016/10/19/learn-scala"/>
-   <updated>2016-10-19T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/scala/2016/10/19/learn-scala</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;这里整理自己学习scala的整个过程，以及笔记。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;tools&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;基础&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;1.变量&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;2.常用的类型&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;3.数值类型转换&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;4.操作符&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;5.函数调用和方法&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#apply&quot; id=&quot;markdown-toc-apply&quot;&gt;6.apply方法&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;控制结构和函数&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#if&quot; id=&quot;markdown-toc-if&quot;&gt;1.if语句也有返回值&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;2.块表达式&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#io&quot; id=&quot;markdown-toc-io&quot;&gt;3.IO&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#loop&quot; id=&quot;markdown-toc-loop&quot;&gt;4.Loop&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#for&quot; id=&quot;markdown-toc-for&quot;&gt;5.for&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;6.函数式编程&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;7.懒值&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;疑惑&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#match&quot; id=&quot;markdown-toc-match&quot;&gt;7.match&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;数组-映射-元组-类-对象&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;1.数组&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;2.映射&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;3.元组&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#list&quot; id=&quot;markdown-toc-list&quot;&gt;4.List&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#set&quot; id=&quot;markdown-toc-set&quot;&gt;5.Set&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;6.类&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;7.对象&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;8.函数&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#scala-api-download&quot; id=&quot;markdown-toc-scala-api-download&quot;&gt;Scala API download&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lkkandsyf.github.io/scala/2016/11/05/sbt-debug&quot;&gt;sbt&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;learn twitter scala course&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://twitter.github.io/effectivescala/index-cn.html&quot;&gt;effective scala&lt;/a&gt;
-&lt;a href=&quot;http://twitter.github.io/scala_school/zh_cn/index.html&quot;&gt;scala course&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;cnblog
-&lt;a href=&quot;http://hongqiang.info/scala&quot;&gt;blog&lt;/a&gt;：这收集了许多比较全面的关于scala东西。&lt;a href=&quot;http://www.cnblogs.com/youarebest/p/5593349.html&quot;&gt;learn file&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;基础&lt;/h3&gt;
-
-&lt;h4 id=&quot;section-1&quot;&gt;1.变量&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val 标志符：声明变量；如，val result = 1
-var 标志符：声明变量；
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;类型推断：变量的类型由scala根据初始化变量的表达式推断出来，&lt;code class=&quot;highlighter-rouge&quot;&gt;鼓励使用val&lt;/code&gt;；&lt;strong&gt;note:声明变量时不做初始化会报错&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;明确类型：scala的&lt;code class=&quot;highlighter-rouge&quot;&gt;变量或函数的类型总是写在变量或函数的后面&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;section-2&quot;&gt;2.常用的类型&lt;/h4&gt;
-
-&lt;p&gt;Scala支持&lt;code class=&quot;highlighter-rouge&quot;&gt;7中数值类型和1中Boolean类型&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Byte/Char/Short/Int/Float/Double
- Boolean
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;所有这些类型都是类&lt;/code&gt;，Scala并&lt;code class=&quot;highlighter-rouge&quot;&gt;未区分基本类型和引用类型&lt;/code&gt;。如，可以调用123.toString方法。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-3&quot;&gt;3.数值类型转换&lt;/h4&gt;
-
-&lt;p&gt;Scala中使用方法，而&lt;code class=&quot;highlighter-rouge&quot;&gt;非强制类型转换&lt;/code&gt;来做&lt;code class=&quot;highlighter-rouge&quot;&gt;数值类型之间的转换&lt;/code&gt;，如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; 123.123.toInt
-res6: Int = 123
-scala&amp;gt; 123.123.toChar
-res7: Char = {
-scala&amp;gt; 123.123.toLong
-res8: Long = 123
-scala&amp;gt; &quot;123.123&quot;.toDouble
-res9: Double = 123.123
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;section-4&quot;&gt;4.操作符&lt;/h4&gt;
-
-&lt;p&gt;Scala支持Java绝大多数操作符，不过&lt;code class=&quot;highlighter-rouge&quot;&gt;所有的操作符都是方法&lt;/code&gt;，如：a+b是a+(b)的缩写。即：a方法b是a.方法(b)的缩写，两种写法&lt;code class=&quot;highlighter-rouge&quot;&gt;可以互换&lt;/code&gt;。&lt;/p&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持++和--操作符&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-5&quot;&gt;5.函数调用和方法&lt;/h4&gt;
-
-&lt;p&gt;常用的数学函数包括在scala.math包中。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import scala.math._			// Scala中，字符_是通配符，类似Java的*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;另外，以scala开头的包，在引入或者使用时可以&lt;code class=&quot;highlighter-rouge&quot;&gt;省略scala&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import math._
-math.sqrt(2)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;没有静态方法&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;不带参数的方法在调用时可以省略括号&lt;/code&gt;，如：在调用toStrig后面的括号是可以省略的。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;Helloworld&quot;.toString
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;apply&quot;&gt;6.apply方法&lt;/h4&gt;
-
-&lt;p&gt;在Scala中通常使用类似函数调用的形式来访问数组、链表等的元素。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;&quot;helloworld&quot;(0)
-res0:Char = h
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上述调用中，”helloworld”(0)是”helloworld”.apply(0)的调用，其中apply方法是StringOps类中的方法。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;控制结构和函数&lt;/h2&gt;
-
-&lt;h4 id=&quot;if&quot;&gt;1.if语句也有返回值&lt;/h4&gt;
-
-&lt;p&gt;if语句成为&lt;code class=&quot;highlighter-rouge&quot;&gt;条件表达式&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val x = 1
-x :Int = 1
-scala&amp;gt;val y = if(x &amp;gt; 1) 1 else -1
-y : Int = 1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;条件表达式的结构：&lt;code class=&quot;highlighter-rouge&quot;&gt;if（判断条件） 值1 else 值2&lt;/code&gt;；类似于Java中&lt;code class=&quot;highlighter-rouge&quot;&gt;三目运算符&lt;/code&gt;，但是，&lt;code class=&quot;highlighter-rouge&quot;&gt;Scala不支持三目运算符&lt;/code&gt;，该条件表达式&lt;code class=&quot;highlighter-rouge&quot;&gt;可以用来初始化val常量&lt;/code&gt;.&lt;/p&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;中每个表达式都会有返回值&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;if (x &amp;gt; 4) 1
-res0 AnyVal =()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;表达式返回了(),其中()表示Uint类，表示没有值，可以看做Java中&lt;code class=&quot;highlighter-rouge&quot;&gt;void类型&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;2.块表达式&lt;/h3&gt;
-&lt;p&gt;块表达式：Scala中用{}括起来一系列表达式，其中{}括起来的部分&lt;code class=&quot;highlighter-rouge&quot;&gt;叫做块表达式&lt;/code&gt;，块表达式的值是&lt;code class=&quot;highlighter-rouge&quot;&gt;块中最后一个表达式的值&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;{
-	1+2
-	2+3
-}
-res1 Int = 5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;可以使用块表达式为变量赋值&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val x = 1;val x0 = 0;val y = 1;val y0= 0
-x:Int = 1
-x0:Int = 0
-y:Int = 1
-y0:Int = 0
-
-scala&amp;gt;val distance = {val dx = x - x0
-	val dy = y - y0
-	math.sqrt(dx*dx+dy*dy)
-}
-distance:Double = 1.41421
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;变量distance使用块表达式来赋值，其值为块中最后一个表达式的值&lt;/p&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;Scala中赋值语句的&lt;code class=&quot;highlighter-rouge&quot;&gt;返回值为Uint&lt;/code&gt;，也可记做：Scala中赋值语句是没有返回值的。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val a = 1
-a: Int = 1
-
-scala&amp;gt; val b = 2
-b: Int = 2
-
-scala&amp;gt; a = b =4
-&amp;lt;console&amp;gt;:13: error: reassignment to val
-	a = b =4
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;a = b = 4；这种赋值形式在Scala中&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持&lt;/code&gt;，因为在赋值语句中Scala中&lt;code class=&quot;highlighter-rouge&quot;&gt;无返回值&lt;/code&gt;，所以&lt;code class=&quot;highlighter-rouge&quot;&gt;+=，-=，*=,/=等赋值操作符都是无返回值&lt;/code&gt;的.&lt;/p&gt;
-
-&lt;h4 id=&quot;io&quot;&gt;3.IO&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;输入:常用的包括readline从控制台&lt;code class=&quot;highlighter-rouge&quot;&gt;读取一行输入&lt;/code&gt;，另外，readLine还可以&lt;code class=&quot;highlighter-rouge&quot;&gt;带有字符串提示&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;scala&amp;gt; val name = readLine(“input your name:”)
- inpput your name:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;readInt,readByte,readDouble,readShort,readLong,readFloat,readBoolean,readChar分别用于读取各自类型的值。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;输出:print(content),println(content),printf();其中println带换行，printf支持C风格的字符串输出。
-    &lt;h4 id=&quot;loop&quot;&gt;4.Loop&lt;/h4&gt;
-    &lt;p&gt;Scala支持Java相同的while和do循环&lt;/p&gt;
-
-    &lt;p&gt;scala&amp;gt;var x = 2
- x:Int = 2
- scala&amp;gt;while(x &amp;gt; 0){		// 这里必须写x&amp;gt;0 写成一个独立的x，程序会报错布尔和整形的区别
-     println(x)
-     x -= 1
- }
- 2
- 1
- scala&amp;gt; do{
-     println(x)
-     x -= 1
- }while(x &amp;gt; 0)
- 0&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;for&quot;&gt;5.for&lt;/h4&gt;
-&lt;p&gt;Scala的for循环结构:（for循环中，变量前面&lt;code class=&quot;highlighter-rouge&quot;&gt;不带var或val标志符&lt;/code&gt;）&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(变量 &amp;lt;- 表达式){	// 让变量遍历表达式的所有的值
-	// operations
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; for(i &amp;lt;- 0 to 3)
-     | println(i)
-     0
-     1
-     2
-     3
-
- scala&amp;gt; val str = &quot;hello world&quot;
- str: String = hello world
- scala&amp;gt; for(c &amp;lt;- str)
-      | println(c)
-      h
-      e
-      l
-      l
-      o
-      w
-      o
-      r
-      l
-      d
-
-scala&amp;gt; for(i &amp;lt;- 0 until str.length)
-     | println(str(i))
-     h
-     e
-     l
-     l
-     o
-
-     w
-     o
-     r
-	 l
-	 d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;for的高级用法&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;可以在for loop括号里面同事包含&lt;code class=&quot;highlighter-rouge&quot;&gt;多组&quot;变量&amp;lt;- 表达式&quot;结构&lt;/code&gt;，组之间用&lt;code class=&quot;highlighter-rouge&quot;&gt;分号&lt;/code&gt;隔开&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;//for loop的这种结构类似Java中嵌套环结构,也可以用
-&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;		&lt;span class=&quot;c1&quot;&gt;// 使用大括号，使用换行来分割组
-&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;可以为嵌套循环通过if表达式添加条件&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; scala&amp;gt; for (i &amp;lt;- -1 until 3; j &amp;lt;- -1 until 3 if i != j) {
- 	     | printf(&quot;i = %d,j = %d\n&quot;,i,j)
- 	     |
-		 }
- i = -1,j = 0
- i = -1,j = 1
- i = -1,j = 2
- i = 0,j = -1
- i = 0,j = 1
- i = 0,j = 2
- i = 1,j = -1
- i = 1,j = 0
- i = 1,j = 2
- i = 2,j = -1
- i = 2,j = 0
- i = 2,j = 1
-
- scala&amp;gt; for (i &amp;lt;- -1 until 3; j &amp;lt;- -1 until 3 if i != j) {
- 	     | printf(&quot;i = %d,j = %d\n&quot;,i,j)
- 	     |
-		}
- i = -1,j = 0
- i = -1,j = 1
- i = -1,j = 2
- i = 0,j = -1
- i = 0,j = 1
- i = 0,j = 2
- i = 1,j = -1
- i = 1,j = 0
- i = 1,j = 2
- i = 2,j = -1
- i = 2,j = 0
- i = 2,j = 1
-
- scala&amp;gt; for (i &amp;lt;- -1 to 3; j &amp;lt;- -1 to 3 if i != j) {
- 	     | printf(&quot;i = %d,j = %d\n&quot;,i,j)
-         |
-	 }
- i = -1,j = 0
- i = -1,j = 1
- i = -1,j = 2
- i = -1,j = 3
- i = 0,j = -1
- i = 0,j = 1
- i = 0,j = 2
- i = 0,j = 3
- i = 1,j = -1
- i = 1,j = 0
- i = 1,j = 2
- i = 1,j = 3
- i = 2,j = -1
- i = 2,j = 0
- i = 2,j = 1
- i = 2,j = 3
- i = 3,j = -1
- i = 3,j = 0
- i = 3,j = 1
- i = 3,j = 2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if表达式是否添加括号&lt;/code&gt;，结果无变化&lt;/p&gt;
-
-&lt;p&gt;until返回一个不包含上界的区间1 until 返回(1,2),to方法返回一个包含上界的区间 1 to 3返回(1,2,3)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;for 推导式&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;如果for loop以yield开始，for loop会构造一个&lt;code class=&quot;highlighter-rouge&quot;&gt;集合&lt;/code&gt;，保存到集合中。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; for(i &amp;lt;- 1 to 3; j &amp;lt;- 1 to 3 if(i != j)) yield i*10+j
-res6: scala.collection.immutable.IndexedSeq[Int] = Vector(12, 13, 21, 23, 31, 32)
-
-scala&amp;gt; for(c &amp;lt;- &quot;hello&quot;) yield(c.toInt - 32).toChar
-res7: String = HELLO
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;section-8&quot;&gt;6.函数式编程&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def 函数名(参数1:类型1，参数2::类型，...);返回值类型 = {
-	// 函数体
-}
-
-scala&amp;gt;def isNeg(x:Int) = if(x&amp;gt;0) true else false
-isNeg:(x:Int)Boolean
-scala&amp;gt;isNeg(8)
-res3 Boolean = ture
-scala&amp;gt;isNeg(-1)
-res4 Boolean = false
-scala&amp;gt;def f(x:Int):Int = if(n==0 || n==1) 1 else f(n-1)*n
-f:(n:Int)Int
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;对于有&lt;code class=&quot;highlighter-rouge&quot;&gt;返回值的函数&lt;/code&gt;，不能&lt;code class=&quot;highlighter-rouge&quot;&gt;省略等号&lt;/code&gt;；对于递归函数，不能&lt;code class=&quot;highlighter-rouge&quot;&gt;省略函数返回类型&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;def noReturnVal(name:String){
-	!	println(&quot;hello world&quot;)
-	!	}
-noReturnVal:(name:Strint)Uint
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;无返回值的函数定义&lt;/code&gt;可以&lt;code class=&quot;highlighter-rouge&quot;&gt;省略等号&lt;/code&gt;；无返回值的函数返回类型是&lt;code class=&quot;highlighter-rouge&quot;&gt;Uint&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;def format(content:String,start:String=&quot;&amp;lt;&amp;lt;&quot;,end:String=&quot;&amp;gt;&amp;gt;&quot;) =
-	!	start + content + end
-format:(content:String,start:String=&quot;&amp;lt;&amp;lt;&quot;,end:String=&quot;&amp;gt;&amp;gt;&quot;)String
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;带&lt;code class=&quot;highlighter-rouge&quot;&gt;默认函数的声明&lt;/code&gt;，与&lt;code class=&quot;highlighter-rouge&quot;&gt;Java中默认值的方法很类似&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;带名参数—–在函数调用时通过&lt;code class=&quot;highlighter-rouge&quot;&gt;明确指明参数与其对应值&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;format(&quot;lkk&quot;)
-res5:String = &amp;lt;&amp;lt;lkk&amp;gt;&amp;gt;
-scala&amp;gt;format(start=&quot;%%&quot;,end=&quot;$$&quot;,content=&quot;lkk&quot;)
-res6:String = %%lkk$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;第一个函数调用为&lt;code class=&quot;highlighter-rouge&quot;&gt;普通调用&lt;/code&gt;，第二个函数调用为&lt;code class=&quot;highlighter-rouge&quot;&gt;带参数调用&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;长度可变的参数列表，通过在函数的形参列表最后一个参数的类型后，添加&lt;strong&gt;星号&lt;/strong&gt;，来定义一个接受任意多个参数的函数。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;def Two(owner:String,guests:String*){
-	for(guest &amp;lt;- guests){
-		println(owner + &quot; lkk welcome to learn scala&quot; + guest)
-	}
-}
-Two:(owner:String,guests:String*)Uint
-
-scala&amp;gt;Two(&quot;AAA&quot;,&quot;BBB&quot;,&quot;CCC&quot;)
-AAA lkk welcome to learn scala  BBB
-AAA lkk welcome to learn scala  CCC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如上面的Two函数，没有&lt;code class=&quot;highlighter-rouge&quot;&gt;返回值&lt;/code&gt;的函数叫做过程，&lt;code class=&quot;highlighter-rouge&quot;&gt;过程在定义的时候，参数列表之后无等号&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-9&quot;&gt;7.懒值&lt;/h4&gt;
-
-&lt;p&gt;当val被声明为&lt;code class=&quot;highlighter-rouge&quot;&gt;lazy&lt;/code&gt;时,变量的初始化将被&lt;code class=&quot;highlighter-rouge&quot;&gt;延迟&lt;/code&gt;，直到我们&lt;code class=&quot;highlighter-rouge&quot;&gt;首次对变量取值&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lazy val fileContent = scala.io.Source.fromFile(&quot;filename&quot;).mkString
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;只有当我们读取&lt;code class=&quot;highlighter-rouge&quot;&gt;fileContent&lt;/code&gt;值的时候，fileContent才会通过读取文件来进行初始化。若我们一直未&lt;code class=&quot;highlighter-rouge&quot;&gt;读取fileContent的值&lt;/code&gt;，这个文件不会被读取。&lt;/p&gt;
-
-&lt;font color=&quot;red&quot;&gt;note:&lt;/font&gt;
-&lt;ul&gt;
-  &lt;li&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持switch&lt;/code&gt;语句，但是Scala有&lt;code class=&quot;highlighter-rouge&quot;&gt;强大的模式匹配机制&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持break语句和continue&lt;/code&gt;语句。&lt;/li&gt;
-  &lt;li&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;不支持break语句和continue&lt;/code&gt;语句。&lt;/li&gt;
-  &lt;li&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;没有受检异常-----无需声明函数或方法可能会跑出某种异常&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;Scala&lt;code class=&quot;highlighter-rouge&quot;&gt;中将没有返回值的函数&lt;/code&gt;，叫做过程,过程在定义的时候，&lt;code class=&quot;highlighter-rouge&quot;&gt;参数列表之后无等号&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-10&quot;&gt;疑惑&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;方法的定义体出现的等号(=)之后，为什么使用=？,而不像Java那样，使用的是{}来表示方法体呢？
- scala使用[]来表示参数类型，Java用的是&amp;lt;&amp;gt;,并且不允许在标识符中使用[].
- A:1)避免歧义是原因之一，当你在代码中省略&lt;code class=&quot;highlighter-rouge&quot;&gt;分号&lt;/code&gt;时，Scala能够推断出来。在大多数的时候，Scala能够推导出方法的返回类型。假设方法不接受任何参数，你还可以在方法定义中省略参数列表。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2)使用=也强调了函数式编程的一个准则：值和函数是高度对齐的概念。函数可以作为参数传递给其他函数，也能够返回函数，还能够赋给某一个变量，这与对象的行为是一致的。&lt;/p&gt;
-
-&lt;p&gt;最后说一下，假设方法体中&lt;code class=&quot;highlighter-rouge&quot;&gt;仅包含一个表达式&lt;/code&gt;，那么Scala允许你省略花括号，所以说，使用=能够避免可能的解析歧义。&lt;/p&gt;
-
-&lt;h4 id=&quot;match&quot;&gt;7.match&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;def level(s:Int) = s match{
-	case n if n &amp;gt;= 90 =&amp;gt; &quot;good&quot;
-	case n if n &amp;gt;= 80 =&amp;gt; &quot;good2&quot;
-	case n if n &amp;gt;= 70 =&amp;gt; &quot;good3&quot;
-	case n if n &amp;gt;= 60 =&amp;gt; &quot;good3&quot;
-	case _ =&amp;gt; &quot;bad&quot;
-}
-scala&amp;gt; levle(51)
-res2:String = bad
-
-scala&amp;gt; levle(91)
-res2:String = good
-
-scala&amp;gt; levle(81)
-res2:String = good2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;可以看到，模式匹配可以使用swith相同的功能。但是switch需要使用break明确通知终止之后的判断不同，scala中match case是&lt;code class=&quot;highlighter-rouge&quot;&gt;默认break&lt;/code&gt;的,只要其中一个case语句匹配，就会终止后的所有比较。且对应的case语句的表达式的值将作为整个match case表达式的值返回。&lt;/p&gt;
-
-&lt;p&gt;Scala中的模式匹配还有类型匹配，数据抽取，谓词判断等其它有用的功能。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-11&quot;&gt;数组-映射-元组-类-对象&lt;/h3&gt;
-
-&lt;h4 id=&quot;section-12&quot;&gt;1.数组&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;定长数组&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;声明数组的两种形式&lt;/p&gt;
-
-&lt;p&gt;1)&lt;strong&gt;声明&lt;code class=&quot;highlighter-rouge&quot;&gt;指定长度&lt;/code&gt;的数组val 数组名 = new Array&lt;a href=&quot;数组长度&quot;&gt;类型&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val arr = new Array[String](5)
-arr: Array[String] = Array(null, null, null, null, null)
-
-scala&amp;gt; val intArr = new Array[Int](4)
-intArr: Array[Int] = Array(0, 0, 0, 0)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;2)提供数组&lt;code class=&quot;highlighter-rouge&quot;&gt;初始值&lt;/code&gt;的数组，&lt;code class=&quot;highlighter-rouge&quot;&gt;无需new&lt;/code&gt;关键字&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val charArr = Array('a','b','c')
-charArr: Array[Char] = Array(a, b, c)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Scala声明数组时，需要&lt;code class=&quot;highlighter-rouge&quot;&gt;带有Array&lt;/code&gt;类名，且使用()来&lt;code class=&quot;highlighter-rouge&quot;&gt;指明长度&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;提供初始值序列&lt;/code&gt;.在JVM中，Scala的Array以Java数组的方式实现。如arr在JVM的类型对应java.lng.String[],charArr对应char[].&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;变长数组&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;import scala.collection.mutable.ArrayBuffer
-
-scala&amp;gt; val b = ArrayBuffer[Int]()
-b: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer()
-
-scala&amp;gt;  b += 1
-res1: b.type = ArrayBuffer(1)
-
-scala&amp;gt; b += (1,2,3,4,5)
-res2: b.type = ArrayBuffer(1, 1, 2, 3, 4, 5)
-
-scala&amp;gt; b.trimEnd(5)
-
-scala&amp;gt; b
-res7: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(1, 1, 2)
-scala&amp;gt; b.toArray
-res8: Array[Int] = Array(1, 1, 2)
-
-scala&amp;gt; b
-res9: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(1, 1, 2)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;ArrayBuffer，全称：scala.collection.mutable.ArrayBuffer,类似与Java中的ArrayList和C++中的vector，是长度可变数组类型的结构，&lt;code class=&quot;highlighter-rouge&quot;&gt;称为数组缓冲&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;通过：val name = ArrayBuffer[类型]()来声明，声明&lt;code class=&quot;highlighter-rouge&quot;&gt;ArrayBuffer&lt;/code&gt;时要指明&lt;code class=&quot;highlighter-rouge&quot;&gt;类型&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;通过+=操作操作来&lt;code class=&quot;highlighter-rouge&quot;&gt;添加元素或序列&lt;/code&gt;，++=操作符来&lt;code class=&quot;highlighter-rouge&quot;&gt;拼接数组&lt;/code&gt;。在ArrayBuffer的&lt;code class=&quot;highlighter-rouge&quot;&gt;尾端添加或删除元素是一个高效的操作&lt;/code&gt;,ArrayBuffer还支持在&lt;code class=&quot;highlighter-rouge&quot;&gt;指定位置插入，删除元素&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;ArrayBuffer到数组的转换:toArray方法&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;数组遍历&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;用for loop
-scala&amp;gt;for(i &amp;lt;- until array.length)
-		println(i)
-scala&amp;gt;for(i &amp;lt;- b)
-		println(i)
-指定遍历数组的步长---通过until(上界，步长)
-scala&amp;gt; val intArr = Array(1,2,3,4,5,6,7,8,9)
-intArr: Array[Int] = Array(1, 2, 3, 4, 5, 6, 7, 8, 9)
-scala&amp;gt; for(i &amp;lt;- 0 until(intArr.length,2))
-     | println(i)
-     0
-     2
-     4
-     6
-     8
-scala&amp;gt; for(i &amp;lt;- 0 until(intArr.length,2))
-     | println(intArr(i))
-     1
-     3
-     5
-     7
-     9
-通过reverse函数逆序遍历数组
-scala&amp;gt; for(i &amp;lt;- (0 until intArr.length).reverse)
-     | println(intArr(i))
-     9
-     8
-     7
-     6
-     5
-     4
-     3
-     2
-     1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;for loop get yield&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;可以通过for loop + yield来获得&lt;code class=&quot;highlighter-rouge&quot;&gt;新的数组或ArrayBuffer&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val intArr = Array(1,2,3,4)
-intArr: Array[Int] = Array(1, 2, 3, 4)
-
-scala&amp;gt; for(i &amp;lt;- intArr) yield{
-		| i*2
-		|
-}
-res0: Array[Int] = Array(2, 4, 6, 8)
-
-scala&amp;gt; for(b &amp;lt;- intArr) yield -b
-res2: Array[Int] = Array(-1, -2, -3, -4)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过for+yield操作数组或者ArrayBuffer之后将得到新的数组或ArrayBuffer。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;操作数组/数组缓冲常用函数&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val intArr = Array(1,2,3,4)
-intArr: Array[Int] = Array(1, 2, 3, 4)
-
-scala&amp;gt; intArr.sum
-res0: Int = 10
-
-scala&amp;gt; intArr.max
-res1: Int = 4
-
-scala&amp;gt; intArr.min
-res2: Int = 1
-
-scala&amp;gt; intArr.sorted
-res4: Array[Int] = Array(1, 2, 3, 4)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;求和，求最小值，最大值，数组排序.通过sorted函数对数组或者ArrayBuffer排序时，返回的是&lt;code class=&quot;highlighter-rouge&quot;&gt;一个新的数组或ArrayBuffer&lt;/code&gt;，原有的&lt;code class=&quot;highlighter-rouge&quot;&gt;不变&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;可以直接对数组调用排序算法&lt;/code&gt;，但是不能对&lt;code class=&quot;highlighter-rouge&quot;&gt;ArrayBuffer排序&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; util.Sorting.quickSort(intArr)
-
-scala&amp;gt; intArr
-res7: Array[Int] = Array(1, 2, 3, 4)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;quickSort是直接修改原来的数组，而sorted方法是返回新数组。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;多维数组&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Scala中的多维数组和同Java中一样，&lt;code class=&quot;highlighter-rouge&quot;&gt;多维数组都是数组的数组&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;1)通过Array.ofDim[类型](维度1，维度2，维度3,….)来声明&lt;code class=&quot;highlighter-rouge&quot;&gt;多维数组&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val mulDimArr = Array.ofDim[Double](2,3)
-mulDimArr: Array[Array[Double]] = Array(Array(0.0, 0.0, 0.0), Array(0.0, 0.0, 0.0))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;从二维数组的初始化，我们看到，多维数组在Scala中也是数组的数组。&lt;/p&gt;
-
-&lt;p&gt;2)通过Array[Array][Int](维度1)来声明数组，可以声明&lt;code class=&quot;highlighter-rouge&quot;&gt;不规则数组&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val difLenMulArr = new Array[Array[Int]](3)
-difLenMulArr: Array[Array[Int]] = Array(null, null, null)
-
-scala&amp;gt; for (i &amp;lt;- 1 to difLenMulArr.length){
-		| difLenMulArr(i-1) = new Array[Int](i)
-			|
-}
-
-scala&amp;gt; difLenMulArr
-res9: Array[Array[Int]] = Array(Array(0), Array(0, 0), Array(0, 0, 0))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;多维数组是数组的数组，按照这种性质来声明多维数组，如例子中的二维数组，声明时，需要指定最外围的数组大小。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;note:可以通过scala.collection.JavaConversions包中隐式转换方法来实现Scala容器类与Java中类的转换&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;section-13&quot;&gt;2.映射&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;映射构造&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;对偶&lt;/code&gt;，即名值对，可以通过-&amp;gt;操作符号来定义&lt;code class=&quot;highlighter-rouge&quot;&gt;对偶&lt;/code&gt;，&lt;strong&gt;名-&amp;gt;值&lt;/strong&gt;运算的结构是(名，值)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; &quot;aaa&quot; -&amp;gt; 1
-res10: (String, Int) = (aaa,1)
-
-scala&amp;gt; (&quot;bbb&quot; -&amp;gt; 2)
-res11: (String, Int) = (bbb,2)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;也可以&lt;code class=&quot;highlighter-rouge&quot;&gt;声明对偶形式的变量&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val (name,age) = (&quot;liangkangkang&quot;,26)
-name: String = liangkangkang
-age: Int = 26
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;映射&lt;/code&gt;是由对偶构成的，&lt;strong&gt;映射是对偶的集合&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;1) 声明&lt;code class=&quot;highlighter-rouge&quot;&gt;不可变&lt;/code&gt;映射,直接用&lt;code class=&quot;highlighter-rouge&quot;&gt;Map&lt;/code&gt;来声明时，默认是不可变映射类型。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val charIntMap = Map('a'-&amp;gt;97,'b'-&amp;gt;98)
-charIntMap: scala.collection.immutable.Map[Char,Int] = Map(a -&amp;gt; 97, b -&amp;gt; 98)
-
-scala&amp;gt; charIntMap('a')
-res12: Int = 97
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;注意:不可变映射维持元素的插入顺序&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;2)声明&lt;code class=&quot;highlighter-rouge&quot;&gt;可变&lt;/code&gt;对象(scala.collection.mutable.Map)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val charToIntMap = collection.mutable.Map('a'-&amp;gt;96,'b'-&amp;gt;97)
-charToIntMap: scala.collection.mutable.Map[Char,Int] = Map(b -&amp;gt; 97, a -&amp;gt; 96)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;注意：放入&lt;code class=&quot;highlighter-rouge&quot;&gt;可变映射中的值&lt;/code&gt;并未按照&lt;code class=&quot;highlighter-rouge&quot;&gt;放入顺序&lt;/code&gt;来排序&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;通过for loop来修改&lt;code class=&quot;highlighter-rouge&quot;&gt;可变Map&lt;/code&gt;中的值&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; for ((k,v) &amp;lt;- charToIntMap){
-     | charToIntMap(k) = v + 1
-      |
-	}
-scala&amp;gt; charToIntMap
-res14: scala.collection.mutable.Map[Char,Int] = Map(b -&amp;gt; 98, a -&amp;gt; 97)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;注意:映射可变，不可变指的是&lt;code class=&quot;highlighter-rouge&quot;&gt;整个映射是否可变&lt;/code&gt;，包扩&lt;code class=&quot;highlighter-rouge&quot;&gt;元素值，映射中元素的个数，元素次序等&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;3)声明空映射&lt;/p&gt;
-
-&lt;p&gt;直接通过new Map[类型1，类型2]()来定义映射会&lt;code class=&quot;highlighter-rouge&quot;&gt;报错&lt;/code&gt;，因为Map是抽象的，无法实例化。&lt;/p&gt;
-
-&lt;p&gt;定义空映射时，需要指定映射的&lt;code class=&quot;highlighter-rouge&quot;&gt;实现类&lt;/code&gt;，通过&lt;code class=&quot;highlighter-rouge&quot;&gt;new&lt;/code&gt;来定义&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val map = new scala.collection.immutable.HashMap[Int,Char]()
-map: scala.collection.immutable.HashMap[Int,Char] = Map()
-
-scala&amp;gt; val map = new collection.mutable.HashMap[Int,Char]()
-map: scala.collection.mutable.HashMap[Int,Char] = Map()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;从上面的immutable和mutable可以看出来，两者是不同的。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;映射常用操作&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;1)判断映射中&lt;code class=&quot;highlighter-rouge&quot;&gt;是否含有某个键&lt;/code&gt;:map.contain(键值)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; charToIntMap.contains('c')
-res15: Boolean = false
-
-scala&amp;gt; charToIntMap.contains('a')
-res16: Boolean = true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;2)使用+=向&lt;code class=&quot;highlighter-rouge&quot;&gt;可变&lt;/code&gt;映射中&lt;code class=&quot;highlighter-rouge&quot;&gt;添加元素或拼接映射&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; map += (1-&amp;gt;'a')
-res17: map.type = Map(1 -&amp;gt; a)
-
-scala&amp;gt; map
-res18: scala.collection.mutable.HashMap[Int,Char] = Map(1 -&amp;gt; a)
-
-scala&amp;gt; map += (2-&amp;gt;'b',3-&amp;gt;'d')
-res19: map.type = Map(2 -&amp;gt; b, 1 -&amp;gt; a, 3 -&amp;gt; d)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;3)使用-=来&lt;code class=&quot;highlighter-rouge&quot;&gt;移除可变&lt;/code&gt;映射中的键及对应元素&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; map -= 2
-res21: map.type = Map(1 -&amp;gt; a, 3 -&amp;gt; d)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;4)不可变映射可通过+操作符返回一个&lt;code class=&quot;highlighter-rouge&quot;&gt;新的不可变映射&lt;/code&gt;；不可变映射可通过-操作符返回一个&lt;code class=&quot;highlighter-rouge&quot;&gt;新的不可变映射&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val map = Map(1-&amp;gt;1,2-&amp;gt;4,3-&amp;gt;9)
-map: scala.collection.immutable.Map[Int,Int] = Map(1 -&amp;gt; 1, 2 -&amp;gt; 4, 3 -&amp;gt; 9)
-
-scala&amp;gt; val mapSum = map + (4-&amp;gt;16,5-&amp;gt;25)
-mapSum: scala.collection.immutable.Map[Int,Int] = Map(5 -&amp;gt; 25, 1 -&amp;gt; 1, 2 -&amp;gt; 4, 3 -&amp;gt; 9, 4 -&amp;gt; 16)
-
-scala&amp;gt; val mapDif = mapSum - 1
-mapDif: scala.collection.immutable.Map[Int,Int] = Map(5 -&amp;gt; 25, 2 -&amp;gt; 4, 3 -&amp;gt; 9, 4 -&amp;gt; 16)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;5)映射遍历&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; mapDif
-res25: scala.collection.immutable.Map[Int,Int] = Map(5 -&amp;gt; 25, 2 -&amp;gt; 4, 3 -&amp;gt; 9, 4 -&amp;gt; 16)
-
-scala&amp;gt; for((base,square) &amp;lt;- mapDif){
-		| println(base + &quot;*&quot; + base + &quot; = &quot; + square)
-		|
-}
-5*5 = 25
-2*2 = 4
-3*3 = 9
-4*4 = 16
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;6)获取映射的键集合keySet和值集合&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; mapSum
-res27: scala.collection.immutable.Map[Int,Int] = Map(5 -&amp;gt; 25, 1 -&amp;gt; 1, 2 -&amp;gt; 4, 3 -&amp;gt; 9, 4 -&amp;gt; 16)
-scala&amp;gt; mapSum.keySet
-res28: scala.collection.immutable.Set[Int] = Set(5, 1, 2, 3, 4)
-scala&amp;gt; for(squ &amp;lt;- mapSum.values)
-     | {println(squ)}
-     25
-     1
-     4
-     9
-     16
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过映射的keySet方法可以活动映射的由键值构成集合，通过values方法可以过得映射值的Interable对象，应用于循环中，Scala的keySet/valus方法类似于Java中的映射方法。&lt;/p&gt;
-
-&lt;p&gt;7)Scala的映射的底层实现要么基于&lt;code class=&quot;highlighter-rouge&quot;&gt;哈希表&lt;/code&gt;，或者&lt;code class=&quot;highlighter-rouge&quot;&gt;基于平衡树&lt;/code&gt;，其中基于平衡树的映射内部是&lt;code class=&quot;highlighter-rouge&quot;&gt;有序的&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val sortedMap = collection.immutable.SortedMap('c'-&amp;gt;3,'b'-&amp;gt;2,'e'-&amp;gt;5,'a'-&amp;gt;1)
-sortedMap: scala.collection.immutable.SortedMap[Char,Int] = Map(a -&amp;gt; 1, b -&amp;gt; 2, c -&amp;gt; 3, e -&amp;gt; 5)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Scala目前基于平衡树的映射只提供了&lt;code class=&quot;highlighter-rouge&quot;&gt;不可变版本&lt;/code&gt;，&lt;strong&gt;构建可变有序映射可借助Java的TreeMap&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;8)可变映射中，若要&lt;code class=&quot;highlighter-rouge&quot;&gt;构建维持元素插入顺序的映射可&lt;/code&gt;通过&lt;code class=&quot;highlighter-rouge&quot;&gt;LinkedHashMap&lt;/code&gt;，通过scala.collection.JavaConversions.MapAsScalaMap可将Java的Map转换为Scala类型的Map；通过scala.collection.JavaConversions.MapAsJavaMap可将Scala的映射转换为Java类型的映射。&lt;/p&gt;
-
-&lt;p&gt;9)toMap方法可以将&lt;code class=&quot;highlighter-rouge&quot;&gt;对偶组成的集合&lt;/code&gt;转换为&lt;code class=&quot;highlighter-rouge&quot;&gt;映射&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val mapArr = Array((1,'a'),(2,'b'),(3,'c'))
-mapArr: Array[(Int, Char)] = Array((1,a), (2,b), (3,c))
-
-scala&amp;gt; mapArr.toMap
-res31: scala.collection.immutable.Map[Int,Char] = Map(1 -&amp;gt; a, 2 -&amp;gt; b, 3 -&amp;gt; c)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Scala的immutable
-collection并没有添加和删除元素的操作，其定义+（List使用::在头部添加）操作都是生成一个新的集合，而要删除一个元素一般使用.filterNot函数来映射一个新的集合实现。&lt;/p&gt;
-
-&lt;p&gt;（注：Scala中也scala.collection.mutable._集合，它定义了不可变集合的相应可变集合版本。一般情况下，除非一性性能优先的操作（其实Scala集合采用了共享变量的优化，生成一个新集合并不会生成所有元素的副本，它将会和老的集合共享大元素。因为Scala中变量默认都是不可变的），推荐还是采用不可变集合。因为它更直观、线程安全，你可以确定你的变量不会在其它地方被不小心的更改。）&lt;/p&gt;
-
-&lt;h4 id=&quot;section-14&quot;&gt;3.元组&lt;/h4&gt;
-
-&lt;p&gt;1.元组是&lt;code class=&quot;highlighter-rouge&quot;&gt;不同类型的值&lt;/code&gt;的聚集，&lt;code class=&quot;highlighter-rouge&quot;&gt;对偶&lt;/code&gt;是最简单的元组.&lt;/p&gt;
-
-&lt;p&gt;2.元组表示：通过将不同的值&lt;code class=&quot;highlighter-rouge&quot;&gt;用小括号&lt;/code&gt;括起来，即表示元组。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; (1,2.1,'a',&quot;helloworld&quot;)
-res14: (Int, Double, Char, String) = (1,2.1,a,helloworld)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上例中的元组的类型就是(Int,Double,Char,String);元组中可以存放&lt;code class=&quot;highlighter-rouge&quot;&gt;不同类型的值&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;3.元组的访问&lt;/p&gt;
-
-&lt;p&gt;3.1)元组中的元素称为&lt;code class=&quot;highlighter-rouge&quot;&gt;组元&lt;/code&gt;，可通过_1,_2,_3的形式来访问对应下标的组元。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val tuple = (1,2.3,'c',&quot;hello world&quot;)
-tuple: (Int, Double, Char, String) = (1,2.3,c,hello world)
-
-scala&amp;gt; tuple.
-_1   _3   canEqual   equals     productArity     productIterator   toString
-_2   _4   copy       hashCode   productElement   productPrefix
-
-scala&amp;gt; tuple._1
-res15: Int = 1
-
-scala&amp;gt; tuple._4
-res16: String = hello world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;font color=&quot;red&quot;&gt;note元组的中下标是从1开始的。&lt;/font&gt;
-
-&lt;p&gt;3.2)通过模式匹配来访问元组中的值&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val (i,d,c,str) = tuple
-i: Int = 1
-d: Double = 2.1
-c: Char = a
-str: String = helloworld
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;忽略不需要的值&lt;/strong&gt;,在模式匹配时，通过_(万能匹配符)来为需要获取值的组元&lt;code class=&quot;highlighter-rouge&quot;&gt;占位&lt;/code&gt;，每个_仅可以为一个组员占位。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val (i,_,_,str) = tuple
-i: Int = 1
-str: String = helloworld
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;4.元组可用于函数返回多个值&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; def fun():(Int,String)={
-	     | (0,&quot;hello world&quot;)
-	          |
-}
-fun: ()(Int, String)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上例中，&lt;code class=&quot;highlighter-rouge&quot;&gt;函数定义返回值&lt;/code&gt;类型为&lt;code class=&quot;highlighter-rouge&quot;&gt;元组&lt;/code&gt;(Int,String).&lt;/p&gt;
-
-&lt;h4 id=&quot;list&quot;&gt;4.List&lt;/h4&gt;
-
-&lt;p&gt;python中，常用的集合类型：list,tuple,set,dict.Scala中对应的是:List,Tuple[X],Set,Map.&lt;/p&gt;
-
-&lt;p&gt;Scala中List是一个&lt;code class=&quot;highlighter-rouge&quot;&gt;递归不可变集合&lt;/code&gt;，它很精妙的使用&lt;code class=&quot;highlighter-rouge&quot;&gt;递归&lt;/code&gt;结构定义了一个列表集合。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt;val list = 1::2::3::4::5::Nil
-list:List[Int] = List(1,2,3,4,5)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;List采用&lt;code class=&quot;highlighter-rouge&quot;&gt;前缀&lt;/code&gt;操作的方式(所有的操作都在列表的顶端)进行，::操作符的作用是将一个元素和列表连接起来，并把元素放在&lt;code class=&quot;highlighter-rouge&quot;&gt;列表的开头&lt;/code&gt;，这样List的操作就可以定义成一个&lt;code class=&quot;highlighter-rouge&quot;&gt;递归操作&lt;/code&gt;。添加一个元素就是把元素加到list的开头，List只需要&lt;code class=&quot;highlighter-rouge&quot;&gt;改下头指针&lt;/code&gt;，而删除一个元素就是把List的头指针指向列表中的第二个元素。这样，List的实现就非常的高效，它也不需要对内存做任何的转移操作。List有很多常用的方法&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; list.indexOf(3)
-res6: Int = 2
-
-scala&amp;gt; 0 :: list
-res8: List[Int] = List(0, 1, 2, 3, 4, 5)
-
-scala&amp;gt; list.reverse
-res9: List[Int] = List(5, 4, 3, 2, 1)
-
-scala&amp;gt; list.filter(item =&amp;gt; item == 3)
-res11: List[Int] = List(3)
-
-scala&amp;gt; list
-res12: List[Int] = List(1, 2, 3, 4, 5)
-
-scala&amp;gt; val list2 = List(4, 5, 6, 7, 8, 9)
-list2: List[Int] = List(4, 5, 6, 7, 8, 9)
-
-scala&amp;gt; list.intersect(list2)
-res13: List[Int] = List(4, 5)
-
-scala&amp;gt; list.union(list2)
-res14: List[Int] = List(1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9)
-
-scala&amp;gt; list.diff(list2)
-res15: List[Int] = List(1, 2, 3)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Scala中默认都是&lt;code class=&quot;highlighter-rouge&quot;&gt;Immutable collection&lt;/code&gt;，在集合上定义的操作都&lt;code class=&quot;highlighter-rouge&quot;&gt;不会更改集合本身&lt;/code&gt;，而是生成一个&lt;code class=&quot;highlighter-rouge&quot;&gt;新的集合&lt;/code&gt;。Python中只有set上有求交、并、差积运算，Scala中将其范化到所以序列集合上（Seq、List、Set、Array……）都可以支持。&lt;/p&gt;
-
-&lt;h4 id=&quot;set&quot;&gt;5.Set&lt;/h4&gt;
-
-&lt;p&gt;Set是一个&lt;code class=&quot;highlighter-rouge&quot;&gt;不重复且无序的&lt;/code&gt;集合，初始化一个Set需要使用Set对象:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; val set = Set(&quot;Python&quot;, &quot;Scala&quot;, &quot;Java&quot;, &quot;C++&quot;, &quot;Javascript&quot;, &quot;C#&quot;, &quot;PHP&quot;)
-set: scala.collection.immutable.Set[String] = Set(Scala, C#, Python, Javascript, PHP, C++, Java)
-
-scala&amp;gt; set + &quot;Go&quot;
-res21: scala.collection.immutable.Set[String] = Set(Scala, C#, Go, Python, Javascript, PHP, C++, Java)
-
-scala&amp;gt; set filterNot (item =&amp;gt; item == &quot;PHP&quot;)
-res22: scala.collection.immutable.Set[String] = Set(Scala, C#, Python, Javascript, C++, Java)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;section-15&quot;&gt;6.类&lt;/h4&gt;
-
-&lt;p&gt;1)Scala中的类是&lt;code class=&quot;highlighter-rouge&quot;&gt;公有可见性&lt;/code&gt;的，且多个类可以包含在同一个源文件中。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Counter{
-	private var value = 0	//类成员变量必须初始化，否则报错 `
-	def increment(){		//类中的方法默认是公有可见性
-		value += 1
-	}
-
-	def current() = value	//类中的取值方法，在定义时可省略括号，直接 def current = value
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;类的使用&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; class Counter{
-	     | private var value = 0
-		 | def increment(){
-		 	     | value += 1
-	 	          |
-		 }
-      | def current = value
-      |
-}
-defined class Counter
-scala&amp;gt; var counter = new Counter
-counter: Counter = Counter@619bfe29
-scala&amp;gt; counter.current
-res0: Int = 0
-scala&amp;gt; counter.increment
-scala&amp;gt; counter.current
-res2: Int = 1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Scala的类在&lt;code class=&quot;highlighter-rouge&quot;&gt;未提供构造器时&lt;/code&gt;，也会提供&lt;code class=&quot;highlighter-rouge&quot;&gt;默认构造器&lt;/code&gt;；且在调用无参构造器或无参方法可&lt;code class=&quot;highlighter-rouge&quot;&gt;省略方法后的括号&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;2)Scala类中的每个&lt;code class=&quot;highlighter-rouge&quot;&gt;字段&lt;/code&gt;都有&lt;code class=&quot;highlighter-rouge&quot;&gt;geter&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;setter&lt;/code&gt;方法，&lt;code class=&quot;highlighter-rouge&quot;&gt;私有字段&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;getter&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;setter&lt;/code&gt;默认是&lt;code class=&quot;highlighter-rouge&quot;&gt;私有的&lt;/code&gt;，公有字段的&lt;code class=&quot;highlighter-rouge&quot;&gt;getter&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;setter&lt;/code&gt;默认是公有的。其中对于类中的属性value，Scala类默认生成的getter方法名为&lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt;,默认生成的setter方法名为&lt;code class=&quot;highlighter-rouge&quot;&gt;value_=&lt;/code&gt;.使用时，我们可以重新定义获取或设置属性的方法。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; class Clock{
-     | var hour = 0
-     | var minute = 0
-     | var second = 0
-  		 | def getTime():String = {
-     | return hour + &quot;:&quot; + minute +&quot;:&quot;+second
-		}
-}
-defined class Clock
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;对于Clock类中的属性，如hour，其对应的getter方法为hour，其对应的setter方法名为&lt;code class=&quot;highlighter-rouge&quot;&gt;hour_=&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; var clock = new Clock()
-clock: Clock = Clock@7ff6804a
-
-scala&amp;gt; clock.hour
-res4: Int = 0
-
-scala&amp;gt; clock.hour_=(12)
-
-scala&amp;gt; clock.hour
-res6: Int = 12
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;注意：&lt;code class=&quot;highlighter-rouge&quot;&gt;可以重新定义获取Scala类中属性的方法&lt;/code&gt;，但是最好不要与属性&lt;code class=&quot;highlighter-rouge&quot;&gt;默认对应的getter/setter方法重名&lt;/code&gt;，否则会报错。&lt;/p&gt;
-
-&lt;p&gt;3)对于Scala类总的val属性，只有默认的getter方法；对于private属性，其默认getter，setter都是private的，因而，对于不想提供setter方法的变量可以设置为val，对于不想提供getter，setter方法的变量可以设置为private.&lt;/p&gt;
-
-&lt;p&gt;4)注意，Scala类中，定义函数时，若函数声明&lt;code class=&quot;highlighter-rouge&quot;&gt;省略了&lt;/code&gt;函数名&lt;code class=&quot;highlighter-rouge&quot;&gt;后的括号&lt;/code&gt;(由于无参数，可以省略)，必须参数&lt;code class=&quot;highlighter-rouge&quot;&gt;无括号&lt;/code&gt;的形式，通过带括号形式&lt;code class=&quot;highlighter-rouge&quot;&gt;调用会报错&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在类Counter定义中，对于方法current,由于不接受参数，所以定义时，省略了方法名current后的&lt;code class=&quot;highlighter-rouge&quot;&gt;括号&lt;/code&gt;。此时，对于Counter的实例counter，调用current方法时，必须采用counter.current(无括号形式)&lt;/p&gt;
-
-&lt;p&gt;5)构造器&lt;/p&gt;
-
-&lt;p&gt;Scala的类可以有一个&lt;code class=&quot;highlighter-rouge&quot;&gt;主构造器&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;多个辅助构造器&lt;/code&gt;。多个辅助构造器的名称为this，每一个辅助构造器都必须以调用已经定义的辅助构造器或主构造器开始定义。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;主构造器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果一个类&lt;code class=&quot;highlighter-rouge&quot;&gt;没有显示定义主构造器&lt;/code&gt;，则有一个默认的&lt;code class=&quot;highlighter-rouge&quot;&gt;无参主构造器&lt;/code&gt;。如：&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;school&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grade&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; I'm in main constructor. &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;对于Scala类，&lt;code class=&quot;highlighter-rouge&quot;&gt;主构造器的参数&lt;/code&gt;放置在类名后，由&lt;code class=&quot;highlighter-rouge&quot;&gt;括号&lt;/code&gt;括起来。且对于&lt;code class=&quot;highlighter-rouge&quot;&gt;主构造器中var、val、private&lt;/code&gt;等标注的参数，都会成为类的对应字段，并生成对应的&lt;code class=&quot;highlighter-rouge&quot;&gt;默认getter、setter方法&lt;/code&gt;。如Student类中的name、age、school等。对于主构造器中的未用var、val标注的参数，如果在类的任何一个方法用用到该参数，该参数将会转换为类的字段，否则不会，如Student类的address属性。&lt;/p&gt;
-
-&lt;p&gt;由于在Student类中的info方法中用到了参数address，所以Student共有name、age、address、school、grade等5个属性，且Scala根据对应属性的特点生成了默认的getter和setter方法。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;对于主构造器的参数，也可以提供参数默认值。通过为主构造器提供默认值可减少辅助构造器的个数&lt;/strong&gt;.主构造器的函数体，是类中除了方法定义以外的其他语句，如在Student类的主构造器中，包含grade属性的初始化和prinln这两行语句。&lt;/p&gt;
-
-&lt;p&gt;6)辅助构造器&lt;/p&gt;
-
-&lt;p&gt;辅助构造器通过this来定义，且必须首先调用&lt;code class=&quot;highlighter-rouge&quot;&gt;主构造器&lt;/code&gt;或者其他&lt;code class=&quot;highlighter-rouge&quot;&gt;已经定义的辅助构造器&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-	 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sex&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'f'&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main constructor...&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//调用主构造器
-&lt;/span&gt;	        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//使用this关键字
-&lt;/span&gt;	         &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; auxiliary constructor1 &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sex&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sex&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sex&lt;/span&gt;
-	          &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; auxiliary constructor2 &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;note：辅助构造器的参数前&lt;code class=&quot;highlighter-rouge&quot;&gt;不能添加val,var,标志&lt;/code&gt;，否则会&lt;code class=&quot;highlighter-rouge&quot;&gt;报错&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;7)私有构造器&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;私有构造器通过在类名后&lt;code class=&quot;highlighter-rouge&quot;&gt;用private关键字&lt;/code&gt;标注主构造器参数来表明，此时，可以通过辅助构造器&lt;code class=&quot;highlighter-rouge&quot;&gt;来创建该类的对象&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;8)嵌套类&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h_name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w_name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Husband&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; I'm a husband &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wife&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-	        &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; I'm a Wife &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;husband&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Husband&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	 &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wife&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wife&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-	 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-	        &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;husband: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;husband&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, wife:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wife&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;在Scala中，你几乎可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;任何语法结构&lt;/code&gt;中&lt;code class=&quot;highlighter-rouge&quot;&gt;嵌套语法结构&lt;/code&gt;，如在&lt;code class=&quot;highlighter-rouge&quot;&gt;函数中定义函数，在类中定义类&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;section-16&quot;&gt;7.对象&lt;/h4&gt;
-
-&lt;p&gt;1)Scala中没有&lt;code class=&quot;highlighter-rouge&quot;&gt;静态方法&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;静态字段&lt;/code&gt;，但是可以用&lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt;语法来实现类似的功能。对象定义某个类的单个实例。Scala的object中可以实现类似的功能，用来存放&lt;code class=&quot;highlighter-rouge&quot;&gt;工具函数或常量&lt;/code&gt;等。&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sequence&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_num&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threshold&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
-
-		&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSequence&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;next_num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;next_num&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;使用object中的常量或方法，通过object名直接调用，对象构造器在对象&lt;code class=&quot;highlighter-rouge&quot;&gt;第一次被使用&lt;/code&gt;时调用(如果某对象一直&lt;code class=&quot;highlighter-rouge&quot;&gt;未被使用&lt;/code&gt;，那么其构造器也不会被&lt;code class=&quot;highlighter-rouge&quot;&gt;调用&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;object的构造器&lt;code class=&quot;highlighter-rouge&quot;&gt;不接受参数传递&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; Seq.getSequence
-res4:	Int = 1
-scala&amp;gt; Seq.threshold
-res5:	Int = 100
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;2)伴生对象&lt;/p&gt;
-
-&lt;p&gt;可以将在Scala中定义的&lt;code class=&quot;highlighter-rouge&quot;&gt;静态常量、方法等&lt;/code&gt;放置到Scala的类的伴生对象中，伴生对象与&lt;code class=&quot;highlighter-rouge&quot;&gt;类同名&lt;/code&gt;，且&lt;code class=&quot;highlighter-rouge&quot;&gt;必须放置同一个源文件中&lt;/code&gt;。类可以访问伴生对象私有属性，但是必须通过&lt;code class=&quot;highlighter-rouge&quot;&gt;伴生对象.属性名&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;伴生对象.方法&lt;/code&gt;调用&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;伴生对象是类的一个&lt;code class=&quot;highlighter-rouge&quot;&gt;特殊实例&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getTotalCounter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getCount&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getCount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如在类Counter方法其伴生对象的使用方法getCount，必须通过Counter.getCount()的方式调用。&lt;/p&gt;
-
-&lt;p&gt;3)对象可以继承或扩展多个特质&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Unit&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;XiaoMing&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;XiaoMing&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name is&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;naem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,age is &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;4)apply方法&lt;/p&gt;
-
-&lt;p&gt;当遇到object(参数1，参数2，…,参数n)的形式的调用时，apply方法便会调用。&lt;/p&gt;
-
-&lt;p&gt;5)main方法–Scala程序的入口&lt;/p&gt;
-
-&lt;p&gt;main方法定义在object中，形式如下&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt;  &lt;span class=&quot;nc&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;可以通过scalac 源文件名，然后通过scala 类名来执行主程序&lt;/p&gt;
-
-&lt;p&gt;6)还可以通过&lt;code class=&quot;highlighter-rouge&quot;&gt;扩展特质App&lt;/code&gt;来运行指定代码&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extens&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A `hello world` from hello world&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;通过扩展App特质的方式执行程序，将要执行的程序放到了object的主构造器中。&lt;/p&gt;
-
-&lt;p&gt;7)枚举&lt;/p&gt;
-
-&lt;p&gt;Scala并没有定义枚举类型，但是可以通过定义扩展Enumeration的对象，并用value方法初始化枚举中所有可选的值，提供枚举。&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrafficeLight&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Red&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Yellow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上述实例中的 val Red,Yellow,Green = value语句，相当于&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Yellow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;用value方法来&lt;code class=&quot;highlighter-rouge&quot;&gt;初始化枚举类变量&lt;/code&gt;时，value方法会返回内部类的新实例，且该内部类也叫value。另外，在调用value方法时，可传入&lt;code class=&quot;highlighter-rouge&quot;&gt;ID，名称&lt;/code&gt;两个参数。如果没有指定ID，默认&lt;code class=&quot;highlighter-rouge&quot;&gt;从0开始，后面参数的ID加1&lt;/code&gt;，如果未指定名称，默认与属性字段同名。&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Red&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stop&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Yellow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wait&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 可以单独传名字
-&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// 可以传入ID
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;上例中，Yellow属性就&lt;code class=&quot;highlighter-rouge&quot;&gt;仅定义了名称&lt;/code&gt;，Green&lt;code class=&quot;highlighter-rouge&quot;&gt;仅定义ID&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Red&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res10&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TrafficLight.value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Stop&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res11&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TrafficLight.value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;参数在&lt;code class=&quot;highlighter-rouge&quot;&gt;不指定名称&lt;/code&gt;时，默认参数的value为&lt;code class=&quot;highlighter-rouge&quot;&gt;字段名&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;note:枚举类型的值是对象的value,如上面中的枚举类型是TrafficLight.value&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;8)通过id方法来获取枚举类型值的ID&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res12&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;9)通过values方法获取所有枚举值的集合&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res13&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TrafficLight.ValueSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ValueSets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Wait&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;10)通过ID来获取对应的枚举对象&lt;/p&gt;
-
-&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TrafficLight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;res14&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TrafficLight.value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Stop&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;section-17&quot;&gt;8.函数&lt;/h4&gt;
-
-&lt;p&gt;在Scala中，函数是一等公民。函数可以像类型一样被赋值给一个变量，也可以做为一个函数的参数被传入，甚至还可以做为函数的返回值返回（这就是函数式编程）。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scala&amp;gt; def calc(n1: Int, n2: Int): (Int, Int) = {
-		|   (n1 + n2, n1 * n2)
-			|
-}
-calc: (n1: Int, n2: Int)(Int, Int)
-
-scala&amp;gt; val (add, sub) = calc(5, 1)
-add: Int = 6
-sub: Int = 5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这里定义了一个函数：calc，它有两个参数：n1和n2，其类型为：Int。cala函数的返回值类型是一个有两个元素的元组，在Scala中可以简写为：(Int,
-Int)。在Scala中，代码段的最后一句将做为函数返回值，所以这里不需要显示的写return关键字。&lt;/p&gt;
-
-&lt;p&gt;而val (add, sub) = calc(5,
-1)一句，是Scala中的抽取功能。它直接把calc函数返回的一个Tuple2值赋给了add他sub两个变量。&lt;/p&gt;
-
-&lt;h3 id=&quot;scala-api-download&quot;&gt;Scala API download&lt;/h3&gt;
-
-&lt;p&gt;只要我们按照如下的格式，就可以下载到对于版本的API了。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://downloads.typesafe.com/scala/{version}/scala-docs-{version}.txz
-http://downloads.typesafe.com/scala/{version}/scala-docs-{version}.zip
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;example:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.txz
-axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
 </content>
  </entry>
  
