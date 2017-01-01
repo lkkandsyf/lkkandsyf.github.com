@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Fri, 30 Dec 2016 09:54:19 +0000</lastBuildDate>
-        <pubDate>Fri, 30 Dec 2016 09:54:19 +0000</pubDate>
+        <lastBuildDate>Sun, 01 Jan 2017 20:11:48 +0800</lastBuildDate>
+        <pubDate>Sun, 01 Jan 2017 20:11:48 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -49,7 +49,7 @@
 </description>
                 <link>http://lkkandsyf.github.io/ide/2016/12/30/idea</link>
                 <guid>http://lkkandsyf.github.io/ide/2016/12/30/idea</guid>
-                <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -283,10 +283,18 @@ jdb -attach 1044
 &lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jdb.html&quot;&gt;oracle jdb&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/haoel/article/details/2289305&quot;&gt;gci-java-debug&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jvisualvm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一个Java任务管理器&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/java/j-lo-visualvm/&quot;&gt;IBM-blog&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -454,7 +462,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -568,6 +576,13 @@ mvn help:effective-pom #看这个“有效的 (effective)”POM，它暴露了 M
 mvnDebug tomcat:run 这条命令主要用来远程测试,它会监听远程测试用的8000端口,在eclipse里打开远程测试后,它就会跑起来了,设断点,调试mvn dependency:sources 故名思义,有了它,你就不用到处找源码了,运行一下,你项目里所依赖的jar包的源码就都有了
 mvn help:describe 你是否因为记不清某个插件有哪些goal而痛苦过,你是否因为想不起某个goal有哪些参数而苦恼,那就试试这个命令吧,它会告诉你一切的.参数: 1. -Dplugin=pluginName 2.-Dgoal(或-Dmojo)=goalName:与-Dplugin一起使用,它会列出某个插件的goal信息,如果嫌不够详细,同样可以加-Ddetail.(注:一个插件goal也被认为是一个 “Mojo”) 下面大家就运行mvn help:describe
  -Dplugin=help -Dmojo=describe感受一下吧!
+
+
+# 常用选项尤其是在使用vim的过程，会出现加载慢的问题，不便于编辑文件,主要是配置mvn的加载文件就可以了。因为用vim打开.java文件时，会编译整个项目，需要下载一些包，如果已经存在了，那么就直接打开了。
+-f path/pom.xml
+-s path/settings.xml
+-gs path/settings.xml args 全局配置
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -853,6 +868,20 @@ default(默认)&lt;/p&gt;
 
 &lt;p&gt;你也可以自定义本地仓库的位置，修改${user.home}/.m2/settings.xml ：&lt;/p&gt;
 
+&lt;p&gt;localRepository：表示Maven用来在本地储存信息的本地仓库的目录。默认是用户家目录下面的.m2/repository目录。&lt;/p&gt;
+
+&lt;p&gt;interactiveMode：表示是否使用交互模式，默认是true；如果设为false，那么当Maven需要用户进行输入的时候，它会使用一个默认值。&lt;/p&gt;
+
+&lt;p&gt;offline：表示是否离线，默认是false。这个属性表示在Maven进行项目编译和部署等操作时是否允许Maven进行联网来下载所需要的信息。&lt;/p&gt;
+
+&lt;p&gt;pluginGroups：在pluginGroups元素下面可以定义一系列的pluginGroup元素。表示当通过plugin的前缀来解析plugin的时候到哪里寻找。pluginGroup元素指定的是plugin的groupId。默认情况下，Maven会自动把org.apache.maven.plugins和org.codehaus.mojo添加到pluginGroups下。&lt;/p&gt;
+
+&lt;p&gt;proxies：其下面可以定义一系列的proxy子元素，表示Maven在进行联网时需要使用到的代理。当设置了多个代理的时候第一个标记active为true的代理将会被使用。&lt;/p&gt;
+
+&lt;p&gt;官网详细介绍&lt;a href=&quot;http://maven.apache.org/ref/3.0.4/maven-settings/settings.html&quot;&gt;http://maven.apache.org/ref/3.0.4/maven-settings/settings.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://xiaobenbenxiong.iteye.com/blog/2093315&quot;&gt;中文版本&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;xml代码&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;settings&amp;gt;
@@ -869,6 +898,20 @@ default(默认)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://my.oschina.net/ghm7753/blog/373350&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;使用自己安装的mvn，设置settings.xml，直接放在~/.m2目录，就是全局配置&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://maven.apache.org/settings.html&quot;&gt;maven.apache.org/settings.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html&quot;&gt;settings.xml中的各个标志&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;原来的maven地址&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://repo1.maven.org/maven2/&quot;&gt;http://repo1.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://central.maven.org/maven2/&quot;&gt;http://central.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;自己的配置java目录下&lt;a href=&quot;https://git.oschina.net/lkk_gczx/configure-file&quot;&gt;https://git.oschina.net/lkk_gczx/configure-file &lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -884,7 +927,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -977,7 +1020,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1078,7 +1121,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1258,7 +1301,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1278,7 +1321,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1314,7 +1357,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1337,7 +1380,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2445,7 +2488,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2493,6 +2536,16 @@ mvn compile
 
 &lt;p&gt;最后根据自己的vim版本的需要，在修改参数就不会提示错误了.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;第三方jar&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在vimrc　添加jar的路径&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let g:JavaComplete_LibsPath = &quot;/home/lkk/lib/*&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;然后用vim打开项目:JCserverStart来重启服务,就可以补全了。&lt;/p&gt;
+
 &lt;h2 id=&quot;vjde&quot;&gt;vjde&lt;/h2&gt;
 
 &lt;p&gt;这是一个Java补全插件.&lt;/p&gt;
@@ -2531,7 +2584,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2563,7 +2616,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2595,6 +2648,7 @@ change it by
       &lt;li&gt;&lt;a href=&quot;#python-3&quot; id=&quot;markdown-toc-python-3&quot;&gt;Python网络应用&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#pdb&quot; id=&quot;markdown-toc-pdb&quot;&gt;pdb&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#ipdb&quot; id=&quot;markdown-toc-ipdb&quot;&gt;ipdb&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#paramiko-lib&quot; id=&quot;markdown-toc-paramiko-lib&quot;&gt;paramiko lib&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -5713,10 +5767,14 @@ u ，Move the current frame one level up in the stack trace
 &lt;p&gt;ipdb是pdb的交互式debug,ipdb debug.py 直接对程序进行调试&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h3 id=&quot;paramiko-lib&quot;&gt;paramiko lib&lt;/h3&gt;
+
+&lt;p&gt;与远程服务器通信的python库&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5944,7 +6002,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -5960,7 +6018,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6012,7 +6070,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -6032,6 +6090,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
   &lt;li&gt;&lt;a href=&quot;#spark-command-debug&quot; id=&quot;markdown-toc-spark-command-debug&quot;&gt;Spark command debug&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#docker-scala-spark&quot; id=&quot;markdown-toc-docker-scala-spark&quot;&gt;docker-scala-spark&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#spark-e-book&quot; id=&quot;markdown-toc-spark-e-book&quot;&gt;spark e-book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spark-e-book-1&quot; id=&quot;markdown-toc-spark-e-book-1&quot;&gt;spark-e-book&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;jupyter-spark&quot;&gt;Jupyter-spark&lt;/h2&gt;
@@ -6796,11 +6855,21 @@ dockoey/jupyter-scala
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.safaribooksonline.com/library/view/building-a-recommendation/9781785282584/&quot;&gt;Building a Recommendation Engine with Scala&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/&quot;&gt;mastering Apache Spark2.0&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;spark-e-book-1&quot;&gt;spark-e-book&lt;/h2&gt;
+
+&lt;p&gt;这里介绍一些网上比较好的电子书&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://taiwansparkusergroup.gitbooks.io/spark-programming-guide-zh-tw/content/&quot;&gt;Spark programming guide zh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7477,7 +7546,7 @@ CMD [ &quot;/usr/local/bin/start.sh&quot; ]
 </description>
                 <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
                 <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -7554,7 +7623,7 @@ sudo apt-get install shadowsocks-qt5
 </description>
                 <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
                 <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
         </item>
 
 
