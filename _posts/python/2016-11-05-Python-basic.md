@@ -2993,3 +2993,8 @@ python中有个pdb模块，使python代码也可以像gdb那样进行调试，�
 ipdb是pdb的交互式debug,ipdb debug.py 直接对程序进行调试
 
 ---
+
+
+### paramiko lib
+
+与远程服务器通信的python库

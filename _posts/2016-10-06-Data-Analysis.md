@@ -30,10 +30,15 @@ tags : [Big-data]
 
 8.实时搜索引擎solr和lucene
 
+9.[Zeppelin](http://zeppelin.apache.org/) 大数据可视化软件
+
+10.[spark-notebook](https://github.com/andypetrella/spark-notebook)Interactive and Reactive Data Science using Scala and Spark
+
 **数据分析系统的布局**
 
 ![image](http://lkkandsyf.github.com/pictures/big-data-structure.png)
 
 [blog](http://www.cnblogs.com/gnool/p/5645036.html)
+
 
 
