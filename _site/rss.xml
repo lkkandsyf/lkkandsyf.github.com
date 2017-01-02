@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 02 Jan 2017 10:47:26 +0800</lastBuildDate>
-        <pubDate>Mon, 02 Jan 2017 10:47:26 +0800</pubDate>
+        <lastBuildDate>Mon, 02 Jan 2017 19:51:28 +0800</lastBuildDate>
+        <pubDate>Mon, 02 Jan 2017 19:51:28 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -486,6 +486,10 @@ jdb -attach 1044
 &lt;/div&gt;
 
 &lt;p&gt;性能分析:jprofile:jvisualvm&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OpenGrok&lt;/code&gt;: fast and usable source code search and cross reference engine, written in Java. It helps you search, cross-reference and navigate your source tree. It can understand various program file formatsand version control histories like Mercurial, Git, SCCS, RCS, CVS, Subversion,Teamware, ClearCase, Perforce, Monotone and Bazaar.&lt;/p&gt;
+
+&lt;p&gt;阅读Java代码，类似与Linux代码中的LXR一样,&lt;a href=&quot;http://opengrok.github.io/OpenGrok/&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
@@ -551,9 +555,7 @@ mvn archetype:generate		#新疆maven项目
 &lt;p&gt;-DarchetypeCatalog	由于网络的源的原因，使用内部源&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# second way	把所有的配置写到一起
-mvn archetype:generate -DgroupId=com.nsfocus \
--DartifactId=Secority  -DarchetypeArtifactId=maven-archetype-quickstart\
--DinteractiveMode=false -DarchetypeCatalog=internal
+mvn archetype:generate -DgroupId=com.nsfocus -DartifactId=Secority  -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=internal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -938,6 +940,16 @@ default(默认)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://central.maven.org/maven2/&quot;&gt;http://central.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;自己的配置java目录下&lt;a href=&quot;https://git.oschina.net/lkk_gczx/configure-file&quot;&gt;https://git.oschina.net/lkk_gczx/configure-file &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mvn debug:还需要自己的进一步的研究，对于工程的代码，还不知道怎么做。&lt;/p&gt;
+
+&lt;p&gt;借鉴:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;ihttp://stackoverflow.com/questions/2935375/debugging-in-maven&quot;&gt;overstack mvn debug&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://my.oschina.net/guoxf1/blog/42954&quot;&gt;oschina blog mvn debug&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.javaworld.com/article/2077445/testing-debugging/debug-with-jdb.html&quot;&gt;single java file debug&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
 
