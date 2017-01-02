@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-01-01T20:11:48+08:00</updated>
+ <updated>2017-01-02T10:47:26+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -331,6 +331,7 @@ jdb -attach 1044
   &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/h2&gt;
@@ -464,6 +465,32 @@ jdb -attach 1044
 &lt;h2 id=&quot;section-16&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
 &lt;h2 id=&quot;section-17&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
 &lt;h2 id=&quot;section-18&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;findbugs&lt;/a&gt;:非常好的代码检测工具，检测的深度比较深，对代码中渗透的性能，内存的使用释放有很好的检测，能检测出可以导致错误的代码，如空指针等。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;checkstyle&lt;/a&gt;:检测代码风格的工具.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pmd.github.io/&quot;&gt;PMD&lt;/a&gt;:可以配合findbugs来一起来检测。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/project/showfiles.php?group_id=51180&quot;&gt;Source-Navigator&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libx11-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;启动:snavigator&lt;/p&gt;
+
+&lt;p&gt;阅读java代码:ctags，在项目的根目录:ctags -R;就可以使用了&lt;/p&gt;
+
+&lt;p&gt;javap:Java反编译工具,项目的话，可以是jd-gui:一个C++开发的Java反编译工具&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javap -c xxx.class
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;性能分析:jprofile:jvisualvm&lt;/p&gt;
 </content>
  </entry>
  
@@ -950,9 +977,19 @@ default(默认)&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;创建仓库&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#command&quot; id=&quot;markdown-toc-command&quot;&gt;command&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blog&quot; id=&quot;markdown-toc-blog&quot;&gt;blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;创建仓库&lt;/h2&gt;
+
+&lt;p&gt;安装(Ubuntu):&lt;a href=&quot;http://subversion.apache.org/packages.html&quot;&gt;office&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install subversion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tortoisesvn.net/support.html&quot;&gt;tortoiseSVN&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;一般在服务器上创建仓库&lt;/p&gt;
 
@@ -1022,6 +1059,37 @@ sally = sallyssecret
 kill -9 ID
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;command&quot;&gt;command&lt;/h2&gt;
+
+&lt;p&gt;svn checkout address&lt;/p&gt;
+
+&lt;p&gt;svn add file_name&lt;/p&gt;
+
+&lt;p&gt;svn commit -m “add filename”&lt;/p&gt;
+
+&lt;p&gt;svn delete file_name&lt;/p&gt;
+
+&lt;p&gt;svn commit -m “delete filename”&lt;/p&gt;
+
+&lt;p&gt;误删文件&lt;/p&gt;
+
+&lt;p&gt;svn up&lt;/p&gt;
+
+&lt;p&gt;svn revert -r version&lt;/p&gt;
+
+&lt;h2 id=&quot;blog&quot;&gt;blog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/aLittleBitCool/archive/2011/07/09/2101602.html&quot;&gt;server-svn&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xd502djj/archive/2011/01/21/1941404.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xulb597/archive/2012/07/02/2573575.html&quot;&gt;comand svn&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xulb597/archive/2012/07/02/2573575.html&quot;&gt;command&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-22150747-id-189264.html&quot;&gt;linux-svn&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
