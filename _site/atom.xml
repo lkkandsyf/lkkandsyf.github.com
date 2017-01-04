@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-01-04T09:22:11+00:00</updated>
+ <updated>2017-01-04T22:32:00+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Holes</title>
    <link href="http://lkkandsyf.github.io/holes/2017/01/04/holes"/>
-   <updated>2017-01-04T00:00:00+00:00</updated>
+   <updated>2017-01-04T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/holes/2017/01/04/holes</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -49,7 +49,7 @@
  <entry>
    <title>Hadoop</title>
    <link href="http://lkkandsyf.github.io/2017/01/03/Hadoop"/>
-   <updated>2017-01-03T00:00:00+00:00</updated>
+   <updated>2017-01-03T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2017/01/03/Hadoop</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -90,7 +90,7 @@ cat out/*
  <entry>
    <title>Idea</title>
    <link href="http://lkkandsyf.github.io/ide/2016/12/30/idea"/>
-   <updated>2016-12-30T00:00:00+00:00</updated>
+   <updated>2016-12-30T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/ide/2016/12/30/idea</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -132,7 +132,7 @@ cat out/*
  <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+00:00</updated>
+   <updated>2016-12-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -377,7 +377,7 @@ jdb -attach 1044
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -400,12 +400,16 @@ jdb -attach 1044
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;&lt;strong&gt;第三方库&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#log4j&quot; id=&quot;markdown-toc-log4j&quot;&gt;Log4j&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -532,14 +536,22 @@ jdb -attach 1044
 
 &lt;h2 id=&quot;section-12&quot;&gt;#&lt;/h2&gt;
 
-&lt;h2 id=&quot;section-13&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-13&quot;&gt;&lt;strong&gt;第三方库&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;h2 id=&quot;section-14&quot;&gt;#&lt;/h2&gt;
+&lt;p&gt;Java中常用的第三方库。需要自己熟练掌握，以便在工作中灵活使用。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-15&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;log4j&quot;&gt;Log4j&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://logging.apache.org/log4j/1.2/download.html&quot;&gt;office download&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-14&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-15&quot;&gt;#&lt;/h2&gt;
+
 &lt;h2 id=&quot;section-16&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
 &lt;h2 id=&quot;section-17&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
 &lt;h2 id=&quot;section-18&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-19&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/h2&gt;
 
@@ -576,7 +588,7 @@ jdb -attach 1044
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1049,7 +1061,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+00:00</updated>
+   <updated>2016-12-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1183,7 +1195,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+00:00</updated>
+   <updated>2016-12-20T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1284,7 +1296,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+00:00</updated>
+   <updated>2016-12-16T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1464,7 +1476,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+00:00</updated>
+   <updated>2016-12-10T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1484,7 +1496,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+00:00</updated>
+   <updated>2016-12-04T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1520,7 +1532,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+00:00</updated>
+   <updated>2016-11-30T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1543,7 +1555,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+00:00</updated>
+   <updated>2016-11-28T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2651,7 +2663,7 @@ db.valColl.find()
  <entry>
    <title>Vim</title>
    <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+00:00</updated>
+   <updated>2016-11-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2741,13 +2753,16 @@ change it by
 
 &lt;p&gt;&lt;a href=&quot;http://guoshaoguang.com/blog/tag/vim/&quot;&gt;guoshaoguang&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;新建文件:sp FileName&lt;/p&gt;
+
+&lt;p&gt;新建文件夹:!mkdir FileDirName&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Markdown</title>
    <link href="http://lkkandsyf.github.io/markdown/2016/11/21/markdown"/>
-   <updated>2016-11-21T00:00:00+00:00</updated>
+   <updated>2016-11-21T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2779,7 +2794,7 @@ change it by
  <entry>
    <title>Python Basic</title>
    <link href="http://lkkandsyf.github.io/python/2016/11/05/Python-basic"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -5937,7 +5952,7 @@ u ，Move the current frame one level up in the stack trace
  <entry>
    <title>Sbt Debug</title>
    <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6165,7 +6180,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Scikit Learn</title>
    <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+00:00</updated>
+   <updated>2016-11-05T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6181,7 +6196,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
  <entry>
    <title>Ndpi</title>
    <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+00:00</updated>
+   <updated>2016-10-25T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -6233,7 +6248,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
  <entry>
    <title>Spark</title>
    <link href="http://lkkandsyf.github.io/big-data/2016/10/24/Spark"/>
-   <updated>2016-10-24T00:00:00+00:00</updated>
+   <updated>2016-10-24T00:00:00+08:00</updated>
    <id>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
