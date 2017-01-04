@@ -5,10 +5,85 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 02 Jan 2017 19:51:28 +0800</lastBuildDate>
-        <pubDate>Mon, 02 Jan 2017 19:51:28 +0800</pubDate>
+        <lastBuildDate>Wed, 04 Jan 2017 09:22:11 +0000</lastBuildDate>
+        <pubDate>Wed, 04 Jan 2017 09:22:11 +0000</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>Holes</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;这里整理一些安全漏洞修复的基本方法&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#openssh&quot; id=&quot;markdown-toc-openssh&quot;&gt;OpenSSH&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;openssh&quot;&gt;OpenSSH&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;OpenSSH升级&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OpenSSH安装依赖pam,zlib,openssl等。所以要提前安装这几个软件。&lt;/p&gt;
+
+&lt;p&gt;OpenSSH &lt;a href=&quot;http://ftp.spline.de/pub/OpenBSD/OpenSSH/portable/&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;zlib &lt;a href=&quot;&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;openssl &lt;a href=&quot;&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ref:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.iyunv.com/thread-236685-1-1.html&quot;&gt;centos upgrade OpenSSH&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.iyunv.com/thread-236685-1-1.html&quot;&gt;redhat upgrade OpenSSH&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://lkkandsyf.github.io/holes/2017/01/04/holes</link>
+                <guid>http://lkkandsyf.github.io/holes/2017/01/04/holes</guid>
+                <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Hadoop</title>
+                <description>
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;进入大数据，Hadoop是基本。&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;基本知识&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;基本知识&lt;/h2&gt;
+
+&lt;p&gt;安装之前需要Java环境。&lt;/p&gt;
+
+&lt;p&gt;简单单机模式，从官网下载编译好的包。然后在Hadoop的配置文件中/etc/hadoop/hadoop-env.sh修改&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JAVA_HOME = /usr/lib/jdk
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在.bashrc或者.zshrc中配置HADOOP_HOME的路径，以便让hive跑起来.&lt;/p&gt;
+
+&lt;p&gt;配置完成之后,进入hadoop目录。运行WordCount:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./bin/hadoop jar share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.3-sources.jar org.apache.hadoop.examples.WordCount ./README.txt out
+# 统计结果
+cat out/*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;参考:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.powerxing.com/install-hadoop/&quot;&gt;powerxing&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://lkkandsyf.github.io/2017/01/03/Hadoop</link>
+                <guid>http://lkkandsyf.github.io/2017/01/03/Hadoop</guid>
+                <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        </item>
 
         <item>
                 <title>Idea</title>
@@ -49,7 +124,7 @@
 </description>
                 <link>http://lkkandsyf.github.io/ide/2016/12/30/idea</link>
                 <guid>http://lkkandsyf.github.io/ide/2016/12/30/idea</guid>
-                <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -294,7 +369,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -493,7 +568,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -966,7 +1041,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1100,7 +1175,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1201,7 +1276,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1381,7 +1456,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1401,7 +1476,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1437,7 +1512,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1460,7 +1535,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2568,7 +2643,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2664,7 +2739,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2696,7 +2771,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5854,7 +5929,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6082,7 +6157,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6098,7 +6173,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6150,7 +6225,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6949,761 +7024,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Docker</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#docker-learn-note&quot; id=&quot;markdown-toc-docker-learn-note&quot;&gt;Docker learn note&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#docker&quot; id=&quot;markdown-toc-docker&quot;&gt;安装Docker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;核心概念&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;拉取和推送&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;制作镜像&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;挂载本地目录&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;导入和导出镜像&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;数据卷&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;网络配置&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#docker-cmd&quot; id=&quot;markdown-toc-docker-cmd&quot;&gt;Docker cmd&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#dockerfile&quot; id=&quot;markdown-toc-dockerfile&quot;&gt;Dockerfile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#problem&quot; id=&quot;markdown-toc-problem&quot;&gt;Problem&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;docker-learn-note&quot;&gt;Docker learn note&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.opskumu.com/docker.html&quot;&gt;Kumu-docker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.daocloud.io/how-to-master-docker-image/&quot;&gt;玩转Docker&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://dev.aliyun.com/search.html&quot;&gt;阿里云加速&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;docker&quot;&gt;安装Docker&lt;/h2&gt;
-
-&lt;p&gt;Ubuntu:14.04中安装&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sudo apt-get update
-$sudo apt-get install apt-transport-https ca-certificates
-$sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-$echo &quot;deb https://apt.dockerproject.org/repo ubuntu-trusty main&quot; | sudo tee /etc/apt/sources.list.d/docker.list
-$sudo apt-get update
-$sudo apt-get install docker-engine
-$or curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh - #来加速
-$sudo service docker start
-$sudo docker run hello-world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;卸载Docker&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sudo apt-get purge docker-engine
-$sudo apt-get autoremove --purge docker-engine
-$rm -rf /var/lib/docker
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;升级Docker&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sudo apt-get update
-$sudo apt-get upgrade docker-engine
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;官网&lt;a href=&quot;https://docs.docker.com/engine/installation/linux/ubuntulinux/&quot;&gt;https://docs.docker.com/engine/installation/linux/ubuntulinux/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;核心概念&lt;/h2&gt;
-
-&lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。&lt;/p&gt;
-
-&lt;p&gt;Docker有三大核心概念：镜像（Image）、容器（Container）、仓库（Repository）。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;拉取和推送&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;拉取&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;首先，我们通过docker search image-name来搜索需要的镜像。然后通过docker pull image-name 来拉取镜像。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker pull name[:TAG]
-sudo docker pull ubuntu:latest
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;推送&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;通过拉取基本的镜像之后，我们可以通过Dockfile或者commit来构建镜像，一般都会选择Dockfile来构建自己需要的镜像.&lt;/p&gt;
-
-&lt;p&gt;推送镜像的时候，我们需要登录dockerhub或者daocloud的网站进行注册，在需要推送的机器上使用命令登录&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;查看信息&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat .dockercfg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;我们可以使用docker tag	来添加自己的名字。用docker images来查看镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push daocloud-name/repo-name:latest
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过上面的命令就可以推送到dockerhub或者daocloud上，我们可以看到自己推送的tag，但是在推送之前必须把使用该镜像的容器stop，否则不能推送成功。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push daocloud-name/repo-name:v1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;制作镜像&lt;/h2&gt;
-
-&lt;p&gt;两种方式制作镜像&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;docker commit命令&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;操作完之后，我们通过docker commit image-id daocloud-user-name/repo-name,通过docker images daocloud-user-name/repo-name来检查刚才创建的镜像&lt;/p&gt;
-
-&lt;p&gt;提交一个新的定制的镜像，docker commit -m “A new custom image” -a “author info” image-id daocloud-user-name/repo-name:context&lt;/p&gt;
-
-&lt;p&gt;-m:来指定新的镜像的提交信息&lt;/p&gt;
-
-&lt;p&gt;-a:列出该镜像的作者信息&lt;/p&gt;
-
-&lt;p&gt;daocloud-user-name/repo-name:指定了镜像的用户名和仓库名，并且为该镜像增加了一个context的标签。&lt;/p&gt;
-
-&lt;p&gt;可以使用docker inspect命令来查看新创建的镜像的详细信息.docker inspect daocloud-user-name/repo-name:context&lt;/p&gt;
-
-&lt;p&gt;从新提交的镜像运行一个新的容器，docker run -it daocloud-user-name/repo-name:context /bin/bash可以看出我们用了完整的标签来指定这个镜像。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;使用docker build命令和Dockfile文件(推荐)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;简单demo:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir first-docker-file
-cd first-docker-file
-touch Dockfile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;执行docker build命令时，Dockerfile中的所有指令都会被执行并且提交。并且在该命令成功结束后返回一个&lt;code class=&quot;highlighter-rouge&quot;&gt;新的镜像&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t=&quot;daocloud-user-name/repo-name&quot; .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;开始构建新的对象。如果没有指定任何tag，Docker将会自动为镜像设置一个latest标签&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;挂载本地目录&lt;/h2&gt;
-
-&lt;p&gt;docker可以把一个宿主机上的&lt;code class=&quot;highlighter-rouge&quot;&gt;目录&lt;/code&gt;挂载到&lt;code class=&quot;highlighter-rouge&quot;&gt;镜像里&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it -v /home/user/Downloads:/usr/share ubuntu:14.04 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;通过&lt;code class=&quot;highlighter-rouge&quot;&gt;-v&lt;/code&gt;参数，冒号前为&lt;code class=&quot;highlighter-rouge&quot;&gt;宿主机目录&lt;/code&gt;，必须为&lt;code class=&quot;highlighter-rouge&quot;&gt;绝对路径&lt;/code&gt;，冒号后面为&lt;code class=&quot;highlighter-rouge&quot;&gt;镜像内挂载的目录的路径&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;现在镜像内就可以访问共享宿主机里面的文件了。&lt;/p&gt;
-
-&lt;p&gt;默认挂载的路径&lt;code class=&quot;highlighter-rouge&quot;&gt;权限&lt;/code&gt;为读写。如果指定为&lt;code class=&quot;highlighter-rouge&quot;&gt;只读&lt;/code&gt;可以使用:ro&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it -v /home/user/Downloads:/usr/share:ro ubuntu:14.04 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;docker还提供了一个&lt;code class=&quot;highlighter-rouge&quot;&gt;高级&lt;/code&gt;的用法，叫做&lt;code class=&quot;highlighter-rouge&quot;&gt;数据卷&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;数据卷:“其实就是一个&lt;code class=&quot;highlighter-rouge&quot;&gt;正常的容器&lt;/code&gt;，专门用来提供数据卷供&lt;code class=&quot;highlighter-rouge&quot;&gt;其他容器挂载&lt;/code&gt;”,感觉像是由一个容器定义的一个&lt;code class=&quot;highlighter-rouge&quot;&gt;数据挂载信息&lt;/code&gt;。其他的容器启动就可以直接挂载数据卷中定义的挂载信息。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -v /home/user/Downloads:/usr/share --name dataVol ubuntu:14.04 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;创建一个普通的容器。用&lt;code class=&quot;highlighter-rouge&quot;&gt;--name&lt;/code&gt;给它指定一个名(不指定的话，就会随机产生一个名字)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps -l
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;再创建一个新的容器，来使用这个数据卷。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --volumes-from dataVol ubuntu14.04 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;–volumes-from用来指定要从哪个数据卷来挂载数据。同样都是在/usr/share目录下。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;导入和导出镜像&lt;/h2&gt;
-
-&lt;p&gt;可以使用docker save和docker load来存储镜像和载入镜像&lt;/p&gt;
-
-&lt;p&gt;保存镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker images			#镜像列表
-sudo docker save -o xxxx.jar 要保存的镜像		#保存镜像为文件
-sudo docker mirrorId &amp;gt; path/xxx.tar
-sudo docker save ubuntu.tar repo/ubuntu
-#完成之后用ls查看
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;加载镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker load --input xxx.tar
-#or
-sudo docker load &amp;lt; xxx.tar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;导出export和保存save的区别&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;export导出的镜像文件大小  小于 save保存的镜像&lt;/li&gt;
-  &lt;li&gt;export 导出（import导入）是根据容器拿到的镜像，再导入时会丢失镜像所有的历史，所以无法进行回滚操作（docker tag &lt;LAYER ID=&quot;&quot;&gt; &lt;IMAGENAME&gt;）；而save保存（load加载）的镜像，没有丢失镜像的历史，可以回滚到之前的层（layer）。（查看方式：docker images --tree）&lt;/IMAGENAME&gt;&lt;/LAYER&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;注：导入加载进来觉得不合适可以使用 docker rm 容器ID 、 docker rmi 镜像ID 来删掉。&lt;/p&gt;
-
-&lt;p&gt;移除所有的容器和镜像：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;数据卷&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --volumes-from dataVol ubuntu14.04 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;网络配置&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;端口映射&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;从外部访问容器应用，可以通过-p/-P参数来指定端口映射。使用-P时，Docker会随机映射一个端口到容器内部开放的端口。-p会映射到指定的端口，支持的格式有&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ip地址:主机端口:容器端口&lt;/li&gt;
-  &lt;li&gt;ip地址::容器端口&lt;/li&gt;
-  &lt;li&gt;主机端口:容器端口&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;查看映射端口配置&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo  port containerid  port
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;容器有自己内部往来和IP地址&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker inspect containerid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;exam:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker run -it -p 127.0.0.1:4001:4000 jekyll/jekyll /bin/bash
-jekyll build
-jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;然后通过外部浏览器来访问localhost:4001&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;容器互联&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;容器的连接系统是除了端口映射另外一种可以与容器中应用进行交互的方式，它会在源和接受容器之间创建一个隧道，接受容器可以看到源容器的指定的信息&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker run -d -p --name blog jekyll/jekyll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;容器的名字&lt;code class=&quot;highlighter-rouge&quot;&gt;必须是唯一的&lt;/code&gt;，执行docker run 时，如果加上–rm参数，容器在终止的时候会立即被删除，但是不能与-d参数一起使用。&lt;/p&gt;
-
-&lt;p&gt;使用–link参数可以让容器直接建立安全的连接进行交互。&lt;/p&gt;
-
-&lt;p&gt;首先创建一个数据库的容器&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dcoker run -d --name db training/postgres
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;创建web容器&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker run -d -p --name web --link db:db training/webapp python app.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;此时db容器和web容器相互联系。–link参数:–link name:alias,name是要连接的容器，alias是这个容器的别名，可以使用docker ps查看容器的信息，其中name列就能看出互联的状态&lt;/p&gt;
-
-&lt;p&gt;docker在两个&lt;code class=&quot;highlighter-rouge&quot;&gt;互联&lt;/code&gt;容器直接建立一个&lt;code class=&quot;highlighter-rouge&quot;&gt;安全隧道&lt;/code&gt;，不需要把它们的端口&lt;code class=&quot;highlighter-rouge&quot;&gt;映射到宿主主机上&lt;/code&gt;，也可以避免端口的暴露。&lt;/p&gt;
-
-&lt;p&gt;Docker提供两种方式公开连接信息&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;环境变量&lt;/li&gt;
-  &lt;li&gt;更新/etc/hosts文件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;使用env命令可以看到容器的环境变量&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;docker-cmd&quot;&gt;Docker cmd&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;Dockfile-command&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login
-docker logout
-docker diff
-docker build
-docker commit
-docker create
-docker cp
-docker events
-docker export
-docker info
-docker kill
-docker pull
-docker run
-docker image
-docker tag
-docker inspect
-docker search
-docker rmi
-docker commit
-docker save
-docker load
-docker push
-docker logs
-docker ps
-docker restart
-docker attach
-docker exec
-docker top
-docker stop
-docker start
-docker port
-docker pause
-docker history
-docker version
-docker wait
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;dockerfile&quot;&gt;Dockerfile&lt;/h2&gt;
-
-&lt;p&gt;我们可以是Dockfile文件&lt;code class=&quot;highlighter-rouge&quot;&gt;快速创建自定义的镜像&lt;/code&gt;,一般分为&lt;code class=&quot;highlighter-rouge&quot;&gt;4个部分&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;基础镜像信息&lt;/li&gt;
-  &lt;li&gt;维护者信息&lt;/li&gt;
-  &lt;li&gt;镜像操作指令&lt;/li&gt;
-  &lt;li&gt;容器启动时的执行命令&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;指令&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;指令的一半格式是INSTRUCTION arguments&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FROM&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;格式为:FROM &lt;image&gt; or FROM &lt;image&gt;:&lt;tag&gt;
-Dockerfile文件第一行必须为FROM指令，如果在同一个Dockerfile创建多个镜像时，可以使用多个FROM指令(每个镜像一次)&lt;/tag&gt;&lt;/image&gt;&lt;/image&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;MAINTAINER&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;指定维护者信息,格式为：MAINTAINER &lt;name&gt;&lt;/name&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;RUN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;格式为RUN &lt;command /&gt;或者RUN[“executable”,”param1”,”param2”],前者将在shell终端运行命令，即/bin/sh -c,后者在使用exec执行。第二种方式可以指定&lt;code class=&quot;highlighter-rouge&quot;&gt;其他终端实现&lt;/code&gt;，如:RUN [“/bin/bash”,”-c”,”echo hello”],RUN命令将在当前镜像基础上执行执行命令,并提交为新的镜像，当命令较长时，可以使用\来换行。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CMD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;指定启动容器时执行的命令，每个Dockerfile&lt;code class=&quot;highlighter-rouge&quot;&gt;只能有一条CMD命令&lt;/code&gt;，如果指定了多个命令，只有&lt;code class=&quot;highlighter-rouge&quot;&gt;最后一条命令执行&lt;/code&gt;,该命令支持三种格式：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CMD [“executable”,”param1”,”param2”]:使用exec执行&lt;/li&gt;
-  &lt;li&gt;CMD command param1 param2:在/bin/bash中执行，提供给需要交互的应用&lt;/li&gt;
-  &lt;li&gt;CMD [“param1”,”param2”]:提供给ENTRYPOINT默认参数&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果在其中容器中指定了运行的命令，就会覆盖掉CMD命令&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;EXPOSE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;告诉Docker服务器容器需要暴露的端口号，&lt;code class=&quot;highlighter-rouge&quot;&gt;供互联系统使用&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;格式:EXPOSE &lt;port&gt; [&lt;port&gt;...]&lt;/port&gt;&lt;/port&gt;&lt;/p&gt;
-
-&lt;p&gt;在容器启动时，需要通过-P让Docker主机自动分配一个端口转发到指定的端口，使用-p则可以具体指定哪个本地端口会映射过来。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ENV&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;指定环境变量，会被后面RUN指令使用，并在容器运行时保持&lt;/p&gt;
-
-&lt;p&gt;格式:ENV &lt;key&gt; &lt;value&gt;&lt;/value&gt;&lt;/key&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;该命令向容器中复制文件&lt;/p&gt;
-
-&lt;p&gt;格式:ADD &lt;src&gt; &lt;dst&gt;
-指定的src会被复制到dst，src可以是Dockerfile所在目录的一个`相对路径(文件或者目录)，也可以是一个URL，还可以是一个tar包，--会自动解包为一个目录`&lt;/dst&gt;&lt;/src&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;COPY&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;格式:COPY &lt;src&gt; &lt;dst&gt;&lt;/dst&gt;&lt;/src&gt;&lt;/p&gt;
-
-&lt;p&gt;复制主机的&lt;src&gt;(Dockerfile所在的目录的相对路径，文件或目录)为容器&lt;dst&gt;,目标路径不存在时会自动创建。&lt;/dst&gt;&lt;/src&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ENTRYPOINT&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;配置容器启动后执行的命令，并且不尅被docker run命令提供过的参数覆盖&lt;/p&gt;
-
-&lt;p&gt;格式:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ENTRYPOINT [“executable”,”param1”,”param2”]&lt;/li&gt;
-  &lt;li&gt;ENTRYPOINT command param1 param2:shell中执行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;同样的，每个Dockerfile中&lt;code class=&quot;highlighter-rouge&quot;&gt;只能有一个该指令，指定多个时，只有最后一个生效&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;VOLUME&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;创建一个可以从本地主机或其他容器挂载的挂载点，一般是&lt;code class=&quot;highlighter-rouge&quot;&gt;用来存放数据库和需要保持的数据等&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;USER&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;指定运行容器时用户名或UID，后续的RUN也会指定为该用户&lt;/p&gt;
-
-&lt;p&gt;格式: USER daemon&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WORKDIR&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;为后续的RUN，CMD，ENTRYPOINT执行配置工作路径&lt;/p&gt;
-
-&lt;p&gt;格式:WORKDIR /path/to/workdir&lt;/p&gt;
-
-&lt;p&gt;可以使用多个该指令，后续指令如果是相对路径，则会&lt;code class=&quot;highlighter-rouge&quot;&gt;基于之前的命令执行路径&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workdir /A
-workdir B
-RUN X
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;则最终的路径为:/A/B.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ONBUILD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;配置当前所创建的镜像作为其他新创建镜像的基础镜像，所执行的操作指令。&lt;/p&gt;
-
-&lt;p&gt;格式:ONBUILD [INSTRUCTION]&lt;/p&gt;
-
-&lt;p&gt;比如:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ONBUILD ADD . /app/src
-ONBUILD RUN /usr/local --dir /app/src
-....
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如果基于以上继续创建新镜像时，新的Dockerfile中使用的FROM指定以上为基础镜像，会自动执行ONBUILD指令内容，等价后面添加两条指令。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;LABLE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;STOPSIGNAL&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ONBUILD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;创建镜像&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;编写好Dockerfile，可以通过docker build来创建镜像&lt;/p&gt;
-
-&lt;p&gt;基本格式:docker buidl 选项 路径&lt;/p&gt;
-
-&lt;p&gt;该命令会自动读取指定路径(包含子目录)的Dockerfile，并将路径下的所有内容发送到docker服务器，创建镜像&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo docker build -t image_name /src/dockerfile_path
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Dockerfile for ELK stack
-# Elasticsearch 5.0.0, Logstash 5.0.0, Kibana 5.0.0
-
-# Build with:
-# docker build -t &amp;lt;repo-user&amp;gt;/elk .
-
-# Run with:
-# docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk &amp;lt;repo-user&amp;gt;/elk
-
-FROM phusion/baseimage
-MAINTAINER Sebastien Pujadas http://pujadas.net
-ENV REFRESHED_AT 2016-10-30
-
-###############################################################################
-#                                INSTALLATION
-###############################################################################
-
-### install prerequisites (cURL, gosu)
-
-ENV GOSU_VERSION 1.8
-
-RUN set -x \
- &amp;amp;&amp;amp; apt-get update -qq \
- &amp;amp;&amp;amp; apt-get install -qqy --no-install-recommends ca-certificates curl \
- &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/* \
- &amp;amp;&amp;amp; curl -L -o /usr/local/bin/gosu &quot;https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)&quot; \
- &amp;amp;&amp;amp; curl -L -o /usr/local/bin/gosu.asc &quot;https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc&quot; \
- &amp;amp;&amp;amp; export GNUPGHOME=&quot;$(mktemp -d)&quot; \
- &amp;amp;&amp;amp; gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
- &amp;amp;&amp;amp; gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
- &amp;amp;&amp;amp; rm -r &quot;$GNUPGHOME&quot; /usr/local/bin/gosu.asc \
- &amp;amp;&amp;amp; chmod +x /usr/local/bin/gosu \
- &amp;amp;&amp;amp; gosu nobody true \
- &amp;amp;&amp;amp; apt-get clean \
- &amp;amp;&amp;amp; set +x
-
-
-### install Elasticsearch
-
-ENV ES_VERSION 5.0.0
-ENV ES_GID 991
-ENV ES_UID 991
-
-RUN curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-RUN apt-get install apt-transport-https
-RUN echo deb https://artifacts.elastic.co/packages/5.x/apt stable main &amp;gt; /etc/apt/sources.list.d/elasticsearch-5.x.list
-
-RUN groupadd -r elasticsearch -g ${ES_GID} \
- &amp;amp;&amp;amp; useradd -r -s /usr/sbin/nologin -M -c &quot;Elasticsearch service user&quot; -u ${ES_UID} -g elasticsearch elasticsearch \
- &amp;amp;&amp;amp; apt-get update -qq \
- &amp;amp;&amp;amp; apt-get install -qqy \
-		elasticsearch \
-		openjdk-8-jdk \
- &amp;amp;&amp;amp; apt-get clean
-
-
-### install Logstash
-
-ENV LOGSTASH_VERSION 5.0.0
-ENV LOGSTASH_HOME /opt/logstash
-ENV LOGSTASH_PACKAGE logstash-${LOGSTASH_VERSION}.tar.gz
-ENV LOGSTASH_GID 992
-ENV LOGSTASH_UID 992
-
-RUN mkdir ${LOGSTASH_HOME} \
- &amp;amp;&amp;amp; curl -O https://artifacts.elastic.co/downloads/logstash/${LOGSTASH_PACKAGE} \
- &amp;amp;&amp;amp; tar xzf ${LOGSTASH_PACKAGE} -C ${LOGSTASH_HOME} --strip-components=1 \
- &amp;amp;&amp;amp; rm -f ${LOGSTASH_PACKAGE} \
- &amp;amp;&amp;amp; groupadd -r logstash -g ${LOGSTASH_GID} \
- &amp;amp;&amp;amp; useradd -r -s /usr/sbin/nologin -d ${LOGSTASH_HOME} -c &quot;Logstash service user&quot; -u ${LOGSTASH_UID} -g logstash logstash \
- &amp;amp;&amp;amp; mkdir -p /var/log/logstash /etc/logstash/conf.d \
- &amp;amp;&amp;amp; chown -R logstash:logstash ${LOGSTASH_HOME} /var/log/logstash
-
-ADD ./logstash-init /etc/init.d/logstash
-RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
- &amp;amp;&amp;amp; chmod +x /etc/init.d/logstash
-
-
-### install Kibana
-
-ENV KIBANA_VERSION 5.0.0
-ENV KIBANA_HOME /opt/kibana
-ENV KIBANA_PACKAGE kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz
-ENV KIBANA_GID 993
-ENV KIBANA_UID 993
-
-RUN mkdir ${KIBANA_HOME} \
- &amp;amp;&amp;amp; curl -O https://artifacts.elastic.co/downloads/kibana/${KIBANA_PACKAGE} \
- &amp;amp;&amp;amp; tar xzf ${KIBANA_PACKAGE} -C ${KIBANA_HOME} --strip-components=1 \
- &amp;amp;&amp;amp; rm -f ${KIBANA_PACKAGE} \
- &amp;amp;&amp;amp; groupadd -r kibana -g ${KIBANA_GID} \
- &amp;amp;&amp;amp; useradd -r -s /usr/sbin/nologin -d ${KIBANA_HOME} -c &quot;Kibana service user&quot; -u ${KIBANA_UID} -g kibana kibana \
- &amp;amp;&amp;amp; mkdir -p /var/log/kibana \
- &amp;amp;&amp;amp; chown -R kibana:kibana ${KIBANA_HOME} /var/log/kibana
-
-ADD ./kibana-init /etc/init.d/kibana
-ADD ./kibana.yml ${KIBANA_HOME}/config/kibana.yml
-
-RUN sed -i -e 's#^KIBANA_HOME=$#KIBANA_HOME='$KIBANA_HOME'#' /etc/init.d/kibana \
- &amp;amp;&amp;amp; chmod +x /etc/init.d/kibana
-
-
-###############################################################################
-#                               CONFIGURATION
-###############################################################################
-
-### configure Elasticsearch
-
-ADD ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
-
-
-### configure Logstash
-
-# certs/keys for Beats and Lumberjack input
-RUN mkdir -p /etc/pki/tls/certs &amp;amp;&amp;amp; mkdir /etc/pki/tls/private
-ADD ./logstash-beats.crt /etc/pki/tls/certs/logstash-beats.crt
-ADD ./logstash-beats.key /etc/pki/tls/private/logstash-beats.key
-
-# filters
-ADD ./02-beats-input.conf /etc/logstash/conf.d/02-beats-input.conf
-ADD ./10-syslog.conf /etc/logstash/conf.d/10-syslog.conf
-ADD ./11-nginx.conf /etc/logstash/conf.d/11-nginx.conf
-ADD ./30-output.conf /etc/logstash/conf.d/30-output.conf
-
-# patterns
-ADD ./nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
-RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
-
-
-### configure logrotate
-
-ADD ./elasticsearch-logrotate /etc/logrotate.d/elasticsearch
-ADD ./logstash-logrotate /etc/logrotate.d/logstash
-ADD ./kibana-logrotate /etc/logrotate.d/kibana
-RUN chmod 644 /etc/logrotate.d/elasticsearch \
- &amp;amp;&amp;amp; chmod 644 /etc/logrotate.d/logstash \
- &amp;amp;&amp;amp; chmod 644 /etc/logrotate.d/kibana
-
-
-###############################################################################
-#                                   START
-###############################################################################
-
-ADD ./start.sh /usr/local/bin/start.sh
-RUN chmod +x /usr/local/bin/start.sh
-
-EXPOSE 5601 9200 9300 5044
-VOLUME /var/lib/elasticsearch
-
-CMD [ &quot;/usr/local/bin/start.sh&quot; ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Repository busybox already being pulled by another client. Waiting.&lt;/p&gt;
-
-    &lt;p&gt;restart the docker : service docker restart&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/docker/2016/10/24/Docker</link>
-                <guid>http://lkkandsyf.github.io/docker/2016/10/24/Docker</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Out Of Wall</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;这里整理了两个常用的翻墙软件.&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu-lantern-deb-packege&quot; id=&quot;markdown-toc-ubuntu-lantern-deb-packege&quot;&gt;ubuntu lantern deb packege&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu-xx-net&quot; id=&quot;markdown-toc-ubuntu-xx-net&quot;&gt;ubuntu XX-net&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#shadowsock&quot; id=&quot;markdown-toc-shadowsock&quot;&gt;shadowsock&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ubuntu-lantern-deb-packege&quot;&gt;ubuntu lantern deb packege&lt;/h2&gt;
-
-&lt;p&gt;这个就是一个简单的安装包，安装完成打开就可以使用了。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/getlantern/lantern&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ubuntu-xx-net&quot;&gt;ubuntu XX-net&lt;/h2&gt;
-
-&lt;p&gt;这个软件，需要装一些插件，就可以使用了，也是十分的方便。&lt;/p&gt;
-
-&lt;p&gt;首先，把这个软件下载下来。 然后安装插件就可以使用了。&lt;/p&gt;
-
-&lt;p&gt;推荐使用&lt;code class=&quot;highlighter-rouge&quot;&gt;谷歌浏览器&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;install-xx-net.sh:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libnss3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tools&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gtk2&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libffi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appindicator&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gtk2&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libnss3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tools&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/XX-net/XX-Net/wiki/%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8-SwitchyOmega&quot;&gt;安装插件&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;进入到xx-net 目录中，sudo ./start 就可以使用了。但是还是推荐部署自己的appid。速度会快一些。&lt;/p&gt;
-
-&lt;p&gt;AppID:myappid-227&lt;/p&gt;
-
-&lt;p&gt;web:http://127.0.0.1:8085/?module=gae_proxy&amp;amp;menu=status&lt;/p&gt;
-
-&lt;p&gt;web:http://127.0.0.1:8085/&lt;/p&gt;
-
-&lt;h2 id=&quot;shadowsock&quot;&gt;shadowsock&lt;/h2&gt;
-
-&lt;p&gt;添加源&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:hzwhuang/ss-qt5
-#install
-sudo apt-get update
-sudo apt-get install shadowsocks-qt5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;ok。&lt;/p&gt;
-
-&lt;p&gt;免费账号：
-&lt;a href=&quot;http://freessr.top/&quot;&gt;free-one&lt;/a&gt;
-&lt;a href=&quot;http://freevpnss.cc/&quot;&gt;free-two&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</link>
-                <guid>http://lkkandsyf.github.io/tools/2016/10/21/out-of-wall</guid>
-                <pubDate>Fri, 21 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
 
