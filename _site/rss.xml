@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 04 Jan 2017 22:35:06 +0800</lastBuildDate>
-        <pubDate>Wed, 04 Jan 2017 22:35:06 +0800</pubDate>
+        <lastBuildDate>Fri, 06 Jan 2017 04:27:51 +0000</lastBuildDate>
+        <pubDate>Fri, 06 Jan 2017 04:27:51 +0000</pubDate>
         <ttl>60</ttl>
 
 
@@ -41,7 +41,7 @@
 </description>
                 <link>http://lkkandsyf.github.io/holes/2017/01/04/holes</link>
                 <guid>http://lkkandsyf.github.io/holes/2017/01/04/holes</guid>
-                <pubDate>Wed, 04 Jan 2017 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -82,7 +82,7 @@ cat out/*
 </description>
                 <link>http://lkkandsyf.github.io/2017/01/03/Hadoop</link>
                 <guid>http://lkkandsyf.github.io/2017/01/03/Hadoop</guid>
-                <pubDate>Tue, 03 Jan 2017 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -124,7 +124,7 @@ cat out/*
 </description>
                 <link>http://lkkandsyf.github.io/ide/2016/12/30/idea</link>
                 <guid>http://lkkandsyf.github.io/ide/2016/12/30/idea</guid>
-                <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -369,7 +369,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -523,11 +523,24 @@ jdb -attach 1044
 
 &lt;h3 id=&quot;section-8&quot;&gt;集合&lt;/h3&gt;
 
+&lt;p&gt;集合的使用&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//导入包&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&quot;section-9&quot;&gt;树&lt;/h3&gt;
 
 &lt;h3 id=&quot;section-10&quot;&gt;图&lt;/h3&gt;
 
 &lt;h3 id=&quot;section-11&quot;&gt;哈希映射&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;HashSet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-12&quot;&gt;#&lt;/h2&gt;
 
@@ -580,7 +593,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1053,7 +1066,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1187,7 +1200,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1288,7 +1301,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1468,7 +1481,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1488,7 +1501,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1524,7 +1537,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1547,7 +1560,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2655,7 +2668,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2754,7 +2767,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/vim/2016/11/24/Vim</link>
                 <guid>http://lkkandsyf.github.io/vim/2016/11/24/Vim</guid>
-                <pubDate>Thu, 24 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -2786,7 +2799,7 @@ change it by
 </description>
                 <link>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</link>
                 <guid>http://lkkandsyf.github.io/markdown/2016/11/21/markdown</guid>
-                <pubDate>Mon, 21 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -5944,7 +5957,7 @@ u ，Move the current frame one level up in the stack trace
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6172,7 +6185,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6188,7 +6201,7 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 </description>
                 <link>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</guid>
-                <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -6240,7 +6253,7 @@ sudo apt-get autoremove ntop	// 只下载这个软件
 </description>
                 <link>http://lkkandsyf.github.io/package/2016/10/25/nDPI</link>
                 <guid>http://lkkandsyf.github.io/package/2016/10/25/nDPI</guid>
-                <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -7039,7 +7052,7 @@ dockoey/jupyter-scala
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
-                <pubDate>Mon, 24 Oct 2016 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
         </item>
 
 
