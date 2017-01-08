@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-01-08T19:37:16+08:00</updated>
+ <updated>2017-01-08T19:39:11+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -528,11 +528,24 @@ jdb -attach 1044
 
 &lt;h3 id=&quot;section-8&quot;&gt;集合&lt;/h3&gt;
 
+&lt;p&gt;集合的使用&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//导入包&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&quot;section-9&quot;&gt;树&lt;/h3&gt;
 
 &lt;h3 id=&quot;section-10&quot;&gt;图&lt;/h3&gt;
 
 &lt;h3 id=&quot;section-11&quot;&gt;哈希映射&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;HashSet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-12&quot;&gt;#&lt;/h2&gt;
 
