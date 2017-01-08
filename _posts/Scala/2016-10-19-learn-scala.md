@@ -1186,3 +1186,23 @@ example:
 	axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.txz
 	axel -n 10 http://downloads.typesafe.com/scala/2.11.8/scala-docs-2.11.8.zip
 
+
+### learn web
+
+[https://github.com/tanacasino/learning-scala](https://github.com/tanacasino/learning-scala)
+
+[https://github.com/elephantscale/learning-scala](https://github.com/elephantscale/learning-scala)
+
+[https://github.com/yusugomori/DeepLearning](https://github.com/yusugomori/DeepLearning)
+
+[https://github.com/deanwampler/prog-scala-2nd-ed-code-examples](https://github.com/deanwampler/prog-scala-2nd-ed-code-examples)
+
+[https://github.com/scala-exercises/scala-exercises](https://github.com/scala-exercises/scala-exercises)
+
+[https://github.com/renchunxiao/scala-learn](https://github.com/renchunxiao/scala-learn)
+
+[https://github.com/TheAlgorithms/Scala](https://github.com/TheAlgorithms/Scala)
+
+[https://github.com/twitter/scala_school](https://github.com/twitter/scala_school)
+
+[https://github.com/bwwinthehouse/learning_scala](https://github.com/bwwinthehouse/learning_scala)

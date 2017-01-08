@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 08 Jan 2017 19:39:11 +0800</lastBuildDate>
-        <pubDate>Sun, 08 Jan 2017 19:39:11 +0800</pubDate>
+        <lastBuildDate>Sun, 08 Jan 2017 22:16:53 +0800</lastBuildDate>
+        <pubDate>Sun, 08 Jan 2017 22:16:53 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -6182,6 +6182,10 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 &lt;p&gt;&lt;a href=&quot;http://wiki.jikexueyuan.com/project/sbt-getting-started/&quot;&gt;reference&lt;/a&gt;
 &lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/Getting-Started.html&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://github.com/fommil/sbt-sensible&quot;&gt;https://github.com/fommil/sbt-sensible&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mpeltonen/sbt-idea&quot;&gt;https://github.com/mpeltonen/sbt-idea&lt;/a&gt;&lt;/p&gt;
+
 </description>
                 <link>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</link>
                 <guid>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</guid>
@@ -7043,12 +7047,33 @@ dockoey/jupyter-scala
 
 &lt;h2 id=&quot;spark-e-book-1&quot;&gt;spark-e-book&lt;/h2&gt;
 
-&lt;p&gt;这里介绍一些网上比较好的电子书&lt;/p&gt;
+&lt;p&gt;这里介绍一些网上比较好的电子书,网站&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://taiwansparkusergroup.gitbooks.io/spark-programming-guide-zh-tw/content/&quot;&gt;Spark programming guide zh&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;a href=&quot;https://github.com/databricks/learning-spark&quot;&gt;https://github.com/databricks/learning-spark&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/SeikaScarlet/Learning-Spark_zh&quot;&gt;https://github.com/SeikaScarlet/Learning-Spark_zh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jayunit100/SparkStreamingApps&quot;&gt;https://github.com/jayunit100/SparkStreamingApps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/andypetrella/spark-notebook&quot;&gt;https://github.com/andypetrella/spark-notebook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/prabeesh/SparkTwitterAnalysis&quot;&gt;https://github.com/prabeesh/SparkTwitterAnalysis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ruoyousi/spark-streaming-examples&quot;&gt;https://github.com/ruoyousi/spark-streaming-examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/aaronp/multi-project&quot;&gt;https://github.com/aaronp/multi-project&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adnanalvee/Spark-Scala-Sbt-Template&quot;&gt;https://github.com/adnanalvee/Spark-Scala-Sbt-Template&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mrchristine/spark-template-sbt&quot;&gt;https://github.com/mrchristine/spark-template-sbt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/notyy/scalaSnippet&quot;&gt;https://github.com/notyy/scalaSnippet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/spirom/LearningSpark&quot;&gt;https://github.com/spirom/LearningSpark&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</link>
                 <guid>http://lkkandsyf.github.io/big-data/2016/10/24/Spark</guid>
