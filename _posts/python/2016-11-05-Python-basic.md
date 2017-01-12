@@ -2998,3 +2998,17 @@ ipdb是pdb的交互式debug,ipdb debug.py 直接对程序进行调试
 ### paramiko lib
 
 与远程服务器通信的python库
+
+### pygrok
+
+pygrok:这是一个开源的字符串解析库,[github](https://github.com/garyelephant/pygrok)
+
+它可以用来解析字符串形式的log,event等。将字符串中有用的信息提取出来。这个字符串解析库支持正则表达式匹配，它提供了众多预定的字符串匹配模式，既有正则表达式的匹配能力，又有简单的易用性。pygrok底层也是利用正则表达式实现的。
+
+demo:README.md
+
+```python
+
+
+
+```
