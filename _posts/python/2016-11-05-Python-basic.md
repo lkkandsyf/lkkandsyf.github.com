@@ -3012,3 +3012,54 @@ demo:README.md
 
 
 ```
+
+### 项目文件
+
+项目结构:写一个关于python的项目，就必须知道整个项目的具体结构安排
+
+```
+readme.md和setup.py和requirements.txt放在根目录下
+一个项目至少有3个子目录, docs目录, root package 和tests package
+的python代码要放在一个package中, 而不是一般的src目录中.
+tox 测试工具大家都在用.
+用pytest和nose单元测试工具比较多, 尤其是pytest
+```
+详细:[https://github.com/audreyr/cookiecutter](https://github.com/audreyr/cookiecutter)
+
+练习:
+[https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/](https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/)
+
+对于引用另一个python文件
+
+同一个目录下:
+
+```python
+import module_a
+module_a.func()
+
+or:
+import module_a
+from module_a import func
+func()
+
+```
+
+不在同一个目录:不在同一个目录，pythno查找不到，必须进行查找的设置，将模块所在的文件夹加入系统查找路径
+
+```python
+import sys
+sys.path.append('xxx.py所在的路径')
+
+import xxxx
+xxxx.func()
+
+```
+
+
+
+
+### ipdb debug python
+
+用ipdb开始调试程序
+
+ipdb python.py

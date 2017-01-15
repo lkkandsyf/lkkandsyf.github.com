@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 15 Jan 2017 14:37:24 +0800</lastBuildDate>
-        <pubDate>Sun, 15 Jan 2017 14:37:24 +0800</pubDate>
+        <lastBuildDate>Sun, 15 Jan 2017 22:32:35 +0800</lastBuildDate>
+        <pubDate>Sun, 15 Jan 2017 22:32:35 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -2838,6 +2838,8 @@ change it by
       &lt;li&gt;&lt;a href=&quot;#ipdb&quot; id=&quot;markdown-toc-ipdb&quot;&gt;ipdb&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#paramiko-lib&quot; id=&quot;markdown-toc-paramiko-lib&quot;&gt;paramiko lib&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#pygrok&quot; id=&quot;markdown-toc-pygrok&quot;&gt;pygrok&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;项目文件&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ipdb-debug-python&quot; id=&quot;markdown-toc-ipdb-debug-python&quot;&gt;ipdb debug python&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -5974,6 +5976,54 @@ u ，Move the current frame one level up in the stack trace
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;section-9&quot;&gt;项目文件&lt;/h3&gt;
+
+&lt;p&gt;项目结构:写一个关于python的项目，就必须知道整个项目的具体结构安排&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;readme.md和setup.py和requirements.txt放在根目录下
+一个项目至少有3个子目录, docs目录, root package 和tests package
+的python代码要放在一个package中, 而不是一般的src目录中.
+tox 测试工具大家都在用.
+用pytest和nose单元测试工具比较多, 尤其是pytest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;详细:&lt;a href=&quot;https://github.com/audreyr/cookiecutter&quot;&gt;https://github.com/audreyr/cookiecutter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;练习:
+&lt;a href=&quot;https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/&quot;&gt;https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;对于引用另一个python文件&lt;/p&gt;
+
+&lt;p&gt;同一个目录下:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;module_a&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;module_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;module_a&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;module_a&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;不在同一个目录:不在同一个目录，pythno查找不到，必须进行查找的设置，将模块所在的文件夹加入系统查找路径&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'xxx.py所在的路径'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;xxxx&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;ipdb-debug-python&quot;&gt;ipdb debug python&lt;/h3&gt;
+
+&lt;p&gt;用ipdb开始调试程序&lt;/p&gt;
+
+&lt;p&gt;ipdb python.py&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</link>
                 <guid>http://lkkandsyf.github.io/python/2016/11/05/Python-basic</guid>
