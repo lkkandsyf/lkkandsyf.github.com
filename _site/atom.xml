@@ -4,13 +4,26 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-01-19T22:11:46+08:00</updated>
+ <updated>2017-02-12T23:11:24+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Music</title>
+   <link href="http://lkkandsyf.github.io/music/2017/02/12/Music"/>
+   <updated>2017-02-12T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/music/2017/02/12/Music</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://tv.cctv.com/2017/02/04/VIDEp4DJYg5JPjM09fAhitlK170204.shtml&quot;&gt;2017俄罗斯蓝光之夜音乐会&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Idea</title>
@@ -6347,58 +6360,6 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Ndpi</title>
-   <link href="http://lkkandsyf.github.io/package/2016/10/25/nDPI"/>
-   <updated>2016-10-25T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/package/2016/10/25/nDPI</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;这里介绍了nDPI开源深度包检测安装和使用。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu-ndpi&quot; id=&quot;markdown-toc-ubuntu-ndpi&quot;&gt;安装(Ubuntu nDPI)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;使用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu-ntop&quot; id=&quot;markdown-toc-ubuntu-ntop&quot;&gt;安装(Ubuntu ntop)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ubuntu-ndpi&quot;&gt;安装(Ubuntu nDPI)&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;suduo apt-get install autoconf libcap-dev build-essential
-./autogen.sh
-./configure
-make
-make check
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;使用&lt;/h2&gt;
-
-&lt;p&gt;在这里我们可以按照doc目录下的pdf文档，开始进行操纵。进一步对nDPI的了解。&lt;/p&gt;
-
-&lt;h2 id=&quot;ubuntu-ntop&quot;&gt;安装(Ubuntu ntop)&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ntop
-
-sudo /etc/init.d/ntop start
-sudo net -tulpn | grep 3000		// 输出监听的端口
-sudo apt-get autoremove ntop	// 只下载这个软件
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这里需要创建一些东西，例如，端口，密码，端口默认是3000.密码自己设置。&lt;/p&gt;
-
-&lt;p&gt;打开浏览器，输入localhost:3000&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.maketecheasier.com/install-configure-ntop/&quot;&gt;界面显示&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mbrownnyc.wordpress.com/2011/12/19/install-configure-and-use-ntop-to-monitor-traffic/&quot;&gt;usage&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;section-1&quot;&gt;#&lt;/h1&gt;
 </content>
  </entry>
  
