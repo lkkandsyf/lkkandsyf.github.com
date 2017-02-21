@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/javaerror/2017/02/17/Java-Scala-Error-Collect</loc>
+<lastmod>2017-02-17T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/opensource/2017/02/17/Open-Source-Project-Learning-Experience</loc>
+<lastmod>2017-02-17T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>/music/2017/02/12/Music</loc>
 <lastmod>2017-02-12T00:00:00+08:00</lastmod>
 </url>
@@ -15,10 +23,6 @@
 <url>
 <loc>/2017/01/03/Hadoop</loc>
 <lastmod>2017-01-03T00:00:00+08:00</lastmod>
-</url>
-<url>
-<loc>/ide/2016/12/30/idea</loc>
-<lastmod>2016-12-30T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>/debug/2016/12/25/jdb</loc>

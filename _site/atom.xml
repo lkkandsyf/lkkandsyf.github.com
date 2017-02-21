@@ -4,13 +4,122 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-02-12T23:11:24+08:00</updated>
+ <updated>2017-02-21T22:18:20+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Java Scala Error Collect</title>
+   <link href="http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect"/>
+   <updated>2017-02-17T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;这里整理自己学习Java过程中遇到的一些问题，简单记录下来，方便以后查看。&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;编译错误&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;编译错误&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;P1&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13170860/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-10test&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Update the Maven project:&lt;/p&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.Right-click on &quot;project&quot;
+2.Go to &quot;Maven&quot; &amp;gt;&amp;gt; &quot;Update&quot;
+3.Wait for all the changes to be applied
+4.Commit the changes (if code is on repo)
+5.Run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;or:&lt;/p&gt;
+
+&lt;p&gt;In my application, certain unit tests were not compatible with Java 8 so they were failing. The build would succeed with &lt;code class=&quot;highlighter-rouge&quot;&gt;mvn clean install -DskipTests &lt;/code&gt;but it is not recommended to skip the unit test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;P2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;NoClassDefFoundError: scala/collection/Seq
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/33885339/noclassdeffounderror-scala-collection-seq&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;It happened because my java code was build with Scala, but at runtime scala library wasn’t available. &lt;code class=&quot;highlighter-rouge&quot;&gt;Added scala-library.jar to classpath'&lt;/code&gt;, that &lt;a href=&quot;http://zyjustin9.iteye.com/blog/2172445&quot;&gt;resolved it&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Open Source Project Learning Experience</title>
+   <link href="http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience"/>
+   <updated>2017-02-17T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;这里收集了关于学习开源项目的一些坎坷，以及收获。&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#springside4&quot; id=&quot;markdown-toc-springside4&quot;&gt;springside4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#crapapi&quot; id=&quot;markdown-toc-crapapi&quot;&gt;CrapApi&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#blade&quot; id=&quot;markdown-toc-blade&quot;&gt;blade&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#java-bible&quot; id=&quot;markdown-toc-java-bible&quot;&gt;java-bible&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#pygrok&quot; id=&quot;markdown-toc-pygrok&quot;&gt;pygrok&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cc&quot; id=&quot;markdown-toc-cc&quot;&gt;&lt;strong&gt;C++/C&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#opencv&quot; id=&quot;markdown-toc-opencv&quot;&gt;OpenCV&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;java&quot;&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;springside4&quot;&gt;springside4&lt;/h3&gt;
+
+&lt;p&gt;A Spring Framework based, pragmatic style JavaEE application reference architecture.
+&lt;a href=&quot;https://github.com/springside/springside4&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;crapapi&quot;&gt;CrapApi&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://api.crap.cn/index.do#/web/article/detail/web/PAGE/WELCOME&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;blade&quot;&gt;blade&lt;/h3&gt;
+
+&lt;p&gt;A Simple, Elegant Java Web Framework! website, &lt;a href=&quot;https://github.com/biezhi/blade&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;use blade framework bbs web application:&lt;a href=&quot;https://github.com/junicorn/java-china&quot;&gt;java-china&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;java-bible&quot;&gt;java-bible&lt;/h3&gt;
+
+&lt;p&gt;Java Bible is my java technology stack,&lt;a href=&quot;https://github.com/biezhi/java-bible&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;pygrok&quot;&gt;pygrok&lt;/h3&gt;
+
+&lt;h2 id=&quot;cc&quot;&gt;&lt;strong&gt;C++/C&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;opencv&quot;&gt;OpenCV&lt;/h3&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Music</title>
@@ -33,11 +142,12 @@
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
-&lt;p&gt;介绍关于java IDE的使用技巧(IDEA)&lt;/p&gt;
+&lt;p&gt;开发Scala,Java项目，需要一个好的IDE，idea是一个比较好的开发环境，熟练使用，对自己也是大有帮助。介绍关于java IDE的使用技巧(IDEA)&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#plugins&quot; id=&quot;markdown-toc-plugins&quot;&gt;Plugins&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#quick-shortcut-key&quot; id=&quot;markdown-toc-quick-shortcut-key&quot;&gt;quick shortcut key&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
@@ -92,6 +202,69 @@
 &lt;p&gt;Shift + F10 :编译并运行&lt;/p&gt;
 
 &lt;p&gt;Shift + F9 :进入debug mode&lt;/p&gt;
+
+&lt;p&gt;Ctrl + / :注释单行代码&lt;/p&gt;
+
+&lt;p&gt;Ctrl + Shitf + /:注释块代码(首先要选中)&lt;/p&gt;
+
+&lt;p&gt;添加统一的文件头注释:settings-&amp;gt;Editor-&amp;gt;File and Code Templates,在include的标签页中填写自己需要的头注释。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
+ * File:	${NAME}.java
+ * User:	Liangkangkang
+ * Date:	${DATE}
+ * Time:	${TIME}
+ * Mail:	lkkforworl@gmail.com
+ * Desc:
+ */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;更好的plugins:JavaDoc&lt;/p&gt;
+
+&lt;p&gt;常用的注释标签:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@author 作者
+@version 版本
+@see 参考转向
+@param 参数说明
+@return 返回值
+@exception　异常
+@since jdk　版本
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用JavaDoc:在Vim浏览模式中，选中之后，按Alt+Insert,选中对应的操作。&lt;/p&gt;
+
+&lt;p&gt;生成Doc:Tools-&amp;gt;Generate JavaDoc,在弹出的输出各种信息，注意避免乱码的情况:在Other command line arguments上填写:-encoding utf-8 -charset utf-8&lt;/p&gt;
+
+&lt;p&gt;Alt + insert:新建class的各种方法&lt;/p&gt;
+
+&lt;h2 id=&quot;debug&quot;&gt;debug&lt;/h2&gt;
+
+&lt;p&gt;一些基本的操作&lt;/p&gt;
+
+&lt;p&gt;设置断点：通过鼠标在行号的左边，点击，就ok了，再次点击就取消&lt;/p&gt;
+
+&lt;p&gt;next：F8	#运行一行代码&lt;/p&gt;
+
+&lt;p&gt;step: F7	#如果碰到函数，就进入&lt;/p&gt;
+
+&lt;p&gt;强制进入代码:Alt + Shift + F7&lt;/p&gt;
+
+&lt;p&gt;continue step out:Shift + F8&lt;/p&gt;
+
+&lt;p&gt;运行到光标出:Alt + F9&lt;/p&gt;
+
+&lt;p&gt;恢复程序:F9&lt;/p&gt;
+
+&lt;p&gt;显示执行哪一个断点:Alt + F10&lt;/p&gt;
+
+&lt;p&gt;debug 运行Java类，Ctrl + Shift + F9&lt;/p&gt;
+
+&lt;p&gt;正常运行Java来:Ctrl + Shift + F10&lt;/p&gt;
+
+&lt;p&gt;程序中的输出在Console显示。&lt;/p&gt;
 </content>
  </entry>
  
@@ -167,48 +340,6 @@ cat out/*
 
 &lt;p&gt;&lt;a href=&quot;http://www.powerxing.com/install-hadoop/&quot;&gt;powerxing&lt;/a&gt;&lt;/p&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>Idea</title>
-   <link href="http://lkkandsyf.github.io/ide/2016/12/30/idea"/>
-   <updated>2016-12-30T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/ide/2016/12/30/idea</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;开发Scala,Java项目，需要一个好的IDE，idea是一个比较好的开发环境，熟练使用，对自己也是大有帮助。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;debug&quot;&gt;debug&lt;/h2&gt;
-
-&lt;p&gt;一些基本的操作&lt;/p&gt;
-
-&lt;p&gt;设置断点：通过鼠标在行号的左边，点击，就ok了，再次点击就取消&lt;/p&gt;
-
-&lt;p&gt;next：F8	#运行一行代码&lt;/p&gt;
-
-&lt;p&gt;step: F7	#如果碰到函数，就进入&lt;/p&gt;
-
-&lt;p&gt;强制进入代码:Alt + Shift + F7&lt;/p&gt;
-
-&lt;p&gt;continue step out:Shift + F8&lt;/p&gt;
-
-&lt;p&gt;运行到光标出:Alt + F9&lt;/p&gt;
-
-&lt;p&gt;恢复程序:F9&lt;/p&gt;
-
-&lt;p&gt;显示执行哪一个断点:Alt + F10&lt;/p&gt;
-
-&lt;p&gt;debug 运行Java类，Ctrl + Shift + F9&lt;/p&gt;
-
-&lt;p&gt;正常运行Java来:Ctrl + Shift + F10&lt;/p&gt;
-
-&lt;p&gt;程序中的输出在Console显示。&lt;/p&gt;
 </content>
  </entry>
  
@@ -6344,22 +6475,6 @@ ideaExcludeFolders += &quot;.idea_modules&quot;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/mpeltonen/sbt-idea&quot;&gt;https://github.com/mpeltonen/sbt-idea&lt;/a&gt;&lt;/p&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>Scikit Learn</title>
-   <link href="http://lkkandsyf.github.io/2016/11/05/Scikit-learn"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/2016/11/05/Scikit-learn</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
 </content>
  </entry>
  

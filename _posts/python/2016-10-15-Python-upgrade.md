@@ -74,7 +74,6 @@ sudo ./Anaconda.sh
 再安装其他的包
 sudo sh install-python-package.sh
 
-install-python-install.sh:
 /usr/bin/bash
 for req in $(cat requirements.txt); do pip install $req; done
 

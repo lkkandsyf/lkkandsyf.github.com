@@ -25,11 +25,18 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 + [cnblog](http://www.cnblogs.com/lkkandsyf)
 + [oschina](https://my.oschina.net/liangkangkang)
++ [51cto](http://home.51cto.com/space?uid=9004348)
 
 **Code Repo**
 
 + [github](http://lkkandsyf.github.com)
 + [oschina](http://git.oschina.net/lkk_gczx)
+
+**QA**
+
+ + [idea](https://samebug.io/)
+ + [stackoverflow](http://stackoverflow.com/)
+
 
 **Docker**
 
@@ -73,6 +80,21 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 #ubuntu-cn
 #apache-kakfa
 ```
+
+**'Professional Web'**
+
+[google](http:google.com)
+
+[freebuf](http://www.freebuf.com/)
+
+[evil0x](http://www.evil0x.com/)
+
+[eviloctal](https://forum.eviloctal.com/)
+
+[evilbinary](http://evilbinary.org/)
+
+[kanxue](http://www.kanxue.com/)
+
 
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
