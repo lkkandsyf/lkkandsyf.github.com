@@ -95,6 +95,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 [kanxue](http://www.kanxue.com/)
 
+[https://jaq.alibaba.com/](https://jaq.alibaba.com/)
 
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)

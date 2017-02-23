@@ -260,9 +260,9 @@ touch Dockfile
 <p>保存镜像</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo docker images			#镜像列表
-sudo docker save -o xxxx.jar 要保存的镜像		#保存镜像为文件
+sudo docker save -o xxxx.jar 要保存的镜像id		#保存镜像为文件
 sudo docker mirrorId &gt; path/xxx.tar
-sudo docker save ubuntu.tar repo/ubuntu
+sudo docker save -o ubuntu.tar repo/ubuntu
 #完成之后用ls查看
 </code></pre>
 </div>

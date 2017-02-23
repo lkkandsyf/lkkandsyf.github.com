@@ -4,13 +4,31 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-02-21T22:18:20+08:00</updated>
+ <updated>2017-02-23T14:44:11+08:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Dl4j</title>
+   <link href="http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J"/>
+   <updated>2017-02-22T00:00:00+08:00</updated>
+   <id>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://deeplearning4j.org/&quot;&gt;DL4J&lt;/a&gt;这是Java写的深度学习库。&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Java Scala Error Collect</title>
@@ -148,6 +166,7 @@
   &lt;li&gt;&lt;a href=&quot;#plugins&quot; id=&quot;markdown-toc-plugins&quot;&gt;Plugins&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#quick-shortcut-key&quot; id=&quot;markdown-toc-quick-shortcut-key&quot;&gt;quick shortcut key&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#more-project-merge&quot; id=&quot;markdown-toc-more-project-merge&quot;&gt;more project merge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
@@ -265,6 +284,18 @@
 &lt;p&gt;正常运行Java来:Ctrl + Shift + F10&lt;/p&gt;
 
 &lt;p&gt;程序中的输出在Console显示。&lt;/p&gt;
+
+&lt;h2 id=&quot;more-project-merge&quot;&gt;more project merge&lt;/h2&gt;
+
+&lt;p&gt;我们做项目实际中经常会遇到这样的情况，创建一个common项目（Maven项目）作为公用项目，common中有很多工具类可以供其它多个项目调用。例如，把common、service都单独拆开成独立的Maven项目，供其它的项目使用，通过jar的方式被其它项目通过Maven引用。现在web项目需要引用common和service，如果IDEA分别单独打开common、service、web项目，那么在调试web项目的时候，就会遇到困难：web引用的common和service中的代码都是打包成jar的，无法调试。除非common和service安装的时候把源码也install到本地仓库，但是那样不方便，每次common和service更新都需要maven install操作后，web中引用的代码才会更新。&lt;/p&gt;
+
+&lt;p&gt;当我们多人协作时，会创建不同的项目，但是项目之间还有依赖。所以我们必须把所有的项目弄到一起，合并起来相互依赖，就可以了。&lt;/p&gt;
+
+&lt;p&gt;IDEA解决方案:首先，把所需要的项目，从svn上下载本地同一个目录下，然后，在IDEA中File-&amp;gt;Open选择刚刚的目录，打开之后发现IDEA没有自动识别Maven项目，这时候在IDEA右侧的Maven Project栏添加项目的pom.xml文件，这样就可以识别了，按住Ctrl多选每个项目中的pom.xml，然后点击OK,这样就可以调试了，&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306462&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nginx+Tomcat7+Mencached负载均衡集群部署笔记&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306494&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -6243,238 +6274,6 @@ tox 测试工具大家都在用.
 &lt;p&gt;用ipdb开始调试程序&lt;/p&gt;
 
 &lt;p&gt;ipdb python.py&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Sbt Debug</title>
-   <link href="http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug"/>
-   <updated>2016-11-05T00:00:00+08:00</updated>
-   <id>http://lkkandsyf.github.io/scala/2016/11/05/sbt-debug</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#sbt&quot; id=&quot;markdown-toc-sbt&quot;&gt;sbt&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#installation&quot; id=&quot;markdown-toc-installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#create-a-project&quot; id=&quot;markdown-toc-create-a-project&quot;&gt;Create a project&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#plugin-configure&quot; id=&quot;markdown-toc-plugin-configure&quot;&gt;plugin configure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jar&quot; id=&quot;markdown-toc-jar&quot;&gt;jar&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;仓库&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#sbt-1&quot; id=&quot;markdown-toc-sbt-1&quot;&gt;sbt总结&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sbt&quot;&gt;sbt&lt;/h2&gt;
-
-&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sbt:当你启动sbt命令时，假设不指定任何&lt;code class=&quot;highlighter-rouge&quot;&gt;任务&lt;/code&gt;，SBT将启动一个&lt;code class=&quot;highlighter-rouge&quot;&gt;交互式REPL（REPL是 Read，Eval，Print，Loop的简写&lt;/code&gt;，代表了“读取-求值-打印-循环”）。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;运行sbt命令；&amp;gt;时SBT默认的交互式提示符，可以在#符号后编写sbt注释&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sbt
-&amp;gt;help				# 描述命令
-&amp;gt;tasks				# 显示最常用的，当前可用的任务
-&amp;gt;tasks -V			# 显示所有的可用任务
-&amp;gt;compile			# 增量编译代码
-&amp;gt;test				# 增量编译代码，并执行测试
-&amp;gt;clean				# 删除所有已经编译好的构建
-&amp;gt;~test				# 一旦有文件保存，执行增量编译并运行测试
-				# 适用于任何使用了～前缀的命令
-&amp;gt;console			# 运行Scala REPL
-&amp;gt;run				# 执行项目的某一程序
-&amp;gt;show x				# 显示变量X的定义
-&amp;gt;eclipse			# 生成Eclipse项目文件
-&amp;gt;exit				# 退出REPL(也可以通过ctrl+d的方式退出)
-&amp;gt;stylecheck			# 运行样式检查器
-&amp;gt;reload				# 重新加载构建定义（build.sbt， project/*.scala， project/*.sbt
-					# 这些文件中定义的内容)。在修改了构建定义文件之后需要重新加载
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;为了能编译更新后的代码并运行对应测试，我通常会执行~test命令。SBT使用了&lt;code class=&quot;highlighter-rouge&quot;&gt;增量的编译器和测试执行器&lt;/code&gt;，因此每次执行是不用等待完全构建所需时间。假如你&lt;code class=&quot;highlighter-rouge&quot;&gt;希望执行其他任务或者退出sbt&lt;/code&gt;，只需要&lt;code class=&quot;highlighter-rouge&quot;&gt;按一下回车即可&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;使用Scala REPL能有效地对你编写的代码进行试验，也可以通过REPL来学习API，即便是JAVA API也是一样。在SBT上使用console任务执行代码时，console任务会很体贴地为你咋classpath中添加依赖项以及编译后的项目diamante&lt;/p&gt;
-
-&lt;p&gt;scaladoc:与javadoc不同，Scaladoc按照package来&lt;code class=&quot;highlighter-rouge&quot;&gt;排列类型&lt;/code&gt;，而不是&lt;code class=&quot;highlighter-rouge&quot;&gt;按照字母顺序全部列出&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;运行REPL的三种方式&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;可以不指定脚本或main参数来直接输入scala命令&lt;/li&gt;
-  &lt;li&gt;可以使用sbt console命令&lt;/li&gt;
-  &lt;li&gt;可以在那些流行的IDE中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;worksheet&lt;/code&gt;特性&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;解释器返回的是变量的&lt;code class=&quot;highlighter-rouge&quot;&gt;类型和数值&lt;/code&gt;,可变数据是错误之源.&lt;/p&gt;
-
-&lt;h3 id=&quot;create-a-project&quot;&gt;Create a project&lt;/h3&gt;
-
-&lt;p&gt;创建约定好的文件夹&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch build.sbt
-mkdir -p src/main/resources	&lt;span class=&quot;c&quot;&gt;#存放jar，配置文件等&lt;/span&gt;
-mkdir -p src/main/scala		&lt;span class=&quot;c&quot;&gt;#存放scala编写的代码文件&lt;/span&gt;
-mkdir -p src/main/java		&lt;span class=&quot;c&quot;&gt;#存放java编写的代码文件&lt;/span&gt;
-mkdir -p src/test/resources	&lt;span class=&quot;c&quot;&gt;#存放测试使用的jar，配置文件等&lt;/span&gt;
-mkdir -p src/test/scala		&lt;span class=&quot;c&quot;&gt;#存放测试编写的scala代码的文件&lt;/span&gt;
-mkdir -p src/test/java		&lt;span class=&quot;c&quot;&gt;#存放测试编写的java 代码的文件&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在src/main/scala中创建一个文件,之后回到src目录下，进入sbt，开始compile,run,package&lt;/p&gt;
-
-&lt;p&gt;build.sbt文件中还可以定义很多东西，比如添加插件，声明额外的repository，声明各种编译参数等等，我们这里就不在一一赘述了。
-project目录即相关文件介绍
-project目录下的几个文件实际上都是非必须存在的，可以根据情况添加。
-build.properties文件声明使用的要使用哪个版本的SBT来编译当前项目， 最新的sbt boot
-launcher可以能够兼容编译所有0.10.x版本的SBT构建项目，比如如果我使用的是0.12版本的sbt，但却想用0.11.3版本的sbt来编译当前项目，则可以在build.properties文件中添加sbt.version=0.11.3来指定。
-默认情况下，当前项目的构建采用使用的sbt boot launcher对应的版本。
-plugins.sbt文件用来声明当前项目希望使用哪些插件来增强当前项目使用的sbt的功能，比如像assembly功能，清理ivy
-local cache功能，都有相应的sbt插件供使用， 要使用这些插件只需要在plugins.sbt中声明即可，不用自己去再造轮子：&lt;/p&gt;
-
-&lt;p&gt;简单来说，在SBT中， 使用managed dependencies基本上就意味着往__libraryDependencies__这个Key中添加所需要的依赖，
-添加的一般格式如下:
-libraryDependencies += groupID % artifactID % revision
-比如：
-libraryDependencies += “org.apache.derby” % “derby” % “10.4.1.3”&lt;/p&gt;
-
-&lt;p&gt;如果有一堆依赖要添加，一行一行的添加是一种方式，其实也可以一次添加多个依赖：
-libraryDependencies ++= Seq(“org.apache.derby” %% “derby” % “10.4.1.3”,              “org.scala-tools” %% “scala-stm” % “0.3”,               …)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar xxx.jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;debug&quot;&gt;debug&lt;/h2&gt;
-
-&lt;p&gt;用jdb来调试scala代码&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jdb.html&quot;&gt;jdb&lt;/a&gt;
-&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/technotes/tools/unix/javap.html&quot;&gt;javap&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# compile
-scalac -g:vars [source]
-
-# run and it should ouput a port
-env JAVA_OPTS=&quot;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n&quot; scala [class]
-
-# attach to the port
-jdb -attach [port]
-
-# disassembles class file to assist set breakpoints
-javap [class]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;plugin-configure&quot;&gt;plugin configure&lt;/h2&gt;
-
-&lt;p&gt;all the plugins&lt;a href=&quot;http://www.scala-sbt.org/release/docs/Community-Plugins.html&quot;&gt;community-plugins&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;assembly&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在project/assembly.sbt中添加&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;addSbtPlugin(&quot;com.eed3si9n&quot; % &quot;sbt-assembly&quot; % &quot;0.14.3&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;assembly插件的目的是The goal is simple:Create a fat JAR of your project with all of its dependenies.&lt;/p&gt;
-
-&lt;p&gt;使用：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$sbt assembly
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;详细链接&lt;a href=&quot;https://github.com/sbt/sbt-assembly&quot;&gt;https://github.com/sbt/sbt-assembly&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;gen-idea&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用来生成idea的插件&lt;/p&gt;
-
-&lt;p&gt;在project/plugins.sbt中添加&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;addSbtPlugin(&quot;com.github.mpeltonen&quot; % &quot;sbt-idea&quot; % &quot;1.6.0&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在工程中的build.sbt中添加&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ideaExcludeFolders += &quot;.idea&quot;
-
-ideaExcludeFolders += &quot;.idea_modules&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;详细链接&lt;a href=&quot;https://github.com/mpeltonen/sbt-idea&quot;&gt;https://github.com/mpeltonen/sbt-idea&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;eclipse&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用于生成eclipse项目的插件&lt;/p&gt;
-
-&lt;p&gt;在project/plugins.sbt中添加&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;addSbtPlugin(&quot;com.typesafe.sbteclipse&quot; % &quot;sbteclipse-plugin&quot; % &quot;2.4.0&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;scalastyle&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用来检查scala代码的规范&lt;/p&gt;
-
-&lt;p&gt;官网手册&lt;a href=&quot;http://www.scalastyle.org/sbt.html&quot;&gt;http://www.scalastyle.org/sbt.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jar&quot;&gt;jar&lt;/h2&gt;
-
-&lt;p&gt;列表所有的class&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jar tf xxxx.jar | grep .class
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;仓库&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1.自定义仓库&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.nexus仓库&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sbt-1&quot;&gt;sbt总结&lt;/h2&gt;
-
-&lt;p&gt;sbt核心概念&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;基于Scala，由于sbt是基于Scala编写的，所以相关的配置语法和Scala很相似&lt;/li&gt;
-  &lt;li&gt;.sbt 工程构建定义&lt;/li&gt;
-  &lt;li&gt;可以定义一个大的 Setting对象序列，最后被转化为一个key-value键值对供sbt使用&lt;/li&gt;
-  &lt;li&gt;可以通过:=,+=或++=配置一个配置&lt;/li&gt;
-  &lt;li&gt;配置是不可变的，仅可以通过转换来修改。例如，一个 Setting对象转换成一个key-value键值对后是构建一个新的Map对象来修改的配置的，原值没有任何修改&lt;/li&gt;
-  &lt;li&gt;每个配置都有一个类型，通过key的定义来决定&lt;/li&gt;
-  &lt;li&gt;任务是一种特殊的配置，它是可以重复调用运算的，而参数配置是在项目加载中只初始化一次&lt;/li&gt;
-  &lt;li&gt;作用域&lt;/li&gt;
-  &lt;li&gt;每个配置可能有多个值在不同的作用域中&lt;/li&gt;
-  &lt;li&gt;作用域有三个维度：项目、配置、任务&lt;/li&gt;
-  &lt;li&gt;作用域概念使得一个配置可以再每个项目、每个任务、每个配置下都可能产生不同的行为&lt;/li&gt;
-  &lt;li&gt;配置维度指的是构建类型，如对于主项目(main)为(Compile)或测试为(Test)&lt;/li&gt;
-  &lt;li&gt;项目维度也支持工程级别的作用域&lt;/li&gt;
-  &lt;li&gt;作用域具有备选和委托的特性&lt;/li&gt;
-  &lt;li&gt;.sbt vs .scala 配置文件定义&lt;/li&gt;
-  &lt;li&gt;将参数配置放到.sbt配置文件中，将任务配置或者大的代码段配置放到.scala配置文件中&lt;/li&gt;
-  &lt;li&gt;插件可以扩展配置&lt;/li&gt;
-  &lt;li&gt;通过addSbtPlugin方法添加一个插件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://wiki.jikexueyuan.com/project/sbt-getting-started/&quot;&gt;reference&lt;/a&gt;
-&lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/Getting-Started.html&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/fommil/sbt-sensible&quot;&gt;https://github.com/fommil/sbt-sensible&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mpeltonen/sbt-idea&quot;&gt;https://github.com/mpeltonen/sbt-idea&lt;/a&gt;&lt;/p&gt;
-
 </content>
  </entry>
  
