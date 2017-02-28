@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 28 Feb 2017 09:35:17 +0800</lastBuildDate>
-        <pubDate>Tue, 28 Feb 2017 09:35:17 +0800</pubDate>
+        <lastBuildDate>Tue, 28 Feb 2017 15:44:31 +0800</lastBuildDate>
+        <pubDate>Tue, 28 Feb 2017 15:44:31 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -162,6 +162,7 @@
   &lt;li&gt;&lt;a href=&quot;#quick-shortcut-key&quot; id=&quot;markdown-toc-quick-shortcut-key&quot;&gt;quick shortcut key&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#more-project-merge&quot; id=&quot;markdown-toc-more-project-merge&quot;&gt;more project merge&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#compile&quot; id=&quot;markdown-toc-compile&quot;&gt;compile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
@@ -171,6 +172,20 @@
 &lt;ul&gt;
   &lt;li&gt;ideaVim:vim集成工具,用好vim是前提&lt;/li&gt;
   &lt;li&gt;Acejump:esaymotion&lt;a href=&quot;https://github.com/johnlindquist/AceJump&quot;&gt;https://github.com/johnlindquist/AceJump&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Javadoc:文档&lt;/li&gt;
+  &lt;li&gt;Maven Helper&lt;/li&gt;
+  &lt;li&gt;markdown&lt;/li&gt;
+  &lt;li&gt;findbug&lt;/li&gt;
+  &lt;li&gt;SQL Query&lt;/li&gt;
+  &lt;li&gt;BashSupport&lt;/li&gt;
+  &lt;li&gt;.ignore&lt;/li&gt;
+  &lt;li&gt;key promoter&lt;/li&gt;
+  &lt;li&gt;jrebel&lt;/li&gt;
+  &lt;li&gt;PlantUML&lt;/li&gt;
+  &lt;li&gt;mybatis&lt;/li&gt;
+  &lt;li&gt;ASM&lt;/li&gt;
+  &lt;li&gt;JVM Debugger Memory View&lt;/li&gt;
+  &lt;li&gt;Lombok&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;quick-shortcut-key&quot;&gt;quick shortcut key&lt;/h2&gt;
@@ -291,6 +306,11 @@
 &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306462&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Nginx+Tomcat7+Mencached负载均衡集群部署笔记&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306494&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;compile&quot;&gt;compile&lt;/h2&gt;
+
+&lt;p&gt;org.apache.test.Main
+VM:-Dspark.master=local&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</link>
                 <guid>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</guid>
@@ -845,6 +865,10 @@ jdb -attach 1044
 &lt;h2 id=&quot;section-20&quot;&gt;&lt;strong&gt;开源项目&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://git.oschina.net/calvin1978/springside4&quot;&gt;sprintsidev4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/waylau/essential-java&quot;&gt;https://github.com/waylau/essential-java&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.oschina.net/question/2367675_236222&quot;&gt;https://www.oschina.net/question/2367675_236222&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;quick.sh
 #!/bin/bash
