@@ -97,6 +97,25 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 [https://jaq.alibaba.com/](https://jaq.alibaba.com/)
 
+[https://www.t00ls.net/](https://www.t00ls.net/)
+
+[https://www.seebug.org/](https://www.seebug.org/)
+
+[https://www.sec-wiki.com/](https://www.sec-wiki.com/)
+
+[https://security.tencent.com/index.php/blog](https://security.tencent.com/index.php/blog)
+
+[http://www.52pojie.cn/](http://www.52pojie.cn/)
+
+[https://www.exploit-db.com/](https://www.exploit-db.com/)
+
+[http://routerpwn.com/](http://routerpwn.com/)
+
+[http://card.weibo.com/article/h5/s?from=timeline&isappinstalled=0#cid=1001603917721929686532](http://card.weibo.com/article/h5/s?from=timeline&isappinstalled=0#cid=1001603917721929686532)
+
+ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0)
+
+
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
