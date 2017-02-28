@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 26 Feb 2017 15:21:41 +0800</lastBuildDate>
-        <pubDate>Sun, 26 Feb 2017 15:21:41 +0800</pubDate>
+        <lastBuildDate>Tue, 28 Feb 2017 09:35:17 +0800</lastBuildDate>
+        <pubDate>Tue, 28 Feb 2017 09:35:17 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -652,6 +652,7 @@ jdb -attach 1044
   &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;&lt;strong&gt;开源项目&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/h2&gt;
@@ -840,6 +841,36 @@ jdb -attach 1044
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OpenGrok&lt;/code&gt;: fast and usable source code search and cross reference engine, written in Java. It helps you search, cross-reference and navigate your source tree. It can understand various program file formatsand version control histories like Mercurial, Git, SCCS, RCS, CVS, Subversion,Teamware, ClearCase, Perforce, Monotone and Bazaar.&lt;/p&gt;
 
 &lt;p&gt;阅读Java代码，类似与Linux代码中的LXR一样,&lt;a href=&quot;http://opengrok.github.io/OpenGrok/&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-20&quot;&gt;&lt;strong&gt;开源项目&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git.oschina.net/calvin1978/springside4&quot;&gt;sprintsidev4&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;quick.sh
+#!/bin/bash
+
+echo &quot;[Pre-Requirement] Makesure install JDK 7.0+ and set the JAVA_HOME.&quot;
+echo &quot;[Pre-Requirement] Makesure install Maven 3.0.3+ and set the PATH.&quot;
+
+export MAVEN_OPTS=&quot;$MAVEN_OPTS -Xmx1024m -XX:MaxPermSize=128M -Djava.security.egd=file:/dev/./urandom&quot;
+
+echo &quot;[Step 1] Install all springside modules to local maven repository.&quot;
+cd modules
+mvn clean install -DskipTests
+if [ $? -ne 0  ];then
+	  echo &quot;Quit  because maven install fail&quot;
+	    exit -1
+fi
+
+echo &quot;[Step 2] run boot-api project in dev mode.&quot;
+cd ../examples/boot-api
+mvn spring-boot:run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/EhsanTang/CrapApi&quot;&gt;CrapAPi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jinnianshilongnian.iteye.com/blog/1594806&quot;&gt;springmvc&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
@@ -1336,6 +1367,7 @@ default(默认)&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;创建仓库&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#command&quot; id=&quot;markdown-toc-command&quot;&gt;command&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#blog&quot; id=&quot;markdown-toc-blog&quot;&gt;blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#gui&quot; id=&quot;markdown-toc-gui&quot;&gt;GUI&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;创建仓库&lt;/h2&gt;
@@ -1447,6 +1479,9 @@ kill -9 ID
 
 &lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-22150747-id-189264.html&quot;&gt;linux-svn&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;gui&quot;&gt;GUI&lt;/h2&gt;
+
+&lt;p&gt;Ubuntu:[RapidSVN]&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
