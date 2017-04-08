@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 08 Apr 2017 01:51:31 +0000</lastBuildDate>
-        <pubDate>Sat, 08 Apr 2017 01:51:31 +0000</pubDate>
+        <lastBuildDate>Sat, 08 Apr 2017 21:20:43 +0800</lastBuildDate>
+        <pubDate>Sat, 08 Apr 2017 21:20:43 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -25,8 +25,6 @@
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#centoscn&quot; id=&quot;markdown-toc-centoscn&quot;&gt;centoscn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--more--&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;&lt;strong&gt;安装完成之后，需要哪些事&lt;/strong&gt;&lt;/h2&gt;
 
@@ -82,7 +80,7 @@ ping baidu.com
 </description>
                 <link>http://lkkandsyf.github.io/linux/2017/03/27/centos</link>
                 <guid>http://lkkandsyf.github.io/linux/2017/03/27/centos</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -119,7 +117,7 @@ plot(age,height)
 </description>
                 <link>http://lkkandsyf.github.io/2017/03/27/R</link>
                 <guid>http://lkkandsyf.github.io/2017/03/27/R</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -177,7 +175,7 @@ deploy:
 </description>
                 <link>http://lkkandsyf.github.io/blog/2017/03/22/hexo</link>
                 <guid>http://lkkandsyf.github.io/blog/2017/03/22/hexo</guid>
-                <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 22 Mar 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -195,7 +193,7 @@ deploy:
 </description>
                 <link>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</link>
                 <guid>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</guid>
-                <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 22 Feb 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -246,7 +244,7 @@ deploy:
 </description>
                 <link>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</link>
                 <guid>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -304,7 +302,7 @@ deploy:
 </description>
                 <link>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</link>
                 <guid>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -317,7 +315,7 @@ deploy:
 </description>
                 <link>http://lkkandsyf.github.io/music/2017/02/12/Music</link>
                 <guid>http://lkkandsyf.github.io/music/2017/02/12/Music</guid>
-                <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 12 Feb 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -484,7 +482,7 @@ VM:-Dspark.master=local&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</link>
                 <guid>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</guid>
-                <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 19 Jan 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -518,7 +516,7 @@ VM:-Dspark.master=local&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/holes/2017/01/04/holes</link>
                 <guid>http://lkkandsyf.github.io/holes/2017/01/04/holes</guid>
-                <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 04 Jan 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -559,7 +557,7 @@ cat out/*
 </description>
                 <link>http://lkkandsyf.github.io/2017/01/03/Hadoop</link>
                 <guid>http://lkkandsyf.github.io/2017/01/03/Hadoop</guid>
-                <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 03 Jan 2017 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -804,7 +802,7 @@ jdb -attach 1044
 </description>
                 <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
                 <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1068,7 +1066,7 @@ mvn spring-boot:run
 </description>
                 <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
                 <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1541,7 +1539,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1679,7 +1677,7 @@ kill -9 ID
 </description>
                 <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
                 <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1780,7 +1778,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
                 <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -1988,7 +1986,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
                 <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2008,7 +2006,7 @@ sudo apt-get udpate
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
                 <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2044,7 +2042,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
                 <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -2067,7 +2065,7 @@ gitbook serve .
 </description>
                 <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
                 <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
         <item>
@@ -3175,7 +3173,7 @@ db.valColl.find()
 </description>
                 <link>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</link>
                 <guid>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</guid>
-                <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+                <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
         </item>
 
 
