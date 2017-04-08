@@ -5,8 +5,8 @@
         <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
         <link>http://lkkandsyf.github.io</link>
         <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 08 Apr 2017 21:20:43 +0800</lastBuildDate>
-        <pubDate>Sat, 08 Apr 2017 21:20:43 +0800</pubDate>
+        <lastBuildDate>Sat, 08 Apr 2017 22:48:22 +0800</lastBuildDate>
+        <pubDate>Sat, 08 Apr 2017 22:48:22 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -21,6 +21,7 @@
       &lt;li&gt;&lt;a href=&quot;#sudo-problem&quot; id=&quot;markdown-toc-sudo-problem&quot;&gt;sudo problem&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#network-problem&quot; id=&quot;markdown-toc-network-problem&quot;&gt;network problem&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#yum-source&quot; id=&quot;markdown-toc-yum-source&quot;&gt;yum source&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#chrome&quot; id=&quot;markdown-toc-chrome&quot;&gt;chrome&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#centoscn&quot; id=&quot;markdown-toc-centoscn&quot;&gt;centoscn&lt;/a&gt;&lt;/li&gt;
@@ -35,8 +36,8 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# change to root
 visudo #open sudos
 # add username by the root
-root ALL=(ALL)		ALL
-username ALL=(ALL)		ALL
+root ALL=(ALL) ALL
+username ALL=(ALL) ALL
 :wq
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -68,6 +69,13 @@ ping baidu.com
 &lt;a href=&quot;http://www.centoscn.com/CentOS/config/2015/0408/5114.html&quot;&gt;http://www.centoscn.com/CentOS/config/2015/0408/5114.html&lt;/a&gt;
 &lt;a href=&quot;http://www.centoscn.com/CentOS/config/2015/0416/5189.html&quot;&gt;http://www.centoscn.com/CentOS/config/2015/0416/5189.html&lt;/a&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;chrome&quot;&gt;chrome&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://chrome.richardlloyd.org.uk/install_chrome.sh
+sudo bash install_chrome.sh -s	#stable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;command:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum repolist
@@ -76,7 +84,8 @@ ping baidu.com
 
 &lt;h2 id=&quot;centoscn&quot;&gt;centoscn&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;http://www.centoscn.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;http://www.centoscn.com/&lt;/a&gt;
+&lt;a href=&quot;http://blog.csdn.net/wuxuguang123/article/details/9713469&quot;&gt;vbox rehancement centos&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://lkkandsyf.github.io/linux/2017/03/27/centos</link>
                 <guid>http://lkkandsyf.github.io/linux/2017/03/27/centos</guid>
