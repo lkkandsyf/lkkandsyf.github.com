@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-03-27T03:09:17+00:00</updated>
+ <updated>2017-04-08T01:08:17+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -82,6 +82,43 @@ ping baidu.com
 &lt;h2 id=&quot;centoscn&quot;&gt;centoscn&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;http://www.centoscn.com/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>R</title>
+   <link href="http://lkkandsyf.github.io/2017/03/27/R"/>
+   <updated>2017-03-27T00:00:00+00:00</updated>
+   <id>http://lkkandsyf.github.io/2017/03/27/R</id>
+   <content type="html">
+&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#install&quot; id=&quot;markdown-toc-install&quot;&gt;install&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;install&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu/README.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;demo&lt;/h2&gt;
+
+&lt;p&gt;R-demo.R&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;age &amp;lt;- c(4,4,5,5,6,6,7,7,8,8)
+height &amp;lt;- c(95,97,106,108,114,116,120,121,126,125)
+mean(height)
+sd(height)
+cor(age,height)
+plot(age,height)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;run: R CMD batch  –args R-demo.R&lt;/p&gt;
+
+&lt;p&gt;produce pdf file&lt;/p&gt;
 </content>
  </entry>
  
@@ -3138,105 +3175,6 @@ db.valColl.find()
   &lt;li&gt;&lt;a href=&quot;https://robomongo.org&quot;&gt;robomongo&lt;/a&gt;:mongodb management tool&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>Vim</title>
-   <link href="http://lkkandsyf.github.io/vim/2016/11/24/Vim"/>
-   <updated>2016-11-24T00:00:00+00:00</updated>
-   <id>http://lkkandsyf.github.io/vim/2016/11/24/Vim</id>
-   <content type="html">
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#supertab&quot; id=&quot;markdown-toc-supertab&quot;&gt;Supertab&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#vim-javacomplete2&quot; id=&quot;markdown-toc-vim-javacomplete2&quot;&gt;vim-javacomplete2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#vjde&quot; id=&quot;markdown-toc-vjde&quot;&gt;vjde&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#java-debug&quot; id=&quot;markdown-toc-java-debug&quot;&gt;java debug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#vim-&quot; id=&quot;markdown-toc-vim-&quot;&gt;vim 技巧&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;this is collect some useful plugins to improve your vim skills.&lt;a href=&quot;http://vimawesome.com&quot;&gt;http://vimawesome.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;supertab&quot;&gt;Supertab&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1643&quot;&gt;download supertab&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;install&lt;/p&gt;
-
-    &lt;p&gt;Vimball files are installed by simply opening them in vim and then sourcing the file:
- $ vim supertab.vmb
- :source %&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ok,这样就可以通过tab键来补全，唯一不好的&lt;code class=&quot;highlighter-rouge&quot;&gt;就是就是没有提示&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;vim-javacomplete2&quot;&gt;vim-javacomplete2&lt;/h2&gt;
-
-&lt;p&gt;这是一个java补全的插件,&lt;a href=&quot;https://github.com/artur-shaik/vim-javacomplete2&quot;&gt;office&lt;/a&gt;.只要在配置文件中添加插件的仓库和名字，然后在vim中执行BundleInstall.&lt;/p&gt;
-
-&lt;p&gt;编译：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd .vim/bundle/vim-javacomple2/libs/javavi
-mvn compile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;来编译整个项目。&lt;/p&gt;
-
-&lt;p&gt;最后根据自己的vim版本的需要，在修改参数就不会提示错误了.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;第三方jar&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在vimrc　添加jar的路径&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let g:JavaComplete_LibsPath = &quot;/home/lkk/lib/*&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;然后用vim打开项目:JCserverStart来重启服务,就可以补全了。&lt;/p&gt;
-
-&lt;h2 id=&quot;vjde&quot;&gt;vjde&lt;/h2&gt;
-
-&lt;p&gt;这是一个Java补全插件.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1213&quot;&gt;office download&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;install:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ./vim
-tar xf vjde.tgz
-chmod +x ./plugin/vjde/readtags
-# start vim
-:helptags /doc
-:h vjde
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;然后可以就可以用c-x + c-u来补全&lt;/p&gt;
-
-&lt;p&gt;vimrc:add&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;use &amp;lt;c-space&amp;gt; as the Code completion key!
-change it by
-:let g:vjde_completion_key='&amp;lt;c-space&amp;gt;'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;java-debug&quot;&gt;java debug&lt;/h2&gt;
-
-&lt;p&gt;Java程序调试的vim插件,&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1954&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;vim-&quot;&gt;vim 技巧&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://guoshaoguang.com/blog/tag/vim/&quot;&gt;guoshaoguang&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;新建文件:sp FileName&lt;/p&gt;
-
-&lt;p&gt;新建文件夹:!mkdir FileDirName&lt;/p&gt;
 </content>
  </entry>
  
