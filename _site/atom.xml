@@ -4,7 +4,7 @@
  <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
  <link href="http://lkkandsyf.github.io/atom.xml" rel="self"/>
  <link href="http://lkkandsyf.github.io"/>
- <updated>2017-04-08T22:48:22+08:00</updated>
+ <updated>2017-04-09T02:27:09+00:00</updated>
  <id>http://lkkandsyf.github.io</id>
  <author>
    <name>kangkangliang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Centos</title>
    <link href="http://lkkandsyf.github.io/linux/2017/03/27/centos"/>
-   <updated>2017-03-27T00:00:00+08:00</updated>
+   <updated>2017-03-27T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/linux/2017/03/27/centos</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -81,6 +81,19 @@ sudo bash install_chrome.sh -s	#stable
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;pinyin&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;1 google-pinyin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2 sun-pinyin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3 sogoupinyin&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;command:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum repolist
@@ -97,7 +110,7 @@ sudo bash install_chrome.sh -s	#stable
  <entry>
    <title>R</title>
    <link href="http://lkkandsyf.github.io/2017/03/27/R"/>
-   <updated>2017-03-27T00:00:00+08:00</updated>
+   <updated>2017-03-27T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2017/03/27/R</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -134,7 +147,7 @@ plot(age,height)
  <entry>
    <title>Hexo</title>
    <link href="http://lkkandsyf.github.io/blog/2017/03/22/hexo"/>
-   <updated>2017-03-22T00:00:00+08:00</updated>
+   <updated>2017-03-22T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/blog/2017/03/22/hexo</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -192,7 +205,7 @@ deploy:
  <entry>
    <title>Dl4j</title>
    <link href="http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J"/>
-   <updated>2017-02-22T00:00:00+08:00</updated>
+   <updated>2017-02-22T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -210,7 +223,7 @@ deploy:
  <entry>
    <title>Java Scala Error Collect</title>
    <link href="http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect"/>
-   <updated>2017-02-17T00:00:00+08:00</updated>
+   <updated>2017-02-17T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -261,7 +274,7 @@ deploy:
  <entry>
    <title>Open Source Project Learning Experience</title>
    <link href="http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience"/>
-   <updated>2017-02-17T00:00:00+08:00</updated>
+   <updated>2017-02-17T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -319,7 +332,7 @@ deploy:
  <entry>
    <title>Music</title>
    <link href="http://lkkandsyf.github.io/music/2017/02/12/Music"/>
-   <updated>2017-02-12T00:00:00+08:00</updated>
+   <updated>2017-02-12T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/music/2017/02/12/Music</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -332,7 +345,7 @@ deploy:
  <entry>
    <title>Idea</title>
    <link href="http://lkkandsyf.github.io/ide/2017/01/19/IDEA"/>
-   <updated>2017-01-19T00:00:00+08:00</updated>
+   <updated>2017-01-19T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -499,7 +512,7 @@ VM:-Dspark.master=local&lt;/p&gt;
  <entry>
    <title>Holes</title>
    <link href="http://lkkandsyf.github.io/holes/2017/01/04/holes"/>
-   <updated>2017-01-04T00:00:00+08:00</updated>
+   <updated>2017-01-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/holes/2017/01/04/holes</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -533,7 +546,7 @@ VM:-Dspark.master=local&lt;/p&gt;
  <entry>
    <title>Hadoop</title>
    <link href="http://lkkandsyf.github.io/2017/01/03/Hadoop"/>
-   <updated>2017-01-03T00:00:00+08:00</updated>
+   <updated>2017-01-03T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2017/01/03/Hadoop</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -574,7 +587,7 @@ cat out/*
  <entry>
    <title>Jdb</title>
    <link href="http://lkkandsyf.github.io/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+08:00</updated>
+   <updated>2016-12-25T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/debug/2016/12/25/jdb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -819,7 +832,7 @@ jdb -attach 1044
  <entry>
    <title>Java</title>
    <link href="http://lkkandsyf.github.io/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/java/2016/12/24/Java</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1083,7 +1096,7 @@ mvn spring-boot:run
  <entry>
    <title>Mvn</title>
    <link href="http://lkkandsyf.github.io/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/24/mvn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1556,7 +1569,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="http://lkkandsyf.github.io/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1694,7 +1707,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="http://lkkandsyf.github.io/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+08:00</updated>
+   <updated>2016-12-20T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -1795,7 +1808,7 @@ bin/zookeeper-server-stop.sh
  <entry>
    <title>Ubuntu</title>
    <link href="http://lkkandsyf.github.io/os/2016/12/16/Ubuntu"/>
-   <updated>2016-12-16T00:00:00+08:00</updated>
+   <updated>2016-12-16T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2003,7 +2016,7 @@ sudo apt-get udpate
  <entry>
    <title>Machine Learn</title>
    <link href="http://lkkandsyf.github.io/2016/12/10/Machine-learn"/>
-   <updated>2016-12-10T00:00:00+08:00</updated>
+   <updated>2016-12-10T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/10/Machine-learn</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2023,7 +2036,7 @@ sudo apt-get udpate
  <entry>
    <title>Gitbook</title>
    <link href="http://lkkandsyf.github.io/2016/12/04/Gitbook"/>
-   <updated>2016-12-04T00:00:00+08:00</updated>
+   <updated>2016-12-04T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/2016/12/04/Gitbook</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2059,7 +2072,7 @@ gitbook serve .
  <entry>
    <title>Restful</title>
    <link href="http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful"/>
-   <updated>2016-11-30T00:00:00+08:00</updated>
+   <updated>2016-11-30T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
@@ -2082,7 +2095,7 @@ gitbook serve .
  <entry>
    <title>Mongodb</title>
    <link href="http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb"/>
-   <updated>2016-11-28T00:00:00+08:00</updated>
+   <updated>2016-11-28T00:00:00+00:00</updated>
    <id>http://lkkandsyf.github.io/mongodb/2016/11/28/Mongodb</id>
    <content type="html">
 &lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
