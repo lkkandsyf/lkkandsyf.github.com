@@ -58,14 +58,14 @@
 
 <ul id="markdown-toc">
   <li><a href="#docker-learn-note" id="markdown-toc-docker-learn-note">Docker learn note</a></li>
-  <li><a href="#docker" id="markdown-toc-docker">安装Docker</a></li>
-  <li><a href="#section" id="markdown-toc-section">核心概念</a></li>
-  <li><a href="#section-1" id="markdown-toc-section-1">拉取和推送</a></li>
-  <li><a href="#section-2" id="markdown-toc-section-2">制作镜像</a></li>
-  <li><a href="#section-3" id="markdown-toc-section-3">挂载本地目录</a></li>
-  <li><a href="#section-4" id="markdown-toc-section-4">导入和导出镜像</a></li>
-  <li><a href="#section-5" id="markdown-toc-section-5">数据卷</a></li>
-  <li><a href="#section-6" id="markdown-toc-section-6">网络配置</a></li>
+  <li><a href="#安装docker" id="markdown-toc-安装docker">安装Docker</a></li>
+  <li><a href="#核心概念" id="markdown-toc-核心概念">核心概念</a></li>
+  <li><a href="#拉取和推送" id="markdown-toc-拉取和推送">拉取和推送</a></li>
+  <li><a href="#制作镜像" id="markdown-toc-制作镜像">制作镜像</a></li>
+  <li><a href="#挂载本地目录" id="markdown-toc-挂载本地目录">挂载本地目录</a></li>
+  <li><a href="#导入和导出镜像" id="markdown-toc-导入和导出镜像">导入和导出镜像</a></li>
+  <li><a href="#数据卷" id="markdown-toc-数据卷">数据卷</a></li>
+  <li><a href="#网络配置" id="markdown-toc-网络配置">网络配置</a></li>
   <li><a href="#docker-cmd" id="markdown-toc-docker-cmd">Docker cmd</a></li>
   <li><a href="#dockerfile" id="markdown-toc-dockerfile">Dockerfile</a></li>
   <li><a href="#problem" id="markdown-toc-problem">Problem</a></li>
@@ -83,7 +83,7 @@
 
 <hr />
 
-<h2 id="docker">安装Docker</h2>
+<h2 id="安装docker">安装Docker</h2>
 
 <p>Ubuntu:14.04中安装</p>
 
@@ -120,13 +120,13 @@ $sudo apt-get upgrade docker-engine
 
 <p>官网<a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">https://docs.docker.com/engine/installation/linux/ubuntulinux/</a></p>
 
-<h2 id="section">核心概念</h2>
+<h2 id="核心概念">核心概念</h2>
 
 <p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
 
 <p>Docker有三大核心概念：镜像（Image）、容器（Container）、仓库（Repository）。</p>
 
-<h2 id="section-1">拉取和推送</h2>
+<h2 id="拉取和推送">拉取和推送</h2>
 
 <ul>
   <li>拉取</li>
@@ -171,7 +171,7 @@ sudo docker pull ubuntu:latest
 
 <hr />
 
-<h2 id="section-2">制作镜像</h2>
+<h2 id="制作镜像">制作镜像</h2>
 
 <p>两种方式制作镜像</p>
 
@@ -215,7 +215,7 @@ touch Dockfile
 
 <hr />
 
-<h2 id="section-3">挂载本地目录</h2>
+<h2 id="挂载本地目录">挂载本地目录</h2>
 
 <p>docker可以把一个宿主机上的<code class="highlighter-rouge">目录</code>挂载到<code class="highlighter-rouge">镜像里</code></p>
 
@@ -257,7 +257,7 @@ touch Dockfile
 
 <hr />
 
-<h2 id="section-4">导入和导出镜像</h2>
+<h2 id="导入和导出镜像">导入和导出镜像</h2>
 
 <p>可以使用docker save和docker load来存储镜像和载入镜像</p>
 
@@ -296,13 +296,13 @@ sudo docker load &lt; xxx.tar
 
 <hr />
 
-<h2 id="section-5">数据卷</h2>
+<h2 id="数据卷">数据卷</h2>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>docker run -it --volumes-from dataVol ubuntu14.04 /bin/bash
 </code></pre>
 </div>
 
-<h2 id="section-6">网络配置</h2>
+<h2 id="网络配置">网络配置</h2>
 
 <p><strong>端口映射</strong></p>
 
