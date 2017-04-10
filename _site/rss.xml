@@ -1,2135 +1,1379 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-        <title>既生而为人，就要承担，安然接受人生可能发生的一切。</title>
-        <description>既生而为人，就要承担，安然接受人生可能发生的一切。 - kangkangliang</description>
-        <link>http://lkkandsyf.github.io</link>
-        <atom:link href="http://lkkandsyf.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 10 Apr 2017 11:08:04 +0800</lastBuildDate>
-        <pubDate>Mon, 10 Apr 2017 11:08:04 +0800</pubDate>
+        <title>Yitao's Blog</title>
+        <description>Yitao's Blog - yitao</description>
+        <link></link>
+        <atom:link href="" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Mon, 10 Apr 2017 05:37:17 +0000</lastBuildDate>
+        <pubDate>Mon, 10 Apr 2017 05:37:17 +0000</pubDate>
         <ttl>60</ttl>
 
 
         <item>
-                <title>Build Blog</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>Hello World 的编译链接概述</title>
+                <description>&lt;p&gt;《程序员的自我修养》读书笔记，简单概述一个 Hello World 程序的编译链接过程。&lt;/p&gt;
 
-&lt;p&gt;使用ubuntu镜像来搭建一个jekyll的博客环境&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#install-env&quot; id=&quot;markdown-toc-install-env&quot;&gt;install env&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;有如下的&lt;code&gt;hello.c&lt;/code&gt;源文件：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;可以用 GCC 来编译运行：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$gcc&lt;/span&gt; hello.c
+&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out
+Hello World
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上述步骤可以分解为 4 个步骤，分别是**预处理（Prepressing）**、**编译（Compilation）**、**汇编（Assembly）**和**链接（Linking）**。&lt;/p&gt;
 
-&lt;h2 id=&quot;install-env&quot;&gt;install env&lt;/h2&gt;
+&lt;h2 id=&quot;toc_0&quot;&gt;被隐藏了的过程&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;gt; 1. 进入docker
- sudo docker run -it ubuntu:14.04 /bin/bash
- apt-get update
- # solution add repo
- apt-get install python-software-properties
- apt-get install software-properties-common
- # add ruby repo
- apt-add-repository ppa:brightbox/ruby-ng
- apt-get update
- apt-get install ruby2.2-dev
- # check version
- ruby -v # 2.2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;toc_1&quot;&gt;预处理&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$gcc&lt;/span&gt; -E hello.c -o hello.i
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$cpp&lt;/span&gt; hello.c &amp;gt; hello.i
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;预编译过程主要处理那些源代码文件听以“#”开始的预编译指令。&lt;/p&gt;
 
-&lt;p&gt;problem:&lt;code class=&quot;highlighter-rouge&quot;&gt;An error occurred while installing json (1.8.6), and Bundler cannot continue. on Ubuntu
-&lt;/code&gt;
-solution:&lt;/p&gt;
+&lt;p&gt;经过预编译后的 .i 文件不包含任何宏定义，因为所有的宏已经被展开，并且包含的文件也已经被插入到 .i 文件中。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libgmp-dev
-sudo apt-get install libgmp3-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;toc_2&quot;&gt;编译&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$gcc&lt;/span&gt; -S hello.i -o hello.S
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;或者使用&lt;code&gt;cc1&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$/&lt;/span&gt;usr/lib/gcc/i486-linux-gnu/4.1/cc1 hello.c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;编译过程就是把预处理完的文件进行一系列**词法分析**、**语法分析**、**语义分析**及**优化**后产生的相应的汇编代码文件。&lt;/p&gt;
+
+&lt;p&gt;实际上 gcc 这个命令只是这些后台程序的包装，它会根据不同的参数要求去调用预编译编译程序 cc1、汇编器 as、链接器 ld。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_3&quot;&gt;汇编&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$as&lt;/span&gt; hello.s -o hello.c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$gcc&lt;/span&gt; -c hello.s -o hello.o
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;汇编器是将汇编代码转变成机器可以执行的指令，每一个汇编语句几乎都对应一条机器指令。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_4&quot;&gt;链接&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ld&lt;/span&gt; -static crt1.o crti.o crtbeginT.o hello.o -start-group -lgcc -lgcc_eh -lc -end-group crtend. crtn.o
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;toc_5&quot;&gt;编译器做了什么&lt;/h2&gt;
+
+&lt;p&gt;编译过程一般可以分为6步：扫描、语法分析、语义分析、源代码优化、代码生成和目标代码优化。&lt;/p&gt;
+
+&lt;p&gt;以如下代码为例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;toc_6&quot;&gt;词法分析&lt;/h3&gt;
+
+&lt;p&gt;源代码被输入到**扫描器（Scanner）**，进行词法分析，生成一系列的**记号（Token）**。&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;记号&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;td&gt;标识符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[&lt;/td&gt;
+&lt;td&gt;左方括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;index&lt;/td&gt;
+&lt;td&gt;标识符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;]&lt;/td&gt;
+&lt;td&gt;右方括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;赋值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(&lt;/td&gt;
+&lt;td&gt;左圆括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;index&lt;/td&gt;
+&lt;td&gt;标识符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;加号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;)&lt;/td&gt;
+&lt;td&gt;右圆括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;乘号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(&lt;/td&gt;
+&lt;td&gt;左圆括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;加号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;数字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;)&lt;/td&gt;
+&lt;td&gt;右圆括号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;在识别记号的同时，扫描器也将标识符存放到符号表，将数字、字符串常量存放到文字表等。&lt;/p&gt;
+
+&lt;p&gt;有一个叫 lex 的程序可以实现词法分析，它会按照用户之前描述好的词法规则将输入的字符串分割成一个个记号。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_7&quot;&gt;语法分析&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;语法分析器（Grammar Parser）&lt;/strong&gt;将上述产生的记号进行语法分析，从而生成**语法树（Syntax Tree）**。&lt;/p&gt;
+
+&lt;p&gt;有一个现在的工具叫 yacc（Yet Another Compiler Compiler）可以构建出语法树。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_8&quot;&gt;语义分析&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;语义分析器（Semantic Analyzer）&lt;/strong&gt;完成了对表达式的语法层面的分析，即**静态语义（Static Semantic）**，包括声明和类型匹配，类型的转换。&lt;/p&gt;
+
+&lt;p&gt;语义分析阶段后，语法树的表达式都被标识了类型，如有隐式转换，则插入相应的转换节点。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_9&quot;&gt;中间语言的生成&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;源码优化器（Source Code Optimizer）&lt;/strong&gt;将整个语法树转换成**中间代码（Intermediate Code）**，常见的有**三地址码（Three-address Code）**和**P-代码（P-Code）**，再进行源码级别的优化。&lt;/p&gt;
+
+&lt;p&gt;中间代码使用编译器可以被分为前端和后端。编译器前端负责产生机器无关的中间代码，编译器后端将中间代码转换成目标机器代码。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_10&quot;&gt;目标代码生成与优化&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;代码生成（Code Generator）&lt;/strong&gt;将中间代码转换成目标机器代码，**目标代码化化器（Target Code Optimizer）**则对目标代码进行优化。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_11&quot;&gt;静态链接&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;链接（Linking）&lt;/strong&gt;的主要内容就是把各个模块之间相互引用的部分都处理好。&lt;/p&gt;
+
+&lt;p&gt;链接过程主要包括了**地址和空间分配（Address and Storage Allocation）**、**符号决议（Symbol Resolution）**和**重定位（Relocation）**这些步骤。&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/blog/2017/04/09/build-blog</link>
-                <guid>http://lkkandsyf.github.io/blog/2017/04/09/build-blog</guid>
-                <pubDate>Sun, 09 Apr 2017 00:00:00 +0800</pubDate>
+                <link>/2017/02/12/helloworld-compile-and-link</link>
+                <guid>/2017/02/12/helloworld-compile-and-link</guid>
+                <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Centos</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>彩虹表原理</title>
+                <description>&lt;p&gt;以前一直以为彩虹表就是一个大的数据库，破解的时候直接通过查表获得明文。今天发现我错了，彩虹表的原理还是挺有趣的。&lt;/p&gt;
 
-&lt;p&gt;这里收集了关于centos学习过程中自己的收获，方便以后使用&lt;/p&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#安装完成之后需要哪些事&quot; id=&quot;markdown-toc-安装完成之后需要哪些事&quot;&gt;&lt;strong&gt;安装完成之后，需要哪些事&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#sudo-problem&quot; id=&quot;markdown-toc-sudo-problem&quot;&gt;sudo problem&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#network-problem&quot; id=&quot;markdown-toc-network-problem&quot;&gt;network problem&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#yum-source&quot; id=&quot;markdown-toc-yum-source&quot;&gt;yum source&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#chrome&quot; id=&quot;markdown-toc-chrome&quot;&gt;chrome&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#centoscn&quot; id=&quot;markdown-toc-centoscn&quot;&gt;centoscn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;!--more--&gt;
 
-&lt;h2 id=&quot;安装完成之后需要哪些事&quot;&gt;&lt;strong&gt;安装完成之后，需要哪些事&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;如果直接暴力破解 Hash 的明文太费时，如果通过查表的方法则太耗存储。彩虹表则是暴力破解与查表破解的折中。&lt;/p&gt;
 
-&lt;h3 id=&quot;sudo-problem&quot;&gt;sudo problem&lt;/h3&gt;
+&lt;h2 id=&quot;toc_0&quot;&gt;原理&lt;/h2&gt;
 
-&lt;p&gt;open terminal&lt;/p&gt;
+&lt;p&gt;假设有这么一个函数&lt;code&gt;R&lt;/code&gt;，可以将 Hash 值转化与字符串（非明文，而是另一个字符串），称其为衰减函数。假设&lt;code&gt;p&lt;/code&gt;为明文，&lt;code&gt;h&lt;/code&gt;为明文的 Hash 值，&lt;code&gt;H&lt;/code&gt;为 Hash 函数。彩虹表在建表时，先选一个&lt;code&gt;p[0]&lt;/code&gt;，做如下计算：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;h[0] = H(p[0])
+p[1] = R(h[0])
+h[1] = H(p[1])
+...
+h[k]  = H(p[k])
+...
+h[n - 1] = H(p[n - 1])
+p[n] = R(h[n - 1])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;其中&lt;code&gt;n&lt;/code&gt;为迭代的次数。&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# change to root
-visudo #open sudos
-# add username by the root
-root ALL=(ALL) ALL
-username ALL=(ALL) ALL
-:wq
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;经过，这种运算之后，会形成一条 Hash 链：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;p[0]---&amp;gt;h[0]---&amp;gt;p[1]---&amp;gt;...---&amp;gt;p[k]---&amp;gt;h[k]---&amp;gt;...---&amp;gt;p[n]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这条链上已经有&lt;code&gt;n&lt;/code&gt;对明文到 Hash 值的对应关系了，但我们只保存首尾&lt;code&gt;p[0]&lt;/code&gt;和&lt;code&gt;p[n]&lt;/code&gt;，因为中间的值可以用&lt;code&gt;p[0]&lt;/code&gt;重新通过上述的计算运算出来。&lt;/p&gt;
 
-&lt;h3 id=&quot;network-problem&quot;&gt;network problem&lt;/h3&gt;
+&lt;p&gt;彩虹表中有好多条这样的链&lt;code&gt;p[0]--&gt;p[n]&lt;/code&gt;，&lt;code&gt;n&lt;/code&gt;值取足够大。这样就可以用&lt;code&gt;p[0]&lt;/code&gt;和&lt;code&gt;p[n]&lt;/code&gt;的存储空间，存储&lt;code&gt;n&lt;/code&gt;对的明文到 Hash 值的对应关系。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# change to root
-cd /etc/sysconfig/network-scripts/
-# ls and find network card
-vim ifcfg-xxxx	#edit
-# ONBOOT=no change to ONBOOT=yes
-:wq
+&lt;h2 id=&quot;toc_1&quot;&gt;破解&lt;/h2&gt;
 
-# restart network
-service network restart
-ping baidu.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;假设待破解的 Hash 值为&lt;code&gt;h&amp;#39;&lt;/code&gt;，那么我们可以反复地迭代运算 &lt;code&gt;p&amp;#39; = R(h&amp;#39;), h‘= H(p&amp;#39;)&lt;/code&gt;，直到&lt;code&gt;p&amp;#39;&lt;/code&gt;与彩虹表中的某个&lt;code&gt;p[n]&lt;/code&gt;相等。&lt;/p&gt;
 
-&lt;h3 id=&quot;yum-source&quot;&gt;yum source&lt;/h3&gt;
+&lt;p&gt;该链为&lt;code&gt;p[0]--&gt;p[n]&lt;/code&gt;，那么&lt;code&gt;h&amp;#39;&lt;/code&gt;的明文很有可能在这条链中，因为这条链是通过&lt;code&gt;p[0]&lt;/code&gt;反复迭代得到&lt;code&gt;p[n]&lt;/code&gt;的，&lt;code&gt;h&amp;#39;&lt;/code&gt;也是通过反复迭代得到&lt;code&gt;p[n]&lt;/code&gt;。&lt;/p&gt;
 
-&lt;p&gt;please see.&lt;a href=&quot;http://mirrors.163.com/&quot;&gt;mirrors.163.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;local source:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/mchina/archive/2013/01/04/2842275.html&quot;&gt;http://www.cnblogs.com/mchina/archive/2013/01/04/2842275.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/CentOS/2015/0212/4696.html&quot;&gt;http://www.centoscn.com/CentOS/2015/0212/4696.html&lt;/a&gt;
-&lt;a href=&quot;http://www.centoscn.com/CentOS/config/2015/0408/5114.html&quot;&gt;http://www.centoscn.com/CentOS/config/2015/0408/5114.html&lt;/a&gt;
-&lt;a href=&quot;http://www.centoscn.com/CentOS/config/2015/0416/5189.html&quot;&gt;http://www.centoscn.com/CentOS/config/2015/0416/5189.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;chrome&quot;&gt;chrome&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://chrome.richardlloyd.org.uk/install_chrome.sh
-sudo bash install_chrome.sh -s	#stable
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;pinyin&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;1 google-pinyin&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2 sun-pinyin&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;3 sogoupinyin&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;command:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum repolist
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;centoscn&quot;&gt;centoscn&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;http://www.centoscn.com/&lt;/a&gt;
-&lt;a href=&quot;http://blog.csdn.net/wuxuguang123/article/details/9713469&quot;&gt;vbox rehancement centos&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我们只要知道&lt;code&gt;h&amp;#39;&lt;/code&gt;迭代到&lt;code&gt;p[n]&lt;/code&gt;的次数，只在找到链中迭代到&lt;code&gt;p[n]&lt;/code&gt;相同次数的&lt;code&gt;h[k]&lt;/code&gt;，就可以获得其明文&lt;code&gt;p[k]&lt;/code&gt;（在链中，&lt;code&gt;h[k] = H(p[k])&lt;/code&gt;）。&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/linux/2017/03/27/centos</link>
-                <guid>http://lkkandsyf.github.io/linux/2017/03/27/centos</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+                <link>/2016/12/24/how-rainbow-table-work</link>
+                <guid>/2016/12/24/how-rainbow-table-work</guid>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>R</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>支付宝 AR 红包破解</title>
+                <description>&lt;p&gt;网上有好多支付宝的 AR 红包的破解方法，试了一下都不尽人意，所以自己撸了一下简单的。&lt;/p&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#install&quot; id=&quot;markdown-toc-install&quot;&gt;install&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;破解的想法非常简单：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;遍历每一行，求 RGB 值的方差。&lt;/li&gt;
+&lt;li&gt;如果方差小于某个阈值则该行为小横条，用上面几行替换。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;install&quot;&gt;install&lt;/h2&gt;
+&lt;p&gt;网上还有好多其他的方法，比如先手工获得小横条位置、识别小横条的灰色，我就不折腾了。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu/README.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后的效果没有那么好，有些识别不出来，亮色点的图片识别率会高一点。我识别出了周围的4个红包，还是挺麻烦的，玩玩就好。&lt;/p&gt;
 
-&lt;h2 id=&quot;demo&quot;&gt;demo&lt;/h2&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
 
-&lt;p&gt;R-demo.R&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;age &amp;lt;- c(4,4,5,5,6,6,7,7,8,8)
-height &amp;lt;- c(95,97,106,108,114,116,120,121,126,125)
-mean(height)
-sd(height)
-cor(age,height)
-plot(age,height)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;run: R CMD batch  –args R-demo.R&lt;/p&gt;
-
-&lt;p&gt;produce pdf file&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/02683accd59e309d574e9b499edafc7d.js&quot;&gt; &lt;/script&gt;
 </description>
-                <link>http://lkkandsyf.github.io/2017/03/27/R</link>
-                <guid>http://lkkandsyf.github.io/2017/03/27/R</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+                <link>/2016/12/21/alipay-ar-rb-crack</link>
+                <guid>/2016/12/21/alipay-ar-rb-crack</guid>
+                <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Hexo</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>C++ 函数重载与函数匹配</title>
+                <description>&lt;p&gt;《C++ Primer》笔记，整理关于函数重载与函数匹配的笔记。&lt;/p&gt;
 
-&lt;p&gt;usage hexo&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#install&quot; id=&quot;markdown-toc-install&quot;&gt;Install&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#command&quot; id=&quot;markdown-toc-command&quot;&gt;Command&lt;/a&gt;&lt;/li&gt;
+&lt;h2 id=&quot;toc_0&quot;&gt;函数重载&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//原函数
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//正确：形参类型不同
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 正确：形参个数不同
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//错误：只有返回类型不同
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int32&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//与原函数等价：形参类型相同
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//与原函数等价：顶层 const 将被忽略
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//与原函数等价：只是省略了形参名字
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;函数重载有如下的规则：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;名字相同，形参类型不一样。&lt;/li&gt;
+&lt;li&gt;不允许两个函数除了返回类型外其他所有的要素都相同。&lt;/li&gt;
+&lt;li&gt;顶层&lt;code&gt;const&lt;/code&gt;的形参无法和没有顶层&lt;code&gt;const&lt;/code&gt;的形参区分。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+&lt;p&gt;其中返回类型不同时编译时会出错，而类型别名、项层&lt;code&gt;const&lt;/code&gt;、省略形参名字只是重复声明而已，只要不定义，编译就不会出错，比如：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//只定义了其中一个
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;toc_1&quot;&gt;函数匹配&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# nodejs
-sudo add-apt-repository ppa:chris-lea/node.js
+&lt;h3 id=&quot;toc_2&quot;&gt;名字查找&lt;/h3&gt;
+
+&lt;p&gt;函数匹配的第一步便是**名字查找（name lookup）**，确定**候选函数**。&lt;/p&gt;
+
+&lt;p&gt;名字查找有两方面：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;常规查找（normal lookup）&lt;/li&gt;
+&lt;li&gt;实参决定的查找（argument-dependent lookup，ADL）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所有函数调用都会进行常规查找，只有函数的实参包括类类型对象或指向类类型对象的指针/引用的时候，才会进行实参决定的查找。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;常规查找&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//作用域
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//2
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//3
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//候选函数为函数2和3
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//将函数1加入当前作用域
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//候选函数为函数1
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;从函数被调用的局部作用域开始，逐渐向上层寻找被调用的名字，一旦找到就停止向上寻找，将找到的所有名字加入候选函数。&lt;/p&gt;
+
+&lt;p&gt;此外，using语句可以将其他作用域的名字引用到当前作用域。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ADL查找&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1
+//第一个实参所在命名空间
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//2
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//3
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//第二个实参的间接父类所在命名空间
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name00&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T00&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//5
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//第二个实参父类所在命名空间
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name00&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T00&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//6
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//7
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//第二个实参所在命名空间
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;friend&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//8
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//9
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Name1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Name2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//9个函数全是候选函数  
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//第1个函数是normal lookup找到的
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//后8个函数全是argument-dependent lookup找到的
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;从第一个类类型参数开始，依次遍历所有类类型参数。对于每一个参数，进入其类型定义所在的作用域（类内友元函数也包括在内），并依次进入其基类、间接基类……定义所在的作用域，查找同名函数，并加入候选函数。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;在继承体系中上升的过程中，不会因为找到同名函数就停止上升，这不同于常规查找。&lt;/p&gt;
+
+&lt;p&gt;类中的运算符重载也遵循 ADL 查找，其候选函数集既包括成员函数，也应该包括非成员函数。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;A&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//2
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//3
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1、2、3都是候选函数
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;toc_3&quot;&gt;确定可行函数&lt;/h3&gt;
+
+&lt;p&gt;第二步便是从候选函数中选出可行函数，选择的标准如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;形参数量与本次调用提供的实参数量相等&lt;/li&gt;
+&lt;li&gt;每个实参的类型与对应的形参类型相同，或者能转换成形参类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//以下为候选函数
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可行函数
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可行函数：实参可转化成形参类型
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可行函数
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//非可行函数：形参数量不匹配
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//非可行函数：实参不能转换成形参
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;toc_4&quot;&gt;寻找最佳匹配&lt;/h3&gt;
+
+&lt;p&gt;从可行函数中选择最匹配的函数，如果有多个形参，则最佳匹配条件为：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;该函数每个实参的匹配都不劣于其他可行函数需要的匹配。&lt;/li&gt;
+&lt;li&gt;至少有一个实参的匹配优于其他可行函数提供的匹配。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;否则，发生二义性调用错误。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//可行函数
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//二义性错误：double 向 int 的转换与向 float 的转换一样好
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//调用 void func(int a, int b)
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;为了确定最佳匹配，实参类型到形参类型的转换等级如下：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;精确匹配：
+
+&lt;ul&gt;
+&lt;li&gt;实参类型和形参类型相同。&lt;/li&gt;
+&lt;li&gt;实参从数组类型或函数类型转换成对应的指针类型。&lt;/li&gt;
+&lt;li&gt;向实参添加顶层&lt;code&gt;const&lt;/code&gt;或者从实参中删除顶层&lt;code&gt;const&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;通过&lt;code&gt;const&lt;/code&gt;转换实现的匹配。&lt;/li&gt;
+&lt;li&gt;通过类型提升实现的匹配。&lt;/li&gt;
+&lt;li&gt;通过算术类型转换或指针转换实现的匹配。&lt;/li&gt;
+&lt;li&gt;通过类类型转换实现的匹配。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;一般不会存在这个阶段不会同时存在两个以上的精确匹配，因为两个精确的匹配在本质上是等价的，在定义重载函数时，编译器可能就报出重定义的错误了。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;挑几个重点的来详细说一下。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;指针转换实现的匹配&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0 或&lt;code&gt;nullptr&lt;/code&gt;能转换成任意指针类型。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;T *&lt;/code&gt; 能转换成 &lt;code&gt;void *&lt;/code&gt;，&lt;code&gt;const void *&lt;/code&gt;转换成&lt;code&gt;const void*&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;派生类向基类类型的转换。&lt;/li&gt;
+&lt;li&gt;函数与函数指针的形参类型必须精确匹配。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;类类型转换实现的匹配&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;两个类型提供相同的类型转换将产生二义性问题。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//把一个 B 转换成 A
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 也是把一个 B 转换成 A
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//二义性错误：f(B::operator A()) 还是 f(A::A(const B&amp;amp;))
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//正确：使用 B 的类型转换运算
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//正确：使用 A 的构造函数
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;类当中定义了多个参数都是算术类型的构造函数或类型转换运算符，也会产生二义性问题。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//二义性错误：f(A::operator int()) 还是 f(A::operator double())？
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//二义性错误：A::A(int) 还是 A::A(double)？
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;short&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//正确：使用 A::A(int)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;当我们使用两个用户定义的类型转换时，如果转换函数之前或之后存在标准类型转换，则标准类型转换将决定最佳匹配到底是哪个。&lt;/p&gt;
+</description>
+                <link>/2016/12/17/function-overload-and-match</link>
+                <guid>/2016/12/17/function-overload-and-match</guid>
+                <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>C++ 函数匹配及实参推断</title>
+                <description>&lt;p&gt;记录一下函数重载、函数匹配、名字查找与实参类型推断的规则。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;函数重载&lt;/h2&gt;
+
+&lt;h3 id=&quot;toc_1&quot;&gt;函数重载规则&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;名字相同，形参类型不一样。&lt;/li&gt;
+&lt;li&gt;不允许两个函数除了返回类型外其他所有的要素都相同。&lt;/li&gt;
+&lt;li&gt;顶层&lt;code&gt;const&lt;/code&gt;的形参无法和没有顶层&lt;code&gt;const&lt;/code&gt;的形参区分。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toc_2&quot;&gt;重载与作用域&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;内层作用域中声明的名字，将隐藏外层作用域中声明的同名实体。&lt;/li&gt;
+&lt;li&gt;名字查找发生在类型检查之前。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_3&quot;&gt;名字查找&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;首先，在名字所在的块中寻找其声明语句，只考虑在名字使用之前出现的声明。&lt;/li&gt;
+&lt;li&gt;如果没有找到，继续查找外层作用域。&lt;/li&gt;
+&lt;li&gt;如果最终没有找到匹配的声明，则程序报错。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于类的定义：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;首先，编译成员的声明。&lt;/li&gt;
+&lt;li&gt;直到类全部可见后才编译函数体。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_4&quot;&gt;函数匹配&lt;/h2&gt;
+
+&lt;h3 id=&quot;toc_5&quot;&gt;函数匹配步骤&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;确定候选函数和可行函数&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;选择函数名相同的、声明在调用点可见的函数作用候选函数。&lt;br&gt;
+在候选函数中选出形参数量匹配并且类型可转换的函数作用可行函数。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;寻找最佳匹配&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;从可行函数中选择最匹配的函数，如果有多个形参，则最佳匹配条件为：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;该函数每个实参的匹配都不劣于其他可行函数需要的匹配。&lt;/li&gt;
+&lt;li&gt;至少有一个实参的匹配优于其他可行函数提供的匹配。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;否则，发生二义性调用错误。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_6&quot;&gt;实参类型转换等级&lt;/h2&gt;
+
+&lt;p&gt;具体排序如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;精确匹配：
+
+&lt;ul&gt;
+&lt;li&gt;实参类型和形参类型相同。&lt;/li&gt;
+&lt;li&gt;实参从数组类型或函数类型转换成对应的指针类型。&lt;/li&gt;
+&lt;li&gt;向实参添加顶层&lt;code&gt;const&lt;/code&gt;或者从实参中删除顶层&lt;code&gt;const&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;通过&lt;code&gt;const&lt;/code&gt;转换实现的匹配。&lt;/li&gt;
+&lt;li&gt;通过类型提升实现的匹配。&lt;/li&gt;
+&lt;li&gt;通过算术类型转换或指针转换实现的匹配。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_7&quot;&gt;函数指针&lt;/h2&gt;
+
+&lt;p&gt;函数与函数指针的形参类型必须精确匹配。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_8&quot;&gt;类类型转换运算符匹配&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;如果类类型和目标类型之间存在多种转换的方式，则可能发生二义性错误：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;两个类型提供相同的类型转换。&lt;/li&gt;
+&lt;li&gt;类定义了多个转换的规则。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当我们使用两个用户定义的类型转换时，如果转换函数之前或之后存在标准类型转换，则标准类型转换将决定最佳匹配到底是哪个。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_9&quot;&gt;重载函数与转换构造函数&lt;/h2&gt;
+
+&lt;p&gt;如果两个或多个类型转换都提供了同一种可行的匹配，则这些类型转换一样好。&lt;/p&gt;
+
+&lt;p&gt;在调用重载函数时，如果需要额外的标准类型转换，则该转换的级别只有当所有可行函数请求同一个用户定义的类型转换时才有用。如果所需的用户定义的类型转换不止一个，则该调用具有二义性。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_10&quot;&gt;函数匹配与重载运算符&lt;/h2&gt;
+
+&lt;p&gt;表达式中运算符的候选函数集既包括成员函数，也应该包括非成员函数。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_11&quot;&gt;模板实参推断&lt;/h2&gt;
+
+&lt;h3 id=&quot;toc_12&quot;&gt;类型转换与模板类型参数&lt;/h3&gt;
+
+&lt;p&gt;能应用于函数模板的类型转换：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;顶层 const 会被忽略。&lt;/li&gt;
+&lt;li&gt;const 转换：非 const 对象的引用（或指针）传递给一个 const 的引用（或指针）的形参。&lt;/li&gt;
+&lt;li&gt;数组或函数指针的转换。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一个模板类型参数可以用作多个函数形参的类型。由于只允许有限的几种类型转换，因此传递给这些形参的实参必须具有相同的类型。&lt;/p&gt;
+
+&lt;p&gt;正常类型转换应用于显示指定的实参。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_13&quot;&gt;函数指针和实参推断&lt;/h3&gt;
+
+&lt;p&gt;当参数是一个函数模板实例的地址时，程序上下文必须満足：对每个模板参数，能唯一确定其类型或值。&lt;/p&gt;
+
+&lt;h3 id=&quot;toc_14&quot;&gt;重载与模板&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;对于一个调用，其候选函数包括所有模板实参推断成功的函数模板实例。&lt;/li&gt;
+&lt;li&gt;候选的函数模板总是可行的，因为模板实参推断会排除任何不可行的模板。&lt;/li&gt;
+&lt;li&gt;可行函数按类型转换来排序，如果有一个函数比其他函数匹配更好，则选择此函数。&lt;/li&gt;
+&lt;li&gt;如果有多个函数提供同样好的匹配则：
+
+&lt;ul&gt;
+&lt;li&gt;如果同样好的函数中 且个是非模板函数，则选择此函数。&lt;/li&gt;
+&lt;li&gt;如果没有非模板函数，如果其中一个模板函数更特例化，则选择此模板。&lt;/li&gt;
+&lt;li&gt;否则，此调用有歧义。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_15&quot;&gt;异常类型与 catch 类型的匹配&lt;/h2&gt;
+
+&lt;p&gt;异常类型与&lt;code&gt;catch&lt;/code&gt;类型必须精确匹配：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;允许从非常量向常量转换。&lt;/li&gt;
+&lt;li&gt;允许从派生类向基类转换。&lt;/li&gt;
+&lt;li&gt;数组与函数转换成指针。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                <link>/2016/11/21/function-matching-and-argument-deduction</link>
+                <guid>/2016/11/21/function-matching-and-argument-deduction</guid>
+                <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>C++ 字面值常量</title>
+                <description>&lt;p&gt;在类型转换和函数匹配中，字面值类型也是非常值得关注的。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;整型和浮点型字面值&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c++&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* 十进制 */&lt;/span&gt;  &lt;span class=&quot;mo&quot;&gt;024&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* 八进制 */&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x14&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* 十六进制 */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;默认情况下，十进制字面值是带符号数，八进制和十六进制既可能是带符号的也可能是无符号的。&lt;/p&gt;
+
+&lt;p&gt;十进制字面值类型是&lt;code&gt;int&lt;/code&gt;、&lt;code&gt;long&lt;/code&gt;和&lt;code&gt;long long&lt;/code&gt;中尺寸最小的。&lt;/p&gt;
+
+&lt;p&gt;八进制和十六进制字面值类型是&lt;code&gt;int&lt;/code&gt;、&lt;code&gt;unsigned int&lt;/code&gt;、&lt;code&gt;long&lt;/code&gt;、&lt;code&gt;unsigned long&lt;/code&gt;、&lt;code&gt;long long&lt;/code&gt;和&lt;code&gt;unsigned long long&lt;/code&gt;中的尺寸最小者。&lt;/p&gt;
+
+&lt;p&gt;严格来说，十进制字面值不会是负数，负数只是对字面值取负值而已。&lt;/p&gt;
+
+&lt;p&gt;默认的，浮点型字面值是一个&lt;code&gt;double&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_1&quot;&gt;转义序列&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;\x&lt;/code&gt;后紧跟1个或多个十六进制数字，或&lt;code&gt;\&lt;/code&gt;后紧跟1个、2个或3个八进制数字。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_2&quot;&gt;指定字面值的类型&lt;/h2&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;前缀&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;u&lt;/td&gt;
+&lt;td&gt;Unicode 16 字符&lt;/td&gt;
+&lt;td&gt;char16_t&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;U&lt;/td&gt;
+&lt;td&gt;Unicode 32 字符&lt;/td&gt;
+&lt;td&gt;char32_t&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;L&lt;/td&gt;
+&lt;td&gt;宽字符&lt;/td&gt;
+&lt;td&gt;wchar_t&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;u8&lt;/td&gt;
+&lt;td&gt;UTF-8（仅用于字符串字面常量）&lt;/td&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;后缀&lt;/th&gt;
+&lt;th&gt;最小匹配类型&lt;/th&gt;
+&lt;th&gt;后缀&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;u or U&lt;/td&gt;
+&lt;td&gt;unsigned&lt;/td&gt;
+&lt;td&gt;f 或 F&lt;/td&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;l or L&lt;/td&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;l 或 L&lt;/td&gt;
+&lt;td&gt;long double&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ll or LL&lt;/td&gt;
+&lt;td&gt;long long&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</description>
+                <link>/2016/11/14/cpp-literal</link>
+                <guid>/2016/11/14/cpp-literal</guid>
+                <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>C++ 类型转换</title>
+                <description>&lt;p&gt;C++的类型转换比较杂，看了又忘，再看也忘。在此，总结了一下。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;隐式转换&lt;/h2&gt;
+
+&lt;h3 id=&quot;toc_1&quot;&gt;何时发生隐式转换&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在大多数表达式中，比&lt;code&gt;int&lt;/code&gt;类型小的整型值首先提升为较大的整数类型（整型提升）。&lt;/li&gt;
+&lt;li&gt;在条件中，非布尔值转换成布尔类型。&lt;/li&gt;
+&lt;li&gt;初始化过程中，初始化值转换成变量类型；在赋值语句中，右侧运算对象转换成左侧运算对象的类型。&lt;/li&gt;
+&lt;li&gt;如果算术运算或关系运算的运算有多种类型，需要转换成一种类型（算术转换）。&lt;/li&gt;
+&lt;li&gt;函数调用时也会发生类型转换。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toc_2&quot;&gt;转换规则&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;算术转换&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;运算符的对象转换成最宽的对象。当表达式中既有浮点型也有整型类型时，整型值也转换成浮点型。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;整型提升&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;小整数类型转换成较大的整数类型，对于&lt;code&gt;bool&lt;/code&gt;、&lt;code&gt;char&lt;/code&gt;、&lt;code&gt;signed char&lt;/code&gt;、&lt;code&gt;unsigned char&lt;/code&gt;、&lt;code&gt;short&lt;/code&gt;和&lt;code&gt;unsigned short&lt;/code&gt;，只要它们所有可能的值都能存在&lt;code&gt;int&lt;/code&gt;里，它们就会提升成&lt;code&gt;int&lt;/code&gt;类型，否则提升成&lt;code&gt;unsigned int&lt;/code&gt;类型。&lt;/p&gt;
+
+&lt;p&gt;较大的&lt;code&gt;char&lt;/code&gt;类型（&lt;code&gt;wchar_t&lt;/code&gt;、&lt;code&gt;char16_t&lt;/code&gt;、&lt;code&gt;char32_t&lt;/code&gt;）提升成&lt;code&gt;int&lt;/code&gt;、&lt;code&gt;unsigned int&lt;/code&gt;、&lt;code&gt;long&lt;/code&gt;、&lt;code&gt;unsigned long&lt;/code&gt;、&lt;code&gt;long long&lt;/code&gt;和&lt;code&gt;unsigned long long&lt;/code&gt;中最小的一种类型。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;无符号类型的运算对象&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首先进行整型提升，提升后如果符号相同则小类型转换大类型。如果符号不同，而其中无符号类型不小于带符号类型，则都转成无符号的；如果带符号类型大于无符号类型，如果无符号类型的所有值都能存在带符号类型中，则无符号转成带符号，如果不能，那么带符号转换无符号。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;派生类到基类转换&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;派生类型向基类类型转换只对指针或引用有效。&lt;/li&gt;
+&lt;li&gt;基类向派生类不存在隐式类型转换。&lt;/li&gt;
+&lt;li&gt;转换可能访问受限：
+
+&lt;ul&gt;
+&lt;li&gt;只有公有继承时，用户代码才能使用该转换。&lt;/li&gt;
+&lt;li&gt;任意方式继承，成员函数和友元都能使用该转换。&lt;/li&gt;
+&lt;li&gt;D 公有继承或保存继承 B 时，则 D 的派生类的成员或友元才能使用 B 向 D 的转换。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;能够将一个派生类对象拷贝、移动或赋值给一个基类对象，不过只处理派生类对象的基类部分。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;隐式的类类型转换（转换构造函数）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;能通过一个实参调用的构造函数定义了一条从构造函数的类型向类类型的隐式转换规则，只允许一步类类型转换（内置类型转换除外）。&lt;/p&gt;
+
+&lt;p&gt;可以使用&lt;code&gt;explicit&lt;/code&gt;抑制构造函数定义的隐式转换。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;其它隐式类型转换&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;数组自动转换成指针。&lt;/li&gt;
+&lt;li&gt;指针的转换：&lt;code&gt;nullptr&lt;/code&gt;能转换成任意指针类型；指向任意非常量的指针能转换成&lt;code&gt;void*&lt;/code&gt;；指向任意对象的指针能转换成&lt;code&gt;const void *&lt;/code&gt;；继承关系指针的转换。&lt;/li&gt;
+&lt;li&gt;转换成布尔类型：如果指针或算术类型的值为0，转换结果为&lt;code&gt;false&lt;/code&gt;；否则转换结果是&lt;code&gt;true&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;转换成常量：指向 T 的指针或引用分别转换成指向&lt;code&gt;const T&lt;/code&gt;的指针或引用（顶层&lt;code&gt;const&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;类类型定义的转换。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_3&quot;&gt;显式转换&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;static_cast&lt;/code&gt;：只要不包含底层&lt;code&gt;const&lt;/code&gt;，都可以使用&lt;code&gt;static_cast&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const_cast&lt;/code&gt;：只能改变运算对象的底层&lt;code&gt;const&lt;/code&gt;，如果对象本身是一个常量，那么行为未定义。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reinterpret_cast&lt;/code&gt;：为运算对象的位模式提供较底层次上的重新解释。&lt;/li&gt;
+&lt;li&gt;旧式强制类型转换：
+&lt;code&gt;
+type (expr);
+(type) expr;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                <link>/2016/11/13/cpp-type-conversion</link>
+                <guid>/2016/11/13/cpp-type-conversion</guid>
+                <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>OpenWRT 启动速度优化</title>
+                <description>&lt;p&gt;OpenWRT 开机到 WiFi 启动需要花费 20 多秒，实在是太慢了， 对一些简单的应用来说无法接受。经过一些尝试，我把它优化在 8 秒以内。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;移除不用的包&lt;/h2&gt;
+
+&lt;p&gt;可以通过&lt;code&gt;make menuconfig&lt;/code&gt;来移除一些用不着的软件包，如果不用 OpenWRT 的设置网页可以去掉&lt;code&gt;luci&lt;/code&gt;软件包，如果不用上网可以移除&lt;code&gt;firewall&lt;/code&gt;等等。&lt;/p&gt;
+
+&lt;p&gt;当然最耗时的还有一些内核模块，比如说 USB 和 I2C 驱动什么的，如果不用可以移除。可以通过&lt;code&gt;make kernel_menuconfig&lt;/code&gt;移除。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_1&quot;&gt;启动项&lt;/h2&gt;
+
+&lt;p&gt;可以在目录&lt;code&gt;/etc/rc.d/&lt;/code&gt;下查看启动项，不用的可以通过&lt;code&gt;/etc/init.d/&lt;/code&gt;下的脚本来禁用，比如说&lt;code&gt;telnet&lt;/code&gt;什么的。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_2&quot;&gt;关闭 failsafe&lt;/h2&gt;
+
+&lt;p&gt;如果不用 failsafe，可以关掉，可以省去几秒的等待时间。自行修改&lt;code&gt;/lib/&lt;/code&gt;下的脚本是没用的，得到 OpenWrt 的源码目录去修改，删掉 failsafe 的相关脚本就行。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_3&quot;&gt;优化配置&lt;/h2&gt;
+
+&lt;p&gt;可以优化&lt;code&gt;/etc/config/&lt;/code&gt;目录下的配置文件，无用的网络接口可以删掉。将 WiFi 的信道改成固定值可以节省非常多的时间。&lt;/p&gt;
+</description>
+                <link>/2016/10/24/optimized-openwrt-boot</link>
+                <guid>/2016/10/24/optimized-openwrt-boot</guid>
+                <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Ubuntu 上自定义特殊波特率</title>
+                <description>&lt;p&gt;在做嵌入式开发时，经常会需要特殊的串口波特率，比如 esp8266 的 74880 波特率。Ubuntu 下的 minicom 与 screen 都不支持这个波特率，可以使用&lt;code&gt;setserial&lt;/code&gt;将特殊波特率映射到 38400。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;我简单试了一下，PL2303 和 CH341 都不支持用&lt;code&gt;setserial&lt;/code&gt;进行特殊波特率的设置，而 FTDI 支持。&lt;/p&gt;
+
+&lt;p&gt;首先，先安装&lt;code&gt;setserial&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo apt-get install setserial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;查看&lt;code&gt;base_baud&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo setserial -a /dev/ttyUSB0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我得到的&lt;code&gt;base_baud&lt;/code&gt;为 24000000。&lt;/p&gt;
+
+&lt;p&gt;然后，进行分频：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo setserial -v /dev/ttyUSB0 spd_cust divisor &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;24000000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74880&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;就可以得到特殊波特率 74880，获取其它波特率的方法过程类似。&lt;/p&gt;
+
+&lt;p&gt;然后，只需用波特率 38400 进行连接即可。&lt;/p&gt;
+</description>
+                <link>/2016/06/30/odd-baudrate-on-ubuntu</link>
+                <guid>/2016/06/30/odd-baudrate-on-ubuntu</guid>
+                <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Linux 版网易云音乐无限网络错误的解决</title>
+                <description>&lt;p&gt;网易云音乐终于发布 Linux 版本了，但是在 elementaryOS 上播放音乐时出现了网络错误。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;网络上说可能是 gstreamer 依赖的问题，但没有具体的解决方法。我乱试了安装 gstreamer 的依赖，竟然让我试成功了！:satisfied:&lt;/p&gt;
+
+&lt;p&gt;具体是安装&lt;code&gt;gstreamer0.10-plugins-good&lt;/code&gt;的依赖：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo apt-get install gstreamer0.10-plugins-good
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+                <link>/2016/06/28/netease-music-network-error-solved</link>
+                <guid>/2016/06/28/netease-music-network-error-solved</guid>
+                <pubDate>Tue, 28 Jun 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Shadowsocks eOS/Ubuntu 客户端</title>
+                <description>&lt;p&gt;Shadowsocks-Qt5 太难用了，趁着有时间，写了一个跟 MacOS 上差不多的客户端，都是暴力 shell 调用。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;项目地址：&lt;a href=&quot;http://simpleyyt.github.io/shadowsocks-eos/&quot;&gt;http://simpleyyt.github.io/shadowsocks-eos/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;Shadowsocks elementaryOS/Ubuntu（也许可以） 客户端（指示器）。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;截图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Simpleyyt/shadowsocks-eos/master/screenshot/screenshot.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_1&quot;&gt;功能&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shadowsocks 指示器，可以开关 Shadowsocks&lt;/li&gt;
+&lt;li&gt;全局代理与自动代理模式&lt;/li&gt;
+&lt;li&gt;编辑服务器&lt;/li&gt;
+&lt;li&gt;获取GWFList更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_2&quot;&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;首先必须先安装&lt;code&gt;shadowsocks&lt;/code&gt;与&lt;code&gt;gfwlist2pac&lt;/code&gt;，可以通过&lt;code&gt;pip&lt;/code&gt;安装：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo pip install shadowsocks gfwlist2pac
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后，下载 Shadowsocks 的 deb 包进行安装：&lt;a href=&quot;https://github.com/simpleyyt/shadowsocks-eos/releases&quot;&gt;https://github.com/simpleyyt/shadowsocks-eos/releases&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_3&quot;&gt;Bugs&lt;/h2&gt;
+
+&lt;p&gt;代码很暴力，凑合能用就行。&lt;/p&gt;
+</description>
+                <link>/2016/05/30/shadowsocks-ubuntu-eos-client</link>
+                <guid>/2016/05/30/shadowsocks-ubuntu-eos-client</guid>
+                <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>Linux 上 Web 版本微信发布</title>
+                <description>&lt;p&gt;elementaryOS 或 Ubuntu 上的 Web 版微信应用。添加了 AppIndicator 消息提醒及 Libnotify 消息提醒功能。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Simpleyyt/web-weixin/master/screenshot/main.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_0&quot;&gt;功能&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;完整的 Web 微信功能&lt;/li&gt;
+&lt;li&gt;独立的窗口扫码界面&lt;/li&gt;
+&lt;li&gt;支持 AppIndicator 并有蓝点提示消息功能。&lt;/li&gt;
+&lt;li&gt;支持 libnotify 消息提醒。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_1&quot;&gt;截图&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Simpleyyt/web-weixin/master/screenshot/indicator.png&quot; alt=&quot;libnotify 提醒&quot;&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_2&quot;&gt;安装&lt;/h1&gt;
+
+&lt;p&gt;添加 PPA 并安装：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;sudo add-apt-repository ppa:simpleyyt/ppa
 sudo apt-get update
-sudo apt-get install nodejs
-# git
-sudo apt-get install git
-# hexo
-sudo npm install hexo -g
-
-# init blog dir
-hexo init &amp;lt;dir&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;博客发布到git&lt;a href=&quot;https://hexo.io/docs/deployment.html&quot;&gt;https://hexo.io/docs/deployment.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;配置_config.yml&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:lkkandsyf/hexo/blog
-  branch:master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;command&quot;&gt;Command&lt;/h2&gt;
-
-&lt;p&gt;创建页面:hexo new post “文章名字(中文也可以)”&lt;/p&gt;
-
-&lt;p&gt;生成html:hexo generate(hexo g)&lt;/p&gt;
-
-&lt;p&gt;发布到git:hexo deploy&lt;/p&gt;
-
-&lt;p&gt;生成并发布:hexo generate -d(hexo g -d)&lt;/p&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/blog/2017/03/22/hexo</link>
-                <guid>http://lkkandsyf.github.io/blog/2017/03/22/hexo</guid>
-                <pubDate>Wed, 22 Mar 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Dl4j</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://deeplearning4j.org/&quot;&gt;DL4J&lt;/a&gt;这是Java写的深度学习库。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;markdown-toc-&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;#&lt;/h1&gt;
-</description>
-                <link>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</link>
-                <guid>http://lkkandsyf.github.io/deep%20learning/2017/02/22/DL4J</guid>
-                <pubDate>Wed, 22 Feb 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Java Scala Error Collect</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这里整理自己学习Java过程中遇到的一些问题，简单记录下来，方便以后查看。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#编译错误&quot; id=&quot;markdown-toc-编译错误&quot;&gt;编译错误&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;编译错误&quot;&gt;编译错误&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;P1&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13170860/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-10test&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;Update the Maven project:&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.Right-click on &quot;project&quot;
-2.Go to &quot;Maven&quot; &amp;gt;&amp;gt; &quot;Update&quot;
-3.Wait for all the changes to be applied
-4.Commit the changes (if code is on repo)
-5.Run
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;or:&lt;/p&gt;
-
-&lt;p&gt;In my application, certain unit tests were not compatible with Java 8 so they were failing. The build would succeed with &lt;code class=&quot;highlighter-rouge&quot;&gt;mvn clean install -DskipTests &lt;/code&gt;but it is not recommended to skip the unit test.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;P2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;NoClassDefFoundError: scala/collection/Seq
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/33885339/noclassdeffounderror-scala-collection-seq&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;It happened because my java code was build with Scala, but at runtime scala library wasn’t available. &lt;code class=&quot;highlighter-rouge&quot;&gt;Added scala-library.jar to classpath'&lt;/code&gt;, that &lt;a href=&quot;http://zyjustin9.iteye.com/blog/2172445&quot;&gt;resolved it&lt;/a&gt;.&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</link>
-                <guid>http://lkkandsyf.github.io/javaerror/2017/02/17/Java-Scala-Error-Collect</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Open Source Project Learning Experience</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;这里收集了关于学习开源项目的一些坎坷，以及收获。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#java&quot; id=&quot;markdown-toc-java&quot;&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#springside4&quot; id=&quot;markdown-toc-springside4&quot;&gt;springside4&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#crapapi&quot; id=&quot;markdown-toc-crapapi&quot;&gt;CrapApi&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#blade&quot; id=&quot;markdown-toc-blade&quot;&gt;blade&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#java-bible&quot; id=&quot;markdown-toc-java-bible&quot;&gt;java-bible&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#pygrok&quot; id=&quot;markdown-toc-pygrok&quot;&gt;pygrok&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#cc&quot; id=&quot;markdown-toc-cc&quot;&gt;&lt;strong&gt;C++/C&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#opencv&quot; id=&quot;markdown-toc-opencv&quot;&gt;OpenCV&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;java&quot;&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;springside4&quot;&gt;springside4&lt;/h3&gt;
-
-&lt;p&gt;A Spring Framework based, pragmatic style JavaEE application reference architecture.
-&lt;a href=&quot;https://github.com/springside/springside4&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;crapapi&quot;&gt;CrapApi&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://api.crap.cn/index.do#/web/article/detail/web/PAGE/WELCOME&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;blade&quot;&gt;blade&lt;/h3&gt;
-
-&lt;p&gt;A Simple, Elegant Java Web Framework! website, &lt;a href=&quot;https://github.com/biezhi/blade&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;use blade framework bbs web application:&lt;a href=&quot;https://github.com/junicorn/java-china&quot;&gt;java-china&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;java-bible&quot;&gt;java-bible&lt;/h3&gt;
-
-&lt;p&gt;Java Bible is my java technology stack,&lt;a href=&quot;https://github.com/biezhi/java-bible&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;python&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;pygrok&quot;&gt;pygrok&lt;/h3&gt;
-
-&lt;h2 id=&quot;cc&quot;&gt;&lt;strong&gt;C++/C&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;opencv&quot;&gt;OpenCV&lt;/h3&gt;
-</description>
-                <link>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</link>
-                <guid>http://lkkandsyf.github.io/opensource/2017/02/17/Open-Source-Project-Learning-Experience</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Music</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-
-&lt;p&gt;&lt;a href=&quot;http://tv.cctv.com/2017/02/04/VIDEp4DJYg5JPjM09fAhitlK170204.shtml&quot;&gt;2017俄罗斯蓝光之夜音乐会&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/music/2017/02/12/Music</link>
-                <guid>http://lkkandsyf.github.io/music/2017/02/12/Music</guid>
-                <pubDate>Sun, 12 Feb 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Idea</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;开发Scala,Java项目，需要一个好的IDE，idea是一个比较好的开发环境，熟练使用，对自己也是大有帮助。介绍关于java IDE的使用技巧(IDEA)&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#plugins&quot; id=&quot;markdown-toc-plugins&quot;&gt;Plugins&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#quick-shortcut-key&quot; id=&quot;markdown-toc-quick-shortcut-key&quot;&gt;quick shortcut key&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#debug&quot; id=&quot;markdown-toc-debug&quot;&gt;debug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#more-project-merge&quot; id=&quot;markdown-toc-more-project-merge&quot;&gt;more project merge&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#compile&quot; id=&quot;markdown-toc-compile&quot;&gt;compile&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;plugins&quot;&gt;Plugins&lt;/h2&gt;
-
-&lt;p&gt;对于一个键盘党来说，插件是必不可少的。用好插件和快捷键将事半功倍。&lt;/p&gt;
+sudo apt-get install web-weixin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;toc_3&quot;&gt;依赖&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;ideaVim:vim集成工具,用好vim是前提&lt;/li&gt;
-  &lt;li&gt;Acejump:esaymotion&lt;a href=&quot;https://github.com/johnlindquist/AceJump&quot;&gt;https://github.com/johnlindquist/AceJump&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Javadoc:文档&lt;/li&gt;
-  &lt;li&gt;Maven Helper&lt;/li&gt;
-  &lt;li&gt;markdown&lt;/li&gt;
-  &lt;li&gt;findbug&lt;/li&gt;
-  &lt;li&gt;SQL Query&lt;/li&gt;
-  &lt;li&gt;BashSupport&lt;/li&gt;
-  &lt;li&gt;.ignore&lt;/li&gt;
-  &lt;li&gt;key promoter&lt;/li&gt;
-  &lt;li&gt;jrebel&lt;/li&gt;
-  &lt;li&gt;PlantUML&lt;/li&gt;
-  &lt;li&gt;mybatis&lt;/li&gt;
-  &lt;li&gt;ASM&lt;/li&gt;
-  &lt;li&gt;JVM Debugger Memory View&lt;/li&gt;
-  &lt;li&gt;Lombok&lt;/li&gt;
+&lt;li&gt;gobject-2.0&lt;/li&gt;
+&lt;li&gt;glib-2.0&lt;/li&gt;
+&lt;li&gt;gio-2.0&lt;/li&gt;
+&lt;li&gt;gtk+-3.0&amp;gt;=3.12&lt;/li&gt;
+&lt;li&gt;webkit2gtk-4.0&lt;/li&gt;
+&lt;li&gt;appindicator3-0.1&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;quick-shortcut-key&quot;&gt;quick shortcut key&lt;/h2&gt;
-
-&lt;p&gt;这一切都是在ideaVim下来操作的。&lt;/p&gt;
-
-&lt;p&gt;Alt + D : 全屏&lt;/p&gt;
-
-&lt;p&gt;Alt + Insert:重构&lt;/p&gt;
-
-&lt;p&gt;Alt + K :进入esaymotion mode&lt;/p&gt;
-
-&lt;p&gt;Ctrl + F12:文件结构&lt;/p&gt;
-
-&lt;p&gt;Ctrl + B:进入光标定义处&lt;/p&gt;
-
-&lt;p&gt;Ctrl + Shift + B:进入光标中的方法&lt;/p&gt;
-
-&lt;p&gt;Ctrl + Left:返回&lt;/p&gt;
-
-&lt;p&gt;Ctrl + Right:返回&lt;/p&gt;
-
-&lt;p&gt;Alt + 1&lt;/p&gt;
-
-&lt;p&gt;Alt + 2&lt;/p&gt;
-
-&lt;p&gt;Alt + 4&lt;/p&gt;
-
-&lt;p&gt;Alt + 5&lt;/p&gt;
-
-&lt;p&gt;Alt + 6&lt;/p&gt;
-
-&lt;p&gt;Alt + 7&lt;/p&gt;
-
-&lt;p&gt;Alt + 8&lt;/p&gt;
-
-&lt;p&gt;Alt + 9&lt;/p&gt;
-
-&lt;p&gt;Ctrl + F4 :关闭标签文件&lt;/p&gt;
-
-&lt;p&gt;Ctrl + F8 :在当前设置断点&lt;/p&gt;
-
-&lt;p&gt;Shift + F10 :编译并运行&lt;/p&gt;
-
-&lt;p&gt;Shift + F9 :进入debug mode&lt;/p&gt;
-
-&lt;p&gt;Ctrl + / :注释单行代码&lt;/p&gt;
-
-&lt;p&gt;Ctrl + Shitf + /:注释块代码(首先要选中)&lt;/p&gt;
-
-&lt;p&gt;添加统一的文件头注释:settings-&amp;gt;Editor-&amp;gt;File and Code Templates,在include的标签页中填写自己需要的头注释。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
- * File:	${NAME}.java
- * User:	Liangkangkang
- * Date:	${DATE}
- * Time:	${TIME}
- * Mail:	lkkforworl@gmail.com
- * Desc:
- */
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;更好的plugins:JavaDoc&lt;/p&gt;
-
-&lt;p&gt;常用的注释标签:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@author 作者
-@version 版本
-@see 参考转向
-@param 参数说明
-@return 返回值
-@exception　异常
-@since jdk　版本
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;使用JavaDoc:在Vim浏览模式中，选中之后，按Alt+Insert,选中对应的操作。&lt;/p&gt;
-
-&lt;p&gt;生成Doc:Tools-&amp;gt;Generate JavaDoc,在弹出的输出各种信息，注意避免乱码的情况:在Other command line arguments上填写:-encoding utf-8 -charset utf-8&lt;/p&gt;
-
-&lt;p&gt;Alt + insert:新建class的各种方法&lt;/p&gt;
-
-&lt;h2 id=&quot;debug&quot;&gt;debug&lt;/h2&gt;
-
-&lt;p&gt;一些基本的操作&lt;/p&gt;
-
-&lt;p&gt;设置断点：通过鼠标在行号的左边，点击，就ok了，再次点击就取消&lt;/p&gt;
-
-&lt;p&gt;next：F8	#运行一行代码&lt;/p&gt;
-
-&lt;p&gt;step: F7	#如果碰到函数，就进入&lt;/p&gt;
-
-&lt;p&gt;强制进入代码:Alt + Shift + F7&lt;/p&gt;
-
-&lt;p&gt;continue step out:Shift + F8&lt;/p&gt;
-
-&lt;p&gt;运行到光标出:Alt + F9&lt;/p&gt;
-
-&lt;p&gt;恢复程序:F9&lt;/p&gt;
-
-&lt;p&gt;显示执行哪一个断点:Alt + F10&lt;/p&gt;
-
-&lt;p&gt;debug 运行Java类，Ctrl + Shift + F9&lt;/p&gt;
-
-&lt;p&gt;正常运行Java来:Ctrl + Shift + F10&lt;/p&gt;
-
-&lt;p&gt;程序中的输出在Console显示。&lt;/p&gt;
-
-&lt;h2 id=&quot;more-project-merge&quot;&gt;more project merge&lt;/h2&gt;
-
-&lt;p&gt;我们做项目实际中经常会遇到这样的情况，创建一个common项目（Maven项目）作为公用项目，common中有很多工具类可以供其它多个项目调用。例如，把common、service都单独拆开成独立的Maven项目，供其它的项目使用，通过jar的方式被其它项目通过Maven引用。现在web项目需要引用common和service，如果IDEA分别单独打开common、service、web项目，那么在调试web项目的时候，就会遇到困难：web引用的common和service中的代码都是打包成jar的，无法调试。除非common和service安装的时候把源码也install到本地仓库，但是那样不方便，每次common和service更新都需要maven install操作后，web中引用的代码才会更新。&lt;/p&gt;
-
-&lt;p&gt;当我们多人协作时，会创建不同的项目，但是项目之间还有依赖。所以我们必须把所有的项目弄到一起，合并起来相互依赖，就可以了。&lt;/p&gt;
-
-&lt;p&gt;IDEA解决方案:首先，把所需要的项目，从svn上下载本地同一个目录下，然后，在IDEA中File-&amp;gt;Open选择刚刚的目录，打开之后发现IDEA没有自动识别Maven项目，这时候在IDEA右侧的Maven Project栏添加项目的pom.xml文件，这样就可以识别了，按住Ctrl多选每个项目中的pom.xml，然后点击OK,这样就可以调试了，&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306462&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nginx+Tomcat7+Mencached负载均衡集群部署笔记&lt;a href=&quot;http://blog.csdn.net/xyw591238/article/details/51306494&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;compile&quot;&gt;compile&lt;/h2&gt;
-
-&lt;p&gt;org.apache.test.Main
-VM:-Dspark.master=local&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</link>
-                <guid>http://lkkandsyf.github.io/ide/2017/01/19/IDEA</guid>
-                <pubDate>Thu, 19 Jan 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Holes</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这里整理一些安全漏洞修复的基本方法&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#openssh&quot; id=&quot;markdown-toc-openssh&quot;&gt;OpenSSH&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;openssh&quot;&gt;OpenSSH&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;OpenSSH升级&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OpenSSH安装依赖pam,zlib,openssl等。所以要提前安装这几个软件。&lt;/p&gt;
-
-&lt;p&gt;OpenSSH &lt;a href=&quot;http://ftp.spline.de/pub/OpenBSD/OpenSSH/portable/&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;zlib &lt;a href=&quot;&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;openssl &lt;a href=&quot;&quot;&gt;download&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ref:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.iyunv.com/thread-236685-1-1.html&quot;&gt;centos upgrade OpenSSH&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.iyunv.com/thread-236685-1-1.html&quot;&gt;redhat upgrade OpenSSH&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/holes/2017/01/04/holes</link>
-                <guid>http://lkkandsyf.github.io/holes/2017/01/04/holes</guid>
-                <pubDate>Wed, 04 Jan 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Hadoop</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;进入大数据，Hadoop是基本。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#基本知识&quot; id=&quot;markdown-toc-基本知识&quot;&gt;基本知识&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;基本知识&quot;&gt;基本知识&lt;/h2&gt;
-
-&lt;p&gt;安装之前需要Java环境。&lt;/p&gt;
-
-&lt;p&gt;简单单机模式，从官网下载编译好的包。然后在Hadoop的配置文件中/etc/hadoop/hadoop-env.sh修改&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JAVA_HOME = /usr/lib/jdk
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在.bashrc或者.zshrc中配置HADOOP_HOME的路径，以便让hive跑起来.&lt;/p&gt;
-
-&lt;p&gt;配置完成之后,进入hadoop目录。运行WordCount:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./bin/hadoop jar share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.3-sources.jar org.apache.hadoop.examples.WordCount ./README.txt out
-# 统计结果
-cat out/*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;参考:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.powerxing.com/install-hadoop/&quot;&gt;powerxing&lt;/a&gt;&lt;/p&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/2017/01/03/Hadoop</link>
-                <guid>http://lkkandsyf.github.io/2017/01/03/Hadoop</guid>
-                <pubDate>Tue, 03 Jan 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Jdb</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#jdb基本知识&quot; id=&quot;markdown-toc-jdb基本知识&quot;&gt;jdb基本知识&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jdb-usage&quot; id=&quot;markdown-toc-jdb-usage&quot;&gt;jdb usage&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;tools&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;jdb基本知识&quot;&gt;jdb基本知识&lt;/h2&gt;
-
-&lt;p&gt;假如Java源代码是hello.java文件，在编译时要加上-g选项，这和gdb是一样的。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javac -g hello.java
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这时会有一个hello.class的文件，现在就可以调试了&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb hello
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;加载成功后，我们通常会在main函数上设置断点&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;stop in hello.main
-stop at &amp;lt;行数&amp;gt;	#在某行设置断点
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如何查看被成功加入的断点&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;clear
-clear &amp;lt;行数|方法&amp;gt;	#清除所指定处的断点
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;成功后，运行程序&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;run
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;此时程序停到main函数这一行&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list	#list code
-step	#执行当前行的代码
-step up	#运行到当前行结束
-print i	#打印变量i的值
-dump i
-eval i
-monitor &amp;lt;command&amp;gt;	#当程序暂停时自动执行命令
-monitor	#列出所有的monitor
-watch &amp;lt;变量&amp;gt;	#运行到变量的值改变时停止
-unwatch &amp;lt;变量&amp;gt;	#取消watch
-list [行数|方法] 列出(从[行数|方法]开始的)源代码
-classes		#列出所有已知的类
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如果这个值是错的，需要修改&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set i = 2
-locals	#显示当前堆栈帧中的所有本地变量
-next	#执行，并跳过函数
-stepi	#一次只执行一个指令
-cont	#从当前位置直接执行到程序结束(或者下一个断点)
-!!		#重复最后一个命令
-&amp;lt;n&amp;gt; &amp;lt;command&amp;gt;	#将某个命令执行n次
-help	#帮助手册
-version	#jdb版本
-exit
-quit	#退出
-
-jdb -classpath . Classname
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;参考：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&quot;&gt;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jdb-usage&quot;&gt;jdb usage&lt;/h2&gt;
-
-&lt;p&gt;JDWP的全写是:Java Debug Wire Protocol:即JAVA调试器无线协议，它定义了调试器(Debugger)和被调试的JAVA虚拟机(target vm)之间的通信协议。在这里,我更要说明下：Debugger与Target vm,Target vm
-中运行着我们希望要调试的程序，它与一般运行的Java虚拟机没有什么区别，只是在启动时加载了Agent JDWP 从而具备了调试功能。而debugger 就是我们熟知的调试器，它向运行中的target vm
-发送命令来获取target vm 运行时的状态和控制Java 程序的执行。Debugger 和target vm 分别在各自的进程中运行，他们之间的通信协议就是JDWP。JDWP
-与其他许多协议不同，它仅仅定义了数据传输的格式，但并没有指定具体的传输方式。这就意味着一个JDWP 的实现可以不需要做任何修改就正常工作在不同的传输方式上（在JDWP
-传输接口中会做详细介绍）。JDWP 是语言无关的。理论上我们可以选用任意语言实现JDWP。然而我们注意到，在JDWP的两端分别是target vm 和debugger。Target vm 端，JDWP 模块必须以Agent library 的形式在Java 虚拟机启动时加载，并且它必须通过Java 虚拟机提供的JVMTI 接口实现各种debug
-的功能，所以必须使用C/C++ 语言编写。而debugger 端就没有这样的限制，可以使用任意语言编写，只要遵守JDWP 规范即可。JDI（Java Debug Interface）就包含了一个Java 的JDWP debugger 端的实现，JDK 中调试工具jdb 也是使用JDI 完成其调试功能的。&lt;/p&gt;
-
-&lt;p&gt;直接使用本机绑定的通讯端口，不指定进程&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=xxx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;使用jdb调试Java程序&lt;/p&gt;
-
-&lt;p&gt;首先启动Java程序&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8000 MainClassName
-or
-java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8000 -jar xxx.jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;用以下命令附加到上面的运行的Java程序，用于调试分析&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;之后就可以使用threads,thread,where,list等命令开始调试&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;远程调试&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;远程调试Java程序是非常有用的。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -Xdebug -Xrunjdwp:transport=dt_socket,address=192.168.10.205:8000,suspend=y -jar remoting-debug.jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;client连接&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jdb -connect com.sun.jdi.SocketAttach:hostname=192.168.10.205,port=8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;切记是同一个目录，要不找不到源代码&lt;/p&gt;
-
-&lt;p&gt;two way:同一个目录下，两个终端&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;one terminal:
-Java -agentlib:jdwp=transport=dt_socket,server=y,address=8000 MainClassName
-or jar
-Java -agentlib:jdwp=transport=dt_socket,server=y,address=8000 -jar xxx.jar
-other terminal:
-jdb -connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;参数：&lt;/p&gt;
-
-&lt;p&gt;-XDebug 启用调试&lt;/p&gt;
-
-&lt;p&gt;-Xrunjdwp 加载JDWP的JPDA参考执行实例。&lt;/p&gt;
-
-&lt;p&gt;transport  用于在调试程序和 VM 使用的进程之间通讯。&lt;/p&gt;
-
-&lt;p&gt;dt_socket 套接字传输。&lt;/p&gt;
-
-&lt;p&gt;server=y/n VM是否需要作为调试服务器执行。&lt;/p&gt;
-
-&lt;p&gt;address=2345调试服务器监听的端口号。&lt;/p&gt;
-
-&lt;p&gt;suspend=y/n 是否在调试客户端建立连接之后启动 VM 。&lt;/p&gt;
-
-&lt;p&gt;关于suspend多说一句，如果设置为y，它会阻塞程序运行，直到有客户端连接到对应的监听端口(这里是9527)，程序才真正开始执行。我们有时候会抱怨程序一闪而过，还没来得及在本地加载上代码程序就执行完了，这种情况就可以使用suspend参数。&lt;/p&gt;
-
-&lt;p&gt;还有一个细节是-jar参数不能写到-Xug参数前，像这样无法启用调试：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar lib/Main.jar -Xdebug -Xrunjdwp:transport=dt_socket,address=9527,server=y,suspend=y
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;要远程调试maven2启动的程序，例如mvn jetty:run，可以在启动程序时执行命令：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export MAVEN_OPTS=&quot;-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=y&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;cofig:&lt;/p&gt;
-
-&lt;p&gt;Java代码&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set MAVEN_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这里对几个参数进行说明：&lt;/p&gt;
-
-&lt;p&gt;-Xdebug ：  启动debug模式&lt;/p&gt;
-
-&lt;p&gt;-Xnoagent：  禁用默认sun.tools.debug调试器&lt;/p&gt;
-
-&lt;p&gt;-Djava.compiler：指定编译器类型，可方便优化 jitc jitc_de等&lt;/p&gt;
-
-&lt;p&gt;-Xrunjdwp：启动调试协议JDWP，全称是Java Debug Wire Protocol，它定义了JPDA front-end和JPDA back-end之间通讯信息的二进制格式。这里的通讯信息主要包括两种：调试器发送给JVM的请求信息和JVM发送给调试器的调试信息。有如下子项：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-transport：JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输。
--server：y/n 该jvm是被调试者还是调试器
--suspend：y/n 是否等待外部调试器的连接，如jetty启动时候，是否等待eclipse的远程连接后在进行jetty的初始化工作。在调试web容器的时候用的很多
--address：监听端口
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;使用mvn来debug&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:exec -Dexec.executable=&quot;java&quot; -Dexec.args=&quot;-classpath %classpath -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=1044 com.mycompany.app.App&quot;
-jdb -attach 1044
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;借鉴jdb调试&lt;a href=&quot;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&quot;&gt;https://www.packtpub.com/books/content/debugging-java-programs-using-jdb&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;教程&lt;a href=&quot;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&quot;&gt;http://www.tutorialspoint.com/jdb/jdb_introduction.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;软件指南针&lt;a href=&quot;http://www.softown.cn/post/180.html&quot;&gt;http://www.softown.cn/post/180.html&lt;/a&gt;这里介绍很多关于Java的工具&lt;/p&gt;
-
-&lt;p&gt;泰晓科技&lt;a href=&quot;http://tinylab.org/use-jdb-to-debug-android-application/&quot;&gt;http://tinylab.org/use-jdb-to-debug-android-application/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;远程调试&lt;a href=&quot;http://www.jianshu.com/p/c6697ec09b25&quot;&gt;http://www.jianshu.com/p/c6697ec09b25&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;tools&lt;/h2&gt;
+&lt;h1 id=&quot;toc_4&quot;&gt;编译&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;mkdir build
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build
+cmake .. -DCMAKE_INSTALL_PREFIX&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr
+make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;toc_5&quot;&gt;Bugs&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;JD-GUI&lt;/li&gt;
+&lt;li&gt;有时候需要退2次才能退出程序。&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+                <link>/2016/04/24/web-weixin-on-linux</link>
+                <guid>/2016/04/24/web-weixin-on-linux</guid>
+                <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
+        </item>
 
-&lt;p&gt;JD-GUI, a standalone graphical utility that displays Java sources from CLASS files.&lt;/p&gt;
+        <item>
+                <title>如何上传 ppa</title>
+                <description>&lt;p&gt;简单记录一下 如何上传包到 launchpad 的 ppa上。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://jd.benow.ca/&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/java-decompiler/jd-gui&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;toc_0&quot;&gt;生成 debian 目录&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jdb.html&quot;&gt;oracle jdb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在终端中输入：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;dh_make --createorig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;便会生成&lt;code&gt;debian&lt;/code&gt;目录，并且有&lt;code&gt;.orig.tar.gz&lt;/code&gt;源码包。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/haoel/article/details/2289305&quot;&gt;gci-java-debug&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据需要修改&lt;code&gt;debian&lt;/code&gt;目录里面的相应内容。&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_1&quot;&gt;上传 ppa&lt;/h1&gt;
+
+&lt;p&gt;在终端中输入：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;dput ppa:&amp;lt;userid&amp;gt;/&amp;lt;ppa-name&amp;gt; &amp;lt;source.changes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;即可将软件包上传到 PPA 上。&lt;/p&gt;
+</description>
+                <link>/2016/04/24/how-to-upload-to-ppa</link>
+                <guid>/2016/04/24/how-to-upload-to-ppa</guid>
+                <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>在 Cygwin 上编译 Contiki</title>
+                <description>&lt;p&gt;由于使用 Contiki 需要 Linux 环境，切换来切换去很麻烦，幸好 Windows 下面有 Unix 模拟环境软件，Cygwin。本文主要介绍 8051 核的 Contiki 编译，它的编译需要编译器 SDCC，所以本文介绍 SDCC 的编译。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;官方 8051 核的编译文档请参考 &lt;a href=&quot;https://github.com/contiki-os/contiki/wiki/8051-Requirements&quot;&gt;8051 Requirements&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;注：官方的 win32 版的 SDCC 并不适用。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;依赖&lt;/h2&gt;
+
+&lt;p&gt;必须确定安装以下依赖包，可以从 Cygwin 源中直接找到：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc&lt;/li&gt;
+&lt;li&gt;flex&lt;/li&gt;
+&lt;li&gt;bison&lt;/li&gt;
+&lt;li&gt;libboost-graph-dev&lt;/li&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;make&lt;/li&gt;
+&lt;li&gt;texinfo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;此外，还需要安装一个工具，&lt;a href=&quot;http://srecord.sourceforge.net/&quot;&gt;srecord&lt;/a&gt;，下载 Win32 版本后，直接放于&lt;code&gt;cygwin/bin/&lt;/code&gt;目录下即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_1&quot;&gt;编译 SDCC&lt;/h2&gt;
+
+&lt;h3 id=&quot;toc_2&quot;&gt;SDCC 源码下载&lt;/h3&gt;
+
+&lt;p&gt;直接使用&lt;code&gt;svn&lt;/code&gt;下载即可，本文版本为**9377**：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;svn co svn://svn.code.sf.net/p/sdcc/code/trunk/sdcc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;toc_3&quot;&gt;SDCC 源码修改&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;jvisualvm&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编辑&lt;code&gt;device/lib/incl.mk&lt;/code&gt;，找到：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MODELS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; small medium large
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;修改成&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MODELS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; small large huge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译&lt;code&gt;device/lib/Makefile.in&lt;/code&gt;，找到：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nv&quot;&gt;TARGETS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; models small-mcs51-stack-auto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;修改成：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nv&quot;&gt;TARGETS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; models model-mcs51-stack-auto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;一个Java任务管理器&lt;/p&gt;
+&lt;h3 id=&quot;toc_4&quot;&gt;编译&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/java/j-lo-visualvm/&quot;&gt;IBM-blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进行配置：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;./configure --disable-gbz80-port --disable-z80-port --disable-ds390-port --disable-ds400-port --disable-pic14-port --disable-pic16-port --disable-hc08-port --disable-r2k-port --disable-z180-port --disable-sdcdb --disable-ucsim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;编译并安装：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;make
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;toc_5&quot;&gt;试用&lt;/h2&gt;
+
+&lt;p&gt;在 Contiki 的&lt;code&gt;example/hello-world&lt;/code&gt;目录下运行：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;make &lt;span class=&quot;nv&quot;&gt;TARGET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cc2530dk all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;便可以生成&lt;code&gt;hello-world.hex&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;用 SmartRF Flash 工具便可以下载。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_6&quot;&gt;关于编译 cc-tool&lt;/h2&gt;
+
+&lt;p&gt;还是别折腾了，因为 cygwin 下，libusb 不支持。&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/debug/2016/12/25/jdb</link>
-                <guid>http://lkkandsyf.github.io/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <link>/2015/10/26/contiki-cygwin</link>
+                <guid>/2015/10/26/contiki-cygwin</guid>
+                <pubDate>Mon, 26 Oct 2015 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Java</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这里整理关于Java的基本语法和使用，以及数据结构和算法的相关知识.&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#基本语法&quot; id=&quot;markdown-toc-基本语法&quot;&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#数据结构&quot; id=&quot;markdown-toc-数据结构&quot;&gt;&lt;strong&gt;数据结构&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#数组&quot; id=&quot;markdown-toc-数组&quot;&gt;数组&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#动态数组&quot; id=&quot;markdown-toc-动态数组&quot;&gt;动态数组&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#链表&quot; id=&quot;markdown-toc-链表&quot;&gt;链表&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#栈&quot; id=&quot;markdown-toc-栈&quot;&gt;栈&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#字符串&quot; id=&quot;markdown-toc-字符串&quot;&gt;字符串&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#队列&quot; id=&quot;markdown-toc-队列&quot;&gt;队列&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#集合&quot; id=&quot;markdown-toc-集合&quot;&gt;集合&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#树&quot; id=&quot;markdown-toc-树&quot;&gt;树&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#图&quot; id=&quot;markdown-toc-图&quot;&gt;图&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#哈希映射&quot; id=&quot;markdown-toc-哈希映射&quot;&gt;哈希映射&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;markdown-toc-&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#第三方库&quot; id=&quot;markdown-toc-第三方库&quot;&gt;&lt;strong&gt;第三方库&lt;/strong&gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#log4j&quot; id=&quot;markdown-toc-log4j&quot;&gt;Log4j&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#grok&quot; id=&quot;markdown-toc-grok&quot;&gt;Grok&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#高级使用&quot; id=&quot;markdown-toc-高级使用&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#-1&quot; id=&quot;markdown-toc--1&quot;&gt;#&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#-2&quot; id=&quot;markdown-toc--2&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#-3&quot; id=&quot;markdown-toc--3&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#-4&quot; id=&quot;markdown-toc--4&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#-5&quot; id=&quot;markdown-toc--5&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tools&quot; id=&quot;markdown-toc-tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#开源项目&quot; id=&quot;markdown-toc-开源项目&quot;&gt;&lt;strong&gt;开源项目&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;基本语法&quot;&gt;&lt;strong&gt;基本语法&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;数据结构&quot;&gt;&lt;strong&gt;数据结构&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;数组&quot;&gt;数组&lt;/h3&gt;
-
-&lt;p&gt;Java数组声明，创建，初始化&lt;/p&gt;
-
-&lt;p&gt;一维数组的声明方式:type var[];or type[] var;声明数组时不能指定其长度(数组中元素的个数)，Java中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;new&lt;/code&gt;关键字创建对象，格式为:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;数组名 = new 数组元素类型[数组元素的个数]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;code:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestNew&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;初始化:&lt;/p&gt;
-
-&lt;p&gt;1.动态初始化:数组定义与为数组分配空间和赋值的操作分开进行；&lt;/p&gt;
-
-&lt;p&gt;2.静态初始化:在定义数组的同时就为数组元素分配空间并赋值；&lt;/p&gt;
-
-&lt;p&gt;3.默认初始化：数组是引用类型，它的元素相当与类的成员变量，因此数组分配空间后每个元素也被按照成员变量的规则被隐式初始化。&lt;/p&gt;
-
-&lt;p&gt;动态&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestD&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2008&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2008&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2008&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Date&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                <title>HP Chromebook 11 折腾体验</title>
+                <description>&lt;p&gt;前不久淘了一台 Chromebook，hp chromebook 11，ARM 架构。外观挺新的，轻巧方便。11吋的屏幕，可以随身携带。只带 ChromeOS，开机快速，浏览网页也挺快，挺流畅的，基本不卡。&lt;/p&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;静态:&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestS&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;h2 id=&quot;toc_0&quot;&gt;翻墙问题&lt;/h2&gt;
 
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Time&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hour&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;默认:&lt;/p&gt;
+&lt;p&gt;本来用的是红杏进行翻墙，后来再阅兵前红杏挂了，一直都没有找到替找品，所幸学校的网络是可以上 Google 的，所以也就没有太在意。:sunglasses:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestDefault&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h2 id=&quot;toc_1&quot;&gt;电池及续航&lt;/h2&gt;
 
-&lt;h3 id=&quot;动态数组&quot;&gt;动态数组&lt;/h3&gt;
+&lt;p&gt;说实话，这台二手的 Chromebook续航能力不是很好，充满电也就能用3、4个小时，由于没有配充电器，用1A以下的充电器根本充不进去；用2A的充电器充电时，也会提示低功率充电。&lt;/p&gt;
 
-&lt;h3 id=&quot;链表&quot;&gt;链表&lt;/h3&gt;
+&lt;p&gt;这算是这台机子不尽人意的一个地方。&lt;/p&gt;
 
-&lt;h3 id=&quot;栈&quot;&gt;栈&lt;/h3&gt;
+&lt;h2 id=&quot;toc_2&quot;&gt;能否用作写代码&lt;/h2&gt;
 
-&lt;h3 id=&quot;字符串&quot;&gt;字符串&lt;/h3&gt;
+&lt;p&gt;作为程序员，最关心的便是能否用它来写代码。Chromebook 用来写 javascript 还是不错的，毕竟 ChromeOS 本身就是 Chrome 浏览器，对于 Web 开发者来说是福音，Chrome Web App Store 上有好多 IDE。&lt;/p&gt;
 
-&lt;h3 id=&quot;队列&quot;&gt;队列&lt;/h3&gt;
+&lt;p&gt;除了 Javascript 之外，还有 python shell，lua shell，等等可以玩玩，但是做工程就算了吧。&lt;/p&gt;
 
-&lt;h3 id=&quot;集合&quot;&gt;集合&lt;/h3&gt;
+&lt;p&gt;在 ChromeOS 上写 Chrome 应用也不错，应用商店提供了 Develop IDE，只是在本 Chromebook 上跑起来有点卡:worried:。&lt;/p&gt;
 
-&lt;p&gt;集合的使用&lt;/p&gt;
+&lt;p&gt;ChromeOS 还提供了一个 NaCl Development Environment，上面有一本堆 shell 工具，比 crosh 好太多了，有 git，vim 之类的，但是不能访问下载目录。在本 chromebook 也不支持 gcc 编译器:weary: :sob:。&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//导入包&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h2 id=&quot;toc_3&quot;&gt;开发者模式与 crouton&lt;/h2&gt;
 
-&lt;h3 id=&quot;树&quot;&gt;树&lt;/h3&gt;
+&lt;p&gt;可以进行开发模式，这样的 crosh 就可以支持 linux shell 一样的指令。但是每次开机都得按 Ctrl + D，挺麻烦的，所以就没搞过。&lt;/p&gt;
 
-&lt;h3 id=&quot;图&quot;&gt;图&lt;/h3&gt;
+&lt;p&gt;crouton 是以 chroot 的方式，在 ARM 架构下也没有什么用，而且性能也不高，所以还是建议不要折腾。&lt;/p&gt;
 
-&lt;h3 id=&quot;哈希映射&quot;&gt;哈希映射&lt;/h3&gt;
+&lt;h2 id=&quot;toc_4&quot;&gt;Web IDE&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;HashSet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;写代码的另一种方式当然是 Web IDE 了，我试用了一下，Cloud9，Koding 都挺不错的，但是在墙内可能有点慢。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;toc_5&quot;&gt;ARC&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;HashMap&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 Chromebook 运行 Android 应用，缺点是大部分运行都出问题了，而且速度也挺慢，分辨率感人。&lt;/p&gt;
 
-&lt;h2&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;toc_6&quot;&gt;感受&lt;/h2&gt;
 
-&lt;h2 id=&quot;第三方库&quot;&gt;&lt;strong&gt;第三方库&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Java中常用的第三方库。需要自己熟练掌握，以便在工作中灵活使用。&lt;/p&gt;
-
-&lt;h3 id=&quot;log4j&quot;&gt;Log4j&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://logging.apache.org/log4j/1.2/download.html&quot;&gt;office download&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;grok&quot;&gt;Grok&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://grok.nflabs.com/&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;高级使用&quot;&gt;&lt;strong&gt;高级使用&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
-
-&lt;h2 id=&quot;-2&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;-3&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;-4&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;-5&quot;&gt;&lt;em&gt;**&lt;/em&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;findbugs&lt;/a&gt;:非常好的代码检测工具，检测的深度比较深，对代码中渗透的性能，内存的使用释放有很好的检测，能检测出可以导致错误的代码，如空指针等。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;checkstyle&lt;/a&gt;:检测代码风格的工具.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pmd.github.io/&quot;&gt;PMD&lt;/a&gt;:可以配合findbugs来一起来检测。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/project/showfiles.php?group_id=51180&quot;&gt;Source-Navigator&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libx11-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;启动:snavigator&lt;/p&gt;
-
-&lt;p&gt;阅读java代码:ctags，在项目的根目录:ctags -R;就可以使用了&lt;/p&gt;
-
-&lt;p&gt;javap:Java反编译工具,项目的话，可以是jd-gui:一个C++开发的Java反编译工具&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javap -c xxx.class
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;性能分析:jprofile:jvisualvm&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OpenGrok&lt;/code&gt;: fast and usable source code search and cross reference engine, written in Java. It helps you search, cross-reference and navigate your source tree. It can understand various program file formatsand version control histories like Mercurial, Git, SCCS, RCS, CVS, Subversion,Teamware, ClearCase, Perforce, Monotone and Bazaar.&lt;/p&gt;
-
-&lt;p&gt;阅读Java代码，类似与Linux代码中的LXR一样,&lt;a href=&quot;http://opengrok.github.io/OpenGrok/&quot;&gt;office site&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;开源项目&quot;&gt;&lt;strong&gt;开源项目&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://git.oschina.net/calvin1978/springside4&quot;&gt;sprintsidev4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/waylau/essential-java&quot;&gt;https://github.com/waylau/essential-java&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.oschina.net/question/2367675_236222&quot;&gt;https://www.oschina.net/question/2367675_236222&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;quick.sh
-#!/bin/bash
-
-echo &quot;[Pre-Requirement] Makesure install JDK 7.0+ and set the JAVA_HOME.&quot;
-echo &quot;[Pre-Requirement] Makesure install Maven 3.0.3+ and set the PATH.&quot;
-
-export MAVEN_OPTS=&quot;$MAVEN_OPTS -Xmx1024m -XX:MaxPermSize=128M -Djava.security.egd=file:/dev/./urandom&quot;
-
-echo &quot;[Step 1] Install all springside modules to local maven repository.&quot;
-cd modules
-mvn clean install -DskipTests
-if [ $? -ne 0  ];then
-	  echo &quot;Quit  because maven install fail&quot;
-	    exit -1
-fi
-
-echo &quot;[Step 2] run boot-api project in dev mode.&quot;
-cd ../examples/boot-api
-mvn spring-boot:run
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/EhsanTang/CrapApi&quot;&gt;CrapAPi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://jinnianshilongnian.iteye.com/blog/1594806&quot;&gt;springmvc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;整台 hp chromebook 11 的感觉还是不错的，至少比平板好，而且这个价，值得。&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/java/2016/12/24/Java</link>
-                <guid>http://lkkandsyf.github.io/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <link>/2015/10/25/hp-chromebook-reviews</link>
+                <guid>/2015/10/25/hp-chromebook-reviews</guid>
+                <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Mvn</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>Jekyll Editor 使用入门</title>
+                <description>&lt;p&gt;Jekyll Editor 专门为 Jekyll 博客定制的强大的 markdown 编辑器，它会自动从&lt;code&gt;&amp;lt;yourname&amp;gt;.github.io&lt;/code&gt;仓库读取&lt;code&gt;_post&lt;/code&gt;目录下的博客列表，并可以读取、创建、修改博客。&lt;/p&gt;
 
-&lt;p&gt;Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;p&gt;Maven:这是Java项目的管理工具。&lt;/p&gt;
-
-&lt;p&gt;Maven库,&lt;a href=&quot;http://repo2.maven.org/maven2/&quot;&gt;http://repo2.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maven依赖查询,&lt;a href=&quot;http://mvnrepository.com/&quot;&gt;http://mvnrepository.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#基本命令&quot; id=&quot;markdown-toc-基本命令&quot;&gt;&lt;strong&gt;基本命令&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#pomxml解析&quot; id=&quot;markdown-toc-pomxml解析&quot;&gt;pom.xml解析&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#mvn-run-java-project&quot; id=&quot;markdown-toc-mvn-run-java-project&quot;&gt;mvn run java project&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#books&quot; id=&quot;markdown-toc-books&quot;&gt;books&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#reference&quot; id=&quot;markdown-toc-reference&quot;&gt;reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;基本命令&quot;&gt;&lt;strong&gt;基本命令&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;创建新项目&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;通过命令行的方式：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn archetype:generate -DgroupId={project-packagingName}
-   -DartifactId={project-name}
-   -DarchetypeArtifactId=maven-archetype-quickstart maven-archetype-webapp
-   -DinteractiveMode=false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;maven:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# firt way
-mvn archetype:generate		#新疆maven项目
-选择version
-然后填写groupId,artifactId,versin,package
-确定properities configuratin:Y
-成功创建maven项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;根据所有的配置写到一起&lt;/p&gt;
-
-&lt;p&gt;mvn archetype:generate	固定的格式&lt;/p&gt;
-
-&lt;p&gt;-DgroupId	组织标示(包名)&lt;/p&gt;
-
-&lt;p&gt;-DartifactId	项目名称&lt;/p&gt;
-
-&lt;p&gt;-DarchetypeArtifactId	指定ArchetypeId,Java工程&lt;/p&gt;
-
-&lt;p&gt;-DinteractiveMode	是否使用交互模式&lt;/p&gt;
-
-&lt;p&gt;-DarchetypeCatalog	由于网络的源的原因，使用内部源&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# second way	把所有的配置写到一起
-mvn archetype:generate -DgroupId=com.nsfocus -DartifactId=Secority  -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=internal
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;根据maven-archetype-quickstart模板来创建项目&lt;/p&gt;
-
-&lt;p&gt;常用命令&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn help:system
-mvn clean compile	#编译源代码
-mvn clean test
-mvn test-compile	#编译测试源代码
-mvn test	#运行应用程序中的单元测试
-mvn package	#打包
-mvn clean package	#根据项目生成jar
-mvn install		#在本地Repo安装jar
-mvn clean install	#在本地Repo中安装jar
-mvn dependency:tree列出jar包直接依赖引入的jar
-mvn dependency:resolve	#打印处已经解决依赖的列表
-mvn eclipse:eclipse	#生成eclipse项目文件
-mvn idea:idea	#生成ieda项目
-mvn eclipse clean	#清除以前编译的东西，重新再来
-mvn site-deploy	#生成站点目录并打包
-mvn deploy	#发布项目
-mvn site	#生成项目相关的信息的网站
-mvn clean	#清除项目目录中的生成的结果
-mvnjetty:run	#启动jetty服务
-mvntomcat:run	#启动tomcat服务
-mvn clean package -Dmaven.test.skip=true	#清除以前的包后重新打包，跳过测试类
-mvn archetype:generate -DarchetypeCatalog=internal	#查看maven有哪些项目类型分类
-mvn  -Dtest package	#组合使用goal命令，只打包不测试
-mvn jar:jar	#只打jar
-mvn test-skipping compile-skipping test-compile		#(-skipping的灵活运用，也可以用于其他组合命令)
-mvn install:install-file -DgroupId=com -DartifactId=client -Dversion=0.1.0 -Dpackaging=jar -Dfile=lient-0.1.0.jar -DdownloadSource=true -DdownloadJavadocs=true #发布第三方jar到本地库中
-mvn -e	#显示详细错误信息
-mvn valitdate	#验证工程是否正确，所有需要的资源是否可用
-mvn verify	# 运行任何检查，验证包是否有效且达到质量标准
-mvn install -X # 想要查看完整的依赖踪迹，包含那些因为冲突或者其它原因而被拒绝引入的构件，打开 Maven 的调试标记运行
-mvn install -Dmaven.test.skip=true # 给任何目标添加maven.test.skip 属性就能跳过测试
-mvn install assembly:assembly # 构建装配Maven Assembly 插件是一个用来创建你应用程序特有分发包的插件
-
-mvn -v # 显示版本
-mvn help:describe -Dplugin=help #使用 help 插件的 describe 目标来输出 Maven Help 插件的信息。
-mvn help:describe -Dplugin=help -Dfull #使用Help 插件输出完整的带有参数的目标列
-mvn help:describe -Dplugin=compiler -Dmojo=compile -Dfull #获取单个目标的信息,设置 mojo 参数和 plugin 参数。此命令列出了Compiler 插件的compile 目标的所有信息
-mvn help:describe -Dplugin=exec -Dfull #列出所有 Maven Exec 插件可用的目标
-mvn help:effective-pom #看这个“有效的 (effective)”POM，它暴露了 Maven的默认设置
-mvnDebug tomcat:run 这条命令主要用来远程测试,它会监听远程测试用的8000端口,在eclipse里打开远程测试后,它就会跑起来了,设断点,调试mvn dependency:sources 故名思义,有了它,你就不用到处找源码了,运行一下,你项目里所依赖的jar包的源码就都有了
-mvn help:describe 你是否因为记不清某个插件有哪些goal而痛苦过,你是否因为想不起某个goal有哪些参数而苦恼,那就试试这个命令吧,它会告诉你一切的.参数: 1. -Dplugin=pluginName 2.-Dgoal(或-Dmojo)=goalName:与-Dplugin一起使用,它会列出某个插件的goal信息,如果嫌不够详细,同样可以加-Ddetail.(注:一个插件goal也被认为是一个 “Mojo”) 下面大家就运行mvn help:describe
- -Dplugin=help -Dmojo=describe感受一下吧!
-
-
-# 常用选项尤其是在使用vim的过程，会出现加载慢的问题，不便于编辑文件,主要是配置mvn的加载文件就可以了。因为用vim打开.java文件时，会编译整个项目，需要下载一些包，如果已经存在了，那么就直接打开了。
--f path/pom.xml
--s path/settings.xml
--gs path/settings.xml args 全局配置
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;标准的Maven项目结构&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;src/main/java	存放项目的源代码&lt;/p&gt;
-
-&lt;p&gt;src/test/java	存放测试源代码&lt;/p&gt;
-
-&lt;p&gt;src/main/resource	一些配置文件&lt;/p&gt;
-
-&lt;p&gt;添加数据库连接池jar包&lt;/p&gt;
-
-&lt;p&gt;现在常用的有DBCP,C3P0,Druid，使用最多的是Druid。各自有各自的特点，自己选择自己喜欢的,这里使用Druid&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!&amp;lt;!--Druid连接池包&amp;gt;
-	&amp;lt;dependency&amp;gt;
-		&amp;lt;groupid&amp;gt;com.alibaba&amp;lt;/groupid&amp;gt;
-		&amp;lt;artifactid&amp;gt;druid&amp;lt;/artifactid&amp;gt;
-		&amp;lt;version&amp;gt;1.0.12&amp;lt;/version&amp;gt;
-	&amp;lt;dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;生命周期&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Maven的生命周期是为了对所有的构建过程进行了抽象，便于统一.&lt;/p&gt;
-
-&lt;p&gt;clean(清理)&lt;/p&gt;
-
-&lt;p&gt;cleanup(清理所有)此生命周期旨在给工程做清理工作，它主要包含以下阶段：&lt;/p&gt;
-
-&lt;p&gt;pre-clean - 执行项目清理前所需要的工作。&lt;/p&gt;
-
-&lt;p&gt;clean - 清理上一次build项目生成的文件。&lt;/p&gt;
-
-&lt;p&gt;post-clean - 执行完成项目清理所需的工作.
-default(默认)&lt;/p&gt;
-
-&lt;p&gt;validate - 验证项目是否正确且所有必要的信息都可用。&lt;/p&gt;
-
-&lt;p&gt;initialize - 初始化构建工作，如：设置参数，创建目录等。&lt;/p&gt;
-
-&lt;p&gt;generate-sources - 为包含在编译范围内的代码生成源代码.&lt;/p&gt;
-
-&lt;p&gt;process-sources - 处理源代码, 如过滤值.&lt;/p&gt;
-
-&lt;p&gt;generate-resources -&lt;/p&gt;
-
-&lt;p&gt;process-resources - 复制并处理资源文件，至目标目录，准备打包。&lt;/p&gt;
-
-&lt;p&gt;compile - 编译项目中的源代码.&lt;/p&gt;
-
-&lt;p&gt;process-classes - 为编译生成的文件做后期工作, 例如做Java类的字节码增强.&lt;/p&gt;
-
-&lt;p&gt;generate-test-sources - 为编译内容生成测试源代码.&lt;/p&gt;
-
-&lt;p&gt;process-test-sources - 处理测试源代码。&lt;/p&gt;
-
-&lt;p&gt;generate-test-resources -&lt;/p&gt;
-
-&lt;p&gt;process-test-resources - 复制并处理资源文件，至目标测试目录。&lt;/p&gt;
-
-&lt;p&gt;test-compile - 将需测试源代码编译到路径。一般来说，是编译/src/test/java目录下的java文件至目标输出的测试classpath目录中。&lt;/p&gt;
-
-&lt;p&gt;process-test-classes -&lt;/p&gt;
-
-&lt;p&gt;test - 使用合适的单元测试框架运行测试。这些测试代码不会被打包或部署。&lt;/p&gt;
-
-&lt;p&gt;prepare-package -&lt;/p&gt;
-
-&lt;p&gt;package - 接受编译好的代码，打包成可发布的格式，如 JAR 。&lt;/p&gt;
-
-&lt;p&gt;pre-integration-test -&lt;/p&gt;
-
-&lt;p&gt;integration-test - 按需求将发布包部署到运行环境。&lt;/p&gt;
-
-&lt;p&gt;post-integration-test -&lt;/p&gt;
-
-&lt;p&gt;verify -&lt;/p&gt;
-
-&lt;p&gt;install -将包安装到本地仓库，给其他本地引用提供依赖。&lt;/p&gt;
-
-&lt;p&gt;deploy -完成集成和发布工作，将最终包复制到远程仓库以便分享给其他开发人员。site(站点)&lt;/p&gt;
-
-&lt;p&gt;pre-site - 执行一些生成项目站点前的准备工作。&lt;/p&gt;
-
-&lt;p&gt;site - 生成项目站点的文档。&lt;/p&gt;
-
-&lt;p&gt;post-site - 执行需完成站点生成的工作，如站点部署的准备工作。&lt;/p&gt;
-
-&lt;p&gt;site-deploy - 向制定的web服务器部署站点生成文件&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/&quot;&gt;mvn demo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;pomxml解析&quot;&gt;pom.xml解析&lt;/h2&gt;
-
-&lt;p&gt;cat pom.xml&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&amp;gt;
-  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
-  &amp;lt;groupId&amp;gt;cn.luxh.app&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;gt;my-app&amp;lt;/artifactId&amp;gt;
-  &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
-  &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt;
-  &amp;lt;name&amp;gt;my-app&amp;lt;/name&amp;gt;
-  &amp;lt;url&amp;gt;http://maven.apache.org&amp;lt;/url&amp;gt;
-  &amp;lt;dependencies&amp;gt;
-    &amp;lt;dependency&amp;gt;
-      &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
-      &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
-      &amp;lt;version&amp;gt;3.8.1&amp;lt;/version&amp;gt;
-      &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-  &amp;lt;/dependencies&amp;gt;
-&amp;lt;/project&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;节点元素说明&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;project&amp;gt;　　　　　　pom文件的顶级节点
-&amp;lt;modelVersion&amp;gt;　　　object model版本，对Maven2和Maven3来说，只能是4.0.0　
-&amp;lt;groupId&amp;gt;　　　　　　项目创建组织的标识符，一般是域名的倒写
-&amp;lt;artifactId&amp;gt;　　　　定义了项目在所属组织的标识符下的唯一标识，一个组织下可以有多个项目
-&amp;lt;packaging&amp;gt;　　　　  打包的方式，有jar、war、ear等
-&amp;lt;version&amp;gt;　　　　　  当前项目的版本，SNAPSHOT，表示是快照版本，在开发中
-&amp;lt;name&amp;gt;　　　　　　　 项目的名称
-&amp;lt;url&amp;gt;　　　　　　　　项目的地址
-&amp;lt;dependencies&amp;gt;　　 构建项目依赖的jar
-&amp;lt;description&amp;gt;　　　　项目的描述
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;其中由groupId、artifactId和version唯一的确定了一个项目坐标&lt;/p&gt;
-
-&lt;p&gt;运行jar&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -cp $PATH/xxx.jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;mvn-run-java-project&quot;&gt;mvn run java project&lt;/h2&gt;
-
-&lt;p&gt;通过mvn来运行java main方法有三种方式&lt;/p&gt;
-
-&lt;p&gt;一.从命令行&lt;/p&gt;
-
-&lt;p&gt;1.运行先前编译代码，exec:java不会自动编译代码，需要手动编译mvn compile来完成&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn compile
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;2.编译完成后，执行exec运行main方法&lt;/p&gt;
-
-&lt;p&gt;不需要&lt;code class=&quot;highlighter-rouge&quot;&gt;传递参数&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:java -Dexec.mainClass=&quot;com.vineetmanohar.module.Main&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;需要&lt;code class=&quot;highlighter-rouge&quot;&gt;传递参数&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:java -Dexec.mainClass=&quot;com.vineetmanohar.module.Main&quot; -Dexec.args=&quot;arg0 arg1 arg2&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;指定对classpath的运行时依赖:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:java -Dexec.mainClass=&quot;com.vineetmanohar.module.Main&quot; -Dexec.classpathScope=runtime
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;二.在pom.xml指定某个阶段执行&lt;/p&gt;
-
-&lt;p&gt;我们可以在pom.xml中插入&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;build&amp;gt;
- &amp;lt;plugins&amp;gt;
-  &amp;lt;plugin&amp;gt;
-   &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
-   &amp;lt;artifactId&amp;gt;exec-maven-plugin&amp;lt;/artifactId&amp;gt;
-   &amp;lt;version&amp;gt;1.1.1&amp;lt;/version&amp;gt;
-   &amp;lt;executions&amp;gt;
-    &amp;lt;execution&amp;gt;
-     &amp;lt;phase&amp;gt;test&amp;lt;/phase&amp;gt;
-     &amp;lt;goals&amp;gt;
-      &amp;lt;goal&amp;gt;java&amp;lt;/goal&amp;gt;
-     &amp;lt;/goals&amp;gt;
-     &amp;lt;configuration&amp;gt;
-      &amp;lt;mainClass&amp;gt;com.vineetmanohar.module.CodeGenerator&amp;lt;/mainClass&amp;gt;
-      &amp;lt;arguments&amp;gt;
-       &amp;lt;argument&amp;gt;arg0&amp;lt;/argument&amp;gt;
-       &amp;lt;argument&amp;gt;arg1&amp;lt;/argument&amp;gt;
-      &amp;lt;/arguments&amp;gt;
-     &amp;lt;/configuration&amp;gt;
-    &amp;lt;/execution&amp;gt;
-   &amp;lt;/executions&amp;gt;
-  &amp;lt;/plugin&amp;gt;
- &amp;lt;/plugins&amp;gt;
-&amp;lt;/build&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;将CodeGenerator.main()方法的执行&lt;code class=&quot;highlighter-rouge&quot;&gt;绑定&lt;/code&gt;到maven的test阶段，通过mvn test来执行main方法。&lt;/p&gt;
-
-&lt;p&gt;三.在pom.xml中指定某个配置来执行&lt;/p&gt;
-
-&lt;p&gt;我们可以在pom.xml中插入&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;profiles&amp;gt;
- &amp;lt;profile&amp;gt;
-  &amp;lt;id&amp;gt;code-generator&amp;lt;/id&amp;gt;
-  &amp;lt;build&amp;gt;
-   &amp;lt;plugins&amp;gt;
-    &amp;lt;plugin&amp;gt;
-     &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt;
-     &amp;lt;artifactId&amp;gt;exec-maven-plugin&amp;lt;/artifactId&amp;gt;
-     &amp;lt;version&amp;gt;1.1.1&amp;lt;/version&amp;gt;
-     &amp;lt;executions&amp;gt;
-      &amp;lt;execution&amp;gt;
-       &amp;lt;phase&amp;gt;test&amp;lt;/phase&amp;gt;
-       &amp;lt;goals&amp;gt;
-        &amp;lt;goal&amp;gt;java&amp;lt;/goal&amp;gt;
-       &amp;lt;/goals&amp;gt;
-       &amp;lt;configuration&amp;gt;
-        &amp;lt;mainClass&amp;gt;com.vineetmanohar.module.CodeGenerator&amp;lt;/mainClass&amp;gt;
-        &amp;lt;arguments&amp;gt;
-         &amp;lt;argument&amp;gt;arg0&amp;lt;/argument&amp;gt;
-         &amp;lt;argument&amp;gt;arg1&amp;lt;/argument&amp;gt;
-        &amp;lt;/arguments&amp;gt;
-       &amp;lt;/configuration&amp;gt;
-      &amp;lt;/execution&amp;gt;
-     &amp;lt;/executions&amp;gt;
-    &amp;lt;/plugin&amp;gt;
-   &amp;lt;/plugins&amp;gt;
-  &amp;lt;/build&amp;gt;
- &amp;lt;/profile&amp;gt;
-&amp;lt;/profiles&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;将2中的配置用&lt;profile&gt;标签包裹后就能通过指定该配置文件来执行main方法，如下&lt;/profile&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn test -Pcode-generator
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt;:通过下面的命令可以获取mvn exec的其他配置参数说明.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn exec:help -Ddetail=true -Dgoal=java
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;四,如何将jar包加入到Maven本地仓库&lt;/p&gt;
-
-&lt;p&gt;首先是配置好Maven环境。&lt;/p&gt;
-
-&lt;p&gt;然后在下载的jar包下执行&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;最后即可以在项目中的pom.xml中添加&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;com.microsoft.sqlserver&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;gt;sqljdbc4&amp;lt;/artifactId&amp;gt;
-  &amp;lt;version&amp;gt;4.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;五.在运行时执行本地仓库的位置&lt;/p&gt;
-
-&lt;p&gt;本地仓库vs远程仓库&lt;/p&gt;
-
-&lt;p&gt;运行Maven的时候，Maven所需要的任何构件都是直接从本地仓库获取的。如果本地仓库没有，它会首先尝试从远程仓库下载构件至本地仓库，然后再使用本地仓库的构件。&lt;/p&gt;
-
-&lt;p&gt;Maven缺省的本地仓库地址为${user.home}/.m2/repository 。也就是说，一个用户会对应的拥有一个本地仓库。&lt;/p&gt;
-
-&lt;p&gt;你也可以自定义本地仓库的位置，修改${user.home}/.m2/settings.xml ：&lt;/p&gt;
-
-&lt;p&gt;localRepository：表示Maven用来在本地储存信息的本地仓库的目录。默认是用户家目录下面的.m2/repository目录。&lt;/p&gt;
-
-&lt;p&gt;interactiveMode：表示是否使用交互模式，默认是true；如果设为false，那么当Maven需要用户进行输入的时候，它会使用一个默认值。&lt;/p&gt;
-
-&lt;p&gt;offline：表示是否离线，默认是false。这个属性表示在Maven进行项目编译和部署等操作时是否允许Maven进行联网来下载所需要的信息。&lt;/p&gt;
-
-&lt;p&gt;pluginGroups：在pluginGroups元素下面可以定义一系列的pluginGroup元素。表示当通过plugin的前缀来解析plugin的时候到哪里寻找。pluginGroup元素指定的是plugin的groupId。默认情况下，Maven会自动把org.apache.maven.plugins和org.codehaus.mojo添加到pluginGroups下。&lt;/p&gt;
-
-&lt;p&gt;proxies：其下面可以定义一系列的proxy子元素，表示Maven在进行联网时需要使用到的代理。当设置了多个代理的时候第一个标记active为true的代理将会被使用。&lt;/p&gt;
-
-&lt;p&gt;官网详细介绍&lt;a href=&quot;http://maven.apache.org/ref/3.0.4/maven-settings/settings.html&quot;&gt;http://maven.apache.org/ref/3.0.4/maven-settings/settings.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://xiaobenbenxiong.iteye.com/blog/2093315&quot;&gt;中文版本&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;xml代码&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;settings&amp;gt;
-   ...
-   &amp;lt;localRepository&amp;gt;D:\java\repository&amp;lt;/localRepository&amp;gt;
-   ...
-&amp;lt;/settings&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn clean install -Dmaven.repo.local=/home/user/myrepo/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://my.oschina.net/ghm7753/blog/373350&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;使用自己安装的mvn，设置settings.xml，直接放在~/.m2目录，就是全局配置&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://maven.apache.org/settings.html&quot;&gt;maven.apache.org/settings.xml&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html&quot;&gt;settings.xml中的各个标志&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;原来的maven地址&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://repo1.maven.org/maven2/&quot;&gt;http://repo1.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://central.maven.org/maven2/&quot;&gt;http://central.maven.org/maven2/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;自己的配置java目录下&lt;a href=&quot;https://git.oschina.net/lkk_gczx/configure-file&quot;&gt;https://git.oschina.net/lkk_gczx/configure-file &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;mvn debug:还需要自己的进一步的研究，对于工程的代码，还不知道怎么做。&lt;/p&gt;
-
-&lt;p&gt;借鉴:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;ihttp://stackoverflow.com/questions/2935375/debugging-in-maven&quot;&gt;overstack mvn debug&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://my.oschina.net/guoxf1/blog/42954&quot;&gt;oschina blog mvn debug&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.javaworld.com/article/2077445/testing-debugging/debug-with-jdb.html&quot;&gt;single java file debug&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
+&lt;h2 id=&quot;toc_0&quot;&gt;项目&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Maven in action
- +&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Github&lt;/strong&gt;：&lt;a href=&quot;https://github.com/Simpleyyt/jekyll-editor.git&quot;&gt;https://github.com/Simpleyyt/jekyll-editor.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chrome 商店&lt;/strong&gt;：&lt;a href=&quot;https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme&quot;&gt;https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://maven.apache.org/guides/getting-started/&quot;&gt;office guide&lt;/a&gt;
-&lt;a href=&quot;http://www.yiibai.com/maven/&quot;&gt;yibai&lt;/a&gt;
-&lt;a href=&quot;http://www.tutorialspoint.com/maven/&quot;&gt;tutorialspoint&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/2016/12/24/mvn</link>
-                <guid>http://lkkandsyf.github.io/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Svn</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这是Google的svn版本管理工具。svn:项目管理，git:代码管理&lt;/p&gt;
-
-&lt;p&gt;都是专注与命令行&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://svndoc.iusesvn.com/svnbook/1.4/&quot;&gt;手册版本1.4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://linux.51yip.com/search/svn&quot;&gt;在线手册&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#创建仓库&quot; id=&quot;markdown-toc-创建仓库&quot;&gt;创建仓库&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#command&quot; id=&quot;markdown-toc-command&quot;&gt;command&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blog&quot; id=&quot;markdown-toc-blog&quot;&gt;blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#gui&quot; id=&quot;markdown-toc-gui&quot;&gt;GUI&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;创建仓库&quot;&gt;创建仓库&lt;/h2&gt;
-
-&lt;p&gt;安装(Ubuntu):&lt;a href=&quot;http://subversion.apache.org/packages.html&quot;&gt;office&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install subversion
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://tortoisesvn.net/support.html&quot;&gt;tortoiseSVN&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;一般在服务器上创建仓库&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;svnadmin create repo-name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;修改配置文件来到rep_name/repository/conf,修改svnserver.conf&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#[general]
-#password-db = passwd
-修改为
-[general]
-password-db = passwd
-然后修改同目录下的passwd文件
-# [users]
-# harry = harryssecret
-# sally = sallyssecret
-最后为
-[users]
-harry = harryssecret
-sally = sallyssecret
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这里的登录用的是harry,密码是harryssecret&lt;/p&gt;
-
-&lt;p&gt;运行独立的服务器&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;svnserve -d -r $PATH/repo_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这样服务器就启动了&lt;/p&gt;
-
-&lt;p&gt;备份仓库&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;svnadmin dump /opt/svndata/repo &amp;gt; /repo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;把备份出来的数据恢复到本地&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;svnadmin load /opt/svndata/repos &amp;lt; /repo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;查看版本库的信息&lt;/p&gt;
-
-&lt;p&gt;svn list&lt;/p&gt;
-
-&lt;p&gt;svn list –verbose&lt;/p&gt;
-
-&lt;p&gt;svn import&lt;/p&gt;
-
-&lt;p&gt;svn delete&lt;/p&gt;
-
-&lt;p&gt;svnlook youngest oldrepo&lt;/p&gt;
-
-&lt;p&gt;svnadmin dump oldrepo &amp;gt; dumpfile&lt;/p&gt;
-
-&lt;p&gt;svnadmin load newrepo &amp;lt; dumpfile&lt;/p&gt;
-
-&lt;p&gt;停止服务&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ps aux | grep svnserve
-kill -9 ID
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;command&quot;&gt;command&lt;/h2&gt;
-
-&lt;p&gt;svn checkout address&lt;/p&gt;
-
-&lt;p&gt;svn add file_name&lt;/p&gt;
-
-&lt;p&gt;svn commit -m “add filename”&lt;/p&gt;
-
-&lt;p&gt;svn delete file_name&lt;/p&gt;
-
-&lt;p&gt;svn commit -m “delete filename”&lt;/p&gt;
-
-&lt;p&gt;误删文件&lt;/p&gt;
-
-&lt;p&gt;svn up&lt;/p&gt;
-
-&lt;p&gt;svn revert -r version&lt;/p&gt;
-
-&lt;h2 id=&quot;blog&quot;&gt;blog&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/aLittleBitCool/archive/2011/07/09/2101602.html&quot;&gt;server-svn&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xd502djj/archive/2011/01/21/1941404.html&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xulb597/archive/2012/07/02/2573575.html&quot;&gt;comand svn&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xulb597/archive/2012/07/02/2573575.html&quot;&gt;command&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-22150747-id-189264.html&quot;&gt;linux-svn&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;gui&quot;&gt;GUI&lt;/h2&gt;
-
-&lt;p&gt;Ubuntu:[RapidSVN]&lt;/p&gt;
-</description>
-                <link>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</link>
-                <guid>http://lkkandsyf.github.io/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Kafka</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这里介绍了关于Kafka的一些基本的知识&lt;/p&gt;
-
-&lt;p&gt;Kafka是一种&lt;code class=&quot;highlighter-rouge&quot;&gt;高吞吐量的分布式发布订阅消息系统&lt;/code&gt;，它可以处理消费者者规模的网站中&lt;code class=&quot;highlighter-rouge&quot;&gt;所有的动作流数据&lt;/code&gt;,这种动作(网页浏览，搜索和其他用户的行动)是在现在网络上的许多社会功能的一个关键因素。这些数据通常是用于吞吐量的要求而通过处理日志和日志聚合来解决。对于像Hadoop的一样的日志数据和离线分析系统，但又要&lt;code class=&quot;highlighter-rouge&quot;&gt;实时处理的限制&lt;/code&gt;，这是一个可行的解决方案。Kafka的目的是通过Hadoop的并行加载机制来统一线上和离线的消息处理，也是为了通过集群机来提供实时的消费&lt;/p&gt;
-
-&lt;p&gt;Kafak是一种高吞吐量的分布式发布订阅消息系统，有如下特性:&lt;/p&gt;
+&lt;h2 id=&quot;toc_1&quot;&gt;主要功能&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;通过O(1)的磁盘数据结构提供消息的&lt;code class=&quot;highlighter-rouge&quot;&gt;持久化&lt;/code&gt;，这种结构对于即使以TB的消息存储也能够保持长时间的稳定性能&lt;/li&gt;
-  &lt;li&gt;高吞吐量：即使是非常普通的硬件Kafka也可以支持每秒数百万的消息&lt;/li&gt;
-  &lt;li&gt;支持通过Kafka服务器和消费机器集群来分区消息&lt;/li&gt;
-  &lt;li&gt;支持Hadoop&lt;code class=&quot;highlighter-rouge&quot;&gt;并行数据&lt;/code&gt;加载&lt;/li&gt;
+&lt;li&gt;获取博文列表，发布、更新、修改博文&lt;/li&gt;
+&lt;li&gt;博文自动保存到本地&lt;/li&gt;
+&lt;li&gt;强大的 Markdown 编辑器&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;相关术语&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;toc_2&quot;&gt;使用说明&lt;/h2&gt;
 
-&lt;p&gt;Broker：Kafka集群包含一个或多个服务器，这种服务器被称为broker&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://simpleyyt.qiniudn.com/15-10-11/10214115.jpg&quot; alt=&quot;Jekyll Editor&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;Topic:每条发布到Kafka集群的消息&lt;code class=&quot;highlighter-rouge&quot;&gt;都有一个类别&lt;/code&gt;，这个类别被称为Topic,(物理上不同的Topic的消息公开存储，逻辑上一个Topic的消息虽然保存于一个或多个broker上但用户只需指定消息的Topic即可以生产或消费数据而不必关系数据存于何处)&lt;/p&gt;
+&lt;p&gt;左上角为编辑器的常用工具，包含&lt;code&gt;emoji&lt;/code&gt;表情。右上角的工具依次为登录、全窗口预览、新博文、博文列表、元数据、提交博文，帮助、关于。&lt;/p&gt;
 
-&lt;p&gt;Partitoin:是物理上的概念，每个Topic包含一个或多个Partition&lt;/p&gt;
+&lt;p&gt;首次使用时，必须先进行登录，也就是与 github 相连。&lt;/p&gt;
 
-&lt;p&gt;Producer:负责发布消息到Kafka broker&lt;/p&gt;
+&lt;h3 id=&quot;toc_3&quot;&gt;博文列表&lt;/h3&gt;
 
-&lt;p&gt;Consumer:消息消费者，向Kafka broker读取消息的客户端&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://simpleyyt.qiniudn.com/15-10-11/12709365.jpg&quot; alt=&quot;博文列表&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;Comsumer Group:每个Consumer术语一个特定的Comsumer Group(可为每个Consumer指定group name，若不指定group name则属于默认的group)&lt;/p&gt;
+&lt;p&gt;博文列表会自动获取&lt;code&gt;&amp;lt;yourname.github.io&lt;/code&gt;仓库读取&lt;code&gt;_post&lt;/code&gt;目录下&lt;code&gt;&amp;lt;date&amp;gt;-&amp;lt;slug&amp;gt;.md&lt;/code&gt;格式的文件，即为博文。&lt;/p&gt;
 
-&lt;p&gt;kafka对消息保存时根据Topic进行归类，发送消息者成为Producer,消息接受者成为Consumer，此外kafka集群有多个kafka实例组成。每个实例(server)成为broker。无论是kafka集群，还是producer和comsumer都依赖于zookeeper来保证系统可用性集群保存一些meta信息&lt;/p&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#安装单机版kafka&quot; id=&quot;markdown-toc-安装单机版kafka&quot;&gt;安装单机版Kafka&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#集群kafka&quot; id=&quot;markdown-toc-集群kafka&quot;&gt;集群Kafka&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ref&quot; id=&quot;markdown-toc-ref&quot;&gt;ref&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;toc_4&quot;&gt;元数据&lt;/h3&gt;
 
-&lt;h2 id=&quot;安装单机版kafka&quot;&gt;安装单机版Kafka&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://simpleyyt.qiniudn.com/15-10-11/85340312.jpg&quot; alt=&quot;元数据&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;从官网下载，&lt;a href=&quot;http://kafk.apache.org/downloads&quot;&gt;http://kafk.apache.org/downloads&lt;/a&gt;,这里采用的是2.11版本&lt;/p&gt;
+&lt;p&gt;即博文的 yaml 格式数据，博文将会以文件名&lt;code&gt;&amp;lt;date&amp;gt;-&amp;lt;slug&amp;gt;.md&lt;/code&gt;的格式更新。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar xf kafka_x.x-x.x.x.tgz
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;注：当“发布”打勾时，才会真正地发布。&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;启动zookeeper和kafka&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;bin/zookeeper-server-start.sh  config/zookeeper.properties 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
-&amp;gt;bin/kafka-server-start.sh config/server.properties 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;如果需要修改zookeeper的端口，在zookeeper.properties中修改后，也要&lt;code class=&quot;highlighter-rouge&quot;&gt;同步&lt;/code&gt;修改server.properties,producer.properties以及consumer.properties里的。&lt;/p&gt;
-
-&lt;p&gt;创建Topic&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;我们用list来列出已经创建的Topic.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;bin/kafka-topics.sh --list --zookeeper localhost:2181
-test
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;开始使用kafka通过消费者和生产者的模式,开始启动&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
-# input some context
-liangkangkang love the world
-&amp;gt;bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
-# output
-liangkangkang love the world
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;等待一会，我们就可以从生产者的终端输入，然后从消费者的终端输出。&lt;/p&gt;
-
-&lt;p&gt;停止zookeeper和kafka&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bin/kafka-server-stop.sh
-bin/zookeeper-server-stop.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;集群kafka&quot;&gt;集群Kafka&lt;/h2&gt;
-
-&lt;h2 id=&quot;ref&quot;&gt;ref&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kafka.apache.org/documentation.html&quot;&gt;office docs&lt;/a&gt;&lt;/p&gt;
-
-</description>
-                <link>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</link>
-                <guid>http://lkkandsyf.github.io/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Ubuntu</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;这里收集一些关于Ubuntu工作中遇到的一些常见问题的解决办法。&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#关机和开机&quot; id=&quot;markdown-toc-关机和开机&quot;&gt;关机和开机&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#防火墙&quot; id=&quot;markdown-toc-防火墙&quot;&gt;防火墙&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#xshell&quot; id=&quot;markdown-toc-xshell&quot;&gt;xshell&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#input-method&quot; id=&quot;markdown-toc-input-method&quot;&gt;Input Method&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#虚拟机上网&quot; id=&quot;markdown-toc-虚拟机上网&quot;&gt;虚拟机上网&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#source-list&quot; id=&quot;markdown-toc-source-list&quot;&gt;source list&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#error&quot; id=&quot;markdown-toc-error&quot;&gt;error&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;关机和开机&quot;&gt;关机和开机&lt;/h2&gt;
-
-&lt;p&gt;关机的命令行都是要root权限的
-shutdown&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo shutdown -r now		#立刻重启
-sudo shutdown -h now		#立刻关机
-sudo shutdown -r 10		#10 min立刻重启
-sudo shutdown -r 20:55		#20:55重启
-sudo shutdown c			#取消重启
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;halt&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo halt		#关机
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;reboot	重启&lt;/p&gt;
-
-&lt;p&gt;poweroff&lt;/p&gt;
-
-&lt;p&gt;init 0		关机&lt;/p&gt;
-
-&lt;p&gt;init 6		重启&lt;/p&gt;
-
-&lt;p&gt;##　网卡设置&lt;/p&gt;
-
-&lt;p&gt;暂时生效，采用命令的方式,重启网络后会失效。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ifconfig eth0 xxx.xxx.xx.xx netmask 255.255.255.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;查看网关route -n&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo route add default gw xxx.xxx.xx.xx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;查看DNS:nm-tool&lt;/p&gt;
-
-&lt;p&gt;永久生效,修改网卡的配置文件，这个是主要的方式.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vi /etc/network/interfaces
-auto eth0
-iface eth0 inet static
-address xxx.xxx.xxx.xxx
-netmask 255.255.255.0
-gateway xx.xx.xx.xx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;修改DNS&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vi /etc/resolvconf/resolv.conf.d/base
-nameserver xxx.xxx.xx.xx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;重启网络&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ifup eth0		#重启网卡
-ifdown eth0		#关闭网卡
-sudo /etc/init.d/networking restart	＃重启网络服务
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;防火墙&quot;&gt;防火墙&lt;/h2&gt;
-
-&lt;p&gt;关闭&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ufw disable
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;xshell&quot;&gt;xshell&lt;/h2&gt;
-
-&lt;p&gt;在xshell上传文件文件用的是sz和rz&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install lrzsz
-sudo yum install -y lrzsz
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;输入rz，就会弹出对话框，选择要上传的文件，就可以了&lt;/p&gt;
-
-&lt;p&gt;登录虚拟机，新建会话，然后输入信息。&lt;/p&gt;
-
-&lt;p&gt;或者使用ssh登录,ssh ip&lt;/p&gt;
-
-&lt;p&gt;problem:可以ping，就是在Ubuntu中连不上？&lt;/p&gt;
-
-&lt;p&gt;在网上查了一下资料，发现Ubuntu默认不安装openssh服务器，所以若要使用ssh远程登录Ubuntu主机，首先需要安装ssh服务器。&lt;/p&gt;
-
-&lt;p&gt;首先，判断Ubuntu是否安装了ssh服务：&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1、输入：#ps -e&lt;/td&gt;
-      &lt;td&gt;grep ssh 如果服务已经启动，则可以看到“sshd”，否则表示没有安装服务，或没有开机启动&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;2、安装ssh服务，输入命令：#sudo apt-get install openssh-server&lt;/p&gt;
-
-&lt;p&gt;3、启动服务:#/etc/init.d/ssh start&lt;/p&gt;
-
-&lt;p&gt;4、本机测试是否能够成功登录：#ssh -l 用户名 本机ip&lt;/p&gt;
-
-&lt;p&gt;5、用远程工具进行远程连接，若拒接访问，则关闭防火墙或允许22端口&lt;/p&gt;
-
-&lt;h2 id=&quot;input-method&quot;&gt;Input Method&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ibus-googlepinyin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;重启添加输入法.&lt;/p&gt;
-
-&lt;p&gt;reboot and come to choose&lt;a href=&quot;http://jingyan.baidu.com/article/219f4bf7d4a183de442d38f2.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;当遇到输入的图标消失时:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;killall ibus-daemon #杀死进程
-ibus-daemon -d #开启进程
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;然后重启就会出现了。&lt;/p&gt;
-
-&lt;h2 id=&quot;虚拟机上网&quot;&gt;虚拟机上网&lt;/h2&gt;
-
-&lt;p&gt;装好虚拟机上网是最好的，配置方法，&lt;a href=&quot;http://jingyan.baidu.com/article/20095761926c3bcb0721b498.html&quot;&gt;请看&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;具体内容,&lt;a href=&quot;http://jingyan.baidu.com/article/20095761926c3bcb0721b498.html&quot;&gt;more&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;(1) 设置主系统的“本地连接”，确保其中的“VMware bridge protocol”前面打了勾&lt;/p&gt;
-
-&lt;p&gt;(2) 设置虚拟机，菜单栏——VM—settings—hardware—networkadapter—选择bridged&lt;/p&gt;
-
-&lt;p&gt;(3) VM下，进入虚拟机的edit—virtual net editor，把VMnet0设置成桥接模式，且连接到以太网。&lt;/p&gt;
-
-&lt;p&gt;(4) 设置ubuntu的Pv4 settings，ip地址与PC的地址在同一个网段，netmask，DNS，Gateway与主机的一样即可。&lt;/p&gt;
-
-&lt;p&gt;(5) 重启网络服务。先断开网络，再重新连接。用ifconfig确认修改。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;遇到eth0没有IP&lt;/code&gt;,在桥接模式下。&lt;a href=&quot;http://bbs.csdn.net/topics/391021327&quot;&gt;solution&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;source-list&quot;&gt;source list&lt;/h2&gt;
-
-&lt;p&gt;碰到一些错误，就记录下来，以便以后使用&lt;/p&gt;
+&lt;h2 id=&quot;toc_5&quot;&gt;已知 Bug&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;E:Encountered a section wtih no Package:header&lt;/li&gt;
+&lt;li&gt;在获取博文列表时，可能会由于多方面原因卡死&lt;/li&gt;
+&lt;li&gt;预览窗口的滚动条有时会出现问题&lt;/li&gt;
+&lt;li&gt;发布时可能会卡死&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;这是关于Ubuntu源的的问题，直接的方法就是，删除/var/lib/apt/list下所有的文件，重新生成,然后重启。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo rm -rf /var/lib/apt/lists/*
-sudo apt-get udpate
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There is no public key available for following key IDS xxxx&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Correct commands line is:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1397BC53640DB551
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://askubuntu.com/questions/766883/there-is-no-public-key-available-for-the-following-key-ids-1397bc53640db551&quot;&gt;more&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;error&quot;&gt;error&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;sudo: add-apt-repository: command not found&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;add-apt-repository 是由 Python-software-properties 这个工具包提供的,先安装python-software-properties 才能使用 add-apt-repository&lt;/p&gt;
-
-&lt;p&gt;apt-get install python-software-properties&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</link>
-                <guid>http://lkkandsyf.github.io/os/2016/12/16/Ubuntu</guid>
-                <pubDate>Fri, 16 Dec 2016 00:00:00 +0800</pubDate>
+                <link>/2015/10/11/jekyll-editor-tutorial</link>
+                <guid>/2015/10/11/jekyll-editor-tutorial</guid>
+                <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Machine Learn</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>Jekyll Editor 应用上线</title>
+                <description>&lt;p&gt;Jekyll Editor 的 Chrome App 版本终于发布，具体地址为：&lt;a href=&quot;https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme?hl=zh-CN&quot;&gt;Jekyll Editor&lt;/a&gt;。&lt;/p&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#basic-notion&quot; id=&quot;markdown-toc-basic-notion&quot;&gt;basic notion&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;!--more--&gt;
 
-&lt;h2 id=&quot;basic-notion&quot;&gt;basic notion&lt;/h2&gt;
+&lt;p&gt;为了发布这个应用我真是费了好多心思，因为本人并没有 VISA 卡，也没有信用卡。我想到了一个神奇的网站，不是58，而是淘宝，搜了好久之后，发现有一种叫 VISA 虚拟卡，但是好像不能用，可能会被禁:flushed:。&lt;/p&gt;
 
-&lt;p&gt;随机梯度下降法，最小二乘法的区别&lt;/p&gt;
+&lt;p&gt;当然，还有一种是在线帮忙开，费用非常贵，要200多块，我还是咬咬牙就拍了:sob:。说多了都是泪，哎。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.ethanrosenthal.com/2016/01/09/explicit-matrix-factorization-sgd-als/&quot;&gt;SGD LMS diff&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chrome App 地址为：&lt;a href=&quot;https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme?hl=zh-CN&quot;&gt;https://chrome.google.com/webstore/detail/jekyll-editor/dfdkgbhjmllemfblfoohhehdigokocme?hl=zh-CN&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/2016/12/10/Machine-learn</link>
-                <guid>http://lkkandsyf.github.io/2016/12/10/Machine-learn</guid>
-                <pubDate>Sat, 10 Dec 2016 00:00:00 +0800</pubDate>
+                <link>/2015/10/11/jekyll-editor-online</link>
+                <guid>/2015/10/11/jekyll-editor-online</guid>
+                <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Gitbook</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>写 Jekyll 博客工具</title>
+                <description>&lt;p&gt;上次说要写一个类似 stackeditor 的东西来写 Jekyll 博客，终于写好了。这将是第一篇用该工具写的博客。&lt;/p&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#gitbook&quot; id=&quot;markdown-toc-gitbook&quot;&gt;Gitbook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;!--more--&gt;
 
-&lt;h2 id=&quot;gitbook&quot;&gt;Gitbook&lt;/h2&gt;
+&lt;p&gt;详细的说明将会在发布之后再说:smiley:，它是 Chrome App，基于 Editor.md 的一个应用，挺不错的，该有的都有，就是有时候有会 Bug，:disappointed_relieved:。但是没事，我以后会慢慢改进。&lt;/p&gt;
 
-&lt;p&gt;Gitbook这是一个编辑文档的好东西,我采用的别人的&lt;a href=&quot;https://hub.docker.com/r/fellah/gitbook/&quot;&gt;docker&lt;/a&gt;,使用起来方便很多。&lt;/p&gt;
+&lt;p&gt;我已经把代码 push 到 github 上去了，项目地址：&lt;a href=&quot;https://github.com/Simpleyyt/jekyll-editor.git&quot;&gt;https://github.com/Simpleyyt/jekyll-editor.git&lt;/a&gt;，写得有点乱，以后再慢慢重构。还有一个重要的问题，我没有 chrome 开发者账号:frowning:，好惨。&lt;/p&gt;
 
-&lt;p&gt;帮助命令&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gitbook help
-gitbook serve .
-# localhost:4000进行访问
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;文档:pdf,html.epub&lt;/p&gt;
-
-&lt;p&gt;生成pdf文档，可以同步到githbu.io上面再生成pdf格式。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/GitbookIO/gitbook&quot;&gt;office&lt;/a&gt;
-&lt;a href=&quot;http://www.chengweiyang.cn/gitbook/basic-usage/README.html&quot;&gt;basic&lt;/a&gt;
-&lt;a href=&quot;http://caibaojian.com/gitbook/&quot;&gt;zh&lt;/a&gt;
-&lt;a href=&quot;https://github.com/wwq0327/gitbook-zh&quot;&gt;demo&lt;/a&gt;
-&lt;a href=&quot;http://colobu.com/2014/10/09/gitbook-quickstart/&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&quot;http://simpleyyt.qiniudn.com/15-10-9/34912413.jpg&quot; alt=&quot;Jekyll Editor 截图&quot;&gt;&lt;/p&gt;
 </description>
-                <link>http://lkkandsyf.github.io/2016/12/04/Gitbook</link>
-                <guid>http://lkkandsyf.github.io/2016/12/04/Gitbook</guid>
-                <pubDate>Sun, 04 Dec 2016 00:00:00 +0800</pubDate>
+                <link>/2015/10/09/tool-for-jekyll-blog</link>
+                <guid>/2015/10/09/tool-for-jekyll-blog</guid>
+                <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
         </item>
 
         <item>
-                <title>Restful</title>
-                <description>
-&lt;h1 class=&quot;no_toc&quot; id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+                <title>TCP 之保活计时器</title>
+                <description>&lt;p&gt;保活计时器并不是 TCP 规范中的一部分，是一个有争论的功能。&lt;/p&gt;
 
-&lt;p&gt;一个通用的框架.python package eve &lt;a href=&quot;http://python-eve.org&quot;&gt;office&lt;/a&gt;&lt;/p&gt;
+&lt;!--more--&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://code.tutsplus.com/tutorials/building-rest-apis-using-eve--cms-22961&quot;&gt;https://code.tutsplus.com/tutorials/building-rest-apis-using-eve–cms-22961&lt;/a&gt;
-&lt;a href=&quot;https://docs.mongodb.com/ecosystem/tools/http-interfaces/&quot;&gt;https://docs.mongodb.com/ecosystem/tools/http-interfaces/&lt;/a&gt;
-&lt;a href=&quot;http://www.slideshare.net/nicolaiarocci/rest-ap-is-for-humans&quot;&gt;http://www.slideshare.net/nicolaiarocci/rest-ap-is-for-humans&lt;/a&gt;
-&lt;a href=&quot;https://www.drud.com/evegenie-python-eve-schema-generation-done-fast/&quot;&gt;https://www.drud.com/evegenie-python-eve-schema-generation-done-fast/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果一个给定的连接在两个小时之内没有任何动作，则服务器就向客户发送一个探查报文段，客户机有如下状态：&lt;/p&gt;
 
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#restful-api&quot; id=&quot;markdown-toc-restful-api&quot;&gt;Restful API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;restful-api&quot;&gt;Restful API&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;客户机仍正常运行，回复响应。服务器在两小时以后将保活定时器复位。&lt;/li&gt;
+&lt;li&gt;客户机已崩溃，TCP 都没有响应，75秒后超时。服务器总共发10个这样的探查，每个间隔75秒。&lt;/li&gt;
+&lt;li&gt;客户机已重新启动，客户机回复 RST。&lt;/li&gt;
+&lt;li&gt;客户机正常运行，但是服务不可到达，与状态2相同。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 </description>
-                <link>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</link>
-                <guid>http://lkkandsyf.github.io/restful%20api/2016/11/30/Restful</guid>
-                <pubDate>Wed, 30 Nov 2016 00:00:00 +0800</pubDate>
+                <link>/2015/09/23/tcp-keepalive-timer</link>
+                <guid>/2015/09/23/tcp-keepalive-timer</guid>
+                <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
+        </item>
+
+        <item>
+                <title>字节对齐</title>
+                <description>&lt;p&gt;Linux 沿用的对齐策略是，2字节数据类型（例如&lt;code&gt;short&lt;/code&gt;）的地址是2的倍数，而较大的数据类型（例如&lt;code&gt;int&lt;/code&gt;、&lt;code&gt;int*&lt;/code&gt;、&lt;code&gt;float&lt;/code&gt;和&lt;code&gt;double&lt;/code&gt;）的地址必须是4的倍数。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Windows 要求任何 K 字节基本对象的址址必须是 K 的倍数，K = 2, 4 或者 8。特别的，它要求一个&lt;code&gt;double&lt;/code&gt;或者&lt;code&gt;long long&lt;/code&gt;类型数据的地址应该是8的倍数。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_0&quot;&gt;对齐准则&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;四个重要的基本概念：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;数据类型自身的对齐值：char型数据自身对齐值为1字节，short型数据为2字节，int/float型为4字节，double型为8字节。&lt;/li&gt;
+&lt;li&gt;结构体或类的自身对齐值：其成员中自身对齐值最大的那个值。&lt;/li&gt;
+&lt;li&gt;指定对齐值：#pragma pack (value)时的指定对齐值value。&lt;/li&gt;
+&lt;li&gt;数据成员、结构体和类的有效对齐值：自身对齐值和指定对齐值中较小者，即有效对齐值=min{自身对齐值，当前指定的pack值}。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;其中，有效对齐值&lt;code&gt;N&lt;/code&gt;是最终用来决定数据存放地址方式的值。有效对齐&lt;code&gt;N&lt;/code&gt;表示**“对齐在&lt;code&gt;N&lt;/code&gt;上”**，即该数据的**“存放起始地址 % N = 0”**。而数据结构中的数据变量都是按定义的先后顺序存放。第一个数据变量的起始地址就是数据结构的起始地址。结构体的成员变量要对齐存放，结构体本身也要根据自身的有效对齐值圆整(即结构体成员变量占用总长度为结构体有效对齐值的整数倍)。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例1：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;short&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;short&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;结果：&lt;/strong&gt;&lt;code&gt;sizeof(strcut A)&lt;/code&gt;值为8；&lt;code&gt;sizeof(struct B)&lt;/code&gt;的值却是12。 &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例2：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#pragma pack(2)  //指定按2字节对齐
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;short&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma pack()   //取消指定对齐，恢复缺省对齐
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;结果：&lt;/strong&gt;&lt;code&gt;sizeof(struct C) = 8&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_1&quot;&gt;栈内存对齐&lt;/h2&gt;
+
+&lt;p&gt;在VC/C++中，栈的对齐方式不受结构体成员对齐选项的影响。总是保持对齐且对齐在4字节边界上。（并未考证64位）&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_2&quot;&gt;位域对齐&lt;/h2&gt;
+
+&lt;p&gt;位域成员不能单独被取&lt;code&gt;sizeof&lt;/code&gt;值。下面主要讨论含有位域的结构体的&lt;code&gt;sizeof&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;C99 规定&lt;code&gt;int&lt;/code&gt;、&lt;code&gt;unsigned int&lt;/code&gt;和&lt;code&gt;bool&lt;/code&gt;可以作为位域类型，但编译器几乎都对此作了扩展，允许其它类型的存在。位域作为嵌入式系统中非常常见的一种编程工具，优点在于压缩程序的存储空间。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;其对齐规则大致为：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;如果相邻位域字段的类型相同，且其位宽之和小于类型的&lt;code&gt;sizeof&lt;/code&gt;大小，则后面的字段将紧邻前一个字段存储，直到不能容纳为止；&lt;/li&gt;
+&lt;li&gt;如果相邻位域字段的类型相同，但其位宽之和大于类型的&lt;code&gt;sizeof&lt;/code&gt;大小，则后面的字段将从新的存储单元开始，其偏移量为其类型大小的整数倍；&lt;/li&gt;
+&lt;li&gt;如果相邻的位域字段的类型不同，则各编译器的具体实现有差异，VC6 采取不压缩方式，Dev-C++ 和 GCC 采取压缩方式；&lt;/li&gt;
+&lt;li&gt;如果位域字段之间穿插着非位域字段，则不进行压缩；&lt;/li&gt;
+&lt;li&gt;整个结构体的总大小为最宽基本类型成员大小的整数倍，而位域则按照其最宽类型字节数对齐。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;例3：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BitField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element1&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element2&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element3&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;位域类型为&lt;code&gt;char&lt;/code&gt;，第1个字节仅能容纳下&lt;code&gt;element1&lt;/code&gt;和&lt;code&gt;element2&lt;/code&gt;，所以&lt;code&gt;element1&lt;/code&gt;和&lt;code&gt;element2&lt;/code&gt;被压缩到第1个字节中，而&lt;code&gt;element3&lt;/code&gt;只能从下一个字节开始。因此&lt;code&gt;sizeof(BitField)&lt;/code&gt;的结果为2。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例4：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StructBitField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element1&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element2&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element3&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element4&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element5&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stelement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//在含位域的结构或联合中也可同时说明普通成员
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;位域中最宽类型&lt;code&gt;int&lt;/code&gt;的字节数为4，因此结构体按4字节对齐，在 VC6 中其&lt;code&gt;sizeof&lt;/code&gt;为16。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例5：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BitField4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element1&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element3&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;长度为0的位域告诉编译器将下一个位域放在一个存储单元的起始位置。如上，编译器会给成员&lt;code&gt;element1&lt;/code&gt;分配3位，接着跳过余下的4位到下一个存储单元，然后给成员&lt;code&gt;element3&lt;/code&gt;分配5位。故上面的结构体大小为2。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;本文参考：&lt;a href=&quot;http://www.cnblogs.com/clover-toeic/p/3853132.html&quot;&gt;http://www.cnblogs.com/clover-toeic/p/3853132.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+                <link>/2015/09/23/data-structure-alignmen</link>
+                <guid>/2015/09/23/data-structure-alignmen</guid>
+                <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
         </item>
 
 
