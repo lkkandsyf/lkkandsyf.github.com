@@ -1,2 +1,2 @@
 # lkkandsyf.github.com
-blog
+[blog](https://lkkandsyf.github.com)
