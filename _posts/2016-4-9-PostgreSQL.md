@@ -1,7 +1,6 @@
 ---
 title: 编程资料--PostgreSQL
 tagline: ""
-last_updated: null
 category : Program-Document
 layout: post
 tags : [program, document, PostgreSQL]
