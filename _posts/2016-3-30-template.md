@@ -70,3 +70,24 @@ void main(int argc,char *argv)
   4.{:toc} 默认生成的目录列表会添加 id 值 markdown-toc，我们可以自定义 id 值，比如 {:toc #chenxsan}，生成的目录列表添加的 id 将会是 chenxsan。
 
 
+para.*Italic*,**bold**,***both***,`liangkangkang`
+
+Here is a bullet list:
+
+- apple
+- banana
+- orange
+
+Here is a number list:
+
+- 1.apple
+
+- 2.banana
+
+- 3.organge
+
+> Block quotes are writeen like so.
+> I like you
+
+You can specify an inline like so $x^2+y^2=z^2$
+
