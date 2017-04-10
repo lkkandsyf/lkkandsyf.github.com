@@ -123,12 +123,6 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 
 `工作`:数据分析研究员
 
-# Overview
-{:.no_toc}
-
-* dir
-{:toc}
-
 ### 职位描述
 
 工作职责
