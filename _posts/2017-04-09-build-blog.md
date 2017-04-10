@@ -28,5 +28,14 @@ tags : [ jekyll ]
  apt-get update
  apt-get install ruby2.2-dev
  # check version
- ruby -v
+ ruby -v # 2.2
+```
+
+problem:`An error occurred while installing json (1.8.6), and Bundler cannot continue. on Ubuntu
+`
+solution:
+
+```
+sudo apt-get install libgmp-dev
+sudo apt-get install libgmp3-dev
 ```
