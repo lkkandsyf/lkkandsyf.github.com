@@ -5,8 +5,8 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 10 Apr 2017 18:03:45 +0800</lastBuildDate>
-        <pubDate>Mon, 10 Apr 2017 18:03:45 +0800</pubDate>
+        <lastBuildDate>Tue, 11 Apr 2017 00:23:08 +0000</lastBuildDate>
+        <pubDate>Tue, 11 Apr 2017 00:23:08 +0000</pubDate>
         <ttl>60</ttl>
 
 
@@ -20,7 +20,7 @@
 </description>
                 <link>/python/2017/04/10/scikit</link>
                 <guid>/python/2017/04/10/scikit</guid>
-                <pubDate>Mon, 10 Apr 2017 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -37,7 +37,7 @@
 </description>
                 <link>/2017/04/10/Weechat</link>
                 <guid>/2017/04/10/Weechat</guid>
-                <pubDate>Mon, 10 Apr 2017 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -70,7 +70,7 @@ sudo apt-get install libgmp3-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
                 <link>/blog/2017/04/09/build-blog</link>
                 <guid>/blog/2017/04/09/build-blog</guid>
-                <pubDate>Sun, 09 Apr 2017 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -83,7 +83,7 @@ sudo apt-get install libgmp3-dev
 </description>
                 <link>/net/2017/04/01/out-of-wall</link>
                 <guid>/net/2017/04/01/out-of-wall</guid>
-                <pubDate>Sat, 01 Apr 2017 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -94,7 +94,7 @@ sudo apt-get install libgmp3-dev
 </description>
                 <link>/2017/04/01/Nginx</link>
                 <guid>/2017/04/01/Nginx</guid>
-                <pubDate>Sat, 01 Apr 2017 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -165,7 +165,7 @@ sudo bash install_chrome.sh -s  #stable
 </description>
                 <link>/linux/2017/03/27/centos</link>
                 <guid>/linux/2017/03/27/centos</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -197,7 +197,7 @@ plot(age,height)
 </description>
                 <link>/2017/03/27/R</link>
                 <guid>/2017/03/27/R</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
+                <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -244,7 +244,7 @@ deploy:
 </description>
                 <link>/blog/2017/03/22/hexo</link>
                 <guid>/blog/2017/03/22/hexo</guid>
-                <pubDate>Wed, 22 Mar 2017 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -259,7 +259,7 @@ deploy:
 </description>
                 <link>/deep%20learning/2017/02/22/DL4J</link>
                 <guid>/deep%20learning/2017/02/22/DL4J</guid>
-                <pubDate>Wed, 22 Feb 2017 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -303,7 +303,7 @@ deploy:
 </description>
                 <link>/javaerror/2017/02/17/Java-Scala-Error-Collect</link>
                 <guid>/javaerror/2017/02/17/Java-Scala-Error-Collect</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -345,7 +345,7 @@ deploy:
 </description>
                 <link>/opensource/2017/02/17/Open-Source-Project-Learning-Experience</link>
                 <guid>/opensource/2017/02/17/Open-Source-Project-Learning-Experience</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
+                <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -360,7 +360,7 @@ deploy:
 </description>
                 <link>/music/2017/02/12/Music</link>
                 <guid>/music/2017/02/12/Music</guid>
-                <pubDate>Sun, 12 Feb 2017 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -514,7 +514,7 @@ VM:-Dspark.master=local&lt;/p&gt;
 </description>
                 <link>/ide/2017/01/19/IDEA</link>
                 <guid>/ide/2017/01/19/IDEA</guid>
-                <pubDate>Thu, 19 Jan 2017 00:00:00 +0800</pubDate>
+                <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -545,7 +545,7 @@ VM:-Dspark.master=local&lt;/p&gt;
 </description>
                 <link>/holes/2017/01/04/holes</link>
                 <guid>/holes/2017/01/04/holes</guid>
-                <pubDate>Wed, 04 Jan 2017 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -576,7 +576,7 @@ cat out/*
 </description>
                 <link>/2017/01/03/Hadoop</link>
                 <guid>/2017/01/03/Hadoop</guid>
-                <pubDate>Tue, 03 Jan 2017 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -761,7 +761,7 @@ jdb -attach 1044
 </description>
                 <link>/debug/2016/12/25/jdb</link>
                 <guid>/debug/2016/12/25/jdb</guid>
-                <pubDate>Sun, 25 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -970,7 +970,7 @@ mvn spring-boot:run
 </description>
                 <link>/java/2016/12/24/Java</link>
                 <guid>/java/2016/12/24/Java</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1382,7 +1382,7 @@ default(默认)&lt;/p&gt;
 </description>
                 <link>/2016/12/24/mvn</link>
                 <guid>/2016/12/24/mvn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1500,7 +1500,7 @@ kill -9 ID
 </description>
                 <link>/version%20control/2016/12/24/Svn</link>
                 <guid>/version%20control/2016/12/24/Svn</guid>
-                <pubDate>Sat, 24 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
         <item>
@@ -1583,7 +1583,7 @@ bin/zookeeper-server-stop.sh
 </description>
                 <link>/kafka/2016/12/20/Kafka</link>
                 <guid>/kafka/2016/12/20/Kafka</guid>
-                <pubDate>Tue, 20 Dec 2016 00:00:00 +0800</pubDate>
+                <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
         </item>
 
 

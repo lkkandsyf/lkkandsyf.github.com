@@ -4,7 +4,7 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-04-10T18:03:45+08:00</updated>
+ <updated>2017-04-11T00:23:08+00:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>scikit tool</title>
    <link href="/python/2017/04/10/scikit"/>
-   <updated>2017-04-10T00:00:00+08:00</updated>
+   <updated>2017-04-10T00:00:00+00:00</updated>
    <id>/python/2017/04/10/scikit</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;python scikit machine learning&lt;/h2&gt;
 
@@ -28,7 +28,7 @@
  <entry>
    <title>IRC</title>
    <link href="/2017/04/10/Weechat"/>
-   <updated>2017-04-10T00:00:00+08:00</updated>
+   <updated>2017-04-10T00:00:00+00:00</updated>
    <id>/2017/04/10/Weechat</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;IRC&lt;/h2&gt;
 
@@ -45,7 +45,7 @@
  <entry>
    <title>Build Blog</title>
    <link href="/blog/2017/04/09/build-blog"/>
-   <updated>2017-04-09T00:00:00+08:00</updated>
+   <updated>2017-04-09T00:00:00+00:00</updated>
    <id>/blog/2017/04/09/build-blog</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;使用ubuntu镜像来搭建一个jekyll的博客环境&lt;/h2&gt;
 
@@ -78,7 +78,7 @@ sudo apt-get install libgmp3-dev
  <entry>
    <title>use XX-net to brower to foreign files</title>
    <link href="/net/2017/04/01/out-of-wall"/>
-   <updated>2017-04-01T00:00:00+08:00</updated>
+   <updated>2017-04-01T00:00:00+00:00</updated>
    <id>/net/2017/04/01/out-of-wall</id>
    <content type="html">&lt;p&gt;solution to look out of the China web&lt;/p&gt;
 
@@ -91,7 +91,7 @@ sudo apt-get install libgmp3-dev
  <entry>
    <title>Nginx</title>
    <link href="/2017/04/01/Nginx"/>
-   <updated>2017-04-01T00:00:00+08:00</updated>
+   <updated>2017-04-01T00:00:00+00:00</updated>
    <id>/2017/04/01/Nginx</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器.&lt;/h2&gt;
 
@@ -102,7 +102,7 @@ sudo apt-get install libgmp3-dev
  <entry>
    <title>Centos</title>
    <link href="/linux/2017/03/27/centos"/>
-   <updated>2017-03-27T00:00:00+08:00</updated>
+   <updated>2017-03-27T00:00:00+00:00</updated>
    <id>/linux/2017/03/27/centos</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里收集了关于centos学习过程中自己的收获，方便以后使用&lt;/h2&gt;
 
@@ -173,7 +173,7 @@ sudo bash install_chrome.sh -s  #stable
  <entry>
    <title>R</title>
    <link href="/2017/03/27/R"/>
-   <updated>2017-03-27T00:00:00+08:00</updated>
+   <updated>2017-03-27T00:00:00+00:00</updated>
    <id>/2017/03/27/R</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;R language&lt;/h2&gt;
 
@@ -205,7 +205,7 @@ plot(age,height)
  <entry>
    <title>Hexo</title>
    <link href="/blog/2017/03/22/hexo"/>
-   <updated>2017-03-22T00:00:00+08:00</updated>
+   <updated>2017-03-22T00:00:00+00:00</updated>
    <id>/blog/2017/03/22/hexo</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;usage hexo&lt;/h2&gt;
 
@@ -252,7 +252,7 @@ deploy:
  <entry>
    <title>Dl4j</title>
    <link href="/deep%20learning/2017/02/22/DL4J"/>
-   <updated>2017-02-22T00:00:00+08:00</updated>
+   <updated>2017-02-22T00:00:00+00:00</updated>
    <id>/deep%20learning/2017/02/22/DL4J</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;DL4J&lt;/h2&gt;
 
@@ -267,7 +267,7 @@ deploy:
  <entry>
    <title>Java Scala Error Collect</title>
    <link href="/javaerror/2017/02/17/Java-Scala-Error-Collect"/>
-   <updated>2017-02-17T00:00:00+08:00</updated>
+   <updated>2017-02-17T00:00:00+00:00</updated>
    <id>/javaerror/2017/02/17/Java-Scala-Error-Collect</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里整理自己学习Java过程中遇到的一些问题，简单记录下来，方便以后查看。&lt;/h2&gt;
 
@@ -311,7 +311,7 @@ deploy:
  <entry>
    <title>Open Source Project Learning Experience</title>
    <link href="/opensource/2017/02/17/Open-Source-Project-Learning-Experience"/>
-   <updated>2017-02-17T00:00:00+08:00</updated>
+   <updated>2017-02-17T00:00:00+00:00</updated>
    <id>/opensource/2017/02/17/Open-Source-Project-Learning-Experience</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里收集了关于学习开源项目的一些坎坷，以及收获。&lt;/h2&gt;
 
@@ -353,7 +353,7 @@ deploy:
  <entry>
    <title>Music</title>
    <link href="/music/2017/02/12/Music"/>
-   <updated>2017-02-12T00:00:00+08:00</updated>
+   <updated>2017-02-12T00:00:00+00:00</updated>
    <id>/music/2017/02/12/Music</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;enjoy music&lt;/h2&gt;
 
@@ -368,7 +368,7 @@ deploy:
  <entry>
    <title>Idea</title>
    <link href="/ide/2017/01/19/IDEA"/>
-   <updated>2017-01-19T00:00:00+08:00</updated>
+   <updated>2017-01-19T00:00:00+00:00</updated>
    <id>/ide/2017/01/19/IDEA</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;开发Scala,Java项目，需要一个好的IDE，idea是一个比较好的开发环境，熟练使用，对自己也是大有帮助。介绍关于java IDE的使用技巧(IDEA)&lt;/h2&gt;
 
@@ -522,7 +522,7 @@ VM:-Dspark.master=local&lt;/p&gt;
  <entry>
    <title>Holes</title>
    <link href="/holes/2017/01/04/holes"/>
-   <updated>2017-01-04T00:00:00+08:00</updated>
+   <updated>2017-01-04T00:00:00+00:00</updated>
    <id>/holes/2017/01/04/holes</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里整理一些安全漏洞修复的基本方法&lt;/h2&gt;
 
@@ -553,7 +553,7 @@ VM:-Dspark.master=local&lt;/p&gt;
  <entry>
    <title>Hadoop</title>
    <link href="/2017/01/03/Hadoop"/>
-   <updated>2017-01-03T00:00:00+08:00</updated>
+   <updated>2017-01-03T00:00:00+00:00</updated>
    <id>/2017/01/03/Hadoop</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;进入大数据，Hadoop是基本。&lt;/h2&gt;
 
@@ -584,7 +584,7 @@ cat out/*
  <entry>
    <title>Jdb</title>
    <link href="/debug/2016/12/25/jdb"/>
-   <updated>2016-12-25T00:00:00+08:00</updated>
+   <updated>2016-12-25T00:00:00+00:00</updated>
    <id>/debug/2016/12/25/jdb</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;jdb&lt;/h2&gt;
 
@@ -769,7 +769,7 @@ jdb -attach 1044
  <entry>
    <title>Java</title>
    <link href="/java/2016/12/24/Java"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>/java/2016/12/24/Java</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里整理关于Java的基本语法和使用，以及数据结构和算法的相关知识.&lt;/h2&gt;
 
@@ -978,7 +978,7 @@ mvn spring-boot:run
  <entry>
    <title>Mvn</title>
    <link href="/2016/12/24/mvn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>/2016/12/24/mvn</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;maven 编译工具&lt;/h2&gt;
 
@@ -1390,7 +1390,7 @@ default(默认)&lt;/p&gt;
  <entry>
    <title>Svn</title>
    <link href="/version%20control/2016/12/24/Svn"/>
-   <updated>2016-12-24T00:00:00+08:00</updated>
+   <updated>2016-12-24T00:00:00+00:00</updated>
    <id>/version%20control/2016/12/24/Svn</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;版本控制工具&lt;/h2&gt;
 
@@ -1508,7 +1508,7 @@ kill -9 ID
  <entry>
    <title>Kafka</title>
    <link href="/kafka/2016/12/20/Kafka"/>
-   <updated>2016-12-20T00:00:00+08:00</updated>
+   <updated>2016-12-20T00:00:00+00:00</updated>
    <id>/kafka/2016/12/20/Kafka</id>
    <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;这里介绍了关于Kafka的一些基本的知识&lt;/h2&gt;
 
