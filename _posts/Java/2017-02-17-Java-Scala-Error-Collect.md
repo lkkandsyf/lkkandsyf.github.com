@@ -24,11 +24,13 @@ Update the Maven project:
 
 Steps:
 
-	1.Right-click on "project"
-	2.Go to "Maven" >> "Update"
-	3.Wait for all the changes to be applied
-	4.Commit the changes (if code is on repo)
-	5.Run
+```C
+1.Right-click on "project"
+2.Go to "Maven" >> "Update"
+3.Wait for all the changes to be applied
+4.Commit the changes (if code is on repo)
+5.Run
+```
 
 or:
 

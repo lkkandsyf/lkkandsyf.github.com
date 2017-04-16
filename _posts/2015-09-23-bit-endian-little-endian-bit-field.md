@@ -9,8 +9,8 @@ tags:
   - cpp
   - c
 title: 位域的大小端问题
-info: 
-comment: 
+info:
+comment:
 categories: []
 
 ---
@@ -33,13 +33,13 @@ struct {
 
 在寄存器中分布如下：
 
-```
+```cpp
 C11 C10 C9 C8 C7 C6 C5 C4 C3 C2 C1 C0 B15 B14 B13 B12 B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 A3 A2 A1 A0
 ```
 
 在内存中存放格式为：
 
-```
+```cpp
 0xXXXX0020: B3 B2 B1 B0 A3 A2 A1 A0
 0xXXXX0021: B11 B10 B9 B8 B7 B6 B5 B4
 0xXXXX0022: C3 C2 C1 C0 B15 B14 B13 B12
@@ -50,13 +50,13 @@ C11 C10 C9 C8 C7 C6 C5 C4 C3 C2 C1 C0 B15 B14 B13 B12 B11 B10 B9 B8 B7 B6 B5 B4 
 
 在寄存器中分布如下：
 
-```
+```cpp
 A3 A2 A1 A0 B15 B14 B13 B12 B11 B10 B9 B8 B7 B6 B5 B4 B3 B2 B1 B0 C11 C10 C9 C8 C7 C6 C5 C4 C3 C2 C1 C0
 ```
 
 在内存中存放如下：
 
-```
+```cpp
 0xXXXX0020: A3 A2 A1 A0 B15 B14 B13
 0xXXXX0021: B11 B10 B9 B8 B7 B6 B5 B4
 0xXXXX0022: B3 B2 B1 B0 C11 C10 C9 C8

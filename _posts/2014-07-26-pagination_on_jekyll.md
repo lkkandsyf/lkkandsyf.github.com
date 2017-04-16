@@ -13,8 +13,10 @@ tags: [jekyll]
 
 首先我们需要在jekyll中开启分页功能，在jekyll的_config.yml中加入分页配置：
 
+{% highlight C linenos %}
     paginate: 5
     paginate_path: "page:num"
+{% endhighlight %}
 
 第一行定义了每页的文章数量，而第二行则定义了在分页的结果，比如在/index.html中使用分页，定义为page:num，则第二页的路径将是/page2/index.html，第三页的路径将是/page3/index.html，以此类推。
 

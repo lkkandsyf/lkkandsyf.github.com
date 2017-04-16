@@ -13,7 +13,7 @@ category: Linux
 
 在终端中输入：
 
-```sh
+```c
 dh_make --createorig
 ```
 
@@ -25,7 +25,7 @@ dh_make --createorig
 
 在终端中输入：
 
-```sh
+```c
 dput ppa:<userid>/<ppa-name> <source.changes>
 ```
 

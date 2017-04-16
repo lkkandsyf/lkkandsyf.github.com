@@ -195,7 +195,9 @@ zope.interface>=4.0.5)
 
  如果网速不好，就使用国内的源。
 
-	sudo pip install numpy --upgrade -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+```c
+sudo pip install numpy --upgrade -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+```
 
  pipy国内镜像目前有：
 
@@ -219,7 +221,7 @@ sudo pip install package_name==x.x.x
 ## tensorflow
 
  + cpu
- sudo pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl -i http://pypi.douban.com/simple
+> sudo pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl -i http://pypi.douban.com/simple
  --trusted-host pypi.douban.com
  + gpu
 
@@ -241,10 +243,12 @@ sudo apt-get install python-profiler
 
 依赖包
 
-	readline readline-devel readline-static
-	openssl openssl-devel openssl-static
-	sqlite-devel
-	bzip2-devel bzip2-libs
+```python
+readline readline-devel readline-static
+openssl openssl-devel openssl-static
+sqlite-devel
+bzip2-devel bzip2-libs
+```
 
 Pyenv原理
 
@@ -256,7 +260,7 @@ pyenv 的美好之处在于，它并没有使用将不同的 $PATH 植入不同�
 
 手动安装
 
-```
+```c
 $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile	#修改环境变量
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile	#修改环境变量
@@ -266,7 +270,7 @@ $ exec $SHELL			#输入命令重启Shell，然后就可以重启pyenv
 
 myself config
 
-```
+```c
 $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
@@ -276,63 +280,68 @@ $ exec $SHELL
 
 basic command
 
-	pyenv commands			#help	查看有用的命令
-	pyenv install --list	#查看pyevn可安装的版本列表
-	pyenv install -l
-	pyenv install x.x.x		#安装指定版本python
-	pyenv rehash			#安装结束之后，必须更新数据库,否则不会生效
-	pyenv uninstall x.x.x	#卸载指定版本python
-	pyenv rehash			#卸载结束之后，必须更新数据库
-	pyven versions			#查看当前已经安装的python版本
-	*system(set by /home/user/.pyenv/version)		#系统默认版本
-	2.7.6
-	3.4.1
-	...
+```c
+pyenv commands			#help	查看有用的命令
+pyenv install --list	#查看pyevn可安装的版本列表
+pyenv install -l
+pyenv install x.x.x		#安装指定版本python
+pyenv rehash			#安装结束之后，必须更新数据库,否则不会生效
+pyenv uninstall x.x.x	#卸载指定版本python
+pyenv rehash			#卸载结束之后，必须更新数据库
+pyven versions			#查看当前已经安装的python版本
+*system(set by /home/user/.pyenv/version)		#系统默认版本
+2.7.6
+3.4.1
+```
 
 安装完成之后，就可以使用pyenv进行版本切换了。
 
 python优先级shell>local>global
 
-	pyenv local version or --unset
-	pyenv global version or --unset
-	pyenv shell version,versions or --unset
-	pyenv local x.x.x		#在当前目录改变python的版本
-	pyenv local --unset		#取消 改变
-	pyenv global x.x.x		#全局改变python版本
-	pyenv shell x.x.x		#改变当前shell的python版本
+pyenv local version or --unset
+pyenv global version or --unset
+pyenv shell version,versions or --unset
+pyenv local x.x.x		#在当前目录改变python的版本
+pyenv local --unset		#取消 改变
+pyenv global x.x.x		#全局改变python版本
+pyenv shell x.x.x		#改变当前shell的python版本
 
-	pyenv which python-version
+pyenv which python-version
 
-	$ pyenv global 3.4.0 -- 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
-	$ pyenv local 2.7.3 -- 设置面向程序的本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
-	pyenv 会从当前目录开始向上逐级查找 .python-version 文件，直到根目录为止。若找不到，就用 global 版本。
-	$ pyenv shell pypy-2.2.1 -- 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。--unset
-	参数可以用于取消当前 shell 设定的版本。
-	$ pyenv shell --unset
+$ pyenv global 3.4.0 -- 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
+$ pyenv local 2.7.3 -- 设置面向程序的本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+pyenv 会从当前目录开始向上逐级查找 .python-version 文件，直到根目录为止。若找不到，就用 global 版本。
+$ pyenv shell pypy-2.2.1 -- 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。--unset
+参数可以用于取消当前 shell 设定的版本。
+$ pyenv shell --unset
 
 升级
-```
+
+```c
 $ cd ~/.pyenv
 $ git pull
 ```
 
 卸载
-```
+
+```c
 rm -rf ~/.pyenv		#快速方便
 ```
 
 eg:在pyenv中使用virtualenv部署werkzueg的测试app
 
-	#将virtualenv安装在pyenv中
-	pyenv local pypy-2.3.1
-	pyenv virtualenv venv_pypy
-	pyenv local venv_pypy
-	which python
-	pip install -Ur requirements.txt
-	pip install -U Gunicorn
-	pyenv rehash
-	which gunicorn
-	gunicorn -b:5000 -w 9 werkzeug:test_app
+```c
+#将virtualenv安装在pyenv中
+pyenv local pypy-2.3.1
+pyenv virtualenv venv_pypy
+pyenv local venv_pypy
+which python
+pip install -Ur requirements.txt
+pip install -U Gunicorn
+pyenv rehash
+which gunicorn
+gunicorn -b:5000 -w 9 werkzeug:test_app
+```
 
 python virtualevn创建_纯净虚拟环境_
 
@@ -346,57 +355,59 @@ virtualenv则就是将一个目录建立为一个虚拟的python环境， 这样
 
 pyenv-virtualenv是pyenv的插件
 
-	$ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-	$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
-	$ exec "$SHELL"			#restart shell
+```c
+$ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+$ exec "$SHELL"			#restart shell
+```
 
 这个插件就安装在.pyenv文件下了。
 
 创建一个python版本的虚拟环境
 
-	pyenv virtualenv x.x.x(version) envxxx(virtual_env_name)
+> pyenv virtualenv x.x.x(version) envxxx(virtual_env_name)
 
 这样就创建一个python的虚拟环境，这个环境的真是目录位于:~/.pyenv/versions/下,x.x.x必须为当前系统中已经安装好的python版本，否则会出错，我们可以通过pyenv version来查看当前的_虚拟环境_
 
 切换和使用新的python虚拟环境
 
-	pyenv activate envxxx
+> pyenv activate envxxx
 
 这样就可以切换到这个版本的虚拟环境，通过python来查看版本，发现处于虚拟环境中了，可以为所欲为了。如果要切换到系统环境
 
-	pyenv deactivate
+> pyenv deactivate
 
 列表virtualenv
 
-		pyenv virtualenvs
+> pyenv virtualenvs
 
 如果要删除这个虚拟环境，只要直接删除它所在的目录就可以了
 
-	rm -rf ~/.pyenv/version/envxxx
+> rm -rf ~/.pyenv/version/envxxx
 
 或者直接卸载
 
-	pyenv uninstall envxxx
+> pyenv uninstall envxxx
 
 
 ## Anaconda
 
 使用conda list查看anaconda安装自带的包
 
-	conda  list
+> conda  list
 
 使用conda
 list命令的环境时，python版本切换到anaconda版本下，不然，这个命令无法查询，在anancoda环境下，也是可以通过pip来安装其他包的。
 
 给anaconda安装包
 
-	conda install xxx	#如果需要指定版本[package-name]=x.x
+> conda install xxx	#如果需要指定版本[package-name]=x.x
 
 多个python版本并存，尤其是2.x和3.x的并存
 
 这个通过virtualenv可以做到，Anaconda也可以实现，下面用create命令来创建多个环境
 
-	conda create -n python2 python=2.7
+> conda create -n python2 python=2.7
 
 这样就会在Anaconda的安装目录下的envs目录创建python2
 
@@ -404,34 +415,42 @@ list命令的环境时，python版本切换到anaconda版本下，不然，这�
 
 简单来说，你的每一个项目都可以拥有一个单独的，孤立的python环境，你可以把所有的包安装到各自孤立的环境中，通过pip来安装virtualenv
 
-	sudo pip install virtualenv
+```c
+sudo pip install virtualenv
+```
 
 安装完成之后，为你的项目创建_孤立_的python环境
 
-	mkdir my_project_venv
-	virtualenv --distribute my_project_venv
+```C
+mkdir my_project_venv
+virtualenv --distribute my_project_venv
+```
 
 创建一个名叫my\_project\_venv的文件夹，由于存储新的python环境，--disribute参数告诉virtualenv使用基于distribute包来开发新的，更好的打包系统，而不是基于setuptools的旧系统，--distribute参数将会自动在虚拟环境中安装pip，免去了手动安装的麻烦。
 
 激活虚拟环境
 
-	cd my_project_venv
-	source bin/activate
+```C
+cd my_project_venv
+source bin/activate
+```
 
 使用source命令启动activate脚步，你的命令行提示符应该会变成这样
 
-	(my_project_venv)$
+> (my_project_venv)$
 
 关闭虚拟环境
 
-	(my_project_venv) deactivate
+> (my_project_venv) deactivate
 
 当你的_系统层面_安装virtualenv时(如果激活了虚拟环境，请先关闭)，可以通过下面的命令来查看使用哪个执行文件
 
-	which python
-	/usr/bin/python
-	which pip
-	/usr/local/bin/pip
+``c
+which python
+/usr/bin/python
+which pip
+/usr/local/bin/pip
+```
 
 note:
 

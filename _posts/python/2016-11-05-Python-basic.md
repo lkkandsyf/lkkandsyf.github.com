@@ -333,12 +333,13 @@ print (list)
 
 字典是由`键-值`对组成的集合，字典中的`值`通过`键`来引用,`键-值`对之间用`逗号`隔开，并且包含在一对`花括号`中。
 
+```python
 	dictionary = {key1:value1,key2:value2,....}
-
+```
 其中key1，key2表示字典的key值，value1，value2等表示字典的value值。如果需要一个`空的字典`，只需要一对`花括号`即可
-
-	dictionary = {}
-
+```python
+dictionary = {}
+```
 字典的创建和访问
 
 ```python
@@ -407,9 +408,9 @@ print (dict.values())
 
 ```
 要获取字典中某个value值，可以使用dict[key]的结构来访问。另一种获取value值的办法是使用字典的get()，get()的声明
-
-	D.get(k[,d]) -> D[k]
-
+```python
+D.get(k[,d]) -> D[k]
+```
 参数k表示字典的键值，参数d可以作为get()的返回值，参数d可以默认，默认值是None。get()相当与一条if ... else ...语句，如果参数k在字典D中，get()将返回D[k],如果参数k不在字典D中，则返回参数d。
 
 ```python
@@ -428,8 +429,9 @@ print (dict.get("e","apple"))#获取键为e的值，不存在就返回默认值a
 ```
 如果需要添加新的元素到`已经存在的字典`中，可以调用字典的update(),update把一个字典的key和value值全部复制到另一个字典中，update相当与一个`合并函数`
 
-	D.update(E) -> None
-
+```python
+D.update(E) -> None
+```
 合并字典
 
 ```python
@@ -564,7 +566,7 @@ print (str[:])				#apple
 
 元组和列表都具有序列的特性，但是它们的区别也很明显。元组是`只读的一组数据`，而且元组`没有提供排序和查找的方法`，列表的数据可读写，而且提供了丰富的方法，支持排序，查找操作。`列表的数据通常具有相同的意义`。
 
-```
+```C
 				元组					列表
 支持负索引			yes					yes
 支持分片				yes					yes
@@ -1173,9 +1175,9 @@ def reverse(s):
 ```
 
 字符串的查找和替换,Python中提供了find函数
-
+```python
 	find(substring[,start[,end]])
-
+```
 参数substring表示待查找的字符串，start表示开始索引的位置，end表示结束索引的位置，即在分片[start:end]中查找。如果找到字符串substring，则返回substring在`源字符串中第一次出现的索引`，否则返回-1.rfind的参数和find是一样的。不同的是从 字符串的尾部开始查找子串。
 
 ```python
@@ -1203,10 +1205,9 @@ Python中提供了time模块处理日期和时间，
 **时间到字符串**
 
 函数strftime()可以从时间到字符串的转换,strftime的声明
-
-
+```python
 	strftime(format[,tuple]) -> string
-
+```
 参数format表示格式化日期的特殊字符，例如,"%Y-%m-%d",参数tuple表示需要转换的时间，用元组存储，元组中的元素分别表示年，月，日，时，分，秒。函数返回一个表示时间的字符串
 
 **字符串到时间**
@@ -1362,8 +1363,9 @@ print (m.re.pattern)
 
 **`文件的创建`**
 
+```python
 	open(file,mode='r',buffering=-1,encoding=None,error=None,newline=None,closefd=True,opener=None) -> file object
-
+```
 参数file是被打开的文件名称，如果`文件不存在`，open将创建name文件，然后在打开该文件，参数mode是指文件打开的模式，文件的打开模式
 
  + r	以只读的方式打开文件
@@ -2157,9 +2159,8 @@ if __name__ == "__main__ :
 ```
 利用动态特性，可以对已经定义的方法，进行修改
 
-	class_name.method_name = function_name
-
 ```python
+	class_name.method_name = function_name
 
 class Fruit:
 	pass
@@ -2289,8 +2290,9 @@ if __name__ == "__main__ :
 
 Python支持多重继承，即１一个类可以继承多个父类。
 
-	class_name(parent_class1,parent_class2...)
-
+```python
+class_name(parent_class1,parent_class2...)
+```
 西瓜继承蔬菜和水果，蔬菜继承水果。
 
 ```python
@@ -2771,25 +2773,28 @@ help				help
 
 **进程**
 
-	popen:生成新的进程
-	abort/exit：终止进程
-	system：直接生成字符串所代表的进程
-	exec家族：在现有的进程环境下生成新的进程
-
+```C
+popen:生成新的进程
+abort/exit：终止进程
+system：直接生成字符串所代表的进程
+exec家族：在现有的进程环境下生成新的进程
+```
 **线程**
 
-	theading模块中Thead类的常用方法
-	start:开始运行生成的线程实例
-	run:重载这个方法，作为线程的运行部分
-	join:等待线程的结束
-	getName:返回线程的名字
-	setName:设置线程的名字
-	isAlive:查看线程是否还是活动的
-	isDaemon:查看线程是否后台运行标志
-	setDaemon:设置线程的后台运行标志
-
+```C
+theading模块中Thead类的常用方法
+start:开始运行生成的线程实例
+run:重载这个方法，作为线程的运行部分
+join:等待线程的结束
+getName:返回线程的名字
+setName:设置线程的名字
+isAlive:查看线程是否还是活动的
+isDaemon:查看线程是否后台运行标志
+setDaemon:设置线程的后台运行标志
+```
 **线程数据同步的常用方法**
 
+```C
 _锁机制_
 
 	使用互斥锁实现数据同步，
@@ -2822,9 +2827,9 @@ _同步队里_
 	get_nowait:将任务出队，如果队列为空则抛出Empyt异常
 	task_done:指示上一个入队任务是否完成操作
 	join:等待队列中任务完成任务
+```
 
 ---
-
 
 ### Ipython
 
@@ -2840,48 +2845,53 @@ Ipython的特性
 
 安装可以使用pip来直接安装
 
-	sudo pip install ipython
-
+```C
+sudo pip install ipython
+```
 magic函数的使用和构造
-
+```C
 	%cd dir #都有补全的功能
+```
 
 这里还提供了cd命令的一个参数-q使得Ipython不用打印此消息。
 
-	dhist [n] [m] #history [n] [m] n - m  command
-	history -r
-	env	#环境变量
-	page #分页
-	pfile module_name #查看相关信息
-	pdef function_name #函数原型
-	pdoc function_name #函数文档字符串
-	pinfo function_name#函数的相关信息
-	psearch object_name #搜索当前名字空间中已有的Python对象。
-	psearch a*	#搜索以a开头的Python对象
-	psearch -e buidtin a* #-选项将内置函数去掉
-	psource object_name #输出对象代码
-	bg	#将后面的函数放在后台执行
-	pycat #用语法高亮显示一个pythonfile
-	r #重复上次的命令
-	run #执行文件
-	save #将代码保存为文件
-	time #计算时间
-	who #打印所有的Python变量
-	who_ls #返回所有的Python变量的列表
-	whos #和who相似，但会输出更加详细的信息
+```C
+dhist [n] [m] #history [n] [m] n - m  command
+history -r
+env	#环境变量
+page #分页
+pfile module_name #查看相关信息
+pdef function_name #函数原型
+pdoc function_name #函数文档字符串
+pinfo function_name#函数的相关信息
+psearch object_name #搜索当前名字空间中已有的Python对象。
+psearch a*	#搜索以a开头的Python对象
+psearch -e buidtin a* #-选项将内置函数去掉
+psource object_name #输出对象代码
+bg	#将后面的函数放在后台执行
+pycat #用语法高亮显示一个pythonfile
+r #重复上次的命令
+run #执行文件
+save #将代码保存为文件
+time #计算时间
+who #打印所有的Python变量
+who_ls #返回所有的Python变量的列表
+whos #和who相似，但会输出更加详细的信息
+```
 
 使用_符号访问输出结果。
 
-	!command
-	result = !command
-	!!command #不能赋值给某个变量，因为返回的是一个list
-	!python test.py
-	%run test.py
-	import sys
-	dir(sys) #列出次模块中支持的所有的方法和成员
-	help(object)	#帮助手册
-	?/??	#查看详细信息
-
+```C
+!command
+result = !command
+!!command #不能赋值给某个变量，因为返回的是一个list
+!python test.py
+%run test.py
+import sys
+dir(sys) #列出次模块中支持的所有的方法和成员
+help(object)	#帮助手册
+?/??	#查看详细信息
+```
 tarfile
 
 定时执行任务
@@ -2954,30 +2964,32 @@ python中有个pdb模块，使python代码也可以像gdb那样进行调试，�
 
 一般常用的调试命令有：
 
-	q  退出debug
-	h  打印可用的调试命令
-	b  设置断点，b 5 在第五行设置断点
-	h command  打印command的命令含义
-	disable codenum  使某一行断点失效
-	enable codenum   使某一行的断点有效
-	condition codenum xxx  针对断点设置条件
-	c    继续执行程序，直到下一个断点
-	n    执行下一行代码，如果当前语句有函数调用，则不会进入函数体中
-	s    执行下一行代码，但是s会进入函数
-	w    打印当前执行点的位置
-	j    codenum  让程序跳转到指定的行
-	l    列出附近的源码
-	p    打印一个参数的值
-	a    打印当前函数及参数的值
-	回车  重复执行上一行
-	return 或 r	执行代码直到从当前函数返回
-	cl	清除断点
-	w ，Print a stack trace, with the most recent frame at the bottom.An arrow indicates the "current frame", which determines the context of most commands. 'bt'
-	n alias for this command.
-	d ，Move the current frame one level down in the stack trace
-	(to a newer frame).
-	u ，Move the current frame one level up in the stack trace
-	(to an older frame).使用 u 和 d 命令，我们可以在栈帧之间切换，用以获取其相关上下文变量信息。w可以显示最近的一些栈帧信息。
+```C
+q  退出debug
+h  打印可用的调试命令
+b  设置断点，b 5 在第五行设置断点
+h command  打印command的命令含义
+disable codenum  使某一行断点失效
+enable codenum   使某一行的断点有效
+condition codenum xxx  针对断点设置条件
+c    继续执行程序，直到下一个断点
+n    执行下一行代码，如果当前语句有函数调用，则不会进入函数体中
+s    执行下一行代码，但是s会进入函数
+w    打印当前执行点的位置
+j    codenum  让程序跳转到指定的行
+l    列出附近的源码
+p    打印一个参数的值
+a    打印当前函数及参数的值
+回车  重复执行上一行
+return 或 r	执行代码直到从当前函数返回
+cl	清除断点
+w ，Print a stack trace, with the most recent frame at the bottom.An arrow indicates the "current frame", which determines the context of most commands. 'bt'
+n alias for this command.
+d ，Move the current frame one level down in the stack trace
+(to a newer frame).
+u ，Move the current frame one level up in the stack trace
+(to an older frame).使用 u 和 d 命令，我们可以在栈帧之间切换，用以获取其相关上下文变量信息。w可以显示最近的一些栈帧信息。
+```
 
 调试过程如下:python -m pdb xxx.py
 
@@ -3004,17 +3016,11 @@ pygrok:这是一个开源的字符串解析库,[github](https://github.com/garye
 
 demo:README.md
 
-```python
-
-
-
-```
-
 ### 项目文件
 
 项目结构:写一个关于python的项目，就必须知道整个项目的具体结构安排
 
-```
+```C
 readme.md和setup.py和requirements.txt放在根目录下
 一个项目至少有3个子目录, docs目录, root package 和tests package
 的python代码要放在一个package中, 而不是一般的src目录中.
@@ -3051,9 +3057,6 @@ import xxxx
 xxxx.func()
 
 ```
-
-
-
 
 ### ipdb debug python
 

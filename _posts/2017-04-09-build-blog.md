@@ -11,7 +11,7 @@ tags : [ jekyll ]
 
 ## install env
 
-```
+```C
  > 1. 进入docker
  sudo docker run -it ubuntu:14.04 /bin/bash
  apt-get update
@@ -30,7 +30,7 @@ problem:`An error occurred while installing json (1.8.6), and Bundler cannot con
 `
 solution:
 
-```
+```C
 sudo apt-get install libgmp-dev
 sudo apt-get install libgmp3-dev
 ```

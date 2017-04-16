@@ -11,14 +11,14 @@ tags: [linux, driver]
 
 如下是`sk_buff`的主要结构成员：
 
-	struct sk_buff {
-	...
-		unsigned char *head;
-		unsigned char *data;
-		unsigned char *tail;
-		unsigned char *end;
-	...
-	};
+{% highlight C linenos %}
+struct sk_buff {
+	unsigned char *head;
+	unsigned char *data;
+	unsigned char *tail;
+	unsigned char *end;
+};
+{% endhighlight %}
 
 当然，`sk_buff`还包含一些链表的东西，在此处并不做解析。在以上结构体中：
 

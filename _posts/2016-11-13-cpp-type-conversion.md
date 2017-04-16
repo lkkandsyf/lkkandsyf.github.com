@@ -28,7 +28,7 @@ C++的类型转换比较杂，看了又忘，再看也忘。在此，总结了�
 **整型提升**
 
  小整数类型转换成较大的整数类型，对于`bool`、`char`、`signed char`、`unsigned char`、`short`和`unsigned short`，只要它们所有可能的值都能存在`int`里，它们就会提升成`int`类型，否则提升成`unsigned int`类型。
- 
+
  较大的`char`类型（`wchar_t`、`char16_t`、`char32_t`）提升成`int`、`unsigned int`、`long`、`unsigned long`、`long long`和`unsigned long long`中最小的一种类型。
 
 **无符号类型的运算对象**
@@ -65,7 +65,7 @@ C++的类型转换比较杂，看了又忘，再看也忘。在此，总结了�
 * `const_cast`：只能改变运算对象的底层`const`，如果对象本身是一个常量，那么行为未定义。
 * `reinterpret_cast`：为运算对象的位模式提供较底层次上的重新解释。
 * 旧式强制类型转换：
-	```
-	type (expr);
-	(type) expr;
-	```
+```c
+type (expr);
+(type) expr;
+```

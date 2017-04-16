@@ -16,7 +16,7 @@ Jekyll-Jacman 是为 [Jekyll](http://jekyllrb.com) 设计的一款清新且具�
 
 Jacman 主题提供了丰富的配置属性，可以实现您对主题的自定义。配置文件`_config.yml`位于主题根目录下。本次更新对配置文件进行了较大调整，如您之前就使用了 Jacman，也需要您根据以下指南进行相应的修改。
 
-```
+```c
 ##### 菜单
 menu:
   主页: /
@@ -122,7 +122,7 @@ tinysou_search:     ## http://tinysou.com/
 - **菜单 menu**
 默认没有启用 `/tags` 和 `/categories`页面，如果需要启用请在博客目录下分别建立`tags` 和 `categories`文件夹每个文件夹中分别包含一个`index.md`文件。内容为：
 
-```
+```c
 layout: tags (或categories)
 title: tags (或categories)
 ---
@@ -185,7 +185,7 @@ title: tags (或categories)
 `baidu_search`：如果开启百度站内搜索需要登录 [百度站内搜索](http://zn.baidu.com/)，配置好你的站点，并开启站内搜索获取搜索ID，另外`site`属性可以填默认值，也可以填自己做了CNAME的二级域名，更详细的可以阅读[这篇博客](http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/)了解。
 
  `google_cse`：如果开启谷歌自定义搜索需要先登录 [Google CSE](https://www.google.com/cse/)，配置好你的站点，并获得此自定义搜索的ID。此外你需要在博客目录下建立`search`文件夹并包含一个`index.md`文件。内容为：
- ```
+ ```c
  layout: search
  title: search
  ---
@@ -200,7 +200,8 @@ title: tags (或categories)
 
 - **Q：如何建立一篇图片类文章（Gallery Post）？**
 > 直接新建一个 Markdown 文件，将其`front-matter`修改为如下，即可看到主题为图片类文章提供的样式。
-```
+
+```c
 ---
 layout: photo
 title: Gallery Post
