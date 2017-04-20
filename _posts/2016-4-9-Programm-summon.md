@@ -2,9 +2,9 @@
 title: 编程资料汇总
 tagline: ""
 last_updated: null
-category : Program-Document
+category :
 layout: post
-tags : [program, document]
+tags : []
 ---
 摘要：　这是对编程资料的汇总。
 ---

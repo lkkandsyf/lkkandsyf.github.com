@@ -1,6 +1,6 @@
 ---
 layout: post
-category : JavaError
+category :
 tagline: "Supporting tagline"
 tags : [maven-surefire-plugin]
 ---

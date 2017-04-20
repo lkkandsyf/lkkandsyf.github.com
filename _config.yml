@@ -95,7 +95,6 @@ author:
   name: liangkangkang      ## e.g. wuchong Author name
   intro_line1:  "Hello, I'm liangkangkang in nsfocus."    ## your introduction on the bottom of the page
   intro_line2:  "where there is a will,there is a way."  ## the 2nd line
-  weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:    ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
@@ -127,6 +126,9 @@ links:
   twitter: https://twitter.com/liangkangkang,推特
   stackoverflow: http://stackoverflow.com/,IT famous Q&A website
   afenxi: http://www.afenxi.com/
+  segmentfault: https://segmentfault.com/
+  36kr: http://36kr.com/
+  weibo: http://weibo.com/5577865939  ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
 
 #excerpt_separator: <!--more-->
 

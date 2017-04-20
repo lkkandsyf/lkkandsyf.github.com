@@ -65,12 +65,13 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 **`编程语言`**
 
+
 基本语言:C/C++,Scala,Java,Python
 
 
-**'IRC'**
+**`IRC`**
 
-```
+```C
 #docker
 #mongodb
 #python
@@ -83,7 +84,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 #apache-kakfa
 ```
 
-**'Professional Web'**
+**`Professional Web`**
 
 [google](http:google.com)
 
@@ -117,7 +118,15 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0)
 
+[spring](https://spring.io/)
 
+[并发编程网](http://ifeve.com/)
+
+[iteye](http://www.iteye.com/)
+
+[java中文社区](http://www.java-cn.com/index.html)
+
+[open-open](http://www.open-open.com/)
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
@@ -135,7 +144,7 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 
 1.硕士以上学历，信息安全、计算机科学或计算机网络等相关方向，在数据分析、人工智能、机器学习等相关领域发表过高水平论文优先；
 
-2.熟悉`scala`/java/`python`/R等编程语言；
+2.熟悉`scala`/`java`/`python`/R等编程语言；
 
 3.熟悉linux平台上的开发技能；
 

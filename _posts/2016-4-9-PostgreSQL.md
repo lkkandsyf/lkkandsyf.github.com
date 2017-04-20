@@ -1,9 +1,9 @@
 ---
 title: 编程资料--PostgreSQL
 tagline: ""
-category : Program-Document
+category :
 layout: post
-tags : [program, document, PostgreSQL]
+tags : []
 ---
 
 摘要：　这是对编程资料--PostgreSQL的汇总。

@@ -17,18 +17,17 @@ Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
  - [] 不勾选
  - [x] 勾选
 
-```
+```C
 
  First Header | Second Header | Third Header
  ------------ | ------------- | ------------
  Content Cell | Content Cell  | Content Cell
  Content Cell | Content Cell  | Content Cell
 
-
 ```
 tow diff
 
-```
+```C
 
 First Header | Second Header | Third Header
 :----------- | :-----------: | -----------:
@@ -91,3 +90,4 @@ Here is a number list:
 
 You can specify an inline like so $x^2+y^2=z^2$
 
+### learn
