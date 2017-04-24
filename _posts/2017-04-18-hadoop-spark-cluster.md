@@ -4,9 +4,9 @@ category :
 tagline: "Supporting tagline"
 tags:
   -
-title: 'Linux搭建Hadoop+Spark集群'
+title: 'Linux搭建Hadoop+Spark集群+ hive + hbase'
 ---
-通过vbox虚拟机来搭建Hadoop+Spark集群
+通过vbox虚拟机来搭建Hadoop+Spark集群,再额外添加一些外围的东西,如Zookeeper,Hbaes,Hive,Kafka,Flume,Redis等.
 
 ---
 
@@ -687,9 +687,219 @@ cd $SPARK_HOME/sbin
 
 最后再停止hadoop集群
 
+
+## Hive
+
+hive是在hadoop的基础上构建的，所以要搭建好hadoop集群.如果完成了上面的步骤，就可以了。下面就开始搭建hive数据库.
+
+[download hive from office](http://www.apache.org/dyn/closer.cgi/hive/)
+
+[office guide](https://cwiki.apache.org/confluence/display/Hive/GettingStarted)
+
+在安装Hive之前，还需要有一个元数据库，默认的是内嵌的Derby.但是在企业中大部分都使用Mysql数据库，所以就以这两种数据库,都进行了尝试。
+
+### Hive configuration
+
+hive env varible
+
+```C
+tar xf hive-xxx.tar.gz
+# rename file in order to set varible
+mv apache-xxx hive
+vim ~/.bashrc
+## appand to code
+export HIVE_HOME=/home/lkk/software/hive
+export PATH:$PATH:/home/lkk/software/hive/bin
+source ~/.bashrc
+```
+
+hive configuration
+
+```C
+cd $HIVE_HOME/conf
+cp hive-env.sh.template hive-evn.sh
+vim hive-env.sh
+# appand code
+export HADOOP_HOME=/home/lkk/software/hadoop
+# accord to machine
+#export HADOOP_HEADSIZE=256
+export HIVE_CONF_DIR=/home/lkk/software/hive
+
+cp hive-default.xml.template hive-site.xml
+vim hive-site.xml
+# modify code find javax.jdo.option.ConnectionURL add oneself PATH in the metastore
+# before
+<value>jdbc:derby:;databaseName=metastore_db;create=true</value>
+# after
+<value>jdbc:derby:;databaseName=/home/lkk/software/hadoop/hive/metastore_db;create=true</value>
+```
+hive.metastore.warehouse.dir
+该参数指定了 Hive 的数据存储目录，默认位置在 HDFS 上面的 /user/hive/warehouse 路径下。
+
+hive.exec.scratchdir
+该参数指定了 Hive 的数据临时文件目录，默认位置为 HDFS 上面的 /tmp/hive 路径下。
+
+### Derby
+
+对于Derby来，操作较为简单,[download Apache Derby](http://db.apache.org/derby/derby_downloads.html)
+
+解压文件并设置环境变量
+
+```C
+tar xf db-derby-xxxx-bin.tar.gz ## xxx表示版本号
+# rename db-derby-xxx-bin to derby
+vim ~/.bashrc
+export HIVE_HOME=/home/lkk/software/derby
+export PATH:$PATH:/home/lkk/software/derby/bin
+source ~/.bashrc
+# create a directory to store Metastore
+mkdir $DERBY_HOME/data -p
+```
+建立Hive目录用HDFS,warehouse来存储hive的tables或数据
+
+```C
+hdfs dfs -mkdir /home/lkk/software/hadoop/hive/warehouse
+hdfs dfs -mkdir /tmp
+# read and write permission
+hdfs dfs -chmod g+w /home/lkk/software/hadoop/hive/warehouse
+hdfs dfs -chmod g+w /tmp
+```
+
+初始化Derby数据库
+
+```C
+cd $HIVE_HOME/bin
+schematool -initSchema -dbType derby
+
+```
+
+进入hive shell
+
+```C
+cd $HIVE_HOME/bin
+hive --version
+hive
+hive>show databaes;
+hive>create table(id string)
+hive>show tables;
+hive>exit
+```
+
+### Mysql
+
+对于Mysql而言，这才是重点，以后也经常用过，必须要熟练应用。
+
+1.先检查系统中是否已经安装了Mysql.
+
+```C
+sudo netstat -tap | grep msyql
+```
+2若没有安装，则可以安装
+
+```C
+sudo apt-get install mysql-client mysql-server
+```
+注意安装过程中会输入root密码。
+
+通过mysql设置用户和密码
+
+```C
+mysql -u root -p
+# create user
+mysql>grant all on *.* to username@'%' identified by 'password';
+mysql>flush privileges;
+mysql>show grants for username;
+mysql>create database hive;
+mysql>exit
+```
+
+3.配置hive
+
+hive-env.sh
+
+```C
+export HIVE_CONF_DIR=HIVE_PATH
+export HADOOP_HOME=HADOOP_HOME
+```
+
+hive-site.sh
+
+修改ConnectionURL,ConnectionDriverName,ConnectionUserName,ConnectionPassword.
+```C
+<configuration>
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassWord</name>
+		<value>123456</value>
+	</property>
+</configuration>
+```
+
+4.JDBC驱动包
+
+[download jdbc driver](http://dev.mysql.com/downloads/connector/j/)需要把jar包放到/hive/lib下
+
+数据库初始化
+
+```C
+cd  $HIVE_HOME/bin
+schematool -initSchema -dbType mysql
+```
+problem:
+
+[Failed to get schema version when starting Hive Metastore Service](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.1.0/com.ibm.swg.im.infosphere.biginsights.trb.doc/doc/trb_comp_hive_mysql.html)
+
+进入hive shell
+
+```C
+cd $HIVE_HOME/bin
+hive --version
+hive
+hive>show databaes;
+hive>create table(id string)
+hive>show tables;
+hive>exit
+```
+
+完成之后，就把这个结点的配置拷贝到其他机器。
+
+```C
+scp -r PATH:PATH
+```
+配置环境和master是一样的。
+
+参考
+
+[Ubuntu系统下配置Hadoop2.7.1+Hive2.1.0](http://blog.csdn.net/cuihaolong/article/details/52038543)
+
+[Hadoop+Hive环境搭建](http://nunknown.com/study/282/#3)
+
+## Hbase
+
+[\[guide office\]](http://hbase.apache.org/book.html)
+
+## Kafka
+
+
+## Flume
+
+
+## Redis
+
 ## 附录
 
-### wordcout.java
+### WordCount.java
 
 {% highlight java linenos %}
 public class WordCount {

@@ -4,7 +4,7 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-04-20T17:46:12+08:00</updated>
+ <updated>2017-04-24T09:27:29+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
@@ -13,11 +13,11 @@
 
  
  <entry>
-   <title>Linux搭建Hadoop+Spark集群</title>
+   <title>Linux搭建Hadoop+Spark集群+ hive + hbase</title>
    <link href="/2017/04/18/hadoop-spark-cluster"/>
    <updated>2017-04-18T00:00:00+08:00</updated>
    <id>/2017/04/18/hadoop-spark-cluster</id>
-   <content type="html">&lt;p&gt;通过vbox虚拟机来搭建Hadoop+Spark集群&lt;/p&gt;
+   <content type="html">&lt;p&gt;通过vbox虚拟机来搭建Hadoop+Spark集群,再额外添加一些外围的东西,如Zookeeper,Hbaes,Hive,Kafka,Flume,Redis等.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -841,9 +841,202 @@ http://master-ip:4040
 
 &lt;p&gt;最后再停止hadoop集群&lt;/p&gt;
 
+&lt;h2 id=&quot;hive&quot;&gt;Hive&lt;/h2&gt;
+
+&lt;p&gt;hive是在hadoop的基础上构建的，所以要搭建好hadoop集群.如果完成了上面的步骤，就可以了。下面就开始搭建hive数据库.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.apache.org/dyn/closer.cgi/hive/&quot;&gt;download hive from office&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/Hive/GettingStarted&quot;&gt;office guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在安装Hive之前，还需要有一个元数据库，默认的是内嵌的Derby.但是在企业中大部分都使用Mysql数据库，所以就以这两种数据库,都进行了尝试。&lt;/p&gt;
+
+&lt;h3 id=&quot;hive-configuration&quot;&gt;Hive configuration&lt;/h3&gt;
+
+&lt;p&gt;hive env varible&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;tar xf hive-xxx.tar.gz
+# rename file in order to set varible
+mv apache-xxx hive
+vim ~/.bashrc
+## appand to code
+export HIVE_HOME=/home/lkk/software/hive
+export PATH:$PATH:/home/lkk/software/hive/bin
+source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hive configuration&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd $HIVE_HOME/conf
+cp hive-env.sh.template hive-evn.sh
+vim hive-env.sh
+# appand code
+export HADOOP_HOME=/home/lkk/software/hadoop
+# accord to machine
+#export HADOOP_HEADSIZE=256
+export HIVE_CONF_DIR=/home/lkk/software/hive
+
+cp hive-default.xml.template hive-site.xml
+vim hive-site.xml
+# modify code find javax.jdo.option.ConnectionURL add oneself PATH in the metastore
+# before
+&amp;lt;value&amp;gt;jdbc:derby:;databaseName=metastore_db;create=true&amp;lt;/value&amp;gt;
+# after
+&amp;lt;value&amp;gt;jdbc:derby:;databaseName=/home/lkk/software/hadoop/hive/metastore_db;create=true&amp;lt;/value&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;hive.metastore.warehouse.dir
+该参数指定了 Hive 的数据存储目录，默认位置在 HDFS 上面的 /user/hive/warehouse 路径下。&lt;/p&gt;
+
+&lt;p&gt;hive.exec.scratchdir
+该参数指定了 Hive 的数据临时文件目录，默认位置为 HDFS 上面的 /tmp/hive 路径下。&lt;/p&gt;
+
+&lt;h3 id=&quot;derby&quot;&gt;Derby&lt;/h3&gt;
+
+&lt;p&gt;对于Derby来，操作较为简单,&lt;a href=&quot;http://db.apache.org/derby/derby_downloads.html&quot;&gt;download Apache Derby&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;解压文件并设置环境变量&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;tar xf db-derby-xxxx-bin.tar.gz ## xxx表示版本号
+# rename db-derby-xxx-bin to derby
+vim ~/.bashrc
+export HIVE_HOME=/home/lkk/software/derby
+export PATH:$PATH:/home/lkk/software/derby/bin
+source ~/.bashrc
+# create a directory to store Metastore
+mkdir $DERBY_HOME/data -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;建立Hive目录用HDFS,warehouse来存储hive的tables或数据&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;hdfs dfs -mkdir /home/lkk/software/hadoop/hive/warehouse
+hdfs dfs -mkdir /tmp
+# read and write permission
+hdfs dfs -chmod g+w /home/lkk/software/hadoop/hive/warehouse
+hdfs dfs -chmod g+w /tmp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;初始化Derby数据库&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd $HIVE_HOME/bin
+schematool -initSchema -dbType derby
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;进入hive shell&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd $HIVE_HOME/bin
+hive --version
+hive
+hive&amp;gt;show databaes;
+hive&amp;gt;create table(id string)
+hive&amp;gt;show tables;
+hive&amp;gt;exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;mysql&quot;&gt;Mysql&lt;/h3&gt;
+
+&lt;p&gt;对于Mysql而言，这才是重点，以后也经常用过，必须要熟练应用。&lt;/p&gt;
+
+&lt;p&gt;1.先检查系统中是否已经安装了Mysql.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo netstat -tap | grep msyql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2若没有安装，则可以安装&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo apt-get install mysql-client mysql-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意安装过程中会输入root密码。&lt;/p&gt;
+
+&lt;p&gt;通过mysql设置用户和密码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;mysql -u root -p
+# create user
+mysql&amp;gt;grant all on *.* to username@'%' identified by 'password';
+mysql&amp;gt;flush privileges;
+mysql&amp;gt;show grants for username;
+mysql&amp;gt;create database hive;
+mysql&amp;gt;exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.配置hive&lt;/p&gt;
+
+&lt;p&gt;hive-env.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;export HIVE_CONF_DIR=HIVE_PATH
+export HADOOP_HOME=HADOOP_HOME
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;hive-site.sh&lt;/p&gt;
+
+&lt;p&gt;修改ConnectionURL,ConnectionDriverName,ConnectionUserName,ConnectionPassword.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;&amp;lt;configuration&amp;gt;
+	&amp;lt;property&amp;gt;
+		&amp;lt;name&amp;gt;javax.jdo.option.ConnectionURL&amp;lt;/name&amp;gt;
+		&amp;lt;value&amp;gt;jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true&amp;lt;/value&amp;gt;
+	&amp;lt;/property&amp;gt;
+	&amp;lt;property&amp;gt;
+		&amp;lt;name&amp;gt;javax.jdo.option.ConnectionDriverName&amp;lt;/name&amp;gt;
+		&amp;lt;value&amp;gt;com.mysql.jdbc.Driver&amp;lt;/value&amp;gt;
+	&amp;lt;/property&amp;gt;
+	&amp;lt;property&amp;gt;
+		&amp;lt;name&amp;gt;javax.jdo.option.ConnectionUserName&amp;lt;/name&amp;gt;
+		&amp;lt;value&amp;gt;root&amp;lt;/value&amp;gt;
+	&amp;lt;/property&amp;gt;
+	&amp;lt;property&amp;gt;
+		&amp;lt;name&amp;gt;javax.jdo.option.ConnectionPassWord&amp;lt;/name&amp;gt;
+		&amp;lt;value&amp;gt;123456&amp;lt;/value&amp;gt;
+	&amp;lt;/property&amp;gt;
+&amp;lt;/configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4.JDBC驱动包&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dev.mysql.com/downloads/connector/j/&quot;&gt;download jdbc driver&lt;/a&gt;需要把jar包放到/hive/lib下&lt;/p&gt;
+
+&lt;p&gt;数据库初始化&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd  $HIVE_HOME/bin
+schematool -initSchema -dbType mysql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;problem:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ibm.com/support/knowledgecenter/SSPT3X_4.1.0/com.ibm.swg.im.infosphere.biginsights.trb.doc/doc/trb_comp_hive_mysql.html&quot;&gt;Failed to get schema version when starting Hive Metastore Service&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;进入hive shell&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd $HIVE_HOME/bin
+hive --version
+hive
+hive&amp;gt;show databaes;
+hive&amp;gt;create table(id string)
+hive&amp;gt;show tables;
+hive&amp;gt;exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完成之后，就把这个结点的配置拷贝到其他机器。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;scp -r PATH:PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配置环境和master是一样的。&lt;/p&gt;
+
+&lt;p&gt;参考&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/cuihaolong/article/details/52038543&quot;&gt;Ubuntu系统下配置Hadoop2.7.1+Hive2.1.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nunknown.com/study/282/#3&quot;&gt;Hadoop+Hive环境搭建&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hbase&quot;&gt;Hbase&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hbase.apache.org/book.html&quot;&gt;[guide office]&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;kafka&quot;&gt;Kafka&lt;/h2&gt;
+
+&lt;h2 id=&quot;flume&quot;&gt;Flume&lt;/h2&gt;
+
+&lt;h2 id=&quot;redis&quot;&gt;Redis&lt;/h2&gt;
+
 &lt;h2 id=&quot;附录&quot;&gt;附录&lt;/h2&gt;
 
-&lt;h3 id=&quot;wordcoutjava&quot;&gt;wordcout.java&lt;/h3&gt;
+&lt;h3 id=&quot;wordcountjava&quot;&gt;WordCount.java&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -1406,23 +1599,27 @@ deploy:
 
 &lt;p&gt;Ctrl + Shift + B:进入光标中的方法&lt;/p&gt;
 
+&lt;p&gt;Ctrl + Shift + H:打开光标下的类关系图&lt;/p&gt;
+
 &lt;p&gt;Ctrl + Left:返回&lt;/p&gt;
 
 &lt;p&gt;Ctrl + Right:返回&lt;/p&gt;
 
-&lt;p&gt;Alt + 1&lt;/p&gt;
+&lt;p&gt;Alt + 1:project&lt;/p&gt;
 
-&lt;p&gt;Alt + 2&lt;/p&gt;
+&lt;p&gt;Alt + 2:favoites&lt;/p&gt;
 
-&lt;p&gt;Alt + 4&lt;/p&gt;
+&lt;p&gt;Alt + 3:&lt;/p&gt;
+
+&lt;p&gt;Alt + 4: run window&lt;/p&gt;
 
 &lt;p&gt;Alt + 5&lt;/p&gt;
 
-&lt;p&gt;Alt + 6&lt;/p&gt;
+&lt;p&gt;Alt + 6: TODO&lt;/p&gt;
 
-&lt;p&gt;Alt + 7&lt;/p&gt;
+&lt;p&gt;Alt + 7:文件框架&lt;/p&gt;
 
-&lt;p&gt;Alt + 8&lt;/p&gt;
+&lt;p&gt;Alt + 8 :class type hierarchy&lt;/p&gt;
 
 &lt;p&gt;Alt + 9&lt;/p&gt;
 
@@ -1440,7 +1637,21 @@ deploy:
 
 &lt;p&gt;alt + ;:search where&lt;/p&gt;
 
+&lt;p&gt;ctrl + , :rename file&lt;/p&gt;
+
+&lt;p&gt;ctrl + “+/-“ :当前代码折叠&lt;/p&gt;
+
+&lt;p&gt;ctrl + shift  + “+/-“ :当前所有代码折叠&lt;/p&gt;
+
+&lt;p&gt;alt + home :跳转到导航栏&lt;/p&gt;
+
+&lt;p&gt;psvm + sout:main fun + sout&lt;/p&gt;
+
+&lt;p&gt;ctrl + ~ :切换主题(界面外观，代码风格，快捷键映射)&lt;/p&gt;
+
 &lt;p&gt;添加统一的文件头注释:settings-&amp;gt;Editor-&amp;gt;File and Code Templates,在include的标签页中填写自己需要的头注释。&lt;/p&gt;
+
+&lt;p&gt;忽略大小写补全:settings-&amp;gt;input sensitive :将右边的case sensitive completion 修改为NON&lt;/p&gt;
 
 &lt;p&gt;加入引入包 alt+enter&lt;/p&gt;
 
