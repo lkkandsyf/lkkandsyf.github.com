@@ -82,6 +82,7 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 #perl
 #ubuntu-cn
 #apache-kakfa
+#scikit-learn
 ```
 
 **`Professional Web`**

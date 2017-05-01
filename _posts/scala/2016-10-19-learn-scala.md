@@ -1280,13 +1280,12 @@ scala> val (add, sub) = calc(5, 1)
 add: Int = 6
 sub: Int = 5
 ```
-这里定义了一个函数：calc，它有两个参数：n1和n2，其类型为：Int。cala函数的返回值类型是一个有两个元素的元组，在Scala中可以简写为：(Int,
+
+里定义了一个函数：calc，它有两个参数：n1和n2，其类型为：Int。cala函数的返回值类型是一个有两个元素的元组，在Scala中可以简写为：(Int,
 Int)。在Scala中，代码段的最后一句将做为函数返回值，所以这里不需要显示的写return关键字。
 
 而val (add, sub) = calc(5,
 1)一句，是Scala中的抽取功能。它直接把calc函数返回的一个Tuple2值赋给了add他sub两个变量。
-
-
 
 ### Scala API download
 
