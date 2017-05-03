@@ -1,6 +1,6 @@
 ---
 tags:
-  - linux
+  -
 layout: post
 title: '如何上传 ppa'
 category: Linux

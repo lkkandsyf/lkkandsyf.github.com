@@ -1,6 +1,6 @@
 ---
 layout: post
-category : OpenSource
+category :
 tagline: "Supporting tagline"
 tags : [sprintside4]
 ---

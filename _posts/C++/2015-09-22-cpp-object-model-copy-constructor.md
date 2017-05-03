@@ -2,9 +2,9 @@
 published: true
 layout: post
 title: C++对象模型之复制构造函数
-category: Program
-tags: 
-  - cpp
+category: C++
+tags:
+  -
 ---
 
 
@@ -47,9 +47,9 @@ verb.len = noun.len;
  > 2. 当 base class 存在 copy constructor。
  > 3. 当 class 声明了 virtual functions 时。
  > 4. 当继承链中有 virtual base class 时。
- 
+
  前面两种情况，在此不做讨论。
- 
+
 ## class 声明了 virtual functions
 
 这种情况下，可能需要重新设定 Virtual Table 的指针。
@@ -61,7 +61,7 @@ class ZooAnimal {
 public:
     ZooAnimal();
     virtual ~ZooAnimal();
-    
+
     virtual void animate();
     virtual void draw();
 };

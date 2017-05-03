@@ -2,8 +2,8 @@
 published: true
 layout: post
 title: C++ 对象模型之构造函数
-category: Program
-tags: 
+category: C++
+tags:
   - cpp
 ---
 
@@ -87,9 +87,9 @@ Bar::Bar()
 
  > 1. class 声明（或继承）一个 virtual function。
  > 2. class 派生自一个继承串链，其中有一个或更多的 virtual base classes。
- 
+
  举个例子：
- 
+
 ```cpp
 class Widget {
 public:
@@ -103,7 +103,7 @@ void foo()
 {
     Bell b;
     Whistle w;
-    
+
     flip(b);
     flip(w);
 }
@@ -156,6 +156,6 @@ C++ 新手一般有两个常见的误解：
 
  > 1. 任何 class 如果没有定义 default constructor，就会被合成出一个来。
  > 2. 编译器合成出来的 default constructor 会显式设定 class 内每一个 data member 的默认值。
- 
+
 如你所见，没有一个是真的。
 

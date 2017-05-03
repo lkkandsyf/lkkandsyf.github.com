@@ -3,8 +3,8 @@ categories:
   - Network
 tags:
   - 'tcp'
-comment: 
-info: 
+comment:
+info:
 date: '2015-9-15'
 type: post
 layout: post

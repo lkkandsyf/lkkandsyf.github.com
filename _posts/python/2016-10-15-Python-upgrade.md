@@ -2,7 +2,7 @@
 layout: post
 category : Python
 tagline: "Supporting tagline"
-tags : [Pyhon-package]
+tags : []
 ---
 python updgrade
 ---

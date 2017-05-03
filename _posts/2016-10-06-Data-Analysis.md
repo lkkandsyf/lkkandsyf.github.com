@@ -1,8 +1,8 @@
 ---
 layout: post
-category : secority
+category : Network Secority
 tagline: "Supporting tagline"
-tags : [Big-data]
+tags : []
 ---
 数据分析技术
 ---

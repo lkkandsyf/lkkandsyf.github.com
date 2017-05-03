@@ -2,7 +2,7 @@
 layout: post
 category : interview
 tagline: "Supporting tagline"
-tags : [algorithm]
+tags : []
 ---
 ---
 <!--more-->

@@ -1,8 +1,8 @@
 ---
 layout: post
-category : C++
+category : interview
 tagline: "Supporting tagline"
-tags : [interview C++]
+tags : []
 ---
 C++基本知识
 ---

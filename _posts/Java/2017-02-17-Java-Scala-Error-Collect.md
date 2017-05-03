@@ -2,7 +2,7 @@
 layout: post
 category :
 tagline: "Supporting tagline"
-tags : [maven-surefire-plugin]
+tags : []
 ---
 这里整理自己学习Java过程中遇到的一些问题，简单记录下来，方便以后查看。
 ---

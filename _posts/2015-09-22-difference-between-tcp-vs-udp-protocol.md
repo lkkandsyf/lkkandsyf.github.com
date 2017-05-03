@@ -3,7 +3,7 @@ published: true
 layout: post
 title: TCP 和 UDP 的区别
 category: Network
-tags: 
+tags:
   - tcp
   - udp
 ---
@@ -11,7 +11,7 @@ tags:
 
  * TCP(Transmission Control Protocol)：传输控制协议
  * UDP(User Datagram Protocol)：用户数据报协议
- 
+
 主要从连接性(Connectivity)、可靠性(Reliability)、有序性(Ordering)、有界性(Boundary)、拥塞控制(Congestion or Flow control)、传输速度(Speed)、量级(Heavy/Light weight)、头部大小(Header size)等8个方面来讲。
 
 <!--more-->
@@ -56,7 +56,7 @@ tags:
 
  > * 基于TCP的协议有：HTTP/HTTPS，Telnet，FTP，SMTP。
  > * 基于UDP的协议有：DHCP，DNS，SNMP，TFTP，BOOTP。
- 
+
 ---
- 
+
 *本文转自：<http://liangjiabin.com/blog/2015/03/difference-between-tcp-vs-udp-protocol.html>*

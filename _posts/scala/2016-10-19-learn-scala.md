@@ -2,7 +2,7 @@
 layout: post
 category : Scala
 tagline: "Supporting tagline"
-tags : [scala sbt]
+tags : []
 ---
 这里整理自己学习scala的整个过程，以及笔记。
 ---

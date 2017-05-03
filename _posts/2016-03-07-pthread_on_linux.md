@@ -3,8 +3,7 @@ published: true
 title: Pthreads 入门教程
 category: Linux
 tags:
-  - cpp
-  - c
+  - pthread
 layout: post
 ---
 pthread

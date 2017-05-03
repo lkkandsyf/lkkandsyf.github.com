@@ -2,8 +2,8 @@
 title: 'C++ 函数重载与函数匹配'
 layout: post
 tags:
-  - cpp
-category: Program
+-
+category: C++
 ---
 《C++ Primer》笔记，整理关于函数重载与函数匹配的笔记。
 
@@ -65,7 +65,7 @@ namespace N
 	{
 		func(); //候选函数为函数2和3
 	}
-	
+
 	void test2()
 	{
 		using ::func; //将函数1加入当前作用域
@@ -115,7 +115,7 @@ void test()
 {
     Name1::T t1;
     Name2::T t2;
-    //9个函数全是候选函数  
+    //9个函数全是候选函数
     //第1个函数是normal lookup找到的
     //后8个函数全是argument-dependent lookup找到的
     func(&t1,t2);

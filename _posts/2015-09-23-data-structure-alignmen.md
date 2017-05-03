@@ -2,10 +2,9 @@
 published: true
 layout: post
 title: 字节对齐
-category: Program
-tags: 
-  - cpp
-  - c
+category:
+tags:
+-
 ---
 
 
@@ -40,7 +39,7 @@ struct B{
 };
 ```
 
-**结果：**`sizeof(strcut A)`值为8；`sizeof(struct B)`的值却是12。 
+**结果：**`sizeof(strcut A)`值为8；`sizeof(struct B)`的值却是12。
 
 **例2：**
 ```cpp

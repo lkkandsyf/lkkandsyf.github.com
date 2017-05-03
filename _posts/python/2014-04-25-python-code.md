@@ -2,8 +2,8 @@
 layout: post
 title: "python list的技巧"
 description: ""
-category: python
-tags: [python]
+category: Python
+tags: []
 ---
 # Python list的一些技巧
 ---
