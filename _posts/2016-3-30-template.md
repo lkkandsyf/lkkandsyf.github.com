@@ -13,7 +13,7 @@ This Jekyll introduction will outline specifically  what Jekyll is and why you w
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 
-# kangakng
+# basic usage
  - [] 不勾选
  - [x] 勾选
 
@@ -44,6 +44,12 @@ require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
+
+<table>
+<tr><td>1</td><td>4</td><td>5</td></tr>
+<tr><td>2</td><td>9</td><td>6</td></tr>
+<tr><td>3</td><td>8</td><td><7/td></tr>
+</table>
 
 c++ code
 ```c++
@@ -91,3 +97,5 @@ Here is a number list:
 You can specify an inline like so $x^2+y^2=z^2$
 
 ### learn
+
+
