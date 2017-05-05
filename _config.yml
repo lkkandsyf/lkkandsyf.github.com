@@ -130,13 +130,12 @@ links:
   afenxi: http://www.afenxi.com/
   segmentfault: https://segmentfault.com/
   36kr: http://36kr.com/
-  weibo: http://weibo.com/5577865939  ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
 
 #excerpt_separator: <!--more-->
 
 #### Comment
-duoshuo_shortname: liangkangang   ## e.g. wuchong   your duoshuo short name.
-disqus_shortname:     ## e.g. wuchong   your disqus short name.
+#duoshuo_shortname: liangkangang   ## e.g. wuchong   your duoshuo short name.
+#disqus_shortname:     ## e.g. wuchong   your disqus short name.
 
 #### Share button
 jiathis:

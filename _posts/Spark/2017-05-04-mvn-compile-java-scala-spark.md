@@ -13,7 +13,7 @@ mvn compile Java Scala Spark
 
 ---
 
-开始前奏:配置好[\[Jdk 1.8\]](http://www.oracle.com/technetwork/java/javase/downloads/index.html),[\[Scala 2.11\]](http://www.scala-lang.org/download/),[\[Maven 3\]](http://maven.apache.org/download.cgi),[\[Spark2.0 later\]](http://spark.apache.org/downloads.html).好了，让我们开始吧。
+开始前奏:配置好[\[Jdk 1.8\]](http://www.oracle.com/technetwork/java/javase/downloads/index.html),[\[Scala 2.11.8\]](http://www.scala-lang.org/download/),[\[Maven 3\]](http://maven.apache.org/download.cgi),[\[Spark2.0.0 later\]](http://spark.apache.org/downloads.html).好了，让我们开始吧。
 
 ## mvn create project
 
@@ -430,7 +430,7 @@ result:
 Pi is roughly 3.1422157110785554
 ```
 
-## 附录:
+## mvn 创建Java项目和Scala项目
 
 ### mvn 创建Java项目
 
@@ -456,7 +456,7 @@ mvn archetype:generate \
 -DarchetypeArtifactId=scala-archetype-simple \
 -DarchetypeVersion=1.3  \
 -DremoteRepositories=http://scala-tools.org/repo-releases \
--DgroupId=com.focus -DartifactId=scala-demo
+-DgroupId=com.nsfocus -DartifactId=Myspark
 ```
 
 可以使用[\[scala-maven-plugin\]](https://davidb.github.io/scala-maven-plugin/usage.html)
@@ -482,8 +482,60 @@ modify xml file add as follow code
 </plugin>
 {% endhighlight %}
 
+完整的xml文件如下所示:
 
 Displayint scala help and version
+
+{% highlight xml linenos %}
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.nsfocus</groupId>
+  <artifactId>Myspark</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>${project.artifactId}</name>
+  <properties>
+    <encoding>UTF-8</encoding>
+    <scala.version>2.11.8</scala.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <!-- Test -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <scalaVersion>${scala.version}</scalaVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
 
 ```C
 mvn scala:help
@@ -494,8 +546,11 @@ mvn scala:help
 <tr><td>mvn scala:compile</td><td>mvn package</td><td>mvn exec:java -Dexec.mainClass="packageName.className"</td><td>mvn clean</td></tr>
 </table>
 
-如果程序运行`需要参数`:mvn exec:java -Dexec.mainClass="com.vineetmanohar.module.Main" -Dexec.args="arg0 arg1 arg2"
+如果程序运行`需要参数`:
 
+```C
+mvn exec:java -Dexec.mainClass="packageName.ClassName" -Dexec.args="arg0 arg1 arg2"
+```
 
 Displayint the command line used
 
@@ -505,3 +560,336 @@ mvn scala:compile -DdisplayCmd=true
 
 对于scala-mvn想关注更多[\[click here\]](https://davidb.github.io/scala-maven-plugin/usage.html)
 
+
+## mvn创建Java和Scal，Spark混合项目
+
+其实如果上面的步骤你都操作了，下面的步骤就很简单了.我这主要是通过mvn创建出Java项目，然后再添加scala的项目文件。
+
+1.mvn 创建Java项目
+```C
+mvn archetype:generate \
+-DarchetypeGroupId=org.apache.maven.archetypes \
+-DgroupId=com.nsfocus \
+-DartifactId=Myspark \
+-Dfilter=org.apache.maven.archetypes:maven-archetype-quick
+```
+查看目录tree
+
+```C
+.
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── nsfocus
+    │               └── App.java
+    └── test
+        └── java
+            └── com
+                └── nsfocus
+                    └── AppTest.java
+
+9 directories, 3 files
+```
+2.添加Scala目录
+
+再次查看目录tree
+```C
+.
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── nsfocus
+    │   │           └── App.java
+    │   └── scala
+    │       └── com
+    │           └── nsfocus
+    └── test
+        ├── java
+        │   └── com
+        │       └── nsfocus
+        │           └── AppTest.java
+        └── scala
+            └── com
+                └── nsfocus
+
+15 directories, 3 files
+
+```
+从Spark中的examples找一个例子，添加到scala目录下,并且根据包名修改文件中的包名,以SparkPi.scala为例
+
+最后的文件结构
+```C
+.
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── nsfocus
+    │   │           └── App.java
+    │   └── scala
+    │       └── com
+    │           └── nsfocus
+    │               └── SparkPi.scala
+    └── test
+        ├── java
+        │   └── com
+        │       └── nsfocus
+        │           └── AppTest.java
+        └── scala
+            └── com
+                └── nsfocus
+
+15 directories, 4 files
+
+```
+
+4.添加Scala,Spark依赖项，`mvn-scala-compile,scala-library,Spark`等依赖，pom.xml如下:
+
+{% highlight xml linenos %}
+
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.nsfocus</groupId>
+  <artifactId>Myspark</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Myspark</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scala.version>2.11.8</scala.version>
+    <spark.version>2.0.0</spark.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_2.11</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming_2.11</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <!--<dependency>-->
+    <!--<groupId>org.apache.spark</groupId>-->
+    <!--<artifactId>spark-streaming-kafka_2.11</artifactId>-->
+    <!--<version>${spark.version}</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.11</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-hive_2.11</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-compiler</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-reflect</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-actors</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-tools</groupId>
+      <artifactId>maven-scala-plugin</artifactId>
+      <version>2.15.2</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <scalaVersion>${scala.version}</scalaVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
+{% endhighlight %}
+
+SparkPi.scala
+
+```scala
+package com.nsfocus
+
+import scala.math.random
+
+import org.apache.spark.sql.SparkSession
+
+/** Computes an approximation to pi */
+object SparkPi {
+  def main(args: Array[String]) {
+    var beg = System.currentTimeMillis()
+    val spark = SparkSession
+      .builder()
+      .master("local[2]")
+      .appName("Spark Pi")
+      .getOrCreate()
+    val slices = if (args.length > 0) args(0).toInt else 2
+    val n = math.min(100000L * slices, Int.MaxValue).toInt // avoid overflow
+    val count = spark.sparkContext.parallelize(1 until n, slices).map { i =>
+      val x = random * 2 - 1
+      val y = random * 2 - 1
+      if (x*x + y*y < 1) 1 else 0
+    }.reduce(_ + _)
+    var end = System.currentTimeMillis()
+    println("Pi is roughly " + 4.0 * count / (n - 1) + " use time " +  (end - beg) + " ms ")
+
+    spark.stop()
+  }
+}
+
+```
+
+5.运行Java和Scala的Spark代码
+
+JavaSParkPi.java
+
+```java
+package com.nsfocus;
+
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.api.java.function.Function2;
+import org.apache.spark.sql.SparkSession;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Computes an approximation to pi
+ * Usage: JavaSparkPi [slices]
+ */
+public final class JavaSparkPi {
+
+  public static void main(String[] args) throws Exception {
+    long beg = System.currentTimeMillis();
+    SparkSession spark = SparkSession
+      .builder()
+      .master("local[2]")
+      .appName("JavaSparkPi")
+      .getOrCreate();
+
+    JavaSparkContext jsc = new JavaSparkContext(spark.sparkContext());
+
+    int slices = (args.length == 1) ? Integer.parseInt(args[0]) : 2;
+    int n = 100000 * slices;
+    List<Integer> l = new ArrayList<Integer>(n);
+    for (int i = 0; i < n; i++) {
+      l.add(i);
+    }
+
+    JavaRDD<Integer> dataSet = jsc.parallelize(l, slices);
+
+    int count = dataSet.map(new Function<Integer, Integer>() {
+      @Override
+      public Integer call(Integer integer) {
+        double x = Math.random() * 2 - 1;
+        double y = Math.random() * 2 - 1;
+        return (x * x + y * y < 1) ? 1 : 0;
+      }
+    }).reduce(new Function2<Integer, Integer, Integer>() {
+      @Override
+      public Integer call(Integer integer, Integer integer2) {
+        return integer + integer2;
+      }
+    });
+
+    long end = System.currentTimeMillis();
+    System.out.println("javaSparkPi is roughly " + 4.0 * count / n + " use time " + (end -beg) + " ms");
+
+    spark.stop();
+  }
+}
+
+```
+ > Java
+ ```C
+ mvn compile
+ mvn exec:java -Dexec.mainClass="com.nsfocus.JavaSparkPi"
+ ```
+
+ScalaPi.java
+
+```scala
+package com.nsfocus
+
+import scala.math.random
+
+import org.apache.spark.sql.SparkSession
+
+/** Computes an approximation to pi */
+object SparkPi {
+  def main(args: Array[String]) {
+    var beg = System.currentTimeMillis()
+    val spark = SparkSession
+      .builder()
+      .master("local[2]")
+      .appName("Spark Pi")
+      .getOrCreate()
+    val slices = if (args.length > 0) args(0).toInt else 2
+    val n = math.min(100000L * slices, Int.MaxValue).toInt // avoid overflow
+    val count = spark.sparkContext.parallelize(1 until n, slices).map { i =>
+      val x = random * 2 - 1
+      val y = random * 2 - 1
+      if (x*x + y*y < 1) 1 else 0
+    }.reduce(_ + _)
+    var end = System.currentTimeMillis()
+    println("ScalaPi is roughly " + 4.0 * count / (n - 1) + " use time " +  (end - beg) + " ms ")
+
+    spark.stop()
+  }
+}
+// scalastyle:on println
+
+```
+
+ > Scala
+ ```C
+ mvn scala:compile
+ mvn exec:java -Dexec.mainClass="com.nsfocus.SparkPi"
+ ```
+
+ 如果觉得不是很方便，就把这个项目导入到IDEA中，就可以了。继续努力!!!,前方还有无数的坑，等着我呢。
