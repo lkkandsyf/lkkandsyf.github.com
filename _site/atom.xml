@@ -4,13 +4,177 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-05-05T21:57:17+08:00</updated>
+ <updated>2017-05-12T22:45:42+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>在Linux下搭建zookeeper集群服务模式</title>
+   <link href="/2017/05/11/zookeeper"/>
+   <updated>2017-05-11T00:00:00+08:00</updated>
+   <id>/2017/05/11/zookeeper</id>
+   <content type="html">&lt;p&gt;Zookeeper是一个开源的分布式应用程序协调服务.可用于对集群的有效管理.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;因为Zookeeper前提需要jdk的支持，所以要先配置好Java环境,才能配置zookeeper,&lt;a href=&quot;http://zookeeper.apache.org/releases.html&quot;&gt;[download zookeeper]&lt;/a&gt;找到需要的版本进行下载。&lt;/p&gt;
+
+&lt;h2 id=&quot;安装zookeeper&quot;&gt;安装Zookeeper&lt;/h2&gt;
+
+&lt;p&gt;将将下载好的文件进行解压&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;tar xf zookeeper-xx-xx.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配置zookeeper的环境变量,在~/.bashrc中添加如下配置&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;ZOOKEEPER_HOME=/opt/deploy/zookeeper-3.3.6
+PATH=$PATH:$ZOOKEEPER_HOME/bin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;source  ~/.bashrc使配置生效。&lt;/p&gt;
+
+&lt;p&gt;然后进入到刚刚解压的目录，不过最后我们可以重命名一下文件名(zookeeper)，这样便于操作.进入到conf目录下，把zoo_sample.cfg复制为zoo.cfg&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;cd zookeeper/conf
+cp zoo_sample.cfg zoo.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接下来，需要对复制的文件zoo.cfg文件，进行修改,主要是dataDir,dataLogDir，server的设置&lt;/p&gt;
+
+&lt;p&gt;参数说明&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;tickTime这个时间是作为zookeeper服务器之间或客户端与服务器之间维持心跳的时间间隔,也就是说每个tickTime时间就会发送一个心跳。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;initLimit这个配置项是用来配置zookeeper接受客户端（这里所说的客户端不是用户连接zookeeper服务器的客户端,而是zookeeper服务器集群中连接到leader的follower 服务器）初始化连接时最长能忍受多少个心跳时间间隔数。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当已经超过10个心跳的时间（tickTime）长度后 zookeeper 服务器还没有收到客户端的返回信息,那么表明这个客户端连接失败。总的时间长度就是 10*2000=20秒。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;syncLimit这个配置项标识leader与follower之间发送消息,请求和应答时间长度,最长不能超过多少个tickTime的时间长度,总的时间长度就是5*2000=10秒。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;dataDir顾名思义就是zookeeper保存数据的目录,默认情况下zookeeper将写数据的日志文件也保存在这个目录里；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;clientPort这个端口就是客户端连接Zookeeper服务器的端口,Zookeeper会监听这个端口接受客户端的访问请求；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;server.A=B:C:D中的A是一个数字,表示这个是第几号服务器,B是这个服务器的IP地址，C第一个端口用来集群成员的信息交换,表示这个服务器与集群中的leader服务器交换信息的端口，D是在leader挂掉时专门用来进行选举leader所用的端口。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;# The number of milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is store
+dataDir=/usr/zookeeper/data
+dataLogDir=/usr/zookeeper/log
+# the port at which the clients will connect
+clientPort=2181
+## cluster mode
+server.1=192.168.1.149:2888:3888
+server.2=192.168.1.150:2888:3888
+server.3=192.168.1.151:2888:3888
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;注意&lt;/code&gt;:dataDir和dataLogDir所指的文件夹必须存在，否则启动的时候会出现错误&lt;/p&gt;
+
+&lt;p&gt;如果是集群模式,将在zoo.cfg文件的末尾添加对应的ip:port,如上面的配置，然后将zookeeper文件夹拷贝到其他的机器上,在dataDir的目录下创建myid文件，并把zoo.cfg文件中服务的数字写入myid&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;# server.1 ip
+echo 1 dataDir/myid
+
+# server.2 ip
+echo 2 dataDir/myid
+
+# server.3 ip
+echo 3 dataDir/myid
+
+# copy file to other machine
+scp -r zookeeper user@ip:`pwd`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;启动&quot;&gt;启动&lt;/h3&gt;
+
+&lt;p&gt;通过zkServer.sh来启动,如果是单机，则通过下面命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;zkServer.sh start
+# status
+zkServer.sh status
+ps -ef | grep zookeeper # run status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果是集群的话，需要在每一个机器上去运行这个命令&lt;/p&gt;
+
+&lt;h3 id=&quot;测试&quot;&gt;测试&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;单机模式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果不加参数，默认是本地&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;zkCli.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;集群模式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在任何一台机器上运行,下面的命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;zkCli.sh -server 192.168.1.147:2181
+help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果出现cat ~/zookeeper.out&lt;/p&gt;
+
+&lt;p&gt;后面的ip是配置中的任意一个。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;注意&lt;/code&gt;:如果出现拒绝连接，看看是不是防火墙没关&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;1.防火墙是否关闭 ststemctl stop firwalld(Centos7) --&amp;gt; firwall-cmd --stat,systemctl disable firewalld.service (禁止开机启动，永久关闭)
+2.将本地的ip映射到本地/etc/hosts文件中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;znode节点操作&quot;&gt;zNode节点操作&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;create /parh data　　　　　　创建一个名为/path的zNode节点，并包含数据data
+
+delete /path　　　　  　　　　删除名为/path的zNode节点
+
+exists /path   　　　　　　　　检查是否存在名为/path的zNode节点
+
+setData /path data    　　　　设置名为/path的zNode的数据为data
+
+getData  /path　　　　　　　  返回名为/path的zNode节点的数据信息
+
+getChildren /path　　　　　　返回所有/path节点的所有子节点列表
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;zNode节点还有不同的类型，持久（persistent）节点和临时（ephemeral）节点。持久的zNode，如/path，只能通过调用delete来进行删除，而临时的zNode则与之相反，当创建该节点的客户端崩溃或者关闭了与ZooKeeper服务器的连接时候，这个临时zNode节点就会被删除了。其中临时节点可用于实现分布式锁。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用Python的scrapy包进行抓取数据</title>
+   <link href="/python/2017/05/10/scrapy"/>
+   <updated>2017-05-10T00:00:00+08:00</updated>
+   <id>/python/2017/05/10/scrapy</id>
+   <content type="html">&lt;p&gt;当我们使用数据的时候，发现自己手中的数据少之又少，而且有效的数据那更是少的可怜。通过抓取网上的数据，进行实验，这对于我们来说，是个很大的帮助，大部分情况，都是采用Python来抓取数据，这里使用到scrapy,这个包，功能十分强大，能够满足要求。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://scrapy.org/&quot;&gt;[office]&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://python.jobbole.com/86405/&quot;&gt;[exercise]&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>unzip and zip linux usage</title>
@@ -805,7 +969,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
 
 &lt;p&gt;对于scala-mvn想关注更多&lt;a href=&quot;https://davidb.github.io/scala-maven-plugin/usage.html&quot;&gt;[click here]&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;mvn创建java和scalspark混合项目&quot;&gt;mvn创建Java和Scal，Spark混合项目&lt;/h2&gt;
+&lt;h2 id=&quot;mvn创建java和scalaspark混合项目&quot;&gt;mvn创建Java和Scala，Spark混合项目&lt;/h2&gt;
 
 &lt;p&gt;其实如果上面的步骤你都操作了，下面的步骤就很简单了.我这主要是通过mvn创建出Java项目，然后再添加scala的项目文件。&lt;/p&gt;
 
@@ -3858,17 +4022,13 @@ hive&amp;gt;exit
 4
 5
 6
-7
-8
-9&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;$hdfs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;
+7&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;$hdfs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;$spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;7077&lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;scala&amp;gt;sc&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;spark&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HDRS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hdfs://master:9000/users/word.txt&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// master not localhost because telnet localhost error
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reduceByKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;span class=&quot;n&quot;&gt;scala&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </content>
@@ -4291,59 +4451,6 @@ deploy:
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;It happened because my java code was build with Scala, but at runtime scala library wasn’t available. &lt;code class=&quot;highlighter-rouge&quot;&gt;Added scala-library.jar to classpath'&lt;/code&gt;, that &lt;a href=&quot;http://zyjustin9.iteye.com/blog/2172445&quot;&gt;resolved it&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Open Source Project Learning Experience</title>
-   <link href="/2017/02/17/Open-Source-Project-Learning-Experience"/>
-   <updated>2017-02-17T00:00:00+08:00</updated>
-   <id>/2017/02/17/Open-Source-Project-Learning-Experience</id>
-   <content type="html">&lt;h2 id=&quot;这里收集了关于学习开源项目的一些坎坷以及收获&quot;&gt;这里收集了关于学习开源项目的一些坎坷，以及收获。&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;java&quot;&gt;&lt;strong&gt;Java&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;springside4&quot;&gt;springside4&lt;/h3&gt;
-
-&lt;p&gt;A Spring Framework based, pragmatic style JavaEE application reference architecture.
-&lt;a href=&quot;https://github.com/springside/springside4&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;crapapi&quot;&gt;CrapApi&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://api.crap.cn/index.do#/web/article/detail/web/PAGE/WELCOME&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;blade&quot;&gt;blade&lt;/h3&gt;
-
-&lt;p&gt;A Simple, Elegant Java Web Framework! website, &lt;a href=&quot;https://github.com/biezhi/blade&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;use blade framework bbs web application:&lt;a href=&quot;https://github.com/junicorn/java-china&quot;&gt;java-china&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;java-bible&quot;&gt;java-bible&lt;/h3&gt;
-
-&lt;p&gt;Java Bible is my java technology stack,&lt;a href=&quot;https://github.com/biezhi/java-bible&quot;&gt;repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;python&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;pygrok&quot;&gt;pygrok&lt;/h3&gt;
-
-&lt;h2 id=&quot;cc&quot;&gt;&lt;strong&gt;C++/C&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;opencv&quot;&gt;OpenCV&lt;/h3&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Music</title>
-   <link href="/music/2017/02/12/Music"/>
-   <updated>2017-02-12T00:00:00+08:00</updated>
-   <id>/music/2017/02/12/Music</id>
-   <content type="html">&lt;h2 id=&quot;enjoy-music&quot;&gt;enjoy music&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tv.cctv.com/2017/02/04/VIDEp4DJYg5JPjM09fAhitlK170204.shtml&quot;&gt;2017俄罗斯蓝光之夜音乐会&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  

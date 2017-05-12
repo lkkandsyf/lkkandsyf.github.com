@@ -48,7 +48,7 @@ puts markdown.to_html
 <table>
 <tr><td>1</td><td>4</td><td>5</td></tr>
 <tr><td>2</td><td>9</td><td>6</td></tr>
-<tr><td>3</td><td>8</td><td><7/td></tr>
+<tr><td>3</td><td>8</td><td>7</td></tr>
 </table>
 
 c++ code
@@ -70,8 +70,11 @@ void main(int argc,char *argv)
 
 ## kangkangblog
   1.请注意，* dir这一行是必需的，它表示目录树列表，至于星号后面写什么请随意
+
   2.如果要把某标题从目录树中排除，则在该标题的下一行写上 {:.no_toc}
+
   3.目录深度可以通过 config.yml 文件中添加 toc_levels 选项来定制，默认为 1..6，表示标题一至标题六全部渲染
+
   4.{:toc} 默认生成的目录列表会添加 id 值 markdown-toc，我们可以自定义 id 值，比如 {:toc #chenxsan}，生成的目录列表添加的 id 将会是 chenxsan。
 
 
@@ -94,7 +97,11 @@ Here is a number list:
 > Block quotes are writeen like so.
 > I like you
 
-You can specify an inline like so $x^2+y^2=z^2$
+You can specify an inline like so x<sup>2</sup> + y<sup>2</sup> = 1
+
+this is a ~~delete line~~
+
+<span style="border-bottom:2px dashed red;">所添加的需要加下划线的行内文字</span>
 
 ### learn
 

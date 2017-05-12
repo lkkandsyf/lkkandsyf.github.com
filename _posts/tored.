@@ -1,0 +1,5 @@
+taDir=/usr/zookeeper
+dataLogDir=/usr/zookeeper/log
+# the port at which the clients will connect
+clientPort=2181
+server.1=192.168.32.129:2888:3888

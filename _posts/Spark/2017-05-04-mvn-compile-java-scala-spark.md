@@ -561,7 +561,7 @@ mvn scala:compile -DdisplayCmd=true
 对于scala-mvn想关注更多[\[click here\]](https://davidb.github.io/scala-maven-plugin/usage.html)
 
 
-## mvn创建Java和Scal，Spark混合项目
+## mvn创建Java和Scala，Spark混合项目
 
 其实如果上面的步骤你都操作了，下面的步骤就很简单了.我这主要是通过mvn创建出Java项目，然后再添加scala的项目文件。
 

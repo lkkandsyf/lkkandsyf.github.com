@@ -1319,3 +1319,5 @@ example:
 [https://github.com/twitter/scala_school](https://github.com/twitter/scala_school)
 
 [https://github.com/bwwinthehouse/learning_scala](https://github.com/bwwinthehouse/learning_scala)
+
+[scala in depth](https://github.com/jsuereth/scala-in-depth-source),[china exercise](https://github.com/fengfu-chris/Scala-for-the-Impatient-Exercises)

@@ -963,14 +963,12 @@ public class WordCount {
 通过spark-shell允许wordcount
 
 {% highlight scala linenos %}
-$hdfs dfs -cat ~/word.txt
+$hdfs dfs -cat /word.txt
 $spark-shell --master spark://master:7077
 scala>sc
 # spark read HDRS text file
 scala>val file = sc.textFile("hdfs://master:9000/users/word.txt")	// master not localhost because telnet localhost error
 scala>val count = file.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_+_)
 scala>count.collect()
-scala>
-scala>
 {% endhighlight %}
 
