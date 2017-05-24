@@ -2927,6 +2927,14 @@ def main(cmd,inc=60):
 main("netstat -an",60)
 ```
 
+随着进步，现在又有了bpython的工具。和ipython类似，以及对于Mysql补全的mycli,以及对PostgreSQL的pgcli都是不错的哦。
+```python
+sudo pip install bpython
+sudo pip install mycli
+sudo pip install pgcli
+```
+
+
 ### Jupyter
 
 ### Python网络编程

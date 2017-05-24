@@ -19,6 +19,7 @@ learn twitter scala course
 [scala course](http://twitter.github.io/scala_school/zh_cn/index.html)
 [hongjiang scala](http://hongjiang.info/scala/)
 [csdn scala](http://blog.csdn.net/column/details/scalalearning.html?&page=1)
+[http://www.runoob.com/scala/scala-tutorial.html](http://www.runoob.com/scala/scala-tutorial.html)
 
 cnblog
 [blog](http://hongqiang.info/scala)：这收集了许多比较全面的关于scala东西。[learn file](http://www.cnblogs.com/youarebest/p/5593349.html)
@@ -1321,3 +1322,9 @@ example:
 [https://github.com/bwwinthehouse/learning_scala](https://github.com/bwwinthehouse/learning_scala)
 
 [scala in depth](https://github.com/jsuereth/scala-in-depth-source),[china exercise](https://github.com/fengfu-chris/Scala-for-the-Impatient-Exercises)
+
+[scala-base](http://dantezhao.com/2016/04/25/scala-1/)
+
+[scala-class](http://dantezhao.com/2016/04/26/scala-2/)
+
+[scala tutorial](https://blog.udemy.com/scala-tutorial-getting-started-with-scala/)

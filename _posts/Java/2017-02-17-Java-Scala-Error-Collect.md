@@ -47,3 +47,25 @@ NoClassDefFoundError: scala/collection/Seq
 `Solution`:
 
 It happened because my java code was build with Scala, but at runtime scala library wasn't available. `Added scala-library.jar to classpath'`, that [resolved it](http://zyjustin9.iteye.com/blog/2172445).
+
+[\[类似错误\]](http://blog.csdn.net/ggz631047367/article/details/53811213)
+
+**P2**
+```Java
+在 intellij idea 中无法编译 javad代码 -source 1.6 中不支持 diamond 运算符
+```
+在pom.xml添加
+
+```xml
+<plugin>
+	<artifactId>maven-compiler-plugin</artifactId>
+	<version>3.1</version>
+	<configuration>
+		<source>1.8</source>
+		<!-- or 1.8 -->
+		<target>1.8</target>
+		<!-- or 1.8 -->
+	</configuration>
+</plugin>
+```
+

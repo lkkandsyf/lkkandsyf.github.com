@@ -5,10 +5,63 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Fri, 12 May 2017 22:45:42 +0800</lastBuildDate>
-        <pubDate>Fri, 12 May 2017 22:45:42 +0800</pubDate>
+        <lastBuildDate>Wed, 24 May 2017 13:41:30 +0800</lastBuildDate>
+        <pubDate>Wed, 24 May 2017 13:41:30 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>如何才能编写出高质量的Java代码</title>
+                <description>&lt;h2 id=&quot;对一个开发者而言编写出高质量的代码是多么重要首先是建立在扎实的基础之上然后通过不断的尝试和改进最后达到自己的目标&quot;&gt;对一个开发者而言，编写出高质量的代码是多么重要。首先是建立在扎实的基础之上，然后通过不断的尝试和改进，最后达到自己的目标。&lt;/h2&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;Java中一本书&lt;code class=&quot;highlighter-rouge&quot;&gt;Effective Java&lt;/code&gt;,值得深读。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/aishangyutian12/article/details/52699938&quot;&gt;建议151&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/java/2017/05/16/how-to-code-java-good</link>
+                <guid>/java/2017/05/16/how-to-code-java-good</guid>
+                <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>collect movie</title>
+                <description>&lt;p&gt;collect moive&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;moive web&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.llduang.com/&quot;&gt;http://www.llduang.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;欣赏电影，找到自己的影子.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;肖申克的救赎&lt;/li&gt;
+  &lt;li&gt;三傻&lt;/li&gt;
+  &lt;li&gt;泰坦尼克号&lt;/li&gt;
+  &lt;li&gt;魔戒三部曲&lt;/li&gt;
+  &lt;li&gt;教父&lt;/li&gt;
+  &lt;li&gt;海上钢琴师&lt;/li&gt;
+  &lt;li&gt;阿甘正传&lt;/li&gt;
+  &lt;li&gt;辛德勒的名单&lt;/li&gt;
+  &lt;li&gt;窃听风暴&lt;/li&gt;
+  &lt;li&gt;楚门的世界&lt;/li&gt;
+  &lt;li&gt;让子弹飞&lt;/li&gt;
+  &lt;li&gt;当幸福来敲门&lt;/li&gt;
+  &lt;li&gt;闻香识女人&lt;/li&gt;
+  &lt;li&gt;阿凡达&lt;/li&gt;
+  &lt;li&gt;杀人回忆(韩国电影的里程碑)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                <link>/2017/05/13/movie</link>
+                <guid>/2017/05/13/movie</guid>
+                <pubDate>Sat, 13 May 2017 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>在Linux下搭建zookeeper集群服务模式</title>
@@ -168,6 +221,17 @@ getChildren /path　　　　　　返回所有/path节点的所有子节点列�
 &lt;p&gt;&lt;a href=&quot;https://scrapy.org/&quot;&gt;[office]&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://python.jobbole.com/86405/&quot;&gt;[exercise]&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#coding:utf-8&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;post_param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'action'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'start'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'limit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;return_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://movie.douban.com/j/chart/top_list?type=11&amp;amp;interval_id=100&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%3&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;A90&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post_param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tex&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
                 <link>/python/2017/05/10/scrapy</link>
                 <guid>/python/2017/05/10/scrapy</guid>
@@ -2867,6 +2931,29 @@ conf/tomcat-user.xml:定义tomcat用户的信息
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;简单的命令:appletviewer,jar,java,javac,javadoc,javap,native2ascii,serialver&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.lang包下的80%以上的类的功能的灵活运用。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.util包下的80%以上的类的灵活运用，特别是集合类体系、规则 表达式、zip、以及时间、随机数、属性、资源和Timer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.io包下的60%以上的类的使用，理解IO体系的基于管道模型的设计思路以及常用IO类的特性和使用场合。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.math包下的100%的内容。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.net包下的60%以上的内容，对各个类的功能比较熟悉。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;java.text包下的60%以上的内容，特别是各种格式化类。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <link>/java/2017/04/26/java-base</link>
                 <guid>/java/2017/04/26/java-base</guid>
@@ -4390,66 +4477,6 @@ deploy:
                 <link>/2017/03/22/hexo</link>
                 <guid>/2017/03/22/hexo</guid>
                 <pubDate>Wed, 22 Mar 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Dl4j</title>
-                <description>&lt;h2 id=&quot;dl4j&quot;&gt;DL4J&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://deeplearning4j.org/&quot;&gt;DL4J&lt;/a&gt;这是Java写的深度学习库。&lt;/p&gt;
-
-&lt;h1&gt;#&lt;/h1&gt;
-</description>
-                <link>/2017/02/22/DL4J</link>
-                <guid>/2017/02/22/DL4J</guid>
-                <pubDate>Wed, 22 Feb 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Java Scala Error Collect</title>
-                <description>&lt;h2 id=&quot;这里整理自己学习java过程中遇到的一些问题简单记录下来方便以后查看&quot;&gt;这里整理自己学习Java过程中遇到的一些问题，简单记录下来，方便以后查看。&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;编译错误&quot;&gt;编译错误&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;P1&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13170860/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-10test&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;Update the Maven project:&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;1.Right-click on &quot;project&quot;
-2.Go to &quot;Maven&quot; &amp;gt;&amp;gt; &quot;Update&quot;
-3.Wait for all the changes to be applied
-4.Commit the changes (if code is on repo)
-5.Run
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or:&lt;/p&gt;
-
-&lt;p&gt;In my application, certain unit tests were not compatible with Java 8 so they were failing. The build would succeed with &lt;code class=&quot;highlighter-rouge&quot;&gt;mvn clean install -DskipTests &lt;/code&gt;but it is not recommended to skip the unit test.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;P2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;NoClassDefFoundError: scala/collection/Seq
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/33885339/noclassdeffounderror-scala-collection-seq&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solution&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;It happened because my java code was build with Scala, but at runtime scala library wasn’t available. &lt;code class=&quot;highlighter-rouge&quot;&gt;Added scala-library.jar to classpath'&lt;/code&gt;, that &lt;a href=&quot;http://zyjustin9.iteye.com/blog/2172445&quot;&gt;resolved it&lt;/a&gt;.&lt;/p&gt;
-</description>
-                <link>/2017/02/17/Java-Scala-Error-Collect</link>
-                <guid>/2017/02/17/Java-Scala-Error-Collect</guid>
-                <pubDate>Fri, 17 Feb 2017 00:00:00 +0800</pubDate>
         </item>
 
 
