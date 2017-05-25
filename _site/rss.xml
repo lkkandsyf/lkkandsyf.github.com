@@ -5,8 +5,8 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 24 May 2017 13:41:30 +0800</lastBuildDate>
-        <pubDate>Wed, 24 May 2017 13:41:30 +0800</pubDate>
+        <lastBuildDate>Wed, 24 May 2017 20:24:04 +0800</lastBuildDate>
+        <pubDate>Wed, 24 May 2017 20:24:04 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -34,6 +34,8 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.llduang.com/&quot;&gt;http://www.llduang.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bilibili.com/&quot;&gt;[http://www.bilibili.com/]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.acfun.cn/&quot;&gt;[http://www.acfun.cn/]&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--more--&gt;
@@ -4368,6 +4370,16 @@ MARKER_EXPR = originalTextFor(MARKER_EXPR)(&quot;marker&quot;)
 sudo apt-get install python3-tk
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h4 id=&quot;vnc&quot;&gt;vnc&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/littlemonsters/p/5779331.html&quot;&gt;http://www.cnblogs.com/littlemonsters/p/5779331.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.centoscn.com/image-text/install/2015/0414/5180.html&quot;&gt;http://www.centoscn.com/image-text/install/2015/0414/5180.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/geyalu/article/details/50166953&quot;&gt;http://blog.csdn.net/geyalu/article/details/50166953&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://linux.cn/article-5335-1.html&quot;&gt;https://linux.cn/article-5335-1.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.centoscn.com/image-text/install/2015/0509/5394.html&quot;&gt;http://www.centoscn.com/image-text/install/2015/0509/5394.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;quick-key-map&quot;&gt;quick-key map&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;Applications-&amp;gt;System Tools -&amp;gt;Settings-&amp;gt;Keyboard-&amp;gt;Shortcuts-&amp;gt;+
@@ -4389,8 +4401,14 @@ click disbaled
 
 &lt;h2 id=&quot;centoscn&quot;&gt;centoscn&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;http://www.centoscn.com/&lt;/a&gt;
-&lt;a href=&quot;http://blog.csdn.net/wuxuguang123/article/details/9713469&quot;&gt;vbox rehancement centos&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/&quot;&gt;[http://www.centoscn.com/]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/wuxuguang123/article/details/9713469&quot;&gt;[vbox rehancement centos]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
                 <link>/centos/2017/03/27/centos</link>
                 <guid>/centos/2017/03/27/centos</guid>
