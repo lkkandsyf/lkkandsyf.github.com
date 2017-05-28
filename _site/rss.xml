@@ -5,8 +5,8 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 24 May 2017 20:24:04 +0800</lastBuildDate>
-        <pubDate>Wed, 24 May 2017 20:24:04 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2017 19:59:10 +0800</lastBuildDate>
+        <pubDate>Sun, 28 May 2017 19:59:10 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -4331,11 +4331,14 @@ sudo bash install_chrome.sh -s	#stable
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install -y vbox-x-x.rpm
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.linuxidc.com/Linux/2016-04/129742.htm&quot;&gt;install problem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在创建虚拟机时，出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Kernel dirver not install&lt;/code&gt;问题&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linuxidc.com/Linux/2016-04/129742.htm&quot;&gt;[解决方法]&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;stardict&quot;&gt;stardict&lt;/h4&gt;
 
-&lt;p&gt;安装stardict.对于学习来说非常重要。使用centos 6中的stardict.&lt;a href=&quot;http://bckong.blog.51cto.com/5092126/1575904&quot;&gt;more info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装stardict.对于英语学习来说非常重要。使用centos 6中的stardict.&lt;a href=&quot;http://bckong.blog.51cto.com/5092126/1575904&quot;&gt;more info&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;shutter&quot;&gt;shutter&lt;/h4&gt;
 

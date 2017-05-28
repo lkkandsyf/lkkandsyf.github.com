@@ -4,7 +4,7 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-05-24T20:24:04+08:00</updated>
+ <updated>2017-05-28T19:59:10+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
@@ -4336,11 +4336,14 @@ sudo bash install_chrome.sh -s	#stable
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install -y vbox-x-x.rpm
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.linuxidc.com/Linux/2016-04/129742.htm&quot;&gt;install problem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在创建虚拟机时，出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Kernel dirver not install&lt;/code&gt;问题&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.linuxidc.com/Linux/2016-04/129742.htm&quot;&gt;[解决方法]&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;stardict&quot;&gt;stardict&lt;/h4&gt;
 
-&lt;p&gt;安装stardict.对于学习来说非常重要。使用centos 6中的stardict.&lt;a href=&quot;http://bckong.blog.51cto.com/5092126/1575904&quot;&gt;more info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装stardict.对于英语学习来说非常重要。使用centos 6中的stardict.&lt;a href=&quot;http://bckong.blog.51cto.com/5092126/1575904&quot;&gt;more info&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;shutter&quot;&gt;shutter&lt;/h4&gt;
 
