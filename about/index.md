@@ -173,6 +173,10 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 
  + [琦君](http://www.yooread.com/8/3341/)
 
+ + [路遥](http://baike.baidu.com/link?url=vmFBCOJS_An6n3rULIe_uBwHTHpY_CETPdrnHaMXa9vGoL8gqNTduft9DFjc0r4JE6ESKEIJ7J09T5n0sQD77mbn9-zZlIBjP9rVK4vjoTm)
+
+ + [陈忠实](http://baike.baidu.com/link?url=tfavL_qoR6bU_kDun1VYsfF9nc6BjvFNCEGSmoug10wAoRkSztV6QktI7ptu5MywezeA0USD4E4thr5PfGP6xUxYGd0-5bIMaMN8boOUhB6uNbwAcxG5B0OxZXfGm-cE)
+
  + 电影
 
 website
