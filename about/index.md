@@ -91,6 +91,12 @@ this is my [resume](https://lkkandsyf.github.io/2016/10/15/Resume),welcome to lo
 
 [freebuf](http://www.freebuf.com/)
 
+[https://www.secpulse.com/](https://www.secpulse.com/)
+
+[https://www.sec-wiki.com](https://www.sec-wiki.com)
+
+[securityweekly](https://securityweekly.com/)
+
 [evil0x](http://www.evil0x.com/)
 
 [eviloctal](https://forum.eviloctal.com/)
@@ -128,6 +134,8 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 [java中文社区](http://www.java-cn.com/index.html)
 
 [open-open](http://www.open-open.com/)
+
+[Xcon](http://xcon.xfocus.net/)
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
