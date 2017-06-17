@@ -5,10 +5,135 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 14 Jun 2017 11:17:14 +0800</lastBuildDate>
-        <pubDate>Wed, 14 Jun 2017 11:17:14 +0800</pubDate>
+        <lastBuildDate>Sat, 17 Jun 2017 21:47:16 +0800</lastBuildDate>
+        <pubDate>Sat, 17 Jun 2017 21:47:16 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>在Centos7上安装和配置VNC服务</title>
+                <description>&lt;p&gt;当我们访问服务器时，大部分都是通过ssh来操作的。很少用到图形界面，毕竟在字符界面就可以完成我们的任务了，只是图形界面看起来会好一点，所以就通过VNC服务和控制器VNC-Viewer来实现这一愿望。VNC(Virtual Network Computing)允许Linux系统可以类似实现像Windows中的远程桌面访问那样访问Linux桌面。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;这里是在Centos7系统是进行实验的。&lt;/p&gt;
+
+&lt;h2 id=&quot;安装vnc&quot;&gt;安装VNC&lt;/h2&gt;
+
+&lt;p&gt;首先看看本机上是否已经安装VNC&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;$rpm -q tigervnc tigervnc-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装VNC Server&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install tigervnc-server  tigervnc-server-module -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;配置vnc&quot;&gt;配置VNC&lt;/h2&gt;
+
+&lt;p&gt;1.拷贝配置文件&lt;/p&gt;
+
+&lt;p&gt;我们需要在 /etc/systemd/system/ 目录里创建一个配置文件。我们可以将 /lib/systemd/sytem/vncserver@.service 拷贝一份配置文件范例过来。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
+# open configure file and add user
+vim /etc/systemd/system/vncserver@:1.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里使用的用户名为lkk&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;# The vncserver service unit file
+#
+# Quick HowTo:
+# 1. Copy this file to /etc/systemd/system/vncserver@.service
+# 2. Edit /etc/systemd/system/vncserver@.service, replacing &amp;lt;USER&amp;gt;
+#    with the actual user name. Leave the remaining lines of the file unmodified
+#    (ExecStart=/usr/sbin/runuser -l &amp;lt;USER&amp;gt; -c &quot;/usr/bin/vncserver %i&quot;
+#     PIDFile=/home/&amp;lt;USER&amp;gt;/.vnc/%H%i.pid)
+# 3. Run `systemctl daemon-reload`
+# 4. Run `systemctl enable vncserver@:&amp;lt;display&amp;gt;.service`
+#
+# DO NOT RUN THIS SERVICE if your local area network is
+# untrusted!  For a secure way of using VNC, you should
+# limit connections to the local host and then tunnel from
+# the machine you want to view VNC on (host A) to the machine
+# whose VNC output you want to view (host B)
+#
+# [user@hostA ~]$ ssh -v -C -L 590N:localhost:590M hostB
+#
+# this will open a connection on port 590N of your hostA to hostB's port 590M
+# (in fact, it ssh-connects to hostB and then connects to localhost (on hostB).
+# See the ssh man page for details on port forwarding)
+#
+# You can then point a VNC client on hostA at vncdisplay N of localhost and with
+# the help of ssh, you end up seeing what hostB makes available on port 590M
+#
+# Use &quot;-nolisten tcp&quot; to prevent X connections to your VNC server via TCP.
+#
+# Use &quot;-localhost&quot; to prevent remote VNC clients connecting except when
+# doing so through a secure tunnel.  See the &quot;-via&quot; option in the
+# `man vncviewer' manual page.
+
+
+[Unit]
+Description=Remote desktop service (VNC)
+After=syslog.target network.target
+
+[Service]
+Type=forking
+# Clean any existing files in /tmp/.X11-unix environment
+ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 || :'
+ExecStart=/usr/sbin/runuser -l lkk -c &quot;/usr/bin/vncserver %i&quot;
+PIDFile=/home/lkk/.vnc/%H%i.pid
+ExecStop=/bin/sh -c '/usr/bin/vncserver -kill %i &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 || :'
+
+[Install]
+WantedBy=multi-user.target
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.设置密码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo vncpasswd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.开启服务&lt;/p&gt;
+
+&lt;p&gt;永久开启服务&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;$ sudo systemctl enable vncserver@:1.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;启动服务&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;$ sudo systemctl start vncserver@:1.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;~/.vnc/xstartup&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;#!/bin/sh
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+exec /etc/X11/xinit/xinitrc
+#[-x /etc/vnc/xstartup]］&amp;amp;&amp;amp; exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources  ] &amp;amp;&amp;amp; xrdb $HOME/.Xresources
+xsetroot -solid grey
+vncconfig -iconic &amp;amp;
+xterm -gemetry 80x24+10+10 -ls -title &quot;$VNCDESKTOP Desktop&quot; &amp;amp;
+＃twm &amp;amp;
+gnome-session &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;用vnc客户端连接服务器&quot;&gt;用VNC客户端连接服务器&lt;/h2&gt;
+
+&lt;p&gt;我们可以下载&lt;a href=&quot;https://www.realvnc.com/download/viewer/&quot;&gt;[VNC-Viewer]&lt;/a&gt;来连接配置好的服务器。&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/image-text/install/2015/0509/5394.html&quot;&gt;http://www.centoscn.com/image-text/install/2015/0509/5394.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://linux.cn/article-5335-1.html&quot;&gt;https://linux.cn/article-5335-1.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/geyalu/article/details/50166953&quot;&gt;http://blog.csdn.net/geyalu/article/details/50166953&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/image-text/install/2015/0414/5180.html&quot;&gt;http://www.centoscn.com/image-text/install/2015/0414/5180.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/littlemonsters/p/5779331.html&quot;&gt;http://www.cnblogs.com/littlemonsters/p/5779331.html&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/centos/2017/06/16/vnc</link>
+                <guid>/centos/2017/06/16/vnc</guid>
+                <pubDate>Fri, 16 Jun 2017 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>如何才能编写出高质量的Java代码</title>
@@ -4451,55 +4576,6 @@ click disbaled
                 <link>/2017/03/27/R</link>
                 <guid>/2017/03/27/R</guid>
                 <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Hexo</title>
-                <description>&lt;h2 id=&quot;usage-hexo&quot;&gt;usage hexo&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;# nodejs
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
-# git
-sudo apt-get install git
-# hexo
-sudo npm install hexo -g
-
-# init blog dir
-hexo init &amp;lt;dir&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;博客发布到git&lt;a href=&quot;https://hexo.io/docs/deployment.html&quot;&gt;https://hexo.io/docs/deployment.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;配置_config.yml&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:lkkandsyf/hexo/blog
-  branch:master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;command&quot;&gt;Command&lt;/h2&gt;
-
-&lt;p&gt;创建页面:hexo new post “文章名字(中文也可以)”&lt;/p&gt;
-
-&lt;p&gt;生成html:hexo generate(hexo g)&lt;/p&gt;
-
-&lt;p&gt;发布到git:hexo deploy&lt;/p&gt;
-
-&lt;p&gt;生成并发布:hexo generate -d(hexo g -d)&lt;/p&gt;
-
-</description>
-                <link>/2017/03/22/hexo</link>
-                <guid>/2017/03/22/hexo</guid>
-                <pubDate>Wed, 22 Mar 2017 00:00:00 +0800</pubDate>
         </item>
 
 
