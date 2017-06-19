@@ -137,6 +137,8 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 
 [Xcon](http://xcon.xfocus.net/)
 
+[http://www.kalitutorials.net/](http://www.kalitutorials.net/)
+
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
 `工作`:数据分析研究员

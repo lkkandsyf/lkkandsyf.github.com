@@ -5,10 +5,33 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 17 Jun 2017 21:47:16 +0800</lastBuildDate>
-        <pubDate>Sat, 17 Jun 2017 21:47:16 +0800</pubDate>
+        <lastBuildDate>Mon, 19 Jun 2017 22:54:39 +0800</lastBuildDate>
+        <pubDate>Mon, 19 Jun 2017 22:54:39 +0800</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>nmap使用手册</title>
+                <description>&lt;p&gt;Nmap是一款网络扫描和主机检测的工具，可以用来作为一个漏洞探测器或网络安全扫描器，而且还是跨平台的.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;基本手册&quot;&gt;基本手册&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tuicool.com/articles/6RzIZr3&quot;&gt;nmap速查手册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nmap.com.cn/doc/manual.shtm&quot;&gt;nmap中文手册&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nmap.org/man/zh/&quot;&gt;nmap参考指南&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wenku.baidu.com/view/db46540f0c22590103029d16.html&quot;&gt;nmap简单使用&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/2017/06/19/nmap</link>
+                <guid>/2017/06/19/nmap</guid>
+                <pubDate>Mon, 19 Jun 2017 00:00:00 +0800</pubDate>
+        </item>
 
         <item>
                 <title>在Centos7上安装和配置VNC服务</title>
@@ -26,7 +49,11 @@
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;$rpm -q tigervnc tigervnc-server
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;安装VNC Server&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install tigervnc-server  tigervnc-server-module -y
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum check-update
+sudo yum install tigervnc-server  tigervnc-server-module -y
+sudo unlink /etc/systemd/system/default.target
+sudo ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+sudo reboot
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;配置vnc&quot;&gt;配置VNC&lt;/h2&gt;
 
@@ -34,6 +61,9 @@
 
 &lt;p&gt;我们需要在 /etc/systemd/system/ 目录里创建一个配置文件。我们可以将 /lib/systemd/sytem/vncserver@.service 拷贝一份配置文件范例过来。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
+sudo systemctl enable vncserver@:1.service
+sudo systemctl start vncserver@:1.service
+systemctl status vncserver@:1.service
 # open configure file and add user
 vim /etc/systemd/system/vncserver@:1.service
 &lt;/code&gt;&lt;/pre&gt;
@@ -4360,6 +4390,10 @@ sudo apt-get install libgmp3-dev
 &lt;!--more--&gt;
 &lt;hr /&gt;
 
+&lt;h2 id=&quot;centos7-安装教程&quot;&gt;Centos7 安装教程&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://linux.it.net.cn/CentOS/server/set/2014/1230/11119.html&quot;&gt;[详细安装教程]&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;安装完成之后需要哪些事&quot;&gt;&lt;strong&gt;安装完成之后，需要哪些事&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;sudo-problem&quot;&gt;sudo problem&lt;/h3&gt;
@@ -4456,7 +4490,7 @@ sudo bash install_chrome.sh -s	#stable
 
 &lt;h4 id=&quot;virtual-box&quot;&gt;virtual box&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install -y vbox-x-x.rpm
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo rpm -ivh  vbox-x-x.rpm
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在创建虚拟机时，出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Kernel dirver not install&lt;/code&gt;问题&lt;/p&gt;
@@ -4542,39 +4576,6 @@ click disbaled
 </description>
                 <link>/centos/2017/03/27/centos</link>
                 <guid>/centos/2017/03/27/centos</guid>
-                <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>R</title>
-                <description>&lt;h2 id=&quot;r-language&quot;&gt;R language&lt;/h2&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;install&quot;&gt;install&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu/README.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;demo&quot;&gt;demo&lt;/h2&gt;
-
-&lt;p&gt;R-demo.R&lt;/p&gt;
-
-&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;106&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;108&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;114&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;116&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;121&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;126&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;125&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;run: R CMD batch  –args R-demo.R&lt;/p&gt;
-
-&lt;p&gt;produce pdf file&lt;/p&gt;
-</description>
-                <link>/2017/03/27/R</link>
-                <guid>/2017/03/27/R</guid>
                 <pubDate>Mon, 27 Mar 2017 00:00:00 +0800</pubDate>
         </item>
 
