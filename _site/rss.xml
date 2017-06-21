@@ -5,8 +5,8 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 19 Jun 2017 22:54:39 +0800</lastBuildDate>
-        <pubDate>Mon, 19 Jun 2017 22:54:39 +0800</pubDate>
+        <lastBuildDate>Wed, 21 Jun 2017 21:41:52 +0800</lastBuildDate>
+        <pubDate>Wed, 21 Jun 2017 21:41:52 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -4490,7 +4490,11 @@ sudo bash install_chrome.sh -s	#stable
 
 &lt;h4 id=&quot;virtual-box&quot;&gt;virtual box&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo rpm -ivh  vbox-x-x.rpm
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo yum install epel-release -y
+sudo yum install gcc make -y
+sudo yum install SDL.x86_64 -y
+sudo yum install kernel-devel -y
+sudo rpm -ivh  vbox-x-x.rpm
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在创建虚拟机时，出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Kernel dirver not install&lt;/code&gt;问题&lt;/p&gt;
