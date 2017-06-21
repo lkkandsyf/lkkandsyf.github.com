@@ -8,7 +8,7 @@ title: '夜的钢琴曲5感想'
 ---
 一首好的曲子，代表了不朽的故事，时刻地启迪着自己,不忘脚下的路以及遥远的天边。
 
-[miss] ((http://lkkandsyf.github.com/pictures/miss.png))
+![miss](http://lkkandsyf.github.com/pictures/miss.png)
 
 ---
 
