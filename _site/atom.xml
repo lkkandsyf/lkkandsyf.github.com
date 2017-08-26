@@ -4,13 +4,82 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-08-07T20:00:19+08:00</updated>
+ <updated>2017-08-26T18:50:50+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>window 常用的开发工具</title>
+   <link href="/2017/08/22/win_tool"/>
+   <updated>2017-08-22T00:00:00+08:00</updated>
+   <id>/2017/08/22/win_tool</id>
+   <content type="html">&lt;p&gt;对于一个从Linux转到Window桌面，有些工具用的不是很熟，所以做了一个简单的整理，便于以后查看&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;cgywin&quot;&gt;Cgywin&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cygwin.com/&quot;&gt;Cgywin&lt;/a&gt;,get that Linux feeling - on Windows&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/transcode-open/apt-cyg&quot;&gt;apt-cyg&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/zhang-pengcheng/p/4156582.html&quot;&gt;ref&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;window-shell&quot;&gt;window shell&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://babun.github.io/&quot;&gt;babun&lt;/a&gt;,Babun - a window shell you love,解压出来，直接运行bat，等待安装，之后就可以使用了，有find,grep,awk,sed等.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.rxna.cn/post/wiki/babun-pei-zhi&quot;&gt;configure&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;babun中文乱码
+add code to ~/.babun.rc
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chcp 65001
+:wq
+source ~/.babunrc
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.mamicode.com/info-detail-1653353.html&quot;&gt;ref&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>一个连接各种数据库的软件</title>
+   <link href="/2017/08/08/navicat"/>
+   <updated>2017-08-08T00:00:00+08:00</updated>
+   <id>/2017/08/08/navicat</id>
+   <content type="html">&lt;p&gt;Navicat是一套快速、可靠并价格相宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设,Navicat是以直觉化的图形用户界面而建的，让你可以以安全并且简单的方式创建、组织、访问并共用信息。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/navicat_ui.png&quot; alt=&quot;Navicat_UI&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Navicat提供多达7种语言供客户选择，被公认为全球最受欢迎的数据库前端用户界面工具。它可以用来对本机或远程的 MySQL、SQL Server、SQLite、Oracle及PostgreSQL数据库进行管理及开发。&lt;/p&gt;
+
+&lt;p&gt;Navicat的功能足以符合专业开发人员的所有需求，而且对数据库服务器的新手来说又相当容易学习。有了极完备的图形用户界面(GUI)，Navicat让你可以以安全且简单的方法创建、组织、访问和共享信息。&lt;/p&gt;
+
+&lt;p&gt;Navicat适用于三种平台-Microsoft Windows、Mac OS X及Linux。它可以让用户连接到任何本机或远程服务器、提供一些实用的数据库工具如数据模型、数据传输、数据同步、结构同步、导入、导出、备份、还原、报表创建工具及计划以协助管理数据。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;从百度网盘中的software中心，找到navicat的安装软件包。接下来就按照下面的步骤开始：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/navicat_install.png&quot; alt=&quot;install&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt;:注意补丁的安装，只有先安装了补丁，才能正确运行Navicat.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>夜的钢琴曲5感想</title>
@@ -1953,6 +2022,11 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
 &lt;p&gt;这是win系统自带的画图工具。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;kk 录像机&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;cmd:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;netplwiz:open all user settings&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
@@ -4446,40 +4520,6 @@ solution:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo apt-get install libgmp-dev
 sudo apt-get install libgmp3-dev
 &lt;/code&gt;&lt;/pre&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>use XX-net to brower to foreign files</title>
-   <link href="/2017/04/01/out-of-wall"/>
-   <updated>2017-04-01T00:00:00+08:00</updated>
-   <id>/2017/04/01/out-of-wall</id>
-   <content type="html">&lt;p&gt;solution to look out of the China web&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1 id=&quot;xx-net&quot;&gt;XX-net&lt;/h1&gt;
-
-&lt;h2 id=&quot;link&quot;&gt;link&lt;/h2&gt;
-
-&lt;h3 id=&quot;liangkangkang&quot;&gt;liangkangkang&lt;/h3&gt;
-
-&lt;h1 id=&quot;lantern&quot;&gt;lantern&lt;/h1&gt;
-
-&lt;h2 id=&quot;link-1&quot;&gt;link&lt;/h2&gt;
-
-&lt;h3 id=&quot;blog&quot;&gt;blog&lt;/h3&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Nginx</title>
-   <link href="/2017/04/01/Nginx"/>
-   <updated>2017-04-01T00:00:00+08:00</updated>
-   <id>/2017/04/01/Nginx</id>
-   <content type="html">&lt;h2 id=&quot;nginx是一个高性能的http和反向代理服务器也是一个imappop3smtp服务器&quot;&gt;nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器.&lt;/h2&gt;
-&lt;!--more--&gt;
-
 </content>
  </entry>
  
