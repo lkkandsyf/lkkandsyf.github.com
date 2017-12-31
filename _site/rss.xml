@@ -5,8 +5,8 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sat, 26 Aug 2017 18:50:50 +0800</lastBuildDate>
-        <pubDate>Sat, 26 Aug 2017 18:50:50 +0800</pubDate>
+        <lastBuildDate>Sun, 31 Dec 2017 16:21:15 +0800</lastBuildDate>
+        <pubDate>Sun, 31 Dec 2017 16:21:15 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -4514,6 +4514,19 @@ solution:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;sudo apt-get install libgmp-dev
 sudo apt-get install libgmp3-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;tips: ufw,jekyll access by ip not localhost&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;1.close ubuntu ufw
+$sudo ufw status
+$sudo ufw disable
+2.open ubuntu ufw
+$sudo ufw enable
+$sudo ufw default deny
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如何让jekyll服务可以通过局域网的ip来访问,由于我们使用的jekyll把地址绑定到了127.0.0.1,导致局域网的其他机器访问不了服务，实际上只要改变jekyll的参数就可以了&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;jekyll serve -w --host=0.0.0.0
 &lt;/code&gt;&lt;/pre&gt;
 </description>
                 <link>/2017/04/09/build-blog</link>
