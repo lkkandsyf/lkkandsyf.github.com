@@ -4,7 +4,7 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2017-12-31T16:21:15+08:00</updated>
+ <updated>2017-12-31T01:45:21-08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>window 常用的开发工具</title>
    <link href="/2017/08/22/win_tool"/>
-   <updated>2017-08-22T00:00:00+08:00</updated>
+   <updated>2017-08-22T00:00:00-07:00</updated>
    <id>/2017/08/22/win_tool</id>
    <content type="html">&lt;p&gt;对于一个从Linux转到Window桌面，有些工具用的不是很熟，所以做了一个简单的整理，便于以后查看&lt;/p&gt;
 
@@ -55,7 +55,7 @@ source ~/.babunrc
  <entry>
    <title>一个连接各种数据库的软件</title>
    <link href="/2017/08/08/navicat"/>
-   <updated>2017-08-08T00:00:00+08:00</updated>
+   <updated>2017-08-08T00:00:00-07:00</updated>
    <id>/2017/08/08/navicat</id>
    <content type="html">&lt;p&gt;Navicat是一套快速、可靠并价格相宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设,Navicat是以直觉化的图形用户界面而建的，让你可以以安全并且简单的方式创建、组织、访问并共用信息。&lt;/p&gt;
 
@@ -84,7 +84,7 @@ source ~/.babunrc
  <entry>
    <title>夜的钢琴曲5感想</title>
    <link href="/2017/06/21/night-piano"/>
-   <updated>2017-06-21T00:00:00+08:00</updated>
+   <updated>2017-06-21T00:00:00-07:00</updated>
    <id>/2017/06/21/night-piano</id>
    <content type="html">&lt;p&gt;一首好的曲子，代表了不朽的故事，时刻地启迪着自己,不忘脚下的路以及遥远的天边。&lt;/p&gt;
 
@@ -183,7 +183,7 @@ source ~/.babunrc
  <entry>
    <title>nmap使用手册</title>
    <link href="/2017/06/19/nmap"/>
-   <updated>2017-06-19T00:00:00+08:00</updated>
+   <updated>2017-06-19T00:00:00-07:00</updated>
    <id>/2017/06/19/nmap</id>
    <content type="html">&lt;p&gt;Nmap是一款网络扫描和主机检测的工具，可以用来作为一个漏洞探测器或网络安全扫描器，而且还是跨平台的.&lt;/p&gt;
 
@@ -206,7 +206,7 @@ source ~/.babunrc
  <entry>
    <title>在Centos7上安装和配置VNC服务</title>
    <link href="/centos/2017/06/16/vnc"/>
-   <updated>2017-06-16T00:00:00+08:00</updated>
+   <updated>2017-06-16T00:00:00-07:00</updated>
    <id>/centos/2017/06/16/vnc</id>
    <content type="html">&lt;p&gt;当我们访问服务器时，大部分都是通过ssh来操作的。很少用到图形界面，毕竟在字符界面就可以完成我们的任务了，只是图形界面看起来会好一点，所以就通过VNC服务和控制器VNC-Viewer来实现这一愿望。VNC(Virtual Network Computing)允许Linux系统可以类似实现像Windows中的远程桌面访问那样访问Linux桌面。&lt;/p&gt;
 
@@ -338,7 +338,7 @@ gnome-session &amp;amp;
  <entry>
    <title>如何才能编写出高质量的Java代码</title>
    <link href="/java/2017/05/16/how-to-code-java-good"/>
-   <updated>2017-05-16T00:00:00+08:00</updated>
+   <updated>2017-05-16T00:00:00-07:00</updated>
    <id>/java/2017/05/16/how-to-code-java-good</id>
    <content type="html">&lt;h2 id=&quot;对一个开发者而言编写出高质量的代码是多么重要首先是建立在扎实的基础之上然后通过不断的尝试和改进最后达到自己的目标&quot;&gt;对一个开发者而言，编写出高质量的代码是多么重要。首先是建立在扎实的基础之上，然后通过不断的尝试和改进，最后达到自己的目标。&lt;/h2&gt;
 &lt;!--more--&gt;
@@ -352,7 +352,7 @@ gnome-session &amp;amp;
  <entry>
    <title>collect movie</title>
    <link href="/2017/05/13/movie"/>
-   <updated>2017-05-13T00:00:00+08:00</updated>
+   <updated>2017-05-13T00:00:00-07:00</updated>
    <id>/2017/05/13/movie</id>
    <content type="html">&lt;p&gt;collect moive&lt;/p&gt;
 
@@ -395,7 +395,7 @@ gnome-session &amp;amp;
  <entry>
    <title>在Linux下搭建zookeeper集群服务模式</title>
    <link href="/2017/05/11/zookeeper"/>
-   <updated>2017-05-11T00:00:00+08:00</updated>
+   <updated>2017-05-11T00:00:00-07:00</updated>
    <id>/2017/05/11/zookeeper</id>
    <content type="html">&lt;p&gt;Zookeeper是一个开源的分布式应用程序协调服务.可用于对集群的有效管理.&lt;/p&gt;
 
@@ -543,7 +543,7 @@ getChildren /path　　　　　　返回所有/path节点的所有子节点列�
  <entry>
    <title>使用Python的scrapy包进行抓取数据</title>
    <link href="/python/2017/05/10/scrapy"/>
-   <updated>2017-05-10T00:00:00+08:00</updated>
+   <updated>2017-05-10T00:00:00-07:00</updated>
    <id>/python/2017/05/10/scrapy</id>
    <content type="html">&lt;p&gt;当我们使用数据的时候，发现自己手中的数据少之又少，而且有效的数据那更是少的可怜。通过抓取网上的数据，进行实验，这对于我们来说，是个很大的帮助，大部分情况，都是采用Python来抓取数据，这里使用到scrapy,这个包，功能十分强大，能够满足要求。&lt;/p&gt;
 
@@ -570,7 +570,7 @@ getChildren /path　　　　　　返回所有/path节点的所有子节点列�
  <entry>
    <title>unzip and zip linux usage</title>
    <link href="/command/2017/05/04/unzip-zip"/>
-   <updated>2017-05-04T00:00:00+08:00</updated>
+   <updated>2017-05-04T00:00:00-07:00</updated>
    <id>/command/2017/05/04/unzip-zip</id>
    <content type="html">&lt;h2 id=&quot;unzip-and-zip-usage&quot;&gt;unzip and zip usage&lt;/h2&gt;
 &lt;p&gt;当在压缩的时候，发现tar的比例较小，zip较好，但最好的7.z,主要是不常用，所以还是以zip为主。
@@ -655,7 +655,7 @@ getChildren /path　　　　　　返回所有/path节点的所有子节点列�
  <entry>
    <title>以spark2.0为主,使用mvn命令来编译java,scala的spark程序</title>
    <link href="/spark/2017/05/04/mvn-compile-java-scala-spark"/>
-   <updated>2017-05-04T00:00:00+08:00</updated>
+   <updated>2017-05-04T00:00:00-07:00</updated>
    <id>/spark/2017/05/04/mvn-compile-java-scala-spark</id>
    <content type="html">&lt;h2 id=&quot;mvn-compile-java-scala-spark&quot;&gt;mvn compile Java Scala Spark&lt;/h2&gt;
 &lt;p&gt;熟练使用命令对程序的编译和执行，使我们可以更加清新的了解整个过程，有助于学习基本理论，加深印象
@@ -1785,7 +1785,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
  <entry>
    <title>使用日志记录库Log4j2</title>
    <link href="/2017/05/04/Log4j2"/>
-   <updated>2017-05-04T00:00:00+08:00</updated>
+   <updated>2017-05-04T00:00:00-07:00</updated>
    <id>/2017/05/04/Log4j2</id>
    <content type="html">&lt;p&gt;必不可少的日志记录Log4j2&lt;/p&gt;
 
@@ -1803,7 +1803,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
  <entry>
    <title>Scala Java性能比较</title>
    <link href="/scala/2017/05/03/scala-java-compare"/>
-   <updated>2017-05-03T00:00:00+08:00</updated>
+   <updated>2017-05-03T00:00:00-07:00</updated>
    <id>/scala/2017/05/03/scala-java-compare</id>
    <content type="html">&lt;p&gt;对于Scala,Java这两种语言，都是在JVM上的运行的。我们需要考察一下，他们的性能如何,便于以后分析。&lt;/p&gt;
 
@@ -1985,7 +1985,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
  <entry>
    <title>学习kali Linux</title>
    <link href="/2017/05/02/kali-linux"/>
-   <updated>2017-05-02T00:00:00+08:00</updated>
+   <updated>2017-05-02T00:00:00-07:00</updated>
    <id>/2017/05/02/kali-linux</id>
    <content type="html">&lt;p&gt;对于网络安全人员，来说，kali Linux是必须要掌握的。&lt;/p&gt;
 
@@ -2003,7 +2003,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
  <entry>
    <title>win7 系统常用的工具</title>
    <link href="/win7/2017/05/01/win7os"/>
-   <updated>2017-05-01T00:00:00+08:00</updated>
+   <updated>2017-05-01T00:00:00-07:00</updated>
    <id>/win7/2017/05/01/win7os</id>
    <content type="html">&lt;p&gt;工作和同事交流的时候，win7系统的熟练应用，也是十分重要的。&lt;/p&gt;
 
@@ -2033,7 +2033,7 @@ scalac -d target/classes -classpath “target/classes:${SPARK_HOME}/jars/*” sr
  <entry>
    <title>java 基本知识</title>
    <link href="/java/2017/04/26/java-base"/>
-   <updated>2017-04-26T00:00:00+08:00</updated>
+   <updated>2017-04-26T00:00:00-07:00</updated>
    <id>/java/2017/04/26/java-base</id>
    <content type="html">&lt;p&gt;打好java的基础，是学习新技术的关键因素&lt;/p&gt;
 
@@ -3297,7 +3297,7 @@ conf/tomcat-user.xml:定义tomcat用户的信息
  <entry>
    <title>Linux搭建Hadoop+Spark集群+ hive + hbase</title>
    <link href="/spark/2017/04/18/hadoop-spark-cluster"/>
-   <updated>2017-04-18T00:00:00+08:00</updated>
+   <updated>2017-04-18T00:00:00-07:00</updated>
    <id>/spark/2017/04/18/hadoop-spark-cluster</id>
    <content type="html">&lt;p&gt;通过vbox虚拟机来搭建Hadoop+Spark集群,再额外添加一些外围的东西,如Zookeeper,Hbaes,Hive,Kafka,Flume,Redis等.&lt;/p&gt;
 
@@ -4456,7 +4456,7 @@ hive&amp;gt;exit
  <entry>
    <title>scikit tool</title>
    <link href="/python/2017/04/10/scikit"/>
-   <updated>2017-04-10T00:00:00+08:00</updated>
+   <updated>2017-04-10T00:00:00-07:00</updated>
    <id>/python/2017/04/10/scikit</id>
    <content type="html">&lt;h2 id=&quot;python-scikit-machine-learning&quot;&gt;python scikit machine learning&lt;/h2&gt;
 &lt;!--more--&gt;
@@ -4477,7 +4477,7 @@ import sklearn
  <entry>
    <title>IRC</title>
    <link href="/2017/04/10/Weechat"/>
-   <updated>2017-04-10T00:00:00+08:00</updated>
+   <updated>2017-04-10T00:00:00-07:00</updated>
    <id>/2017/04/10/Weechat</id>
    <content type="html">&lt;h2 id=&quot;irc&quot;&gt;IRC&lt;/h2&gt;
 &lt;!--more--&gt;
@@ -4491,7 +4491,7 @@ import sklearn
  <entry>
    <title>Build Blog</title>
    <link href="/2017/04/09/build-blog"/>
-   <updated>2017-04-09T00:00:00+08:00</updated>
+   <updated>2017-04-09T00:00:00-07:00</updated>
    <id>/2017/04/09/build-blog</id>
    <content type="html">&lt;h2 id=&quot;使用ubuntu镜像来搭建一个jekyll的博客环境&quot;&gt;使用ubuntu镜像来搭建一个jekyll的博客环境&lt;/h2&gt;
 &lt;!--more--&gt;
