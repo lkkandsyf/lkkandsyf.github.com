@@ -1,4 +1,4 @@
----
+--
 layout: page
 title: Self understanding
 type: page
@@ -138,6 +138,20 @@ ref:[https://zhuanlan.zhihu.com/p/19739835?columnSlug=Evi1m0](https://zhuanlan.z
 [Xcon](http://xcon.xfocus.net/)
 
 [http://www.kalitutorials.net/](http://www.kalitutorials.net/)
+
+[http://www.w00w00.org/](http://www.w00w00.org/) ,w00w00组织
+
+[http://phrack.org/index.html](http://phrack.org/index.html),电子期刊
+
+[http://attrition.org](http://attrition.org) @stack
+
+[https://www.securityfocus.com/](https://www.securityfocus.com/)
+
+[http://www.blackhat.com/](http://www.blackhat.com/)
+
+[https://packetstormsecurity.com/](https://packetstormsecurity.com/)
+
+[https://annvix.com/blog](https://annvix.com/blog)
 
 `公司`:[绿盟科技](https://nsfocusglobal.com/)
 
