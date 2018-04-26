@@ -2,7 +2,7 @@
 layout: post
 category :
 tagline: "Supporting tagline"
-tags:
+tags: LSTM
   -
 title: '进程监控web工具supverisor'
 ---
@@ -12,6 +12,8 @@ title: '进程监控web工具supverisor'
 
 
 <!--more-->
+
+superviso
 
 ## 安装
 安装教程到官网[http://supervisord.org/](http://supervisord.org/)按照步骤，就可以了,这是一个python的工具，可以使用pip来安装。
