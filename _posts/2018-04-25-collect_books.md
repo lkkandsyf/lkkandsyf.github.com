@@ -35,12 +35,13 @@ title: '整理一些必要的书籍，可以快速的找到和阅读'
 
 ## neural-network
 
-##  machine-learning
+## machine-learning
 
 
 ## deep-learning
 
  + [\[long short term memory networks with python\]](https://pan.baidu.com/s/17u4frNm3nPPBx0IkOB5cwg) soci
+ + 2018 最新的深度学习书籍，有中文版,[http://www.deeplearningbook.org/](http://www.deeplearningbook.org/),相关博客,[https://exacity.github.io/deeplearningbook-chinese/](https://exacity.github.io/deeplearningbook-chinese/),[github](https://github.com/exacity/deeplearningbook-chinese)
 
 # computer
 

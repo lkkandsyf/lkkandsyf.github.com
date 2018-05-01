@@ -28,4 +28,9 @@ Never knew that it could mean so much so much
 [\[mv\]](http://v.yinyuetai.com/video/2225036)
 
 
+![love](http://lkkandsyf.github.com/pictures/dance.png)
+![love](http://lkkandsyf.github.com/pictures/fifty-shade.png)
+![love](http://lkkandsyf.github.com/pictures/sea.png)
+![love](http://lkkandsyf.github.com/pictures/two-hand.png)
+![love](http://lkkandsyf.github.com/pictures/song.png)
 ![love](http://lkkandsyf.github.com/pictures/cc.png)
