@@ -4,7 +4,7 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2018-05-01T19:49:09+08:00</updated>
+ <updated>2018-06-12T21:03:35+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
@@ -13,15 +13,58 @@
 
  
  <entry>
+   <title>拓扑发现窥探</title>
+   <link href="/network/2018/06/02/topology_discovery"/>
+   <updated>2018-06-02T00:00:00+08:00</updated>
+   <id>/network/2018/06/02/topology_discovery</id>
+   <content type="html">&lt;p&gt;在网络中需要用拓扑发现来展示真实的网络，尤其是在很复杂的网络中，显得尤为重要，所有出现了一系列的算法。传统的都是基于SNMP协议来获取网络设备的数据，通过分析得到网络关系图。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;arproute表-算法&quot;&gt;ARP+ROUTE表 算法&lt;/h2&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>zabbix monitor 到底有多神秘?</title>
+   <link href="/zabbix/2018/05/02/zabbix"/>
+   <updated>2018-05-02T00:00:00+08:00</updated>
+   <id>/zabbix/2018/05/02/zabbix</id>
+   <content type="html">&lt;p&gt;当网络设备达到一定量的时候，就需要一个有效的监控的工具，来管理它们，并可以知道当前的工作状态。zabbix就能胜任，也是监控领域的一大利器。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/zabbix-demo.png&quot; alt=&quot;zabbix&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;背景介绍&quot;&gt;背景介绍&lt;/h2&gt;
+
+&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
+
+&lt;h2 id=&quot;使用&quot;&gt;使用&lt;/h2&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;problem&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zabbix.com/documentation&quot;&gt;https://www.zabbix.com/documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/clsn/p/7885990.html&quot;&gt;https://www.cnblogs.com/clsn/p/7885990.html&lt;/a&gt; Zabbix 3.0 从入门到精通&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>collect some song in the life</title>
    <link href="/song/2018/05/01/song"/>
    <updated>2018-05-01T00:00:00+08:00</updated>
    <id>/song/2018/05/01/song</id>
-   <content type="html">&lt;p&gt;to remind in the life&lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;to-remind-in-the-life&quot;&gt;to remind in the life&lt;/h2&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/life-song.png&quot; alt=&quot;love&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/life-song.jpg&quot; alt=&quot;love&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -1008,66 +1051,6 @@ gnome-session &amp;amp;
 &lt;p&gt;&lt;a href=&quot;http://www.centoscn.com/image-text/install/2015/0414/5180.html&quot;&gt;http://www.centoscn.com/image-text/install/2015/0414/5180.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/littlemonsters/p/5779331.html&quot;&gt;http://www.cnblogs.com/littlemonsters/p/5779331.html&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>如何才能编写出高质量的Java代码</title>
-   <link href="/java/2017/05/16/how-to-code-java-good"/>
-   <updated>2017-05-16T00:00:00+08:00</updated>
-   <id>/java/2017/05/16/how-to-code-java-good</id>
-   <content type="html">&lt;h2 id=&quot;对一个开发者而言编写出高质量的代码是多么重要首先是建立在扎实的基础之上然后通过不断的尝试和改进最后达到自己的目标&quot;&gt;对一个开发者而言，编写出高质量的代码是多么重要。首先是建立在扎实的基础之上，然后通过不断的尝试和改进，最后达到自己的目标。&lt;/h2&gt;
-&lt;!--more--&gt;
-
-&lt;p&gt;Java中一本书&lt;code class=&quot;highlighter-rouge&quot;&gt;Effective Java&lt;/code&gt;,值得深读。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/aishangyutian12/article/details/52699938&quot;&gt;建议151&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>collect movie</title>
-   <link href="/2017/05/13/movie"/>
-   <updated>2017-05-13T00:00:00+08:00</updated>
-   <id>/2017/05/13/movie</id>
-   <content type="html">&lt;p&gt;collect moive&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;moive web&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.llduang.com/&quot;&gt;http://www.llduang.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.bilibili.com/&quot;&gt;[http://www.bilibili.com/]&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.acfun.cn/&quot;&gt;[http://www.acfun.cn/]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;欣赏电影，找到自己的影子.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;肖申克的救赎&lt;/li&gt;
-  &lt;li&gt;三傻&lt;/li&gt;
-  &lt;li&gt;泰坦尼克号&lt;/li&gt;
-  &lt;li&gt;魔戒三部曲&lt;/li&gt;
-  &lt;li&gt;教父&lt;/li&gt;
-  &lt;li&gt;海上钢琴师&lt;/li&gt;
-  &lt;li&gt;阿甘正传&lt;/li&gt;
-  &lt;li&gt;辛德勒的名单&lt;/li&gt;
-  &lt;li&gt;窃听风暴&lt;/li&gt;
-  &lt;li&gt;楚门的世界&lt;/li&gt;
-  &lt;li&gt;让子弹飞&lt;/li&gt;
-  &lt;li&gt;当幸福来敲门&lt;/li&gt;
-  &lt;li&gt;闻香识女人&lt;/li&gt;
-  &lt;li&gt;阿凡达&lt;/li&gt;
-  &lt;li&gt;杀人回忆(韩国电影的里程碑)&lt;/li&gt;
-  &lt;li&gt;弱点&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;解救吾先生&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.xiami.com/song/1776068158&quot;&gt;Falling Down&lt;/a&gt;,hlin&lt;/li&gt;
-&lt;/ul&gt;
 </content>
  </entry>
  

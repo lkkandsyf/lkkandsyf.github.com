@@ -1,9 +1,9 @@
 ---
 title: 编程资料--PostgreSQL
-tagline: ""
-category :
+tagline: "pg collect "
+category : DataBase
 layout: post
-tags : []
+tags : [postgres]
 ---
 
 摘要：　这是对编程资料--PostgreSQL的汇总。
@@ -73,3 +73,29 @@ psql
 **配置**
 
 PostgreSQL数据库的配置主要是同坐修改数据目录下的postgresql.conf文件来实现的。
+
+## 常用命令
+
+1.查看数据表中每个表占用磁盘的大小
+```c
+SELECT  table_schema || '.' || table_name AS table_full_name,
+		pg_size_pretty(pg_total_relation_size('"' || table_schema || '"."' || table_name || '"')) AS size
+FROM information_schema.tables
+ORDER BY  pg_total_relation_size('"' || table_schema || '"."' || table_name || '"') DESC
+```
+
+2.查看每个数据库占用磁盘的大小
+```c
+SELECT d.datname AS Name,  pg_catalog.pg_get_userbyid(d.datdba) AS Owner,
+   CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')
+       THEN pg_catalog.pg_size_pretty(pg_catalog.pg_database_size(d.datname))
+       ELSE 'No Access'
+   END AS SIZE
+FROM pg_catalog.pg_database d
+   ORDER BY
+   CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')
+       THEN pg_catalog.pg_database_size(d.datname)
+       ELSE NULL
+   END DESC -- nulls first
+   LIMIT 20
+```
