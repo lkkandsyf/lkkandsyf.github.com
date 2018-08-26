@@ -16,20 +16,29 @@ title: '整理一些必要的书籍，可以快速的找到和阅读'
 # big-data
 
 ## hadoop
+ + hadoop 权威指南 third version
 
 ## kafka
 
 ## zookeeper
 
 ## hive
+ + hive 权威指南
+ + hive 编程指南
 
 ## spark
 
 ## flink
 
 ## hbase
+ + hbase 权威指南
 
 ## flume
+
+## nginx
+ + nginx 权威指南
+
+徐子沛 ：大数据数据之巅，大数据互联网大规模数据挖掘与分布式处理，大数据处理之道
 
 # ML-DL
 
@@ -37,6 +46,10 @@ title: '整理一些必要的书籍，可以快速的找到和阅读'
 
 ## machine-learning
 
+ + machine learning in action
+
+## presto
+ + presto 技术内幕
 
 ## deep-learning
 

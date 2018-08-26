@@ -38,7 +38,7 @@ fi
 cat << CHAR > $blog_name
 ---
 layout: post
-category :
+category:
 tagline: "Supporting tagline"
 tags:
   -

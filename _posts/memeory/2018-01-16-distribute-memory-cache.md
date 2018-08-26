@@ -6,6 +6,7 @@ tags: cache
   -
 title: 'cache'
 ---
+memcache
 
 ---
 
