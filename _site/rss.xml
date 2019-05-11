@@ -5,423 +5,1847 @@
         <description>liangkangkang's Blog - liangkangkang</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Sun, 26 Aug 2018 19:48:54 +0800</lastBuildDate>
-        <pubDate>Sun, 26 Aug 2018 19:48:54 +0800</pubDate>
+        <lastBuildDate>Sat, 11 May 2019 21:19:46 +0800</lastBuildDate>
+        <pubDate>Sat, 11 May 2019 21:19:46 +0800</pubDate>
         <ttl>60</ttl>
 
 
         <item>
-                <title>iptable 使用</title>
-                <description>&lt;p&gt;防火墙的使用指南&lt;/p&gt;
+                <title>Regex 和 Grok</title>
+                <description>&lt;p&gt;在日志解析中，两个很关键的工具Regex,Grok.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/datoucang/article/details/78042553&quot;&gt;https://blog.csdn.net/datoucang/article/details/78042553&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;regex&quot;&gt;Regex&lt;/h2&gt;
+
+&lt;h2&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;reference&lt;/h3&gt;
+
+&lt;p&gt;online test
+&lt;a href=&quot;https://txt2re.com&quot;&gt;https://txt2re.com&lt;/a&gt;
+&lt;a href=&quot;https://regexr.com/&quot;&gt;https://regexr.com/&lt;/a&gt;
+&lt;a href=&quot;https://www.regular-expressions.info/regexmagic.html&quot;&gt;https://www.regular-expressions.info/regexmagic.html&lt;/a&gt;
+&lt;a href=&quot;https://tool.lu/regex/&quot;&gt;https://tool.lu/regex/&lt;/a&gt;
+&lt;a href=&quot;http://www.kingshang.com/&quot;&gt;http://www.kingshang.com/&lt;/a&gt;
+&lt;a href=&quot;https://www.jb51.net/tools/zhengze.htm&quot;&gt;https://www.jb51.net/tools/zhengze.htm&lt;/a&gt;
+&lt;a href=&quot;https://regex101.com/&quot;&gt;https://regex101.com/&lt;/a&gt;
+&lt;a href=&quot;https://c.runoob.com/front-end/854&quot;&gt;https://c.runoob.com/front-end/854&lt;/a&gt;
+&lt;a href=&quot;http://tool.oschina.net/regex/&quot;&gt;http://tool.oschina.net/regex/&lt;/a&gt;
+&lt;a href=&quot;http://tool.chinaz.com/regex/&quot;&gt;http://tool.chinaz.com/regex/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/thekrakken/java-grok&quot;&gt;https://github.com/thekrakken/java-grok&lt;/a&gt;
+&lt;a href=&quot;https://github.com/aicer/grok&quot;&gt;https://github.com/aicer/grok&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;grok&quot;&gt;Grok&lt;/h2&gt;
+
+&lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-3&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-4&quot;&gt;#&lt;/h2&gt;
+
 </description>
-                <link>/linux/2018/07/14/iptalbes</link>
-                <guid>/linux/2018/07/14/iptalbes</guid>
-                <pubDate>Sat, 14 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/java/2019/05/06/regex_grok</link>
+                <guid>/java/2019/05/06/regex_grok</guid>
+                <pubDate>Mon, 06 May 2019 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>inode 满了</title>
-                <description>&lt;p&gt;linux 系统中由于创建过多的临时文件，导致inode耗尽，系统无法使用,找到临时文件的根源,然后删除&lt;/p&gt;
+                <title>StreamSets 流处理ETL</title>
+                <description>&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-1&quot;&gt;#&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://streamsets.com/tutorials/&quot;&gt;https://streamsets.com/tutorials/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/streamsets/tutorials/blob/master/tutorial-processor/readme.md&quot;&gt;自定义插件&lt;/a&gt;,通过mvn创建项目，依次输入grouyId,artifactId,version,package.&lt;/p&gt;
+
+&lt;h1 id=&quot;-2&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-3&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-4&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-5&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-6&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-7&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-8&quot;&gt;#&lt;/h1&gt;
+</description>
+                <link>/2019/01/31/streamsets</link>
+                <guid>/2019/01/31/streamsets</guid>
+                <pubDate>Thu, 31 Jan 2019 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Python libs整理</title>
+                <description>&lt;p&gt;对于日常中Python库的整理&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;!--more--&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;df -i
-for i in /tmp/*; do echo $i; find $i |wc -l|sort -nr; done
+&lt;h2 id=&quot;json-simplejson&quot;&gt;json simplejson&lt;/h2&gt;
 
+&lt;p&gt;JSON(JavaScript Object Notation)是一种轻量级的数据交换格式&lt;/p&gt;
 
+&lt;p&gt;simplejson比json更新快, simplejson支持的python版本范围更广&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;try:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;simplejson&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImportError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;格式化json格式文件python -m simplejson.tool PATH/json.json&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;在python中使用Json
+Import json
+.json文件的读入
+with open(filePath,'r')as f:
+      data = json.load(f)
+data是字典类型
+可以通过for k,v in data.items()来遍历字典
+.json文件的写入
+首先存放为.json类型的文件一般是k-v类型的，一般是先打包成字典写入
+jsFile = json.dumps(bigramDict)
+with open(filepath.json,'w')as f:
+    f.write(jsFile)
+    f.close()
+
+几个主要函数：dump,dumps,load,loads 带s跟不带s的区别是 带s的是对 字符串的处理，而不带 s的是对文件对像的处理。
+函数1dumps(dict):将python字典json化,接收参数为字典类型
+函数2sort_keys:设置是否排序字典
+函数3dump（）：对文件对象的处理
+函数4 loads(str)解析json的字符串
+函数5 load()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.jb51.net/LINUXjishu/436153.html&quot;&gt;https://www.jb51.net/LINUXjishu/436153.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;pycharts&quot;&gt;pycharts&lt;/h3&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pyecharts&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;柱形图
+```C
+from pyecharts import Bar&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/shanhuhau/article/details/51009869&quot;&gt;https://blog.csdn.net/shanhuhau/article/details/51009869&lt;/a&gt;
-&lt;a href=&quot;http://blog.51cto.com/286820/1413442&quot;&gt;http://blog.51cto.com/286820/1413442&lt;/a&gt;
-&lt;a href=&quot;https://www.linuxidc.com/Linux/2017-08/146458.htm&quot;&gt;https://www.linuxidc.com/Linux/2017-08/146458.htm&lt;/a&gt;
-&lt;a href=&quot;https://blog.csdn.net/samxx8/article/details/44779245&quot;&gt;https://blog.csdn.net/samxx8/article/details/44779245&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;bar = Bar(“成绩柱形图”, “副标题”)&lt;/p&gt;
+&lt;h1 id=&quot;用于添加图表的数据和设置各种配置项&quot;&gt;用于添加图表的数据和设置各种配置项&lt;/h1&gt;
+&lt;h1 id=&quot;is_more_utirltrue-可以按右边的下载按钮将图片下载到本地&quot;&gt;is_more_utirl=True 可以按右边的下载按钮将图片下载到本地&lt;/h1&gt;
+&lt;p&gt;bur.add(“成绩表”, [“语文”, “数学”, “英语”, “物理”, “化学”, “生物”], [88, 90, 92, 87, 83, 81],)&lt;/p&gt;
+
+&lt;p&gt;bur.add(“成绩表”, [“语文”, “数学”, “英语”, “物理”, “化学”, “生物”], [88, 90, 92, 87, 83, 81],is_more_util=True)
+bar.show_config()    # 打印输出图表的所有配置项
+bar.render(‘D:\pye\bar.html’)         # 在指定目录下生成一个 bar.html 的文件&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 饼图
+```C
+from pyecharts import Pie
+
+
+attr = [&quot;语文&quot;, &quot;数学&quot;, &quot;英语&quot;, &quot;物理&quot;, &quot;化学&quot;, &quot;生物&quot;]
+score = [20, 30, 40, 25, 10, 15]
+pie = Pie('图书销量饼图')
+pibel_show=True)
+pie.render('F:\pye\pie.html')e.add('', attr, score,)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;圆环图
+```C
+from pyecharts import Pie&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;attr = [“语文”, “数学”, “英语”, “物理”, “化学”, “生物”]
+score = [20, 30, 40, 25, 10, 15]
+pie = Pie(‘图书销量圆环图’, title_pos=’center’)
+pibel_show=True,
+        legend_orient=’vertical’, legend_pos=’left’)
+        pie.render(‘F:\pye\pieround.html’)   # 在指定目录下生成文件e.add(‘’, attr, score, radius=[40, 75], label_text_color=None,)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 3D散图
+```C
+from pyecharts import Scatter3D
+from pyecharts import Page
+import random
+
+plmap=True, visual_range_color=range_color)
+page.add(scatter3D)
+page.render('D:\pye\scatter.html')    # 在指定目录下生成文件age = page()
+data = [[random.randint(0, 100), random.randint(0, 100), random.randint(0, 100)] for _ in range(80)]
+range_color = ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf',
+               '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+               scatter3d = scatter3d(&quot;3d 散点图示例&quot;, width=1200, height=600)
+               scatter3d.add(&quot;&quot;, data,)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;3D折线图
+```C
+from pyecharts import Line3D&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;dlmap=True)
+Line3D.render(‘F:\pye\3D折线图.html’)    # 在指定目录下生成文件ata = [[1, 2, 3, 4], [1, 2, 3, 4], [0, 4, 8, 16]]
+line3d = line3d(“3d 折线图示例”, width=1200, height=600)
+line3d.add(“”, data,)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 仪表盘
+```C
+from pyecharts import Gauge
+
+gauge = Gauge('项目完成进度')
+gauge.add('进度表', '完成率', 88.88)
+gauge.render('F:\pye\gauge.html')    # 在指定目录下生成文件
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;漏斗图
+```C
+from pyecharts import Funnel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;attr = [‘认知’, ‘了解’, ‘认可’, ‘考虑’, ‘意向’, ‘购买’]
+value = [120, 100, 80, 60, 40, 20]
+funnel = Funnel(‘客户购买分析图’)
+fubel_show=True, label_pos=’inside’, label_text_color=’#fff’)
+funnel.render(‘F:\pye\funel.html’)    # 在指定目录下生成文件nnel.add(‘买车’, attr, value,)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 地图
+```C
+from pyecharts import Geo
+
+decewise=True, visual_split_number=6)
+geo.render('F:\pye\geo.html')    # 在指定目录下生成文件lmap=True,ata = [
+    (&quot;上海&quot;, 25), (&quot;北京&quot;, 36), (&quot;武汉&quot;, 23), (&quot;舟山&quot;, 12), (&quot;齐齐哈尔&quot;, 14), (&quot;盐城&quot;, 15),
+        (&quot;赤峰&quot;, 16), (&quot;青岛&quot;, 18), (&quot;乳山&quot;, 18), (&quot;金昌&quot;, 19), (&quot;泉州&quot;, 21), (&quot;莱西&quot;, 21),
+            (&quot;日照&quot;, 21), (&quot;胶南&quot;, 22), (&quot;南通&quot;, 23), (&quot;拉萨&quot;, 24), (&quot;云浮&quot;, 24), (&quot;梅州&quot;, 25)
+]
+geo = geo('主要城市空气质量', 'pm2.5', title_color='#fff', title_pos='center',
+          width=1200, height=600, background_color='#404a59')
+attr, value = geo.cast(data)
+geo.add('', attr, value, visual_range=[0, 200], visual_text_color='#fff', symbol_size=15,
+       )
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;词云图
+```C
+from pyecharts import WordCloud&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;language = [‘Python’, ‘C++’, ‘C’, ‘Java’, ‘C#’, ‘PHP’, ‘R’, ‘JavaScript’, ‘Go’, ‘Assembly’]
+rank = [100, 98.4, 98.2, 97.5, 89.8, 85.4, 83.3, 82.8, 76.7, 74.5]
+wordcloud = WordCloud(width=1500, height=700)
+wordcloud.add(‘’, language, rank, word_size_range=[20, 100])
+wordcloud.render(‘F:\pye\wc.html’)    # 在指定目录下生成文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 水球图
+```C
+from pyecharts import Liquid
+
+liquid = Liquid(&quot;水球图&quot;)
+liquid.add(&quot;Liquid&quot;, [0.8])
+liquid.show_config()
+liquid.render('F:\pye\sq.html')    # 在指定目录下生成文件
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://pyecharts.org&quot;&gt;http://pyecharts.org&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>/linux/2018/07/14/inode</link>
-                <guid>/linux/2018/07/14/inode</guid>
-                <pubDate>Sat, 14 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/python/2019/01/15/python-libs</link>
+                <guid>/python/2019/01/15/python-libs</guid>
+                <pubDate>Tue, 15 Jan 2019 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>hadoop 疑难杂症</title>
-                <description>&lt;p&gt;收集hadoop中的碰到过的疑难杂症&lt;/p&gt;
+                <title>Java libs整理</title>
+                <description>&lt;p&gt;对于使用中的Java libs整理&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;yarn&quot;&gt;yarn&lt;/h2&gt;
+&lt;h2 id=&quot;fastjson&quot;&gt;fastjson&lt;/h2&gt;
+
+&lt;p&gt;maven:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt;
+     &amp;lt;artifactId&amp;gt;fastjson&amp;lt;/artifactId&amp;gt;
+     &amp;lt;version&amp;gt;1.2.54&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/alibaba/fastjson&quot;&gt;https://github.com/alibaba/fastjson&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/java/2019/01/15/java-libs</link>
+                <guid>/java/2019/01/15/java-libs</guid>
+                <pubDate>Tue, 15 Jan 2019 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Kafka命令大全</title>
+                <description>&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;单节点&quot;&gt;单节点&lt;/h2&gt;
+
+&lt;h2&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-3&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-4&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-5&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-6&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-7&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-8&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-9&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-10&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-11&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-12&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-13&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-14&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-15&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-16&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-17&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-18&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-19&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-20&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-21&quot;&gt;#&lt;/h2&gt;
+
+&lt;h2 id=&quot;分布式集群&quot;&gt;分布式集群&lt;/h2&gt;
+
+&lt;p&gt;启动zk,kakfa集群,三个节点&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;netstat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ntlp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9092&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;netstat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ntlp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;验证是否启动成功&lt;/p&gt;
+
+&lt;h3 id=&quot;创建topic&quot;&gt;创建topic&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#$KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper master:2181,slave1:2181,slave2:2181 --replication-factor 3 --partitions 6 --topic test
+#$KAFKA_HOME/bin/kafka-topics.sh --describe  --zookeeper master:2181,slave1:2181,slave2:2181  --topic test
+&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;Topic:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;PartitionCount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;ReplicationFactor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Configs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;Topic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Leader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Replicas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;Isr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Partition:&lt;/p&gt;
+
+&lt;p&gt;Leader:&lt;/p&gt;
+
+&lt;p&gt;Replicas:&lt;/p&gt;
+
+&lt;p&gt;Isr:&lt;/p&gt;
+
+&lt;p&gt;###得到topic的offset&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;/opt/nsfocus/espc/deps/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic topic_name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;动态增加分区&quot;&gt;动态增加分区&lt;/h3&gt;
+
+&lt;p&gt;Kafka提供了kafka-reassign-partitions.sh这个脚本，可以动态扩容,运行时需要指定一个json文件:&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;partitions&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;topic&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;partition&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;replicas&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;topic&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;partition&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;replicas&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;topic&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;partition&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;replicas&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},.....&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;生成这个文件，对于所有的topic，也可以自己指定,首先列出当前的的 topic&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KAFKA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kafka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KAFKA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kafka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;topics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;topics&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;除了&lt;code class=&quot;highlighter-rouge&quot;&gt;__consumer_offsets&lt;/code&gt;,这是一个特殊的topic，记录着所有topic的offset,默认是三个副本，分区通过配置得到和基本的topic的分区是一样的,通过py脚本读取topics的内容，就可以生成上面的json文件&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt;:Kafka Producer能否&lt;code class=&quot;highlighter-rouge&quot;&gt;动态感知&lt;/code&gt;Topic分区的变化,当然是可以的啦,经过的时间间隔就是&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300000&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;决定的,默认是5分钟 Kafka.2.10-0.10.2.1配置参数&lt;a href=&quot;http://kafka.apache.org/0102/documentation.html#producerconfigs&quot;&gt;http://kafka.apache.org/0102/documentation.html#producerconfigs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.iteblog.com/archives/1618.html&quot;&gt;https://www.iteblog.com/archives/1618.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;动态增加副本&quot;&gt;动态增加副本&lt;/h3&gt;
+
+&lt;h2 id=&quot;-22&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-23&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-24&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-25&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-26&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-27&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-28&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-29&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-30&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-31&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-32&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-33&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-34&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-35&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-36&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-37&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-38&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-39&quot;&gt;#&lt;/h2&gt;
+</description>
+                <link>/kafka/2019/01/03/kafka-cmd</link>
+                <guid>/kafka/2019/01/03/kafka-cmd</guid>
+                <pubDate>Thu, 03 Jan 2019 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Greenplum集群搭建</title>
+                <description>&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;#&lt;/h1&gt;
+&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-3&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-4&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-5&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-6&quot;&gt;#&lt;/h2&gt;
+&lt;h1 id=&quot;-7&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-8&quot;&gt;#&lt;/h1&gt;
+&lt;h1 id=&quot;-9&quot;&gt;#&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/tetta/p/6043691.html&quot;&gt;https://www.cnblogs.com/tetta/p/6043691.html&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/database/2018/12/17/Greenplum</link>
+                <guid>/database/2018/12/17/Greenplum</guid>
+                <pubDate>Mon, 17 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Kylin 参数配置大全</title>
+                <description>&lt;p&gt;记录Kylin的配置参数，可以好的优化程序，保证稳定性。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kylin.apache.org/cn/docs/install/configuration.html#spark-config-override&quot;&gt;http://kylin.apache.org/cn/docs/install/configuration.html#spark-config-override&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/kylin/2018/12/14/kylin-config</link>
+                <guid>/kylin/2018/12/14/kylin-config</guid>
+                <pubDate>Fri, 14 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Spark 配置参数大全</title>
+                <description>&lt;p&gt;使用Spark过程，对使用的到参数进行收集，便于优化.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;spark16&quot;&gt;Spark1.6&lt;/h2&gt;
+&lt;h2&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
+
+&lt;h2 id=&quot;spark2&quot;&gt;Spark2&lt;/h2&gt;
+&lt;h2 id=&quot;-3&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-4&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-5&quot;&gt;#&lt;/h2&gt;
+</description>
+                <link>/spark/2018/12/13/spark-config</link>
+                <guid>/spark/2018/12/13/spark-config</guid>
+                <pubDate>Thu, 13 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Hive 参数配置大全</title>
+                <description>&lt;p&gt;使用Hive的过程，收集相互配置参数，便于优化&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;hive1&quot;&gt;hive1&lt;/h2&gt;
+
+&lt;h3 id=&quot;hive-sitexml&quot;&gt;hive-site.xml&lt;/h3&gt;
+
+&lt;p&gt;hive.exec.mode.local.auto
+决定 Hive 是否应该自动地根据输入文件大小，在本地运行（在GateWay运行）
+true&lt;/p&gt;
+
+&lt;p&gt;hive.exec.mode.local.auto.inputbytes.max
+如果 hive.exec.mode.local.auto 为 true，当输入文件大小小于此阈值时可以自动在本地模式运行，默认是 128兆。
+134217728L&lt;/p&gt;
+
+&lt;p&gt;hive.exec.mode.local.auto.tasks.max
+如果 hive.exec.mode.local.auto 为 true，当 Hive Tasks（Hadoop Jobs）小于此阈值时，可以自动在本地模式运行。
+4&lt;/p&gt;
+
+&lt;p&gt;hive.auto.convert.join
+是否根据输入小表的大小，自动将 Reduce 端的 Common Join 转化为 Map Join，从而加快大表关联小表的 Join 速度。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.mapred.local.mem
+Mapper/Reducer 在本地模式的最大内存量，以字节为单位，0为不限制。
+0&lt;/p&gt;
+
+&lt;p&gt;mapred.reduce.tasks
+所提交 Job 的 reduer 的个数，使用 Hadoop Client 的配置。
+默认是-1，表示Job执行的个数交由Hive来分配
+-1&lt;/p&gt;
+
+&lt;p&gt;hive.exec.scratchdir
+HDFS路径，用于存储不同 map/reduce 阶段的执行计划和这些阶段的中间输出结果。
+/tmp/&lt;user.name&gt;/hive&lt;/user.name&gt;&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.warehouse.dir
+Hive 默认的数据文件存储路径，通常为 HDFS 可写的路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.groupby.skewindata
+决定 group by 操作是否支持倾斜的数据。
+原理是，在Group by中，对一些比较小的分区进行合并
+false&lt;/p&gt;
+
+&lt;p&gt;hive.merge.mapfiles
+是否开启合并 Map 端小文件，对于 Hadoop 0.20 以前的版本，起一首新的 Map/Reduce Job，对于 0.20 以后的版本，则是起使用 CombineInputFormat 的 MapOnly Job。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.merge.mapredfiles
+是否开启合并 Map/Reduce 小文件，对于 Hadoop 0.20 以前的版本，起一首新的 Map/Reduce Job，对于 0.20 以后的版本，则是起使用 CombineInputFormat 的 MapOnly Job。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.default.fileformat
+Hive 默认的输出文件格式，与创建表时所指定的相同，可选项为 ‘TextFile’ 、 ‘SequenceFile’ 或者 ‘RCFile’。
+‘TextFile’&lt;/p&gt;
+
+&lt;p&gt;hive.mapred.mode
+Map/Redure 模式，如果设置为 strict，将不允许笛卡尔积。
+‘nonstrict’&lt;/p&gt;
+
+&lt;p&gt;hive.exec.parallel
+是否开启 map/reduce job的并发提交。
+默认Map/Reduce job是顺序执行的，默认并发数量是8，可以配置
+false&lt;/p&gt;
+
+&lt;p&gt;hive.security.authorization.enabled
+Hive 是否开启权限认证。
+开启认证后，需要执行授权语句才能对表进行操作，详细请见hive.apache.org
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.plan
+Hive 执行计划的路径，会在程序中自动进行设置
+null&lt;/p&gt;
+
+&lt;p&gt;hive.exec.submitviachild
+决定 map/reduce Job 是否应该使用各自独立的 JVM 进行提交（Child进程），默认情况下，使用与 HQL compiler 相同的 JVM 进行提交。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.script.maxerrsize
+通过 TRANSFROM/MAP/REDUCE 所执行的用户脚本所允许的最大的序列化错误数。
+100000&lt;/p&gt;
+
+&lt;p&gt;hive.exec.script.allow.partial.consumption
+是否允许脚本只处理部分数据，如果设置为 true ，因broken pipe等造成的数据未处理完成将视为正常。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.compress.output
+决定查询中最后一个 map/reduce job 的输出是否为压缩格式。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.compress.intermediate
+决定查询的中间 map/reduce job（中间 stage）的输出是否为压缩格式。
+对于只进行Map的数据就没有必要了。压缩可以减少网络IO，提高效率。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.intermediate.compression.codec
+中间 map/reduce job 的压缩编解码器的类名（一个压缩编解码器可能包含多种压缩类型），该值可能在程序中被自动设置。 LZO&lt;/p&gt;
+
+&lt;p&gt;hive.intermediate.compression.type
+中间 map/reduce job 的压缩类型，如 “BLOCK” “RECORD”。&lt;/p&gt;
+
+&lt;p&gt;hive.exec.reducers.bytes.per.reducer
+每一个 reducer 的平均负载字节数。
+改变此参数可以用来影响hive的启动的Reducer的个数，默认每个Reducer处理1G数据
+1000000000&lt;/p&gt;
+
+&lt;p&gt;hive.exec.reducers.max
+reducer 个数的上限。
+999&lt;/p&gt;
+
+&lt;p&gt;hive.exec.pre.hooks
+语句层面，整条 HQL 语句在执行前的 hook 类名。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.exec.post.hooks
+语句层面，整条 HQL 语句在执行完成后的 hook 类名。&lt;/p&gt;
+
+&lt;p&gt;hive.exec.parallel.thread.number
+并发提交时的并发线程的个数。 默认8个
+8&lt;/p&gt;
+
+&lt;p&gt;hive.mapred.reduce.tasks.speculative.execution
+是否开启 reducer 的推测执行，与 mapred.reduce.tasks.speculative.execution 作用相同。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.counters.pull.interval
+客户端拉取 progress counters 的时间，以毫秒为单位。
+1000L&lt;/p&gt;
+
+&lt;p&gt;hive.exec.dynamic.partition
+是否打开动态分区。 需要打开
+false&lt;/p&gt;
+
+&lt;p&gt;hive.exec.dynamic.partition.mode
+打开动态分区后，动态分区的模式，有 strict 和 nonstrict 两个值可选，strict 要求至少包含一个静态分区列，nonstrict 则无此要求。
+建议设置成nonstrict，strict情况下，查询表数据要求强制指定分区。
+strict&lt;/p&gt;
+
+&lt;p&gt;hive.exec.max.dynamic.partitions
+所允许的最大的动态分区的个数。可以手动增加分区。
+1000&lt;/p&gt;
+
+&lt;p&gt;hive.exec.max.dynamic.partitions.pernode
+单个 reduce 结点所允许的最大的动态分区的个数。
+100&lt;/p&gt;
+
+&lt;p&gt;hive.exec.default.partition.name
+默认的动态分区的名称，当动态分区列为’‘或者null时，使用此名称。’’
+‘&lt;strong&gt;HIVE_DEFAULT_PARTITION&lt;/strong&gt;’&lt;/p&gt;
+
+&lt;p&gt;hadoop.bin.path
+Hadoop Client 可执行脚本的路径，该路径用于通过单独的 JVM 提交 job，使用 Hadoop Client 的配置。
+$HADOOP_HOME/bin/hadoop&lt;/p&gt;
+
+&lt;p&gt;hadoop.config.dir
+Hadoop Client 配置文件的路径，使用 Hadoop Client 的配置。
+$HADOOP_HOME/conf&lt;/p&gt;
+
+&lt;p&gt;fs.default.name
+Namenode 的 URL，使用 Hadoop Client 的配置。
+file:///&lt;/p&gt;
+
+&lt;p&gt;map.input.file
+Map 的输入文件，使用 Hadoop Client 的配置。
+null&lt;/p&gt;
+
+&lt;p&gt;mapred.input.dir
+Map 的输入目录，使用 Hadoop Client 的配置。
+null&lt;/p&gt;
+
+&lt;p&gt;mapred.input.dir.recursive
+输入目录是否可递归嵌套，使用 Hadoop Client 的配置。
+false&lt;/p&gt;
+
+&lt;p&gt;mapred.job.tracker
+Job Tracker 的 URL，使用 Hadoop Client 的配置，如果这个配置设置为 ‘local’，将使用本地模式。
+local&lt;/p&gt;
+
+&lt;p&gt;mapred.job.name
+Map/Reduce 的 job 名称，如果没有设置，则使用生成的 job name，使用 Hadoop Client 的配置。
+null&lt;/p&gt;
+
+&lt;p&gt;mapred.reduce.tasks.speculative.execution
+Map/Reduce 推测执行，使用 Hadoop Client 的配置。
+null&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.metadb.dir
+Hive 元数据库所在路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.uris
+Hive 元数据的 URI，多个 thrift://地址，以英文逗号分隔。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.connect.retries
+连接到 Thrift 元数据服务的最大重试次数。
+3&lt;/p&gt;
+
+&lt;p&gt;javax.jdo.option.ConnectionPassword
+JDO 的连接密码。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.ds.connection.url.hook
+JDO 连接 URL Hook 的类名，该 Hook 用于获得 JDO 元数据库的连接字符串，为实现了 JDOConnectionURLHook 接口的类。
+“&lt;/p&gt;
+
+&lt;p&gt;javax.jdo.option.ConnectionURL
+元数据库的连接 URL。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.ds.retry.attempts
+当没有 JDO 数据连接错误后，尝试连接后台数据存储的最大次数。
+1&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.ds.retry.interval
+每次尝试连接后台数据存储的时间间隔，以毫秒为单位。
+1000&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.force.reload.conf
+是否强制重新加载元数据配置，一但重新加载，该值就会被重置为 false。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.server.min.threads
+Thrift 服务线程池的最小线程数。
+8&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.server.max.threads
+Thrift 服务线程池的最大线程数。
+0x7fffffff&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.server.tcp.keepalive
+Thrift 服务是否保持 TCP 连接。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.archive.intermediate.original
+用于归档压缩的原始中间目录的后缀，这些目录是什么并不重要，只要能够避免冲突即可。
+‘_INTERMEDIATE_ORIGINAL’&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.archive.intermediate.archived
+用于归档压缩的压缩后的中间目录的后缀，这些目录是什么并不重要，只要能够避免冲突即可。
+‘_INTERMEDIATE_ARCHIVED’&lt;/p&gt;
+
+&lt;p&gt;hive.metastore.archive.intermediate.extracted
+用于归档压缩的解压后的中间目录的后缀，这些目录是什么并不重要，只要能够避免冲突即可。
+‘_INTERMEDIATE_EXTRACTED’&lt;/p&gt;
+
+&lt;p&gt;hive.cli.errors.ignore
+是否忽略错误，对于包含多的 SQL 文件，可以忽略错误的行，继续执行下一行。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.session.id
+当前会话的标识符，格式为“用户名_时间”用于记录在 job conf 中，一般不予以手动设置。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.session.silent
+当前会话是否在 silent 模式运行。 如果不是 silent 模式，所以 info 级打在日志中的消息，都将以标准错误流的形式输出到控制台。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.query.string
+当前正在被执行的查询字符串。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.query.id
+当前正在被执行的查询的ID。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.query.planid
+当前正在被执行的 map/reduce plan 的 ID。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.jobname.length
+当前 job name 的最大长度，hive 会根据此长度省略 job name 的中间部分。
+50&lt;/p&gt;
+
+&lt;p&gt;hive.jar.path
+通过单独的 JVM 提交 job 时，hive_cli.jar 所在的路径
+“&lt;/p&gt;
+
+&lt;p&gt;hive.aux.jars.path
+各种由用户自定义 UDF 和 SerDe 构成的插件 jar 包所在的路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.added.files.path
+ADD FILE 所增加的文件的路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.added.jars.path
+ADD JAR 所增加的文件的路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.added.archives.path
+ADD ARCHIEVE 所增加的文件的路径。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.table.name
+当前的 Hive 表的名称，该配置将通过 ScirptOperator 传入到用户脚本中。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.partition.name
+当前的 Hive 分区的名称，该配置将通过 ScriptOperator 传入到用户脚本中。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.script.auto.progress
+脚本是否周期性地向 Job Tracker 发送心跳，以避免脚本执行的时间过长，使 Job Tracker 认为脚本已经挂掉了。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.script.operator.id.env.var
+用于识别 ScriptOperator ID 的环境变量的名称。
+‘HIVE_SCRIPT_OPERATOR_ID’&lt;/p&gt;
+
+&lt;p&gt;hive.alias
+当前的 Hive 别名，该配置将通过 ScriptOpertaor 传入到用户脚本中。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.map.aggr
+决定是否可以在 Map 端进行聚合操作
+true&lt;/p&gt;
+
+&lt;p&gt;hive.join.emit.interval
+Hive Join 操作的发射时间间隔，以毫秒为单位。
+1000&lt;/p&gt;
+
+&lt;p&gt;hive.join.cache.size
+Hive Join 操作的缓存大小，以字节为单位。
+25000&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.bucket.cache.size
+Hive Map Join 桶的缓存大小，以字节为单位。
+100&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.size.key
+Hive Map Join 每一行键的大小，以字节为单位。
+10000&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.cache.numrows
+Hive Map Join 所缓存的行数。
+25000&lt;/p&gt;
+
+&lt;p&gt;hive.groupby.mapaggr.checkinterval
+对于 Group By 操作的 Map 聚合的检测时间，以毫秒为单位。
+100000&lt;/p&gt;
+
+&lt;p&gt;hive.map.aggr.hash.percentmemory
+Hive Map 端聚合的哈稀存储所占用虚拟机的内存比例。
+0.5&lt;/p&gt;
+
+&lt;p&gt;hive.map.aggr.hash.min.reduction
+Hive Map 端聚合的哈稀存储的最小 reduce 比例。
+0.5&lt;/p&gt;
+
+&lt;p&gt;hive.udtf.auto.progress
+Hive UDTF 是否周期性地报告心跳，当 UDTF 执行时间较长且不输出行时有用。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.fileformat.check
+Hive 是否检查输出的文件格式。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.querylog.location
+Hive 实时查询日志所在的目录，如果该值为空，将不创建实时的查询日志。
+‘/tmp/$USER’&lt;/p&gt;
+
+&lt;p&gt;hive.script.serde
+Hive 用户脚本的 SerDe。
+‘org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe’&lt;/p&gt;
+
+&lt;p&gt;hive.script.recordreader
+Hive 用户脚本的 RecordRedaer。
+‘org.apache.hadoop.hive.ql.exec.TextRecordReader’&lt;/p&gt;
+
+&lt;p&gt;hive.script.recordwriter
+Hive 用户脚本的 RecordWriter。
+‘org.apache.hadoop.hive.ql.exec.TextRecordWriter’&lt;/p&gt;
+
+&lt;p&gt;hive.hwi.listen.host
+HWI 所绑定的 HOST 或者 IP。
+‘0.0.0.0’&lt;/p&gt;
+
+&lt;p&gt;hive.hwi.listen.port
+HWI 所监听的 HTTP 端口。
+9999&lt;/p&gt;
+
+&lt;p&gt;hive.hwi.war.file
+HWI 的 war 文件所在的路径。
+$HWI_WAR_FILE&lt;/p&gt;
+
+&lt;p&gt;hive.test.mode
+是否以测试模式运行 Hive
+false&lt;/p&gt;
+
+&lt;p&gt;hive.test.mode.prefix
+Hive 测试模式的前缀。
+‘test_’&lt;/p&gt;
+
+&lt;p&gt;hive.test.mode.samplefreq
+Hive 测试模式取样的频率，即每秒钟取样的次数。
+32&lt;/p&gt;
+
+&lt;p&gt;hive.test.mode.nosamplelist
+Hive 测试模式取样的排除列表，以逗号分隔。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.merge.size.per.task
+每个任务合并后文件的大小，根据此大小确定 reducer 的个数，默认 256 M。
+256000000&lt;/p&gt;
+
+&lt;p&gt;hive.merge.smallfiles.avgsize
+需要合并的小文件群的平均大小，默认 16 M。
+16000000&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.skewjoin
+是否优化数据倾斜的 Join，对于倾斜的 Join 会开启新的 Map/Reduce Job 处理。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.skewjoin.key
+倾斜键数目阈值，超过此值则判定为一个倾斜的 Join 查询。
+1000000&lt;/p&gt;
+
+&lt;p&gt;hive.skewjoin.mapjoin.map.tasks
+处理数据倾斜的 Map Join 的 Map 数上限。
+10000&lt;/p&gt;
+
+&lt;p&gt;hive.skewjoin.mapjoin.min.split
+处理数据倾斜的 Map Join 的最小数据切分大小，以字节为单位，默认为32M。
+33554432&lt;/p&gt;
+
+&lt;p&gt;mapred.min.split.size
+Map Reduce Job 的最小输入切分大小，与 Hadoop Client 使用相同的配置。
+1&lt;/p&gt;
+
+&lt;p&gt;hive.mergejob.maponly
+是否启用 Map Only 的合并 Job。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.heartbeat.interval
+Hive Job 的心跳间隔，以毫秒为单位。
+1000&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.maxsize
+Map Join 所处理的最大的行数。超过此行数，Map Join进程会异常退出。
+1000000&lt;/p&gt;
+
+&lt;p&gt;hive.hashtable.initialCapacity
+Hive 的 Map Join 会将小表 dump 到一个内存的 HashTable 中，该 HashTable 的初始大小由此参数指定。
+100000&lt;/p&gt;
+
+&lt;p&gt;hive.hashtable.loadfactor
+Hive 的 Map Join 会将小表 dump 到一个内存的 HashTable 中，该 HashTable 的负载因子由此参数指定。
+0.75&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.followby.gby.localtask.max.memory.usage
+MapJoinOperator后面跟随GroupByOperator时，内存的最大使用比例
+0.55&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.localtask.max.memory.usage
+Map Join 的本地任务使用堆内存的最大比例
+0.9&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.localtask.timeout
+Map Join 本地任务超时，淘宝版特有特性
+600000&lt;/p&gt;
+
+&lt;p&gt;hive.mapjoin.check.memory.rows
+设置每多少行检测一次内存的大小，如果超过 hive.mapjoin.localtask.max.memory.usage 则会异常退出，Map Join 失败。
+100000&lt;/p&gt;
+
+&lt;p&gt;hive.debug.localtask
+是否调试本地任务，目前该参数没有生效
+false&lt;/p&gt;
+
+&lt;p&gt;hive.task.progress
+是否开启 counters ，以记录 Job 执行的进度，同时客户端也会拉取进度 counters。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.input.format
+Hive 的输入 InputFormat。
+默认是org.apache.hadoop.hive.ql.io.HiveInputFormat，其他还有org.apache.hadoop.hive.ql.io.CombineHiveInputFormat&lt;/p&gt;
+
+&lt;p&gt;hive.enforce.bucketing
+是否启用强制 bucketing。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.enforce.sorting
+是否启用强制排序。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.mapred.partitioner
+Hive 的 Partitioner 类。
+‘org.apache.hadoop.hive.ql.io.DefaultHivePartitioner’&lt;/p&gt;
+
+&lt;p&gt;hive.exec.script.trust
+Hive Script Operator For trust
+false&lt;/p&gt;
+
+&lt;p&gt;hive.hadoop.supports.splittable.combineinputformat
+是否支持可切分的 CombieInputFormat
+false&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.cp
+是否优化列剪枝。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.ppd
+是否优化谓词下推。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.groupby
+是否优化 group by。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.bucketmapjoin
+是否优化 bucket map join。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.bucketmapjoin.sortedmerge
+是否在优化 bucket map join 时尝试使用强制 sorted merge bucket map join。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.optimize.reducededuplication
+是否优化 reduce 冗余。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.hbase.wal.enabled
+是否开启 HBase Storage Handler。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.archive.enabled
+是否启用 har 文件。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.archive.har.parentdir.settable
+是否启用 har 文件的父目录可设置。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.outerjoin.supports.filters
+是否启动外联接支持过滤条件。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.fetch.output.serde
+对于 Fetch Task 的 SerDe 类
+‘org.apache.hadoop.hive.serde2.DelimitedJSONSerDe’&lt;/p&gt;
+
+&lt;p&gt;hive.semantic.analyzer.hook
+Hive 语义分析的 Hook，在语义分析阶段的前后被调用，用于分析和修改AST及生成的执行计划，以逗号分隔。
+null&lt;/p&gt;
+
+&lt;p&gt;hive.cli.print.header
+是否显示查询结果的列名，默认为不显示。
+false&lt;/p&gt;
+
+&lt;p&gt;hive.cli.encoding
+Hive 默认的命令行字符编码。
+‘UTF8’&lt;/p&gt;
+
+&lt;p&gt;hive.log.plan.progress
+是否记录执行计划的进度。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.pull.progress.counters
+是否从 Job Tracker 上拉取 counters，淘宝特有配置项。
+true&lt;/p&gt;
+
+&lt;p&gt;hive.job.pre.hooks
+每个 Job 提交前执行的 Hooks 列表，以逗号分隔，淘宝特有配置项。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.job.post.hooks
+每个 Job 完成后执行的 Hooks 列表，以逗号分隔，淘宝特有配置项。
+“&lt;/p&gt;
+
+&lt;p&gt;hive.max.progress.counters
+Hive 最大的进度 couters 个数，淘宝特有配置项。
+100&lt;/p&gt;
+
+&lt;p&gt;hive.exec.script.wrapper
+Script Operator 脚本调用的封装，通常为脚本解释程序。例如，可以把该变量值的名称设置为”python”，那么传递到 Script Operator 的脚本将会以”python &amp;lt;script command&amp;gt;“的命令形式进行调用，如果这个值为null或者没有设置，那么该脚本将会直接以”&amp;lt;script command&amp;gt;“的命令形式调用。
+null&lt;/p&gt;
+
+&lt;p&gt;hive.check.fatal.errors.interval
+客户端通过拉取 counters 检查严重错误的周期，以毫秒为单位，淘宝特有配置项。
+5000L&lt;/p&gt;
+
+&lt;h2 id=&quot;hive2&quot;&gt;hive2&lt;/h2&gt;
+&lt;h3 id=&quot;hive-sitexml-1&quot;&gt;hive-site.xml&lt;/h3&gt;
+</description>
+                <link>/hive/2018/12/13/hive-config</link>
+                <guid>/hive/2018/12/13/hive-config</guid>
+                <pubDate>Thu, 13 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Hbase 参数配置大全</title>
+                <description>&lt;p&gt;使用Hbase过程中使用的参数，进行收集，便于后续优化&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;hbase1&quot;&gt;Hbase1&lt;/h2&gt;
+
+&lt;h3 id=&quot;hbase-sitexml&quot;&gt;hbase-site.xml&lt;/h3&gt;
+&lt;h2&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-1&quot;&gt;#&lt;/h2&gt;
+
+&lt;h3 id=&quot;problem&quot;&gt;problem&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;I’ve got a number of Samza jobs that I want to run. I can get the first to run ok. However, the second job seems to sit at the ACCEPTED state and never transitions into the RUNNING state until I kill the first job.&lt;/li&gt;
+  &lt;li&gt;ERROR:org.apache.hadoop.hbase.PleaseHoldException: Master initializing
+ 1.ntp
+ 2.config 必须是域名
+ 3.防火墙&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;solution&lt;/strong&gt;:
-  I changed the value of yarn.scheduler.capacity.maximum-am-resource-percent within capacity-scheduler.xml to be &lt;code class=&quot;highlighter-rouge&quot;&gt;more than the default of 0.1.&lt;/code&gt; the &lt;a href=&quot;https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/CapacityScheduler.html&quot;&gt;document&lt;/a&gt; for more help&lt;/p&gt;
+&lt;h2 id=&quot;hbase2&quot;&gt;Hbase2&lt;/h2&gt;
+&lt;h3 id=&quot;hbase-sitexml-1&quot;&gt;hbase-site.xml&lt;/h3&gt;
+&lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
+&lt;h2 id=&quot;-3&quot;&gt;#&lt;/h2&gt;
+</description>
+                <link>/hbase/2018/12/13/hbase-config</link>
+                <guid>/hbase/2018/12/13/hbase-config</guid>
+                <pubDate>Thu, 13 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
 
-&lt;ul&gt;
-  &lt;li&gt;Why does Hadoop report &lt;code class=&quot;highlighter-rouge&quot;&gt;Unhealthy Node local-dirs and log-dirs are bad&lt;/code&gt;?,On visiting http://localhost:8088/cluster, I find that my nodsted as an “unhealthy node”.&lt;/li&gt;
+        <item>
+                <title>Hadoop 配置参数大全</title>
+                <description>&lt;p&gt;使用Haddoop过程，收集配置参数，便于优化集群。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;hadoop27&quot;&gt;Hadoop2.7&lt;/h2&gt;
+&lt;h3 id=&quot;hadoop-envsh&quot;&gt;hadoop-env.sh&lt;/h3&gt;
+
+&lt;h3 id=&quot;core-sitexml&quot;&gt;core-site.xml&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hadoop.apache.org/docs/r2.7.3/hadoop-project-dist/hadoop-common/core-default.xml&quot;&gt;https://hadoop.apache.org/docs/r2.7.3/hadoop-project-dist/hadoop-common/core-default.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hdfs-sitexml&quot;&gt;hdfs-site.xml&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hadoop.apache.org/docs/r2.7.3/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml&quot;&gt;https://hadoop.apache.org/docs/r2.7.3/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mapred-sitexml&quot;&gt;mapred-site.xml&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml&quot;&gt;https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;yarn-sitexml&quot;&gt;yarn-site.xml&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hadoop.apache.org/docs/r2.7.3/hadoop-yarn/hadoop-yarn-common/yarn-default.xml&quot;&gt;https://hadoop.apache.org/docs/r2.7.3/hadoop-yarn/hadoop-yarn-common/yarn-default.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hadoop3&quot;&gt;Hadoop3&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hadoop.apache.org/docs&quot;&gt;https://hadoop.apache.org/docs&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>/hadoop/2018/12/13/hadoop-config</link>
+                <guid>/hadoop/2018/12/13/hadoop-config</guid>
+                <pubDate>Thu, 13 Dec 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>搭建监控平台</title>
+                <description>&lt;p&gt;对应硬件和软件的基本信息进行监控，并实时观察情况&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;采集信息&quot;&gt;采集信息&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://collectd.org/documentation.shtml&quot;&gt;collectd&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;存储信息&quot;&gt;存储信息&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;influxdb&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;可视化展示&quot;&gt;可视化展示&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;h3 id=&quot;监控cpu-mem-disk&quot;&gt;监控cpu mem disk&lt;/h3&gt;
+
+&lt;h3 id=&quot;监控java进程&quot;&gt;监控java进程&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/Kylinlin/performance_monitor&lt;/p&gt;
+
+&lt;p&gt;https://www.slothparadise.com/how-to-install-ganglia-on-centos-7/&lt;/p&gt;
+
+&lt;p&gt;http://crazyadmins.com/tag/ganglia-installation-in-centos/
+https://www.tecmint.com/install-configure-ganglia-monitoring-centos-linux/
+https://blog.csdn.net/lswnew/article/details/79175539&lt;/p&gt;
+</description>
+                <link>/monitor/2018/11/30/monitor</link>
+                <guid>/monitor/2018/11/30/monitor</guid>
+                <pubDate>Fri, 30 Nov 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>搭建分布式大数据平台</title>
+                <description>&lt;ul&gt;
+  &lt;li&gt;Hadoop&lt;/li&gt;
+  &lt;li&gt;Hive&lt;/li&gt;
+  &lt;li&gt;Spark&lt;/li&gt;
+  &lt;li&gt;Zookeeper&lt;/li&gt;
+  &lt;li&gt;Kafka&lt;/li&gt;
+  &lt;li&gt;Hbase&lt;/li&gt;
+  &lt;li&gt;Elasticsearch&lt;/li&gt;
+  &lt;li&gt;Flink&lt;/li&gt;
+  &lt;li&gt;Kylin&lt;/li&gt;
+  &lt;li&gt;Flume&lt;/li&gt;
+  &lt;li&gt;Redis&lt;/li&gt;
+  &lt;li&gt;Druid&lt;/li&gt;
+  &lt;li&gt;OpenTSDB&lt;/li&gt;
+  &lt;li&gt;Keepalived&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;solution&lt;/strong&gt;:
-  The most common cause of local-dirs are bad is due to available disk space on the node exceeding yarn’s max-disk-utilization-per-disk-percentage default value of 90.0%.
-   Either clean up the disk that the unhealthy node is running on, or increase the threshold in yarn-site.xml&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;基础环境&quot;&gt;基础环境&lt;/h2&gt;
+
+&lt;p&gt;软件包要求:Jdk8 Hadoop-2.7,Spark-2.0,Hive-2.3,Hbase-1.2,Zookeeper-3.4.10&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Linux(CentOS7)
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; master ip1
+ slave1 ip2
+ slave2 ip3
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SSH&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;免密码登录&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;下载Linux版本的Java8，并安装配置在/etc/profile中增加&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;hadoop&quot;&gt;Hadoop&lt;/h2&gt;
+
+&lt;p&gt;Hadoop2.7&lt;a href=&quot;https://archive.apache.org/dist/hadoop/common/&quot;&gt;[安装包]&lt;/a&gt;
+ 解压文件重命名hadoop&lt;/p&gt;
+
+&lt;h3 id=&quot;单个namenode&quot;&gt;单个NameNode&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;配置文件在${HADOOP_HOME}/etc/hadoop目录下&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hadoop-env.sh
+ 修改JAVA_HOME的值
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; export JAVA_HOME/opt/big-data/java
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;core-site.xml
+ 修改或增加fs.defualtFS的value
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; &amp;lt;property&amp;gt;
+     &amp;lt;name&amp;gt;fs.defaultFS&amp;lt;/name&amp;gt;
+     &amp;lt;value&amp;gt;hdfs://master:9000&amp;lt;/value&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;修改或增加hadoop.tmp.dir的value&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; &amp;lt;property&amp;gt;
+     &amp;lt;name&amp;gt;hadoop.tmp.dir&amp;lt;/name&amp;gt;
+     &amp;lt;value&amp;gt;file:///opt/big-data/hadoop/tmp&amp;lt;/value&amp;gt;
+     &amp;lt;description&amp;gt;Abasefor other temporary directories.&amp;lt;/description&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;用xmllint来格式化验证&lt;/p&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;xmllint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;如果想了解更多的配置&lt;a href=&quot;http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/core-default.xml&quot;&gt;[请点击]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;hdfs-site.xml
+ 修改或增加dfs.namenode.data.dir的value
+    &lt;property&gt;
+     &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
+     &lt;value&gt;file:///opt/big-data/hadoop/data/hdfs/namenode&lt;/value&gt;
+ &lt;/property&gt;
+    &lt;p&gt;修改或增加dfs.datanode.data.dir的value&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; &amp;lt;property&amp;gt;
+     &amp;lt;name&amp;gt;dfs.datanode.name.dir&amp;lt;/name&amp;gt;
+     &amp;lt;value&amp;gt;file:///opt/big-data/hadoop/data/hdfs/datanode&amp;lt;/value&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;修改或增加dfs.replication的value&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; &amp;lt;property&amp;gt;
+     &amp;lt;name&amp;gt;dfs.replication&amp;lt;/name&amp;gt;    #datanode数量，默认3，我们是2台设置2
+     &amp;lt;value&amp;gt;2&amp;lt;/value&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用xmllint来格式化验证&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;xmllint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;如果想了解更多的配置&lt;a href=&quot;http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml&quot;&gt;[请点击]&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;mapred-site.xml
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;刚解压之后，是没有这个文件的&lt;/code&gt;,需要把mapred-site.xml.template copy为mapred-site.xml
+ 修改或增加mapreduce.framework.name的value
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; &amp;lt;property&amp;gt;
+　　　　&amp;lt;!-指定Mapreduce运行在yarn上--&amp;gt;
+     &amp;lt;name&amp;gt;mapreduce.framework.name&amp;lt;/name&amp;gt;
+     &amp;lt;value&amp;gt;yarn&amp;lt;/value&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;用xmllint来格式化验证&lt;/p&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;xmllint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapred&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;yarn-site.xml
+ 修改或增加yarn.resourcemanager.hostname的value
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  &amp;lt;!-- 指定ResourceManager的地址--&amp;gt;
+ &amp;lt;property&amp;gt;
+     &amp;lt;name&amp;gt;yarn.resourcemanager.hostname&amp;lt;/name&amp;gt;
+     &amp;lt;value&amp;gt;mip&amp;lt;/value&amp;gt;
+ &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;修改或增加hadoop.tmp.dir的value
+ 修改或增加hadoop.tmp.dir的value&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用xmllint来格式化验证&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;xmllint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;如果想了解更多的配置&lt;a href=&quot;http://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-common/yarn-default.xml&quot;&gt;[请点击]&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;log4j.properties
+ 修改hadoop.log.dir
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; hadoop.log.dir=/opt/big-data/hadoop/log
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;slaves
+ 这个文件的写的启动datanode/nodemanager的主机名,如果所有节点都启动
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; master
+ slave1
+ slave2
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;只在从节点启动&lt;/code&gt;，推荐使用这种，可以减少主节点的负载,我采用的就是这种&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; slave1
+ slave2
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;创建配置的目录
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namenode&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datanode&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hadoop环境变量
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HADOOP_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HADOOP_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HADOOP_CONF_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HADOOP_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;ol&gt;
+      &lt;li&gt;启动集群&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;scp拷贝文件,&lt;code class=&quot;highlighter-rouge&quot;&gt;保证每个节点的文档Hadoop目录文件结构是一样的&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;一键启动
+    &lt;ol&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;格式化&lt;/code&gt;
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namenode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;启动hdfs
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;启动yarn
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nsfocus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;espc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;单步启动
+    &lt;ol&gt;
+      &lt;li&gt;namenode
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namenode&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondnamenode&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;datanode
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datanode&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;resourcemanager
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resourcemanager&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;nodemanager
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodemanager&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;mapreduce作业日志服务器
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobhistory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;daemon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;historyserver&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;p&gt;了解更详细的命令使用&lt;a href=&quot;&quot;&gt;[链接]&lt;/a&gt;&lt;/p&gt;
+        &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;进程验证
+  cmd:
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;jps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iE&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;master主机 ssh master  cmd&lt;/p&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;mi&quot;&gt;27911&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondaryNameNode&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;26724&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResourceManager&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;26536&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NameNode&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;slave1主机 ssh slave1 cmd&lt;/p&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;mi&quot;&gt;26830&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NodeManager&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;26626&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataNode&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;slave2主机 ssh slave2 cmd&lt;/p&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;mi&quot;&gt;26831&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NodeManager&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;26621&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataNode&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Web预览&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;master:50070&lt;/li&gt;
+  &lt;li&gt;master:8088&lt;/li&gt;
+  &lt;li&gt;master:19888&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;测试
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  hdfs dfs -mkdir /wordCountInput
+  hdfs dfs -put /opt/big-data/hadoop/README.txt /wordCountInput
+  hdfs dfs -ls -R /wordCountInput
+  hadoop jar /opt/big-data/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.7.jar wordcount /wordCountInput/README.txt /wordCountOput
+  hdfs dfs -ls -R /wordCountOutput
+  hdfs dfs -cat /wordCountOput/part-r-00000
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;关闭集群
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;big&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sbin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ha高可用&quot;&gt;HA高可用&lt;/h3&gt;
+
+&lt;h4 id=&quot;namenode-ha&quot;&gt;NameNode HA&lt;/h4&gt;
+&lt;p&gt;为了实现自动切换，需要借助Zookeeper来协调，必须有一个&lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper的集群环境&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;problem:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;手动切换namonde为active&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithQJM.html&quot;&gt;http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithQJM.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;resourcemanager-ha&quot;&gt;ResourceManager HA&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/ResourceManagerHA.html&quot;&gt;http://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/ResourceManagerHA.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hive&quot;&gt;Hive&lt;/h2&gt;
+
+&lt;p&gt;Hive2.3&lt;a href=&quot;http://mirror.bit.edu.cn/apache/hive/&quot;&gt;[安装包]&lt;/a&gt;解压文件重命名hive&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hive-env.sh&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  export HIVE_CONF_DIR=/opt/big-data/hive/conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hive-site.xml&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;没有这个文件时，拷贝hive-default.xml.template hive-site.xml,元数据库选择，大部分是Mysql,Postgresql&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Mysql&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionURL&lt;/td&gt;		&lt;td&gt;jdbc:mysql://master:3306/metastore?characterEncoding=UTF-8&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionDriverName&lt;/td&gt;		&lt;td&gt;com.mysql.jdbc.Drive&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionUserName&lt;/td&gt;		&lt;td&gt;user&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionPassword&lt;/td&gt;		&lt;td&gt;password&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.metastore.uris&lt;/td&gt;		&lt;td&gt;thrift://master:9083&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.metastore.warehouse.dir&lt;/td&gt;		&lt;td&gt;/user/hive/warehouse&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.querylog.location&lt;/td&gt;		&lt;td&gt;/opt/log/hive&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;/td&gt;		&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Postgresql&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionURL&lt;/td&gt;		&lt;td&gt;jdbc:mysql://master:5432/metastore?characterEncoding=UTF-8&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionDriverName&lt;/td&gt;		&lt;td&gt;org.postgresql.Driver&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionUserName&lt;/td&gt;		&lt;td&gt;user&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;javax.jdo.option.ConnectionPassword&lt;/td&gt;		&lt;td&gt;password&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.metastore.uris&lt;/td&gt;		&lt;td&gt;thrift://master:9083&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.metastore.warehouse.dir&lt;/td&gt;		&lt;td&gt;/user/hive/warehouse&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;hive.querylog.location&lt;/td&gt;		&lt;td&gt;/opt/log/hive&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;/td&gt;		&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;驱动包&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mysql&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Postgresql&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;spark&quot;&gt;Spark&lt;/h2&gt;
+
+&lt;p&gt;Spark2.0&lt;a href=&quot;http://spark.apache.org/downloads.html&quot;&gt;[安装包]&lt;/a&gt;
+  解压文件重命名spark&lt;/p&gt;
+&lt;h3 id=&quot;hive-on-spark&quot;&gt;Hive on Spark&lt;/h3&gt;
+
+&lt;h3 id=&quot;spark-thrift&quot;&gt;Spark Thrift&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;spark提交任务java.nio.channels.ClosedChannelException
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;ERROR client.TransportClient: Failed to send RPC 6159851572252707613 to /0.0.0.0:39986: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;内存的原因,是从yarn-site.xml中配置计算来的，yarn.scheduler.minimum-allocation-mb  * yarn.nodemanager.vmem-pmem-ratio = 虚拟内存的总量，如果需要的虚拟内存总量超过这个计算所得的数值，就会出发 Killing container.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;此处 我的yarn.scheduler.minimum-allocation-mb值没设置，默认为1G，yarn.nodemanager.vmem-pmem-ratio也没设置，默认为2.1,给spark 任务配置更大的内存即可解决问题&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;	&amp;lt;kroperty&amp;gt;
+			&amp;lt;name&amp;gt;yarn.scheduler.maximum-allocation-mb&amp;lt;/name&amp;gt;
+			&amp;lt;value&amp;gt;9216&amp;lt;/value&amp;gt;
+			&amp;lt;discription&amp;gt;每个任务最多可用内存,单位MB,默认8182MB&amp;lt;/discription&amp;gt;
+	&amp;lt;/property&amp;gt;
+	&amp;lt;property&amp;gt;
+			&amp;lt;name&amp;gt;yarn.scheduler.minimum-allocation-mb&amp;lt;/name&amp;gt;
+			&amp;lt;value&amp;gt;4000&amp;lt;/value&amp;gt;
+			&amp;lt;discription&amp;gt;每个任务最shao可用内存&amp;lt;/discription&amp;gt;
+	&amp;lt;/property&amp;gt;
+	&amp;lt;property&amp;gt;
+			&amp;lt;name&amp;gt;yarn.nodemanager.vmem-pmem-ratio&amp;lt;/name&amp;gt;
+			&amp;lt;value&amp;gt;4.1&amp;lt;/value&amp;gt;
+	&amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;way-2:通过关闭虚拟内存的检查&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;&amp;lt;property&amp;gt;
-&amp;lt;name&amp;gt;yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage&amp;lt;/name&amp;gt;
-&amp;lt;value&amp;gt;98.5&amp;lt;/value&amp;gt;
+    &amp;lt;name&amp;gt;yarn.nodemanager.vmem-check-enabled&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;false&amp;lt;/value&amp;gt;
 &amp;lt;/property&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Avoid disabling disk check, because your jobs may failed when the disk eventually run out of space, or if there are permission issues. Refer to the yarn-site.xml Disk Checker section for more details.
-If you suspect there is filesystem error on the directory, you can check by running
-hdfs fsck /tmp/hadoop-hduser/nm-local-dir
-Refer to the &lt;a href=&quot;https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/NodeManager.html#Disk_Checker&quot;&gt;yarn-site.xml Disk Check section&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;zookeeper&quot;&gt;Zookeeper&lt;/h2&gt;
+
+&lt;p&gt;Zookeeper3.4.10&lt;a href=&quot;https://archive.apache.org/dist/zookeeper/&quot;&gt;[安装包]&lt;/a&gt;
+  解压文件重命名Zookeeper&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;配置文件
+    &lt;ol&gt;
+      &lt;li&gt;zoo.cfg
+  修改或增加dataDir和logDir
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  dataDir=/opt/big-data/zookeeper/data
+&lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;增加下面配置:&lt;/p&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  server.1=master:2888:3888
+  server.2=slave1:2888:3888
+  server.3=slave2:2888:3888
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;myid
+  这个文件与zoo.cfg配置有关.server.数字与主机名是一一对应的。这个文件的目录在zk的数据目录下/opt/big-data/zookeeper/data
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  master:
+  cat myid
+  1
+  slaves1:
+  cat myid
+  2
+  slaves3:
+  cat myid
+  3
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;log4j.properties
+  修改zookeeper日志输出目录
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  zookeeper.log.dir=/opt/big-data/zookeeper/log
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;环境变量
+  在/etc/profile添加下面配置，然后source /etc/profile生效
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;  export ZK_HOME=/opt/big-data/zookeeper
+  export PATH=$PATH:$ZK_HOME/bin
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;启动ZK集群
+  拷贝文件到每个节点对应的目录下，并且&lt;code class=&quot;highlighter-rouge&quot;&gt;修改myid的值&lt;/code&gt;
+  在每个节点上执行
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;zkServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;验证状态
+  在每个节点上执行
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;zkServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;会有一个是leader，其他都是follower&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;关闭集群
+  在每个节点上执行
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;zkServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kafka&quot;&gt;Kafka&lt;/h2&gt;
+
+&lt;p&gt;Kafka0.9.0.1&lt;a href=&quot;http://kafka.apache.org/downloads&quot;&gt;[安装包]&lt;/a&gt;
+  解压文件重命名kafka&lt;/p&gt;
+
+&lt;h2 id=&quot;hbase&quot;&gt;Hbase&lt;/h2&gt;
+
+&lt;p&gt;Hbase1.2.8&lt;a href=&quot;http://archive.apache.org/dist/hbase/&quot;&gt;[安装包]&lt;/a&gt;
+  解压文件重命名hbase&lt;/p&gt;
+
+&lt;h2 id=&quot;elasticsearch&quot;&gt;Elasticsearch&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-sql.html&quot;&gt;https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-sql.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1&quot;&gt;https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1&lt;/a&gt;
+jdbc 官网需要会员支持&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/NLPchina/elasticsearch-sql&quot;&gt;https://github.com/NLPchina/elasticsearch-sql&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;离线安装&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elasticsearch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elasticsearch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plugin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;操作过程&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-sql.html&quot;&gt;https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-sql.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;flink&quot;&gt;Flink&lt;/h2&gt;
+&lt;h2 id=&quot;kylin&quot;&gt;Kylin&lt;/h2&gt;
+&lt;h2 id=&quot;flume&quot;&gt;Flume&lt;/h2&gt;
+&lt;h2 id=&quot;redis&quot;&gt;Redis&lt;/h2&gt;
+&lt;h2 id=&quot;druid&quot;&gt;Druid&lt;/h2&gt;
+&lt;h2 id=&quot;opentsdb&quot;&gt;OpenTSDB&lt;/h2&gt;
+&lt;h2 id=&quot;keepalived&quot;&gt;Keepalived&lt;/h2&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;javax.jdo.JDODataStoreException: Required table missing : “&lt;code class=&quot;highlighter-rouge&quot;&gt;VERSION&lt;/code&gt;” in Catalog “” Schema “”.
+ 在执行启动hive metastore时报错：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;解决方法:初始化一下数据库即可&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; /hive/bin/schematool -dbType mysql -initSchema
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;Exception in thread “main” MetaException(message:Version information not found in metastore. )
+ hive-site.xml
+ ```C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;name&gt;hive.metastore.schema.verification&lt;/name&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;value&amp;gt;false&amp;lt;/value&amp;gt;  ```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+
+&lt;p&gt;Apache archive &lt;a href=&quot;http://archive.apache.org/dist/&quot;&gt;http://archive.apache.org/dist/&lt;/a&gt;
+持续更新中….&lt;/p&gt;
 </description>
-                <link>/hadoop/2018/07/14/hadoop_pro</link>
-                <guid>/hadoop/2018/07/14/hadoop_pro</guid>
-                <pubDate>Sat, 14 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/2018/11/18/build-big-data-platfrom</link>
+                <guid>/2018/11/18/build-big-data-platfrom</guid>
+                <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>Tronado</title>
-                <description>&lt;p&gt;Tornado是使用Python编写的一个强大的、可扩展的Web服务器。它在处理严峻的网络流量时表现得足够强健，但却在创建和编写时有着足够的轻量级，并能够被用在大量的应用和工具中.&lt;/p&gt;
+                <title>Linux Crontab 定时执行任务</title>
+                <description>&lt;p&gt;Crontab 添加定时任务&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;crontab-命令&quot;&gt;Crontab 命令&lt;/h2&gt;
+
+&lt;h2 id=&quot;crontab-格式&quot;&gt;Crontab 格式&lt;/h2&gt;
+
+</description>
+                <link>/linux/2018/11/16/Crontab</link>
+                <guid>/linux/2018/11/16/Crontab</guid>
+                <pubDate>Fri, 16 Nov 2018 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>HDFS数据加密空间-Encryption zone</title>
+                <description>&lt;hr /&gt;
 
 &lt;!--more--&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://demo.pythoner.com/itt2zh/index.html&quot;&gt;http://demo.pythoner.com/itt2zh/index.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.2cto.com/kf/201605/509285.html&quot;&gt;https://www.2cto.com/kf/201605/509285.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/TransparentEncryption.html&quot;&gt;http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/TransparentEncryption.html&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>/py-modules/2018/07/14/Tornado</link>
-                <guid>/py-modules/2018/07/14/Tornado</guid>
-                <pubDate>Sat, 14 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/big-data/2018/11/14/hdfs-encryption</link>
+                <guid>/big-data/2018/11/14/hdfs-encryption</guid>
+                <pubDate>Wed, 14 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>kafka 疑难杂症</title>
-                <description>&lt;p&gt;学习kafka，收集遇到到各种情况&lt;/p&gt;
+                <title>Linux磁盘扩容</title>
+                <description>&lt;p&gt;当数据量越来越大的时候，磁盘空间需要进一步扩容，来应对的我们的需求。可通过LVM来管理磁盘和动态扩容。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;LVM  Logical Volume Manage (逻辑卷管理),工作原理:&lt;/p&gt;
 
-&lt;!--more--&gt;
-&lt;h2 id=&quot;对症下药&quot;&gt;对症下药&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;消费者不消费
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +
- +&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;LVM在每个物理卷头部都维护了一个metadata，每个metadata中都包含了整个VG（volume group：卷组）的信息，包括每个VG的布局配置，PV（physical volume：物理卷）的编号，LV（logical volume：逻辑卷）的编号，以及每个PE（physical extends：物理扩展单元）到LE（logical extends：物理扩展单元）的映射关系。同一个VG中的每个PV头部的信息都是相同的，这样有利于故障时进行数据恢复。&lt;/p&gt;
 
-</description>
-                <link>/kafka/2018/07/11/kafka_pro</link>
-                <guid>/kafka/2018/07/11/kafka_pro</guid>
-                <pubDate>Wed, 11 Jul 2018 00:00:00 +0800</pubDate>
-        </item>
+&lt;p&gt;LVM对上层文件系统提供LV层，隐藏了操作细节。对文件系统而言，对LV的操作与原先对partition的操作没有差别。当对LV进行写入操作的时候，LVM定位相应的LE，通过PV头部的映射表将数据写入到相应的PE上。LVM实现的关LVM最大的特点就是可以对&lt;code class=&quot;highlighter-rouge&quot;&gt;磁盘进行动态管理&lt;/code&gt;。因为逻辑卷的大小是可以动态调整的，而且不会丢失现有的数据。我们如果新增加了硬盘，其也不会改变现有上层的逻辑卷。键在于PE和LE之间建立映射关系，不同的映射规则决定了不同的LVM存储模型。LVM支持多个PV 的stripe和mirror。&lt;/p&gt;
 
-        <item>
-                <title>hbase</title>
-                <description>&lt;p&gt;大数据上的数据库,nosql.和hadoop可以很好的融合。&lt;/p&gt;
+&lt;p&gt;LVM最大的特点就是可以对磁盘进行动态管理，因为逻辑卷的大小是可以动态调整的，而且不会丢失现有的数据，如果我们增加了硬盘也不会改变现有的上层逻辑卷。&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;安装部署&quot;&gt;安装部署&lt;/h2&gt;
+&lt;h2 id=&quot;lvm-优缺点&quot;&gt;LVM 优缺点&lt;/h2&gt;
 
-&lt;h3 id=&quot;单节点&quot;&gt;单节点&lt;/h3&gt;
-&lt;p&gt;1.官网下载安装包hbase-1.3.1&lt;a href=&quot;http://hbase.apache.org/downloads.html&quot;&gt;http://hbase.apache.org/downloads.html&lt;/a&gt;,并进行解压，然后根据环境进行配置&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;优点&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;2.关键的配置文件，都在conf目录下hbase-env.sh hbase-site.xml,log4j.properties,regionserver&lt;/p&gt;
-
-&lt;p&gt;hbase-env.sh&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HBASE_HEAPSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HBASE_MANAGES_ZK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;hbase-site.xml,配置wal.codec涉及到&lt;a href=&quot;&quot;&gt;Phoenix&lt;/a&gt;,一个sql引擎。&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//localhost:9000/hbase&amp;lt;/value&amp;gt;
-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distributed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataDir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quorum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regionserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hadoop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regionserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IndexedWALEditCodec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;--/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rpc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;operation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regionserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lease&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phoenix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeoutMs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phoenix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepAliveMs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RoundRobinPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;regionserver:节点的名称，也就是hostname&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;配置日志的目录&lt;/p&gt;
-
-&lt;p&gt;3.启动hbase&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;4.停止hbase&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;5.hbase shell&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;001&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;常用命令&lt;/p&gt;
-
-&lt;h3 id=&quot;分布式&quot;&gt;分布式&lt;/h3&gt;
-
-&lt;p&gt;前提是&lt;a href=&quot;&quot;&gt;hadoop集群&lt;/a&gt;，&lt;a href=&quot;&quot;&gt;zookeeper集群&lt;/a&gt;已经部署好,hbase-env.sh 基本上不用改变，直接修改hbase-site.xml,regionservers&lt;/p&gt;
-
-&lt;p&gt;1.假设三个节点master,slave1,slave2&lt;/p&gt;
-
-&lt;p&gt;hbase-site.xml&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//master:9000/hbase&amp;lt;/value&amp;gt;
-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distributed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataDir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zkdata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zookeeper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quorum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slave1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slave2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2181&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rpc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;operation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scanner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regionserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lease&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phoenix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeoutMs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phoenix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepAliveMs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RoundRobinPool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;regionservers,如果master上不启动regionserver服务，就不用添加到regionservers文件，把要启动的regionserver服务的节点添加进去,一般情况都是子节点启动regionserver服务，主节点启动Hmaster服务&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;slave1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;slave2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;然后通过scp命令把这个文件夹分发到子节点中。&lt;/p&gt;
-
-&lt;p&gt;2.启动hbase集群，保证hadoop集群和zookeeper集群已经启动&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;3.验证服务jps&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;jps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;jps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;4.hbase shell&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;001&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;5.停止hbase集群&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hbase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;hbase-缺陷&quot;&gt;hbase 缺陷&lt;/h2&gt;
-
-&lt;p&gt;由于hbase的语法比较晦涩，开发人员对于sql上手更快，开发效率更高，出现Phoenix，一个sql引擎。直接嵌套在hbase中就可以了。而且还直接jdbc，十分的方便。&lt;/p&gt;
-
-&lt;p&gt;提高hbase的查询效率，基本上是建立&lt;code class=&quot;highlighter-rouge&quot;&gt;二级索引&lt;/code&gt;的方法，使用分布式技术es来提高效率,基本思路和二级索引差不多，都是通过对要查询的&lt;code class=&quot;highlighter-rouge&quot;&gt;列进行建立索引&lt;/code&gt;,先根据建立的索引查询到rowkey，在根据rowkey查询到需要的数据。&lt;/p&gt;
-
-&lt;h3 id=&quot;hbase上的sql&quot;&gt;hbase上的sql&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://phoenix.apache.org/download.html&quot;&gt;Phoenix&lt;/a&gt;,下载对应hbase-1.3.1版本的4.14.0-Hbase-1.3.tar包&lt;/p&gt;
-
-&lt;h3 id=&quot;eshbase&quot;&gt;es+hbase&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;1.安装es&lt;/li&gt;
-  &lt;li&gt;2.使用es建立hbase的相关查询列的索引，值包括查询列与rowkey&lt;/li&gt;
-  &lt;li&gt;3.使用es查询到列对应的rowkey的值，再根据rowkey查询需要的信息&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;文件系统可以跨多个磁盘，因此文件系统大小不会受物理磁盘的限制。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;可以在系统运行的状态下动态的扩展文件系统的大小。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;可以增加新的磁盘到LVM的存储池中。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;可以以镜像的方式冗余重要的数据到多个物理磁盘。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;可以方便的导出整个卷组到另外一台机器。&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;druid-分析性数据库&quot;&gt;Druid 分析性数据库&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;缺点&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://druid.io/docs/latest/tutorials/quickstart.html&quot;&gt;http://druid.io/docs/latest/tutorials/quickstart.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;在从卷组中移除一个磁盘的时候必须使用&lt;code class=&quot;highlighter-rouge&quot;&gt;reducevg&lt;/code&gt;命令（这个命令要求root权限，并且不允许在快照卷组中使用）。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当卷组中的一个磁盘损坏时，整个卷组都会受到影响。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;因为加入了额外的操作，存贮性能受到影响。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.tutorialspoint.com/hbase/hbase_overview.htm&quot;&gt;hbase tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hbase.apache.org/book.html&quot;&gt;https://hbase.apache.org/book.html&lt;/a&gt;
-&lt;a href=&quot;http://hbase.apache.org/book.html#configuration&quot;&gt;http://hbase.apache.org/book.html#configuration&lt;/a&gt;
-&lt;a href=&quot;https://www.cnblogs.com/biehongli/p/7729135.html&quot;&gt;https://www.cnblogs.com/biehongli/p/7729135.html&lt;/a&gt;
-&lt;a href=&quot;https://dzone.com/articles/hbase-phoenix-and-java-part-2&quot;&gt;https://dzone.com/articles/hbase-phoenix-and-java-part-2&lt;/a&gt;
-&lt;a href=&quot;http://www.cnblogs.com/xcloudbiz/articles/5082810.html#3862856&quot;&gt;http://www.cnblogs.com/xcloudbiz/articles/5082810.html#3862856&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.geomesa.org/documentation/user/hbase/index.html&quot;&gt;https://www.geomesa.org/documentation/user/hbase/index.html&lt;/a&gt;
-&lt;a href=&quot;https://www.netwoven.com/2013/10/10/hbase-overview-of-architecture-and-data-model/&quot;&gt;https://www.netwoven.com/2013/10/10/hbase-overview-of-architecture-and-data-model/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;地理位置大数据
-&lt;a href=&quot;https://www.geomesa.org/&quot;&gt;https://www.geomesa.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xing901022/p/6195422.html&quot;&gt;大数据学习之路&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;术语&quot;&gt;术语&lt;/h2&gt;
+&lt;p&gt;PV(physical volum)&lt;/p&gt;
 </description>
-                <link>/big-data/2018/07/11/hbase</link>
-                <guid>/big-data/2018/07/11/hbase</guid>
-                <pubDate>Wed, 11 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/2018/11/14/lvm</link>
+                <guid>/2018/11/14/lvm</guid>
+                <pubDate>Wed, 14 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>parquet</title>
-                <description>&lt;p&gt;列式存储文件&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://parquet.apache.org/documentation/latest/&quot;&gt;https://parquet.apache.org/documentation/latest/&lt;/a&gt;
-&lt;a href=&quot;https://www.jianshu.com/p/b823c727fe46&quot;&gt;https://www.jianshu.com/p/b823c727fe46&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>/big-data/2018/07/09/parquet</link>
-                <guid>/big-data/2018/07/09/parquet</guid>
-                <pubDate>Mon, 09 Jul 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>avro</title>
-                <description>&lt;p&gt;Avro是一个基于二进制数据传输高性能的中间件&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-&lt;p&gt;在Hadoop的其他项目中例如HBase(Ref)和Hive(Ref)的Client端与服务端的数据传输也采用了这个工具，Avro可以做到将数据进行序列化，适用于远程或本地大批量数据交互。在传输的过程中Avro对数据二进制序列化后节约数据存储空间和网络传输带宽。做个比方：有一个100平方的房子，本来能放100件东西，现在期望借助某种手段能让原有面积的房子能存放比原来多150件以上或者更多的东西，就好比数据存放在缓存中，缓存是精贵的，需要充分的利用缓存有限的空间，存放更多的数据。再例如网络带宽的资源是有限的，希望原有的带宽范围能传输比原来高大的数据量流量，特别是针对结构化的数据传输和存储，这就是Avro存在的意义和价值。Avro还可以做到在同一系统中支持多种不同语言，也有点类似Apache的另一个产品：Thrift(Ref)，对于Thrift不同的是Avro更加具有灵活性，Avro可以支持对定义的数据结构(Schema)动态加载，利于系统扩展。
-使用Avro可以通过2中方式来实现：
-1.二进制编码，Avro-specific方式依赖代码(文件)生成特定类，并内嵌JSON Schema；
-2.JSON编码，Avro-generic方式通过JSON文件动态加载Schema，不需要编译加载直接就可以处理新的数据源。
-我肤浅的认为，两者的区别在于同样的数据大小，在二进制编码下所产生的Avro数据的大小为100个字节，而在JSON编码下产生了450个字节。虽然看起来第1种二进制编码的方式占据一定优势，但是二进制传输最大的问题就是出了 bug 不方便追查，而JSON编码的方式更实用于系统与系统之间的数据通讯。Avro支持本地和远程RPC(Ref)调用,RPC远程调用又分为Http和Netty2种，在这里主要介绍基于Http协议的Avro远程调用，首先需要定义一个JSON文件作为双方通信的传输协议规范，便于解析从对方发送过来的数据。
-在这个协议中可以看做分为3大部分：
-1.描述(Protocol Declaration)，定义命名空间，协议名称 等。
-2.数据类型(types)，根据规范中的Primitive和Complex Types数据类型，自己封装一套数据格式。
-3.消息(messages)，根据自己定义的数据类型，再去定义 a)请求、b)回应、c)异常(可选)  数据格式。&lt;/p&gt;
-
-&lt;p&gt;特点：
-1.丰富的数据结构类型
-2.快速可压缩的二进制数据形式
-3.存储持久数据的文件容器
-4.远程过程调用（RPC）
-5.同动态语言的简单集成。读写数据文件和使用RPC协议都不需要生成代码，而代码生成作为一种可选的优化只值得在静态类型语言中实现。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://avro.apache.org/docs/current/gettingstartedjava.html&quot;&gt;http://avro.apache.org/docs/current/gettingstartedjava.html&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>/big-data/2018/07/09/avro</link>
-                <guid>/big-data/2018/07/09/avro</guid>
-                <pubDate>Mon, 09 Jul 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Spark VS Flink</title>
-                <description>&lt;p&gt;Real-time stream processing has been gaining momentum in recent past, and major tools which are enabling it are Apache Spark and Apache Flink. Learn with the help of a case study about Data processing, Data Flow, Data management using these tools.&lt;/p&gt;
+                <title>tutorialspoint 一个好用的学习网站</title>
+                <description>&lt;p&gt;tutorialspoint 是印度人开发的一个网站，整理了大量的学习资料,方便查询&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -429,332 +1853,88 @@ Refer to the &lt;a href=&quot;https://hadoop.apache.org/docs/current/hadoop-yarn
 
 &lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.kdnuggets.com/2015/11/fast-big-data-apache-flink-spark-streaming.html/2&quot;&gt;https://www.kdnuggets.com/2015/11/fast-big-data-apache-flink-spark-streaming.html/2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/28082581/what-is-the-difference-between-apache-spark-and-apache-flink&quot;&gt;https://stackoverflow.com/questions/28082581/what-is-the-difference-between-apache-spark-and-apache-flink&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tutorialspoint.com&quot;&gt;https://www.tutorialspoint.com&lt;/a&gt;&lt;/p&gt;
+
 </description>
-                <link>/bigdata/2018/07/03/spark-compare-flink</link>
-                <guid>/bigdata/2018/07/03/spark-compare-flink</guid>
-                <pubDate>Tue, 03 Jul 2018 00:00:00 +0800</pubDate>
+                <link>/2018/11/13/tutorialspoint</link>
+                <guid>/2018/11/13/tutorialspoint</guid>
+                <pubDate>Tue, 13 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>snmp 总览</title>
-                <description>&lt;p&gt;SNMP is one of the most commonly used technologies when it comes to network monitoring.&lt;/p&gt;
-
-&lt;hr /&gt;
+                <title>Keepalive 高可用</title>
+                <description>&lt;hr /&gt;
 
 &lt;!--more--&gt;
-
-&lt;h2 id=&quot;snmp-mib&quot;&gt;SNMP MIB&lt;/h2&gt;
-
-&lt;p&gt;MIB stands for Management Information Base and is a collection of information organized hierarchically. These are accessed using a protocol such as SNMP. There are two types of MIBs: scalar and tabular.&lt;/p&gt;
-
-&lt;p&gt;Scalar objects define a single object instance whereas tabular objects define multiple related object instances grouped in MIB tables.&lt;/p&gt;
-
-&lt;p&gt;MIBs are collections of definitions which define the properties of the managed object within the device to be managed.&lt;/p&gt;
-
-&lt;p&gt;MIB Example: The typical objects to monitor on a printer are the different cartridge states and maybe the number of printed files, and on a switch the typical objects of interest are the incoming and outgoing traffic as well as the rate of package loss or the number of packets addressed to a broadcast address.&lt;/p&gt;
-
-&lt;p&gt;SNMP OID
-OIDs stands for Object Identifiers.  OIDs uniquely identify managed objects in a MIB hierarchy. This can be depicted as a tree, the levels of which are assigned by different organizations. Top level MIB object IDs (OIDs) belong to different standard organizations.&lt;/p&gt;
-
-&lt;p&gt;Vendors define private branches including managed objects for their own products.&lt;/p&gt;
-
-&lt;p&gt;Samples:
-Here is a sample structure of an OID:&lt;/p&gt;
-
-&lt;p&gt;Iso(1).org(3).dod(6).internet(1).private(4).transition(868).products(2).chassis(4)
-.card(1).slotCps(2)-cpsSlotSummary(1).cpsModuleTable(1).cpsModuleEntry(1)
-.cpsModuleModel(3).3562.3&lt;/p&gt;
-
-&lt;p&gt;or just:&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;868&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3562&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;These numbers are the ones used in PRTG when setting up custom sensors, in order to access the appropriate elements of the device that you want to monitor. OIDs are generally provided by the hardware manufacturers or can be found in so-called OID repositories, where collections of MIB trees and the corresponding OIDs can be accessed.&lt;/p&gt;
-
-&lt;p&gt;SNMP Basics
-SNMP stands for Simple Network Management Protocol and consists of three key components: managed devices, agents, and network-management systems (NMSs). A managed device is a node that has an SNMP agent and resides on a managed network. These devices can be routers and access server, switches and bridges, hubs, computer hosts, or printers. An agent is a software module residing within a device. This agent translates information into a compatible format with SNMP. An NMS runs monitoring applications. They provide the bulk of processing and memory resources required for network management.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;redhat configure snmp &lt;a href=&quot;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-system_monitoring_tools-net-snmp&quot;&gt;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-system_monitoring_tools-net-snmp&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Centos 主机监控配置snmpd.conf &lt;a href=&quot;https://quraishi.wordpress.com/2013/05/04/snmp-configuration-on-linux-snmpd-conf/&quot;&gt;https://quraishi.wordpress.com/2013/05/04/snmp-configuration-on-linux-snmpd-conf/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;vensor &lt;a href=&quot;https://www.solarwinds.com&quot;&gt;https://www.solarwinds.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-                <link>/network/2018/06/14/snmp</link>
-                <guid>/network/2018/06/14/snmp</guid>
-                <pubDate>Thu, 14 Jun 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>拓扑发现窥探</title>
-                <description>&lt;p&gt;在网络中需要用拓扑发现来展示真实的网络，尤其是在很复杂的网络中，显得尤为重要，所有出现了一系列的算法。传统的都是基于SNMP协议来获取网络设备的数据，通过分析得到网络关系图。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;arproute表-算法&quot;&gt;ARP+ROUTE表 算法&lt;/h2&gt;
-
-</description>
-                <link>/network/2018/06/02/topology_discovery</link>
-                <guid>/network/2018/06/02/topology_discovery</guid>
-                <pubDate>Sat, 02 Jun 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>zabbix monitor 到底有多神秘?</title>
-                <description>&lt;p&gt;当网络设备达到一定量的时候，就需要一个有效的监控的工具，来管理它们，并可以知道当前的工作状态。zabbix就能胜任，也是监控领域的一大利器。&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/zabbix-demo.png&quot; alt=&quot;zabbix&quot; /&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;背景介绍&quot;&gt;背景介绍&lt;/h2&gt;
 
 &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
 
-&lt;h2 id=&quot;使用&quot;&gt;使用&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Centos6
+ rpm 进行安装,下载&lt;a href=&quot;ihttps://pkgs.org/&quot;&gt;Keepalived&lt;/a&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cp&quot;&gt;# rpm -ivh keepalived-1.2.13-5.el6_6.x86_64.rpm
+&lt;/span&gt;  &lt;span class=&quot;nl&quot;&gt;warning:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;el6_6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x86_64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rpm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RSA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SHA1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Signature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ID&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c105b9de&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NOKEY&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Preparing&lt;/span&gt;                &lt;span class=&quot;err&quot;&gt;###########################################&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;             &lt;span class=&quot;err&quot;&gt;###########################################&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Centos7
+ 源码安装:下载&lt;a href=&quot;http://www.keepalived.org/index.html&quot;&gt;tar.gz&lt;/a&gt;
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cp&quot;&gt;#tar xf keepalived-2.0.8.tar.gz
+&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#mv keepalived-2.0.8 keepalived
+&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#cd keepalived
+&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#./configure --prefix=/usr/local/keepalived
+&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#make &amp;amp;&amp;amp; make install
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;配置
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sysconfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sysconfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keeplalived&lt;/span&gt;
+ &lt;span class=&quot;cp&quot;&gt;# start keepalived
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;systemd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;systemctl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keepalived&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;problem&quot;&gt;problem&lt;/h2&gt;
+&lt;p&gt;Keepalived Configuration Manual Page&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.keepalived.org/manpage.html&quot;&gt;http://www.keepalived.org/manpage.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.zabbix.com/documentation&quot;&gt;https://www.zabbix.com/documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/clsn/p/7885990.html&quot;&gt;https://www.cnblogs.com/clsn/p/7885990.html&lt;/a&gt; Zabbix 3.0 从入门到精通&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.keepalived.org/index.html&quot;&gt;http://www.keepalived.org/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/clsn/p/8052649.html#auto_id_17&quot;&gt;https://www.cnblogs.com/clsn/p/8052649.html#auto_id_17&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>/zabbix/2018/05/02/zabbix</link>
-                <guid>/zabbix/2018/05/02/zabbix</guid>
-                <pubDate>Wed, 02 May 2018 00:00:00 +0800</pubDate>
+                <link>/ha/2018/11/08/keepalived</link>
+                <guid>/ha/2018/11/08/keepalived</guid>
+                <pubDate>Thu, 08 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>collect some song in the life</title>
-                <description>&lt;h2 id=&quot;to-remind-in-the-life&quot;&gt;to remind in the life&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/life-song.jpg&quot; alt=&quot;love&quot; /&gt;&lt;/p&gt;
+                <title>Apache Druid</title>
+                <description>&lt;hr /&gt;
 
 &lt;!--more--&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;不仅仅是喜欢&lt;/li&gt;
-  &lt;li&gt;That Girl&lt;/li&gt;
-&lt;/ul&gt;
 </description>
-                <link>/song/2018/05/01/song</link>
-                <guid>/song/2018/05/01/song</guid>
-                <pubDate>Tue, 01 May 2018 00:00:00 +0800</pubDate>
+                <link>/big-data/2018/11/06/Druid</link>
+                <guid>/big-data/2018/11/06/Druid</guid>
+                <pubDate>Tue, 06 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
         <item>
-                <title>在网络安全中，深度学习该怎样发挥出它的巨大威力</title>
-                <description>&lt;p&gt;当我们熟悉了算法之后，对训练的数据，进行测试，验证自己的方案，但是大部分情况下，主要是缺少数据，还有对数据特征收集。&lt;a href=&quot;http://www.secrepo.com/&quot;&gt;[secrepo.com]&lt;/a&gt;,这里收集了大量的机器学习和网络安全相关的数据源，也提供免费的下载，这也是福利，数据来自两个部分：网络自己和第三方，内容包括互联网扫描数据，恶意软件源码，以及和网络安全相关的系统日志。&lt;/p&gt;
+                <title>Docker-compose基础教程</title>
+                <description>&lt;p&gt;Docker-compose来部署集群,方便快捷&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;paper&quot;&gt;paper&lt;/h2&gt;
-
-&lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
-
-&lt;h2 id=&quot;speech&quot;&gt;speech&lt;/h2&gt;
-
-&lt;h2 id=&quot;project&quot;&gt;project&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://clicksecurity.github.io/data_hacking/&quot;&gt;[http://clicksecurity.github.io/data_hacking/]&lt;/a&gt; Examples of using IPython, Pandas, and Scikit Learn to get the most out of your security data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.kdnuggets.com/2017/01/machine-learning-cyber-security.html&quot;&gt;https://www.kdnuggets.com/2017/01/machine-learning-cyber-security.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.leiphone.com/news/201701/RdVHBwh9y0kuvTGJ.html&quot;&gt;https://www.leiphone.com/news/201701/RdVHBwh9y0kuvTGJ.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-                <link>/dl/2018/05/01/dl-network</link>
-                <guid>/dl/2018/05/01/dl-network</guid>
-                <pubDate>Tue, 01 May 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>Netty 高性能RPC框架</title>
-                <description>&lt;p&gt;在网络通信方向，主要涉及到客户端和服务端，现在使用最多就是netty。
-&lt;a href=&quot;http://netty.io/&quot;&gt;[http://netty.io/]&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;netty-is-an-asynchronous-event-driven-network-application-framework-for-rapid-development-of-maintainable-high-performance-protocol-servers--clients&quot;&gt;Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers &amp;amp; clients.&lt;/h2&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;书籍：netty 权威指南，netty 实战&lt;/p&gt;
-</description>
-                <link>/netty/2018/04/30/netty</link>
-                <guid>/netty/2018/04/30/netty</guid>
-                <pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>love you like you do</title>
-                <description>&lt;p&gt;Love Me Like You Do&lt;/p&gt;
-
-&lt;p&gt;You’re the light you’re the night&lt;/p&gt;
-
-&lt;p&gt;You’re the color of my blood&lt;/p&gt;
-
-&lt;p&gt;You’re the cure you’re the pain&lt;/p&gt;
-
-&lt;p&gt;You’re the only thing I wanna toch&lt;/p&gt;
-
-&lt;p&gt;Never knew that it could mean so much so much&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/guan.png&quot; alt=&quot;shade&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://v.yinyuetai.com/video/2225036&quot;&gt;[mv]&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://lkkandsyf.github.com/pictures/dance.png&quot; alt=&quot;love&quot; /&gt;
-&lt;img src=&quot;http://lkkandsyf.github.com/pictures/fifty-shade.png&quot; alt=&quot;love&quot; /&gt;
-&lt;img src=&quot;http://lkkandsyf.github.com/pictures/sea.png&quot; alt=&quot;love&quot; /&gt;
-&lt;img src=&quot;http://lkkandsyf.github.com/pictures/two-hand.png&quot; alt=&quot;love&quot; /&gt;
-&lt;img src=&quot;http://lkkandsyf.github.com/pictures/song.png&quot; alt=&quot;love&quot; /&gt;
-&lt;img src=&quot;http://lkkandsyf.github.com/pictures/cc.png&quot; alt=&quot;love&quot; /&gt;&lt;/p&gt;
-</description>
-                <link>/song/2018/04/29/love_me_you_like_do</link>
-                <guid>/song/2018/04/29/love_me_you_like_do</guid>
-                <pubDate>Sun, 29 Apr 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>sql engine base on Hbase</title>
-                <description>&lt;p&gt;Phoenix通过jdbc来连接hbase，类似的操作关系型数据库,当然也损失了一部分的性能.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;常用语法&quot;&gt;常用语法&lt;/h2&gt;
-
-&lt;p&gt;0.查询
-select
-1.插入或更新
-upsert&lt;/p&gt;
-
-&lt;p&gt;2.删除
-delete&lt;/p&gt;
-
-&lt;p&gt;3.排序
-order by&lt;/p&gt;
-
-&lt;p&gt;4.模糊匹配
-like&lt;/p&gt;
-
-&lt;p&gt;5.聚合函数
-sum
-count
-avg
-having
-distinct
-or
-limit
-group by&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;example&lt;/h2&gt;
-</description>
-                <link>/big-data/2018/04/25/phoenix</link>
-                <guid>/big-data/2018/04/25/phoenix</guid>
-                <pubDate>Wed, 25 Apr 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>整理一些必要的书籍，可以快速的找到和阅读</title>
-                <description>&lt;p&gt;当书籍越来越多的时候，往往不太好找，整理到一起了，就可以节省很多的时间，提高效率。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1 id=&quot;big-data&quot;&gt;big-data&lt;/h1&gt;
-
-&lt;h2 id=&quot;hadoop&quot;&gt;hadoop&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;hadoop 权威指南 third version&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;kafka&quot;&gt;kafka&lt;/h2&gt;
-
-&lt;h2 id=&quot;zookeeper&quot;&gt;zookeeper&lt;/h2&gt;
-
-&lt;h2 id=&quot;hive&quot;&gt;hive&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;hive 权威指南&lt;/li&gt;
-  &lt;li&gt;hive 编程指南&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;spark&quot;&gt;spark&lt;/h2&gt;
-
-&lt;h2 id=&quot;flink&quot;&gt;flink&lt;/h2&gt;
-
-&lt;h2 id=&quot;hbase&quot;&gt;hbase&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;hbase 权威指南&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;flume&quot;&gt;flume&lt;/h2&gt;
-
-&lt;h2 id=&quot;nginx&quot;&gt;nginx&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;nginx 权威指南&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;徐子沛 ：大数据数据之巅，大数据互联网大规模数据挖掘与分布式处理，大数据处理之道&lt;/p&gt;
-
-&lt;h1 id=&quot;ml-dl&quot;&gt;ML-DL&lt;/h1&gt;
-
-&lt;h2 id=&quot;neural-network&quot;&gt;neural-network&lt;/h2&gt;
-
-&lt;h2 id=&quot;machine-learning&quot;&gt;machine-learning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;machine learning in action&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;presto&quot;&gt;presto&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;presto 技术内幕&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;deep-learning&quot;&gt;deep-learning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pan.baidu.com/s/17u4frNm3nPPBx0IkOB5cwg&quot;&gt;[long short term memory networks with python]&lt;/a&gt; soci&lt;/li&gt;
-  &lt;li&gt;2018 最新的深度学习书籍，有中文版,&lt;a href=&quot;http://www.deeplearningbook.org/&quot;&gt;http://www.deeplearningbook.org/&lt;/a&gt;,相关博客,&lt;a href=&quot;https://exacity.github.io/deeplearningbook-chinese/&quot;&gt;https://exacity.github.io/deeplearningbook-chinese/&lt;/a&gt;,&lt;a href=&quot;https://github.com/exacity/deeplearningbook-chinese&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;computer&quot;&gt;computer&lt;/h1&gt;
-
-&lt;h2 id=&quot;os&quot;&gt;os&lt;/h2&gt;
-</description>
-                <link>/books/2018/04/25/collect_books</link>
-                <guid>/books/2018/04/25/collect_books</guid>
-                <pubDate>Wed, 25 Apr 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>keras deep learning a strong tool</title>
-                <description>&lt;p&gt;Keras 强大的深度学习工具&lt;a href=&quot;https://keras.io/&quot;&gt;Keras&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Docker Compose是一个用来定义和运行复杂应用的Docker工具。一个使用Docker容器的应用，通常由多个容器组成。使用Docker Compose不再需要使用shell脚本来启动容器。 
+Compose 通过一个配置文件来管理多个Docker容器，在配置文件中，所有的容器通过services来定义，然后使用docker-compose脚本来启动，停止和重启应用，和应用中的服务以及所有依赖服务的容器，非常适合组合使用多个容器进行开发的场景。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -762,35 +1942,32 @@ group by&lt;/p&gt;
 
 &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
 
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://keras.io/&quot;&gt;keras.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;首先要安装好&lt;a href=&quot;&quot;&gt;docker&lt;/a&gt;，然后再安装docker-compose,需要考虑docker-compose的兼容性,两种安装方式&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;二进制安装
+    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; 下载最新版的docker-compose文件 
+ $ sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+ 添加可执行权限 
+ $ sudo chmod +x /usr/local/bin/docker-compose
+ 测试安装结果 
+ $ docker-compose --version 
+ docker-compose version 1.16.1, build 1719ceb
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sudo pip install docker-compose&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Docker版本变化说明：
+Docker从1.13.x版本开始，版本分为企业版EE和社区版CE，版本号也改为按照时间线来发布，比如17.03就是2017年3月。&lt;/p&gt;
+
+&lt;p&gt;Docker的linux发行版的软件仓库从以前的https://apt.dockerproject.org和https://yum.dockerproject.org变更为目前的https://download.docker.com, 软件包名字改为docker-ce和docker-ee。&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-compose文件结构&quot;&gt;docker-compose文件结构&lt;/h2&gt;
 </description>
-                <link>/deep-learning/2018/04/23/Keras</link>
-                <guid>/deep-learning/2018/04/23/Keras</guid>
-                <pubDate>Mon, 23 Apr 2018 00:00:00 +0800</pubDate>
-        </item>
-
-        <item>
-                <title>RNN Recurrent Nerual Networks</title>
-                <description>&lt;p&gt;人类并不是每时每刻都从一片空白的大脑开始他们的思考。在你阅读这篇文章时候，你都是基于自己已经拥有的对先前所见词的理解来推断当前词的真实含义。我们不会将所有的东西都全部丢弃，然后用空白的大脑进行思考。我们的思想拥有持久性。&lt;/p&gt;
-
-&lt;p&gt;传统的神经网络并不能做到这点，看起来也像是一种巨大的弊端。例如，假设你希望对电影中的每个时间点的时间类型进行分类。传统的神经网络应该很难来处理这个问题——使用电影中先前的事件推断后续的事件。
-RNN 解决了这个问题。RNN 是包含循环的网络，允许信息的持久化。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Reference&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-                <link>/2018/04/21/RNN</link>
-                <guid>/2018/04/21/RNN</guid>
-                <pubDate>Sat, 21 Apr 2018 00:00:00 +0800</pubDate>
+                <link>/os/2018/11/05/docker-compose</link>
+                <guid>/os/2018/11/05/docker-compose</guid>
+                <pubDate>Mon, 05 Nov 2018 00:00:00 +0800</pubDate>
         </item>
 
 

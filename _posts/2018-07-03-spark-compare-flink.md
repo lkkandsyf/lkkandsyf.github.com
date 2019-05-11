@@ -1,6 +1,6 @@
 ---
 layout: post
-category : BigData
+category : Big-data
 tagline: "Supporting tagline"
 tags: spark,flink
   -

@@ -129,6 +129,43 @@ help
 2.将本地的ip映射到本地/etc/hosts文件中
 ```
 
+## 日志配置
+
+conf/log4j.properties配置日志目录和文件名,但是启动zk发现不起作用，日志全都输入当前的目录下zookeeper.out文件中，不利于故障排查,下次想看zookeeper日志的时候，又忘记上次在哪执行的命令啦，这真的很蛋疼,为此找到根本原因,从启动程序来看
+
+zkEnv.sh中没有配置ZOO\_LOG\_DIR默认是就是当前目录,`修改ZOO_LOG_DIR="$ZK_HOME/log"`,将日志文件写到zookeeper安装目录下的log文件夹中（logs不需要创建，它会自己创建）,但是启动程序，还会有out文件，大小为0，究其原因是因为zkServer.sh会使用nohup进行zk启动，然而nohup必然会输出一个日志文件到你设置的目录中
+
+zkServer.sh,修改配置
+```c
+_ZOO_DAEMON_OUT="$ZOO_LOG_DIR/zookeeper.log"
+```
+对于日志，我们也可以设置每天一个文件，按天滚动,继续修改zkEnv.sh
+```C
+将
+ZOO_LOG4J_PROP="INFO,CONSOLE"
+修改为：
+ZOO_LOG4J_PROP="INFO,ROLLINGFILE"
+```
+修改log4j.properties文件
+```C
+zookeeper.root.logger=INFO,ROLLINGFILE			和env保持一致
+log4j.appender.ROLLINGFILE=org.apache.log4j.RollingFileAppender
+```
+其他配置
+```c
+log4j.appender.ROLLINGFILE.File=zookeeper.log
+log4j.appender.ROLLINGFILE.DataPattern='.'yyyy-MM-dd-HH-mm
+log4j.appender.ROLLINGFILE.Threshold=debug
+log4j.appender.ROLLINGFILE.encoding=UTF-8
+log4j.appender.ROLLINGFILE.Append=false
+log4j.appender.ROLLINGFILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.ROLLINGFILE.layout.ConversionPattern= [%d{yyyy-MM-dd HH\:mm\:ss}]%-5p %c(line\:%L) %x-%m%n
+```
+
+DailyRollingFileAppender特点是`固定周期时间生成一个日志文件`，比如，默认情况是每天生成一个文件。这种日志可以方便根据时间来定位日志位置，使日志清晰易查。但是这种日志有个不好地方是，不能限制日志数量，`MaxBackupIndex属性和MaxFileSize在DailyRollingFileAppender中是无效的`，这个还是按照自己的需求来定！
+
+所以还需要自己弄个`Crontab`定期清理日志
+
 ### zNode节点操作
 
 ```C
@@ -146,3 +183,36 @@ getChildren /path　　　　　　返回所有/path节点的所有子节点列�
 
 ```
 zNode节点还有不同的类型，持久（persistent）节点和临时（ephemeral）节点。持久的zNode，如/path，只能通过调用delete来进行删除，而临时的zNode则与之相反，当创建该节点的客户端崩溃或者关闭了与ZooKeeper服务器的连接时候，这个临时zNode节点就会被删除了。其中临时节点可用于实现分布式锁。
+
+
+## 常见问题
+
+ + zookeeper too many file open
+ ulimit -n 太小造成
+ ulimit -n 653600
+
+ +  fsync-ing the write ahead log in SyncThread:1 took 4675ms which will adversely effect operation la
+
+ “FOLLOWER”在跟“LEADER”同步时，fsync操作时间过长，导致超时。
+ ```C
+ 增加“tickTime”或者“initLimit和syncLimit”的值，或者两者都增大
+ ```
+
+## ref
+
+基本操作[https://blog.csdn.net/xyang81/article/details/53053642](https://blog.csdn.net/xyang81/article/details/53053642)
+
+### zk配置参数
+
+| 参数 | 描述 | 默认 | 配置文件| demo|
+| :------| :------ | :------ |:------ | :----- |
+| tickTime | zk时钟 | 单位毫秒2000 | zoo.cfg | tickTime=2000 |
+| minSessionTimeout | 最小超时时间 | 2\*tickTime | zoo.cfg | minSessionTimeout=4000 |
+| maxSessionTimeout | 最大超时时间 | 20\*tickTime | zoo.cfg | minSessionTimeout=40000 |
+
+
+[http://zookeeper.apache.org/doc/current/zookeeperStarted.html](http://zookeeper.apache.org/doc/current/zookeeperStarted.html)
+
+
+
+### 疑难杂症

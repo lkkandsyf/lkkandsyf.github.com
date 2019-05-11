@@ -1,0 +1,43 @@
+---
+layout: post
+category : Mysql
+tagline: "Supporting tagline"
+tags : [MySql]
+---
+
+MySQL
+
+<!--more-->
+
+---
+## install
+
+Centos6.5
+
+### yum
+
+[link](http://www.linuxidc.com/Linux/2016-07/133128.htm)
+
+### rmp
+
+[https://dev.mysql.com/downloads](https://dev.mysql.com/downloads)
+下载rpm包
+```C
+MySQL-devel-5.6.43-1.el6.x86_64.rpm
+MySQL-client-5.6.43-1.el6.x86_64.rpm
+MySQL-server-5.6.43-1.el6.x86_64.rpm
+```
+查看是否已经安装了mysql
+rpm -qa | grep -i mysql
+如果有先卸载 rpm -e --nodeps mysql...
+rpm -ivh devel,server,client来安装
+
+## usage
+
+
+statement
+
+
+preparestatement
+
+batch

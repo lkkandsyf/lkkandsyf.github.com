@@ -182,6 +182,24 @@ Point(x=3.0, y=5.0)
 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 {% endhighlight %}
 
+* fun
+```c
+>>>import builtins
+>>>dir(builtins)
+>>>dir(__builtins__)
+>>>len(dir(builtins))
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+
+
+```
 
 **这是一个好的文字
 [class](http://lkkandsyf.github.com/pictures/00.ipynb)

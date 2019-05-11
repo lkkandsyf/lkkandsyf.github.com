@@ -104,3 +104,11 @@ lst.unique(pred)
 lst.splice(args)
 lst.splice_after(args)
 ```
+
+
+
+
+### reference
+
+[https://github.com/mduisenov/GrokkingAlgorithms](https://github.com/mduisenov/GrokkingAlgorithms)
+[https://github.com/apkkids/Grokking_algorithms_in_java](https://github.com/apkkids/Grokking_algorithms_in_java)
