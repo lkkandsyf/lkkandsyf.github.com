@@ -4,13 +4,234 @@
  <title>liangkangkang's Blog</title>
  <link href="" rel="self"/>
  <link href=""/>
- <updated>2019-05-11T21:19:46+08:00</updated>
+ <updated>2019-11-30T19:10:00+08:00</updated>
  <id></id>
  <author>
    <name>liangkangkang</name>
    <email>lkkforworld@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>ntp 配置</title>
+   <link href="/linux/2019/11/30/ntp"/>
+   <updated>2019-11-30T00:00:00+08:00</updated>
+   <id>/linux/2019/11/30/ntp</id>
+   <content type="html">&lt;p&gt;集群情况下，服务器之间的时间同步十分重要，大部分的软件都会设置超时时间，如果服务器的时间和主节点的不一样，可能导致服务异常，ntp的配置是必须的。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;前提&quot;&gt;前提&lt;/h2&gt;
+&lt;p&gt;默认的操作系统Centos7.3-1611 部署软件模式Infrastructure Server&lt;/p&gt;
+
+&lt;p&gt;安装完os时，ntp已经安装好了&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;rpm -aq |grep ntp
+rpm -aq |grep libopts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;已经有ntp ntpupdate libopts&lt;/p&gt;
+
+&lt;p&gt;我们只需要配置ntp接可以了&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pkgs.org&quot;&gt;https://pkgs.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;配置&quot;&gt;配置&lt;/h2&gt;
+
+&lt;p&gt;man ntp.conf&lt;/p&gt;
+
+&lt;p&gt;/etc/ntp.conf&lt;/p&gt;
+
+&lt;p&gt;driftfile
+includefile 设定包含的配置文件子文件
+perfer 表示优先
+keys 当进行秘钥方式进行认证的时候需要的文件&lt;/p&gt;
+
+&lt;p&gt;server 127.127.1.0 iburst  # 如果server指定的服务器无法使用， 就使用本机时钟作为ntp服务时间来源&lt;/p&gt;
+
+&lt;p&gt;restrict
+权限控制语句&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;restrict your-ip mask [netmask_ip] [parameter]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如：restrict 127.0.0.1&lt;/p&gt;
+
+&lt;p&gt;常用的参数有：&lt;/p&gt;
+
+&lt;p&gt;ignore： 拒绝所有类型的 NTP 联机；&lt;/p&gt;
+
+&lt;p&gt;nomodify： 客户端不能使用 ntpc 与 ntpq 这两支程序来修改服务器的时间参数， 但客户端仍可透过这部主机来进行网络校时的；&lt;/p&gt;
+
+&lt;p&gt;noquery： 客户端不能够使用 ntpq, ntpc 等指令来查询时间服务器，等于不提供 NTP 的网络校时；&lt;/p&gt;
+
+&lt;p&gt;notrap： 不提供 trap 这个远程事件登录的功能。&lt;/p&gt;
+
+&lt;p&gt;notrust： 拒绝没有认证的客户端。&lt;/p&gt;
+
+&lt;p&gt;ntpq -d&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;remote：NTP 主机的 IP 或主机名，左边的符号
+
+如果有『 * 』代表目前正在作用当中的上层 NTP
+
+如果是『 + 』代表也有连上线，而且可作为下一个提供时间更新的候选者。
+
+如果是『 - 』 表示为不合格的ntp服务器
+
+refid：上一层 NTP 主机的地址
+
+st：远程服务器的层级别，0-16,0为最高层，
+
+when：几秒钟前曾经做过时间同步化更新的动作；
+
+poll：下一次更新在几秒钟之后；
+
+reach：已经向上层 NTP 服务器要求更新的次数
+
+delay：网络传输过程当中延迟的时间，单位为 10^(-6) 秒
+
+offset：时间补偿的结果，单位与 10^(-3) 秒
+
+jitter：Linux 系统时间与 BIOS 硬件时间的差异时间， 单位为 10^(-6) 秒。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;一台机器不能同时是ntp服务器和ntp客户端,两个进程是互斥的,&lt;code class=&quot;highlighter-rouge&quot;&gt;ntpdate必须在ntpd进程关闭状态才可以使用&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;demo&lt;/h2&gt;
+
+&lt;p&gt;ntp能与互联网上的时钟保持同步,而且本身也是一台NTP服务器,可以为局域网电脑提供校对时间服务&lt;/p&gt;
+
+&lt;p&gt;假定时钟服务器IP地址为：192.168.0.1&lt;/p&gt;
+
+&lt;p&gt;服务器端配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;1:置/etc/ntp.conf文件内容为：
+server 127.127.1.0 minpoll 4
+fudge 127.127.1.0 stratum 1
+restrict 127.0.0.1
+restrict 192.168.0.0 mask 255.255.255.0 nomodify notrap
+driftfile /var/lib/ntp/drift
+
+2: /etc/ntp/ntpservers应置空
+3: /etc/ntp/step-tickers应配置为 127.127.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上诉修改完成后，以root用户身份重启ntpd服务:service ntpd restart即可&lt;/p&gt;
+
+&lt;p&gt;客户端配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;1:置/etc/ntp.conf文件内容为：
+server 192.168.0.1
+fudge 127.127.1.0 stratum 2
+restrict 127.0.0.1
+driftfile /var/lib/ntp/drift
+restrict 192.168.0.1 mask 255.255.255.255
+2. /etc/ntp/ntpservers 文件内容置空
+3. /etc/ntp/step-tickers文件内容置为时钟服务器IP地址 192.168.0.1
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上诉修改完成后，以root用户身份重启ntpd服务:service ntpd restart即可
+用户可用以下两个常用命令查看ntpd服务状态：
+1 ntpq -p
+2 ntpstat&lt;/p&gt;
+
+&lt;p&gt;高可用&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;date +&quot;%Y-%m-%d %H:%m:%S&quot;
+
+date -s &quot;2019-11-30 23:11:36&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ES操作大全</title>
+   <link href="/elasticsearch/2019/09/07/elasticsearch"/>
+   <updated>2019-09-07T00:00:00+08:00</updated>
+   <id>/elasticsearch/2019/09/07/elasticsearch</id>
+   <content type="html">&lt;hr /&gt;
+
+&lt;h3 id=&quot;cat命令&quot;&gt;cat命令&lt;/h3&gt;
+
+&lt;p&gt;首先接触es，了解了基本的架构，加上cat命令操作，加深理解。不管学什么help就是的入门法宝!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;curl http://localhost:9200/cat
+=^.^=
+/_cat/allocation
+/_cat/shards
+/_cat/shards/{index}
+/_cat/master
+/_cat/nodes
+/_cat/tasks
+/_cat/indices
+/_cat/indices/{index}
+/_cat/segments
+/_cat/segments/{index}
+/_cat/count
+/_cat/count/{index}
+/_cat/recovery
+/_cat/recovery/{index}
+/_cat/health
+/_cat/pending_tasks
+/_cat/aliases
+/_cat/aliases/{alias}
+/_cat/thread_pool
+/_cat/thread_pool/{thread_pools}
+/_cat/plugins
+/_cat/fielddata
+/_cat/fielddata/{fields}
+/_cat/nodeattrs
+/_cat/repositories
+/_cat/snapshots/{repository}
+/_cat/templates
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;allocation&quot;&gt;allocation&lt;/h4&gt;
+
+&lt;h4 id=&quot;shards&quot;&gt;shards&lt;/h4&gt;
+
+&lt;h4 id=&quot;master&quot;&gt;master&lt;/h4&gt;
+
+&lt;h4 id=&quot;nodes&quot;&gt;nodes&lt;/h4&gt;
+
+&lt;h4 id=&quot;tasks&quot;&gt;tasks&lt;/h4&gt;
+
+&lt;h4 id=&quot;indices&quot;&gt;indices&lt;/h4&gt;
+
+&lt;h4 id=&quot;segments&quot;&gt;segments&lt;/h4&gt;
+
+&lt;h4 id=&quot;count&quot;&gt;count&lt;/h4&gt;
+
+&lt;h4 id=&quot;recovery&quot;&gt;recovery&lt;/h4&gt;
+
+&lt;h4 id=&quot;health&quot;&gt;health&lt;/h4&gt;
+
+&lt;h4 id=&quot;pending_tasks&quot;&gt;pending_tasks&lt;/h4&gt;
+
+&lt;h4 id=&quot;aliases&quot;&gt;aliases&lt;/h4&gt;
+
+&lt;h4 id=&quot;thread_pool&quot;&gt;thread_pool&lt;/h4&gt;
+
+&lt;h4 id=&quot;plugins&quot;&gt;plugins&lt;/h4&gt;
+
+&lt;h4 id=&quot;fielddata&quot;&gt;fielddata&lt;/h4&gt;
+
+&lt;h4 id=&quot;nodeattrs&quot;&gt;nodeattrs&lt;/h4&gt;
+
+&lt;h4 id=&quot;repositories&quot;&gt;repositories&lt;/h4&gt;
+
+&lt;h4 id=&quot;snapshots&quot;&gt;snapshots&lt;/h4&gt;
+
+&lt;h4 id=&quot;templates&quot;&gt;templates&lt;/h4&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+
+&lt;p&gt;sql to  dsl&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/360EntSecGroup-Skylar/ElasticHD&quot;&gt;https://github.com/360EntSecGroup-Skylar/ElasticHD&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cch123/elasticsql&quot;&gt;https://github.com/cch123/elasticsql&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Regex 和 Grok</title>
@@ -43,7 +264,8 @@
 &lt;a href=&quot;http://tool.chinaz.com/regex/&quot;&gt;http://tool.chinaz.com/regex/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/thekrakken/java-grok&quot;&gt;https://github.com/thekrakken/java-grok&lt;/a&gt;
-&lt;a href=&quot;https://github.com/aicer/grok&quot;&gt;https://github.com/aicer/grok&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://github.com/aicer/grok&quot;&gt;https://github.com/aicer/grok&lt;/a&gt;
+&lt;a href=&quot;https://github.com/ziishaned/learn-regex&quot;&gt;https://github.com/ziishaned/learn-regex&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;grok&quot;&gt;Grok&lt;/h2&gt;
 
 &lt;h2 id=&quot;-2&quot;&gt;#&lt;/h2&gt;
@@ -1916,59 +2138,6 @@ jdbc 官网需要会员支持&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.keepalived.org/index.html&quot;&gt;http://www.keepalived.org/index.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/clsn/p/8052649.html#auto_id_17&quot;&gt;https://www.cnblogs.com/clsn/p/8052649.html#auto_id_17&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Apache Druid</title>
-   <link href="/big-data/2018/11/06/Druid"/>
-   <updated>2018-11-06T00:00:00+08:00</updated>
-   <id>/big-data/2018/11/06/Druid</id>
-   <content type="html">&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Docker-compose基础教程</title>
-   <link href="/os/2018/11/05/docker-compose"/>
-   <updated>2018-11-05T00:00:00+08:00</updated>
-   <id>/os/2018/11/05/docker-compose</id>
-   <content type="html">&lt;p&gt;Docker-compose来部署集群,方便快捷&lt;/p&gt;
-
-&lt;p&gt;Docker Compose是一个用来定义和运行复杂应用的Docker工具。一个使用Docker容器的应用，通常由多个容器组成。使用Docker Compose不再需要使用shell脚本来启动容器。 
-Compose 通过一个配置文件来管理多个Docker容器，在配置文件中，所有的容器通过services来定义，然后使用docker-compose脚本来启动，停止和重启应用，和应用中的服务以及所有依赖服务的容器，非常适合组合使用多个容器进行开发的场景。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
-
-&lt;p&gt;首先要安装好&lt;a href=&quot;&quot;&gt;docker&lt;/a&gt;，然后再安装docker-compose,需要考虑docker-compose的兼容性,两种安装方式&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;二进制安装
-    &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt; 下载最新版的docker-compose文件 
- $ sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
- 添加可执行权限 
- $ sudo chmod +x /usr/local/bin/docker-compose
- 测试安装结果 
- $ docker-compose --version 
- docker-compose version 1.16.1, build 1719ceb
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;sudo pip install docker-compose&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Docker版本变化说明：
-Docker从1.13.x版本开始，版本分为企业版EE和社区版CE，版本号也改为按照时间线来发布，比如17.03就是2017年3月。&lt;/p&gt;
-
-&lt;p&gt;Docker的linux发行版的软件仓库从以前的https://apt.dockerproject.org和https://yum.dockerproject.org变更为目前的https://download.docker.com, 软件包名字改为docker-ce和docker-ee。&lt;/p&gt;
-
-&lt;h2 id=&quot;docker-compose文件结构&quot;&gt;docker-compose文件结构&lt;/h2&gt;
 </content>
  </entry>
  

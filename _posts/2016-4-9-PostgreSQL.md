@@ -581,6 +581,12 @@ backend>Ctrl + D
  4. 直到修复完成重启数据库
 
 
+## pgcli
+
+
+```C
+export PGPASSWORD=85e11609511899a4928ec8900667baaf;/opt/big-data/python/bin/pgcli -h 127.0.0.1 -p 5432 -U espcpostgres -d espc
+```
 
 
 ## reference
